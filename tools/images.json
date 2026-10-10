@@ -1,0 +1,65 @@
+{
+ "dr-yana-shtern": {
+  "file": "dr-shtern-portrait.jpg",
+  "focal": "50% 22%",
+  "alt": "Dr. Yana Shtern, MD, in a white coat at Legacy Medical",
+  "source": "legacymedicalpalmbeach.com/wp-content/uploads (e.jpg, 592x705)",
+  "q": 84
+ },
+ "dr-shtern-desk": {
+  "file": "dr-shtern-desk.jpg",
+  "focal": "62% 30%",
+  "alt": "Dr. Yana Shtern seated at her desk",
+  "source": "legacymedicalpalmbeach.com (t76767.jpg, 934x740)",
+  "q": 84
+ },
+ "dr-shtern-full": {
+  "file": "dr-shtern-full.jpg",
+  "focal": "50% 20%",
+  "alt": "Dr. Yana Shtern standing at the Legacy Medical front desk",
+  "source": "legacymedicalpalmbeach.com (www.jpg, 592x705)",
+  "q": 84
+ },
+ "front-desk-team": {
+  "file": "dr-shtern-front-desk-team.jpg",
+  "focal": "50% 30%",
+  "alt": "Dr. Yana Shtern with a member of her team at the Legacy Medical front desk",
+  "source": "legacymedicalpalmbeach.com (ww.jpg, 934x740)",
+  "q": 84
+ },
+ "front-desk-scrubs": {
+  "file": "front-desk-scrubs.jpg",
+  "focal": "60% 30%",
+  "alt": "At the Legacy Medical front desk",
+  "source": "legacymedicalpalmbeach.com (wewewewewewe.jpg, 934x740)",
+  "q": 84
+ },
+ "reception-wall": {
+  "file": "reception-wall.jpg",
+  "focal": "50% 40%",
+  "alt": "The Legacy Medical reception wall with the practice's gold logo",
+  "source": "legacymedicalpalmbeach.com (2024-08 video-bg.jpg, 553x381)",
+  "q": 86
+ },
+ "yan-konevsky-rn": {
+  "file": "yan-konevsky-rn.jpg",
+  "focal": "50% 18%",
+  "alt": "Yan Konevsky, RN, office manager at Legacy Medical",
+  "source": "legacymedicalpalmbeach.com (image1.jpg, 2000x2825)",
+  "q": 80
+ },
+ "team-member": {
+  "file": "team-member-scrubs.jpg",
+  "focal": "50% 20%",
+  "alt": "A member of the Legacy Medical team in practice scrubs",
+  "source": "legacymedicalpalmbeach.com (unnamed-3.jpg, 1290x1692)",
+  "q": 80
+ },
+ "reception-desk": {
+  "file": "reception-desk-video-still.jpg",
+  "focal": "50% 40%",
+  "alt": "The reception desk and gold Legacy Medical sign at the Palm Beach Gardens office",
+  "source": "still from the practice's own YouTube office video raReWdCy3tA (640x480)",
+  "q": 86
+ }
+}
