@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# AI assistants may read the site to answer questions about the practice.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://legacymedicalpalmbeach.com/sitemap.xml

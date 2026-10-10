@@ -1,0 +1,355 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "python3 build.py --check",
+  "outputDirectory": "public",
+  "installCommand": "",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; font-src 'self'; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-src https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(css|js)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(img|video)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(membership|contact)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noarchive"
+        }
+      ]
+    },
+    {
+      "source": "/(llms.txt|robots.txt)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/yana-shtern",
+      "destination": "/dr-yana-shtern",
+      "permanent": true
+    },
+    {
+      "source": "/yana-shtern/",
+      "destination": "/dr-yana-shtern",
+      "permanent": true
+    },
+    {
+      "source": "/meet-the-team",
+      "destination": "/our-team",
+      "permanent": true
+    },
+    {
+      "source": "/meet-the-team/",
+      "destination": "/our-team",
+      "permanent": true
+    },
+    {
+      "source": "/legacy-membership",
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
+      "source": "/legacy-membership/",
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/legacy-blog",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/legacy-blog/",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials-lg",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials-lg/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/notice-of-privacy-practices",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/notice-of-privacy-practices",
+      "permanent": true
+    },
+    {
+      "source": "/accessibility-statement",
+      "destination": "/accessibility",
+      "permanent": true
+    },
+    {
+      "source": "/accessibility-statement/",
+      "destination": "/accessibility",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2",
+      "destination": "/journal/magnesium-low-and-high-levels",
+      "permanent": true
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2/",
+      "destination": "/journal/magnesium-low-and-high-levels",
+      "permanent": true
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus",
+      "destination": "/journal/nsaids-risks-and-side-effects",
+      "permanent": true
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus/",
+      "destination": "/journal/nsaids-risks-and-side-effects",
+      "permanent": true
+    },
+    {
+      "source": "/2024/05/01/safety-of-over-the-counter-meds",
+      "destination": "/journal/over-the-counter-pain-medication-safety",
+      "permanent": true
+    },
+    {
+      "source": "/2024/05/01/safety-of-over-the-counter-meds/",
+      "destination": "/journal/over-the-counter-pain-medication-safety",
+      "permanent": true
+    },
+    {
+      "source": "/2024/10/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3",
+      "destination": "/journal/breast-cancer-screening-mammogram-age-40",
+      "permanent": true
+    },
+    {
+      "source": "/2024/10/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3/",
+      "destination": "/journal/breast-cancer-screening-mammogram-age-40",
+      "permanent": true
+    },
+    {
+      "source": "/2024/10/07/vitamins-that-can-be-taken-in-the-morning",
+      "destination": "/journal/vitamins-to-take-in-the-morning",
+      "permanent": true
+    },
+    {
+      "source": "/2024/10/07/vitamins-that-can-be-taken-in-the-morning/",
+      "destination": "/journal/vitamins-to-take-in-the-morning",
+      "permanent": true
+    },
+    {
+      "source": "/2024/12/11/bananas-are-an-amazing-source-of-nutrition",
+      "destination": "/journal/banana-nutrition-benefits",
+      "permanent": true
+    },
+    {
+      "source": "/2024/12/11/bananas-are-an-amazing-source-of-nutrition/",
+      "destination": "/journal/banana-nutrition-benefits",
+      "permanent": true
+    },
+    {
+      "source": "/wws_portfolio/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wws_portfolio_category/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/journal/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "/journal/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/:y(\\d{4})",
+      "destination": "/journal",
+      "permanent": true
+    }
+  ]
+}
