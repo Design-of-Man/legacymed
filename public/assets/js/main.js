@@ -226,7 +226,7 @@
   /* ---------- journal filter ---------- */
   const chips = document.querySelectorAll(".chips button");
   if (chips.length) {
-    const posts = document.querySelectorAll(".post-list li");
+    const posts = document.querySelectorAll(".post-grid li, .post-list li");
     chips.forEach((c) => c.addEventListener("click", () => {
       chips.forEach((o) => o.setAttribute("aria-pressed", String(o === c)));
       const cat = c.dataset.cat;

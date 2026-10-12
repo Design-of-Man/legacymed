@@ -204,11 +204,12 @@ def photo(stem, alt, sizes="100vw", cls="", eager=False, focal=None, max_w=None,
         attrs += ' loading="lazy" decoding="async"'
     if cls:
         attrs += ' class="%s"' % cls
+    fb = "jpg" if "jpg" in m.get("formats", ["jpg"]) else "webp"
     return ('<picture><source type="image/avif" srcset="%s" sizes="%s">'
             '<source type="image/webp" srcset="%s" sizes="%s">'
-            '<img src="/assets/img/%s-%d.jpg" srcset="%s" sizes="%s" %s></picture>'
-            % (srcset("avif"), sizes, srcset("webp"), sizes, stem, widths[min(1, len(widths) - 1)],
-               srcset("jpg"), sizes, attrs))
+            '<img src="/assets/img/%s-%d.%s" srcset="%s" sizes="%s" %s></picture>'
+            % (srcset("avif"), sizes, srcset("webp"), sizes, stem, widths[min(1, len(widths) - 1)], fb,
+               srcset(fb), sizes, attrs))
 
 
 # --------------------------------------------------------------------------
@@ -546,7 +547,7 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
 <meta name="description" content="%(desc)s">
 %(robots)s
 %(canon)s
-<meta name="theme-color" content="#F7F2EA">
+<meta name="theme-color" content="#EEE5D5">
 <meta name="color-scheme" content="light">
 <meta name="format-detection" content="telephone=no">
 <link rel="preload" href="/assets/fonts/legacy-display-v1.woff2" as="font" type="font/woff2" crossorigin>
@@ -744,7 +745,7 @@ def build_meta():
     open(os.path.join(PUB, "llms.txt"), "w", encoding="utf-8").write(C.llms_txt(PRACTICE, DOCTOR, PAGES, url))
     # manifest
     manifest = {"name": "Legacy Medical", "short_name": "Legacy Medical", "start_url": "/", "display": "browser",
-                "background_color": "#F7F2EA", "theme_color": "#F7F2EA",
+                "background_color": "#EEE5D5", "theme_color": "#EEE5D5",
                 "icons": [{"src": "/assets/img/og/logo-192.png", "sizes": "192x192", "type": "image/png"},
                           {"src": "/assets/img/og/logo-512.png", "sizes": "512x512", "type": "image/png"}]}
     open(os.path.join(PUB, "site.webmanifest"), "w", encoding="utf-8").write(json.dumps(manifest, indent=2))

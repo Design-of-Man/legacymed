@@ -929,3 +929,9 @@ ASSIST_EXTRA += [
     {"k": ["parking", "park"],
      "a": "The office is at 11380 Prosperity Farms Road, Suite 114, a first-floor suite. Call (561) 834-9280 if you have questions about parking or getting in. <a href=\"/contact\">Directions</a>."},
 ]
+
+# Photos beside page sections: {page slug: {section heading: image stem}}.
+# Stems are built by tools/build_images.py from tools/images.json. Topic
+# photos (p-*) are licensed stock (Pexels) and only illustrate a subject;
+# they are never captioned or described as the practice.
+SECTION_IMAGES = {}
