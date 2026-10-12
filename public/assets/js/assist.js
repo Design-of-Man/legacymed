@@ -79,8 +79,58 @@
     try {
       const r = await fetch(FAQ_URL, { headers: { accept: "application/json" } });
       D = await r.json();
+      index();
       return true;
     } catch (_) { return false; }
+  }
+
+  /* ---- matching ------------------------------------------------------
+     Every answer is scored against the question three ways: hand-picked
+     keyword phrases (strongest), words shared with the answer's own
+     question, and words shared with the answer text. Shared words count
+     for more when they are rare across all answers (inverse document
+     frequency), so "kidney" outweighs "doctor". Pages and articles are
+     scored the same way so a question without a set answer still gets
+     pointed at the right page. */
+  const STOP = new Set("a an and are as at be but by can could do does for from had has have how i if in is it its me my of on or our please should so tell that the their them there they this to us was we what when where which who why will with would you your about any get got know much many want need just also into than then too very more most some does dont doesnt im ive id legacy medical practice office dr shtern yana doctor".split(" "));
+  const SYN = { price: "fee", cost: "fee", costs: "fee", fees: "fee", charge: "fee", expensive: "fee", afford: "fee", pay: "fee",
+    hours: "hour", open: "hour", closed: "hour", appointment: "visit", appointments: "visit", appt: "visit", see: "visit", seen: "visit",
+    insurer: "insurance", insured: "insurance", coverage: "insurance", covered: "insurance", cover: "insurance",
+    located: "location", address: "location", directions: "location", where: "location",
+    mom: "parent", dad: "parent", mother: "parent", father: "parent", parents: "parent",
+    kidneys: "kidney", renal: "kidney", pressure: "blood", bp: "blood", join: "member", joining: "member", membership: "member", members: "member" };
+  const toks = (s) => String(s).toLowerCase().replace(/<[^>]+>/g, " ").replace(/[^a-z0-9 ]+/g, " ").split(/\s+/)
+    .filter((w) => w && !STOP.has(w)).map((w) => {
+      if (SYN[w]) return SYN[w];
+      if (w.length > 5 && /ing$/.test(w)) w = w.slice(0, -3);
+      else if (w.length > 4 && /ed$/.test(w)) w = w.slice(0, -2);
+      if (w.length > 3 && /ies$/.test(w)) w = w.slice(0, -3) + "y";
+      else if (w.length > 3 && /s$/.test(w) && !/ss$/.test(w)) w = w.slice(0, -1);
+      return SYN[w] || w;
+    });
+  let IDF = {};
+  function index() {
+    const docs = D.faq.map((f) => new Set(toks((f.q || "") + " " + f.a)));
+    const df = {};
+    docs.forEach((d) => d.forEach((t) => { df[t] = (df[t] || 0) + 1; }));
+    const n = docs.length;
+    Object.keys(df).forEach((t) => { IDF[t] = Math.log(1 + n / df[t]); });
+    D.faq.forEach((f) => { f._q = new Set(toks(f.q || "")); f._a = new Set(toks(f.a)); });
+    D.pages.forEach((p) => { p._t = new Set(toks(p.t)); p._d = new Set(toks(p.d)); });
+  }
+  const w = (t) => IDF[t] || Math.log(1 + D.faq.length);
+  function scoreFaq(f, ql, qt) {
+    let s = 0;
+    f.k.forEach((k) => { if (ql.indexOf(k) !== -1) s += 2 + k.length / 2; });
+    qt.forEach((t) => { if (f._q.has(t)) s += 1.6 * w(t); else if (f._a.has(t)) s += 0.6 * w(t); });
+    // A question that names something the visitor did not ask about ("North" Palm Beach) ranks a little lower.
+    f._q.forEach((t) => { if (qt.indexOf(t) === -1) s -= 0.12 * w(t); });
+    return s;
+  }
+  function scorePage(p, qt) {
+    let s = 0;
+    qt.forEach((t) => { if (p._t.has(t)) s += 1.4 * w(t); else if (p._d.has(t)) s += 0.5 * w(t); });
+    return s;
   }
 
   async function open() {
@@ -154,24 +204,37 @@
     mode = "ask";
     form.hidden = false;
     later(() => {
-      say("Ask about membership, insurance, hours, Dr. Shtern, or the office. I answer from the practice's own information.");
-      focusFirst(chips(["How much is membership?", "Do you take Medicare?", "Where are you?", "After-hours access"].map((q) => ({
+      say("Ask anything about membership, fees and insurance, Dr. Shtern, kidney or blood pressure care, the meet and greet, or the office. I answer from the practice's own information.");
+      focusFirst(chips(["What happens at the meet and greet?", "How much is membership?", "Do you take Medicare?", "Can I reach Dr. Shtern after hours?", "Where are you?", "Do you treat kidney disease?"].map((q) => ({
         label: q, go: () => { say(esc(q), "me"); later(() => answer(q)); },
       }))));
       input.focus({ preventScroll: true });
     });
   }
   function answer(q) {
-    const ql = " " + q.toLowerCase() + " ";
+    const ql = " " + q.toLowerCase().replace(/[^a-z0-9&' -]+/g, " ") + " ";
+    const qt = [...new Set(toks(q))];
     let best = null, score = 0;
     D.faq.forEach((f) => {
-      let s = 0;
-      f.k.forEach((k) => { if (ql.indexOf(k) !== -1) s += k.length; });
+      const s = scoreFaq(f, ql, qt);
       if (s > score) { score = s; best = f; }
     });
-    say(best ? best.a : "I don't want to guess on that one. The office can answer it: call " + telLink() + " (" + D.hours + ") or email <a href=\"mailto:" + D.email + "\">" + D.email + "</a>.");
+    const pages = D.pages.map((p) => [scorePage(p, qt), p]).filter((x) => x[0] >= 2.6).sort((a, b) => b[0] - a[0]);
+    if (best && score >= 3) {
+      let html = best.a;
+      if (best.u && html.indexOf('href="' + best.u + '"') === -1 && best.u !== "/") html += ' <a href="' + best.u + '">Read more</a>.';
+      const extra = pages.filter((x) => x[0] >= 4).map((x) => x[1]).filter((p) => html.indexOf('href="' + p.u + '"') === -1).slice(0, 2);
+      if (extra.length) html += "<br><br>Related: " + extra.map((p) => '<a href="' + p.u + '">' + esc(p.t) + "</a>").join(" · ");
+      say(html);
+    } else if (pages.length) {
+      say("I don't have a set answer for that, but these pages cover it:<br>" + pages.slice(0, 3).map((x) => '<a href="' + x[1].u + '">' + esc(x[1].t) + "</a>").join("<br>") +
+          "<br><br>Or ask the office directly: " + telLink() + ".");
+    } else {
+      say("I don't want to guess on that one. The office can answer it: call " + telLink() + " (" + D.hours + ") or email <a href=\"mailto:" + D.email + "\">" + D.email + "</a>.");
+    }
     chips([
       { label: "Book a meet and greet", main: true, go: startTour },
+      { label: "Ask something else", go: () => input.focus({ preventScroll: true }) },
       { label: "Back to the menu", go: menu },
     ]);
     input.focus({ preventScroll: true });

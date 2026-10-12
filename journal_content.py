@@ -1979,3 +1979,7 @@ REDIRECTS = [('https://cmedjupiter.com/2020/08/11/covid-19-5-tips-on-how-to-avoi
   '/journal/vitamins-to-take-in-the-morning'),
  ('https://legacymedicalpalmbeach.com/2024/12/11/bananas-are-an-amazing-source-of-nutrition/',
   '/journal/banana-nutrition-benefits')]
+
+# Articles written for the 2026 rebuild go first (newest), then the migrated ones.
+from journal_concierge import NEW_POSTS  # noqa: E402
+POSTS = sorted(NEW_POSTS, key=lambda p: p["date"], reverse=True) + POSTS

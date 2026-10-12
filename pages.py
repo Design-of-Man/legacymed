@@ -17,6 +17,8 @@ def build_all(B):
     for slug in C.SERVICE_PAGES:
         service(B, slug)
     meet_and_greet(B)
+    for slug in C.GUIDES:
+        guide_page(B, slug)
     membership(B)
     insurance(B)
     faq(B)
@@ -418,6 +420,33 @@ def tour_form(B, kind, heading_id):
               "phone_f": field("phone", "Phone", typ="tel", auto="tel", hint="Phone or email, at least one."),
               "email": field("email", "Email", typ="email", auto="email"),
               "best": field("best_time", "Best time to reach you", hint="e.g. weekday mornings")}
+
+
+def guide_page(B, slug):
+    esc, icon = B.esc, B.icon
+    S = C.GUIDES[slug]
+    trail = B.trail_for(slug, S["crumb"])
+    media = B.photo(S["photo"], S["photo_alt"], sizes="(max-width: 880px) 90vw, 45vw", max_w=1200) if S.get("photo") else None
+    body = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], media=media)
+    if S.get("compare"):
+        rows = "".join('<tr><th scope="row">%s</th><td>%s</td><td>%s</td></tr>' % (esc(a), esc(b), esc(c)) for a, b, c in C.CONCIERGE["compare"])
+        body += """<section class="section flush-top" aria-labelledby="cmp-h"><div class="wrap"><h2 id="cmp-h" style="font-size:var(--step-3);margin-bottom:1.5rem">At a glance</h2>
+<div class="table-scroll"><table class="compare"><caption class="sr-only">Traditional primary care compared with concierge care at Legacy Medical</caption><thead><tr><th scope="col">Topic</th><th scope="col">Typical high-volume practice</th><th scope="col">Concierge care at Legacy Medical</th></tr></thead><tbody>%s</tbody></table></div></div></section>""" % rows
+    body += "".join(prose_section(B, i + 1, h, b) for i, (h, b) in enumerate(S["sections"]))
+    body += '<section class="section%s" aria-labelledby="gfaq-h"><div class="wrap split"><div><p class="eyebrow">Questions</p><h2 id="gfaq-h" style="margin-top:1.25rem">Common questions</h2></div>%s</div></section>' % (
+        " sunk" if len(S["sections"]) % 2 == 0 else "", B.faq_html(S["faqs"]))
+    posts = {p["slug"]: p for p in J.POSTS}
+    reads = [posts[s] for s in S.get("related_posts", []) if s in posts]
+    if reads:
+        cards = "".join('<a class="card" href="/journal/%s"><p class="meta">%s</p><h3>%s</h3><p>%s</p><span class="more">Read %s</span></a>' % (
+            p["slug"], esc(p["category"]), esc(p["title"]), esc(p["excerpt"]), icon("arrow")) for p in reads[:3])
+        body += '<section class="section" aria-labelledby="gread-h"><div class="wrap"><h2 id="gread-h" style="font-size:var(--step-3);margin-bottom:2rem">From the journal</h2><div class="cards">%s</div></div></section>' % cards
+    body += '<section class="section sunk" aria-labelledby="grel-h"><div class="wrap"><h2 id="grel-h" style="font-size:var(--step-3);margin-bottom:2rem">Related</h2>%s</div></section>' % B.related_cards(S["related"])
+    body += B.cta_band()
+    schema = B.graph({"@type": "WebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": S["title"], "description": S["desc"],
+                      "isPartOf": {"@id": B.SITE_ID}, "about": {"@id": B.ORG_ID}, "inLanguage": "en-US"},
+                     B.faq_node(S["faqs"], B.url(slug)), B.breadcrumb_node(trail))
+    B.write_page(slug, S["title"], S["desc"], body, schema=schema)
 
 
 def membership(B):

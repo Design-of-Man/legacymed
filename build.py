@@ -218,6 +218,8 @@ NAV = [
     ("About", None, [
         ("dr-yana-shtern", "Dr. Yana Shtern, MD", "Internist and nephrologist"),
         ("our-team", "Our team", "Who answers when you call"),
+        ("for-families", "For families", "Caring for a parent"),
+        ("seasonal-residents", "Seasonal residents", "Care between seasons"),
     ]),
     ("Care", None, [
         ("concierge-medicine", "Concierge medicine", "How the practice works"),
@@ -231,6 +233,7 @@ NAV = [
         ("meet-and-greet", "Meet and greet", "Your first visit"),
         ("membership", "How to join", "Three unhurried steps"),
         ("insurance-and-fees", "Insurance and fees", "What insurance still covers"),
+        ("concierge-vs-traditional-primary-care", "Concierge vs. traditional", "A side-by-side look"),
         ("faq", "Questions", "Straight answers"),
     ]),
     ("Areas", "areas-we-serve", None),
@@ -862,28 +865,66 @@ def build_vercel():
 
 
 def build_assist():
-    """Set answers for the site assistant, from the FAQ and the facts above."""
+    """Everything the site assistant knows, written to assets/assist.json.
+
+    faq: every question answered anywhere on the site (FAQ page, home, every
+    service, town, guide and membership page) plus assistant-only answers.
+    pages: every page and article with a one-line description, so a question
+    with no set answer still gets pointed at the right page."""
     def plain(h):
         h = re.sub(r"</p>\s*<p>", " ", h)
         return re.sub(r"</?p>", "", h).strip()
-    items = []
+    items, seen = [], set()
+    def add(q, a, k=None, url_=None):
+        key = re.sub(r"[^a-z0-9 ]", "", (q or a).lower()).strip()
+        if key in seen:
+            return
+        seen.add(key)
+        it = {"a": plain(a), "k": k or []}
+        if q:
+            it["q"] = q
+        if url_ is not None:
+            it["u"] = "/" + url_
+        items.append(it)
     for g in C.FAQ_GROUPS:
         for q, a in g["pairs"]:
             if q not in C.ASSIST_KEYWORDS:
                 raise SystemExit("assistant: no keywords for FAQ %r (add them to ASSIST_KEYWORDS)" % q)
-            items.append({"q": q, "k": C.ASSIST_KEYWORDS[q], "a": plain(a)})
+            add(q, a, C.ASSIST_KEYWORDS[q], "faq")
+    for l in C.LOCATIONS:
+        add("How far is the office from %s?" % l["name"],
+            "About %s miles from %s, roughly %s minutes without traffic. Usual route: %s. <a href=\"/areas/%s\">Concierge care near %s</a>." % (
+                l["distance_mi"], l["from_label"], l["drive_min"], l["route"], l["slug"], l["name"]),
+            [l["name"].lower(), "from " + l["name"].lower()])
     for x in C.ASSIST_EXTRA:
-        items.append({"k": x["k"], "a": x["a"]})
+        add(None, x["a"], x["k"])
+    sources = [("", C.HOME_FAQ), ("meet-and-greet", C.MEET["faqs"]), ("membership", C.MEMBERSHIP["faqs"]),
+               ("insurance-and-fees", C.INSURANCE["faqs"]), ("concierge-medicine", C.CONCIERGE["faqs"])]
+    sources += [(slug, s["faqs"]) for slug, s in C.SERVICE_PAGES.items()]
+    sources += [(slug, s["faqs"]) for slug, s in C.GUIDES.items()]
+    sources += [("areas/" + l["slug"], l.get("faqs", [])) for l in C.LOCATIONS]
+    for slug, pairs in sources:
+        for q, a in pairs:
+            add(q, a, None, slug)
+    pages = []
+    for label, href, kids in NAV:
+        for slug, name, sub in (kids or []):
+            pages.append({"t": name, "u": "/" + slug, "d": C.CARD_BLURBS.get(slug, sub)})
+    pages += [{"t": "Areas we serve", "u": "/areas-we-serve", "d": "Towns members come from, with drive times to the office."},
+              {"t": "Contact and directions", "u": "/contact", "d": "Phone, address, hours and directions to the office."},
+              {"t": "Journal", "u": "/journal", "d": "Articles on concierge medicine and health."}]
+    pages += [{"t": "Concierge doctor near " + l["name"], "u": "/areas/" + l["slug"], "d": l["desc"]} for l in C.LOCATIONS]
+    pages += [{"t": p["title"], "u": "/journal/" + p["slug"], "d": p["excerpt"]} for p in J.POSTS]
     p = PRACTICE
     data = {"phone": p["phone"], "tel": p["tel"], "email": p["email"],
-            "hours": "Mon to Thu 9 to 5, Fri 9 to 2", "faq": items}
-    for it in items:
+            "hours": "Mon to Thu 9 to 5, Fri 9 to 2", "faq": items, "pages": pages}
+    for it in items + pages:
+        txt = visible_text(it.get("a", "") + " " + it.get("q", "") + " " + it.get("t", "") + " " + it.get("d", ""))
         for pat in BANNED:
-            if re.search(pat, visible_text(it["a"]), flags=re.I):
-                raise SystemExit("assistant answer breaks copy rule %r: %s" % (pat, it["a"][:80]))
+            if re.search(pat, txt, flags=re.I):
+                raise SystemExit("assistant text breaks copy rule %r: %s" % (pat, txt[:80]))
     with open(os.path.join(PUB, "assets", "assist.json"), "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
-
 
 def main():
     build_assist()  # first, so pages can hash it
