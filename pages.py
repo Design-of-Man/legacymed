@@ -120,6 +120,21 @@ def home(B):
 </section>""" % (photo(m1, a1, sizes="(max-width: 880px) 44vw, 18vw", max_w=800), B.words_spans(H["manifesto"]),
                   photo(m2, a2, sizes="(max-width: 880px) 44vw, 18vw", max_w=800))
 
+    def stat(s):
+        src = '<cite>%s</cite>' % s[3] if len(s) > 3 else ""
+        fig = esc(s[0])
+        if " → " in s[0]:  # "before → after": the before figure sits small and muted
+            a, b = s[0].split(" → ")
+            fig = '<span class="was">%s →</span> %s' % (esc(a), esc(b))
+        return '<li data-reveal><p class="fig">%s</p><p class="lab">%s</p><p class="note">%s%s</p></li>' % (fig, esc(s[1]), esc(s[2]), src)
+    why = """<section class="section why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="headline-row"><div><p class="eyebrow">The difference</p><h2 id="why-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
+    <ul class="ledger">%s</ul>
+    <p class="small muted" style="margin-top:1.5rem">GAO figures: U.S. Government Accountability Office, <a class="inline-link" href="https://www.gao.gov/products/gao-05-929" rel="noopener">Physician Services: Concierge Care Characteristics</a> (2005). <a class="inline-link" href="/concierge-vs-traditional-primary-care">Concierge and traditional care, side by side</a>.</p>
+  </div>
+</section>""" % (B.hx(H["why_h"]), H["why_lede"], "".join(stat(s) for s in H["why_stats"]))
+
     included = "".join('<li data-reveal style="--d:%d"><span class="num" aria-hidden="true">%02d</span><h3>%s</h3><p>%s</p></li>' % (i % 3, i + 1, esc(s["name"]), s["text"])
                        for i, s in enumerate(C.SERVICES_INCLUDED[:6]))
     inc = """<section class="section" aria-labelledby="inc-h">
@@ -177,7 +192,7 @@ def home(B):
   </div>
 </section>""" % (esc(H["stakes_h"]), H["stakes_body"])
 
-    body = hero + guide + manifesto + inc + spec + plan + reviews + journal_sec
+    body = hero + guide + manifesto + why + inc + spec + plan + reviews + journal_sec
     body += B.cta_band() + B.reel_html()  # the photo reel closes the page, just above the footer
 
     schema = B.graph(B.website_node(), B.clinic_node(), B.physician_node(full=True),

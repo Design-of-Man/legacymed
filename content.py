@@ -145,7 +145,7 @@ CARD_BLURBS = {
 # ---------------------------------------------------------------- home
 HOME_TITLE = "Concierge Doctor in Palm Beach Gardens | Legacy Medical"
 HOME_DESC = ("Concierge internal medicine in Palm Beach Gardens with Dr. Yana Shtern, MD, board-certified in internal medicine and nephrology. "
-             "Same or next-day visits and 24/7 phone access.")
+             "One patient at a time, same or next-day visits and 24/7 phone access.")
 
 HERO_VIDEO = {
     "hd": "/assets/video/inlet-1080.webm|/assets/video/inlet-1080.mp4",
@@ -162,7 +162,7 @@ HERO_VIDEO = {
 HOME = {
     "kicker": "Concierge internal medicine · Palm Beach Gardens",
     "hero_lines": ["Concierge medicine", "with a doctor who", "<em>knows you</em>."],  # <em> is styled gold, upright: no italic font on the LCP path
-    "hero_lede": "Dr. Yana Shtern keeps a small practice on purpose, so every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",
+    "hero_lede": "Dr. Yana Shtern keeps a small practice on purpose and sees one patient at a time, so every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",
     "problem_eyebrow": "The usual way",
     "problem_statement": "Fifteen minutes, a portal message, and a referral to someone you have never met.",
     "problem_lede": "Most primary care runs on volume. It is not that doctors stop caring. A schedule with thirty patients a day leaves no room to listen, to call you back, or to notice what changed since last year.",
@@ -174,7 +174,17 @@ HOME = {
     "guide_h": "One physician who knows your history, and has the time to use it.",
     "guide_body": "<p>Dr. Shtern trained in internal medicine and then in nephrology, and is board-certified in both. That combination matters more than it sounds: kidney function and blood pressure shape almost every prescription an internist writes.</p><p>She started Legacy Medical so she could take on fewer patients and do more for each of them. You see her at every visit, and members can reach the practice by phone at any hour.</p>",
     # Centered statement between two practice photos (Private Medical's move).
-    "manifesto": "A small practice, on purpose. Fewer members means time to <em>listen</em>, to follow up, and to pick up the phone.",
+    "manifesto": "One patient at a time. A small practice on purpose, so there is time to <em>listen</em>, to follow up, and to pick up the phone.",
+    # Why concierge matters: figures are the GAO's (2005) or the practice's own.
+    "why_h": "Why concierge care <em>matters</em>",
+    "why_lede": ("Most primary care runs on short appointments and a list of thousands. Concierge medicine changes the arithmetic: "
+                 "fewer patients per doctor, so each one gets real time, quick access, and a physician who follows through."),
+    "why_stats": [
+        ("One", "patient at a time", "Dr. Shtern does not double-book. Your appointment time is yours alone."),
+        ("2,700 → 490", "patients per doctor", "Average practice size before and after physicians moved to concierge care.", "GAO, 2005"),
+        ("26 → 10", "patients a day", "Patients seen in a day, before and after the same switch.", "GAO, 2005"),
+        ("24/7", "phone access", "Members reach the practice at any hour, including weekends and holidays."),
+    ],
     "manifesto_photos": [("reception-desk", "The front desk at Legacy Medical"), ("dr-shtern-desk", "Dr. Yana Shtern at her desk")],
     # Hover photos for the areas-of-focus list (topic photos, not the practice).
     "spec_peek": {"kidney-care": "p-kidney-water", "hypertension": "p-bp-walk", "geriatric-memory-care": "p-geri-couple",
@@ -264,7 +274,7 @@ CONCIERGE = {
         ("Insurance", "Billed for visits and tests", "Still billed for visits and tests; the membership fee is separate"),
     ],
     "sections": [
-        ("Why the panel is small", "<p>A typical primary care doctor carries a list of two thousand patients or more. Concierge practices typically keep a few hundred. That is the whole idea: fewer patients means a schedule with room in it, so a same-day visit is normal rather than lucky, and a phone call gets returned by the doctor who knows you.</p><p>Dr. Shtern limits the number of members she takes on.</p>"),
+        ("Why the panel is small", "<p>A typical primary care doctor carries a list of two thousand patients or more. Concierge practices typically keep a few hundred. That is the whole idea: fewer patients means a schedule with room in it, so a same-day visit is normal rather than lucky, and a phone call gets returned by the doctor who knows you.</p><p>Dr. Shtern limits the number of members she takes on, and she sees one patient at a time.</p>"),
         ("What the fee does not cover", "<p>The membership fee is not insurance. It does not pay for hospital stays, emergency care, specialists, imaging, or prescriptions. Keep your health insurance, including Medicare and any supplemental plan. Office visits and covered tests at Legacy Medical are billed to that insurance as usual.</p><p>If you are weighing the cost, the useful question is what the access is worth to you: how often you have waited weeks to be seen, or gone to urgent care because your doctor could not fit you in. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
         ("Who it suits", "<p>Concierge care tends to suit people who want one doctor to keep track of everything: adults managing high blood pressure, kidney disease or diabetes; retirees and seasonal residents who want continuity between Florida and up north; busy professionals who cannot wait three weeks for an appointment; and adult children arranging care for a parent.</p><p>If your care is simple and your current doctor is easy to reach, you may not need a concierge practice. We will tell you that at your tour if it is true.</p>"),
         ("Concierge care and direct primary care", "<p>The two are often confused. Direct primary care practices usually replace insurance billing with a monthly fee and do not bill insurance at all. Legacy Medical is a concierge practice: the membership covers access, and your insurance is still billed for visits and tests.</p>"),
@@ -273,7 +283,7 @@ CONCIERGE = {
         ("What is concierge medicine?", "<p>A model of primary care where patients pay an annual membership fee and the doctor keeps a much smaller patient list. The smaller list is what makes same-day visits, longer appointments and direct phone access possible.</p>"),
         ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a meet and greet and ask Dr. Shtern directly; she will be straight with you.</p>"),
         ("Do I still need health insurance?", "<p>Yes. The membership fee does not replace insurance. You will still need coverage for hospital care, specialists, imaging, prescriptions and emergencies, and Legacy Medical bills your insurance for office visits and tests.</p>"),
-        ("How many patients does Dr. Shtern see?", "<p>Far fewer than a typical practice, and the panel is capped. Concierge practices typically see six to ten patients a day; ask at your meet and greet how the schedule works here.</p>"),
+        ("How many patients does Dr. Shtern see?", "<p>Far fewer than a typical practice, and the panel is capped. She sees one patient at a time, never two booked into the same slot. Concierge practices typically see six to ten patients a day; ask at your meet and greet how the schedule works here.</p>"),
         ("Will I always see Dr. Shtern?", "<p>Yes. She is the physician for every member.</p>"),
     ],
     "about": [{"@type": "MedicalSpecialty", "name": "Primary care"}, {"@type": "Thing", "name": "Concierge medicine"}],
@@ -930,6 +940,10 @@ ASSIST_EXTRA += [
 ]
 
 ASSIST_EXTRA += [
+    {"k": ["one patient", "one at a time", "double book", "double-book", "overbook", "how many patients a day", "waiting room", "wait long", "rushed"],
+     "a": "Dr. Shtern sees one patient at a time. Appointments are not double-booked, so your time with her is yours alone and unhurried. <a href=\"/concierge-medicine\">How concierge care works here</a>."},
+    {"k": ["why concierge", "is concierge worth it", "worth it", "benefits of concierge", "why join", "why choose"],
+     "a": "Concierge care means a much smaller practice. When physicians move to concierge care, the GAO found practices fell from about 2,700 patients to about 490, and daily visits from about 26 to 10. At Legacy Medical that means one patient at a time, same or next business day visits, and phone access at any hour. <a href=\"/concierge-vs-traditional-primary-care\">Concierge and traditional care compared</a>."},
     {"k": ["child", "children", "kids", "pediatric", "baby", "teen", "teenager"],
      "a": "Dr. Shtern is an internist: a physician trained in the care of adults. For a question about a younger family member, please call the office at (561) 834-9280."},
     {"k": ["parking", "park"],
