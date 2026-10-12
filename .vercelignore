@@ -1,0 +1,5 @@
+# Vercel builds with `python3 build.py --check` and serves only public/.
+# Keep source photos, tooling and notes out of the upload.
+_dev/
+tools/
+*.md

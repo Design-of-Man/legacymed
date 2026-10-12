@@ -1,0 +1,257 @@
+/* Legacy Medical — site behaviour. No dependencies.
+   Everything here is progressive: with JS off the pages are complete, the
+   reveals are visible, the video simply never loads and the poster stays. */
+(() => {
+  "use strict";
+  const doc = document.documentElement;
+  const body = document.body;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const desktopNav = window.matchMedia("(min-width: 1101px)"); // keep in sync with site.css
+
+  /* ---------- analytics shim: no-op unless GA4 was loaded with consent ---------- */
+  const track = (name, params) => {
+    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+  };
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[href^='tel:'], a[href^='mailto:'], [data-track]");
+    if (!a) return;
+    if (a.matches("a[href^='tel:']")) track("call_click", { link_location: a.dataset.loc || "page" });
+    else if (a.matches("a[href^='mailto:']")) track("email_click", { link_location: a.dataset.loc || "page" });
+    else track(a.dataset.track, { link_location: a.dataset.loc || "page" });
+  });
+
+  /* ---------- header: solid after the hero, tucks away while reading ---------- */
+  const header = document.querySelector(".site-header");
+  const hero = document.querySelector(".hero");
+  const callbar = document.querySelector(".callbar");
+  let lastY = window.scrollY;
+  let ticking = false;
+  const onScroll = () => {
+    const y = window.scrollY;
+    const threshold = hero ? hero.offsetHeight - 120 : 24;
+    header.classList.toggle("solid", y > (hero ? threshold : 24));
+    const goingDown = y > lastY + 4;
+    const goingUp = y < lastY - 4;
+    if (!body.classList.contains("nav-open") && !header.contains(document.activeElement)) {
+      if (goingDown && y > 520) header.classList.add("tucked");
+      else if (goingUp || y < 520) header.classList.remove("tucked");
+    }
+    if (callbar) callbar.classList.toggle("show", y > (hero ? threshold * 0.6 : 400));
+    lastY = y;
+    ticking = false;
+  };
+  window.addEventListener("scroll", () => {
+    if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  header.addEventListener("focusin", () => header.classList.remove("tucked"));
+  onScroll();
+
+  /* ---------- navigation ---------- */
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.getElementById("site-nav");
+  const triggers = Array.from(document.querySelectorAll(".nav-trigger"));
+  const closeMenus = (except) => {
+    triggers.forEach((t) => {
+      if (t === except) return;
+      t.setAttribute("aria-expanded", "false");
+      const m = document.getElementById(t.getAttribute("aria-controls"));
+      if (m) m.classList.remove("open");
+    });
+  };
+  const setNav = (open) => {
+    body.classList.toggle("nav-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    if (!desktopNav.matches) nav.toggleAttribute("inert", !open);
+    if (!open) closeMenus();
+  };
+  if (toggle && nav) {
+    if (!desktopNav.matches) nav.setAttribute("inert", "");
+    toggle.addEventListener("click", () => setNav(!body.classList.contains("nav-open")));
+    desktopNav.addEventListener("change", (e) => {
+      if (e.matches) { nav.removeAttribute("inert"); setNav(false); }
+      else nav.toggleAttribute("inert", !body.classList.contains("nav-open"));
+    });
+  }
+  triggers.forEach((t) => {
+    t.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = t.getAttribute("aria-expanded") !== "true";
+      closeMenus(t);
+      t.setAttribute("aria-expanded", String(open));
+      const m = document.getElementById(t.getAttribute("aria-controls"));
+      if (m) m.classList.toggle("open", open);
+    });
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav-list > li")) closeMenus();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    const openTrigger = triggers.find((t) => t.getAttribute("aria-expanded") === "true");
+    if (openTrigger) { closeMenus(); openTrigger.focus(); return; }
+    if (body.classList.contains("nav-open")) { setNav(false); toggle.focus(); }
+  });
+  document.querySelectorAll(".nav-list li").forEach((li) => {
+    li.addEventListener("focusout", (e) => {
+      if (desktopNav.matches && !li.contains(e.relatedTarget)) {
+        const t = li.querySelector(".nav-trigger");
+        if (t) closeMenus();
+      }
+    });
+  });
+
+  /* ---------- reveal on scroll ---------- */
+  const revealables = document.querySelectorAll("[data-reveal], .clock");
+  if ("IntersectionObserver" in window && !reduceMotion.matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    revealables.forEach((el) => io.observe(el));
+  } else {
+    revealables.forEach((el) => el.classList.add("in"));
+  }
+
+  /* ---------- hero video ----------
+     The poster is the LCP element and ships in the HTML. The video gets no
+     <source> until after load, and only when the visitor's settings allow it:
+     never under reduced motion or Save-Data, and on narrow screens only when
+     the visitor presses play. */
+  const video = document.querySelector(".hero-media video");
+  const vToggle = document.querySelector(".hero-toggle");
+  if (video && vToggle) {
+    const conn = navigator.connection || {};
+    const saveData = conn.saveData === true || /(^|-)2g$/.test(conn.effectiveType || "");
+    const narrow = window.matchMedia("(max-width: 760px)").matches;
+    let loaded = false;
+    let wantPlay = false;
+    const setToggle = (playing) => {
+      vToggle.setAttribute("aria-pressed", String(playing));
+      vToggle.setAttribute("aria-label", playing ? "Pause background video" : "Play background video");
+      vToggle.querySelector(".i-play").toggleAttribute("hidden", playing);
+      vToggle.querySelector(".i-pause").toggleAttribute("hidden", !playing);
+    };
+    const attach = () => {
+      if (loaded) return;
+      loaded = true;
+      const portrait = window.matchMedia("(max-aspect-ratio: 4/5)").matches;
+      const wide = window.matchMedia("(min-width: 1000px)").matches;
+      const set = portrait ? video.dataset.portrait : (wide ? video.dataset.hd : video.dataset.sd);
+      const [webm, mp4] = set.split("|");
+      const s1 = document.createElement("source"); s1.src = webm; s1.type = 'video/webm; codecs="av01.0.05M.08"';
+      const s2 = document.createElement("source"); s2.src = mp4; s2.type = "video/mp4";
+      video.append(s1, s2);
+      video.load();
+    };
+    const play = () => {
+      wantPlay = true;
+      attach();
+      const p = video.play();
+      if (p && p.catch) p.catch(() => setToggle(false));
+    };
+    video.addEventListener("playing", () => { video.classList.add("playing"); setToggle(true); });
+    video.addEventListener("pause", () => setToggle(false));
+    vToggle.addEventListener("click", () => {
+      if (video.paused) { play(); track("hero_video_play"); }
+      else { wantPlay = false; video.pause(); }
+    });
+    const autoOK = !reduceMotion.matches && !saveData && !narrow;
+    vToggle.hidden = false;
+    setToggle(false);
+    if (autoOK) {
+      const start = () => ("requestIdleCallback" in window ? requestIdleCallback(play, { timeout: 1500 }) : setTimeout(play, 300));
+      if (document.readyState === "complete") start();
+      else window.addEventListener("load", start, { once: true });
+    }
+    // Pause off-screen so a looping video never burns battery below the fold.
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(([en]) => {
+        if (!loaded) return;
+        if (!en.isIntersecting) { if (!video.paused) { video.pause(); wantPlay = true; } }
+        else if (wantPlay && video.paused) video.play().catch(() => {});
+      }, { threshold: 0.05 }).observe(video);
+    }
+  }
+
+  /* ---------- practice photo reel ---------- */
+  document.querySelectorAll(".reel").forEach((reel) => {
+    const track_ = reel.querySelector(".reel-track");
+    const btn = reel.querySelector(".reel-pause");
+    if (!track_ || reduceMotion.matches) return;
+    const group = track_.querySelector(".reel-group");
+    const setSpeed = () => {
+      const w = group.getBoundingClientRect().width;
+      track_.style.setProperty("--reel-dur", Math.max(30, Math.round(w / 45)) + "s");
+    };
+    setSpeed();
+    window.addEventListener("resize", setSpeed, { passive: true });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(([en]) => track_.classList.toggle("running", en.isIntersecting), { rootMargin: "100px" }).observe(reel);
+    } else track_.classList.add("running");
+    if (btn) btn.addEventListener("click", () => {
+      const paused = track_.classList.toggle("paused");
+      btn.setAttribute("aria-pressed", String(paused));
+      btn.setAttribute("aria-label", paused ? "Play photo reel" : "Pause photo reel");
+      btn.querySelector(".i-play").toggleAttribute("hidden", !paused);
+      btn.querySelector(".i-pause").toggleAttribute("hidden", paused);
+    });
+  });
+
+  /* ---------- FAQ search ---------- */
+  const faqSearch = document.getElementById("faq-q");
+  if (faqSearch) {
+    const items = Array.from(document.querySelectorAll(".faq details"));
+    const status = document.getElementById("faq-status");
+    faqSearch.addEventListener("input", () => {
+      const q = faqSearch.value.trim().toLowerCase();
+      let shown = 0;
+      items.forEach((d) => {
+        const hit = !q || d.textContent.toLowerCase().includes(q);
+        d.hidden = !hit;
+        if (hit) shown += 1;
+        if (q && hit) d.open = true;
+      });
+      document.querySelectorAll(".faq-group").forEach((g) => {
+        g.hidden = !g.querySelector("details:not([hidden])");
+      });
+      if (status) status.textContent = q ? shown + (shown === 1 ? " answer" : " answers") + " match" : "";
+    });
+  }
+
+  /* ---------- journal filter ---------- */
+  const chips = document.querySelectorAll(".chips button");
+  if (chips.length) {
+    const posts = document.querySelectorAll(".post-list li");
+    chips.forEach((c) => c.addEventListener("click", () => {
+      chips.forEach((o) => o.setAttribute("aria-pressed", String(o === c)));
+      const cat = c.dataset.cat;
+      posts.forEach((p) => { p.hidden = cat !== "all" && p.dataset.cat !== cat; });
+    }));
+  }
+
+  /* ---------- live Google reviews (only when the API is configured) ---------- */
+  const live = document.querySelector("[data-live-reviews]");
+  if (live && "fetch" in window) {
+    fetch("/api/reviews", { headers: { accept: "application/json" } })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (!data || !data.rating || !Array.isArray(data.reviews)) return;
+        const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+        const badge = live.querySelector("[data-live-badge]");
+        if (badge) {
+          badge.innerHTML = '<b>' + esc(Number(data.rating).toFixed(1)) + '</b><span>Google rating from ' + esc(data.count) + ' reviews<br><span class="small muted">Live from Google</span></span>';
+          badge.hidden = false;
+        }
+        const list = live.querySelector("[data-live-list]");
+        const picks = data.reviews.filter((r) => r.text && r.rating >= 4).slice(0, 4);
+        if (list && picks.length) {
+          list.innerHTML = picks.map((r) =>
+            '<figure class="quote"><blockquote><p>' + esc(r.text.length > 420 ? r.text.slice(0, 417).replace(/\s+\S*$/, "") + "…" : r.text) +
+            '</p></blockquote><figcaption><b>' + esc(r.author) + '</b> · Google review' + (r.when ? ' · ' + esc(r.when) : '') + '</figcaption></figure>').join("");
+        }
+      })
+      .catch(() => {});
+  }
+})();
