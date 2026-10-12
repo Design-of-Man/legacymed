@@ -40,34 +40,37 @@ def home(B):
     v = C.HERO_VIDEO
     poster = ('<picture><source type="image/avif" media="(max-aspect-ratio: 4/5)" srcset="%(pa)s">'
               '<source type="image/webp" media="(max-aspect-ratio: 4/5)" srcset="%(pw)s">'
-              '<source type="image/avif" srcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" sizes="100vw">'
-              '<source type="image/webp" srcset="%(w768)s 768w, %(w1280)s 1280w, %(w1920)s 1920w" sizes="100vw">'
-              '<img src="%(j1280)s" srcset="%(j768)s 768w, %(j1280)s 1280w, %(j1920)s 1920w" sizes="100vw" width="1920" height="1080" '
+              '<source type="image/avif" srcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" sizes="(max-width: 900px) 100vw, 75vw">'
+              '<source type="image/webp" srcset="%(w768)s 768w, %(w1280)s 1280w, %(w1920)s 1920w" sizes="(max-width: 900px) 100vw, 75vw">'
+              '<img src="%(j1280)s" srcset="%(j768)s 768w, %(j1280)s 1280w, %(j1920)s 1920w" sizes="(max-width: 900px) 100vw, 75vw" width="1920" height="1080" '
               'alt="" fetchpriority="high" decoding="async"></picture>') % v["posters"]
     # No poster attribute: the <picture> underneath is the poster, so the
     # browser never fetches a second copy of the same frame.
     video = ('<video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" disablepictureinpicture '
              'data-hd="%s" data-sd="%s" data-portrait="%s"></video>' % (v["hd"], v["sd"], v["portrait"]))
-    preload = ['<link rel="preload" as="image" type="image/avif" imagesrcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" imagesizes="100vw" media="(min-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"],
+    preload = ['<link rel="preload" as="image" type="image/avif" imagesrcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" imagesizes="(max-width: 900px) 100vw, 75vw" media="(min-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"],
                '<link rel="preload" as="image" type="image/avif" href="%(pa)s" media="(max-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"]]
 
     title_lines = "".join('<span class="rise"><span style="--i:%d">%s</span></span>' % (i + 1, ln) for i, ln in enumerate(H["hero_lines"]))
     hero = """<section class="hero" aria-labelledby="hero-h">
-  <div class="hero-media">%(poster)s%(video)s</div>
-  <div class="hero-scrim"></div>
-  <div class="wrap hero-inner">
-    <h1 id="hero-h"><span class="hero-kicker fade-in" style="--i:0">%(kicker)s</span><span class="hero-title">%(lines)s</span></h1>
-    <p class="hero-lede fade-in" style="--i:3">%(lede)s</p>
-    <div class="btn-row fade-in" style="--i:4">
-      <a class="btn" href="/meet-and-greet" data-loc="hero">Book a meet and greet %(arrow)s</a>
-      <a class="btn ghost" href="tel:%(tel)s" data-loc="hero">%(phoneico)s Call %(phone)s</a>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 id="hero-h"><span class="hero-kicker fade-in" style="--i:0">%(kicker)s</span><span class="hero-title">%(lines)s</span></h1>
+      <p class="hero-lede fade-in" style="--i:3">%(lede)s</p>
+      <div class="btn-row fade-in" style="--i:4">
+        <a class="btn" href="/meet-and-greet" data-loc="hero">Book a meet and greet %(arrow)s</a>
+        <a class="btn ghost" href="tel:%(tel)s" data-loc="hero">%(phoneico)s Call %(phone)s</a>
+      </div>
+      <dl class="hero-facts fade-in" style="--i:5">
+        <div><dt>Physician</dt><dd><a href="/dr-yana-shtern">Dr. Yana Shtern, MD</a><br>Internal medicine and nephrology</dd></div>
+        <div><dt>Office</dt><dd><a href="%(maps)s" rel="noopener" target="_blank">%(street)s<span class="sr-only"> (opens Google Maps)</span></a><br>%(city)s, FL %(postal)s</dd></div>
+        <div><dt>Hours</dt><dd>Mon–Thu 9–5, Fri 9–2<br>Members: phone 24/7</dd></div>
+      </dl>
     </div>
-    <dl class="hero-facts fade-in" style="--i:5">
-      <div><dt>Physician</dt><dd><a href="/dr-yana-shtern">Dr. Yana Shtern, MD</a><br>Internal medicine and nephrology</dd></div>
-      <div><dt>Office</dt><dd><a href="%(maps)s" rel="noopener" target="_blank">%(street)s<span class="sr-only"> (opens Google Maps)</span></a><br>%(city)s, FL %(postal)s</dd></div>
-      <div><dt>Hours</dt><dd>Mon–Thu 9–5, Fri 9–2<br>Members: phone 24/7</dd></div>
-      <div class="hero-vid"><dt>Film</dt><dd><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Jupiter Inlet film</span></button></dd></div>
-    </dl>
+    <figure class="hero-film">
+      <div class="hero-media">%(poster)s%(video)s</div>
+      <figcaption><span>The Jupiter Inlet at sunset, a few minutes from the office</span><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Jupiter Inlet film</span></button></figcaption>
+    </figure>
   </div>
 </section>""" % {"poster": poster, "video": video, "kicker": esc(H["kicker"]), "lines": title_lines, "lede": H["hero_lede"],
                  "arrow": icon("arrow"), "tel": P["tel"], "phone": P["phone"], "phoneico": icon("phone"),
@@ -110,7 +113,7 @@ def home(B):
                  "who": "Patient review", "src": q["source_html"], "arrow": icon("arrow")}
 
     included = "".join('<li data-reveal style="--d:%d">%s<h3>%s</h3><p>%s</p></li>' % (i % 3, B.svc_icon(s["icon"]), esc(s["name"]), s["text"])
-                       for i, s in enumerate(C.SERVICES_INCLUDED[:9]))
+                       for i, s in enumerate(C.SERVICES_INCLUDED[:6]))
     inc = """<section class="section" aria-labelledby="inc-h">
   <div class="wrap">
     <div class="headline-row"><div><p class="eyebrow">Membership</p><h2 id="inc-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
@@ -167,17 +170,14 @@ def home(B):
   </div>
 </section>""" % (esc(H["stakes_h"]), H["stakes_body"])
 
-    faq_pairs = C.HOME_FAQ
-    body = hero + guide + problem + inc + clock + spec + plan + reviews + stakes + areas_sec + journal_sec
-    body += """<section class="section tight" aria-labelledby="hfaq-h"><div class="wrap split"><div><p class="eyebrow">Questions</p><h2 id="hfaq-h" style="margin-top:1.25rem;font-size:var(--step-3)">Before you call</h2><p style="margin-top:1.25rem"><a class="text-link" href="/faq">All questions %s</a></p></div>%s</div></section>""" % (icon("arrow"), B.faq_html(faq_pairs))
+    body = hero + guide + inc + spec + plan + reviews + journal_sec
     body += B.cta_band() + B.reel_html()  # the photo reel closes the page, just above the footer
 
     schema = B.graph(B.website_node(), B.clinic_node(), B.physician_node(full=True),
                      {"@type": "WebPage", "@id": B.url("") + "#webpage", "url": B.url(""), "name": C.HOME_TITLE,
                       "isPartOf": {"@id": B.SITE_ID}, "about": {"@id": B.ORG_ID}, "primaryImageOfPage": B.BASE + v["posters"]["j1920"],
-                      "inLanguage": "en-US"},
-                     B.faq_node(faq_pairs, B.url("")))
-    B.write_page("", C.HOME_TITLE, C.HOME_DESC, body, schema=schema, over_hero=True, og_image="/assets/img/og/home.jpg", preload=preload)
+                      "inLanguage": "en-US"})
+    B.write_page("", C.HOME_TITLE, C.HOME_DESC, body, schema=schema, og_image="/assets/img/og/home.jpg", preload=preload)
 
 
 def clock_section(B):
@@ -240,7 +240,7 @@ def clock_section(B):
 def reviews_section(B):
     esc = B.esc
     quotes = "".join('<figure class="quote" data-reveal style="--d:%d"><blockquote><p>%s</p></blockquote><figcaption><b>%s</b> · %s</figcaption></figure>' % (
-        i % 2, esc(t["quote"]), esc(t["who"]), t["source_html"]) for i, t in enumerate(C.TESTIMONIALS))
+        i % 2, esc(t["quote"]), esc(t["who"]), t["source_html"]) for i, t in enumerate(C.TESTIMONIALS[1:3]))
     ratings = "".join('<li><a class="inline-link" href="%s" rel="noopener" target="_blank">%s<span class="sr-only"> (opens in a new tab)</span></a></li>' % (esc(r["url"]), esc(r["label"])) for r in C.RATING_LINKS)
     live_attr = ' data-live-reviews' if B.LIVE_REVIEWS else ""
     return """<section class="section surface" id="reviews" aria-labelledby="rev-h"%s>

@@ -160,9 +160,9 @@ HERO_VIDEO = {
 }
 
 HOME = {
-    "kicker": "Concierge internal medicine in Palm Beach Gardens",
-    "hero_lines": ["Dr. Shtern,", "with <em>time</em>", "for you."],  # <em> is styled gold, upright: no italic font on the LCP path
-    "hero_lede": "Dr. Yana Shtern keeps a small practice on purpose. Members are seen the same or next business day, visits run long enough to talk, and the phone is answered at any hour.",
+    "kicker": "Concierge internal medicine · Palm Beach Gardens",
+    "hero_lines": ["Concierge medicine", "with a doctor who", "<em>knows you</em>."],  # <em> is styled gold, upright: no italic font on the LCP path
+    "hero_lede": "Dr. Yana Shtern keeps a small practice on purpose, so every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",
     "problem_eyebrow": "The usual way",
     "problem_statement": "Fifteen minutes, a portal message, and a referral to someone you have never met.",
     "problem_lede": "Most primary care runs on volume. It is not that doctors stop caring. A schedule with thirty patients a day leaves no room to listen, to call you back, or to notice what changed since last year.",

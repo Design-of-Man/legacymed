@@ -3,8 +3,8 @@
   "short_name": "Legacy Medical",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#0E0D0B",
-  "theme_color": "#0E0D0B",
+  "background_color": "#F7F2EA",
+  "theme_color": "#F7F2EA",
   "icons": [
     {
       "src": "/assets/img/og/logo-192.png",

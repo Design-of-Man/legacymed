@@ -546,8 +546,8 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
 <meta name="description" content="%(desc)s">
 %(robots)s
 %(canon)s
-<meta name="theme-color" content="#0E0D0B">
-<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F7F2EA">
+<meta name="color-scheme" content="light">
 <meta name="format-detection" content="telephone=no">
 <link rel="preload" href="/assets/fonts/legacy-display-v1.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/legacy-sans-v1.woff2" as="font" type="font/woff2" crossorigin>
@@ -744,7 +744,7 @@ def build_meta():
     open(os.path.join(PUB, "llms.txt"), "w", encoding="utf-8").write(C.llms_txt(PRACTICE, DOCTOR, PAGES, url))
     # manifest
     manifest = {"name": "Legacy Medical", "short_name": "Legacy Medical", "start_url": "/", "display": "browser",
-                "background_color": "#0E0D0B", "theme_color": "#0E0D0B",
+                "background_color": "#F7F2EA", "theme_color": "#F7F2EA",
                 "icons": [{"src": "/assets/img/og/logo-192.png", "sizes": "192x192", "type": "image/png"},
                           {"src": "/assets/img/og/logo-512.png", "sizes": "512x512", "type": "image/png"}]}
     open(os.path.join(PUB, "site.webmanifest"), "w", encoding="utf-8").write(json.dumps(manifest, indent=2))

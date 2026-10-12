@@ -24,6 +24,7 @@
   const header = document.querySelector(".site-header");
   const hero = document.querySelector(".hero");
   const callbar = document.querySelector(".callbar");
+  if (hero) body.classList.add("has-hero");
   let lastY = window.scrollY;
   let ticking = false;
   const onScroll = () => {
