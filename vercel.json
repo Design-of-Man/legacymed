@@ -68,7 +68,7 @@
       ]
     },
     {
-      "source": "/(membership|contact)",
+      "source": "/(meet-and-greet|contact)",
       "headers": [
         {
           "key": "Cache-Control",

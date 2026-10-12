@@ -37,6 +37,8 @@
       else if (goingUp || y < 520) header.classList.remove("tucked");
     }
     if (callbar) callbar.classList.toggle("show", y > (hero ? threshold * 0.6 : 400));
+    // Nothing floats over the hero: the chat launcher waits until it is passed.
+    body.classList.toggle("past-hero", !hero || y > threshold * 0.6);
     lastY = y;
     ticking = false;
   };
@@ -129,7 +131,7 @@
     let wantPlay = false;
     const setToggle = (playing) => {
       vToggle.setAttribute("aria-pressed", String(playing));
-      vToggle.setAttribute("aria-label", playing ? "Pause background video" : "Play background video");
+      vToggle.querySelector(".t").textContent = playing ? "Pause" : "Play";
       vToggle.querySelector(".i-play").toggleAttribute("hidden", playing);
       vToggle.querySelector(".i-pause").toggleAttribute("hidden", !playing);
     };

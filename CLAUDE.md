@@ -17,7 +17,7 @@ Static site for Legacy Medical, Dr. Yana Shtern's concierge internal medicine pr
 
 ## Rules that are easy to break
 - Never invent facts, reviews, staff, stats or prices. Unconfirmed items live in `_dev/OPEN-ITEMS.md`, not on the site.
-- No tracking on pages with a form (`track=False` in write_page for /membership and /contact). GA4 is consent-gated and only loads when GA4_ID is set.
+- No tracking on pages with a form (`track=False` in write_page for /meet-and-greet and /contact). GA4 is consent-gated and only loads when GA4_ID is set.
 - No self-serving review stars in schema (preflight blocks AggregateRating/Review).
 - The hero headline is the LCP element: keep it painted at first frame (no clip/translate-from-hidden), no italic face in it, and no `poster` attribute on the video (the <picture> is the poster).
 - The photo reel uses only real practice photos. The 2020 "Concierge Medicine of Jupiter" shoot shows an earlier location and unidentified people: keep it out.

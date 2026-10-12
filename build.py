@@ -228,7 +228,8 @@ NAV = [
         ("telehealth", "Telehealth", "Visits by video"),
     ]),
     ("Membership", None, [
-        ("membership", "How to join", "Tour the practice first"),
+        ("meet-and-greet", "Meet and greet", "Your first visit"),
+        ("membership", "How to join", "Three unhurried steps"),
         ("insurance-and-fees", "Insurance and fees", "What insurance still covers"),
         ("faq", "Questions", "Straight answers"),
     ]),
@@ -280,13 +281,13 @@ def header(current):
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul class="nav-list">%(items)s</ul>
       <div class="mobile-cta">
-        <a class="btn" href="/membership#tour" data-loc="mobile-menu">Request a tour %(arrow)s</a>
+        <a class="btn" href="/meet-and-greet" data-loc="mobile-menu">Book a meet and greet %(arrow)s</a>
         <a class="btn ghost" href="tel:%(tel)s" data-loc="mobile-menu">Call %(phone)s</a>
       </div>
     </nav>
     <div class="header-actions">
       <a class="header-phone" href="tel:%(tel)s" data-loc="header">%(ico)s<span class="label">%(phone)s</span><span class="sr-only"> (call the office)</span></a>
-      <a class="btn small" href="/membership#tour" data-loc="header">Request a tour</a>
+      <a class="btn small" href="/meet-and-greet" data-loc="header">Book a meet &amp; greet</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
     </div>
   </div>
@@ -352,7 +353,7 @@ def callbar():
     p = PRACTICE
     return ('<div class="callbar" aria-label="Quick contact" role="region">'
             '<a class="btn ghost small" href="tel:%s" data-loc="callbar">%s Call</a>'
-            '<a class="btn small" href="/membership#tour" data-loc="callbar">Request a tour</a></div>' % (p["tel"], icon("phone")))
+            '<a class="btn small" href="/meet-and-greet" data-loc="callbar">Meet &amp; greet</a></div>' % (p["tel"], icon("phone")))
 
 
 # --------------------------------------------------------------------------
@@ -651,7 +652,7 @@ def trail_for(slug, name):
 def page_hero(trail, eyebrow, h1, lede, media=None, cta=True, h1_html=None):
     btns = ""
     if cta:
-        btns = ('<div class="btn-row"><a class="btn" href="/membership#tour" data-loc="page-hero">Request a tour %s</a>'
+        btns = ('<div class="btn-row"><a class="btn" href="/meet-and-greet" data-loc="page-hero">Book a meet and greet %s</a>'
                 '<a class="btn ghost" href="tel:%s" data-loc="page-hero">Call %s</a></div>' % (icon("arrow"), PRACTICE["tel"], PRACTICE["phone"]))
     text = """<div>%s<p class="eyebrow">%s</p><h1>%s</h1>%s%s</div>""" % (
         crumbs_html(trail), esc(eyebrow), h1_html or esc(h1), ('<p class="lede">%s</p>' % lede) if lede else "", btns)
@@ -662,16 +663,16 @@ def page_hero(trail, eyebrow, h1, lede, media=None, cta=True, h1_html=None):
 
 def cta_band(heading=None, lede=None, night=True):
     p = PRACTICE
-    heading = heading or "Come see the office before you decide."
-    lede = lede or ("A tour is free and comes with no obligation. Meet Dr. Shtern, see the office, and ask whatever you like "
-                    "about membership.")
+    heading = heading or "Meet Dr. Shtern before you decide."
+    lede = lede or ("Every membership starts with a complimentary meet and greet. Sit down with Dr. Shtern, see the office, "
+                    "and ask whatever you like. There is no obligation to join.")
     return """<section class="section cta-band%s" aria-labelledby="cta-h">
   <div class="wrap cta-grid">
     <div>
       <p class="eyebrow">Next step</p>
       <h2 id="cta-h" style="margin-top:1.25rem">%s</h2>
       <p class="lede">%s</p>
-      <div class="btn-row"><a class="btn" href="/membership#tour" data-loc="cta-band">Request a tour %s</a><a class="btn ghost" href="tel:%s" data-loc="cta-band">Call %s</a></div>
+      <div class="btn-row"><a class="btn" href="/meet-and-greet" data-loc="cta-band">Book a meet and greet %s</a><a class="btn ghost" href="tel:%s" data-loc="cta-band">Call %s</a></div>
     </div>
     <dl class="facts">
       <div><dt>Office</dt><dd>%s<br>%s, FL %s</dd></div>
@@ -832,7 +833,7 @@ def build_vercel():
             {"source": "/assets/(css|js)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
             {"source": "/assets/fonts/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
             {"source": "/assets/(img|video)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400"}]},
-            {"source": "/(membership|contact)", "headers": [{"key": "Cache-Control", "value": "public, max-age=0, must-revalidate"}]},
+            {"source": "/(meet-and-greet|contact)", "headers": [{"key": "Cache-Control", "value": "public, max-age=0, must-revalidate"}]},
             {"source": "/(llms.txt|robots.txt)", "headers": [{"key": "Content-Type", "value": "text/plain; charset=utf-8"}, {"key": "Cache-Control", "value": "public, max-age=3600"}]},
             {"source": "/api/(.*)", "headers": [{"key": "Cache-Control", "value": "no-store"}]},
         ],

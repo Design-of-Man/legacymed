@@ -16,6 +16,7 @@ def build_all(B):
     concierge(B)
     for slug in C.SERVICE_PAGES:
         service(B, slug)
+    meet_and_greet(B)
     membership(B)
     insurance(B)
     faq(B)
@@ -56,16 +57,16 @@ def home(B):
     <h1 id="hero-h"><span class="hero-kicker fade-in" style="--i:0">%(kicker)s</span><span class="hero-title">%(lines)s</span></h1>
     <p class="hero-lede fade-in" style="--i:3">%(lede)s</p>
     <div class="btn-row fade-in" style="--i:4">
-      <a class="btn" href="/membership#tour" data-loc="hero">Request a tour %(arrow)s</a>
+      <a class="btn" href="/meet-and-greet" data-loc="hero">Book a meet and greet %(arrow)s</a>
       <a class="btn ghost" href="tel:%(tel)s" data-loc="hero">%(phoneico)s Call %(phone)s</a>
     </div>
     <dl class="hero-facts fade-in" style="--i:5">
       <div><dt>Physician</dt><dd><a href="/dr-yana-shtern">Dr. Yana Shtern, MD</a><br>Internal medicine and nephrology</dd></div>
       <div><dt>Office</dt><dd><a href="%(maps)s" rel="noopener" target="_blank">%(street)s<span class="sr-only"> (opens Google Maps)</span></a><br>%(city)s, FL %(postal)s</dd></div>
       <div><dt>Hours</dt><dd>Mon–Thu 9–5, Fri 9–2<br>Members: phone 24/7</dd></div>
+      <div class="hero-vid"><dt>Film</dt><dd><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Jupiter Inlet film</span></button></dd></div>
     </dl>
   </div>
-  <button class="hero-toggle" type="button" aria-pressed="false" aria-label="Play background video" hidden>%(play)s%(pause)s</button>
 </section>""" % {"poster": poster, "video": video, "kicker": esc(H["kicker"]), "lines": title_lines, "lede": H["hero_lede"],
                  "arrow": icon("arrow"), "tel": P["tel"], "phone": P["phone"], "phoneico": icon("phone"),
                  "maps": esc(P["google_maps"]), "street": P["street_short"], "city": P["city"], "postal": P["postal"],
@@ -86,19 +87,25 @@ def home(B):
                   "".join('<li data-reveal style="--d:%d"><span class="n">%02d</span><div><h3>%s</h3><p>%s</p></div></li>' % (i, i + 1, esc(t), d) for i, (t, d) in enumerate(H["problems"])))
 
     creds = "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v) for k, v in D["home_creds"])
-    guide = """<section class="section surface" aria-labelledby="doc-h">
+    q = C.TESTIMONIALS[0]
+    guide = """<section class="section doc-feature" aria-labelledby="doc-h">
   <div class="wrap doctor">
-    <figure class="doctor-photo" data-reveal="clip">%s<figcaption>Dr. Yana Shtern, MD, at Legacy Medical in Palm Beach Gardens</figcaption></figure>
+    <figure class="doctor-photo" data-reveal="clip">%(photo)s</figure>
     <div>
       <p class="eyebrow">Your physician</p>
-      <h2 id="doc-h" style="margin-top:1.5rem">%s</h2>
-      <div class="stack" style="margin-top:1.5rem;max-width:36rem">%s</div>
-      <dl class="creds">%s</dl>
-      <p style="margin-top:2rem"><a class="text-link" href="/dr-yana-shtern">Read Dr. Shtern's background %s</a></p>
+      <h2 id="doc-h" class="doc-name">Dr. Yana Shtern<span>, MD</span></h2>
+      <p class="doc-role">Board-certified in internal medicine and nephrology</p>
+      <p class="doc-line">%(line)s</p>
+      <div class="stack" style="margin-top:1.5rem;max-width:36rem">%(body)s</div>
+      <dl class="creds">%(creds)s</dl>
+      <blockquote class="doc-quote"><p>%(quote)s</p><footer>%(who)s, %(src)s</footer></blockquote>
+      <div class="btn-row" style="margin-top:2rem"><a class="btn" href="/meet-and-greet" data-loc="doctor">Book a meet and greet %(arrow)s</a><a class="btn ghost" href="/dr-yana-shtern" data-loc="doctor">Her background</a></div>
     </div>
   </div>
-</section>""" % (photo(D["photo"], "Dr. Yana Shtern, MD", sizes="(max-width: 880px) 90vw, 40vw", max_w=1200),
-                  esc(H["guide_h"]), H["guide_body"], creds, icon("arrow"))
+</section>""" % {"photo": photo(D["photo"], "Dr. Yana Shtern, MD, at Legacy Medical in Palm Beach Gardens", sizes="(max-width: 880px) 90vw, 42vw", max_w=1200),
+                 "line": esc(H["guide_h"]), "body": H["guide_body"], "creds": creds,
+                 "quote": esc("She identified the cause of my problem rather than only trying to treat my symptoms as the other doctors I saw did."),
+                 "who": "Patient review", "src": q["source_html"], "arrow": icon("arrow")}
 
     included = "".join('<li data-reveal style="--d:%d">%s<h3>%s</h3><p>%s</p></li>' % (i % 3, B.svc_icon(s["icon"]), esc(s["name"]), s["text"])
                        for i, s in enumerate(C.SERVICES_INCLUDED[:9]))
@@ -125,7 +132,7 @@ def home(B):
     plan = """<section class="section" aria-labelledby="plan-h">
   <div class="wrap">
     <div class="headline-row"><div><p class="eyebrow">How to join</p><h2 id="plan-h" style="margin-top:1.25rem">%s</h2></div>
-    <a class="btn" href="/membership#tour" data-loc="plan">Request a tour %s</a></div>
+    <a class="btn" href="/meet-and-greet" data-loc="plan">Book a meet and greet %s</a></div>
     <ol class="steps">%s</ol>
     <div class="agreement">%s<p>%s</p></div>
   </div>
@@ -159,7 +166,7 @@ def home(B):
 </section>""" % (esc(H["stakes_h"]), H["stakes_body"])
 
     faq_pairs = C.HOME_FAQ
-    body = hero + problem + guide + inc + clock + spec + plan + reviews + stakes + areas_sec + journal_sec
+    body = hero + guide + problem + inc + clock + spec + plan + reviews + stakes + areas_sec + journal_sec
     body += """<section class="section tight" aria-labelledby="hfaq-h"><div class="wrap split"><div><p class="eyebrow">Questions</p><h2 id="hfaq-h" style="margin-top:1.25rem;font-size:var(--step-3)">Before you call</h2><p style="margin-top:1.25rem"><a class="text-link" href="/faq">All questions %s</a></p></div>%s</div></section>""" % (icon("arrow"), B.faq_html(faq_pairs))
     body += B.cta_band() + B.reel_html()  # the photo reel closes the page, just above the footer
 
@@ -384,7 +391,7 @@ def service(B, slug):
 def tour_form(B, kind, heading_id):
     P = B.PRACTICE
     esc = B.esc
-    reasons = ["A tour and meet-and-greet", "Membership questions", "Kidney or blood pressure care", "Care for a parent", "Something else"]
+    reasons = ["A meet and greet with Dr. Shtern", "Membership questions", "Kidney or blood pressure care", "Care for a parent", "Something else"]
     opts = "".join('<option>%s</option>' % esc(r) for r in reasons)
     def field(fid, label, typ="text", req=False, auto="", hint="", full=False, extra=""):
         return ('<div class="field%s"><label for="%s">%s%s</label>%s<input id="%s" name="%s" type="%s"%s%s%s aria-describedby="%s-err%s"><p class="err" id="%s-err" hidden></p></div>' % (
@@ -392,7 +399,7 @@ def tour_form(B, kind, heading_id):
             ('<p class="hint" id="%s-hint">%s</p>' % (fid, hint)) if hint else "", fid, fid, typ,
             " required" if req else "", (' autocomplete="%s"' % auto) if auto else "", extra, fid, (" %s-hint" % fid) if hint else "", fid))
     return """<form class="form" data-tour="%(kind)s" data-phone="%(phone)s" action="/api/tour" method="post" novalidate aria-labelledby="%(hid)s">
-  <div class="notice full">%(info)s<p><strong>Please do not include medical details.</strong> This form is for setting up a tour or a call. We will talk about your health in person or by phone.</p></div>
+  <div class="notice full">%(info)s<p><strong>Please do not include medical details.</strong> This form is for setting up a meet and greet or a call. We will talk about your health in person or by phone.</p></div>
   %(name)s
   %(phone_f)s
   %(email)s
@@ -423,13 +430,35 @@ def membership(B):
     body = hero + """<section class="section flush-top" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="sr-only">Steps to join</h2><ol class="steps">%s</ol>
 <div class="agreement">%s<p>%s</p></div></div></section>""" % (steps, B.ICONS["shield"], S["agreement"])
     body += "".join(prose_section(B, i + 1, h, b) for i, (h, b) in enumerate(S["sections"]))
-    body += """<section class="section sunk" id="tour" aria-labelledby="tour-h"><div class="wrap split">
-<div><p class="eyebrow">Request a tour</p><h2 id="tour-h" style="margin-top:1.25rem">%s</h2><p class="lede" style="margin-top:1.25rem">%s</p>
-<dl class="facts" style="margin-top:2rem;grid-template-columns:1fr"><div><dt>Phone</dt><dd><a href="tel:%s" data-loc="tour">%s</a></dd></div><div><dt>Office</dt><dd>%s<br>%s, FL %s</dd></div><div><dt>Tours</dt><dd>Arranged by phone during office hours</dd></div></dl></div>
-<div class="panel">%s</div></div></section>""" % (esc(S["form_h"]), S["form_lede"], B.PRACTICE["tel"], B.PRACTICE["phone"], B.PRACTICE["street_short"], B.PRACTICE["city"], B.PRACTICE["postal"], tour_form(B, "membership", "tour-h"))
+    body += """<section class="section sunk" id="tour" aria-labelledby="tour-h"><div class="wrap split" style="align-items:center">
+<div><p class="eyebrow">First step</p><h2 id="tour-h" style="margin-top:1.25rem">Start with a meet and greet.</h2><p class="lede" style="margin-top:1.25rem">A complimentary conversation with Dr. Shtern at the office. Ask anything, then decide in your own time.</p></div>
+<div class="btn-row"><a class="btn" href="/meet-and-greet" data-loc="membership">Book a meet and greet %s</a><a class="btn ghost" href="tel:%s" data-loc="membership">Call %s</a></div></div></section>""" % (icon("arrow"), B.PRACTICE["tel"], B.PRACTICE["phone"])
     body += '<section class="section" aria-labelledby="mfaq-h"><div class="wrap split"><div><p class="eyebrow">Questions</p><h2 id="mfaq-h" style="margin-top:1.25rem">About joining</h2></div>%s</div></section>' % B.faq_html(S["faqs"])
     schema = B.graph({"@type": "WebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": S["title"], "isPartOf": {"@id": B.SITE_ID},
-                      "about": {"@id": B.ORG_ID}, "potentialAction": {"@type": "ReserveAction", "name": "Request a tour", "target": B.url(slug) + "#tour"}},
+                      "about": {"@id": B.ORG_ID}, "potentialAction": {"@type": "ReserveAction", "name": "Book a meet and greet", "target": B.url("meet-and-greet") + "#request"}},
+                     B.faq_node(S["faqs"], B.url(slug)), B.breadcrumb_node(trail))
+    B.write_page(slug, S["title"], S["desc"], body, schema=schema, og_image="/assets/img/og/membership.jpg")
+
+
+def meet_and_greet(B):
+    esc, icon = B.esc, B.icon
+    S = C.MEET
+    slug = "meet-and-greet"
+    trail = B.trail_for(slug, "Meet and greet")
+    hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], cta=False,
+                       media=B.photo("dr-shtern-desk", "Dr. Yana Shtern at her desk at Legacy Medical", sizes="(max-width: 880px) 90vw, 45vw", max_w=1200))
+    steps = "".join('<li><h3>%s</h3><p>%s</p></li>' % (esc(t), d) for t, d in S["steps"])
+    body = hero + """<section class="section flush-top" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="sr-only">How it works</h2><ol class="steps">%s</ol>
+<p style="margin-top:2rem"><a class="btn" href="#request" data-loc="meet-steps">Book a meet and greet %s</a></p></div></section>""" % (steps, icon("arrow"))
+    body += "".join(prose_section(B, i + 1, h, b) for i, (h, b) in enumerate(S["sections"]))
+    body += """<section class="section sunk" id="request" aria-labelledby="request-h"><div class="wrap split">
+<div><p class="eyebrow">Book</p><h2 id="request-h" style="margin-top:1.25rem">%s</h2><p class="lede" style="margin-top:1.25rem">%s</p>
+<dl class="facts" style="margin-top:2rem;grid-template-columns:1fr"><div><dt>Phone</dt><dd><a href="tel:%s" data-loc="meet">%s</a></dd></div><div><dt>Office</dt><dd>%s<br>%s, FL %s</dd></div><div><dt>Office hours</dt><dd>Mon to Thu 9 AM to 5 PM, Fri 9 AM to 2 PM</dd></div></dl></div>
+<div class="panel">%s</div></div></section>""" % (esc(S["form_h"]), S["form_lede"], B.PRACTICE["tel"], B.PRACTICE["phone"], B.PRACTICE["street_short"], B.PRACTICE["city"], B.PRACTICE["postal"], tour_form(B, "meet-and-greet", "request-h"))
+    body += '<section class="section" aria-labelledby="mgfaq-h"><div class="wrap split"><div><p class="eyebrow">Questions</p><h2 id="mgfaq-h" style="margin-top:1.25rem">About the meet and greet</h2></div>%s</div></section>' % B.faq_html(S["faqs"])
+    schema = B.graph({"@type": "WebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": S["title"], "isPartOf": {"@id": B.SITE_ID},
+                      "about": {"@id": B.ORG_ID}, "mentions": {"@id": B.DOC_ID},
+                      "potentialAction": {"@type": "ReserveAction", "name": "Book a meet and greet", "target": B.url(slug) + "#request"}},
                      B.faq_node(S["faqs"], B.url(slug)), B.breadcrumb_node(trail))
     B.write_page(slug, S["title"], S["desc"], body, schema=schema, scripts=("assets/js/tour.js",), track=False, og_image="/assets/img/og/membership.jpg")
 

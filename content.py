@@ -135,7 +135,7 @@ CARD_BLURBS = {
     "geriatric-memory-care": "Care for older adults and the families who help them, including memory concerns.",
     "preventive-care": "The annual Legacy physical, screenings, and an executive-style exam without the day at a hospital.",
     "telehealth": "Video visits for follow-ups, results and questions that do not need an exam.",
-    "membership": "Tour the office, meet Dr. Shtern, then decide.",
+    "membership": "Meet Dr. Shtern first, then decide.",
     "insurance-and-fees": "What the membership fee covers and what your insurance still pays for.",
     "faq": "Answers about access, insurance, hospitals and joining.",
     "dr-yana-shtern": "Training, certifications and hospital privileges.",
@@ -188,7 +188,7 @@ HOME = {
     ],
     "plan_h": "Three steps, no pressure",
     "steps": [
-        ("Call or request a tour", "Tell us a little about what you are looking for. We will set a time that suits you."),
+        ("Book a meet and greet", "Call or send a request. We will find a time that suits you."),
         ("Meet Dr. Shtern", "A complimentary meet-and-greet at the office. Ask about anything: the fee, your conditions, how after-hours calls work."),
         ("Join and book your physical", "If it is a fit, enroll and schedule your first Legacy physical. With your permission, the office requests your records from your previous doctor."),
     ],
@@ -202,9 +202,9 @@ HOME = {
 }
 
 HOME_FAQ = [
-    ("How much is the membership fee?", "<p>The fee is not posted online yet. Call the office at <a href=\"tel:+15618349280\">(561) 834-9280</a> and we will go through it, or ask at your tour. Office visits and tests are still billed to your insurance.</p>"),
+    ("How much is the membership fee?", "<p>The fee is not posted online yet. Call the office at <a href=\"tel:+15618349280\">(561) 834-9280</a> and we will go through it, or ask at your meet and greet. Office visits and tests are still billed to your insurance.</p>"),
     ("Do you take insurance?", "<p>Yes, for visits and tests. Medicare, Aetna, Cigna and BlueCross BlueShield are among the plans the practice works with. The membership fee itself is separate and is not billed to insurance. <a href=\"/insurance-and-fees\">How the fee and insurance fit together</a>.</p>"),
-    ("Can I meet Dr. Shtern before joining?", "<p>Yes. A tour and meet-and-greet is free and there is no obligation. <a href=\"/membership#tour\">Request one here</a> or call.</p>"),
+    ("Can I meet Dr. Shtern before joining?", "<p>Yes. Your first visit is a complimentary meet and greet, with no obligation. <a href=\"/meet-and-greet\">Book one here</a> or call.</p>"),
     ("Where is the office?", "<p>11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens, FL 33410. It is a first-floor suite with accessible entry.</p>"),
 ]
 
@@ -265,9 +265,9 @@ CONCIERGE = {
     ],
     "faqs": [
         ("What is concierge medicine?", "<p>A model of primary care where patients pay an annual membership fee and the doctor keeps a much smaller patient list. The smaller list is what makes same-day visits, longer appointments and direct phone access possible.</p>"),
-        ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a tour and ask Dr. Shtern directly; she will be straight with you.</p>"),
+        ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a meet and greet and ask Dr. Shtern directly; she will be straight with you.</p>"),
         ("Do I still need health insurance?", "<p>Yes. The membership fee does not replace insurance. You will still need coverage for hospital care, specialists, imaging, prescriptions and emergencies, and Legacy Medical bills your insurance for office visits and tests.</p>"),
-        ("How many patients does Dr. Shtern see?", "<p>Far fewer than a typical practice, and the panel is capped. Concierge practices typically see six to ten patients a day; ask at your tour how the schedule works here.</p>"),
+        ("How many patients does Dr. Shtern see?", "<p>Far fewer than a typical practice, and the panel is capped. Concierge practices typically see six to ten patients a day; ask at your meet and greet how the schedule works here.</p>"),
         ("Will I always see Dr. Shtern?", "<p>Yes. She is the physician for every member.</p>"),
     ],
     "about": [{"@type": "MedicalSpecialty", "name": "Primary care"}, {"@type": "Thing", "name": "Concierge medicine"}],
@@ -366,7 +366,7 @@ SERVICE_PAGES = {
         ],
         "about": ["Dementia", "Mild cognitive impairment", "Polypharmacy", "Falls"],
         "related": ["preventive-care", "kidney-care", "concierge-medicine"],
-        "cta_h": "Bring your parent, or your questions, to a tour.",
+        "cta_h": "Bring your parent, or your questions, to a meet and greet.",
         "photo": "front-desk-team", "photo_alt": "Dr. Shtern and her team at the Legacy Medical front desk",
     },
     "preventive-care": {
@@ -398,7 +398,7 @@ SERVICE_PAGES = {
         ],
         "about": ["Preventive medicine", "Physical examination", "Cancer screening"],
         "related": ["concierge-medicine", "hypertension", "membership"],
-        "cta_h": "Start with a tour. Your first physical comes next.",
+        "cta_h": "Start with a meet and greet. Your first physical comes next.",
         "photo": "dr-yana-shtern", "photo_alt": "Dr. Yana Shtern, MD",
     },
     "telehealth": {
@@ -441,25 +441,25 @@ CATEGORY_OWNERS = {  # journal category -> the page that owns the topic
 # ---------------------------------------------------------------- membership
 MEMBERSHIP = {
     "title": "How to Join Legacy Medical | Concierge Membership, Palm Beach Gardens",
-    "desc": "How to become a member of Legacy Medical, Dr. Yana Shtern's concierge practice in Palm Beach Gardens. Start with a free tour and meet-and-greet.",
+    "desc": "How to become a member of Legacy Medical, Dr. Yana Shtern's concierge practice in Palm Beach Gardens. Start with a complimentary meet and greet with Dr. Shtern.",
     "eyebrow": "Membership",
     "h1": "Meet us first. Then decide.",
     "lede": "Joining starts with a conversation, not a contract. Visit the office, meet Dr. Shtern, and ask everything you want to know about how the practice works and what it costs.",
     "steps": [
-        ("Request a tour", "Use the form below or call (561) 834-9280. We will find a time that suits you."),
+        ("Book a meet and greet", "Use the request form or call (561) 834-9280. We will find a time that suits you."),
         ("Meet Dr. Shtern", "A complimentary meet-and-greet at the office. Bring your questions, and a family member if you like."),
         ("Enroll and book your physical", "If it is a good fit, you enroll, we request your records, and you schedule your first Legacy physical."),
     ],
-    "agreement": "<strong>No obligation at the tour.</strong> The meet-and-greet is complimentary, and joining is your decision to make afterward.",
+    "agreement": "<strong>No obligation.</strong> The meet and greet is complimentary, and joining is your decision to make afterward.",
     "sections": [
-        ("What to bring to the tour", "<ul><li>Your questions about the fee, access and how after-hours calls work</li><li>A list of your current medicines and doctors, if you have one handy</li><li>Your insurance card, so we can tell you how visits are billed</li></ul><p>You do not need medical records for the tour. If you join, we request them from your current doctor with your permission.</p>"),
+        ("What to bring to the meet and greet", "<ul><li>Your questions about the fee, access and how after-hours calls work</li><li>A list of your current medicines and doctors, if you have one handy</li><li>Your insurance card, so we can tell you how visits are billed</li></ul><p>You do not need medical records for the meet and greet. If you join, we request them from your current doctor with your permission.</p>"),
         ("Who the practice is a good fit for", "<p>Adults who want one physician to know their whole history, people managing blood pressure, kidney disease, diabetes or several specialists, seasonal residents who want continuity, and families arranging care for a parent. Dr. Shtern is an internist: a physician trained in the care of adults.</p>"),
     ],
-    "form_h": "Request a tour",
+    "form_h": "Book a meet and greet",
     "form_lede": "Leave your details and the office will call or email you to set up a time. Prefer the phone? Call us during office hours.",
     "faqs": [
-        ("Is the tour really free?", "<p>Yes. The meet-and-greet is complimentary and there is no obligation to join.</p>"),
-        ("What does membership cost?", "<p>The fee is not posted online. Call the office or ask at your tour and we will go through it in full. Insurance is still billed for visits and tests.</p>"),
+        ("Is the meet and greet really free?", "<p>Yes. The meet and greet is complimentary and there is no obligation to join.</p>"),
+        ("What does membership cost?", "<p>The fee is not posted online. Call the office or ask at your meet and greet and we will go through it in full. Insurance is still billed for visits and tests.</p>"),
         ("How many members does the practice take?", "<p>The panel is limited, which is what keeps same-day visits possible. Ask the office whether new members are being accepted right now.</p>"),
     ],
 }
@@ -481,7 +481,7 @@ INSURANCE = {
         ("Is the concierge fee tax deductible?", "<p>That depends on your situation. A tax adviser can tell you whether it counts as a deductible medical expense for you.</p>"),
         ("Which insurance plans do you accept?", "<p>The practice works with Medicare, Aetna, Cigna and BlueCross BlueShield, among others. Plans change, so call the office to confirm yours.</p>"),
     ],
-    "cta_lede": "We would rather explain the fee in person than post a number without context. Call the office, or come in for a tour and ask.",
+    "cta_lede": "We would rather explain the fee in person than post a number without context. Call the office, or come in for a meet and greet and ask.",
 }
 
 FAQ_PAGE = {
@@ -500,7 +500,7 @@ FAQ_GROUPS = [
         ("What are the office hours?", "<p>Monday to Thursday 9:00 AM to 5:00 PM, Friday 9:00 AM to 2:00 PM. Closed on weekends, with member phone access around the clock.</p>"),
     ]},
     {"name": "Insurance and fees", "pairs": [
-        ("How much does membership cost?", "<p>The fee is not published online. Call the office or ask at your tour.</p>"),
+        ("How much does membership cost?", "<p>The fee is not published online. Call the office or ask at your meet and greet.</p>"),
         ("Do you bill insurance?", "<p>Yes, for office visits, labs and covered tests. Plans include Medicare, Aetna, Cigna and BlueCross BlueShield. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
         ("Does Medicare pay the membership fee?", "<p>No. Medicare does not cover concierge fees. Covered services at your visits are billed to Medicare as usual.</p>"),
     ]},
@@ -512,7 +512,7 @@ FAQ_GROUPS = [
         ("Is there a patient portal?", "<p>Yes. Ask the office for access when you join.</p>"),
     ]},
     {"name": "Joining", "pairs": [
-        ("How do I join?", "<p>Start with a free tour and meet-and-greet. <a href=\"/membership#tour\">Request a tour</a> or call (561) 834-9280.</p>"),
+        ("How do I join?", "<p>Start with a complimentary meet and greet with Dr. Shtern. <a href=\"/meet-and-greet\">Book a meet and greet</a> or call (561) 834-9280.</p>"),
         ("What happens to my medical records?", "<p>With your permission, the office requests them from your previous doctor when you join.</p>"),
         ("Where are you located?", "<p>11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens, FL 33410, on the first floor. See <a href=\"/contact\">directions</a>.</p>"),
     ]},
@@ -683,7 +683,7 @@ def llms_txt(P, D, pages, url):
         "- Phone: %s. Fax: %s. Email: %s" % (P["phone"], P["fax"], P["email"]),
         "- Hours: Monday to Thursday 9:00 AM to 5:00 PM; Friday 9:00 AM to 2:00 PM; closed Saturday and Sunday. Members have 24/7 phone access.",
         "- Model: annual membership fee (not covered by insurance) plus insurance billing for visits and tests. Plans include Medicare, Aetna, Cigna, BlueCross BlueShield. The fee is not published; call the office.",
-        "- How to join: complimentary tour and meet-and-greet. Call or request a tour at %s" % url("membership"),
+        "- How to join: a complimentary meet and greet with Dr. Shtern. Call or book at %s" % url("meet-and-greet"),
         "- Areas served: " + ", ".join(P["service_area"]) + ", Martin County",
         "- Internal medicine: care for adults.",
         "- Previous domain: cmedjupiter.com was an older copy of this site. legacymedicalpalmbeach.com is the current, authoritative site.",
@@ -719,7 +719,7 @@ ASSIST_KEYWORDS = {
     "Which hospitals does Dr. Shtern use?": ["hospital", "jupiter medical", "gardens medical", "admitted", "privileges"],
     "Do you treat kidney disease and high blood pressure?": ["kidney", "nephrolog", "blood pressure", "hypertension", "renal"],
     "Is there a patient portal?": ["portal", "message", "online access", "records online"],
-    "How do I join?": ["join", "sign up", "enroll", "become a patient", "new patient", "accepting", "tour", "meet"],
+    "How do I join?": ["join", "sign up", "enroll", "become a patient", "new patient", "accepting", "tour", "meet", "greet", "first visit", "consultation"],
     "What happens to my medical records?": ["records", "transfer", "previous doctor", "chart"],
     "Where are you located?": ["where", "address", "located", "location", "directions", "parking", "find you"],
 }
@@ -742,3 +742,33 @@ ASSIST_EXTRA = [
     {"k": ["prescription", "refill", "medication", "pharmacy"],
      "a": "Questions about your own medications are best handled by phone, so please call the office at (561) 834-9280 rather than writing them here."},
 ]
+
+# ---------------------------------------------------------------- meet and greet
+# The first visit. Only facts the practice has confirmed: it is complimentary,
+# in person at the office, with Dr. Shtern, and carries no obligation.
+MEET = {
+    "title": "Meet and Greet with Dr. Shtern | Legacy Medical, Palm Beach Gardens",
+    "desc": "Your first visit to Legacy Medical is a complimentary meet and greet with Dr. Yana Shtern in Palm Beach Gardens. What happens, what to ask, and how to book.",
+    "eyebrow": "Your first visit",
+    "h1": "It starts with a conversation.",
+    "lede": "Before anyone joins, they sit down with Dr. Shtern. The meet and greet is complimentary, it happens at the office, and there is no obligation to join.",
+    "steps": [
+        ("You get in touch", "Call (561) 834-9280 or send the short form on this page. The office finds a time that suits you."),
+        ("You meet Dr. Shtern", "A relaxed conversation in her office on Prosperity Farms Road. Bring a spouse or an adult child if you like."),
+        ("You decide later", "There is no pressure to decide in the room. If you join, the office requests your records and books your first Legacy physical."),
+    ],
+    "sections": [
+        ("What the meet and greet is", "<p>A chance for you and Dr. Shtern to see whether the practice is right for you. You talk about what you want from a doctor, how your care is going now, and how membership works day to day. Dr. Shtern explains how she practices, how members reach her, and what the membership fee includes.</p>"),
+        ("Questions worth asking", "<ul><li>How quickly can members be seen when something comes up?</li><li>How do after-hours calls work, and who answers?</li><li>What does the membership fee include, and what is still billed to insurance?</li><li>How do you work with my specialists and with the hospital if I am admitted?</li><li>How large is the practice, and are new members being accepted right now?</li><li>What happens to my care when I am away for the summer?</li></ul><p>There are no wrong questions. Many people bring a written list.</p>"),
+        ("What to bring", "<ul><li>Your questions, written down if that helps</li><li>A list of your current medicines and the doctors you see, if you have one handy</li><li>Your insurance card, so the office can tell you how visits are billed</li></ul><p>You do not need medical records. If you join, the office requests them from your current doctor with your permission.</p>"),
+        ("Coming with a parent or partner", "<p>Families are welcome. Adult children often come along when they are arranging care for a parent, and couples often meet Dr. Shtern together. With the patient's written permission, she can keep family members updated later on.</p>"),
+    ],
+    "form_h": "Book a meet and greet",
+    "form_lede": "Leave your details and the office will call or email you to set a time. Prefer the phone? Call during office hours.",
+    "faqs": [
+        ("Is the meet and greet really free?", "<p>Yes. It is complimentary and there is no obligation to join.</p>"),
+        ("Where does it take place?", "<p>At the office: 11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens. It is a first-floor suite with accessible entry.</p>"),
+        ("Can I ask about the membership fee?", "<p>Please do. The fee is not posted online, and Dr. Shtern and the office would rather explain it in person, with what it covers.</p>"),
+        ("Can my family member come?", "<p>Yes. Spouses and adult children are welcome.</p>"),
+    ],
+}

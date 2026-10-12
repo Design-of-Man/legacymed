@@ -43,7 +43,7 @@
     panel.setAttribute("aria-labelledby", "as-title");
     panel.innerHTML =
       '<div class="as-head"><img src="/assets/img/legacy-mark-80.png" width="35" height="20" alt="">' +
-      '<div><p class="as-title" id="as-title">Legacy Medical</p><p class="as-sub">Quick answers and tour requests</p></div>' +
+      '<div><p class="as-title" id="as-title">Legacy Medical</p><p class="as-sub">Quick answers and meet and greet requests</p></div>' +
       '<button type="button" class="as-close" aria-label="Close the assistant"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 4l12 12M16 4 4 16"/></svg></button></div>' +
       '<div class="as-log" role="log" aria-live="polite"></div>' +
       '<form class="as-input" hidden><label class="sr-only" for="as-text">Your message</label>' +
@@ -139,13 +139,13 @@
     mode = "menu";
     form.hidden = true;
     focusFirst(chips([
-      { label: "Request a tour", main: true, go: startTour },
+      { label: "Book a meet and greet", main: true, go: startTour },
       { label: "Ask a question", go: startAsk },
       { label: "Call " + D.phone, go: () => { location.href = "tel:" + D.tel; } },
     ]));
   }
   function greet() {
-    say("Hello. I can answer common questions about Legacy Medical, or take a tour request for the office. What would you like to do?");
+    say("Hello. I can answer common questions about Legacy Medical, or set up a complimentary meet and greet with Dr. Shtern. What would you like to do?");
     menu();
   }
 
@@ -171,7 +171,7 @@
     });
     say(best ? best.a : "I don't want to guess on that one. The office can answer it: call " + telLink() + " (" + D.hours + ") or email <a href=\"mailto:" + D.email + "\">" + D.email + "</a>.");
     chips([
-      { label: "Request a tour", main: true, go: startTour },
+      { label: "Book a meet and greet", main: true, go: startTour },
       { label: "Back to the menu", go: menu },
     ]);
     input.focus({ preventScroll: true });
@@ -186,7 +186,7 @@
     { key: "email", q: "And your email address? This one is optional.", skip: "Skip",
       ok: (v) => v === "" || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v), err: "That email doesn't look right. Mind checking it?" },
     { key: "reason", q: "What are you interested in?",
-      pick: ["A tour and meet-and-greet", "Membership questions", "Kidney or blood pressure care", "Care for a parent", "Something else"] },
+      pick: ["A meet and greet with Dr. Shtern", "Membership questions", "Kidney or blood pressure care", "Care for a parent", "Something else"] },
     { key: "best_time", q: "When is the best time to reach you?",
       pick: ["Weekday mornings", "Weekday afternoons", "Any time"] },
     { key: "message", q: "Anything else the office should know? Please leave out medical details; those are best discussed with Dr. Shtern directly.", skip: "Nothing else",
