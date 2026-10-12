@@ -20,3 +20,8 @@ Nothing below was guessed on the site. Each item is either left out of the copy 
 - **Form delivery.** /api/tour needs `RESEND_API_KEY`, `TOUR_TO_EMAIL` (and optionally `TOUR_FROM_EMAIL` on a verified domain) in Vercel env. Until then the form tells visitors to call. A signed BAA is not required for contact details only, but keep the "no medical details" notice.
 - **Live Google reviews.** Set `GOOGLE_PLACES_API_KEY` (+ `GOOGLE_PLACE_ID`) in Vercel env; the next build wires the live rating into the home page.
 - **Analytics.** Set `GA4_ID` (consent-gated, never on form pages) and/or `VERCEL_ANALYTICS=1` after enabling Web Analytics + Speed Insights in the project. Add Search Console + Bing verification (DNS preferred) and submit /sitemap.xml.
+
+## Design ideas that need the practice (from the luxury concierge review, Oct 2026)
+- A short signed letter from Dr. Shtern (why she started Legacy Medical). The strongest honest signal on MD² and Private Medical; needs her own words.
+- A stated panel size ("we care for about N members"). Only with a number she confirms.
+- "Accepting new members" status line. Only if true and kept current.
