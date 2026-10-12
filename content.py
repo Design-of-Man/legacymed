@@ -161,7 +161,7 @@ HERO_VIDEO = {
 
 HOME = {
     "kicker": "Concierge internal medicine in Palm Beach Gardens",
-    "hero_lines": ["Your doctor,", "with <em>time</em>", "for you."],  # <em> is styled gold, upright: no italic font on the LCP path
+    "hero_lines": ["Dr. Shtern,", "with <em>time</em>", "for you."],  # <em> is styled gold, upright: no italic font on the LCP path
     "hero_lede": "Dr. Yana Shtern keeps a small practice on purpose. Members are seen the same or next business day, visits run long enough to talk, and the phone is answered at any hour.",
     "problem_eyebrow": "The usual way",
     "problem_statement": "Fifteen minutes, a portal message, and a referral to someone you have never met.",
