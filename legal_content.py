@@ -8,7 +8,7 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 PRIVACY = """
 <p><strong>Effective October 10, 2026.</strong> This notice covers this website, legacymedicalpalmbeach.com. How Legacy Medical PLLC uses and protects your health information as a patient is described separately in our <a href="/notice-of-privacy-practices">Notice of Privacy Practices</a>.</p>
 <h2>What we collect</h2>
-<p>If you send a tour or contact request, we receive what you type into the form: your name, phone number, email address, what you are interested in, the best time to reach you, and any short note. The form asks you not to include medical details. Please follow that request; email and web forms are not the right place for health information.</p>
+<p>If you send a tour or contact request, through the form or the site assistant, we receive what you type: your name, phone number, email address, what you are interested in, the best time to reach you, and any short note. The form asks you not to include medical details. Please follow that request; email and web forms are not the right place for health information.</p>
 <p>Our hosting provider, Vercel, keeps standard server logs (such as IP address, browser type and the page requested) to deliver and protect the site.</p>
 <h2>Analytics</h2>
 <p>We may measure which pages are visited so we can improve the site. Google Analytics only loads if you choose "Allow" on the banner, and it never loads on pages that contain a form. We do not use advertising pixels, retargeting, session recording, or social media tracking, and we do not sell or share personal information for advertising.</p>

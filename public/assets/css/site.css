@@ -559,3 +559,44 @@ a.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:va
 .consent .btn-row{margin-top:1rem}
 @media (max-width:760px){.consent{left:.75rem;right:.75rem;bottom:5rem;max-width:none}}
 @media print{.site-header,.callbar,.reel,.hero-toggle,.consent{display:none!important}body{background:#fff;color:#000}}
+
+/* ---------- site assistant (assets/js/assist.js) ---------- */
+.as-launch{position:fixed;right:1rem;bottom:1rem;z-index:85;display:inline-flex;align-items:center;gap:.55rem;min-height:3rem;padding:.8rem 1.2rem;border-radius:999px;border:1px solid var(--btn-bg);background:var(--btn-bg);color:var(--btn-ink);font:600 .925rem/1 var(--sans);cursor:pointer;box-shadow:var(--shadow);transition:transform .4s var(--ease-out)}
+.as-launch:hover{transform:translateY(-2px)}
+.as-launch[hidden],.as-panel[hidden]{display:none}
+@media (max-width:760px){.as-launch{bottom:5.1rem;right:.75rem;padding:.75rem 1rem;transition:transform .5s var(--ease-out),visibility 0s}.callbar:not(.show)~.as-launch{transform:translateY(calc(100% + 6rem));visibility:hidden;transition:transform .5s var(--ease-out),visibility 0s .5s}}
+.as-panel{position:fixed;right:1rem;bottom:1rem;z-index:95;width:min(24rem,calc(100vw - 2rem));height:min(37rem,calc(100dvh - 2rem));display:flex;flex-direction:column;overflow:hidden;background:var(--bg);color:var(--ink);border:1px solid var(--line-2);border-radius:1.25rem;box-shadow:0 30px 70px -20px rgba(0,0,0,.45)}
+.as-head{display:flex;align-items:center;gap:.75rem;padding:.9rem 1rem;background:#16140F;color:#F4F1EA;flex-shrink:0}
+.as-head img{flex-shrink:0}
+.as-head div{flex:1;min-width:0}
+.as-title{font:500 1.1rem/1.2 var(--serif);margin:0}
+.as-sub{font-size:.8rem;color:#CFC9BC;margin:0}
+.as-close{background:none;border:0;color:#CFC9BC;cursor:pointer;padding:.55rem;border-radius:.5rem;line-height:0}
+.as-close:hover{color:#F4F1EA}
+.as-close:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.as-log{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.65rem;overscroll-behavior:contain}
+.as-msg{max-width:88%;padding:.65rem .9rem;border-radius:1rem;font-size:.95rem;line-height:1.5;overflow-wrap:anywhere}
+.as-msg a{color:inherit;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.as-bot{align-self:flex-start;background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:.35rem}
+.as-me{align-self:flex-end;background:var(--btn-bg);color:var(--btn-ink);border-bottom-right-radius:.35rem}
+.as-typing{display:inline-flex;gap:5px;padding:.8rem .95rem}
+.as-typing i{width:6px;height:6px;border-radius:50%;background:var(--ink-3);animation:asBlink 1.2s infinite}
+.as-typing i:nth-child(2){animation-delay:.2s}.as-typing i:nth-child(3){animation-delay:.4s}
+@keyframes asBlink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+.as-chips{display:flex;flex-wrap:wrap;gap:.45rem;align-self:flex-start}
+.as-chip{min-height:2.5rem;padding:.5rem .95rem;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);font:600 .875rem/1.2 var(--sans);cursor:pointer;transition:background .2s,color .2s}
+.as-chip:hover{border-color:var(--ink)}
+.as-chip-main{background:var(--btn-bg);border-color:var(--btn-bg);color:var(--btn-ink)}
+.as-input{display:flex;gap:.5rem;padding:.75rem;border-top:1px solid var(--line);background:var(--surface);flex-shrink:0;margin:0}
+.as-input[hidden]{display:none}
+.as-input input{flex:1;min-width:0;min-height:2.75rem;padding:.6rem 1rem;border:1px solid var(--line-2);border-radius:999px;background:var(--bg);color:var(--ink);font:400 1rem/1.3 var(--sans)}
+.as-send{width:2.75rem;height:2.75rem;flex-shrink:0;display:grid;place-items:center;border:0;border-radius:50%;background:var(--btn-bg);color:var(--btn-ink);cursor:pointer}
+.as-fine{margin:0;padding:.45rem .9rem .6rem;font-size:.75rem;line-height:1.4;color:var(--ink-2);text-align:center;background:var(--surface);flex-shrink:0}
+@media (max-width:600px){
+  .as-panel{left:0;right:0;top:0;bottom:auto;width:100%;border-radius:0;border:0;height:var(--as-h,100dvh);transform:translateY(var(--as-top,0px))}
+  .as-input{padding-bottom:calc(.75rem + env(safe-area-inset-bottom))}
+  html.as-open,html.as-open body{overflow:hidden}
+  html.as-open .callbar{visibility:hidden}
+}
+@media (prefers-reduced-motion:reduce){.as-typing i{animation:none}.as-launch{transition:none}}
+@media print{.as-launch,.as-panel{display:none!important}}

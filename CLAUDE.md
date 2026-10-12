@@ -10,6 +10,7 @@ Static site for Legacy Medical, Dr. Yana Shtern's concierge internal medicine pr
 ## Where things live
 - Facts (phone, address, hours, insurance, socials): `PRACTICE` in build.py and `DOCTOR`/`TEAM` in content.py. Footer, schema, llms.txt and the hours ring all read from these.
 - Page copy: content.py. Legal: legal_content.py + npp_text.py (HIPAA notice, carried over verbatim; do not reword). Journal: journal_content.py (POSTS + REDIRECTS). Redirect map: redirects.py.
+- Site assistant (chat button, every page): public/assets/js/assist.js. Set answers only, no AI: build.py writes public/assets/assist.json from FAQ_GROUPS + ASSIST_KEYWORDS/ASSIST_EXTRA in content.py (build fails if an FAQ has no keywords). Tour requests post to /api/tour; nothing typed is stored on the device or sent to analytics.
 - Page templates: pages.py. Design system: public/assets/css/site.css (tokens on :root; dark islands `.night`, OS dark mode re-declares tokens). JS: public/assets/js/{main,tour,consent}.js. Functions: api/tour.js (Resend), api/reviews.js (Places API).
 - Images: originals in `_dev/source-images`, spec in tools/images.json; `python3 tools/build_images.py` writes AVIF/WebP/JPEG + manifest. `python3 tools/build_brand.py` makes favicons, the logo mark and OG cards. Both need Pillow; build.py does not.
 - Hero video: public/assets/video, provenance and exact ffmpeg commands in `_dev/video/PROVENANCE.md`. Source is the Jupiter Inlet sunset clip in Dropbox. Not the RevitalIV lighthouse clip.

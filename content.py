@@ -699,3 +699,46 @@ def llms_txt(P, D, pages, url):
         if pg["slug"].startswith("journal/"):
             lines.append("- [%s](%s)" % (pg["title"].replace(" | Legacy Medical", ""), url(pg["slug"])))
     return "\n".join(lines) + "\n"
+
+# ---------------------------------------------------------------- assistant
+# The site assistant (assets/js/assist.js) answers from set text only: no AI,
+# no outside service. build.py turns FAQ_GROUPS plus the extras below into
+# public/assets/assist.json. Each FAQ question needs keywords here; build
+# fails if one is missing, so a new FAQ can never be silently unanswerable.
+ASSIST_KEYWORDS = {
+    "How quickly can I be seen?": ["seen", "same day", "same-day", "next day", "how soon", "how quickly", "sick", "wait"],
+    "Can I reach Dr. Shtern after hours?": ["after hours", "after-hours", "night", "weekend", "24/7", "24 hours", "reach dr", "cell phone"],
+    "How long are visits?": ["how long", "visit length", "minutes", "rushed"],
+    "Do you offer video visits?": ["video", "telehealth", "virtual", "zoom", "remote"],
+    "What are the office hours?": ["hour", "open", "close", "friday", "monday", "when are you"],
+    "How much does membership cost?": ["cost", "price", "fee", "how much", "expensive", "annual", "afford"],
+    "Do you bill insurance?": ["insurance", "aetna", "cigna", "blue cross", "bluecross", "bcbs", "covered", "coverage", "bill"],
+    "Does Medicare pay the membership fee?": ["medicare"],
+    "Are labs done in the office?": [" lab", "blood", "draw", "ecg", "ekg", "test", "covid", "flu", "strep"],
+    "What happens if I need a specialist?": ["specialist", "referral", "refer", "cardiologist", "dermatologist"],
+    "Which hospitals does Dr. Shtern use?": ["hospital", "jupiter medical", "gardens medical", "admitted", "privileges"],
+    "Do you treat kidney disease and high blood pressure?": ["kidney", "nephrolog", "blood pressure", "hypertension", "renal"],
+    "Is there a patient portal?": ["portal", "message", "online access", "records online"],
+    "How do I join?": ["join", "sign up", "enroll", "become a patient", "new patient", "accepting", "tour", "meet"],
+    "What happens to my medical records?": ["records", "transfer", "previous doctor", "chart"],
+    "Where are you located?": ["where", "address", "located", "location", "directions", "parking", "find you"],
+}
+
+ASSIST_EXTRA = [
+    {"k": ["emergency", "911", "chest pain", "can't breathe", "stroke", "urgent"],
+     "a": "If this is an emergency, call 911 now. This assistant is not monitored. Members with an urgent question can call the practice at (561) 834-9280 at any hour."},
+    {"k": ["phone", "call", "number", "email", "fax", "contact"],
+     "a": "Call (561) 834-9280 or email info@legacymedicalpalmbeach.com. The fax is (561) 834-9279."},
+    {"k": ["dr. shtern", "dr shtern", "shtern", "doctor", "who is", "physician", "credentials", "board"],
+     "a": "Dr. Yana Shtern, MD is board-certified in internal medicine and nephrology. She has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center. <a href=\"/dr-yana-shtern\">About Dr. Shtern</a>."},
+    {"k": ["concierge", "what is", "how does it work", "difference", "membership include", "included", "what do i get"],
+     "a": "Concierge medicine means a smaller practice: same or next business day visits, unhurried appointments, and phone access to the practice around the clock. <a href=\"/concierge-medicine\">How it works here</a>."},
+    {"k": ["area", "serve", "jupiter", "tequesta", "juno", "north palm", "palm beach", "stuart", "hobe sound"],
+     "a": "Members come from across North County: Jupiter, Juno Beach, Tequesta, North Palm Beach, Palm Beach and West Palm Beach, plus Hobe Sound and Stuart. <a href=\"/areas-we-serve\">Areas and drive times</a>."},
+    {"k": ["physical", "annual exam", "checkup", "check-up", "preventive", "screening"],
+     "a": "Members get the annual Legacy physical: a thorough yearly exam with lab work and an ECG, then time to go through the results together. <a href=\"/preventive-care\">Preventive care and physicals</a>."},
+    {"k": ["memory", "dementia", "elderly", "parent", "geriatric", "aging"],
+     "a": "Dr. Shtern cares for older adults and the families who help them, including memory concerns and medication reviews. With the patient's written permission she can keep family members updated. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>."},
+    {"k": ["prescription", "refill", "medication", "pharmacy"],
+     "a": "Questions about your own medications are best handled by phone, so please call the office at (561) 834-9280 rather than writing them here."},
+]

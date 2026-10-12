@@ -577,6 +577,7 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
 %(extra)s
 %(analytics)s
 <script defer src="%(js)s"></script>
+<script defer src="%(assist)s" data-faq="%(faq)s"></script>
 %(scripts)s
 </head>
 <body class="%(bodycls)s">
@@ -592,7 +593,8 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
        "url": page_url, "og": esc(og_abs), "ogalt": esc(title), "ogtype": "article" if slug.startswith("journal/") and slug != "journal" else "website",
        "lat": PRACTICE["geo"]["lat"], "lng": PRACTICE["geo"]["lng"], "ld": ld, "extra": extra_head,
        "analytics": analytics_tags(track), "scripts": script_tags, "bodycls": body_cls,
-       "header": header(slug), "body": body, "jsflag": JS_FLAG, "footer": footer(), "callbar": callbar(), "preload": preload_html}
+       "header": header(slug), "body": body, "jsflag": JS_FLAG, "footer": footer(), "callbar": callbar(), "preload": preload_html,
+       "assist": a("assets/js/assist.js"), "faq": a("assets/assist.json")}
 
 
 def write_page(slug, title, desc, body, sitemap=True, **kw):
@@ -858,7 +860,32 @@ def build_vercel():
     open(os.path.join(d, "redirect-map.csv"), "w").write("\n".join(rows) + "\n")
 
 
+def build_assist():
+    """Set answers for the site assistant, from the FAQ and the facts above."""
+    def plain(h):
+        h = re.sub(r"</p>\s*<p>", " ", h)
+        return re.sub(r"</?p>", "", h).strip()
+    items = []
+    for g in C.FAQ_GROUPS:
+        for q, a in g["pairs"]:
+            if q not in C.ASSIST_KEYWORDS:
+                raise SystemExit("assistant: no keywords for FAQ %r (add them to ASSIST_KEYWORDS)" % q)
+            items.append({"q": q, "k": C.ASSIST_KEYWORDS[q], "a": plain(a)})
+    for x in C.ASSIST_EXTRA:
+        items.append({"k": x["k"], "a": x["a"]})
+    p = PRACTICE
+    data = {"phone": p["phone"], "tel": p["tel"], "email": p["email"],
+            "hours": "Mon to Thu 9 to 5, Fri 9 to 2", "faq": items}
+    for it in items:
+        for pat in BANNED:
+            if re.search(pat, visible_text(it["a"]), flags=re.I):
+                raise SystemExit("assistant answer breaks copy rule %r: %s" % (pat, it["a"][:80]))
+    with open(os.path.join(PUB, "assets", "assist.json"), "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+
+
 def main():
+    build_assist()  # first, so pages can hash it
     build_all(sys.modules[__name__])
     build_meta()
     build_vercel()
