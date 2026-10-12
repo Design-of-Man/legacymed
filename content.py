@@ -934,4 +934,18 @@ ASSIST_EXTRA += [
 # Stems are built by tools/build_images.py from tools/images.json. Topic
 # photos (p-*) are licensed stock (Pexels) and only illustrate a subject;
 # they are never captioned or described as the practice.
-SECTION_IMAGES = {}
+SECTION_IMAGES = {
+    "kidney-care": {"When to think about your kidneys": "p-kidney-water", "Conditions Dr. Shtern manages": "p-kidney-labs"},
+    "hypertension": {"Why it gets complicated": "p-bp-walk", "Taking a good home reading": "p-bp-cuff"},
+    "geriatric-memory-care": {"Memory and thinking": "p-geri-couple", "Fewer, better prescriptions": "p-geri-meds"},
+    "preventive-care": {"What the Legacy physical covers": "p-prev-stetho", "Screenings and vaccines": "p-prev-run"},
+    "telehealth": {"What works well by video": "p-tele-laptop"},
+    "seasonal-residents": {"When you arrive for the season": "p-seasonal-coast", "When you head north": "p-seasonal-travel"},
+    "for-families": {"Come to the meet and greet together": "p-family-talk", "If your parent is in the hospital": "p-family-hands"},
+    "concierge-vs-traditional-primary-care": {"Why the numbers matter": "p-compare-calendar"},
+    "concierge-medicine": {"Why the panel is small": "p-concierge-phone", "Who it suits": "reception-desk"},
+    "meet-and-greet": {"What the meet and greet is": "p-meet-coffee", "Coming with a parent or partner": "front-desk-scrubs"},
+    "membership": {"What to bring to the meet and greet": "reception-wall"},
+    "insurance-and-fees": {"The membership fee": "p-insurance-papers"},
+    "areas-we-serve": {"Seasonal residents": "p-areas-palms"},
+}
