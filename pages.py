@@ -638,7 +638,7 @@ def post(B, p, all_posts):
 <div class="prose">%s
 <p class="small muted" style="margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line)">This article is general information, not advice for your situation. Members can call the office with questions about their own care.</p></div>
 <aside class="article-aside" aria-label="More from the journal">%s%s
-<div class="panel"><p class="eyebrow">Talk to us</p><p style="margin-top:.9rem">Questions about joining? <a class="inline-link" href="tel:%s" data-loc="article">Call %s</a> or <a class="inline-link" href="/membership#tour">request a tour</a>.</p></div></aside>
+<div class="panel"><p class="eyebrow">Talk to us</p><p style="margin-top:.9rem">Questions about joining? <a class="inline-link" href="tel:%s" data-loc="article">Call %s</a> or <a class="inline-link" href="/meet-and-greet">book a meet and greet</a>.</p></div></aside>
 </div></article>""" % (B.crumbs_html(trail), esc(p["category"]), esc(p["title"]), p["date"][:10], human_date(p["date"]), mins, reviewed, body_html,
                           owner_html, ('<div class="panel"><p class="eyebrow">Related reading</p><ul class="pill-list" style="flex-direction:column;gap:.75rem;margin-top:.9rem">%s</ul></div>' % rel_html) if rel_html else "",
                           B.PRACTICE["tel"], B.PRACTICE["phone"])
