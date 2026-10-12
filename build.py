@@ -847,10 +847,10 @@ def build_vercel():
     os.makedirs(d, exist_ok=True)
     vr = R.vercel_rules(cm, R.CMED_PATTERNS, absolute=True)
     json.dump({"redirects": vr}, open(os.path.join(d, "cmedjupiter.vercel.json"), "w"), indent=2)
-    ht = ["# cmedjupiter.com -> legacymedicalpalmbeach.com (301). Place in the site root .htaccess.", "RewriteEngine On"]
+    ht = ["# cmedjupiter.com -> legacymedicalpalmbeach.com (301).", "# Place at the top of the site root .htaccess, ABOVE the \"# BEGIN WordPress\" block.", "# NE keeps \"#reviews\" from being escaped to %23.", "RewriteEngine On"]
     for src, dst in sorted(cm.items(), key=lambda kv: -len(kv[0])):
         pat = "^" + re.escape(src.strip("/")) + "/?$" if src != "/" else "^$"
-        ht.append("RewriteRule %s %s%s [R=301,L]" % (pat, R.NEW, dst))
+        ht.append("RewriteRule %s %s%s [R=301,L,NE]" % (pat, R.NEW, dst))
     ht.append("RewriteRule ^(category|tag|author)/ %s/journal [R=301,L]" % R.NEW)
     ht.append("RewriteRule ^\\d{4}/ %s/journal [R=301,L]" % R.NEW)
     ht.append("RewriteRule ^ %s/ [R=301,L]" % R.NEW)

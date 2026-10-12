@@ -174,22 +174,22 @@
     },
     {
       "source": "/testimonials",
-      "destination": "/",
+      "destination": "/#reviews",
       "permanent": true
     },
     {
       "source": "/testimonials/",
-      "destination": "/",
+      "destination": "/#reviews",
       "permanent": true
     },
     {
       "source": "/testimonials-lg",
-      "destination": "/",
+      "destination": "/#reviews",
       "permanent": true
     },
     {
       "source": "/testimonials-lg/",
-      "destination": "/",
+      "destination": "/#reviews",
       "permanent": true
     },
     {

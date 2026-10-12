@@ -234,7 +234,7 @@ def reviews_section(B):
         i % 2, esc(t["quote"]), esc(t["who"]), t["source_html"]) for i, t in enumerate(C.TESTIMONIALS))
     ratings = "".join('<li><a class="inline-link" href="%s" rel="noopener" target="_blank">%s<span class="sr-only"> (opens in a new tab)</span></a></li>' % (esc(r["url"]), esc(r["label"])) for r in C.RATING_LINKS)
     live_attr = ' data-live-reviews' if B.LIVE_REVIEWS else ""
-    return """<section class="section surface" aria-labelledby="rev-h"%s>
+    return """<section class="section surface" id="reviews" aria-labelledby="rev-h"%s>
   <div class="wrap">
     <div class="reviews-head">
       <div><p class="eyebrow">Patients</p><h2 id="rev-h" style="margin-top:1.25rem">%s</h2></div>

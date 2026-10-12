@@ -15,7 +15,7 @@ Nothing below was guessed on the site. Each item is either left out of the copy 
 
 ## Needs account access
 - **Domain + DNS** for legacymedicalpalmbeach.com sit with Unkind Designs. Point the domain at the Vercel project when the handover happens; the vercel.json redirect map and www→apex rules go live with it.
-- **cmedjupiter.com.** Ready-made 301 maps in `_dev/redirects/` (Vercel JSON, Apache .htaccess, CSV). Apply whichever matches where that domain ends up. This is the single biggest SEO fix: that domain currently outranks the real one.
+- **cmedjupiter.com.** Ready-made 301 maps in `_dev/redirects/` (Vercel JSON, Apache .htaccess, CSV). Apply whichever matches where that domain ends up, then follow `_dev/redirects/CHANGE-OF-ADDRESS.md` (Search Console Change of Address, in order). This is the single biggest SEO fix: that domain currently outranks the real one.
 - **Google Business Profile.** Change primary category from "Medical center" to "Internist", name to "Legacy Medical", add the website and an appointment link (https://legacymedicalpalmbeach.com/membership#tour).
 - **Form delivery.** /api/tour needs `RESEND_API_KEY`, `TOUR_TO_EMAIL` (and optionally `TOUR_FROM_EMAIL` on a verified domain) in Vercel env. Until then the form tells visitors to call. A signed BAA is not required for contact details only, but keep the "no medical details" notice.
 - **Live Google reviews.** Set `GOOGLE_PLACES_API_KEY` (+ `GOOGLE_PLACE_ID`) in Vercel env; the next build wires the live rating into the home page.

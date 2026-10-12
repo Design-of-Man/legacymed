@@ -77,12 +77,12 @@
     },
     {
       "source": "/patient-testimonials",
-      "destination": "https://legacymedicalpalmbeach.com/",
+      "destination": "https://legacymedicalpalmbeach.com/#reviews",
       "permanent": true
     },
     {
       "source": "/patient-testimonials/",
-      "destination": "https://legacymedicalpalmbeach.com/",
+      "destination": "https://legacymedicalpalmbeach.com/#reviews",
       "permanent": true
     },
     {
