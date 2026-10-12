@@ -98,6 +98,11 @@ button{font:inherit;color:inherit}
 .wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
 .section{padding-block:clamp(4.5rem,3rem + 7vw,10rem)}
 .section.tight{padding-block:clamp(3rem,2rem + 4vw,6rem)}
+/* Below-the-fold sections skip style/layout until they approach the viewport.
+   "auto" in contain-intrinsic-size remembers the real height once rendered. */
+main > section{background:var(--bg)}
+main > section.surface{background:var(--surface)}
+main > section.sunk{background:var(--sunk)}
 .section + .section.flush-top{padding-top:0}
 .surface{background:var(--surface)}
 .sunk{background:var(--sunk)}

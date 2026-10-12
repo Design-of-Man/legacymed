@@ -830,7 +830,7 @@ def build_vercel():
             {"source": "/assets/(css|js)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
             {"source": "/assets/fonts/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
             {"source": "/assets/(img|video)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400"}]},
-            {"source": "/(membership|contact)", "headers": [{"key": "Cache-Control", "value": "public, max-age=0, must-revalidate"}, {"key": "X-Robots-Tag", "value": "noarchive"}]},
+            {"source": "/(membership|contact)", "headers": [{"key": "Cache-Control", "value": "public, max-age=0, must-revalidate"}]},
             {"source": "/(llms.txt|robots.txt)", "headers": [{"key": "Content-Type", "value": "text/plain; charset=utf-8"}, {"key": "Cache-Control", "value": "public, max-age=3600"}]},
             {"source": "/api/(.*)", "headers": [{"key": "Cache-Control", "value": "no-store"}]},
         ],
