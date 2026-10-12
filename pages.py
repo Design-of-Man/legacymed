@@ -93,7 +93,7 @@ def home(B):
     q = C.TESTIMONIALS[0]
     guide = """<section class="section doc-feature" aria-labelledby="doc-h">
   <div class="wrap doctor">
-    <figure class="doctor-photo" data-reveal="clip">%(photo)s</figure>
+    <figure class="cap-fig"><div class="doctor-photo" data-reveal="clip">%(photo)s</div><figcaption class="ph-cap">Dr. Yana Shtern, MD<span>Legacy Medical, Palm Beach Gardens</span></figcaption></figure>
     <div>
       <p class="eyebrow">Your physician</p>
       <h2 id="doc-h" class="doc-name">Dr. Yana Shtern<span>, MD</span></h2>
@@ -113,9 +113,9 @@ def home(B):
     (m1, a1), (m2, a2) = H["manifesto_photos"]
     manifesto = """<section class="section manifesto" aria-labelledby="mani-h">
   <div class="wrap mani-grid">
-    <figure class="mani-ph a" data-reveal="clip">%s</figure>
+    <figure class="mani-fig a"><div class="mani-ph" data-reveal="clip">%s</div><figcaption class="ph-cap">The front desk<span>Prosperity Farms Road</span></figcaption></figure>
     <h2 id="mani-h" class="mani-text" data-fill>%s</h2>
-    <figure class="mani-ph b" data-reveal="clip">%s</figure>
+    <figure class="mani-fig b"><div class="mani-ph" data-reveal="clip">%s</div><figcaption class="ph-cap">Dr. Shtern<span>Internal medicine and nephrology</span></figcaption></figure>
   </div>
 </section>""" % (photo(m1, a1, sizes="(max-width: 880px) 44vw, 18vw", max_w=800), B.words_spans(H["manifesto"]),
                   photo(m2, a2, sizes="(max-width: 880px) 44vw, 18vw", max_w=800))
@@ -128,7 +128,7 @@ def home(B):
     <ul class="included">%s</ul>
     <p style="margin-top:2rem"><a class="text-link" href="/concierge-medicine">How concierge medicine works here %s</a></p>
   </div>
-</section>""" % (esc(H["included_h"]), H["included_lede"], included, icon("arrow"))
+</section>""" % (B.hx(H["included_h"]), H["included_lede"], included, icon("arrow"))
 
     clock = clock_section(B)
 
@@ -140,7 +140,7 @@ def home(B):
     <div class="headline-row"><div><p class="eyebrow">Areas of focus</p><h2 id="spec-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
     <ul class="spec-list">%s</ul>
   </div>
-</section>""" % (esc(H["spec_h"]), H["spec_lede"], specs)
+</section>""" % (B.hx(H["spec_h"]), H["spec_lede"], specs)
 
     steps = "".join('<li data-reveal style="--d:%d"><h3>%s</h3><p>%s</p></li>' % (i, esc(t), d) for i, (t, d) in enumerate(H["steps"]))
     plan = """<section class="section" aria-labelledby="plan-h">
@@ -150,7 +150,7 @@ def home(B):
     <ol class="steps">%s</ol>
     <div class="agreement">%s<p>%s</p></div>
   </div>
-</section>""" % (esc(H["plan_h"]), icon("arrow"), steps, B.ICONS["shield"], H["agreement"])
+</section>""" % (B.hx(H["plan_h"]), icon("arrow"), steps, B.ICONS["shield"], H["agreement"])
 
     reviews = reviews_section(B)
 
@@ -165,7 +165,7 @@ def home(B):
     posts = J.POSTS[:3]
     journal_sec = """<section class="section sunk" aria-labelledby="j-h">
   <div class="wrap">
-    <div class="headline-row"><div><p class="eyebrow">Journal</p><h2 id="j-h" style="margin-top:1.25rem">Notes from the practice</h2></div><a class="text-link" href="/journal">All articles %s</a></div>
+    <div class="headline-row"><div><p class="eyebrow">Journal</p><h2 id="j-h" style="margin-top:1.25rem">Notes from <em>the practice</em></h2></div><a class="text-link" href="/journal">All articles %s</a></div>
     <div class="post-row">%s</div>
   </div>
 </section>""" % (icon("arrow"), "".join(post_card(B, p) for p in posts))

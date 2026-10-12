@@ -179,11 +179,11 @@ HOME = {
     # Hover photos for the areas-of-focus list (topic photos, not the practice).
     "spec_peek": {"kidney-care": "p-kidney-water", "hypertension": "p-bp-walk", "geriatric-memory-care": "p-geri-couple",
                   "preventive-care": "p-prev-run", "telehealth": "p-tele-laptop"},
-    "included_h": "What membership includes",
+    "included_h": "What membership <em>includes</em>",
     "included_lede": "An annual membership fee covers access to Dr. Shtern. Office visits and tests are billed to your insurance, as they are now.",
     "clock_h": "The office keeps hours. Your access does not.",
     "clock_lede": "The office is open Monday to Friday. Outside those hours, members can still reach the practice by phone, at night, on weekends and on holidays.",
-    "spec_h": "Internal medicine, plus a nephrologist's eye",
+    "spec_h": "Internal medicine, plus a <em>nephrologist's eye</em>",
     "spec_lede": "Every member gets complete primary care. These are the areas where Dr. Shtern's second specialty and experience add the most.",
     "specialties": [
         ("kidney-care", "Kidney care", "CKD, rising creatinine, kidney stones, electrolyte problems, and care for people on dialysis."),
@@ -192,7 +192,7 @@ HOME = {
         ("preventive-care", "Preventive care and physicals", "The annual Legacy physical, with labs and an ECG done here."),
         ("telehealth", "Telehealth", "Video visits for follow-ups, results and medication questions."),
     ],
-    "plan_h": "Three steps, no pressure",
+    "plan_h": "Three steps, <em>no pressure</em>",
     "steps": [
         ("Book a meet and greet", "Call or send a request. We will find a time that suits you."),
         ("Meet Dr. Shtern", "A complimentary meet-and-greet at the office. Ask about anything: the fee, your conditions, how after-hours calls work."),

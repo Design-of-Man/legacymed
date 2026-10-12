@@ -120,6 +120,11 @@ def fmt12(t):
     return ("%d:%02d %s" % (h, m, suffix)).replace(":00 ", " ")
 
 
+def hx(text):
+    """Escape a heading but keep its <em> accent phrase."""
+    return esc(text).replace("&lt;em&gt;", "<em>").replace("&lt;/em&gt;", "</em>")
+
+
 def words_spans(text):
     """Split a statement into word spans for the scroll-fill effect."""
     out = []
@@ -287,6 +292,7 @@ def header(current):
       <div class="mobile-cta">
         <a class="btn" href="/meet-and-greet" data-loc="mobile-menu">Book a meet and greet %(arrow)s</a>
         <a class="btn ghost" href="tel:%(tel)s" data-loc="mobile-menu">Call %(phone)s</a>
+        <p class="menu-foot">%(street)s, %(city)s<br>Mon–Thu 9–5 · Fri 9–2 · Members: phone 24/7</p>
       </div>
     </nav>
     <div class="header-actions">
@@ -296,7 +302,8 @@ def header(current):
     </div>
   </div>
 </header>""" % {"mark": brand_mark(), "items": "".join(items), "tel": p["tel"], "phone": p["phone"],
-                 "ico": icon("phone"), "arrow": icon("arrow")}
+                 "ico": icon("phone"), "arrow": icon("arrow"),
+                 "street": p["street_short"], "city": p["city"]}
 
 
 def brand_mark():
@@ -667,7 +674,7 @@ def page_hero(trail, eyebrow, h1, lede, media=None, cta=True, h1_html=None):
 
 def cta_band(heading=None, lede=None, night=True):
     p = PRACTICE
-    heading = heading or "Meet Dr. Shtern before you decide."
+    heading = heading or "Meet Dr. Shtern <em>before you decide.</em>"
     lede = lede or ("Every membership starts with a complimentary meet and greet. Sit down with Dr. Shtern, see the office, "
                     "and ask whatever you like. There is no obligation to join.")
     return """<section class="section cta-band%s" aria-labelledby="cta-h">
@@ -684,7 +691,7 @@ def cta_band(heading=None, lede=None, night=True):
       <a class="text-link" href="/areas-we-serve">All areas we serve %s</a>
     </nav>
   </div>
-</section>""" % (" night" if night else " sunk", esc(heading), lede, icon("arrow"), p["tel"], p["phone"],
+</section>""" % (" night" if night else " sunk", hx(heading), lede, icon("arrow"), p["tel"], p["phone"],
                   "".join('<li><a href="/areas/%s">%s<span>%d min</span></a></li>' % (l["slug"], esc(l["name"]), l["drive_min"])
                           for l in C.LOCATIONS[:6]), icon("arrow"))
 
