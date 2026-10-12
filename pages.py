@@ -40,20 +40,21 @@ def home(B):
     v = C.HERO_VIDEO
     poster = ('<picture><source type="image/avif" media="(max-aspect-ratio: 4/5)" srcset="%(pa)s">'
               '<source type="image/webp" media="(max-aspect-ratio: 4/5)" srcset="%(pw)s">'
-              '<source type="image/avif" srcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" sizes="(max-width: 900px) 100vw, 75vw">'
-              '<source type="image/webp" srcset="%(w768)s 768w, %(w1280)s 1280w, %(w1920)s 1920w" sizes="(max-width: 900px) 100vw, 75vw">'
-              '<img src="%(j1280)s" srcset="%(j768)s 768w, %(j1280)s 1280w, %(j1920)s 1920w" sizes="(max-width: 900px) 100vw, 75vw" width="1920" height="1080" '
+              '<source type="image/avif" srcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" sizes="100vw">'
+              '<source type="image/webp" srcset="%(w768)s 768w, %(w1280)s 1280w, %(w1920)s 1920w" sizes="100vw">'
+              '<img src="%(j1280)s" srcset="%(j768)s 768w, %(j1280)s 1280w, %(j1920)s 1920w" sizes="100vw" width="1920" height="1080" '
               'alt="" fetchpriority="high" decoding="async"></picture>') % v["posters"]
     # No poster attribute: the <picture> underneath is the poster, so the
     # browser never fetches a second copy of the same frame.
     video = ('<video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" disablepictureinpicture '
              'data-hd="%s" data-sd="%s" data-portrait="%s"></video>' % (v["hd"], v["sd"], v["portrait"]))
-    preload = ['<link rel="preload" as="image" type="image/avif" imagesrcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" imagesizes="(max-width: 900px) 100vw, 75vw" media="(min-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"],
+    preload = ['<link rel="preload" as="image" type="image/avif" imagesrcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" imagesizes="100vw" media="(min-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"],
                '<link rel="preload" as="image" type="image/avif" href="%(pa)s" media="(max-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"]]
 
     title_lines = "".join('<span class="rise"><span style="--i:%d">%s</span></span>' % (i + 1, ln) for i, ln in enumerate(H["hero_lines"]))
     hero = """<section class="hero" aria-labelledby="hero-h">
-  <div class="wrap hero-grid">
+  <div class="hero-media">%(poster)s%(video)s</div>
+  <div class="wrap hero-inner">
     <div class="hero-copy">
       <h1 id="hero-h"><span class="hero-kicker fade-in" style="--i:0">%(kicker)s</span><span class="hero-title">%(lines)s</span></h1>
       <p class="hero-lede fade-in" style="--i:3">%(lede)s</p>
@@ -65,12 +66,9 @@ def home(B):
         <div><dt>Physician</dt><dd><a href="/dr-yana-shtern">Dr. Yana Shtern, MD</a><br>Internal medicine and nephrology</dd></div>
         <div><dt>Office</dt><dd><a href="%(maps)s" rel="noopener" target="_blank">%(street)s<span class="sr-only"> (opens Google Maps)</span></a><br>%(city)s, FL %(postal)s</dd></div>
         <div><dt>Hours</dt><dd>Mon–Thu 9–5, Fri 9–2<br>Members: phone 24/7</dd></div>
+        <div class="hero-vid"><dt>Film</dt><dd><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Jupiter Inlet film</span></button></dd></div>
       </dl>
     </div>
-    <figure class="hero-film">
-      <div class="hero-media">%(poster)s%(video)s</div>
-      <figcaption><span>The Jupiter Inlet at sunset, a few minutes from the office</span><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Jupiter Inlet film</span></button></figcaption>
-    </figure>
   </div>
 </section>""" % {"poster": poster, "video": video, "kicker": esc(H["kicker"]), "lines": title_lines, "lede": H["hero_lede"],
                  "arrow": icon("arrow"), "tel": P["tel"], "phone": P["phone"], "phoneico": icon("phone"),
