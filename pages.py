@@ -491,7 +491,7 @@ def areas(B):
 
 def map_card(B):
     P = B.PRACTICE
-    return """<div class="map-card"><div class="map-frame"><button type="button" data-map="%s" data-title="Map showing Legacy Medical in Palm Beach Gardens">Show the map<span class="small muted" style="font-weight:400">Loads Google Maps</span></button></div>
+    return """<div class="map-card"><div class="map-frame"><iframe src="%s" title="Map showing Legacy Medical in Palm Beach Gardens" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 <div class="body"><p><strong>%s</strong><br>%s, %s %s</p><p class="small muted" style="margin-top:.5rem">%s.</p><p style="margin-top:1rem"><a class="text-link" href="%s" rel="noopener" target="_blank">Directions in Google Maps<span class="sr-only"> (opens in a new tab)</span> %s</a></p></div></div>""" % (
         B.esc(P["map_embed"]), P["street"], P["city"], P["region"], P["postal"], P["building_notes"], B.esc(P["google_maps"]), B.icon("arrow"))
 

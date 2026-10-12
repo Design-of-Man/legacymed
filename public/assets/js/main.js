@@ -199,19 +199,6 @@
     });
   });
 
-  /* ---------- map: load Google's embed only when asked ---------- */
-  document.querySelectorAll("[data-map]").forEach((b) => {
-    b.addEventListener("click", () => {
-      const f = document.createElement("iframe");
-      f.src = b.dataset.map;
-      f.title = b.dataset.title || "Map";
-      f.loading = "lazy";
-      f.referrerPolicy = "no-referrer-when-downgrade";
-      b.replaceWith(f);
-      track("map_open");
-    });
-  });
-
   /* ---------- FAQ search ---------- */
   const faqSearch = document.getElementById("faq-q");
   if (faqSearch) {
