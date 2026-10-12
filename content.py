@@ -173,6 +173,12 @@ HOME = {
     ],
     "guide_h": "One physician who knows your history, and has the time to use it.",
     "guide_body": "<p>Dr. Shtern trained in internal medicine and then in nephrology, and is board-certified in both. That combination matters more than it sounds: kidney function and blood pressure shape almost every prescription an internist writes.</p><p>She started Legacy Medical so she could take on fewer patients and do more for each of them. You see her at every visit, and members can reach the practice by phone at any hour.</p>",
+    # Centered statement between two practice photos (Private Medical's move).
+    "manifesto": "A small practice, on purpose. Fewer members means time to <em>listen</em>, to follow up, and to pick up the phone.",
+    "manifesto_photos": [("reception-desk", "The front desk at Legacy Medical"), ("dr-shtern-desk", "Dr. Yana Shtern at her desk")],
+    # Hover photos for the areas-of-focus list (topic photos, not the practice).
+    "spec_peek": {"kidney-care": "p-kidney-water", "hypertension": "p-bp-walk", "geriatric-memory-care": "p-geri-couple",
+                  "preventive-care": "p-prev-run", "telehealth": "p-tele-laptop"},
     "included_h": "What membership includes",
     "included_lede": "An annual membership fee covers access to Dr. Shtern. Office visits and tests are billed to your insurance, as they are now.",
     "clock_h": "The office keeps hours. Your access does not.",

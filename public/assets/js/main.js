@@ -47,6 +47,13 @@
     if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
   }, { passive: true });
   header.addEventListener("focusin", () => header.classList.remove("tucked"));
+
+  // Areas of focus: the hover photo follows the pointer along the row.
+  document.querySelectorAll(".spec-list a").forEach((a) => {
+    a.addEventListener("pointermove", (e) => {
+      a.style.setProperty("--px", (e.clientX - a.getBoundingClientRect().left) + "px");
+    }, { passive: true });
+  });
   onScroll();
 
   /* ---------- navigation ---------- */

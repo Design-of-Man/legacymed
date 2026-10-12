@@ -678,14 +678,15 @@ def cta_band(heading=None, lede=None, night=True):
       <p class="lede">%s</p>
       <div class="btn-row"><a class="btn" href="/meet-and-greet" data-loc="cta-band">Book a meet and greet %s</a><a class="btn ghost" href="tel:%s" data-loc="cta-band">Call %s</a></div>
     </div>
-    <dl class="facts">
-      <div><dt>Office</dt><dd>%s<br>%s, FL %s</dd></div>
-      <div><dt>Hours</dt><dd>Mon–Thu 9 AM–5 PM<br>Fri 9 AM–2 PM</dd></div>
-      <div><dt>Members</dt><dd>Phone access 24 hours a day</dd></div>
-    </dl>
+    <nav class="towns" aria-label="Drive times to the office">
+      <p class="towns-h">Drive times to the office</p>
+      <ul>%s</ul>
+      <a class="text-link" href="/areas-we-serve">All areas we serve %s</a>
+    </nav>
   </div>
 </section>""" % (" night" if night else " sunk", esc(heading), lede, icon("arrow"), p["tel"], p["phone"],
-                  p["street_short"], p["city"], p["postal"])
+                  "".join('<li><a href="/areas/%s">%s<span>%d min</span></a></li>' % (l["slug"], esc(l["name"]), l["drive_min"])
+                          for l in C.LOCATIONS[:6]), icon("arrow"))
 
 
 def faq_html(pairs, heading_id=None):

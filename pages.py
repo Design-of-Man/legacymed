@@ -110,7 +110,17 @@ def home(B):
                  "quote": esc("She identified the cause of my problem rather than only trying to treat my symptoms as the other doctors I saw did."),
                  "who": "Patient review", "src": q["source_html"], "arrow": icon("arrow")}
 
-    included = "".join('<li data-reveal style="--d:%d">%s<h3>%s</h3><p>%s</p></li>' % (i % 3, B.svc_icon(s["icon"]), esc(s["name"]), s["text"])
+    (m1, a1), (m2, a2) = H["manifesto_photos"]
+    manifesto = """<section class="section manifesto" aria-labelledby="mani-h">
+  <div class="wrap mani-grid">
+    <figure class="mani-ph a" data-reveal="clip">%s</figure>
+    <h2 id="mani-h" class="mani-text" data-fill>%s</h2>
+    <figure class="mani-ph b" data-reveal="clip">%s</figure>
+  </div>
+</section>""" % (photo(m1, a1, sizes="(max-width: 880px) 44vw, 18vw", max_w=800), B.words_spans(H["manifesto"]),
+                  photo(m2, a2, sizes="(max-width: 880px) 44vw, 18vw", max_w=800))
+
+    included = "".join('<li data-reveal style="--d:%d"><span class="num" aria-hidden="true">%02d</span><h3>%s</h3><p>%s</p></li>' % (i % 3, i + 1, esc(s["name"]), s["text"])
                        for i, s in enumerate(C.SERVICES_INCLUDED[:6]))
     inc = """<section class="section" aria-labelledby="inc-h">
   <div class="wrap">
@@ -122,8 +132,9 @@ def home(B):
 
     clock = clock_section(B)
 
-    specs = "".join("""<li><a href="/%s"><span class="n">%02d</span><h3>%s</h3><p>%s</p><span class="go" aria-hidden="true">%s</span></a></li>""" % (
-        s, i + 1, esc(t), esc(d), icon("arrow")) for i, (s, t, d) in enumerate(H["specialties"]))
+    specs = "".join("""<li><a href="/%s"><span class="n">%02d</span><h3>%s</h3><p>%s</p><span class="go" aria-hidden="true">%s</span><span class="peek" aria-hidden="true">%s</span></a></li>""" % (
+        s, i + 1, esc(t), esc(d), icon("arrow"), photo(H["spec_peek"][s], "", sizes="20rem", max_w=800, decorative=True))
+        for i, (s, t, d) in enumerate(H["specialties"]))
     spec = """<section class="section sunk" aria-labelledby="spec-h">
   <div class="wrap">
     <div class="headline-row"><div><p class="eyebrow">Areas of focus</p><h2 id="spec-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
@@ -166,7 +177,7 @@ def home(B):
   </div>
 </section>""" % (esc(H["stakes_h"]), H["stakes_body"])
 
-    body = hero + guide + inc + spec + plan + reviews + journal_sec
+    body = hero + guide + manifesto + inc + spec + plan + reviews + journal_sec
     body += B.cta_band() + B.reel_html()  # the photo reel closes the page, just above the footer
 
     schema = B.graph(B.website_node(), B.clinic_node(), B.physician_node(full=True),
