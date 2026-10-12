@@ -735,7 +735,7 @@ def post(B, p, all_posts):
         credit = (" Photo: %s on Pexels." % esc(m["credit"])) if m.get("credit") else " Photo: Pexels."
         lead = '<figure class="wrap article-lead">%s<figcaption>%s</figcaption></figure>' % (
             post_image(B, p, "(max-width: 1400px) 96vw, 1340px", eager=True), credit.strip())
-    article = """<article class="post">
+    article = """<div class="read-progress" aria-hidden="true"></div><article class="post">
 <header class="wrap article-head">%(crumbs)s<p class="eyebrow">%(cat)s</p><h1>%(title)s</h1><p class="dek">%(dek)s</p>
 <p class="article-meta"><span>By the Legacy Medical team</span><span><time datetime="%(d)s">%(date)s</time></span><span>%(mins)d min read</span>%(rev)s</p></header>
 %(lead)s
