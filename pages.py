@@ -296,13 +296,13 @@ def doctor(B):
                        media=B.photo(D["photo"], "Portrait of Dr. Yana Shtern, MD", sizes="(max-width: 880px) 90vw, 40vw", eager=True, max_w=1200))
     facts = "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v) for k, v in D["facts"])
     bio = "".join("<p>%s</p>" % p for p in D["bio"])
-    timeline = "".join('<li><span class="n" style="font-size:var(--step-0);font-family:var(--sans);font-weight:600;color:var(--gold-text)">%s</span><div><h3>%s</h3><p>%s</p></div></li>' % (esc(a), esc(b), c) for a, b, c in D["timeline"])
+    timeline = "".join('<li><span class="tl-k">%s</span><h3>%s</h3><p>%s</p></li>' % (esc(a), esc(b), c) for a, b, c in D["timeline"])
     body = hero + """<section class="section flush-top"><div class="wrap split">
   <div><dl class="facts" style="grid-template-columns:1fr">%s</dl></div>
   <div class="prose">%s</div>
 </div></section>
-<section class="section sunk" aria-labelledby="train-h"><div class="wrap split"><div><p class="eyebrow">Training and experience</p><h2 id="train-h" style="margin-top:1.25rem">%s</h2></div>
-<ol class="problem-list">%s</ol></div></section>
+<section class="section sunk" aria-labelledby="train-h"><div class="wrap split"><div class="sticky-head"><p class="eyebrow">Training and experience</p><h2 id="train-h" style="margin-top:1.25rem">%s</h2></div>
+<ol class="tl">%s</ol></div></section>
 <section class="section" aria-labelledby="verify-h"><div class="wrap split"><div><p class="eyebrow">Check for yourself</p><h2 id="verify-h" style="margin-top:1.25rem">Credentials you can verify</h2></div>
 <div class="prose"><p>%s</p><ul>%s</ul></div></div></section>
 <section class="section surface" aria-labelledby="personal-h"><div class="wrap split"><div><p class="eyebrow">Outside the office</p><h2 id="personal-h" style="margin-top:1.25rem">A little more about her</h2></div><div class="prose"><p>%s</p></div></div></section>
