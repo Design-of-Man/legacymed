@@ -186,9 +186,6 @@ HOME = {
         ("24/7", "phone access", "Members reach the practice at any hour, including weekends and holidays."),
     ],
     "manifesto_photos": [("reception-desk", "The front desk at Legacy Medical"), ("front-desk-team", "Dr. Shtern and her team at the Legacy Medical front desk")],
-    # Hover photos for the areas-of-focus list (topic photos, not the practice).
-    "spec_peek": {"kidney-care": "p-kidney-water", "hypertension": "p-bp-walk", "geriatric-memory-care": "p-geri-couple",
-                  "preventive-care": "p-prev-run", "telehealth": "p-tele-laptop"},
     # One-on-one care: every line traces to a confirmed fact in DOCTOR, HOME or SERVICES_INCLUDED.
     "personal_h": "Your doctor, <em>personally</em>",
     "personal_lede": "Concierge care here is one on one. The same physician, every time, with the time and the access to treat you as a person rather than an appointment slot.",

@@ -165,9 +165,8 @@ def home(B):
   </div>
 </section>""" % (photo(pp, pa, sizes="(max-width: 880px) 90vw, 40vw", max_w=1200), B.hx(H["personal_h"]), H["personal_lede"], rows, icon("arrow"), icon("arrow"))
 
-    specs = "".join("""<li><a href="/%s"><span class="n">%02d</span><h3>%s</h3><p>%s</p><span class="go" aria-hidden="true">%s</span><span class="peek" aria-hidden="true">%s</span></a></li>""" % (
-        s, i + 1, esc(t), esc(d), icon("arrow"), photo(H["spec_peek"][s], "", sizes="20rem", max_w=800, decorative=True))
-        for i, (s, t, d) in enumerate(H["specialties"]))
+    specs = "".join("""<li><a href="/%s"><span class="n">%02d</span><h3>%s</h3><p>%s</p><span class="go" aria-hidden="true">%s</span></a></li>""" % (
+        s, i + 1, esc(t), esc(d), icon("arrow")) for i, (s, t, d) in enumerate(H["specialties"]))
     spec = """<section class="section sunk" aria-labelledby="spec-h">
   <div class="wrap">
     <div class="headline-row"><div><p class="eyebrow">Areas of focus</p><h2 id="spec-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
