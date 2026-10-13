@@ -1213,5 +1213,443 @@
    "avif"
   ],
   "og": true
+ },
+ "v-raReWdCy3tA": {
+  "file": "videos/raReWdCy3tA.jpg",
+  "alt": "Legacy Medical: Dr. Yana Shtern",
+  "source": "https://www.youtube.com/watch?v=raReWdCy3tA (Legacy Medical Concierge of Palm Beach)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "j-strength-training-after-50": {
+  "file": "journal/strength-training-after-50.jpg",
+  "alt": "Two black dumbbells, a jump rope and a water bottle resting on an exercise mat on a wooden floor",
+  "credit": "MART PRODUCTION",
+  "source": "https://www.pexels.com/photo/dumbbells-and-a-jumping-rope-on-a-yoga-mat-8032959/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-body-composition-vs-bmi": {
+  "file": "journal/body-composition-vs-bmi.jpg",
+  "alt": "A cloth tape measure curled loosely on a table in soft, warm light",
+  "credit": "Jerms",
+  "source": "https://www.pexels.com/photo/close-up-view-of-a-tape-measure-5383194/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-vo2-max-and-fitness-for-longevity": {
+  "file": "journal/vo2-max-and-fitness-for-longevity.jpg",
+  "alt": "A pair of plain white sneakers standing on a pale wooden floor",
+  "credit": "Karola G",
+  "source": "https://www.pexels.com/photo/white-shoes-on-floor-7193634/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-sleep-and-healthy-aging": {
+  "file": "journal/sleep-and-healthy-aging.jpg",
+  "alt": "Rumpled white sheets and pillows on a bed in soft morning light",
+  "credit": "Jaymantri",
+  "source": "https://www.pexels.com/photo/white-bed-comforter-212269/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-coronary-artery-calcium-score": {
+  "file": "journal/coronary-artery-calcium-score.jpg",
+  "alt": "A long printed ECG strip lying across a warm wooden table",
+  "credit": "Niklas Jeromin",
+  "source": "https://www.pexels.com/photo/an-ecg-paper-on-a-table-with-a-heart-monitor-16450237/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-apob-and-lipoprotein-a": {
+  "file": "journal/apob-and-lipoprotein-a.jpg",
+  "alt": "A small pile of whole walnuts, one cracked open, against a dark background",
+  "credit": "Dmitry Demidov",
+  "source": "https://www.pexels.com/photo/walnuts-3904510/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-prediabetes-and-a1c": {
+  "file": "journal/prediabetes-and-a1c.jpg",
+  "alt": "A bowl of oatmeal topped with blackberries on a wooden board scattered with oats",
+  "credit": "Livilla Latini",
+  "source": "https://www.pexels.com/photo/oatmeal-with-berries-and-blackberries-on-a-wooden-table-27850095/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-glp-1-medications-for-weight-loss": {
+  "file": "journal/glp-1-medications-for-weight-loss.jpg",
+  "alt": "Bowls of grain and vegetable salad with avocado and lime on a sunlit table",
+  "credit": "Ella Olsson",
+  "source": "https://www.pexels.com/photo/photo-of-vegetable-salad-in-bowls-1640770/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-menopause-and-heart-health": {
+  "file": "journal/menopause-and-heart-health.jpg",
+  "alt": "A china cup of tea beside a closed journal on a dark wooden table by a window",
+  "credit": "William Finn",
+  "source": "https://www.pexels.com/photo/cozy-morning-tea-with-journal-and-candle-on-wooden-table-36511421/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-bone-density-screening": {
+  "file": "journal/bone-density-screening.jpg",
+  "alt": "A single glass of milk on a pale speckled stone countertop",
+  "credit": "Engin Akyurt",
+  "source": "https://www.pexels.com/photo/a-glass-of-fresh-milk-on-a-white-surface-4324320/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-blood-pressure-and-brain-health": {
+  "file": "journal/blood-pressure-and-brain-health.jpg",
+  "alt": "Round reading glasses resting on pink tulips and a stack of old books",
+  "credit": "Ylanite Koppens",
+  "source": "https://www.pexels.com/photo/eyeglasses-on-a-book-1906437/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-skin-cancer-checks-florida": {
+  "file": "journal/skin-cancer-checks-florida.jpg",
+  "alt": "Close view of a person's hands rubbing a dab of white lotion into one palm",
+  "credit": "Elizabeth Iris",
+  "source": "https://www.pexels.com/photo/a-person-with-lotion-on-palm-in-close-up-shot-5548025/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-alcohol-after-50": {
+  "file": "journal/alcohol-after-50.jpg",
+  "alt": "A glass of red wine on a sunlit windowsill beside a small potted succulent",
+  "credit": "Chitokan C.",
+  "source": "https://www.pexels.com/photo/clear-wine-glass-2059471/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-balance-and-fall-prevention": {
+  "file": "journal/balance-and-fall-prevention.jpg",
+  "alt": "A neat stack of smooth dark stones balanced on a rock above a quiet beach",
+  "credit": "Nathan Cowley",
+  "source": "https://www.pexels.com/photo/photo-of-stacked-rocks-near-shore-1192672/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-hearing-loss-and-memory": {
+  "file": "journal/hearing-loss-and-memory.jpg",
+  "alt": "A close view of assorted cream and amber seashells piled together",
+  "credit": "Artem Podrez",
+  "source": "https://www.pexels.com/photo/collection-of-assorted-seashells-7232505/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-longevity-plan-with-your-internist": {
+  "file": "journal/longevity-plan-with-your-internist.jpg",
+  "alt": "A pale green cup and saucer resting on two books on a table in soft window light",
+  "credit": "Samson Katt",
+  "source": "https://www.pexels.com/photo/cup-with-plate-and-book-with-notebook-on-table-5255236/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "v-TLiD3vh_X8o": {
+  "file": "videos/TLiD3vh_X8o.jpg",
+  "alt": "Blood pressure done right: The correct way to measure yours at home.",
+  "source": "https://www.youtube.com/watch?v=TLiD3vh_X8o (American Heart Association)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-r5XTTeP039Q": {
+  "file": "videos/r5XTTeP039Q.jpg",
+  "alt": "Mayo Clinic Explains Hypertension",
+  "source": "https://www.youtube.com/watch?v=r5XTTeP039Q (Mayo Clinic)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-g4SV7SJLP_g": {
+  "file": "videos/g4SV7SJLP_g.jpg",
+  "alt": "Get to Know Your Kidneys",
+  "source": "https://www.youtube.com/watch?v=g4SV7SJLP_g (National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK))",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-fFn0ygOOBuI": {
+  "file": "videos/fFn0ygOOBuI.jpg",
+  "alt": "What is eGFR, and how is it used to measure kidney function?",
+  "source": "https://www.youtube.com/watch?v=fFn0ygOOBuI (National Kidney Foundation)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-1PKBTpVhvVk": {
+  "file": "videos/1PKBTpVhvVk.jpg",
+  "alt": "Mayo Clinic Minute: Avoiding kidney stones",
+  "source": "https://www.youtube.com/watch?v=1PKBTpVhvVk (Mayo Clinic)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-Ih_4BHoZv0U": {
+  "file": "videos/Ih_4BHoZv0U.jpg",
+  "alt": "Mayo Clinic Minute: The role of cholesterol in heart health",
+  "source": "https://www.youtube.com/watch?v=Ih_4BHoZv0U (Mayo Clinic)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-gfFMSaSoU6U": {
+  "file": "videos/gfFMSaSoU6U.jpg",
+  "alt": "Turning back the clock on prediabetes",
+  "source": "https://www.youtube.com/watch?v=gfFMSaSoU6U (Centers for Disease Control and Prevention (CDC))",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-G1lwVhnnkoU": {
+  "file": "videos/G1lwVhnnkoU.jpg",
+  "alt": "10-minute Workout for Older Adults",
+  "source": "https://www.youtube.com/watch?v=G1lwVhnnkoU (National Institute on Aging)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-UAlxu7NiKNk": {
+  "file": "videos/UAlxu7NiKNk.jpg",
+  "alt": "STEADI for Older Adults",
+  "source": "https://www.youtube.com/watch?v=UAlxu7NiKNk (Centers for Disease Control and Prevention (CDC))",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-0xubzGiAjEU": {
+  "file": "videos/0xubzGiAjEU.jpg",
+  "alt": "Mayo Clinic Minute: Heat exhaustion and heatstroke",
+  "source": "https://www.youtube.com/watch?v=0xubzGiAjEU (Mayo Clinic)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-qTkqm6weTX4": {
+  "file": "videos/qTkqm6weTX4.jpg",
+  "alt": "Mayo Clinic Minute - Who should be screened for colorectal cancer?",
+  "source": "https://www.youtube.com/watch?v=qTkqm6weTX4 (Mayo Clinic)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
+ },
+ "v-zhGxsKdLNkE": {
+  "file": "videos/zhGxsKdLNkE.jpg",
+  "alt": "Mayo Clinic Minute: Why vaccines are especially important for older people",
+  "source": "https://www.youtube.com/watch?v=zhGxsKdLNkE (Mayo Clinic)",
+  "q": 80,
+  "widths": [
+   400,
+   640
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ]
  }
 }

@@ -29,6 +29,10 @@
 - [Concierge Doctor for Seasonal Residents | Legacy Medical, Palm Beach](https://legacymedicalpalmbeach.com/seasonal-residents): Primary care for seasonal residents of Palm Beach County: one internist who keeps your records current, coordinates with your doctors up north, and stays…
 - [Concierge Care for an Aging Parent | Legacy Medical, Palm Beach](https://legacymedicalpalmbeach.com/for-families): For families arranging care for a parent in Palm Beach County: one internist who coordinates specialists, reviews medicines, and keeps you informed with…
 - [Concierge vs. Traditional Primary Care: A Side-by-Side Look](https://legacymedicalpalmbeach.com/concierge-vs-traditional-primary-care): How concierge medicine differs from traditional primary care: access, visit length, practice size, insurance and fees, compared side by side by a Palm Beach…
+- [Same or Next Business Day Visits | Legacy Medical, Palm Beach Gardens](https://legacymedicalpalmbeach.com/same-or-next-day-visits): Legacy Medical members are seen the same or next business day when something comes up, with phone access to the practice around the clock.
+- [Chronic Care Support: Blood Pressure, Diabetes, Kidney | Legacy Medical](https://legacymedicalpalmbeach.com/chronic-care): Ongoing care for blood pressure, diabetes, cholesterol, kidney and thyroid conditions from Dr. Yana Shtern, a concierge internist and nephrologist in Palm…
+- [Specialists and Hospital Care | Legacy Medical, Palm Beach Gardens](https://legacymedicalpalmbeach.com/specialists-and-hospital-care): Dr. Yana Shtern chooses and contacts specialists, follows up on what they find, and holds privileges at Jupiter Medical Center and Palm Beach Gardens…
+- [Labs and Tests in the Office | Legacy Medical, Palm Beach Gardens](https://legacymedicalpalmbeach.com/labs-and-tests): Blood draws, ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done in the Legacy Medical office in Palm Beach Gardens.
 - [How to Join Legacy Medical | Concierge Membership, Palm Beach Gardens](https://legacymedicalpalmbeach.com/membership): How to become a member of Legacy Medical, Dr. Yana Shtern's concierge practice in Palm Beach Gardens. Start with a complimentary meet and greet with Dr.…
 - [Insurance and Membership Fees | Legacy Medical Concierge Practice](https://legacymedicalpalmbeach.com/insurance-and-fees): How the concierge membership fee and your health insurance work together at Legacy Medical in Palm Beach Gardens, including Medicare, HSAs and what the fee…
 - [Questions About Concierge Medicine at Legacy Medical | FAQ](https://legacymedicalpalmbeach.com/faq): Answers about Legacy Medical's concierge practice in Palm Beach Gardens: appointments, after-hours calls, insurance, Medicare, hospitals, labs and joining.
@@ -39,13 +43,31 @@
 - [Private Physician for Tequesta | Legacy Medical Concierge Practice](https://legacymedicalpalmbeach.com/areas/tequesta): Concierge internal medicine for Tequesta residents, about 17 minutes south. Dr. Yana Shtern has privileges at nearby Jupiter Medical Center.
 - [Concierge Doctor for West Palm Beach | Legacy Medical, Dr. Yana Shtern](https://legacymedicalpalmbeach.com/areas/west-palm-beach): Concierge internal medicine and nephrology for West Palm Beach residents, about 20 minutes up I-95 in Palm Beach Gardens. Same or next-day visits.
 - [Concierge Medicine for Palm Beach Residents | Legacy Medical](https://legacymedicalpalmbeach.com/areas/palm-beach): Concierge internal medicine for Palm Beach island residents with Dr. Yana Shtern, board-certified in internal medicine and nephrology, about 25 minutes…
+- [For Patients | Legacy Medical, Palm Beach Gardens](https://legacymedicalpalmbeach.com/patients): Practical information for Legacy Medical members and new patients: visits, after-hours calls, labs, specialists, records, insurance, privacy, and health…
 - [Journal: Health Notes from Legacy Medical, Palm Beach Gardens](https://legacymedicalpalmbeach.com/journal): Health articles from Legacy Medical, a concierge internal medicine practice in Palm Beach Gardens: blood pressure, kidney health, nutrition, prevention and…
+- [Videos | Legacy Medical, Palm Beach Gardens](https://legacymedicalpalmbeach.com/videos): Watch a short film from Legacy Medical and trusted explainers on blood pressure, kidney health, heart and stroke warning signs, screening and healthy aging.
 - [Contact Legacy Medical | (561) 834-9280, Palm Beach Gardens](https://legacymedicalpalmbeach.com/contact): Call (561) 834-9280 or visit Legacy Medical at 11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens, FL 33410. Office hours, directions and a contact…
 - [Website Privacy Notice | Legacy Medical](https://legacymedicalpalmbeach.com/privacy): How the Legacy Medical website handles information: meet and greet requests, consent-based analytics, no advertising pixels, and no tracking on form pages.
 - [Accessibility Statement | Legacy Medical](https://legacymedicalpalmbeach.com/accessibility): Legacy Medical's website accessibility statement: WCAG 2.2 AA, no overlay widgets, and how to reach us if any part of the site does not work for you.
 - [Notice of Privacy Practices (HIPAA) | Legacy Medical](https://legacymedicalpalmbeach.com/notice-of-privacy-practices): Legacy Medical PLLC's HIPAA Notice of Privacy Practices: how your medical information may be used and disclosed, and your rights as a patient.
 
 ## Journal
+- [Strength Training After 50: Why Muscle Matters](https://legacymedicalpalmbeach.com/journal/strength-training-after-50)
+- [Body Composition vs. BMI: What the Scale Misses](https://legacymedicalpalmbeach.com/journal/body-composition-vs-bmi)
+- [VO2 Max and Fitness as a Predictor of Lifespan](https://legacymedicalpalmbeach.com/journal/vo2-max-and-fitness-for-longevity)
+- [Sleep After 60: What Changes and What Helps](https://legacymedicalpalmbeach.com/journal/sleep-and-healthy-aging)
+- [Coronary Calcium (CAC) Score: Who It Helps](https://legacymedicalpalmbeach.com/journal/coronary-artery-calcium-score)
+- [ApoB and Lp(a): Cholesterol Tests to Ask For](https://legacymedicalpalmbeach.com/journal/apob-and-lipoprotein-a)
+- [Prediabetes and A1c: Turning the Numbers Around](https://legacymedicalpalmbeach.com/journal/prediabetes-and-a1c)
+- [GLP-1 Medications for Weight Loss: What to Know](https://legacymedicalpalmbeach.com/journal/glp-1-medications-for-weight-loss)
+- [Menopause and Heart Health: What Changes and Why](https://legacymedicalpalmbeach.com/journal/menopause-and-heart-health)
+- [Bone Density Screening for Women and Men](https://legacymedicalpalmbeach.com/journal/bone-density-screening)
+- [Blood Pressure and Brain Health in Midlife](https://legacymedicalpalmbeach.com/journal/blood-pressure-and-brain-health)
+- [Skin Cancer Checks for Florida Residents](https://legacymedicalpalmbeach.com/journal/skin-cancer-checks-florida)
+- [Alcohol After 50: What the Newer Guidance Says](https://legacymedicalpalmbeach.com/journal/alcohol-after-50)
+- [Balance and Fall Prevention After 60](https://legacymedicalpalmbeach.com/journal/balance-and-fall-prevention)
+- [Hearing Loss, Hearing Aids and Memory](https://legacymedicalpalmbeach.com/journal/hearing-loss-and-memory)
+- [A Yearly Longevity Plan With Your Internist](https://legacymedicalpalmbeach.com/journal/longevity-plan-with-your-internist)
 - [Paying Concierge Fees From an HSA or FSA](https://legacymedicalpalmbeach.com/journal/hsa-fsa-concierge-medicine-fees)
 - [Does Medicare Cover Concierge Medicine?](https://legacymedicalpalmbeach.com/journal/does-medicare-cover-concierge-medicine)
 - [Concierge Medicine vs. Direct Primary Care](https://legacymedicalpalmbeach.com/journal/concierge-vs-direct-primary-care)

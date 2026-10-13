@@ -25,7 +25,9 @@ def build_all(B):
     areas(B)
     for loc in C.LOCATIONS:
         location(B, loc)
+    patients(B)
     journal(B)
+    videos(B)
     contact(B)
     legal(B)
     not_found(B)
@@ -507,6 +509,76 @@ def membership(B):
                       "about": {"@id": B.ORG_ID}, "potentialAction": {"@type": "ReserveAction", "name": "Book a meet and greet", "target": B.url("meet-and-greet") + "#request"}},
                      B.faq_node(S["faqs"], B.url(slug)), B.breadcrumb_node(trail))
     B.write_page(slug, S["title"], S["desc"], body, schema=schema, og_image="/assets/img/og/membership.jpg")
+
+
+def patients(B):
+    esc, icon = B.esc, B.icon
+    S = C.PATIENTS_PAGE
+    slug = "patients"
+    trail = B.trail_for(slug, "For patients")
+    hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], cta=False,
+                       media=B.photo("front-desk-scrubs", "A member of the Legacy Medical team at the front desk", sizes="(max-width: 880px) 90vw, 45vw", max_w=1200))
+    rows = "".join('<li data-reveal><span class="pn" aria-hidden="true">%02d</span><div><h3>%s</h3><p>%s</p><a class="text-link" href="/%s">%s %s</a></div></li>'
+                   % (i + 1, esc(t), esc(d), esc(href), esc(lbl), icon("arrow")) for i, (t, d, href, lbl) in enumerate(S["guide"]))
+    guide = """<section class="section flush-top" aria-labelledby="pg-h"><div class="wrap split"><div class="sticky-head"><p class="eyebrow">The practical guide</p>
+<h2 id="pg-h" style="margin-top:1.25rem">How things <em>work here</em></h2><p class="lede" style="margin-top:1.25rem">Short answers to what new and current members ask most. Anything else, call (561) 834-9280.</p></div>
+<ol class="pers-list pg-list">%s</ol></div></section>""" % rows
+    learn = """<section class="section sunk" aria-labelledby="learn-h"><div class="wrap">
+<div class="headline-row"><div><p class="eyebrow">Learn</p><h2 id="learn-h" style="margin-top:1.25rem">Read, watch, <em>ask</em></h2></div><p class="lede">Articles and videos on the questions members bring to their visits.</p></div>
+<div class="learn-grid">
+<a class="learn-card" href="/journal"><span class="eyebrow">Journal</span><h3>Articles on concierge care, the heart, kidneys, prevention and healthy aging</h3><span class="text-link">Read the journal %(a)s</span></a>
+<a class="learn-card" href="/videos"><span class="eyebrow">Videos</span><h3>A film from the practice and trusted explainers from public health organizations</h3><span class="text-link">Watch the videos %(a)s</span></a>
+<a class="learn-card" href="/faq"><span class="eyebrow">Questions</span><h3>Straight answers on access, fees, insurance, labs and hospitals</h3><span class="text-link">Read the questions %(a)s</span></a>
+</div></div></section>""" % {"a": icon("arrow")}
+    docs = """<section class="section" aria-labelledby="docs-h"><div class="wrap split even"><div><p class="eyebrow">Privacy and policies</p><h2 id="docs-h" style="margin-top:1.25rem;font-size:var(--step-3)">Your information</h2></div>
+<div class="towns"><ul><li><a href="/notice-of-privacy-practices">Notice of Privacy Practices<span>HIPAA</span></a></li><li><a href="/privacy">Website privacy<span>This site</span></a></li><li><a href="/accessibility">Accessibility<span>Our commitment</span></a></li></ul></div></div></section>"""
+    body = hero + guide + learn + docs + B.cta_band()
+    schema = B.graph({"@type": "WebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": S["title"], "description": S["desc"],
+                      "isPartOf": {"@id": B.SITE_ID}, "about": {"@id": B.ORG_ID}, "inLanguage": "en-US"}, B.breadcrumb_node(trail))
+    B.write_page(slug, S["title"], S["desc"], body, schema=schema)
+
+
+def video_facade(B, v, sizes, eager=False):
+    """A poster button that swaps in the YouTube player (privacy-enhanced
+    domain) only when pressed. The poster is our own copy of the thumbnail."""
+    return ('<div class="vid" data-yt="%s" data-title="%s"><button class="vid-play" type="button">%s'
+            '<span class="vid-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>'
+            '<span class="sr-only">Play video: %s (loads YouTube)</span></button></div>'
+            % (B.esc(v["id"]), B.esc(v["title"]), B.photo("v-" + v["id"], "", sizes=sizes, decorative=True, eager=eager),
+               B.esc(v["title"])))
+
+
+def videos(B):
+    esc, icon = B.esc, B.icon
+    S = C.VIDEOS_PAGE
+    slug = "videos"
+    trail = B.trail_for(slug, "Videos")
+    hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], cta=False)
+    films = ""
+    for v in C.PRACTICE_FILMS:
+        films += """<section class="section flush-top" aria-labelledby="film-%(id)s"><div class="wrap film-grid">
+<figure class="film">%(vid)s<figcaption class="ph-cap">%(t)s<span>From the practice</span></figcaption></figure>
+<div><p class="eyebrow">From the practice</p><h2 id="film-%(id)s" style="margin-top:1.25rem">Meet <em>Dr. Shtern</em></h2>
+<p class="lede" style="margin-top:1.25rem">%(s)s</p>
+<div class="btn-row" style="margin-top:2rem"><a class="btn" href="/meet-and-greet" data-loc="videos">Book a meet and greet %(a)s</a><a class="text-link" href="/dr-yana-shtern">About Dr. Shtern %(a)s</a></div></div>
+</div></section>""" % {"id": esc(v["id"]), "vid": video_facade(B, v, "(max-width: 880px) 92vw, 58vw", eager=True),
+                       "t": esc(v["title"]), "s": esc(v["summary"]), "a": icon("arrow")}
+    lib = ""
+    if C.VIDEO_LIBRARY:
+        cards = ""
+        for v in C.VIDEO_LIBRARY:
+            rel = ('<a class="text-link" href="/%s">Read more %s</a>' % (esc(v["related"]), icon("arrow"))) if v.get("related") else ""
+            cards += ('<li class="vcard">%s<p class="pc-meta"><span class="cat">%s</span><span>%s</span></p><h3>%s</h3><p class="pc-ex">%s</p>%s</li>'
+                      % (video_facade(B, v, "(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 30vw"), esc(v["topic"]), esc(v["channel"]),
+                         esc(v["title"]), esc(v["summary"]), rel))
+        groups = '<ul class="vgrid">%s</ul>' % cards
+        lib = """<section class="section sunk" aria-labelledby="lib-h"><div class="wrap">
+<div class="headline-row"><div><p class="eyebrow">Library</p><h2 id="lib-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
+%s</div></section>""" % (B.hx(S["library_h"]), esc(S["library_lede"]), groups)
+    body = hero + films + lib + B.cta_band("Questions after watching?", "Bring them to a complimentary meet and greet with Dr. Shtern, or call the office. There is no obligation to join.")
+    schema = B.graph({"@type": "CollectionPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": S["title"],
+                      "isPartOf": {"@id": B.SITE_ID}, "about": {"@id": B.ORG_ID}}, B.breadcrumb_node(trail))
+    B.write_page(slug, S["title"], S["desc"], body, schema=schema)
 
 
 def meet_and_greet(B):

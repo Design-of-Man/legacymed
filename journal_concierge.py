@@ -1,9 +1,1624 @@
 """Journal articles written for the 2026 rebuild: concierge medicine, seasonal
-residents, kidney health and family care. Sourced from official pages linked
+residents, kidney health, family care, and healthy aging and prevention. Sourced from official pages linked
 inline; nothing about the practice beyond the facts in content.py. Not yet
 medically reviewed (reviewed_by stays None until Dr. Shtern signs off)."""
 
-NEW_POSTS = [{'slug': 'hsa-fsa-concierge-medicine-fees',
+NEW_POSTS = [{'slug': 'strength-training-after-50',
+  'title': 'Strength training after 50: why muscle matters as you age',
+  'seo_title': 'Strength Training After 50: Why Muscle Matters | Legacy Medical',
+  'date': '2026-10-13T08:30:00',
+  'modified': '2026-10-13T08:30:00',
+  'category': 'Healthy aging',
+  'excerpt': 'Muscle strength shapes how well you age. What the federal guidelines recommend, what the research shows, '
+             'and how to start lifting safely after 50.',
+  'blocks': [{'type': 'p',
+              'text': 'Most people think about their heart, their cholesterol and their weight as they get older. '
+                      'Fewer think about their muscles, even though strength is what lets you carry groceries up the '
+                      'stairs, get out of a low chair, and catch yourself when you trip on a curb. Muscle is one of '
+                      'the quieter measures of healthy aging, and one of the most changeable.'},
+             {'type': 'p',
+              'text': 'This article covers what the official guidelines say, what the research on strength and '
+                      'longevity shows, and how to begin in a way that suits your health.'},
+             {'type': 'h2', 'text': 'What happens to muscle with age'},
+             {'type': 'p',
+              'text': 'Muscle mass and strength tend to decline across adult life, and the loss speeds up in later '
+                      'decades. When the loss becomes a disease, doctors call it sarcopenia. A European expert group '
+                      'that updated the definition in 2019 described sarcopenia as a [muscle disease rooted in changes '
+                      'that build up over a lifetime](https://pubmed.ncbi.nlm.nih.gov/30312372/), common in older '
+                      'adults but possible earlier. The group put low muscle strength at the center of the diagnosis, '
+                      'ahead of muscle size.'},
+             {'type': 'p',
+              'text': 'Weakness matters for more than appearance. The CDC lists [lower body '
+                      'weakness](https://www.cdc.gov/falls/data-research/facts-stats/index.html) first among the risk '
+                      'factors for falls in older adults, and notes that fall injuries can make it hard to get around, '
+                      'do everyday activities or live on your own.'},
+             {'type': 'h2', 'text': 'What the guidelines recommend'},
+             {'type': 'p',
+              'text': 'The federal [Physical Activity Guidelines for '
+                      'Americans](https://odphp.health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines) '
+                      'ask adults to do muscle-strengthening activities on at least two days a week, alongside regular '
+                      'aerobic activity. For people 65 and older, the CDC summarizes the weekly target as [at least '
+                      '150 minutes of moderate aerobic activity, at least two days of muscle-strengthening activity, '
+                      'and activities that improve '
+                      'balance](https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html).'},
+             {'type': 'p',
+              'text': 'Strength work does not have to mean a gym. The National Institute on Aging describes [strength '
+                      'exercises](https://www.nia.nih.gov/health/exercise-and-physical-activity/three-types-exercise-can-improve-your-health-and-physical) '
+                      'that can be done with resistance bands, light hand weights or your own body weight, such as '
+                      'wall push-ups or rising from a chair without using your hands.'},
+             {'type': 'h2', 'text': 'What the research shows about strength and longevity'},
+             {'type': 'p',
+              'text': 'A 2022 review of 16 long-term studies in the British Journal of Sports Medicine found that '
+                      'adults who did muscle-strengthening activities had a [10 to 17 percent lower risk of death from '
+                      'any cause](https://pubmed.ncbi.nlm.nih.gov/35228201/), as well as lower risks of heart disease, '
+                      'cancer and diabetes, independent of aerobic exercise. The largest benefit appeared at roughly '
+                      '30 to 60 minutes a week. People who combined strength and aerobic activity did better than '
+                      'those who did neither.'},
+             {'type': 'p',
+              'text': 'These are observational studies, so they show an association rather than proof that lifting '
+                      'causes longer life. Still, the pattern is consistent, and the amount of time involved is '
+                      'modest: two or three short sessions a week.'},
+             {'type': 'h2', 'text': 'Starting safely'},
+             {'type': 'p',
+              'text': 'A few principles make strength training safer and more likely to stick, especially if you have '
+                      'not lifted in years:'},
+             {'type': 'ul',
+              'items': ['**Start light.** Choose a weight or band you can move with good form for 10 to 15 '
+                        'repetitions, and add resistance gradually over weeks.',
+                        '**Cover the big muscle groups.** Legs, hips, back, chest, shoulders and arms. Leg strength '
+                        'matters most for getting up from chairs and staying steady.',
+                        '**Breathe and move slowly.** Avoid holding your breath while you lift, and lower the weight '
+                        'with control.',
+                        '**Rest between sessions.** Give a muscle group a day off before working it again.',
+                        '**Consider a few sessions with a qualified trainer or physical therapist** to learn form, '
+                        'particularly after a joint replacement or back problem.']},
+             {'type': 'p',
+              'text': 'Check with your doctor before starting if you have heart disease, uncontrolled blood pressure, '
+                      'recent surgery, osteoporosis or a joint that is acting up. Most people can strength train; the '
+                      'question is usually how, not whether.'},
+             {'type': 'h2', 'text': 'How it fits with your other care'},
+             {'type': 'p',
+              'text': 'Muscle interacts with almost everything else an internist tracks. It helps the body handle '
+                      'blood sugar, it supports balance, and it can change how some lab values read. Creatinine, the '
+                      'blood test most often used to estimate kidney function, comes from muscle, so very low or very '
+                      'high muscle mass can affect the result. Our article on [reading your kidney '
+                      'labs](/journal/egfr-kidney-lab-results-explained) explains why.'},
+             {'type': 'p',
+              'text': 'If you are weighing a weight-loss medicine, strength training deserves a place in the plan, '
+                      'since the goal is to lose fat while keeping muscle. We cover that in [GLP-1 medications for '
+                      'weight](/journal/glp-1-medications-for-weight-loss). For balance specifically, see [balance and '
+                      'fall prevention](/journal/balance-and-fall-prevention).'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, Dr. Shtern can talk through which exercises suit your joints, heart and '
+                      'medicines, and how to fit strength work into a week that already has walking, golf or tennis in '
+                      'it. The annual [Legacy physical](/preventive-care) is a good moment for that conversation. If '
+                      'you would like to meet her first, the first visit is a complimentary [meet and '
+                      'greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'body-composition-vs-bmi',
+  'title': 'Body composition vs. BMI: what the scale misses',
+  'seo_title': 'Body Composition vs. BMI: What the Scale Misses | Legacy Medical',
+  'date': '2026-10-13T08:20:00',
+  'modified': '2026-10-13T08:20:00',
+  'category': 'Healthy aging',
+  'excerpt': 'BMI is a quick screening number, not a verdict. What it cannot tell you about fat, muscle and where '
+             'weight sits, and better questions to ask as you age.',
+  'blocks': [{'type': 'p',
+              'text': 'Body mass index, or BMI, is the number most people hear about at a checkup. It is simple: your '
+                      'weight divided by the square of your height. It is also limited, especially for older adults, '
+                      'for very muscular people, and for anyone whose weight sits mostly around the middle.'},
+             {'type': 'p',
+              'text': 'This article explains what BMI is good for, where it falls short, and what else your doctor may '
+                      'look at.'},
+             {'type': 'p',
+              'text': 'The CDC describes BMI as a [quick, low-cost and reliable screening '
+                      'measure](https://www.cdc.gov/bmi/about/index.html) for underweight, overweight and obesity. It '
+                      'is useful across large groups of people and easy to track over time. For an individual, the CDC '
+                      'says BMI should be considered alongside other factors, such as blood pressure, cholesterol and '
+                      'a physical examination.'},
+             {'type': 'h2', 'text': 'What BMI cannot see'},
+             {'type': 'p',
+              'text': 'The same CDC page is direct about the limits. BMI [does not distinguish between fat, muscle and '
+                      'bone](https://www.cdc.gov/bmi/about/index.html), does not show what type of fat a person has, '
+                      'and does not show where on the body fat is carried.'},
+             {'type': 'p',
+              'text': 'That matters with age. Two people can share a BMI and have very different bodies: one with '
+                      'strong legs and little abdominal fat, the other with less muscle and more fat around the '
+                      'organs. As muscle declines in later life, a stable BMI can hide a shift toward more fat and '
+                      'less muscle.'},
+             {'type': 'p',
+              'text': 'In 2025 an international commission in The Lancet Diabetes and Endocrinology went further, '
+                      'writing that BMI-based measures [can both underestimate and overestimate body '
+                      'fat](https://pubmed.ncbi.nlm.nih.gov/39824205/) and give inadequate information about an '
+                      "individual's health. The commission proposed defining clinical obesity by its effect on how "
+                      'organs and the body function, rather than by a number alone.'},
+             {'type': 'h2', 'text': 'Waist size: a simple second measure'},
+             {'type': 'p',
+              'text': 'Where fat sits is part of the risk. The National Heart, Lung, and Blood Institute notes that if '
+                      'most of your fat is around your waist rather than your hips, you are at [higher risk for heart '
+                      'disease and type 2 '
+                      'diabetes](https://www.nhlbi.nih.gov/health/heart-healthy-living/healthy-weight). A waist '
+                      'circumference of more than 35 inches for women or more than 40 inches for men increases that '
+                      'risk.'},
+             {'type': 'p',
+              'text': 'To measure at home, NHLBI suggests standing, placing a tape measure around your middle just '
+                      'above the hipbones, and reading it just after you breathe out. It takes 30 seconds and adds '
+                      'real information to the number on the scale.'},
+             {'type': 'h2', 'text': 'Other ways to look at body composition'},
+             {'type': 'p',
+              'text': 'Several tools estimate fat and lean mass more directly, from imaging to devices that pass a '
+                      'small electrical current through the body. They vary in accuracy, availability and cost, and '
+                      'the readings from consumer scales can swing with hydration. A DXA scan, the low-dose x-ray best '
+                      'known for [measuring bone density](https://medlineplus.gov/lab-tests/bone-density-scan/), is '
+                      'the test many people have already had in some form.'},
+             {'type': 'p',
+              'text': 'Whether a body composition test is worth doing depends on what you would do with the result. If '
+                      'you would like one, ask Dr. Shtern whether it makes sense for you and where it can be done. For '
+                      'many people, a tape measure, a few blood tests and an honest look at strength and fitness '
+                      'answer the same questions.'},
+             {'type': 'h2', 'text': 'What your doctor looks at instead of one number'},
+             {'type': 'ul',
+              'items': ['**Waist circumference**, as above.',
+                        '**Blood pressure**, measured carefully in the office and, ideally, at home as well.',
+                        '**Blood sugar and cholesterol.** An A1c and a lipid panel show how weight is affecting '
+                        'metabolism. Our article on [prediabetes and A1c](/journal/prediabetes-and-a1c) explains the '
+                        'numbers.',
+                        '**Strength and function.** How easily you rise from a chair, climb stairs and keep your '
+                        'balance. See [strength training after 50](/journal/strength-training-after-50).',
+                        '**Trends over time**, which say more than any single visit.']},
+             {'type': 'h2', 'text': 'If you want to change your composition'},
+             {'type': 'p',
+              'text': 'The tools are familiar: regular aerobic activity, strength training on at least two days a '
+                      'week, and an eating pattern you can keep. For people who need to lose weight, NHLBI notes that '
+                      'health professionals recommend [losing 5 to 10 percent of your starting weight over about six '
+                      'months](https://www.nhlbi.nih.gov/health/heart-healthy-living/healthy-weight), and that even 3 '
+                      'to 5 percent can lower triglycerides and blood sugar.'},
+             {'type': 'p',
+              'text': 'As you lose weight, watch your waist and your strength as closely as the scale. A smaller waist '
+                      'with steady or improving strength is the result most people are after, even if the scale moves '
+                      'more slowly than they hoped.'},
+             {'type': 'h2', 'text': 'Putting it together'},
+             {'type': 'p',
+              'text': 'BMI is a starting point, and a reasonable one. It works best as one line in a fuller picture '
+                      'that includes where weight sits, how strong you are, and what your blood work shows. The '
+                      'earlier article on [why obesity is considered a disease](/journal/obesity-is-a-disease) covers '
+                      'the medical side of weight in more depth.'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, labs are drawn in the office and the annual [Legacy '
+                      'physical](/preventive-care) includes time to go through the results together, so the numbers '
+                      'come with context. If you would like to see how that works, start with a complimentary [meet '
+                      'and greet](/meet-and-greet) with Dr. Shtern.'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'vo2-max-and-fitness-for-longevity',
+  'title': 'VO2 max: why fitness may predict a longer life',
+  'seo_title': 'VO2 Max and Fitness as a Predictor of Lifespan | Legacy Medical',
+  'date': '2026-10-13T08:10:00',
+  'modified': '2026-10-13T08:10:00',
+  'category': 'Healthy aging',
+  'excerpt': 'Cardiorespiratory fitness is one of the strongest predictors of how long people live. What VO2 max '
+             'means, what the studies show, and how to improve yours.',
+  'blocks': [{'type': 'p',
+              'text': 'VO2 max has moved from sports labs into everyday conversation, helped by fitness watches that '
+                      'estimate it. The term refers to the most oxygen your body can use during hard exercise. It is '
+                      'the best-known measure of cardiorespiratory fitness: how well your heart, lungs, blood vessels '
+                      'and muscles work together.'},
+             {'type': 'p',
+              'text': 'There is good reason for the interest. In large studies, fitness predicts how long people live '
+                      'about as well as, or better than, many of the risk factors doctors track routinely.'},
+             {'type': 'h2', 'text': 'What the research shows'},
+             {'type': 'p',
+              'text': 'In 2016 the American Heart Association published a scientific statement arguing that '
+                      'cardiorespiratory fitness should be treated as a [clinical vital '
+                      'sign](https://pubmed.ncbi.nlm.nih.gov/27881567/). It noted that low fitness is linked to higher '
+                      'risk of cardiovascular disease, death from any cause, and death from several cancers, and that '
+                      'fitness may be a stronger predictor of mortality than smoking, high blood pressure, high '
+                      'cholesterol or type 2 diabetes.'},
+             {'type': 'p',
+              'text': 'A 2009 analysis of 33 studies in JAMA found that each step up in fitness, measured in metabolic '
+                      'equivalents or METs, was linked to a [13 percent lower risk of death from any cause and a 15 '
+                      'percent lower risk of heart disease events](https://pubmed.ncbi.nlm.nih.gov/19454641/).'},
+             {'type': 'p',
+              'text': 'A 2018 Cleveland Clinic study followed more than 122,000 adults who had treadmill tests. Those '
+                      'in the lowest fitness group had a [risk of death about five times higher than the fittest '
+                      'group](https://pubmed.ncbi.nlm.nih.gov/30646252/), and the gap between below-average and '
+                      'above-average fitness was comparable to the effect of smoking or diabetes. The benefit '
+                      'continued at the highest fitness levels, including in people 70 and older.'},
+             {'type': 'p',
+              'text': 'These are observational findings. People who are fit may also differ in other ways. But the '
+                      'association is strong and consistent, and unlike age or family history, fitness can change.'},
+             {'type': 'h2', 'text': 'What the numbers mean'},
+             {'type': 'p',
+              'text': 'Fitness is often expressed in METs, short for metabolic equivalents. One MET is roughly the '
+                      'energy you use sitting quietly, so an activity rated at 8 METs takes about eight times as much. '
+                      'The JAMA analysis grouped people as [low fitness below 7.9 METs, intermediate from 7.9 to 10.8, '
+                      'and high at 10.9 or more](https://pubmed.ncbi.nlm.nih.gov/19454641/).'},
+             {'type': 'p',
+              'text': 'You do not need to know your number to benefit. The practical message from these studies is '
+                      'that moving from the least fit group into the next one brings the largest gain, which is good '
+                      'news for anyone starting from a low base.'},
+             {'type': 'h2', 'text': 'How fitness is measured'},
+             {'type': 'p',
+              'text': 'A true VO2 max is measured during a cardiopulmonary exercise test, usually on a treadmill or '
+                      'bicycle while you breathe through a mouthpiece that analyzes your breath. It is done in '
+                      'exercise physiology labs and some cardiology and sports medicine settings. Standard treadmill '
+                      'stress tests estimate fitness from how long and how hard you can exercise, which is how the '
+                      'studies above measured it.'},
+             {'type': 'p',
+              'text': 'Smartwatch estimates are convenient but approximate. They are most useful for watching your own '
+                      'trend over months, not for comparing yourself with a chart. If you are curious about formal '
+                      'testing, ask Dr. Shtern whether it makes sense for you.'},
+             {'type': 'h2', 'text': 'How to improve cardiorespiratory fitness'},
+             {'type': 'p',
+              'text': 'Fitness responds to training at any age. The federal guidelines for adults 65 and older call '
+                      'for [at least 150 minutes a week of moderate aerobic activity, or 75 minutes of vigorous '
+                      'activity](https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html), along '
+                      'with strength and balance work. The National Heart, Lung, and Blood Institute describes [how '
+                      'physical activity benefits the '
+                      'heart](https://www.nhlbi.nih.gov/health/heart-healthy-living/physical-activity) and how to '
+                      'build up safely.'},
+             {'type': 'ul',
+              'items': ['**Build a base first.** Brisk walking, cycling, swimming and rowing all count. Most of your '
+                        'weekly time can be at a pace where you can talk but not sing.',
+                        '**Add some harder intervals once you are ready.** Short stretches of faster effort, followed '
+                        'by easy recovery, are an efficient way to raise fitness.',
+                        '**Be consistent.** Fitness fades when training stops. A schedule you can keep through a '
+                        'Florida summer matters more than an ambitious one.',
+                        '**Pair it with strength work.** Stronger legs make every aerobic activity easier. See '
+                        '[strength training after 50](/journal/strength-training-after-50).']},
+             {'type': 'h2', 'text': 'When to check with your doctor first'},
+             {'type': 'p',
+              'text': 'Talk with your doctor before stepping up intensity if you have heart disease, chest pain or '
+                      'pressure with exertion, unexplained shortness of breath, fainting, or several risk factors that '
+                      'have not been evaluated. Stop and seek care for chest discomfort, unusual breathlessness or '
+                      'lightheadedness during exercise.'},
+             {'type': 'p',
+              'text': 'Heat is also a factor here. Exercising outdoors in South Florida means planning around the '
+                      'hottest hours and drinking enough fluid. Our article on [heat, hydration and your '
+                      'kidneys](/journal/heat-hydration-kidney-health) has practical tips, and [the benefits of '
+                      'exercising](/journal/health-benefits-of-exercise) covers the basics.'},
+             {'type': 'p',
+              'text': 'An ECG is done in the office at Legacy Medical, and the annual [Legacy '
+                      'physical](/preventive-care) includes one, which gives Dr. Shtern a baseline before you train '
+                      'harder. To meet her and talk about your goals, book a complimentary [meet and '
+                      'greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'sleep-and-healthy-aging',
+  'title': 'How sleep changes with age, and what helps',
+  'seo_title': 'Sleep After 60: What Changes and What Helps | Legacy Medical',
+  'date': '2026-10-13T08:00:00',
+  'modified': '2026-10-13T08:00:00',
+  'category': 'Healthy aging',
+  'excerpt': 'Older adults still need seven to nine hours of sleep, but sleep changes with age. Insomnia, sleep apnea, '
+             'and the evidence-based fixes worth asking about.',
+  'blocks': [{'type': 'p',
+              'text': 'Many people notice that sleep changes in their 60s and 70s. Bedtime drifts earlier, waking at 5 '
+                      'a.m. becomes routine, and a full night without getting up becomes rare. Some of that is normal '
+                      'aging. Some of it is a treatable sleep problem that deserves attention.'},
+             {'type': 'p',
+              'text': 'This article covers what changes, what does not, and when poor sleep is worth bringing to your '
+                      'doctor. For the basics of how much sleep adults need, see [are you getting enough '
+                      'sleep](/journal/how-much-sleep-do-adults-need).'},
+             {'type': 'h2', 'text': 'What changes with age, and what does not'},
+             {'type': 'p',
+              'text': 'According to the National Institute on Aging, older adults [need about the same amount of sleep '
+                      'as all adults: seven to nine hours a '
+                      'night](https://www.nia.nih.gov/health/sleep/sleep-and-older-adults). What changes is the '
+                      'timing. Older people tend to go to sleep earlier and wake earlier than they did when they were '
+                      'younger.'},
+             {'type': 'p',
+              'text': 'NIA also notes that sleep disorders become more common with age, including insomnia, sleep '
+                      'apnea and movement disorders such as restless legs syndrome. Illness, medicines, pain and mood '
+                      'can all disturb sleep. Feeling tired every day is not simply a part of getting older.'},
+             {'type': 'p',
+              'text': 'The National Heart, Lung, and Blood Institute links ongoing [sleep '
+                      'deficiency](https://www.nhlbi.nih.gov/health/sleep-deprivation) to a higher risk of heart '
+                      'disease, high blood pressure, diabetes, kidney disease, obesity, depression and stroke. NHLBI '
+                      'adds that sleep deficiency is linked to a higher chance of injury, and that in older adults it '
+                      '[may be linked to a higher chance of falls and broken '
+                      'bones](https://www.nhlbi.nih.gov/health/sleep-deprivation).'},
+             {'type': 'p',
+              'text': 'Sleep is also one of the easier areas to improve. Unlike many risk factors, it responds to '
+                      'changes in routine within weeks, and the main treatments carry little risk.'},
+             {'type': 'h2', 'text': 'Insomnia'},
+             {'type': 'p',
+              'text': 'NIA calls insomnia [the most common sleep problem in adults 60 and '
+                      'older](https://www.nia.nih.gov/health/sleep/sleep-and-older-adults). People with insomnia have '
+                      'trouble falling asleep or staying asleep at least three nights a week, and it becomes chronic '
+                      'when it lasts more than three months.'},
+             {'type': 'p',
+              'text': 'The first-line treatment is not a pill. The American College of Physicians recommends '
+                      '[cognitive behavioral therapy for insomnia, or CBT-I, as the initial '
+                      'treatment](https://pubmed.ncbi.nlm.nih.gov/27136449/) for chronic insomnia in adults. CBT-I is '
+                      'a structured program that adjusts sleep timing, habits and the thoughts that keep people awake. '
+                      'It can be done with a trained clinician and, increasingly, through guided programs.'},
+             {'type': 'p',
+              'text': 'Sleep medicines may help in the short term, but NIA notes that [they carry risks and should not '
+                      'be used long term](https://www.nia.nih.gov/health/sleep/sleep-and-older-adults). In older '
+                      'adults, some sleep aids, including some sold over the counter, can cause next-day grogginess, '
+                      'confusion and falls. Our article on [medication reviews for older '
+                      'adults](/journal/medication-review-older-adults) explains why every sleep aid belongs on your '
+                      'medicine list.'},
+             {'type': 'h2', 'text': 'Sleep apnea'},
+             {'type': 'p',
+              'text': 'In obstructive sleep apnea, the airway repeatedly narrows or closes during sleep. NHLBI lists '
+                      '[common signs](https://www.nhlbi.nih.gov/health/sleep-apnea/symptoms) including loud snoring, '
+                      'pauses in breathing that a partner notices, gasping or choking at night, morning headaches and '
+                      'daytime sleepiness. Untreated sleep apnea is linked to high blood pressure and other heart '
+                      'problems, according to [NHLBI](https://www.nhlbi.nih.gov/health/sleep-apnea).'},
+             {'type': 'p',
+              'text': 'Sleep apnea is diagnosed with a sleep study, which may be done at home or in a sleep center. If '
+                      'your bed partner has commented on your snoring or breathing, or your blood pressure is hard to '
+                      'control, mention it at your next visit.'},
+             {'type': 'h2', 'text': 'Medicines and other conditions'},
+             {'type': 'p',
+              'text': 'Many common medicines can affect sleep, from some blood pressure pills and diuretics taken late '
+                      'in the day to decongestants and steroids. Pain from arthritis, heartburn, and the urge to '
+                      'urinate at night can all break up sleep. NIA lists illness, medications, mental health and pain '
+                      'among the [factors that make a good night '
+                      'harder](https://www.nia.nih.gov/health/sleep/sleep-and-older-adults) for older adults.'},
+             {'type': 'p',
+              'text': 'This is where a medicine review earns its keep. Sometimes moving a dose earlier in the day, or '
+                      'treating the underlying problem, does more than any sleep aid.'},
+             {'type': 'h2', 'text': 'Habits that help'},
+             {'type': 'ul',
+              'items': ['**Keep a regular schedule**, including on weekends.',
+                        '**Get morning light and daytime activity.** Both help set your body clock.',
+                        '**Limit late naps** to keep sleep pressure for the night.',
+                        '**Watch caffeine and alcohol.** NIA suggests avoiding caffeine late in the day and avoiding '
+                        'alcohol, even small amounts. See [alcohol after 50](/journal/alcohol-after-50).',
+                        '**Avoid large meals and lots of fluid** in the two to three hours before bed, as NIA '
+                        'suggests.',
+                        '**Keep a sleep diary for two weeks** before your appointment. It makes the conversation far '
+                        'more useful.']},
+             {'type': 'h2', 'text': 'When to talk with your doctor'},
+             {'type': 'p',
+              'text': 'Bring up sleep if you feel unrefreshed most mornings, fall asleep unintentionally during the '
+                      'day, snore loudly with pauses in breathing, get up to urinate many times a night, or rely on a '
+                      'sleep aid most nights. Some of these point to conditions an internist checks for directly, from '
+                      'heart failure to prostate enlargement to blood sugar problems.'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, visits are unhurried, so there is time to go through a sleep diary and your '
+                      'medicine list together, and Dr. Shtern can coordinate a sleep study or a referral when one is '
+                      'needed. Many follow-ups work well by [video visit](/telehealth). To start, book a complimentary '
+                      '[meet and greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'coronary-artery-calcium-score',
+  'title': 'Coronary artery calcium scoring: who it helps',
+  'seo_title': 'Coronary Calcium (CAC) Score: Who It Helps | Legacy Medical',
+  'date': '2026-10-13T07:50:00',
+  'modified': '2026-10-13T07:50:00',
+  'category': 'Heart and blood pressure',
+  'excerpt': 'A coronary calcium scan can sharpen a borderline heart risk estimate. Who guidelines say it helps, what '
+             'the score means, and when it adds little.',
+  'blocks': [{'type': 'p',
+              'text': 'A coronary artery calcium scan, often called a CAC score or calcium score, is a quick CT scan '
+                      'of the heart that looks for calcified plaque in the coronary arteries. It has become a popular '
+                      'test among people who want a clearer picture of their heart risk, and it can be genuinely '
+                      'useful. It is not a test everyone needs.'},
+             {'type': 'h2', 'text': 'What the scan shows'},
+             {'type': 'p',
+              'text': 'Calcium in the walls of the coronary arteries is a marker of atherosclerosis, the plaque that '
+                      'causes most heart attacks. The scan adds up the calcium it finds into a single number. '
+                      'RadiologyInfo, the patient site of the American College of Radiology and the Radiological '
+                      'Society of North America, describes the usual ranges: a [score of 0 shows no evidence of '
+                      'coronary artery disease, 1 to 10 minimal, 11 to 100 mild, 101 to 400 moderate, and over 400 '
+                      'extensive](https://www.radiologyinfo.org/en/info/ct_calscoring).'},
+             {'type': 'p',
+              'text': 'According to RadiologyInfo, the exam [takes less than 20 minutes and does not require an '
+                      'injection of contrast material](https://www.radiologyinfo.org/en/info/ct_calscoring). It does '
+                      'use x-rays, and the radiation dose varies. It does not show soft plaque that has not calcified, '
+                      'and it does not show whether an artery is narrowed enough to limit blood flow.'},
+             {'type': 'h2', 'text': 'Where it fits in a risk assessment'},
+             {'type': 'p',
+              'text': 'Doctors usually start with a 10-year risk estimate built from age, sex, blood pressure, '
+                      'cholesterol, diabetes and smoking, as described in the [2019 prevention '
+                      'guideline](https://pubmed.ncbi.nlm.nih.gov/30879355/). The guideline then adds risk-enhancing '
+                      'factors, such as family history, kidney disease, early menopause and certain lab results, to '
+                      'refine that estimate. A calcium score is one more piece of information on top of these, not a '
+                      'replacement for them.'},
+             {'type': 'h2', 'text': 'Who it helps'},
+             {'type': 'p',
+              'text': 'The calcium score is most useful when a treatment decision is genuinely uncertain. The 2018 '
+                      'cholesterol guideline from the American Heart Association, American College of Cardiology and '
+                      'other groups suggests considering it for adults whose estimated 10-year heart risk is in the '
+                      '[intermediate range, and for some at borderline '
+                      'risk](https://pubmed.ncbi.nlm.nih.gov/30586774/), when it is unclear whether to start a statin. '
+                      'The 2019 [primary prevention guideline](https://pubmed.ncbi.nlm.nih.gov/30879355/) takes the '
+                      'same approach.'},
+             {'type': 'p', 'text': 'In that setting, the guideline describes how the score can shift the decision:'},
+             {'type': 'ul',
+              'items': ['**A score of zero** may make it reasonable to hold off on a statin and reassess in five to '
+                        'ten years, unless other high-risk features are present, such as diabetes, current smoking or '
+                        'a strong family history of early heart disease.',
+                        '**A score of 1 to 99** generally favors a statin for people 55 and older.',
+                        '**A score of 100 or higher, or at or above the 75th percentile for age and sex,** generally '
+                        'favors a statin.']},
+             {'type': 'p',
+              'text': 'RadiologyInfo summarizes it the same way: [a score of zero may support delaying cholesterol '
+                      'medicine in some people, while a high score may support starting '
+                      'it](https://www.radiologyinfo.org/en/info/ct_calscoring).'},
+             {'type': 'h2', 'text': 'Who it helps less'},
+             {'type': 'ul',
+              'items': ['**People who already have heart disease**, such as a prior heart attack, stent or bypass. '
+                        'Their treatment is already clear.',
+                        '**People with symptoms** such as chest pain or breathlessness with exertion. They need a '
+                        'different evaluation, not a screening scan.',
+                        '**People at very low risk**, where a result is unlikely to change anything and may lead to '
+                        'further testing.',
+                        '**People already certain to take, or decline, a statin** regardless of the result.']},
+             {'type': 'p',
+              'text': 'The US Preventive Services Task Force concluded in 2018 that the evidence was [insufficient to '
+                      'judge the benefits and harms of adding a calcium '
+                      'score](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cardiovascular-disease-screening-using-nontraditional-risk-assessment) '
+                      'to standard risk assessment in adults without symptoms, and notes that an update on calcium '
+                      'scoring is in progress. That is a statement about population screening. It sits alongside the '
+                      'cardiology guidelines that use the score for selected individuals.'},
+             {'type': 'h2', 'text': 'What to think about before you book one'},
+             {'type': 'p',
+              'text': 'Calcium scans are sometimes offered directly to consumers. The scan itself is simple, but the '
+                      'result raises questions: what to do with a moderate score, whether a finding outside the heart '
+                      'on the image needs follow-up, and how the number fits with cholesterol, blood pressure, family '
+                      'history and Lp(a). Insurance coverage varies, so ask your plan before you schedule.'},
+             {'type': 'p',
+              'text': 'It also helps to know the rest of your numbers first. Our articles on [ApoB and '
+                      'lipoprotein(a)](/journal/apob-and-lipoprotein-a) and [menopause and heart '
+                      'health](/journal/menopause-and-heart-health) cover other factors that can tip a borderline '
+                      "decision. The USPSTF's separate guidance on [statin use for "
+                      'prevention](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication) '
+                      'explains how risk estimates are used.'},
+             {'type': 'h2', 'text': 'How Dr. Shtern approaches it'},
+             {'type': 'p',
+              'text': 'The useful question is not whether a calcium score is a good test, but whether it would change '
+                      'your plan. Dr. Shtern can estimate your risk with your labs and history, explain where you '
+                      'fall, and help you decide whether a scan would settle anything. If it would, she can order it '
+                      'and go through the result with you.'},
+             {'type': 'p',
+              'text': 'Blood pressure and cholesterol are part of her everyday work, along with the kidney health that '
+                      'often travels with them. Read more about [hypertension care](/hypertension) at Legacy Medical, '
+                      'or book a complimentary [meet and greet](/meet-and-greet) to talk about your own heart risk.'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'apob-and-lipoprotein-a',
+  'title': 'ApoB and lipoprotein(a): cholesterol numbers worth asking about',
+  'seo_title': 'ApoB and Lp(a): Cholesterol Tests to Ask For | Legacy Medical',
+  'date': '2026-10-13T07:40:00',
+  'modified': '2026-10-13T07:40:00',
+  'category': 'Heart and blood pressure',
+  'excerpt': 'Beyond LDL: what apolipoprotein B and lipoprotein(a) measure, why Lp(a) is worth checking once, and how '
+             'these numbers can change a heart-risk plan.',
+  'blocks': [{'type': 'p',
+              'text': 'A standard cholesterol panel reports total cholesterol, LDL, HDL and triglycerides. Those '
+                      'numbers still do most of the work in heart risk assessment. Two other tests, apolipoprotein B '
+                      '(ApoB) and lipoprotein(a), usually written Lp(a), can add useful detail for some people, and '
+                      'one of them is worth checking at least once in a lifetime.'},
+             {'type': 'p',
+              'text': 'The National Heart, Lung, and Blood Institute explains that [high LDL '
+                      'cholesterol](https://www.nhlbi.nih.gov/health/blood-cholesterol) can build up in the walls of '
+                      'arteries and raise the risk of heart attack and stroke. Cholesterol travels in the blood inside '
+                      'particles called lipoproteins. LDL is one of them; there are others.'},
+             {'type': 'h2', 'text': 'What ApoB measures'},
+             {'type': 'p',
+              'text': 'Each LDL particle, and each of several related particles that can lodge in artery walls, '
+                      'carries one molecule of apolipoprotein B. Measuring ApoB is a way of counting those potentially '
+                      'harmful particles, rather than measuring the cholesterol they carry.'},
+             {'type': 'p',
+              'text': 'Most of the time ApoB and LDL tell a similar story. They can diverge in people with high '
+                      'triglycerides, diabetes, insulin resistance or obesity, where LDL may look acceptable while the '
+                      'particle count is high. The 2018 cholesterol guideline from the American Heart Association and '
+                      'American College of Cardiology lists a [high ApoB of 130 mg/dL or higher among its '
+                      'risk-enhancing factors](https://pubmed.ncbi.nlm.nih.gov/30586774/), particularly when '
+                      'triglycerides are high.'},
+             {'type': 'h2', 'text': 'What Lp(a) is'},
+             {'type': 'p',
+              'text': 'Lipoprotein(a) is an LDL-like particle with an extra protein attached. An American Heart '
+                      'Association scientific statement describes high Lp(a) as an [independent and causal risk factor '
+                      'for heart attack and stroke](https://pubmed.ncbi.nlm.nih.gov/34647487/), and notes that roughly '
+                      '70 to over 90 percent of the variation in Lp(a) levels between people is genetically '
+                      'determined.'},
+             {'type': 'p', 'text': 'That has practical consequences:'},
+             {'type': 'ul',
+              'items': ['**It is common.** The National Lipid Association estimates that about [one in five people has '
+                        'a high Lp(a)](https://pubmed.ncbi.nlm.nih.gov/38565461/).',
+                        '**It is mostly inherited.** Because levels are largely set by genes, a healthy diet and '
+                        'exercise, while valuable for other reasons, are not expected to change Lp(a) much.',
+                        '**It runs in families.** The NLA notes that testing [first-degree '
+                        'relatives](https://pubmed.ncbi.nlm.nih.gov/38565461/) of someone with a high level can '
+                        'identify others at risk.',
+                        '**It is not on a standard panel.** It has to be ordered specifically.']},
+             {'type': 'h2', 'text': 'Who should be tested'},
+             {'type': 'p',
+              'text': 'In a 2024 update, the National Lipid Association recommended [measuring Lp(a) at least once in '
+                      'every adult](https://pubmed.ncbi.nlm.nih.gov/38565461/) for risk assessment. It considers '
+                      'levels below 75 nmol/L (30 mg/dL) low risk, 125 nmol/L (50 mg/dL) or higher high risk, and '
+                      'values in between intermediate. The 2018 guideline lists [Lp(a) of 50 mg/dL or 125 nmol/L or '
+                      'higher](https://pubmed.ncbi.nlm.nih.gov/30586774/) as a risk-enhancing factor.'},
+             {'type': 'p',
+              'text': 'Testing is especially worth discussing if you or a close relative had a heart attack or stroke '
+                      'at a young age, if heart disease runs in the family despite normal cholesterol, or if you are '
+                      'deciding whether to start a statin and the decision is close.'},
+             {'type': 'h2', 'text': 'What a high result means'},
+             {'type': 'p',
+              'text': 'A high Lp(a) does not mean a heart attack is coming. It means the rest of your risk factors '
+                      'deserve closer attention. The NLA recommends [earlier, more intensive management of other risk '
+                      'factors](https://pubmed.ncbi.nlm.nih.gov/38565461/) for people with high Lp(a), including '
+                      'lifestyle changes and, for those at high risk, cholesterol-lowering medicine aimed mainly at '
+                      'LDL. The AHA statement notes that there are not yet [treatments approved specifically to lower '
+                      'Lp(a)](https://pubmed.ncbi.nlm.nih.gov/34647487/) for heart protection, and research is '
+                      'ongoing; ask Dr. Shtern about the current state of the evidence.'},
+             {'type': 'p',
+              'text': 'A high Lp(a) or ApoB can also be one of the findings that makes a [coronary artery calcium '
+                      'score](/journal/coronary-artery-calcium-score) worth considering. The [Mediterranean '
+                      'diet](/journal/mediterranean-diet-heart-health) and [heart-healthy '
+                      'foods](/journal/heart-healthy-foods) still help with LDL and overall risk, even if they do '
+                      'little for Lp(a).'},
+             {'type': 'h2', 'text': 'Reading the result'},
+             {'type': 'p',
+              'text': 'Lp(a) results come in one of two units, nmol/L or mg/dL, depending on the lab. The two are not '
+                      'simply interchangeable, so compare a new result with an old one only when the units match. The '
+                      'AHA statement notes that Lp(a) tests are [not yet fully standardized across '
+                      'labs](https://pubmed.ncbi.nlm.nih.gov/34647487/), another reason to keep your results together '
+                      'in one place and have one doctor read them over time.'},
+             {'type': 'p',
+              'text': 'Because Lp(a) is mostly inherited, a single measurement is enough for most adults. ApoB, like '
+                      'LDL, can change with diet, weight and medicine, so it may be checked again if it is being used '
+                      'to guide treatment.'},
+             {'type': 'h2', 'text': 'Asking for these tests'},
+             {'type': 'p',
+              'text': 'Both tests are simple blood draws. Ask your doctor whether they would add anything to your '
+                      'picture, and check with your insurance about coverage before the draw if cost is a concern.'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, blood is drawn in the office and Dr. Shtern takes the time to explain what '
+                      'each number means for you, including how cholesterol, blood pressure and kidney function fit '
+                      'together. The annual [Legacy physical](/preventive-care) is a natural time to ask. To meet her '
+                      'first, book a complimentary [meet and greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'prediabetes-and-a1c',
+  'title': 'Prediabetes and A1c: how to turn the numbers around',
+  'seo_title': 'Prediabetes and A1c: Turning the Numbers Around | Legacy Medical',
+  'date': '2026-10-13T07:30:00',
+  'modified': '2026-10-13T07:30:00',
+  'category': 'Prevention and screening',
+  'excerpt': 'An A1c of 5.7 to 6.4 percent means prediabetes. What that number measures, why the evidence for '
+             'lifestyle change is strong, and what to do next.',
+  'blocks': [{'type': 'p',
+              'text': 'Prediabetes rarely causes symptoms, so most people learn about it from a blood test. The good '
+                      'news is that it is one of the clearest examples in medicine of a problem you can often reverse, '
+                      'and the evidence is especially encouraging for people over 60.'},
+             {'type': 'h2', 'text': 'What the A1c test measures'},
+             {'type': 'p',
+              'text': 'The A1c test, sometimes written HbA1c, reflects your [average blood sugar over roughly the past '
+                      'three months](https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test). It does '
+                      'not require fasting, which is one reason it is widely used. The National Institute of Diabetes '
+                      'and Digestive and Kidney Diseases gives these ranges:'},
+             {'type': 'ul',
+              'items': ['**Normal:** below 5.7 percent',
+                        '**Prediabetes:** 5.7 to 6.4 percent',
+                        '**Diabetes:** 6.5 percent or above, usually confirmed with a second test']},
+             {'type': 'p',
+              'text': 'Fasting glucose and a glucose tolerance test are other ways to make the diagnosis. NIDDK notes '
+                      'that some conditions, including [iron-deficiency anemia, kidney failure and liver '
+                      'disease](https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test), can make an '
+                      'A1c result inaccurate, which is one reason your doctor reads it alongside your other labs.'},
+             {'type': 'h2', 'text': 'How common it is, and who should be screened'},
+             {'type': 'p',
+              'text': 'The CDC estimates that [more than 2 in 5 American adults have '
+                      'prediabetes](https://www.cdc.gov/diabetes/prevention-type-2/prediabetes-prevent-type-2.html). '
+                      'Prediabetes raises the risk of type 2 diabetes and other health problems. NIDDK explains that '
+                      'it is closely tied to [insulin '
+                      'resistance](https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance), '
+                      "in which the body's cells do not respond well to insulin."},
+             {'type': 'p',
+              'text': 'The US Preventive Services Task Force recommends [screening adults aged 35 to 70 who have '
+                      'overweight or '
+                      'obesity](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-for-prediabetes-and-type-2-diabetes), '
+                      'and offering people with prediabetes effective prevention programs. Medicare covers [diabetes '
+                      'screening tests](https://www.medicare.gov/coverage/diabetes-screenings) for people with certain '
+                      'risk factors.'},
+             {'type': 'p',
+              'text': 'NIDDK notes that people with insulin resistance and prediabetes [usually have no '
+                      'symptoms](https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance). '
+                      'The same page lists factors that raise the chance of developing it:'},
+             {'type': 'ul',
+              'items': ['Overweight, obesity or a large waist size',
+                        'Age 35 or older, with risk rising as people get older',
+                        'A family history of diabetes',
+                        'Not being physically active',
+                        'Smoking, including e-cigarettes',
+                        'A history of diabetes during pregnancy']},
+             {'type': 'p',
+              'text': 'Because nothing feels wrong, the only way to know is a blood test. That is one reason an A1c is '
+                      'part of many annual physicals for adults with these risk factors.'},
+             {'type': 'h2', 'text': 'The evidence that it can be turned around'},
+             {'type': 'p',
+              'text': 'The landmark Diabetes Prevention Program, published in the New England Journal of Medicine in '
+                      '2002, randomly assigned adults at high risk to an intensive lifestyle program, metformin, or '
+                      'placebo. The lifestyle program [reduced the development of diabetes by 58 '
+                      'percent](https://pubmed.ncbi.nlm.nih.gov/11832527/) over about three years, and worked better '
+                      'than metformin.'},
+             {'type': 'p',
+              'text': 'According to NIDDK, the lifestyle program [worked particularly well for people 60 and older, '
+                      'lowering their chances of developing type 2 diabetes by 71 '
+                      'percent](https://www.niddk.nih.gov/about-niddk/research-areas/diabetes/diabetes-prevention-program-dpp). '
+                      "The program's goals were modest: losing about 7 percent of body weight and getting about 150 "
+                      'minutes of physical activity a week.'},
+             {'type': 'h2', 'text': 'What helps most'},
+             {'type': 'ul',
+              'items': ['**Modest weight loss.** For many people, 5 to 7 percent of body weight is enough to move the '
+                        'numbers.',
+                        '**Regular activity.** Walking after meals, strength training and anything that gets you '
+                        'moving most days. See [strength training after 50](/journal/strength-training-after-50).',
+                        '**A steady eating pattern.** Fewer sugary drinks and refined starches, more vegetables, '
+                        'legumes, whole grains and fiber. A Mediterranean-style pattern is a good fit.',
+                        '**Sleep.** NHLBI links ongoing [sleep '
+                        'deficiency](https://www.nhlbi.nih.gov/health/sleep-deprivation) to diabetes, among other '
+                        'conditions. See [how sleep changes with age](/journal/sleep-and-healthy-aging).',
+                        '**A structured program**, if you like support. The CDC-recognized [National Diabetes '
+                        'Prevention Program](https://www.cdc.gov/diabetes-prevention/index.html) is based on the '
+                        'original study, and the CDC says lifestyle change can [cut the risk of type 2 diabetes in '
+                        'half](https://www.cdc.gov/diabetes/prevention-type-2/prediabetes-prevent-type-2.html).']},
+             {'type': 'p',
+              'text': 'Some people with prediabetes are also offered medicine. That decision depends on age, weight, '
+                      'other conditions and how the numbers are trending, and it is one to make with your doctor.'},
+             {'type': 'h2', 'text': 'How progress is tracked'},
+             {'type': 'p',
+              'text': 'Because A1c reflects about three months of blood sugar, it is usually rechecked no sooner than '
+                      'that after a change in habits or treatment. Fasting glucose, weight, waist size and blood '
+                      'pressure fill in the picture between tests. Seeing the number move in the right direction is '
+                      'often the best motivation there is.'},
+             {'type': 'h2', 'text': 'Why your internist cares about the whole picture'},
+             {'type': 'p',
+              'text': 'Prediabetes rarely travels alone. It often comes with high blood pressure, high triglycerides, '
+                      'fatty liver and early changes in kidney function. Because Dr. Shtern is also a nephrologist, '
+                      'she pays close attention to the kidney side; our article on [eGFR, creatinine and '
+                      'UACR](/journal/egfr-kidney-lab-results-explained) explains those tests. If weight is part of '
+                      'the plan, you may also want to read about GLP-1 medications, covered elsewhere in the journal.'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, labs including an A1c are drawn in the office, and [chronic disease '
+                      'care](/preventive-care) means the numbers are followed between visits, not just once a year. If '
+                      'you would like a doctor to keep track with you, book a complimentary [meet and '
+                      'greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'glp-1-medications-for-weight-loss',
+  'title': 'GLP-1 medications for weight: what to know before you ask',
+  'seo_title': 'GLP-1 Medications for Weight Loss: What to Know | Legacy Medical',
+  'date': '2026-10-13T07:20:00',
+  'modified': '2026-10-13T07:20:00',
+  'category': 'Medications',
+  'excerpt': 'Semaglutide and tirzepatide changed weight treatment. What the trials showed, common side effects, what '
+             'happens when you stop, and questions to ask first.',
+  'blocks': [{'type': 'p',
+              'text': 'Few medicines have drawn as much attention as the newer weight-loss drugs. Semaglutide, sold '
+                      'for weight management as Wegovy, and tirzepatide, sold as Zepbound, work on hormones involved '
+                      'in appetite and blood sugar. They are effective, they are not right for everyone, and they work '
+                      'best as part of a longer plan.'},
+             {'type': 'p',
+              'text': 'This article is general information to help you prepare for a conversation with your doctor. It '
+                      'is not a recommendation to start or avoid any medicine.'},
+             {'type': 'h2', 'text': 'What these medicines are'},
+             {'type': 'p',
+              'text': 'They are not the only option. NIDDK notes that the FDA has approved [six drugs for long-term '
+                      'weight '
+                      'management](https://www.niddk.nih.gov/health-information/weight-management/prescription-medications-treat-overweight-obesity): '
+                      'orlistat, phentermine-topiramate, naltrexone-bupropion, liraglutide, semaglutide and '
+                      'tirzepatide. Each works differently and suits different people.'},
+             {'type': 'p',
+              'text': 'GLP-1 receptor agonists mimic a gut hormone that helps regulate appetite, slows stomach '
+                      'emptying and affects insulin release. Tirzepatide acts on GLP-1 and a second hormone receptor, '
+                      'GIP. Both are given as weekly injections for weight management. NIDDK keeps an overview of '
+                      '[prescription medications to treat overweight and '
+                      'obesity](https://www.niddk.nih.gov/health-information/weight-management/prescription-medications-treat-overweight-obesity), '
+                      'including who they are approved for.'},
+             {'type': 'p',
+              'text': 'When the FDA approved Zepbound in 2023, it was for [adults with obesity, defined as a BMI of 30 '
+                      'or higher, or overweight, a BMI of 27 or higher, with at least one weight-related '
+                      'condition](https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management) '
+                      'such as high blood pressure, type 2 diabetes or high cholesterol, used together with a '
+                      'reduced-calorie diet and more physical activity.'},
+             {'type': 'h2', 'text': 'What the trials showed'},
+             {'type': 'ul',
+              'items': ['**Semaglutide.** In the STEP 1 trial, adults without diabetes lost an average of [14.9 '
+                        'percent of body weight over 68 weeks, compared with 2.4 percent on '
+                        'placebo](https://pubmed.ncbi.nlm.nih.gov/33567185/).',
+                        '**Tirzepatide.** In SURMOUNT-1, average weight loss at 72 weeks ranged from [15 percent at '
+                        'the lowest dose to 20.9 percent at the highest, compared with 3.1 percent on '
+                        'placebo](https://pubmed.ncbi.nlm.nih.gov/35658024/).',
+                        '**Heart outcomes.** In the SELECT trial of people with existing heart disease and overweight '
+                        'or obesity but no diabetes, semaglutide [lowered the combined rate of cardiovascular death, '
+                        'heart attack and stroke by about 20 percent](https://pubmed.ncbi.nlm.nih.gov/37952131/) '
+                        'compared with placebo. In 2024 the FDA [approved Wegovy to reduce the risk of cardiovascular '
+                        'death, heart attack and '
+                        'stroke](https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-reduce-risk-serious-heart-problems-specifically-adults-obesity-or) '
+                        'in adults with cardiovascular disease and either obesity or overweight.']},
+             {'type': 'h2', 'text': 'Side effects and cautions'},
+             {'type': 'p',
+              'text': 'Nausea, diarrhea, vomiting and constipation are the most common side effects. In the trials, '
+                      'they were [usually mild to moderate and eased over '
+                      'time](https://pubmed.ncbi.nlm.nih.gov/33567185/), most often during dose increases. Some people '
+                      'stop because of them.'},
+             {'type': 'p',
+              'text': 'These medicines also carry warnings and situations where they should not be used, which your '
+                      'doctor and pharmacist will go through. Tell every doctor, dentist and surgeon you see that you '
+                      'take one, especially before a procedure with sedation.'},
+             {'type': 'p',
+              'text': 'For older adults, the aim is to lose fat while keeping as much muscle and bone as possible, '
+                      'which is why strength training and enough protein belong in the plan. See [strength training '
+                      'after 50](/journal/strength-training-after-50) and [body composition vs. '
+                      'BMI](/journal/body-composition-vs-bmi).'},
+             {'type': 'h2', 'text': 'What happens when you stop'},
+             {'type': 'p',
+              'text': 'These are generally long-term treatments. In an extension of the STEP 1 trial, people who '
+                      'stopped semaglutide [regained about two-thirds of the weight they had lost within a '
+                      'year](https://pubmed.ncbi.nlm.nih.gov/35441470/), and improvements in blood pressure and other '
+                      'measures moved back toward where they started. NIDDK addresses the same question in its '
+                      '[overview of weight '
+                      'medications](https://www.niddk.nih.gov/health-information/weight-management/prescription-medications-treat-overweight-obesity). '
+                      'NIDDK also notes that some insurance plans do not cover weight management medicines, and '
+                      'suggests [contacting your '
+                      'insurer](https://www.niddk.nih.gov/health-information/weight-management/prescription-medications-treat-overweight-obesity) '
+                      'to find out. Check before you start, since stopping for cost reasons means losing much of the '
+                      'benefit.'},
+             {'type': 'h2', 'text': 'A word about compounded and online versions'},
+             {'type': 'p',
+              'text': 'The FDA has warned about [unapproved GLP-1 drugs used for weight '
+                      'loss](https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss), '
+                      'including compounded and counterfeit products. It notes that unapproved versions do not undergo '
+                      'FDA review for safety, effectiveness and quality, and advises getting a prescription from your '
+                      'doctor and filling it at a state-licensed pharmacy.'},
+             {'type': 'h2', 'text': 'Questions to bring to your doctor'},
+             {'type': 'ol',
+              'items': ['Does my health picture, including blood pressure, blood sugar, cholesterol, kidney function '
+                        'and joints, make weight treatment worthwhile?',
+                        'How would a medicine interact with what I already take?',
+                        'What would I do to protect muscle and bone while losing weight?',
+                        'How would we judge whether it is working, and for how long would I take it?',
+                        'What is the plan if side effects or cost become a problem?']},
+             {'type': 'p',
+              'text': 'Obesity is a chronic condition, as our earlier article on [why obesity is a '
+                      'disease](/journal/obesity-is-a-disease) explains, and it deserves the same careful approach as '
+                      'any other. At Legacy Medical, Dr. Shtern reviews every prescription you take and keeps track of '
+                      'how a new one is going, with many follow-ups by [video](/telehealth). To talk it through in '
+                      'person, book a complimentary [meet and greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'menopause-and-heart-health',
+  'title': 'Menopause and heart health: why midlife is the time to pay attention',
+  'seo_title': 'Menopause and Heart Health: What Changes and Why | Legacy Medical',
+  'date': '2026-10-13T07:10:00',
+  'modified': '2026-10-13T07:10:00',
+  'category': 'Heart and blood pressure',
+  'excerpt': 'Heart disease is the leading cause of death for women, and risk rises after menopause. What changes, '
+             'which numbers to watch, and where hormones fit.',
+  'blocks': [{'type': 'p',
+              'text': 'Hot flashes and sleep changes get most of the attention around menopause. Less often discussed '
+                      'is what happens to the heart. Heart disease is the leading cause of death for women in the '
+                      'United States, and the years around menopause are when many of its risk factors start to '
+                      'shift.'},
+             {'type': 'p',
+              'text': 'This article explains what changes, which numbers are worth watching, and what the evidence '
+                      'says about hormone therapy and the heart.'},
+             {'type': 'h2', 'text': 'Why the menopause transition matters'},
+             {'type': 'p',
+              'text': 'The CDC reports that [heart disease is the leading cause of death for '
+                      'women](https://www.cdc.gov/heart-disease/about/women-and-heart-disease.html) in the United '
+                      'States and was responsible for about 1 in every 5 female deaths in 2023. Only about half of '
+                      'women recognize it as their leading killer.'},
+             {'type': 'p',
+              'text': 'Women tend to develop coronary heart disease several years later than men, and their risk '
+                      'climbs after menopause. A 2020 American Heart Association scientific statement reviewed two '
+                      'decades of research that followed women through this period. It described [adverse changes in '
+                      'body composition, cholesterol and lipoproteins, and blood vessel '
+                      'health](https://pubmed.ncbi.nlm.nih.gov/33251828/) during the menopause transition, and called '
+                      'midlife a critical window for prevention.'},
+             {'type': 'p',
+              'text': 'The National Institute on Aging notes that after menopause, women are [more vulnerable to heart '
+                      'disease, stroke and osteoporosis](https://www.nia.nih.gov/health/menopause/what-menopause). '
+                      'Menopause is confirmed once a woman has gone 12 months without a period.'},
+             {'type': 'h2', 'text': 'What tends to change'},
+             {'type': 'p',
+              'text': 'Based on the research the AHA reviewed, these are the areas worth watching through your late '
+                      '40s and 50s:'},
+             {'type': 'ul',
+              'items': ['**Cholesterol and lipoproteins**, which the statement found change in an unfavorable '
+                        'direction during the transition.',
+                        '**Body composition**, including more fat around the middle. NHLBI notes that fat around the '
+                        'waist carries [more risk for heart disease and '
+                        'diabetes](https://www.nhlbi.nih.gov/health/heart-healthy-living/healthy-weight) than fat on '
+                        'the hips.',
+                        '**Blood vessel health**, which the statement also found shifts across the transition, and '
+                        'which blood pressure readings help track.',
+                        '**Blood sugar**, especially if weight is rising.',
+                        '**Sleep.** Night sweats and broken sleep add their own strain. NHLBI links ongoing [sleep '
+                        'deficiency](https://www.nhlbi.nih.gov/health/sleep-deprivation) to heart disease and high '
+                        'blood pressure.']},
+             {'type': 'p',
+              'text': 'Not every woman experiences all of these changes, which is why it helps to track your own '
+                      'numbers rather than rely on averages.'},
+             {'type': 'h2', 'text': 'Early menopause as a risk factor'},
+             {'type': 'p',
+              'text': 'The timing of menopause matters. The 2018 cholesterol guideline from the American Heart '
+                      'Association and American College of Cardiology lists [premature menopause, before age '
+                      '40](https://pubmed.ncbi.nlm.nih.gov/30586774/), among its risk-enhancing factors, along with a '
+                      'history of pre-eclampsia. These factors can tip a borderline decision about starting '
+                      'cholesterol-lowering medicine.'},
+             {'type': 'p',
+              'text': 'If you went through menopause early, or had high blood pressure or pre-eclampsia in pregnancy, '
+                      'make sure your doctor knows. Those details are easy to leave out of a medical history decades '
+                      'later, and they still count.'},
+             {'type': 'h2', 'text': 'Where hormone therapy fits'},
+             {'type': 'p',
+              'text': 'Hormone therapy is a treatment for menopause symptoms, not a heart medicine. The US Preventive '
+                      'Services Task Force [recommends against using hormone therapy to prevent chronic '
+                      'conditions](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/menopausal-hormone-therapy-preventive-medication), '
+                      'including heart disease, in postmenopausal women.'},
+             {'type': 'p',
+              'text': 'For symptoms, the picture is different. The 2022 position statement from the Menopause Society, '
+                      'then called the North American Menopause Society, says hormone therapy [remains the most '
+                      'effective treatment for hot flashes and night '
+                      'sweats](https://pubmed.ncbi.nlm.nih.gov/35797481/). For women younger than 60, or within 10 '
+                      'years of menopause, without reasons to avoid it, the statement finds the benefit-risk balance '
+                      'favorable for bothersome symptoms and for preventing bone loss. For women who start more than '
+                      '10 years after menopause or after 60, it finds the balance less favorable because of higher '
+                      'absolute risks of heart disease, stroke, blood clots and dementia.'},
+             {'type': 'p',
+              'text': 'The decision is personal and depends on your symptoms, history and preferences. It is worth '
+                      'discussing with a doctor who knows your heart and bone picture as well as your symptoms. The '
+                      'Menopause Society also keeps [patient education '
+                      'resources](https://menopause.org/patient-education).'},
+             {'type': 'h2', 'text': 'What to check in midlife'},
+             {'type': 'ul',
+              'items': ['**Blood pressure**, in the office and at home.',
+                        '**A lipid panel**, and consider asking about [ApoB and '
+                        'lipoprotein(a)](/journal/apob-and-lipoprotein-a).',
+                        '**A1c or fasting glucose.**',
+                        '**Waist size and weight trend.**',
+                        '**Bone health**, especially after early menopause. See [bone density '
+                        'screening](/journal/bone-density-screening).']},
+             {'type': 'p',
+              'text': 'If your estimated risk is borderline, a [coronary artery calcium '
+                      'score](/journal/coronary-artery-calcium-score) is sometimes used to help decide on treatment, '
+                      'as the [2019 prevention guideline](https://pubmed.ncbi.nlm.nih.gov/30879355/) describes.'},
+             {'type': 'p',
+              'text': 'It helps to bring a short history to your next visit: your age at menopause, any pregnancy '
+                      'complications such as pre-eclampsia or diabetes in pregnancy, and any family history of early '
+                      'heart disease or stroke.'},
+             {'type': 'h2', 'text': 'Seeing the whole picture'},
+             {'type': 'p',
+              'text': 'Menopause care often gets split between a gynecologist, a cardiologist and a primary care '
+                      'doctor, with no one holding all of it. At Legacy Medical, Dr. Shtern follows blood pressure, '
+                      'cholesterol and blood sugar over time, does an ECG in the office as part of the annual [Legacy '
+                      'physical](/preventive-care), and coordinates with your other doctors. To talk it through, book '
+                      'a complimentary [meet and greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'bone-density-screening',
+  'title': 'Bone density screening: who needs it, women and men',
+  'seo_title': 'Bone Density Screening for Women and Men | Legacy Medical',
+  'date': '2026-10-13T07:00:00',
+  'modified': '2026-10-13T07:00:00',
+  'category': 'Prevention and screening',
+  'excerpt': 'Osteoporosis is silent until a bone breaks. Who should have a DXA scan, what the T-score means, how '
+             'often Medicare covers it, and why men count too.',
+  'blocks': [{'type': 'p',
+              'text': 'Osteoporosis rarely announces itself. The National Institute on Aging calls it a [silent '
+                      'disease](https://www.nia.nih.gov/health/osteoporosis/osteoporosis) because people often notice '
+                      'nothing until a bone breaks, usually in the hip, spine or wrist. A bone density test can find '
+                      'thinning bones years before that happens, while there is still time to act.'},
+             {'type': 'h2', 'text': 'What osteoporosis is'},
+             {'type': 'p',
+              'text': 'Bone is living tissue that the body constantly breaks down and rebuilds. NIA explains that '
+                      'osteoporosis develops when [more bone is broken down than '
+                      'replaced](https://www.nia.nih.gov/health/osteoporosis/osteoporosis), leaving bones thinner and '
+                      'more fragile. Osteopenia is the in-between stage, when bone density is lower than normal but '
+                      'not yet in the osteoporosis range.'},
+             {'type': 'p',
+              'text': 'NIA reports that osteoporosis affects [about one in five women over 50, but only one in 20 '
+                      'men](https://www.nia.nih.gov/health/osteoporosis/osteoporosis). Women of White and Asian '
+                      'descent are more likely to develop it. NIA lists other risk factors including a family history '
+                      'of broken bones or osteoporosis, a broken bone after age 50, surgery to remove the ovaries '
+                      'before natural menopause, and too little calcium or vitamin D in the diet.'},
+             {'type': 'p',
+              'text': 'Fractures are the real concern. According to the CDC, nearly [319,000 older people are '
+                      'hospitalized for hip fractures each '
+                      'year](https://www.cdc.gov/falls/data-research/facts-stats/index.html), and most hip fractures '
+                      'are caused by falls. A broken bone after a minor fall, such as a wrist fracture from tripping '
+                      'on a step, deserves a conversation about bone health, even if no one has mentioned osteoporosis '
+                      'before.'},
+             {'type': 'h2', 'text': 'The test: a DXA scan'},
+             {'type': 'p',
+              'text': 'The standard test is a DXA scan, a [low-dose x-ray that measures calcium and other minerals in '
+                      'your bones](https://medlineplus.gov/lab-tests/bone-density-scan/), usually at the hip and '
+                      'spine. It is painless, takes a few minutes and you stay clothed for most of it.'},
+             {'type': 'p',
+              'text': 'Results are usually reported as a T-score, which MedlinePlus explains [compares your bone '
+                      'density with that of a healthy young adult of the same '
+                      'sex](https://medlineplus.gov/lab-tests/bone-density-scan/). The lower the score, the higher the '
+                      'risk of fracture. The Bone Health and Osteoporosis Foundation explains that a [T-score of -2.5 '
+                      'or below indicates '
+                      'osteoporosis](https://www.bonehealthandosteoporosis.org/patients/diagnosis-information/bone-density-examtesting/), '
+                      'assuming there is no other reason for such a low score, and that a spine or hip fracture after '
+                      '50 points to osteoporosis whatever the T-score.'},
+             {'type': 'p',
+              'text': 'Your doctor will read the score together with your age, history and other risk factors, often '
+                      'using a fracture risk calculator, rather than by the number alone.'},
+             {'type': 'h2', 'text': 'Who should be screened: women'},
+             {'type': 'p',
+              'text': 'The US Preventive Services Task Force updated its recommendation in 2025. It recommends '
+                      '[screening for osteoporosis in all women 65 and '
+                      'older](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening), '
+                      'and in postmenopausal women younger than 65 who are at increased risk based on a clinical risk '
+                      'assessment.'},
+             {'type': 'p',
+              'text': 'The Bone Health and Osteoporosis Foundation gives examples of [risk factors that can prompt '
+                      'earlier '
+                      'testing](https://www.bonehealthandosteoporosis.org/patients/diagnosis-information/bone-density-examtesting/): '
+                      'a family history of osteoporosis or fracture, frequent falls, vitamin D deficiency, smoking, '
+                      'heavy drinking, conditions that affect absorption, and some medicines such as prednisone.'},
+             {'type': 'h2', 'text': 'Who should be screened: men'},
+             {'type': 'p',
+              'text': 'Men lose bone too, though usually later in life. The USPSTF found the evidence [insufficient to '
+                      'recommend for or against screening '
+                      'men](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening), '
+                      'which is a statement about the research, not a finding that men are safe.'},
+             {'type': 'p',
+              'text': "Other groups give firmer advice. The Endocrine Society's guideline on osteoporosis in men "
+                      'recommends [testing men aged 70 and older, and men aged 50 to 69 with risk '
+                      'factors](https://pubmed.ncbi.nlm.nih.gov/22675062/) such as low body weight, a prior fracture '
+                      'as an adult or smoking. The Bone Health and Osteoporosis Foundation suggests talking with your '
+                      'provider about a test if you are a [woman 65 or older, a man 70 or older, or have broken a bone '
+                      'since age '
+                      '50](https://www.bonehealthandosteoporosis.org/patients/diagnosis-information/bone-density-examtesting/).'},
+             {'type': 'h2', 'text': 'What Medicare covers'},
+             {'type': 'p',
+              'text': 'Medicare Part B covers a [bone mass measurement once every 24 months, or more often if '
+                      'medically necessary](https://www.medicare.gov/coverage/bone-mass-measurements), for people who '
+                      'meet certain conditions, such as women at risk for osteoporosis. You pay nothing if your '
+                      'provider accepts assignment. The Medicare page lists the qualifying conditions.'},
+             {'type': 'h2', 'text': 'Protecting your bones'},
+             {'type': 'ul',
+              'items': ['**Weight-bearing and strength exercise.** Walking, stair climbing and resistance training '
+                        'load the bones. See [strength training after 50](/journal/strength-training-after-50).',
+                        '**Enough calcium and vitamin D**, preferably from food, with supplements only if your doctor '
+                        'suggests them. See our article on [vitamin '
+                        'supplements](/journal/multivitamin-supplements-who-needs-them).',
+                        '**No smoking, and modest or no alcohol.**',
+                        '**Fall prevention**, since most fractures start with a fall. See [balance and fall '
+                        'prevention](/journal/balance-and-fall-prevention).',
+                        '**A medicine review**, because some medicines thin bone and others raise fall risk.']},
+             {'type': 'p',
+              'text': 'If a scan shows osteoporosis, effective treatments exist, and the choice among them depends on '
+                      'your fracture risk, kidney function and other medicines.'},
+             {'type': 'p',
+              'text': "Kidney function is part of choosing among bone medicines, an area where Dr. Shtern's background "
+                      'in nephrology is useful. At Legacy Medical, she can review your risk, order a scan when it is '
+                      'due and go through the result with you. To meet her, book a complimentary [meet and '
+                      'greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'blood-pressure-and-brain-health',
+  'title': 'Midlife blood pressure and brain health',
+  'seo_title': 'Blood Pressure and Brain Health in Midlife | Legacy Medical',
+  'date': '2026-10-13T06:50:00',
+  'modified': '2026-10-13T06:50:00',
+  'category': 'Heart and blood pressure',
+  'excerpt': 'High blood pressure in midlife is linked to memory problems later. What the SPRINT MIND trial found, and '
+             'why steady control protects the brain.',
+  'blocks': [{'type': 'p',
+              'text': 'Most people know that high blood pressure raises the risk of heart attack and stroke. Fewer '
+                      'know that it also affects the brain in quieter ways, and that the blood pressure you have in '
+                      'your 40s, 50s and 60s may shape your memory and thinking decades later.'},
+             {'type': 'h2', 'text': 'How common the problem is'},
+             {'type': 'p',
+              'text': 'The CDC reports that [nearly half of US adults have high blood '
+                      'pressure](https://www.cdc.gov/high-blood-pressure/data-research/facts-stats/index.html), and '
+                      'many of them do not have it under control. Because it rarely causes symptoms, many people do '
+                      'not know their numbers are high.'},
+             {'type': 'h2', 'text': 'What blood pressure has to do with the brain'},
+             {'type': 'p',
+              'text': 'The brain depends on a steady blood supply through a dense network of vessels, and high blood '
+                      'pressure strains blood vessels throughout the body. That is one reason researchers have looked '
+                      'closely at blood pressure as a target for protecting memory and thinking.'},
+             {'type': 'p',
+              'text': 'The 2024 report of the Lancet Commission on dementia prevention listed [14 modifiable risk '
+                      'factors for dementia](https://pubmed.ncbi.nlm.nih.gov/39096926/), including high blood '
+                      'pressure, and estimated that addressing all of them could in theory prevent or delay nearly '
+                      'half of dementia cases. Hearing loss, high LDL cholesterol, physical inactivity, diabetes, '
+                      'smoking and excess alcohol are also on the list.'},
+             {'type': 'p',
+              'text': 'The National Institute on Aging includes [managing high blood '
+                      'pressure](https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults) among '
+                      'its practical steps for cognitive health, alongside controlling diabetes and cholesterol and '
+                      'treating hearing and vision loss.'},
+             {'type': 'h2', 'text': 'What the SPRINT MIND trial found'},
+             {'type': 'p',
+              'text': 'The strongest trial evidence comes from SPRINT MIND, part of a large NIH-funded study published '
+                      'in JAMA in 2019. More than 9,000 adults with high blood pressure, average age 68, were assigned '
+                      'to a systolic target below 120 or below 140.'},
+             {'type': 'ul',
+              'items': ['Intensive control [significantly reduced the risk of mild cognitive '
+                        'impairment](https://pubmed.ncbi.nlm.nih.gov/30688979/), the stage of memory and thinking '
+                        'problems that often comes before dementia.',
+                        'It also reduced the combined risk of mild cognitive impairment or dementia.',
+                        'The reduction in probable dementia alone was not statistically significant. The authors noted '
+                        'the study stopped early and may have been too small to detect a difference.']},
+             {'type': 'p',
+              'text': 'The practical lesson is that blood pressure control is one of the few proven ways to lower the '
+                      'risk of cognitive decline, and that the benefit appears within a few years. The right target '
+                      'for you depends on your age, other conditions, kidney function and how you tolerate treatment, '
+                      'which is a decision to make with your doctor.'},
+             {'type': 'p',
+              'text': 'Brain changes from blood pressure build slowly. Treating high blood pressure in midlife is '
+                      'about the brain you will have at 75 and 85 as much as the heart you have now. It is also why a '
+                      'reading that is "only a little high" deserves attention rather than a wait-and-see approach.'},
+             {'type': 'h2', 'text': 'What helps besides medicine'},
+             {'type': 'p',
+              'text': 'Medicine is often needed, but habits matter too. NHLBI recommends a heart-healthy eating plan '
+                      'such as DASH, and notes that research it funded found [DASH combined with a low-salt plan can '
+                      'be as effective as medicines](https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment) '
+                      'in lowering high blood pressure. NHLBI also advises avoiding or limiting alcohol. The federal '
+                      'Dietary Guidelines advise most people to keep sodium [below 2,300 mg a '
+                      'day](https://cdn.realfood.gov/DGA.pdf).'},
+             {'type': 'p',
+              'text': 'Regular activity, a healthy weight, good sleep and not smoking all help as well, and they '
+                      'protect the brain in their own right.'},
+             {'type': 'h2', 'text': 'Getting accurate numbers'},
+             {'type': 'p',
+              'text': 'Office readings can run high from nerves, or low because you rested in the waiting room. Home '
+                      'readings, taken correctly, give a truer picture of your everyday blood pressure. Our guide on '
+                      '[how to check your blood pressure at home](/journal/home-blood-pressure-monitoring) explains '
+                      'the technique and how to keep a log.'},
+             {'type': 'ul',
+              'items': ['Measure at the same times each day, seated, after a few minutes of rest.',
+                        'Use a validated upper-arm cuff that fits.',
+                        'Bring the log, or a photo of it, to your appointments. A week of readings says more than any '
+                        'single number.',
+                        'Tell your doctor about dizziness on standing, which can be a sign that treatment needs '
+                        'adjusting.']},
+             {'type': 'h2', 'text': 'Pressure, kidneys and the brain'},
+             {'type': 'p',
+              'text': 'Blood pressure, kidney function and brain health are linked through the same small blood '
+                      'vessels. Kidney disease raises blood pressure, high blood pressure damages the kidneys, and '
+                      'both affect which medicines are safest. This overlap is the reason Dr. Shtern, who is '
+                      'board-certified in internal medicine and nephrology, follows them together. Read more about '
+                      '[hypertension care](/hypertension) and about [memory changes and when to see a '
+                      'doctor](/journal/memory-changes-when-to-see-a-doctor).'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, many blood pressure follow-ups work well by video with your home log in '
+                      'hand, and members are seen the same or next business day when something comes up. To meet Dr. '
+                      'Shtern and talk about your numbers, book a complimentary [meet and greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'skin-cancer-checks-florida',
+  'title': 'Skin cancer checks for Florida residents',
+  'seo_title': 'Skin Cancer Checks for Florida Residents | Legacy Medical',
+  'date': '2026-10-13T06:40:00',
+  'modified': '2026-10-13T06:40:00',
+  'category': 'Prevention and screening',
+  'excerpt': 'Skin cancer is the most common cancer in the US, and Florida sun adds up. How to check your own skin, '
+             'what to watch for, and when to see a dermatologist.',
+  'blocks': [{'type': 'p',
+              'text': 'Living in Palm Beach County means sun most days of the year: on the golf course, on the boat, '
+                      'at the beach and walking to the car. That exposure adds up over decades, and many people who '
+                      'moved here later in life also carry years of sunburns from childhood summers. Skin checks are a '
+                      'sensible habit for almost everyone here.'},
+             {'type': 'h2', 'text': 'The basics'},
+             {'type': 'p',
+              'text': 'According to the CDC, [skin cancer is the most common cancer in the United '
+                      'States](https://www.cdc.gov/skin-cancer/sun-safety/index.html). The three most common types are '
+                      '[basal cell carcinoma, squamous cell carcinoma and '
+                      'melanoma](https://www.cdc.gov/skin-cancer/about/index.html). Basal and squamous cell cancers '
+                      'are the most common and can usually be cured, though treatment can leave scars. Melanoma is '
+                      'less common but causes more deaths, because it is more likely to spread if not caught early.'},
+             {'type': 'h2', 'text': 'Who is at higher risk'},
+             {'type': 'p',
+              'text': 'The CDC lists factors that [increase the risk of skin '
+                      'cancer](https://www.cdc.gov/skin-cancer/risk-factors/index.html):'},
+             {'type': 'ul',
+              'items': ['Lighter natural skin color, or skin that burns, freckles or reddens easily',
+                        'Blue or green eyes, or blond or red hair',
+                        'Certain types of moles, or a large number of them',
+                        'A history of sunburns or tanning',
+                        'A family or personal history of skin cancer',
+                        'Older age']},
+             {'type': 'p',
+              'text': 'Anyone can get skin cancer, including people with darker skin, where it is sometimes found '
+                      'later.'},
+             {'type': 'h2', 'text': 'Sun protection in South Florida'},
+             {'type': 'p',
+              'text': 'The CDC notes that UV rays [can reach you on cloudy and cool days, and reflect off water, sand '
+                      'and cement](https://www.cdc.gov/skin-cancer/sun-safety/index.html). In the continental United '
+                      'States, UV rays are strongest from 10 a.m. to 4 p.m. during daylight saving time. The CDC '
+                      'advises protecting your skin when the UV Index is 3 or higher, which in South Florida is much '
+                      'of the year. The EPA publishes a daily [UV Index '
+                      'forecast](https://www.epa.gov/sunsafety/uv-index-1) by location.'},
+             {'type': 'ul',
+              'items': ['**Shade and timing.** Plan long outdoor activities for early morning or late afternoon when '
+                        'you can.',
+                        '**Clothing.** A wide-brimmed hat, sunglasses and sun-protective shirts do a lot of the work.',
+                        '**Sunscreen.** The CDC recommends a [broad-spectrum sunscreen with SPF 15 or '
+                        'higher](https://www.cdc.gov/skin-cancer/sun-safety/index.html), applied generously to all '
+                        'exposed skin and combined with other protection.',
+                        '**On the water.** Reflection from the water adds exposure, so reapply after swimming or '
+                        'sweating.']},
+             {'type': 'h2', 'text': 'Checking your own skin'},
+             {'type': 'p',
+              'text': 'The American Academy of Dermatology recommends a regular [skin '
+                      'self-exam](https://www.aad.org/public/diseases/skin-cancer/check-skin): look at your body front '
+                      'and back in a full-length mirror, then each side with your arms raised; check forearms, '
+                      'underarms, palms, legs, between the toes and the soles of the feet; and use a hand mirror for '
+                      'the back of your neck, scalp, back and buttocks. A partner can help with places that are hard '
+                      'to see.'},
+             {'type': 'p',
+              'text': 'The National Cancer Institute describes the [ABCDE '
+                      'rule](https://www.cancer.gov/types/skin/moles-fact-sheet) for features of early melanoma:'},
+             {'type': 'ul',
+              'items': ['**A**symmetry: one half does not match the other.',
+                        '**B**order: edges that are ragged, notched or blurred.',
+                        '**C**olor: uneven shades of brown, black or tan, sometimes with other colors.',
+                        '**D**iameter: a change in size, usually an increase.',
+                        '**E**volving: a mole that changes over weeks or months.']},
+             {'type': 'p',
+              'text': 'NCI also notes that the first sign of melanoma is often [a change in an existing '
+                      'mole](https://www.cancer.gov/types/skin/moles-fact-sheet), or a new, unusual spot. The AAD '
+                      'advises seeing a dermatologist about a spot that [looks different from the others, or that '
+                      'changes, itches or bleeds](https://www.aad.org/public/diseases/skin-cancer/check-skin). The '
+                      "AAD's guide to the [ABCDEs of "
+                      'melanoma](https://www.aad.org/public/diseases/skin-cancer/abcdes-melanoma) has photos that '
+                      'help.'},
+             {'type': 'p',
+              'text': 'If you have already had a skin cancer, the CDC lists a [personal history of skin '
+                      'cancer](https://www.cdc.gov/skin-cancer/risk-factors/index.html) as a risk factor for another, '
+                      'so regular checks with a dermatologist matter even more.'},
+             {'type': 'h2', 'text': 'What the screening guidance says'},
+             {'type': 'p',
+              'text': 'The US Preventive Services Task Force concluded that the evidence is [insufficient to judge the '
+                      'benefits and harms of routine skin exams by a '
+                      'clinician](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/skin-cancer-screening) '
+                      'in adults without symptoms. That conclusion is about screening everyone. It does not apply to a '
+                      'spot that is new or changing, or to people at higher risk, who often benefit from regular '
+                      'checks with a dermatologist. The USPSTF does recommend that clinicians [selectively counsel '
+                      'adults with fair '
+                      'skin](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/skin-cancer-counseling) '
+                      'about reducing sun exposure.'},
+             {'type': 'h2', 'text': 'Where your internist fits'},
+             {'type': 'p',
+              'text': 'Your internist is not a substitute for a dermatologist, but is often the first to see a spot '
+                      'during a physical, and can help decide how quickly it needs attention. If you burn more easily '
+                      'than you used to, ask whether one of your medicines could be the reason.'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, Dr. Shtern coordinates specialist care, which includes choosing a '
+                      'dermatologist, making the referral and keeping track of what they find, so your records stay in '
+                      'one place. If you split the year between Florida and somewhere else, our [guide for seasonal '
+                      'residents](/journal/snowbird-primary-care-palm-beach) covers how to keep care continuous. To '
+                      'meet her, book a complimentary [meet and greet](/meet-and-greet), or read more about '
+                      '[preventive care](/preventive-care) at the practice.'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'alcohol-after-50',
+  'title': 'Alcohol after 50: what the newer guidance says',
+  'seo_title': 'Alcohol After 50: What the Newer Guidance Says | Legacy Medical',
+  'date': '2026-10-13T06:30:00',
+  'modified': '2026-10-13T06:30:00',
+  'category': 'Everyday health',
+  'excerpt': 'The 2025 to 2030 Dietary Guidelines dropped daily drink limits and simply advise drinking less. Why '
+             'alcohol affects you differently after 50, and what to ask.',
+  'blocks': [{'type': 'p',
+              'text': 'For years the advice on alcohol sounded simple: up to two drinks a day for men and one for '
+                      'women. That advice has changed, and so has the research behind it. At the same time, the body '
+                      'handles alcohol differently with age, and many common medicines do not mix well with it.'},
+             {'type': 'p',
+              'text': 'This article covers what the current federal guidance says, why alcohol affects older adults '
+                      'differently, and practical questions to ask yourself and your doctor.'},
+             {'type': 'h2', 'text': 'What the guidelines say now'},
+             {'type': 'p',
+              'text': 'The [Dietary Guidelines for Americans, 2025 to 2030](https://cdn.realfood.gov/DGA.pdf), '
+                      'released in January 2026, advise people to "consume less alcohol for better overall health." '
+                      'They no longer give a daily number. The guidelines say that some people should avoid alcohol '
+                      'completely, including people recovering from alcohol use disorder or unable to control how much '
+                      'they drink, and people taking medicines or living with medical conditions that can interact '
+                      'with alcohol.'},
+             {'type': 'p',
+              'text': "The CDC's page on moderate drinking still describes moderate use as [two drinks or less a day "
+                      'for men and one or less for '
+                      'women](https://www.cdc.gov/alcohol/about-alcohol-use/moderate-alcohol-use.html), and adds an '
+                      'important point: even moderate drinking may increase the risk of death and other '
+                      'alcohol-related harms compared with not drinking. The CDC notes that studies once suggesting '
+                      'moderate drinking was good for health are now highly debated.'},
+             {'type': 'h2', 'text': 'Alcohol and cancer'},
+             {'type': 'p',
+              'text': 'The National Cancer Institute notes that alcohol is classified as a [known cause of cancers of '
+                      'the mouth, throat, voice box, esophagus and '
+                      'liver](https://www.cancer.gov/about-cancer/causes-prevention/risk/alcohol/alcohol-fact-sheet), '
+                      'and that drinking is linked to higher risks of other cancers as well, including breast cancer. '
+                      'NCI reports that alcohol accounted for [about 5 percent of cancer cases diagnosed in the United '
+                      'States in '
+                      '2019](https://www.cancer.gov/about-cancer/causes-prevention/risk/alcohol/alcohol-fact-sheet), '
+                      'and that even light drinkers can be at increased risk of some cancers. For example, women who '
+                      'have one drink a day have a higher breast cancer risk than women who drink less than one drink '
+                      'a week.'},
+             {'type': 'h2', 'text': 'Why alcohol affects you differently after 50'},
+             {'type': 'p',
+              'text': 'The National Institute on Aging explains that [how the body handles alcohol changes with '
+                      'age](https://www.nia.nih.gov/health/alcohol-misuse-or-alcohol-use-disorder/facts-about-aging-and-alcohol). '
+                      'Some older people feel the effects more strongly without drinking any more than they used to. '
+                      'Health problems or prescribed medicines may require drinking less, or not at all.'},
+             {'type': 'p',
+              'text': 'NIA also points out that the effects of drinking in older adults are sometimes mistaken for '
+                      'other conditions of aging, such as a problem with balance. A glass of wine that once had no '
+                      'effect can now be enough to make a nighttime trip to the bathroom less steady.'},
+             {'type': 'h2', 'text': 'Alcohol and medicines'},
+             {'type': 'p',
+              'text': 'The National Institute on Alcohol Abuse and Alcoholism warns that [combining alcohol with some '
+                      'medicines can lead to falls and serious injuries, especially among older '
+                      'people](https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/harmful-interactions-mixing-alcohol-with-medicines). '
+                      'Some combinations to discuss with your doctor or pharmacist:'},
+             {'type': 'ul',
+              'items': ["**Sleep aids, anxiety medicines and some pain medicines**, which add to alcohol's sedating "
+                        'effect.',
+                        '**Blood pressure medicines**, which can combine with alcohol to cause lightheadedness on '
+                        'standing.',
+                        '**Blood thinners** such as warfarin, where NIAAA notes drinking can raise the risk of '
+                        'bleeding.',
+                        '**Acetaminophen and anti-inflammatory pain relievers**, which carry liver and stomach risks '
+                        'of their own. See our article on [over-the-counter pain medication '
+                        'safety](/journal/over-the-counter-pain-medication-safety).']},
+             {'type': 'p',
+              'text': 'NIAAA also notes that many cough, cold and allergy remedies contain more than one ingredient, '
+                      'and some liquid medicines contain alcohol themselves. Reading labels and asking your pharmacist '
+                      'are both worth the time.'},
+             {'type': 'h2', 'text': 'Alcohol, sleep and blood pressure'},
+             {'type': 'p',
+              'text': 'Alcohol can make you drowsy at bedtime, but NIA advises [avoiding alcohol, even small amounts, '
+                      'for better sleep](https://www.nia.nih.gov/health/sleep/sleep-and-older-adults) in older adults. '
+                      'See [how sleep changes with age](/journal/sleep-and-healthy-aging).'},
+             {'type': 'h2', 'text': 'Questions worth asking yourself'},
+             {'type': 'p',
+              'text': 'Drink sizes have grown. The CDC cautions that [a single beverage can contain more than one '
+                      'standard drink](https://www.cdc.gov/alcohol/about-alcohol-use/index.html). A generous pour of '
+                      'wine at dinner or a large cocktail may count as two or more, which is worth keeping in mind '
+                      'when you tally a typical week. Patterns matter as well as totals: drinking most evenings, '
+                      'drinking alone, or needing a drink to unwind are all worth mentioning to your doctor.'},
+             {'type': 'ol',
+              'items': ['How many drinks do I actually have in a typical week, counting standard drink sizes?',
+                        'Do any of my medicines interact with alcohol?',
+                        'Has a drink started to affect my balance, sleep or mood more than it used to?',
+                        'Would I feel better on fewer drinking days?']},
+             {'type': 'p',
+              'text': 'The US Preventive Services Task Force recommends that primary care clinicians [screen adults '
+                      'for unhealthy alcohol '
+                      'use](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/unhealthy-alcohol-use-in-adolescents-and-adults-screening-and-behavioral-counseling-interventions) '
+                      'and offer brief counseling to those drinking at risky levels. That conversation is routine, '
+                      'confidential and judgment-free.'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, Dr. Shtern reviews every medicine you take, including over-the-counter '
+                      'remedies, and can help you decide what makes sense for your health. Read more about [medication '
+                      'reviews](/journal/medication-review-older-adults), or book a complimentary [meet and '
+                      'greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'balance-and-fall-prevention',
+  'title': 'Balance and fall prevention: staying steady after 60',
+  'seo_title': 'Balance and Fall Prevention After 60 | Legacy Medical',
+  'date': '2026-10-13T06:20:00',
+  'modified': '2026-10-13T06:20:00',
+  'category': 'Aging and family',
+  'excerpt': 'More than one in four older adults falls each year, and most falls are preventable. The risk factors, '
+             'the exercises that work, and what your doctor can check.',
+  'blocks': [{'type': 'p',
+              'text': "A fall can change an older adult's life in a moment: a broken hip, a head injury, or simply a "
+                      'new fear of going out. The encouraging part is that falls are not an inevitable part of aging. '
+                      'Many of the causes can be found and fixed, and the exercises that prevent falls are well '
+                      'studied.'},
+             {'type': 'h2', 'text': 'How common falls are'},
+             {'type': 'p',
+              'text': 'The CDC reports that [more than one out of four people 65 and older falls each '
+                      'year](https://www.cdc.gov/falls/data-research/facts-stats/index.html), but fewer than half tell '
+                      'their doctor. Falling once doubles the chance of falling again. Each year older adults have '
+                      'about 4.5 million emergency department visits for falls, and falls are the most common cause of '
+                      'traumatic brain injury in this age group.'},
+             {'type': 'p',
+              'text': 'The CDC also notes that many people who fall, even without injury, become afraid of falling and '
+                      'cut back on activity. Less activity leads to weakness, which raises the risk of the next fall.'},
+             {'type': 'h2', 'text': 'What raises the risk'},
+             {'type': 'p',
+              'text': 'The CDC lists [risk factors that can often be '
+                      'changed](https://www.cdc.gov/falls/data-research/facts-stats/index.html):'},
+             {'type': 'ul',
+              'items': ['Lower body weakness',
+                        'Vitamin D deficiency',
+                        'Difficulty with walking and balance',
+                        'Medicines such as tranquilizers, sedatives and antidepressants, and even some '
+                        'over-the-counter medicines',
+                        'Vision problems',
+                        'Foot pain or poor footwear',
+                        'Home hazards such as broken or uneven steps, throw rugs and clutter']},
+             {'type': 'p',
+              'text': 'Most falls come from a combination of these, and the more risk factors a person has, the higher '
+                      'the chance of falling. That is also good news: addressing even two or three of them can make a '
+                      'real difference.'},
+             {'type': 'h2', 'text': 'Exercise that prevents falls'},
+             {'type': 'p',
+              'text': 'The US Preventive Services Task Force recommends [exercise interventions to prevent '
+                      'falls](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions) '
+                      "in adults 65 and older who live in the community and are at increased risk. The CDC's activity "
+                      'guidelines for older adults include [activities that improve '
+                      'balance](https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html) every week, '
+                      'alongside aerobic and strength work.'},
+             {'type': 'ul',
+              'items': ['**Strength.** Leg and hip strength is the foundation. Rising from a chair without using your '
+                        'hands is a simple exercise and a useful test. See [strength training after '
+                        '50](/journal/strength-training-after-50).',
+                        '**Balance practice.** Standing on one foot near a counter, heel-to-toe walking and similar '
+                        'exercises, done safely and progressed slowly.',
+                        '**Tai chi.** NCCIH notes that tai chi [may improve balance and help prevent falls in older '
+                        'adults](https://www.nccih.nih.gov/health/tai-chi-what-you-need-to-know).',
+                        '**Physical therapy**, when there is a specific problem such as a recent injury, joint '
+                        'replacement or dizziness.']},
+             {'type': 'h2', 'text': 'What your doctor can check'},
+             {'type': 'p',
+              'text': 'The task force also says clinicians can [individualize the decision to offer multifactorial '
+                      'interventions](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions), '
+                      "meaning an assessment of the several things that raise one person's risk. The CDC's [STEADI "
+                      'program](https://www.cdc.gov/steadi/index.html) gives clinicians a framework for that. In '
+                      'practice, a visit focused on falls may include:'},
+             {'type': 'ul',
+              'items': ['**A medicine review**, looking for drugs that cause drowsiness, dizziness or a drop in blood '
+                        'pressure on standing. See [why a full medication review '
+                        'matters](/journal/medication-review-older-adults).',
+                        '**Blood pressure lying and standing**, to catch drops that cause lightheadedness.',
+                        '**Vision and hearing**, and whether glasses or hearing aids are up to date.',
+                        '**Feet and footwear.**',
+                        '**A quick look at gait, strength and balance.**',
+                        '**Bone health**, because the same fall is far more dangerous with thin bones. See [bone '
+                        'density screening](/journal/bone-density-screening).']},
+             {'type': 'p',
+              'text': "Vitamin D deficiency is on the CDC's list of fall risk factors, and a simple blood test can "
+                      'check your level. The CDC also offers a one-page [chair rise exercise and other STEADI '
+                      'materials](https://www.cdc.gov/steadi/index.html) for older adults who want to start at home. '
+                      'If you have fallen in the past year, or feel unsteady, say so at your next visit, even if you '
+                      'were not hurt.'},
+             {'type': 'h2', 'text': 'Making the home safer'},
+             {'type': 'p',
+              'text': 'The National Institute on Aging lists exercising, managing medicines, having your vision '
+                      'checked and [making your home '
+                      'safer](https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention) '
+                      'as steps that prevent falls. Good lighting, grab bars in the bathroom, railings on both sides '
+                      'of stairs, removing throw rugs and keeping a light by the bed all help. NIA also encourages '
+                      'people not to let a fear of falling keep them from staying active, since activity itself helps '
+                      'prevent falls.'},
+             {'type': 'h2', 'text': 'If someone you love has fallen'},
+             {'type': 'p',
+              'text': 'The CDC advises that an older person who falls and hits their head should [see a doctor right '
+                      'away](https://www.cdc.gov/falls/data-research/facts-stats/index.html), especially if they take '
+                      'a blood thinner. For families, a fall is also a good moment to look at medicines, home setup '
+                      'and whether a parent needs more support. Our page for [families arranging care](/for-families) '
+                      "explains how Legacy Medical works with adult children, with the patient's written permission."},
+             {'type': 'p',
+              'text': 'Members at Legacy Medical are seen the same or next business day, so a fall or a near miss can '
+                      'be looked at promptly rather than weeks later. To meet Dr. Shtern, book a complimentary [meet '
+                      'and greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'hearing-loss-and-memory',
+  'title': 'Hearing loss, hearing aids and memory',
+  'seo_title': 'Hearing Loss, Hearing Aids and Memory | Legacy Medical',
+  'date': '2026-10-13T06:10:00',
+  'modified': '2026-10-13T06:10:00',
+  'category': 'Aging and family',
+  'excerpt': 'Hearing loss is common after 60 and linked to faster cognitive decline. What the ACHIEVE trial found, '
+             'over-the-counter hearing aids, and what Medicare covers.',
+  'blocks': [{'type': 'p',
+              'text': 'Hearing loss tends to arrive slowly. Conversations in restaurants get harder, the television '
+                      'gets louder, and family members start repeating themselves. Because it creeps up, many people '
+                      'wait years before doing anything about it. There are good reasons not to wait, and one of them '
+                      'is the brain.'},
+             {'type': 'p',
+              'text': 'According to the National Institute on Deafness and Other Communication Disorders, [about 22 '
+                      'percent of people aged 65 to 74, and 55 percent of those 75 and older, have disabling hearing '
+                      'loss](https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing).'},
+             {'type': 'p',
+              'text': "The National Institute on Aging lists [signs that are worth a doctor's "
+                      'visit](https://www.nia.nih.gov/health/hearing-and-hearing-loss/hearing-loss-common-problem-older-adults), '
+                      'including trouble understanding speech on the telephone, difficulty following conversations '
+                      'when two or more people are talking, often asking people to repeat themselves, turning up the '
+                      'TV so loud that others complain, and struggling to understand speech over background noise.'},
+             {'type': 'h2', 'text': 'The link with memory and thinking'},
+             {'type': 'p',
+              'text': 'NIA notes that [older adults with hearing loss have a greater risk of developing '
+                      'dementia](https://www.nia.nih.gov/health/hearing-and-hearing-loss/hearing-loss-common-problem-older-adults) '
+                      'than those with normal hearing, and that memory and concentration decline faster in older '
+                      'adults with hearing loss. One explanation is that the brain works harder to make sense of '
+                      'muffled sound, leaving less capacity for memory. Another is that hearing loss leads to social '
+                      'isolation, itself a risk factor.'},
+             {'type': 'p',
+              'text': 'The 2024 Lancet Commission on dementia prevention included hearing loss among [14 modifiable '
+                      'risk factors for dementia](https://pubmed.ncbi.nlm.nih.gov/39096926/), alongside high blood '
+                      'pressure, high LDL cholesterol, physical inactivity and others. Our article on [midlife blood '
+                      'pressure and brain health](/journal/blood-pressure-and-brain-health) covers another item on '
+                      'that list.'},
+             {'type': 'h2', 'text': 'What the ACHIEVE trial found'},
+             {'type': 'p',
+              'text': 'The ACHIEVE trial, published in The Lancet in 2023, was the first large randomized trial to '
+                      'test whether treating hearing loss slows cognitive decline. Nearly 1,000 adults aged 70 to 84 '
+                      'with untreated hearing loss received either hearing aids with support from an audiologist or a '
+                      'health education program.'},
+             {'type': 'ul',
+              'items': ['Across everyone in the study, [three-year cognitive decline was not significantly '
+                        'different](https://pubmed.ncbi.nlm.nih.gov/37478886/) between the two groups.',
+                        'In a prespecified analysis, the effect differed between the two groups of volunteers the '
+                        'study drew from. Among participants who were older and had more risk factors for cognitive '
+                        'decline, the hearing intervention appeared to slow decline.',
+                        'No significant adverse events were linked to either approach.']},
+             {'type': 'p',
+              'text': 'The honest summary is that treating hearing loss may help protect thinking in people at higher '
+                      'risk, and it clearly helps with communication and quality of life. NIA also notes that an '
+                      'analysis of several studies found [people who used hearing aids or cochlear implants had a '
+                      'lower risk of long-term cognitive '
+                      'decline](https://www.nia.nih.gov/health/hearing-and-hearing-loss/hearing-loss-common-problem-older-adults).'},
+             {'type': 'h2', 'text': 'Small changes that help right away'},
+             {'type': 'ul',
+              'items': ['Ask people to face you and speak clearly rather than more loudly.',
+                        'Choose a quiet table in restaurants, away from the kitchen and the speakers.',
+                        'Turn on captions for television and video calls.',
+                        'Tell friends and family that you are having trouble hearing. Most people are glad to '
+                        'adjust.']},
+             {'type': 'h2', 'text': 'Over-the-counter hearing aids'},
+             {'type': 'p',
+              'text': 'Since October 2022, the FDA has allowed [over-the-counter hearing aids for adults 18 and older '
+                      'with perceived mild to moderate hearing '
+                      'loss](https://www.fda.gov/medical-devices/hearing-aids/otc-hearing-aids-what-you-should-know). '
+                      'They can be bought without a prescription or a fitting by an audiologist, which has made '
+                      'hearing aids more accessible and more affordable for many people.'},
+             {'type': 'p',
+              'text': 'OTC devices are not for everyone. The FDA lists [warning signs that call for a professional '
+                      'first](https://www.fda.gov/medical-devices/hearing-aids/otc-hearing-aids-what-you-should-know), '
+                      'including ear pain or discomfort, a lot of ear wax, dizziness or vertigo, hearing that changed '
+                      'suddenly in the past six months, hearing that is worse in one ear, and ringing or buzzing in '
+                      'only one ear.'},
+             {'type': 'h2', 'text': 'What Medicare covers'},
+             {'type': 'p',
+              'text': 'Original Medicare [does not cover hearing aids or exams for fitting '
+                      'them](https://www.medicare.gov/coverage/hearing-aids). Some Medicare Advantage plans offer '
+                      'hearing benefits, so check your plan. Part B does cover [diagnostic hearing and balance '
+                      'exams](https://www.medicare.gov/coverage/hearing-balance-exams) when your doctor orders them to '
+                      'find out whether you need medical treatment.'},
+             {'type': 'h2', 'text': 'Screening and next steps'},
+             {'type': 'p',
+              'text': 'The US Preventive Services Task Force found the evidence [insufficient to recommend routine '
+                      'hearing '
+                      'screening](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hearing-loss-in-older-adults-screening) '
+                      'for adults 50 and older who have not noticed a problem. If you or your family have noticed one, '
+                      'that recommendation does not apply: it is time for a hearing test.'},
+             {'type': 'p',
+              'text': 'Your internist can look in the ears for wax or infection, review medicines that can affect '
+                      'hearing or cause ringing, and refer you to an audiologist or ear, nose and throat specialist. '
+                      'Hearing also matters for safety, since it is part of how we keep our balance and notice what is '
+                      'around us. See [balance and fall prevention](/journal/balance-and-fall-prevention).'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, Dr. Shtern coordinates referrals and keeps track of what specialists find, '
+                      "and family members are welcome at visits with the patient's permission. If memory is part of "
+                      'the concern, read [memory changes: what is '
+                      'normal](/journal/memory-changes-when-to-see-a-doctor), or book a complimentary [meet and '
+                      'greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'longevity-plan-with-your-internist',
+  'title': 'A longevity plan for the year ahead, built with your internist',
+  'seo_title': 'A Yearly Longevity Plan With Your Internist | Legacy Medical',
+  'date': '2026-10-13T06:00:00',
+  'modified': '2026-10-13T06:00:00',
+  'category': 'Healthy aging',
+  'excerpt': 'Longevity medicine is mostly the basics done well and followed over time. A year-round plan built around '
+             'your annual physical, without the hype.',
+  'blocks': [{'type': 'p',
+              'text': 'Longevity has become a marketing word, attached to supplements, scans and programs with large '
+                      'price tags. The evidence points somewhere less glamorous and more useful. Most of what helps '
+                      'people live longer and stay independent is well known: fitness, strength, sleep, steady blood '
+                      'pressure, sensible screening and a doctor who follows the numbers over time.'},
+             {'type': 'p',
+              'text': 'This article lays out a practical plan for the year, built around an annual physical and the '
+                      'conversations that follow it.'},
+             {'type': 'h2', 'text': 'Start with a thorough yearly visit'},
+             {'type': 'p',
+              'text': 'A good annual visit is more than a checklist. It is the time to look at trends: weight and '
+                      'waist, blood pressure at home and in the office, cholesterol, blood sugar and kidney function, '
+                      'compared with last year and the year before. Our article on [your annual '
+                      'physical](/journal/annual-physical-what-you-need) covers the screenings the evidence supports '
+                      'by age.'},
+             {'type': 'p',
+              'text': 'If you have Medicare, it helps to know the difference between visits. Medicare Part B covers a '
+                      '[yearly wellness visit once every 12 '
+                      'months](https://www.medicare.gov/coverage/yearly-wellness-visits), which Medicare describes as '
+                      'a conversation-based visit to create a personalized prevention plan. Medicare is clear that it '
+                      'is not a routine physical exam.'},
+             {'type': 'p',
+              'text': 'At Legacy Medical, the annual [Legacy physical](/preventive-care) includes lab work and an ECG, '
+                      'with time afterward to go through the results together.'},
+             {'type': 'h2', 'text': 'Fitness and strength: the two strongest levers'},
+             {'type': 'p',
+              'text': 'Cardiorespiratory fitness is one of the best predictors of how long people live, and strength '
+                      'is what keeps them independent. The federal guidelines for older adults call for [at least 150 '
+                      'minutes a week of moderate aerobic activity, at least two days of muscle strengthening, and '
+                      'balance '
+                      'activities](https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html).'},
+             {'type': 'ul',
+              'items': ['Set one fitness goal for the year, such as walking briskly for 30 minutes most days.',
+                        'Add strength training twice a week. See [strength training after '
+                        '50](/journal/strength-training-after-50).',
+                        'Track something simple, such as how long a familiar walk takes. See [VO2 max and '
+                        'fitness](/journal/vo2-max-and-fitness-for-longevity).']},
+             {'type': 'h2', 'text': 'Know your numbers, and the ones worth adding'},
+             {'type': 'p',
+              'text': 'Blood pressure, LDL cholesterol, A1c and kidney function do most of the work in predicting '
+                      'heart attack, stroke, diabetes and kidney disease. Beyond those, a few tests can add useful '
+                      'detail for some people: a one-time lipoprotein(a), an ApoB, or a coronary calcium score when a '
+                      'treatment decision is close. Our article on [ApoB and '
+                      'lipoprotein(a)](/journal/apob-and-lipoprotein-a) explains when they help.'},
+             {'type': 'p',
+              'text': 'More testing is not automatically better. Each test should answer a question that would change '
+                      'what you do. Tests that are not backed by screening guidelines can turn up incidental findings '
+                      'that need further tests of their own. If you are considering one, ask Dr. Shtern whether it '
+                      'makes sense for you.'},
+             {'type': 'h2', 'text': 'Sleep, alcohol, medicines and vaccines'},
+             {'type': 'p',
+              'text': 'The National Institute on Aging notes that older adults still need [seven to nine hours of '
+                      'sleep a night](https://www.nia.nih.gov/health/sleep/sleep-and-older-adults), and that sleep '
+                      'problems become more common with age. Ongoing sleep deficiency is linked by NHLBI to [heart '
+                      'disease, high blood pressure, diabetes and other '
+                      'conditions](https://www.nhlbi.nih.gov/health/sleep-deprivation). Alcohol deserves a fresh look '
+                      'too, since current federal guidance simply advises drinking less.'},
+             {'type': 'p',
+              'text': 'Once a year, go through every medicine and supplement you take with your doctor, including '
+                      'over-the-counter products. Some may no longer be needed, some doses may need adjusting as '
+                      'kidney function changes with age, and some combinations raise the risk of falls or confusion. '
+                      'Vaccines belong in the same review, since recommendations for adults change with age.'},
+             {'type': 'h2', 'text': 'A sample year'},
+             {'type': 'ul',
+              'items': ['**Annual physical:** labs, ECG, screenings due, medicine review, and vaccines checked against '
+                        'the [CDC adult immunization '
+                        'schedule](https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html).',
+                        '**A month later:** a follow-up to settle any open questions from the results and agree on two '
+                        'or three goals.',
+                        '**Every three to six months, as needed:** a check-in on blood pressure, blood sugar or a new '
+                        'medicine, often by video.',
+                        '**Before hurricane season and before travel:** refill timing, an updated medicine list and '
+                        'copies of key records.',
+                        '**Any time something changes:** a same or next business day visit rather than a wait.']},
+             {'type': 'h2', 'text': 'Why continuity is the real advantage'},
+             {'type': 'p',
+              'text': 'The strongest feature of any longevity plan is a doctor who knows your baseline. A creatinine '
+                      'that edges up each year, a home blood pressure average that drifts, a new medicine that does '
+                      'not sit well with an old one: these are easy to miss in a rushed system and easy to catch when '
+                      'one physician follows them.'},
+             {'type': 'p',
+              'text': 'That is how Dr. Shtern practices at Legacy Medical: one patient at a time, labs and ECGs in the '
+                      'office, specialist coordination, and phone access around the clock for members. If you would '
+                      'like to build a plan like this with her, start with a complimentary [meet and '
+                      'greet](/meet-and-greet).'}],
+  'sources': [],
+  'stale_note': None,
+  'reviewed_by': None},
+ {'slug': 'hsa-fsa-concierge-medicine-fees',
   'title': 'Can you pay concierge fees from an HSA or FSA?',
   'seo_title': 'Paying Concierge Fees From an HSA or FSA | Legacy Medical',
   'date': '2026-10-12T13:00:00',

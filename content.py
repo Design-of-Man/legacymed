@@ -770,6 +770,170 @@ ASSIST_EXTRA = [
 # ---------------------------------------------------------------- meet and greet
 # The first visit. Only facts the practice has confirmed: it is complimentary,
 # in person at the office, with Dr. Shtern, and carries no obligation.
+# ---------------------------------------------------------------- for patients
+# Practical pages modelled on the "For patients" section of leading concierge
+# sites. Every statement comes from SERVICES_INCLUDED, FAQ_GROUPS or DOCTOR.
+GUIDES_PATIENTS = {
+    "same-or-next-day-visits": {
+        "title": "Same or Next Business Day Visits | Legacy Medical, Palm Beach Gardens",
+        "desc": "Legacy Medical members are seen the same or next business day when something comes up, with phone access to the practice around the clock.",
+        "crumb": "Same or next day visits", "eyebrow": "For patients",
+        "h1": "Seen today or tomorrow, by the doctor who knows you.",
+        "lede": "When something comes up, members are seen the same or next business day. The visit is with Dr. Shtern, one patient at a time, and long enough to sort it out.",
+        "photo": "reception-desk", "photo_alt": "The front desk at Legacy Medical in Palm Beach Gardens",
+        "sections": [
+            ("How it works", "<p>Call the office and say what is going on. Members are seen that day or the next business day, rather than waiting weeks for an opening. Routine visits are booked at a time that suits you.</p><p>Office hours are Monday to Thursday 9 AM to 5 PM and Friday 9 AM to 2 PM. Outside those hours, members can still reach the practice by phone, 24 hours a day, including weekends and holidays.</p>"),
+            ("Why the schedule has room", "<p>Dr. Shtern keeps a small practice on purpose and sees one patient at a time. Visits are not booked in 15-minute slots, so there is space in the day for the person who calls in the morning with a fever, a new pain, or a blood pressure reading that will not come down.</p><p><a href=\"/concierge-medicine\">How concierge medicine works here</a>.</p>"),
+            ("An answer before you leave", "<p>Many sick visits end with a result, not a referral to somewhere else. Blood is drawn in the office, ECGs are done during the visit, and rapid tests for flu A and B, COVID-19 and strep are run here. <a href=\"/labs-and-tests\">Labs and tests in the office</a>.</p><p>If coming in is not practical, many follow-ups and results reviews can happen by <a href=\"/telehealth\">video visit</a>.</p>"),
+        ],
+        "faqs": [
+            ("How quickly can I be seen?", "<p>Members are seen the same or next business day when something comes up.</p>"),
+            ("What if it is the weekend?", "<p>The office is closed on weekends, but members can reach the practice by phone at any hour. In an emergency, call 911 first.</p>"),
+            ("Can a follow-up be done by video?", "<p>Often, yes. Many follow-ups and results reviews work well as a video visit. <a href=\"/telehealth\">About telehealth</a>.</p>"),
+        ],
+        "related_posts": ["concierge-doctor-telehealth", "how-to-choose-a-concierge-doctor", "what-is-concierge-medicine"],
+        "related": ["telehealth", "labs-and-tests", "concierge-medicine"],
+    },
+    "chronic-care": {
+        "title": "Chronic Care Support: Blood Pressure, Diabetes, Kidney | Legacy Medical",
+        "desc": "Ongoing care for blood pressure, diabetes, cholesterol, kidney and thyroid conditions from Dr. Yana Shtern, a concierge internist and nephrologist in Palm Beach Gardens.",
+        "crumb": "Chronic care support", "eyebrow": "For patients",
+        "h1": "Long-term conditions, followed closely between visits.",
+        "lede": "Blood pressure, diabetes, cholesterol, kidney and thyroid conditions do best with one doctor watching the whole picture. At Legacy Medical, that doctor is Dr. Shtern, every time.",
+        "photo": "p-geri-meds", "photo_alt": "A weekly pill organizer on a linen tablecloth",
+        "sections": [
+            ("One doctor for the whole picture", "<p>Chronic conditions rarely come one at a time. High blood pressure, diabetes, cholesterol and kidney function affect each other, and so do the medicines used to treat them. Dr. Shtern is board-certified in internal medicine and in nephrology, so the kidney side of that picture is part of the same visit rather than a separate referral.</p><p>See <a href=\"/hypertension\">hypertension</a> and <a href=\"/kidney-care\">kidney care</a>.</p>"),
+            ("Medication management", "<p>One doctor keeps an eye on every prescription, dose and interaction. That matters most when several specialists are involved, when a kidney or liver condition changes how a medicine is cleared, or when a new prescription quietly duplicates an old one. <a href=\"/journal/medication-review-older-adults\">Why a full medication review matters</a>.</p>"),
+            ("Between visits", "<p>Labs are drawn in the office and reviewed with you, home blood pressure readings can be sent in and discussed, and many check-ins can happen by video. When something changes, members are seen the same or next business day.</p>"),
+        ],
+        "faqs": [
+            ("Which conditions does Dr. Shtern manage?", "<p>Blood pressure, diabetes, cholesterol, kidney and thyroid conditions, among the other problems an internist looks after. She is also board-certified in nephrology.</p>"),
+            ("Will you work with my specialists?", "<p>Yes. Dr. Shtern chooses specialists when you need one, contacts them, and follows up on what they find. <a href=\"/specialists-and-hospital-care\">Specialists and hospital care</a>.</p>"),
+            ("Can I send home blood pressure readings?", "<p>Yes. Bring or send your log so the numbers can be reviewed together. <a href=\"/journal/home-blood-pressure-monitoring\">How to take an accurate home reading</a>.</p>"),
+        ],
+        "related_posts": ["home-blood-pressure-monitoring", "egfr-kidney-lab-results-explained", "medication-review-older-adults"],
+        "related": ["hypertension", "kidney-care", "preventive-care"],
+    },
+    "specialists-and-hospital-care": {
+        "title": "Specialists and Hospital Care | Legacy Medical, Palm Beach Gardens",
+        "desc": "Dr. Yana Shtern chooses and contacts specialists, follows up on what they find, and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.",
+        "crumb": "Specialists and hospital care", "eyebrow": "For patients",
+        "h1": "Your care stays in one place, even when it moves around.",
+        "lede": "When you need a specialist or a hospital stay, Dr. Shtern stays involved. She chooses the specialist, makes the call, and keeps track of what they find.",
+        "photo": "p-family-hands", "photo_alt": "Two people holding hands in a quiet room",
+        "sections": [
+            ("When you need a specialist", "<p>Dr. Shtern picks the specialist for your situation, contacts them, and follows up on what they find, so the plan comes back to one doctor who knows your whole history. You are not left carrying results between offices.</p>"),
+            ("If you are admitted", "<p>Dr. Shtern holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and stays involved when members are in the hospital. <a href=\"/journal/concierge-doctor-hospital-stay\">What a concierge doctor does during a hospital stay</a>.</p>"),
+            ("Someone on your side", "<p>Part of membership is advocacy: screenings on schedule, vaccines up to date, and a doctor who helps when the system gets complicated. For families arranging care for a parent, see <a href=\"/for-families\">for families</a>.</p>"),
+        ],
+        "faqs": [
+            ("Which hospitals does Dr. Shtern use?", "<p>She has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
+            ("What happens if I need a specialist?", "<p>Dr. Shtern chooses the specialist, contacts them, and follows up on what they find.</p>"),
+            ("I split the year between two states. Can you work with my doctors up north?", "<p>Yes. Many members are seasonal residents. <a href=\"/seasonal-residents\">Care between seasons</a>.</p>"),
+        ],
+        "related_posts": ["concierge-doctor-hospital-stay", "concierge-care-for-aging-parents", "transfer-medical-records-to-florida-doctor"],
+        "related": ["for-families", "seasonal-residents", "concierge-medicine"],
+    },
+    "labs-and-tests": {
+        "title": "Labs and Tests in the Office | Legacy Medical, Palm Beach Gardens",
+        "desc": "Blood draws, ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done in the Legacy Medical office in Palm Beach Gardens.",
+        "crumb": "Labs and tests in the office", "eyebrow": "For patients",
+        "h1": "Blood drawn here, results explained here.",
+        "lede": "Most routine testing happens during your visit, so there is no separate trip to a lab, and Dr. Shtern goes through the results with you.",
+        "photo": "p-kidney-labs", "photo_alt": "Sample tubes in a rack in soft light",
+        "sections": [
+            ("What is done in the office", "<ul><li>Blood draws for routine and follow-up lab work</li><li>ECGs (electrocardiograms) during your visit</li><li>Stool occult blood testing</li><li>Rapid tests for flu A and B, COVID-19 and strep</li></ul><p>Imaging and specialized tests are arranged with trusted local providers when you need them.</p>"),
+            ("Results you go through together", "<p>The annual Legacy physical includes lab work and an ECG, then time to go through the results together. Numbers like eGFR, A1c and cholesterol are easier to act on when the doctor who ordered them explains what changed and why. <a href=\"/journal/egfr-kidney-lab-results-explained\">Reading your kidney labs</a>.</p>"),
+            ("Insurance", "<p>Labs and covered tests are billed to your insurance as they are today. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
+        ],
+        "faqs": [
+            ("Are labs done in the office?", "<p>Yes. Blood is drawn in the office, and ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done here too.</p>"),
+            ("Do I have to fast?", "<p>Some tests need fasting and many do not. The office will tell you when you book.</p>"),
+            ("Are tests billed to insurance?", "<p>Yes, labs and covered tests are billed to your insurance.</p>"),
+        ],
+        "related_posts": ["egfr-kidney-lab-results-explained", "annual-physical-what-you-need", "executive-physical-exam-what-to-expect"],
+        "related": ["preventive-care", "kidney-care", "insurance-and-fees"],
+    },
+}
+
+PATIENTS_PAGE = {
+    "title": "For Patients | Legacy Medical, Palm Beach Gardens",
+    "desc": "Practical information for Legacy Medical members and new patients: visits, after-hours calls, labs, specialists, records, insurance, privacy, and health articles and videos.",
+    "eyebrow": "For patients",
+    "h1": "Everything you need, in one place.",
+    "lede": "How visits, calls, labs and records work at Legacy Medical, with articles and videos for when you want to read further.",
+    "guide": [
+        ("Your first visit", "Every membership starts with a complimentary meet and greet with Dr. Shtern. Bring your questions, a list of your medicines and doctors, and your insurance card.", "meet-and-greet", "About the meet and greet"),
+        ("Booking a visit", "Members are seen the same or next business day when something comes up. Office hours are Monday to Thursday 9 to 5 and Friday 9 to 2.", "same-or-next-day-visits", "Same or next day visits"),
+        ("After hours", "Members can reach the practice by phone 24 hours a day, including weekends and holidays. In an emergency, call 911 first.", "contact", "Contact the office"),
+        ("Labs and tests", "Blood draws, ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done in the office.", "labs-and-tests", "Labs and tests"),
+        ("Ongoing conditions", "Blood pressure, diabetes, cholesterol, kidney and thyroid care, with one doctor managing every prescription.", "chronic-care", "Chronic care support"),
+        ("Specialists and hospitals", "Dr. Shtern chooses and contacts specialists and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.", "specialists-and-hospital-care", "Specialists and hospital care"),
+        ("Records and the portal", "With your permission the office requests your records from your previous doctor. Ask the office for patient portal access when you join.", "journal/transfer-medical-records-to-florida-doctor", "Moving your records"),
+        ("Insurance", "Office visits, labs and covered tests are billed to your insurance, including Medicare. The membership fee is separate.", "insurance-and-fees", "Insurance and fees"),
+        ("Video visits", "Many follow-ups and results reviews can be done by video when coming in is not practical.", "telehealth", "Telehealth"),
+        ("Part of the year away", "Seasonal residents get one doctor here who stays in touch with their physicians elsewhere.", "seasonal-residents", "Seasonal residents"),
+    ],
+}
+
+CARD_BLURBS.update({
+    "same-or-next-day-visits": "Seen the same or next business day, with phone access at any hour.",
+    "chronic-care": "Blood pressure, diabetes, cholesterol, kidney and thyroid care, followed closely.",
+    "specialists-and-hospital-care": "Dr. Shtern picks the specialist and stays involved in the hospital.",
+    "labs-and-tests": "Blood draws, ECGs and rapid tests done during your visit.",
+    "patients": "Visits, calls, labs, records and insurance, in one place.",
+    "journal": "Articles on concierge care, prevention and healthy aging.",
+    "videos": "A film from the practice and trusted health explainers.",
+})
+
+# ---------------------------------------------------------------- videos
+# Practice films are Legacy Medical's own (YouTube channel "Legacy Medical
+# Concierge of Palm Beach"). The library holds short explainers from public
+# health organizations, each checked with YouTube oEmbed (title + channel).
+# Nothing loads from YouTube until the visitor presses play. To add a film
+# Dr. Shtern records, add one dict to PRACTICE_FILMS and run
+# tools/fetch_video_thumbs.py.
+VIDEOS_PAGE = {
+    "title": "Videos | Legacy Medical, Palm Beach Gardens",
+    "desc": "Watch a short film from Legacy Medical and trusted explainers on blood pressure, kidney health, heart and stroke warning signs, screening and healthy aging.",
+    "eyebrow": "Videos",
+    "h1": "Watch, then ask us anything.",
+    "lede": "A short film from the practice, and a small library of trusted explainers from public health organizations on the topics members ask about most.",
+    "library_h": "Trusted explainers",
+    "library_lede": "Chosen for clear, reliable information from organizations like the CDC, the National Institutes of Health and the American Heart Association. They are general education, made by those organizations rather than by Legacy Medical, and not advice for your own situation.",
+}
+PRACTICE_FILMS = [
+    {"id": "raReWdCy3tA", "title": "Legacy Medical: Dr. Yana Shtern",
+     "summary": "A short look at Legacy Medical and Dr. Yana Shtern's concierge practice in Palm Beach Gardens.",
+     "channel": "Legacy Medical Concierge of Palm Beach"},
+]
+VIDEO_LIBRARY = [
+    {"id": 'TLiD3vh_X8o', "title": 'Blood pressure done right: The correct way to measure yours at home.', "channel": 'American Heart Association', "topic": 'Blood pressure',
+     "summary": 'Step by step, how to sit, position your arm and cuff, and take an accurate blood pressure reading at home.', "related": 'journal/home-blood-pressure-monitoring'},
+    {"id": 'r5XTTeP039Q', "title": 'Mayo Clinic Explains Hypertension', "channel": 'Mayo Clinic', "topic": 'Blood pressure',
+     "summary": 'A Mayo Clinic nephrologist explains what the two blood pressure numbers mean, who gets hypertension, how it is diagnosed and treated.', "related": 'hypertension'},
+    {"id": 'g4SV7SJLP_g', "title": 'Get to Know Your Kidneys', "channel": "NIH (NIDDK)", "topic": 'Kidney health',
+     "summary": 'What your kidneys do every day, why kidney disease is often silent at first, and everyday habits that help protect them.', "related": 'kidney-care'},
+    {"id": 'fFn0ygOOBuI', "title": 'What is eGFR, and how is it used to measure kidney function?', "channel": 'National Kidney Foundation', "topic": 'Kidney health',
+     "summary": 'A kidney specialist explains how eGFR is calculated from a blood test and what a higher or lower number says about kidney function.', "related": 'journal/egfr-kidney-lab-results-explained'},
+    {"id": '1PKBTpVhvVk', "title": 'Mayo Clinic Minute: Avoiding kidney stones', "channel": 'Mayo Clinic', "topic": 'Kidney health',
+     "summary": 'A Mayo Clinic nephrologist explains why kidney stones form and why drinking enough water each day is the simplest way to prevent them.', "related": 'journal/heat-hydration-kidney-health'},
+    {"id": 'Ih_4BHoZv0U', "title": 'Mayo Clinic Minute: The role of cholesterol in heart health', "channel": 'Mayo Clinic', "topic": "Heart health",
+     "summary": 'What cholesterol is, how the bad kind builds plaque in arteries, and which food choices can help bring your levels down.', "related": 'journal/heart-healthy-foods'},
+    {"id": 'gfFMSaSoU6U', "title": 'Turning back the clock on prediabetes', "channel": "CDC", "topic": 'Diabetes and metabolism',
+     "summary": 'How the CDC National Diabetes Prevention Program helps people with prediabetes make small, lasting changes that lower their risk of type 2 diabetes.', "related": 'preventive-care'},
+    {"id": 'G1lwVhnnkoU', "title": '10-minute Workout for Older Adults', "channel": 'National Institute on Aging', "topic": 'Healthy aging',
+     "summary": 'A follow-along routine for older adults with a warm-up, leg and arm strength moves, balance work and stretching, using only a chair.', "related": 'journal/health-benefits-of-exercise'},
+    {"id": 'UAlxu7NiKNk', "title": 'STEADI for Older Adults', "channel": "CDC", "topic": 'Healthy aging',
+     "summary": 'Simple steps that lower fall risk after 65, including strength and balance exercise, medication and vision checks, footwear and home safety.', "related": 'journal/concierge-care-for-aging-parents'},
+    {"id": '0xubzGiAjEU', "title": 'Mayo Clinic Minute: Heat exhaustion and heatstroke', "channel": 'Mayo Clinic', "topic": 'Everyday health',
+     "summary": 'How to recognize heat exhaustion before it becomes heatstroke, the warning sign of confusion, and how hydration and breaks keep you safe.', "related": 'journal/heat-hydration-kidney-health'},
+    {"id": 'qTkqm6weTX4', "title": 'Mayo Clinic Minute - Who should be screened for colorectal cancer?', "channel": 'Mayo Clinic', "topic": 'Screening and vaccines',
+     "summary": 'Who is at higher risk for colorectal cancer, why screening starting at age 45 matters, and why early detection makes it highly treatable.', "related": 'journal/cancer-prevention-risk-factors'},
+    {"id": 'zhGxsKdLNkE', "title": 'Mayo Clinic Minute: Why vaccines are especially important for older people', "channel": 'Mayo Clinic', "topic": 'Screening and vaccines',
+     "summary": 'Why the immune system weakens with age and how flu, shingles and other vaccines help older adults avoid serious complications and hospital stays.', "related": 'journal/yearly-flu-vaccine-benefits'},
+]
+
 MEET = {
     "title": "Meet and Greet with Dr. Shtern | Legacy Medical, Palm Beach Gardens",
     "desc": "Your first visit to Legacy Medical is a complimentary meet and greet with Dr. Yana Shtern in Palm Beach Gardens. What happens, what to ask, and how to book.",
@@ -800,7 +964,7 @@ MEET = {
 # ---------------------------------------------------------------- guide pages
 # Audience and comparison pages. Same rule as everywhere: only confirmed facts
 # about the practice; outside facts carry a link to the source.
-GUIDES = {
+GUIDES_BASE = {
     "seasonal-residents": {
         "title": "Concierge Doctor for Seasonal Residents | Legacy Medical, Palm Beach",
         "desc": "Primary care for seasonal residents of Palm Beach County: one internist who keeps your records current, coordinates with your doctors up north, and stays reachable.",
@@ -866,6 +1030,7 @@ GUIDES = {
         "related": ["concierge-medicine", "insurance-and-fees", "meet-and-greet"],
     },
 }
+GUIDES = dict(GUIDES_BASE, **GUIDES_PATIENTS)
 CARD_BLURBS.update({
     "meet-and-greet": "Your first visit: a complimentary conversation with Dr. Shtern.",
     "seasonal-residents": "Continuity for people who split the year between Florida and somewhere else.",
@@ -876,6 +1041,7 @@ CATEGORY_OWNERS.update({
     "Seasonal residents": ("seasonal-residents", "Care for seasonal residents"),
     "Kidney health": ("kidney-care", "Kidney care and nephrology"),
     "Aging and family": ("for-families", "Care for an aging parent"),
+    "Healthy aging": ("preventive-care", "Preventive care and the Legacy physical"),
 })
 
 # More set answers for the assistant. Facts only from this file; anything the

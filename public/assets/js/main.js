@@ -105,6 +105,22 @@
     });
   });
 
+  /* ---------- videos: swap the poster for the player only on press ---------- */
+  document.querySelectorAll(".vid[data-yt]").forEach((box) => {
+    const btn = box.querySelector(".vid-play");
+    if (!btn) return;
+    btn.addEventListener("click", () => {
+      const f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(box.dataset.yt) + "?autoplay=1&rel=0&playsinline=1";
+      f.title = box.dataset.title || "Video";
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      f.referrerPolicy = "strict-origin-when-cross-origin";
+      box.replaceChildren(f);
+      f.focus();
+    });
+  });
+
   /* ---------- reveal on scroll ---------- */
   const revealables = document.querySelectorAll("[data-reveal], .clock");
   if ("IntersectionObserver" in window && !reduceMotion.matches) {

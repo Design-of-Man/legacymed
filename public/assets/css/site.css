@@ -306,6 +306,44 @@ body.nav-open .menu-toggle span::after{transform:translateY(-.36rem) rotate(-45d
 .pers-list p{margin-top:.45rem;color:var(--ink-2);max-width:34rem}
 @media (max-width:880px){.pers-grid{grid-template-columns:1fr}.pers-media{position:static;max-width:30rem}.pers-list li{grid-template-columns:3rem minmax(0,1fr)}}
 
+/* ---------- for patients ---------- */
+.pg-list{margin-top:0}
+.pg-list .text-link{margin-top:.8rem;font-size:.92rem}
+.learn-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.25rem,.8rem + 1.5vw,2.5rem)}
+.learn-card{display:flex;flex-direction:column;gap:1rem;padding-top:1.4rem;border-top:1px solid var(--line-2);text-decoration:none;color:var(--ink);transition:border-color .4s var(--ease-out)}
+.learn-card h3{font-size:var(--step-2);font-weight:300;letter-spacing:-.015em;line-height:1.2;transition:color .3s}
+.learn-card .text-link{margin-top:auto;align-self:flex-start}
+.learn-card:hover{border-top-color:var(--gold)}.learn-card:hover h3{color:var(--gold-text)}
+@media (max-width:880px){.learn-grid{grid-template-columns:1fr}}
+
+/* ---------- videos: our own poster until the visitor presses play ---------- */
+.film-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(2rem,1rem + 4vw,5rem);align-items:center}
+.film{margin:0}
+.vid{position:relative;aspect-ratio:16/9;border-radius:1rem;overflow:hidden;background:var(--sunk)}
+.vid-play{position:absolute;inset:0;display:block;width:100%;padding:0;border:0;background:none;cursor:pointer;color:inherit}
+.vid-play picture,.vid-play img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out)}
+.vid-play:hover img{transform:scale(1.03)}
+.vid-play:focus-visible{outline:2px solid var(--focus);outline-offset:-4px}
+.vid-btn{position:absolute;left:50%;top:50%;width:4.25rem;height:4.25rem;margin:-2.125rem 0 0 -2.125rem;border-radius:50%;display:grid;place-items:center;background:rgba(251,246,237,.94);color:var(--ink);box-shadow:var(--shadow);transition:transform .45s var(--ease-out),background-color .3s,color .3s}
+.vid-btn svg{width:1.35rem;height:1.35rem;margin-left:.15rem}
+.vid-play:hover .vid-btn,.vid-play:focus-visible .vid-btn{transform:scale(1.08);background:var(--gold);color:#16140F}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vgroup+.vgroup{margin-top:clamp(3rem,2rem + 3vw,5rem)}
+.vgroup-h{font:600 .74rem/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);padding-bottom:1rem;border-bottom:1px solid var(--line-2);margin:0 0 1.75rem}
+.vgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.75rem clamp(1.25rem,.8rem + 1.5vw,2.5rem)}
+.vcard .vid{border-radius:.6rem}
+.vcard .vid-btn{width:3.25rem;height:3.25rem;margin:-1.625rem 0 0 -1.625rem}
+.vcard .vid-btn svg{width:1.05rem;height:1.05rem}
+.vcard h3{margin-top:.55rem;font-size:var(--step-1);font-weight:300;line-height:1.25;letter-spacing:-.01em}
+/* Third-party thumbnails are toned to the palette until hovered. */
+.vcard .vid-play img{filter:saturate(.62) sepia(.14) contrast(.96);transition:transform 1.2s var(--ease-out),filter .6s var(--ease-out)}
+.vcard .vid-play:hover img,.vcard .vid-play:focus-visible img{filter:none}
+.vcard .pc-ex{-webkit-line-clamp:4}
+.vcard .text-link{margin-top:.9rem}
+@media (max-width:1000px){.vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:880px){.film-grid{grid-template-columns:1fr}}
+@media (max-width:620px){.vgrid{grid-template-columns:1fr}}
+
 /* ---------- why concierge: a ruled ledger of figures ---------- */
 .ledger{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 clamp(1.25rem,.5rem + 2vw,2.5rem)}
 .ledger li{border-top:1px solid var(--line-2);padding-top:1.4rem}

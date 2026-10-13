@@ -242,8 +242,16 @@ NAV = [
         ("concierge-vs-traditional-primary-care", "Concierge vs. traditional", "A side-by-side look"),
         ("faq", "Questions", "Straight answers"),
     ]),
+    ("Patients", None, [
+        ("patients", "For patients", "Visits, calls, labs, records"),
+        ("same-or-next-day-visits", "Same or next day visits", "Seen when you need it"),
+        ("chronic-care", "Chronic care support", "Ongoing conditions"),
+        ("specialists-and-hospital-care", "Specialists and hospitals", "Care that stays in one place"),
+        ("labs-and-tests", "Labs and tests", "Done in the office"),
+        ("journal", "Journal", "Articles on health"),
+        ("videos", "Videos", "Watch and learn"),
+    ]),
     ("Areas", "areas-we-serve", None),
-    ("Journal", "journal", None),
     ("Contact", "contact", None),
 ]
 
@@ -266,7 +274,7 @@ def nav_html(current):
     for i, (label, href, kids) in enumerate(NAV):
         if kids:
             mid = "menu-%d" % i
-            is_cur = any(k[0] == current for k in kids)
+            is_cur = any(k[0] == current for k in kids) or (current.startswith("journal/") and any(k[0] == "journal" for k in kids))
             links = "".join(
                 '<li><a href="/%s"%s>%s<small>%s</small></a></li>' % (
                     k[0], ' aria-current="page"' if k[0] == current else "", esc(k[1]), esc(k[2]))
@@ -656,6 +664,8 @@ def trail_for(slug, name):
     t = [("Home", "")]
     if sec and href and href != slug:
         t.append((sec, href))
+    elif sec == "Patients" and slug != "patients":
+        t.append(("For patients", "patients"))
     t.append((name, slug))
     return t
 
@@ -705,11 +715,11 @@ def faq_html(pairs, heading_id=None):
 
 def related_cards(slugs):
     cards = []
-    lookup = {k[0]: k for k in NAV[1][2] + NAV[2][2] + NAV[0][2]}
+    lookup = {k[0]: k for _, _, kids in NAV if kids for k in kids}
     for s in slugs:
         k = lookup[s]
         cards.append('<div class="card"><p class="meta">%s</p><h3><a class="stretch" href="/%s" style="text-decoration:none;color:inherit">%s</a></h3><p>%s</p><span class="more">Read more %s</span></div>'
-                     % ("Care" if s in [x[0] for x in NAV[1][2]] else "Practice", s, esc(k[1]), esc(C.CARD_BLURBS.get(s, k[2])), icon("arrow")))
+                     % ("Care" if s in [x[0] for x in NAV[1][2]] else ("For patients" if s in [x[0] for x in NAV[3][2]] else "Practice"), s, esc(k[1]), esc(C.CARD_BLURBS.get(s, k[2])), icon("arrow")))
     return '<div class="cards">%s</div>' % "".join(cards)
 
 
@@ -808,7 +818,7 @@ def csp():
         "font-src 'self'",
         "media-src 'self'",
         "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
-        "frame-src https://www.google.com https://maps.google.com",
+        "frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com",
         "object-src 'none'",
         "base-uri 'self'",
         "form-action 'self'",

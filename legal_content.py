@@ -16,7 +16,7 @@ PRIVACY = """
 <h2>How we use what you send</h2>
 <p>We use form submissions only to reply to you and arrange a meet and greet or call. Submissions are delivered to the practice by email through our email provider. We do not add you to marketing lists.</p>
 <h2>Maps and outside links</h2>
-<p>Pages with a map load an embedded Google Map, and Google may set its own cookies when it does. The map does not receive anything you type into our forms. Links to other websites, such as hospital or review sites, are governed by those sites' own policies.</p>
+<p>Pages with a map load an embedded Google Map, and Google may set its own cookies when it does. The map does not receive anything you type into our forms. The Videos page shows our own copy of each video's preview image; YouTube only loads, from its privacy-enhanced youtube-nocookie.com domain, when you press play, and YouTube's own policies apply from then on. Links to other websites, such as hospital or review sites, are governed by those sites' own policies.</p>
 <h2>Your choices</h2>
 <p>You can clear your analytics choice by clearing this site's data in your browser. To ask what we hold about you from this website, or to have it deleted, contact us at <a href="mailto:info@legacymedicalpalmbeach.com">info@legacymedicalpalmbeach.com</a> or (561) 834-9280.</p>
 <h2>Children</h2>
