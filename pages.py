@@ -115,7 +115,7 @@ def home(B):
   <div class="wrap mani-grid">
     <figure class="mani-fig a"><div class="mani-ph" data-reveal="clip">%s</div><figcaption class="ph-cap">The front desk<span>Prosperity Farms Road</span></figcaption></figure>
     <h2 id="mani-h" class="mani-text" data-fill>%s</h2>
-    <figure class="mani-fig b"><div class="mani-ph" data-reveal="clip">%s</div><figcaption class="ph-cap">Dr. Shtern<span>Internal medicine and nephrology</span></figcaption></figure>
+    <figure class="mani-fig b"><div class="mani-ph" data-reveal="clip">%s</div><figcaption class="ph-cap">Dr. Shtern and the team<span>Palm Beach Gardens</span></figcaption></figure>
   </div>
 </section>""" % (photo(m1, a1, sizes="(max-width: 880px) 44vw, 18vw", max_w=800), B.words_spans(H["manifesto"]),
                   photo(m2, a2, sizes="(max-width: 880px) 44vw, 18vw", max_w=800))
@@ -141,11 +141,29 @@ def home(B):
   <div class="wrap">
     <div class="headline-row"><div><p class="eyebrow">Membership</p><h2 id="inc-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
     <ul class="included">%s</ul>
+    <div class="agreement" style="margin-top:2rem">%s<p>%s</p></div>
     <p style="margin-top:2rem"><a class="text-link" href="/concierge-medicine">How concierge medicine works here %s</a></p>
   </div>
-</section>""" % (B.hx(H["included_h"]), H["included_lede"], included, icon("arrow"))
+</section>""" % (B.hx(H["included_h"]), H["included_lede"], included, B.ICONS["shield"], H["agreement"], icon("arrow"))
 
     clock = clock_section(B)
+
+    pp, pa = H["personal_photo"]
+    rows = "".join('<li data-reveal><span class="pn" aria-hidden="true">%02d</span><div><h3>%s</h3><p>%s</p></div></li>' % (i + 1, esc(t), d) for i, (t, d) in enumerate(H["personal"]))
+    personal = """<section class="section personal" aria-labelledby="pers-h">
+  <div class="wrap pers-grid">
+    <div class="pers-media">
+      <figure class="cap-fig"><div class="pers-ph" data-reveal="clip">%s</div><figcaption class="ph-cap">Dr. Yana Shtern, MD<span>One on one, every visit</span></figcaption></figure>
+    </div>
+    <div class="pers-body">
+      <p class="eyebrow">One on one</p>
+      <h2 id="pers-h" style="margin-top:1.25rem">%s</h2>
+      <p class="lede" style="margin-top:1.25rem">%s</p>
+      <ol class="pers-list">%s</ol>
+      <div class="btn-row" style="margin-top:2.5rem"><a class="btn" href="/meet-and-greet" data-loc="personal">Book a meet and greet %s</a><a class="text-link" href="/dr-yana-shtern">About Dr. Shtern %s</a></div>
+    </div>
+  </div>
+</section>""" % (photo(pp, pa, sizes="(max-width: 880px) 90vw, 40vw", max_w=1200), B.hx(H["personal_h"]), H["personal_lede"], rows, icon("arrow"), icon("arrow"))
 
     specs = "".join("""<li><a href="/%s"><span class="n">%02d</span><h3>%s</h3><p>%s</p><span class="go" aria-hidden="true">%s</span><span class="peek" aria-hidden="true">%s</span></a></li>""" % (
         s, i + 1, esc(t), esc(d), icon("arrow"), photo(H["spec_peek"][s], "", sizes="20rem", max_w=800, decorative=True))
@@ -156,16 +174,6 @@ def home(B):
     <ul class="spec-list">%s</ul>
   </div>
 </section>""" % (B.hx(H["spec_h"]), H["spec_lede"], specs)
-
-    steps = "".join('<li data-reveal style="--d:%d"><h3>%s</h3><p>%s</p></li>' % (i, esc(t), d) for i, (t, d) in enumerate(H["steps"]))
-    plan = """<section class="section" aria-labelledby="plan-h">
-  <div class="wrap">
-    <div class="headline-row"><div><p class="eyebrow">How to join</p><h2 id="plan-h" style="margin-top:1.25rem">%s</h2></div>
-    <a class="btn" href="/meet-and-greet" data-loc="plan">Book a meet and greet %s</a></div>
-    <ol class="steps">%s</ol>
-    <div class="agreement">%s<p>%s</p></div>
-  </div>
-</section>""" % (B.hx(H["plan_h"]), icon("arrow"), steps, B.ICONS["shield"], H["agreement"])
 
     reviews = reviews_section(B)
 
@@ -192,7 +200,7 @@ def home(B):
   </div>
 </section>""" % (esc(H["stakes_h"]), H["stakes_body"])
 
-    body = hero + guide + manifesto + why + inc + spec + plan + reviews + journal_sec
+    body = hero + guide + manifesto + why + personal + inc + spec + reviews + journal_sec
     body += B.cta_band() + B.reel_html()  # the photo reel closes the page, just above the footer
 
     schema = B.graph(B.website_node(), B.clinic_node(), B.physician_node(full=True),

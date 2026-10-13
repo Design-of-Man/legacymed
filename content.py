@@ -160,7 +160,7 @@ HERO_VIDEO = {
 }
 
 HOME = {
-    "kicker": "Concierge internal medicine · Palm Beach Gardens",
+    "kicker": "One-on-one concierge medicine · Palm Beach Gardens",
     "hero_lines": ["Concierge medicine", "with a doctor who", "<em>knows you</em>."],  # <em> is styled gold, upright: no italic font on the LCP path
     "hero_lede": "Dr. Yana Shtern keeps a small practice on purpose and sees one patient at a time, so every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",
     "problem_eyebrow": "The usual way",
@@ -185,10 +185,21 @@ HOME = {
         ("26 → 10", "patients a day", "Patients seen in a day, before and after the same switch.", "GAO, 2005"),
         ("24/7", "phone access", "Members reach the practice at any hour, including weekends and holidays."),
     ],
-    "manifesto_photos": [("reception-desk", "The front desk at Legacy Medical"), ("dr-shtern-desk", "Dr. Yana Shtern at her desk")],
+    "manifesto_photos": [("reception-desk", "The front desk at Legacy Medical"), ("front-desk-team", "Dr. Shtern and her team at the Legacy Medical front desk")],
     # Hover photos for the areas-of-focus list (topic photos, not the practice).
     "spec_peek": {"kidney-care": "p-kidney-water", "hypertension": "p-bp-walk", "geriatric-memory-care": "p-geri-couple",
                   "preventive-care": "p-prev-run", "telehealth": "p-tele-laptop"},
+    # One-on-one care: every line traces to a confirmed fact in DOCTOR, HOME or SERVICES_INCLUDED.
+    "personal_h": "Your doctor, <em>personally</em>",
+    "personal_lede": "Concierge care here is one on one. The same physician, every time, with the time and the access to treat you as a person rather than an appointment slot.",
+    "personal_photo": ("dr-shtern-desk", "Dr. Yana Shtern at her desk at Legacy Medical"),
+    "personal": [
+        ("The same doctor at every visit", "You see Dr. Shtern each time you come in, so the doctor in the room already knows your history."),
+        ("One patient at a time", "She does not double-book. The time on your appointment is yours, long enough to cover everything on your list."),
+        ("Seen when you need it", "Same or next business day visits when something comes up, and the practice answers the phone at any hour."),
+        ("Results you go through together", "Labs and ECGs are done in the office, and she walks you through what the numbers mean."),
+        ("With you in the hospital", "She holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and stays involved if you are admitted."),
+    ],
     "included_h": "What membership <em>includes</em>",
     "included_lede": "An annual membership fee covers access to Dr. Shtern. Office visits and tests are billed to your insurance, as they are now.",
     "clock_h": "The office keeps hours. Your access does not.",
