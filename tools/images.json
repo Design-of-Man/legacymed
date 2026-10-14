@@ -1651,5 +1651,485 @@
    "webp",
    "avif"
   ]
+ },
+ "j-how-to-prepare-for-a-doctors-visit": {
+  "file": "journal/how-to-prepare-for-a-doctors-visit.jpg",
+  "alt": "An open notebook with handwritten notes, a pencil and a pair of wire-rimmed glasses on a wooden desk beside a laptop",
+  "credit": "Mikhail Nilov",
+  "source": "https://www.pexels.com/photo/an-eyeglasses-on-notebook-with-pen-7594644/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-cbc-and-metabolic-panel-explained": {
+  "file": "journal/cbc-and-metabolic-panel-explained.jpg",
+  "alt": "Gold-framed reading glasses resting on a stack of white printed documents",
+  "credit": "cottonbro studio",
+  "source": "https://www.pexels.com/photo/gold-framed-eyeglasses-on-docoments-9062786/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-er-urgent-care-or-call-your-doctor": {
+  "file": "journal/er-urgent-care-or-call-your-doctor.jpg",
+  "alt": "A gray rotary telephone on a wooden ledge outdoors against a soft green background",
+  "credit": "Vincent Nguyen",
+  "source": "https://www.pexels.com/photo/vintage-rotary-telephone-on-wooden-surface-outdoors-31188416/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-traveling-with-medications": {
+  "file": "journal/traveling-with-medications.jpg",
+  "alt": "Hands packing an open suitcase with folded white clothes, sunglasses and zipped pouches on a patterned rug",
+  "credit": "SHVETS production",
+  "source": "https://www.pexels.com/photo/clothes-and-sunglasses-in-an-open-suitcase-on-a-rug-8933565/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-seasonal-allergies-south-florida": {
+  "file": "journal/seasonal-allergies-south-florida.jpg",
+  "alt": "Looking up through the leafy green branches of a tree against a blue sky",
+  "credit": "Dan Bleden",
+  "source": "https://www.pexels.com/photo/branches-with-lush-foliage-16693975/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-mosquito-borne-illness-florida": {
+  "file": "journal/mosquito-borne-illness-florida.jpg",
+  "alt": "A screened porch with a ceiling fan, cushioned benches and a glass coffee table looking out on a sunny yard",
+  "credit": "Curtis Adams",
+  "source": "https://www.pexels.com/photo/an-enclosed-wooden-porch-with-red-and-blue-cushions-8031953/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-mens-health-checkups-after-50": {
+  "file": "journal/mens-health-checkups-after-50.jpg",
+  "alt": "Two trees on a rolling green golf course in morning fog",
+  "credit": "Michael Hamments",
+  "source": "https://www.pexels.com/photo/misty-morning-on-a-foggy-golf-course-in-florida-32474840/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-womens-health-checkups-after-50": {
+  "file": "journal/womens-health-checkups-after-50.jpg",
+  "alt": "A woven straw beach bag, a sun hat and sunglasses on the sand by the ocean",
+  "credit": "Kindel Media",
+  "source": "https://www.pexels.com/photo/brown-woven-bag-on-beach-8093157/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-hydration-for-older-adults": {
+  "file": "journal/hydration-for-older-adults.jpg",
+  "alt": "A glass of water and two lemon halves on a wooden table in warm sunlight",
+  "credit": "Arina Krasnikova",
+  "source": "https://www.pexels.com/photo/sliced-lemon-beside-a-drinking-glass-6653641/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-fiber-why-it-matters": {
+  "file": "journal/fiber-why-it-matters.jpg",
+  "alt": "Bowls of chickpeas, kidney beans, red lentils, buckwheat and grains with jars of oats on a white table",
+  "credit": "MART PRODUCTION",
+  "source": "https://www.pexels.com/photo/grains-and-beans-on-bowls-8108102/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-colon-cancer-screening-colonoscopy-stool-tests": {
+  "file": "journal/colon-cancer-screening-colonoscopy-stool-tests.jpg",
+  "alt": "A cream ceramic bowl of red apples and yellow pears on a linen cloth on a light table",
+  "credit": "Julia Olson",
+  "source": "https://www.pexels.com/photo/elegant-still-life-of-apples-and-pears-in-bowl-36988020/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-prostate-cancer-screening-psa-test": {
+  "file": "journal/prostate-cancer-screening-psa-test.jpg",
+  "alt": "A hand holding a turquoise mug of black coffee over a pale wooden table",
+  "credit": "Aleksandar Cvetanovic",
+  "source": "https://www.pexels.com/photo/person-holding-green-ceramic-mug-1422348/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-abdominal-aortic-aneurysm-screening": {
+  "file": "journal/abdominal-aortic-aneurysm-screening.jpg",
+  "alt": "A still lake reflecting palm trees, green scrub and a blue sky with white clouds",
+  "credit": "Jeffrey Eisen",
+  "source": "https://www.pexels.com/photo/wood-landscape-water-summer-17376055/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-hepatitis-c-and-hepatitis-b-screening": {
+  "file": "journal/hepatitis-c-and-hepatitis-b-screening.jpg",
+  "alt": "Three lemons on a clear glass plate against a soft peach background",
+  "credit": "Tara Winstead",
+  "source": "https://www.pexels.com/photo/plate-with-lemons-on-beige-surface-6489737/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-eye-health-after-50": {
+  "file": "journal/eye-health-after-50.jpg",
+  "alt": "Black-framed eyeglasses resting on an open book against a pale wall",
+  "credit": "ugurlu photographer",
+  "source": "https://www.pexels.com/photo/close-up-of-eyeglasses-on-book-336407/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-depression-in-older-adults": {
+  "file": "journal/depression-in-older-adults.jpg",
+  "alt": "An empty upholstered armchair by a curtained window, with two lit table lamps on either side",
+  "credit": "Katrīne Skrebele",
+  "source": "https://www.pexels.com/photo/a-chair-by-the-window-11433090/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-loneliness-and-social-connection": {
+  "file": "journal/loneliness-and-social-connection.jpg",
+  "alt": "Two people's hands working on a jigsaw puzzle together on a wooden table",
+  "credit": "Mikhail Nilov",
+  "source": "https://www.pexels.com/photo/close-up-shot-of-two-people-playing-jigsaw-puzzle-on-a-wooden-surface-8654527/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-brain-health-what-the-evidence-supports": {
+  "file": "journal/brain-health-what-the-evidence-supports.jpg",
+  "alt": "A wooden boardwalk winding through a green mangrove forest in daylight",
+  "credit": "icon0 com",
+  "source": "https://www.pexels.com/photo/brown-wooden-bridge-beside-green-leafy-trees-726298/",
+  "q": 52,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-caregiver-burnout-caring-for-a-parent": {
+  "file": "journal/caregiver-burnout-caring-for-a-parent.jpg",
+  "alt": "An older person's hands clasped with a younger person's hands on a round wooden table",
+  "credit": "Kindel Media",
+  "source": "https://www.pexels.com/photo/a-close-up-shot-of-people-holding-hands-8172607/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-florida-advance-directives-health-care-surrogate": {
+  "file": "journal/florida-advance-directives-health-care-surrogate.jpg",
+  "alt": "A hand signing a printed document with a silver fountain pen on a light wooden desk",
+  "credit": "Cytonn Photography",
+  "source": "https://www.pexels.com/photo/white-paper-and-silver-fountain-pen-955394/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-underactive-thyroid-tsh-test": {
+  "file": "journal/underactive-thyroid-tsh-test.jpg",
+  "alt": "A clear glass of water on a wooden table in soft window light",
+  "credit": "Elena Golovchenko",
+  "source": "https://www.pexels.com/photo/a-glass-of-water-on-a-table-10994408/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-type-2-diabetes-numbers-that-matter": {
+  "file": "journal/type-2-diabetes-numbers-that-matter.jpg",
+  "alt": "Tomatoes, red onion, garlic and peppers in a wooden tray against a sunlit cream wall",
+  "credit": "Brunxs",
+  "source": "https://www.pexels.com/photo/vegetables-on-the-table-11638270/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-statins-benefits-and-side-effects": {
+  "file": "journal/statins-benefits-and-side-effects.jpg",
+  "alt": "Halved pink grapefruit on a round slice of wood surrounded by ivy leaves",
+  "credit": "Brunxs",
+  "source": "https://www.pexels.com/photo/halves-of-grapefruit-15488543/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-atrial-fibrillation-stroke-risk": {
+  "file": "journal/atrial-fibrillation-stroke-risk.jpg",
+  "alt": "Gentle waves reaching a beach as the sun rises through clouds over the ocean",
+  "credit": "Taryn Elliott",
+  "source": "https://www.pexels.com/photo/waves-crashing-on-the-shore-during-sunset-8855850/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-sleep-apnea-and-heart-health": {
+  "file": "journal/sleep-apnea-and-heart-health.jpg",
+  "alt": "A white bed beside a wooden side table holding a glass of water with a green sprig",
+  "credit": "PNW Production",
+  "source": "https://www.pexels.com/photo/a-wooden-side-table-with-a-glass-of-water-8251682/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-heartburn-and-gerd": {
+  "file": "journal/heartburn-and-gerd.jpg",
+  "alt": "A cup of tea with a lemon slice and small apples on a wooden tray",
+  "credit": "Sóc Năng Động",
+  "source": "https://www.pexels.com/photo/tea-with-lemon-and-fresh-apples-on-wooden-table-33934671/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-vitamin-d-testing-and-supplements": {
+  "file": "journal/vitamin-d-testing-and-supplements.jpg",
+  "alt": "A blue beach umbrella and a striped beach chair on sand by the ocean under a clear sky",
+  "credit": "Kindel Media",
+  "source": "https://www.pexels.com/photo/an-umbrella-and-and-a-chair-on-the-shore-7862546/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-iron-deficiency-anemia-adults": {
+  "file": "journal/iron-deficiency-anemia-adults.jpg",
+  "alt": "Fresh spinach on a wooden cutting board with peppers and tomatoes on the table behind",
+  "credit": "Arina Krasnikova",
+  "source": "https://www.pexels.com/photo/close-up-shot-of-leafy-vegetables-on-a-wooden-chopping-board-6653624/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-shingles-vaccine-after-50": {
+  "file": "journal/shingles-vaccine-after-50.jpg",
+  "alt": "White daisies in a glass jar on a sunny windowsill beside apples",
+  "credit": "Nadia Vasil'eva",
+  "source": "https://www.pexels.com/photo/white-flowers-in-glass-vase-9390656/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-pneumococcal-vaccine-adults": {
+  "file": "journal/pneumococcal-vaccine-adults.jpg",
+  "alt": "Sheer beige curtains in front of a window with a view of the sea and sky",
+  "credit": "Elena Golovchenko",
+  "source": "https://www.pexels.com/photo/a-beige-window-curtain-8093107/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
  }
 }
