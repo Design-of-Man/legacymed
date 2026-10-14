@@ -41,6 +41,21 @@
       ]
     },
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": ".*\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
       "source": "/assets/(css|js)/(.*)",
       "headers": [
         {
@@ -120,6 +135,186 @@
         }
       ],
       "destination": "https://legacymedicalpalmbeach.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2"
+        }
+      ],
+      "destination": "/dr-yana-shtern",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3"
+        }
+      ],
+      "destination": "/notice-of-privacy-practices",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1285"
+        }
+      ],
+      "destination": "/journal/nsaids-risks-and-side-effects",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1287"
+        }
+      ],
+      "destination": "/journal/magnesium-low-and-high-levels",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1292"
+        }
+      ],
+      "destination": "/journal/breast-cancer-screening-mammogram-age-40",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1776"
+        }
+      ],
+      "destination": "/concierge-medicine",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1972"
+        }
+      ],
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2391"
+        }
+      ],
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2410"
+        }
+      ],
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2460"
+        }
+      ],
+      "destination": "/our-team",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2760"
+        }
+      ],
+      "destination": "/faq",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3898"
+        }
+      ],
+      "destination": "/accessibility",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3971"
+        }
+      ],
+      "destination": "/journal/over-the-counter-pain-medication-safety",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3978"
+        }
+      ],
+      "destination": "/journal/vitamins-to-take-in-the-morning",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "4003"
+        }
+      ],
+      "destination": "/journal/banana-nutrition-benefits",
       "permanent": true
     },
     {
@@ -318,6 +513,21 @@
       "permanent": true
     },
     {
+      "source": "/legacy-blog/:path*",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/:file(wp-sitemap.*\\.xml)",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
       "source": "/feed",
       "destination": "/journal/feed.xml",
       "permanent": true
@@ -334,6 +544,11 @@
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})",
       "destination": "/journal",
       "permanent": true
     },
