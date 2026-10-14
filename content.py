@@ -492,21 +492,52 @@ MEMBERSHIP = {
 }
 
 INSURANCE = {
-    "title": "Insurance and Membership Fees | Legacy Medical Concierge Practice",
-    "desc": "How the concierge membership fee and your health insurance work together at Legacy Medical in Palm Beach Gardens, including Medicare, HSAs and what the fee covers.",
+    # Title and description changed 2026-10-14 (Medicare guide added); measure from here.
+    "title": "Concierge Fees, Medicare and Insurance | Legacy Medical",
+    "desc": "How a concierge fee and Medicare work together at Legacy Medical in Palm Beach Gardens: what the fee pays for, what Medicare covers, and what it is not.",
     "eyebrow": "Insurance and fees",
     "h1": "Two parts: a membership fee, and your insurance.",
     "lede": "Legacy Medical is a concierge practice that still works with insurance. The membership fee pays for access and time. Your insurance pays for visits and tests, as it does now.",
     "sections": [
-        ("The membership fee", "<p>Members pay an annual fee directly to the practice. It covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, extended visits, 24/7 phone access and Dr. Shtern's time coordinating your care.</p><p>The fee is not published online yet. Call <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your tour and the office will go through it with you.</p>"),
+        ("The membership fee", "<p>Members pay an annual fee directly to the practice. It covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, extended visits, 24/7 phone access and Dr. Shtern's time coordinating your care.</p><p>The fee is not published online yet. Call <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your meet and greet and the office will go through it with you.</p>"),
         ("What insurance still pays for", "<p>Office visits, lab work, ECGs and other covered services are billed to your health insurance. Plans the practice works with include Medicare, Aetna, Cigna and BlueCross BlueShield. Coverage, copays and deductibles depend on your plan, so check with the office before your first visit.</p><p>Keep your insurance. The membership does not cover hospital care, specialists, imaging, emergency care or prescriptions.</p>"),
-        ("Medicare", "<p>Medicare does not pay concierge membership fees. If you have Medicare, the fee is separate, and covered services at your visits are billed to Medicare under its usual rules. Ask the office how this works for your plan, including any Medicare Advantage or supplemental coverage.</p>"),
     ],
+    # Medicare guide. Every figure and rule below is from CMS or Medicare.gov
+    # (sources listed on the page). Figures change every January: recheck them
+    # against the new CMS fact sheet and update "checked".
+    "medicare": {
+        "h": "How do Medicare and the membership fee work together?",
+        "lede": "They pay for different things. The fee pays the practice for access and time. Medicare pays for covered medical services, the same way it would at any other doctor's office.",
+        "rows": [
+            ("The membership fee", "You, directly to the practice", "Medicare does not cover concierge membership fees, and you cannot claim the fee back from Medicare."),
+            ("Office visits, covered lab work, ECGs and other covered services", "Medicare, under its usual rules", "After the Part B deductible ($283 in 2026) you usually pay 20% of the Medicare-approved amount. A supplement (Medigap) or a Medicare Advantage plan may pay some of that share."),
+            ("Annual Wellness Visit, once every 12 months", "Medicare", "Nothing to pay if the doctor accepts assignment, and the Part B deductible does not apply. Extra tests done at the same visit can carry coinsurance."),
+            ("A routine physical exam", "Not Medicare", "Medicare does not cover routine physicals. Ask the office which parts of your Legacy physical are billed to Medicare and which are part of membership."),
+            ("Hospital stays, specialists, imaging, prescriptions and emergency care", "Your Medicare coverage (Part A, Part B, Part D or your plan)", "The membership does not pay for any of these."),
+        ],
+        "not_h": "What the membership fee is not",
+        "not": [
+            "<strong>Not insurance.</strong> It does not replace Original Medicare, a Medigap policy, a Medicare Advantage plan or Part D drug coverage. Keep all of them.",
+            "<strong>Not a payment for covered services.</strong> Medicare-covered services are billed to Medicare under its normal rules, membership or not. Medicare.gov sets out the rules doctors must follow when they charge a membership fee.",
+            "<strong>Not reimbursed by Medicare.</strong> Medicare.gov is plain about it: you pay all costs for services Medicare does not cover, including a concierge membership fee.",
+            "<strong>Not a number we post without context.</strong> The office explains the fee in person, so you can weigh it against your own coverage.",
+        ],
+        "advantage": "If you have a Medicare Advantage plan, the plan pays for covered services instead of Original Medicare, using its own network and rules. Ask the office whether it works with your plan before you join.",
+        "premium_note": "Most people also pay the standard Part B premium, $202.90 a month in 2026.",
+        "further": ("does-medicare-cover-concierge-medicine", "Does Medicare cover concierge medicine? The longer answer"),
+        "checked": "14 October 2026",
+        "sources": [
+            ("Medicare.gov: Concierge care", "https://www.medicare.gov/coverage/concierge-care"),
+            ("CMS: 2026 Medicare Parts A and B premiums and deductibles (fact sheet, 14 November 2025)", "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles"),
+            ("Medicare.gov: Yearly wellness visits", "https://www.medicare.gov/coverage/yearly-wellness-visits"),
+        ],
+    },
     "faqs": [
         ("Does insurance cover the concierge fee?", "<p>No. Health insurance, including Medicare, does not pay the membership fee. It does pay for covered services at your visits.</p>"),
         ("Can I use an HSA or FSA for the fee?", "<p>Rules on using health savings or flexible spending accounts for concierge fees are not settled and depend on your plan. Ask your plan administrator or tax adviser before you count on it.</p>"),
         ("Is the concierge fee tax deductible?", "<p>That depends on your situation. A tax adviser can tell you whether it counts as a deductible medical expense for you.</p>"),
         ("Which insurance plans do you accept?", "<p>The practice works with Medicare, Aetna, Cigna and BlueCross BlueShield, among others. Plans change, so call the office to confirm yours.</p>"),
+        ("Do I keep my Medigap or Medicare Advantage plan if I join?", "<p>Yes. The membership is not insurance. Covered services at your visits are still billed to Medicare or your plan, and hospital care, specialists and prescriptions are still paid by your Medicare coverage.</p>"),
     ],
     "cta_lede": "We would rather explain the fee in person than post a number without context. Call the office, or come in for a meet and greet and ask.",
 }
@@ -646,16 +677,16 @@ _LOC_COPY = {
     "palm-beach": {
         "name": "Palm Beach",
         "title": "Concierge Medicine for Palm Beach Residents | Legacy Medical",
-        "desc": "Concierge internal medicine for Palm Beach island residents with Dr. Yana Shtern, board-certified in internal medicine and nephrology, about 25 minutes north in Palm Beach Gardens.",
-        "h1": "Concierge medicine for Palm Beach, without the island waitlist.",
-        "lede": "Palm Beach has plenty of concierge practices, and many are full. Legacy Medical is about 25 minutes north, and its physician is double board-certified in internal medicine and nephrology.",
+        "desc": "Concierge internal medicine for Palm Beach island residents with Dr. Yana Shtern, board-certified in internal medicine and nephrology, about 23 minutes north in Palm Beach Gardens.",
+        "h1": "Concierge medicine for Palm Beach, about 23 minutes north.",
+        "lede": "Legacy Medical is about 23 minutes north of the island, and its physician is double board-certified in internal medicine and nephrology.",
         "from_label": "the town of Palm Beach",
         "sections": [
             ("A different kind of credential", "<p>Most concierge internists are trained in internal medicine alone. Dr. Shtern is also board-certified in nephrology and was medical director of a dialysis center, which makes a difference for anyone managing high blood pressure, kidney disease, or a long list of medications.</p>"),
             ("Making the drive easy", "<p>Many visits happen by <a href=\"/telehealth\">video</a>. For the rest, the office is a first-floor suite with accessible entry and minimal time in the waiting room.</p>"),
         ],
         "directions": "From Palm Beach, cross to Okeechobee Boulevard, take I-95 north to PGA Boulevard, head east, then north on Prosperity Farms Road.",
-        "faqs": [("Do you see patients who live on Palm Beach island?", "<p>Yes. The office is roughly 25 minutes from the island without traffic.</p>")],
+        "faqs": [("Do you see patients who live on Palm Beach island?", "<p>Yes. The office is roughly 23 minutes from the island without traffic.</p>")],
     },
     "west-palm-beach": {
         "name": "West Palm Beach",

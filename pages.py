@@ -497,7 +497,7 @@ def membership(B):
     S = C.MEMBERSHIP
     slug = "membership"
     trail = B.trail_for(slug, "How to join")
-    hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], cta=False)
+    hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"])
     steps = "".join('<li><h3>%s</h3><p>%s</p></li>' % (esc(t), d) for t, d in S["steps"])
     body = hero + """<section class="section flush-top" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="sr-only">Steps to join</h2><ol class="steps">%s</ol>
 <div class="agreement">%s<p>%s</p></div></div></section>""" % (steps, B.ICONS["shield"], S["agreement"])
@@ -587,7 +587,7 @@ def meet_and_greet(B):
     S = C.MEET
     slug = "meet-and-greet"
     trail = B.trail_for(slug, "Meet and greet")
-    hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], cta=False,
+    hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], cta_href="#request", cta_label="Request a time",
                        media=B.photo("dr-shtern-desk", "Dr. Yana Shtern at her desk at Legacy Medical", sizes="(max-width: 880px) 90vw, 45vw", max_w=1200))
     steps = "".join('<li><h3>%s</h3><p>%s</p></li>' % (esc(t), d) for t, d in S["steps"])
     body = hero + """<section class="section flush-top" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="sr-only">How it works</h2><ol class="steps">%s</ol>
@@ -612,11 +612,27 @@ def insurance(B):
     trail = B.trail_for(slug, "Insurance and fees")
     hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"])
     body = hero + "".join(prose_section(B, i, h, b, slug) for i, (h, b) in enumerate(S["sections"]))
+    body += medicare_guide(B, S["medicare"], len(S["sections"]))
     body += '<section class="section sunk" aria-labelledby="ifaq-h"><div class="wrap split"><div><p class="eyebrow">Questions</p><h2 id="ifaq-h" style="margin-top:1.25rem">Insurance and fee questions</h2></div>%s</div></section>' % B.faq_html(S["faqs"])
     body += B.cta_band("Ask us about the fee in person.", S["cta_lede"])
     schema = B.graph({"@type": "WebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": S["title"], "isPartOf": {"@id": B.SITE_ID}, "about": {"@id": B.ORG_ID}},
                      B.faq_node(S["faqs"], B.url(slug)), B.breadcrumb_node(trail))
     B.write_page(slug, S["title"], S["desc"], body, schema=schema)
+
+
+def medicare_guide(B, M, i):
+    """Medicare and the membership fee, side by side, with dated CMS sources."""
+    esc = B.esc
+    rows = "".join('<tr><th scope="row">%s</th><td>%s</td><td>%s</td></tr>' % (esc(a), esc(b), esc(c)) for a, b, c in M["rows"])
+    nots = "".join("<li>%s</li>" % x for x in M["not"])
+    srcs = "; ".join('<a class="inline-link" href="%s" rel="noopener">%s</a>' % (esc(u), esc(t)) for t, u in M["sources"])
+    return """<section class="section%s" id="medicare" aria-labelledby="med-h"><div class="wrap">
+<p class="sec-n" aria-hidden="true">%02d</p><h2 id="med-h" style="font-size:var(--step-3)">%s</h2><p class="lede" style="margin-top:1rem;max-width:44rem">%s</p>
+<div class="table-scroll" style="margin-top:2rem"><table class="compare"><caption class="sr-only">Who pays for what when you have Medicare and a Legacy Medical membership</caption>
+<thead><tr><th scope="col">What</th><th scope="col">Who pays</th><th scope="col">How it works</th></tr></thead><tbody>%s</tbody></table></div>
+<div class="split" style="margin-top:2.5rem"><div><h3 id="med-not-h" style="font-size:var(--step-2)">%s</h3></div><div class="prose"><ul>%s</ul><p>%s</p><p>%s</p><p><a class="text-link" href="/journal/%s">%s %s</a></p></div></div>
+<p class="small muted" style="margin-top:2rem">Checked %s against CMS and Medicare.gov. Medicare figures change every January. Sources: %s.</p>
+</div></section>""" % (" sunk" if i % 2 else "", i + 1, esc(M["h"]), esc(M["lede"]), rows, esc(M["not_h"]), nots, esc(M["advantage"]), esc(M["premium_note"]), M["further"][0], esc(M["further"][1]), B.icon("arrow"), esc(M["checked"]), srcs)
 
 
 def faq(B):

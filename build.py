@@ -499,6 +499,7 @@ JS_FLAG = "document.documentElement.classList.add('js')"
 GA_INLINE = ("window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
              "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});"
              "gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',false);")
+VA_INLINE = "window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};"
 INLINE_SCRIPTS_INIT = [JS_FLAG]
 
 
@@ -511,6 +512,10 @@ def analytics_tags(allow):
         INLINE_SCRIPTS.add(GA_INLINE)
         out.append('<script>%s</script>\n<script defer src="%s" data-ga="%s"></script>' % (GA_INLINE, a("assets/js/consent.js"), esc(GA4_ID)))
     if VERCEL_ANALYTICS:
+        # Queue stub so main.js can record custom events (call_click,
+        # appointment_cta) before the deferred script has loaded.
+        INLINE_SCRIPTS.add(VA_INLINE)
+        out.append('<script>%s</script>' % VA_INLINE)
         out.append('<script defer src="/_vercel/insights/script.js"></script>')
         out.append('<script defer src="/_vercel/speed-insights/script.js"></script>')
     return "\n".join(out)
@@ -670,11 +675,11 @@ def trail_for(slug, name):
     return t
 
 
-def page_hero(trail, eyebrow, h1, lede, media=None, cta=True, h1_html=None):
+def page_hero(trail, eyebrow, h1, lede, media=None, cta=True, h1_html=None, cta_href="/meet-and-greet", cta_label="Book a meet and greet"):
     btns = ""
     if cta:
-        btns = ('<div class="btn-row"><a class="btn" href="/meet-and-greet" data-loc="page-hero">Book a meet and greet %s</a>'
-                '<a class="btn ghost" href="tel:%s" data-loc="page-hero">Call %s</a></div>' % (icon("arrow"), PRACTICE["tel"], PRACTICE["phone"]))
+        btns = ('<div class="btn-row"><a class="btn" href="%s" data-loc="page-hero">%s %s</a>'
+                '<a class="btn ghost" href="tel:%s" data-loc="page-hero">Call %s</a></div>' % (cta_href, esc(cta_label), icon("arrow"), PRACTICE["tel"], PRACTICE["phone"]))
     text = """<div>%s<p class="eyebrow">%s</p><h1>%s</h1>%s%s</div>""" % (
         crumbs_html(trail), esc(eyebrow), h1_html or esc(h1), ('<p class="lede">%s</p>' % lede) if lede else "", btns)
     if media:
@@ -829,7 +834,9 @@ def csp():
 
 def build_vercel():
     import redirects as R
-    rules = R.vercel_rules({**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}, R.MAIN_PATTERNS)
+    main_exact = {**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}
+    # /?p=ID shortlinks first: they are the only rules on "/" for the apex host.
+    rules = R.shortlink_rules(R.shortlink_map("legacymedicalpalmbeach.com", main_exact)) + R.vercel_rules(main_exact, R.MAIN_PATTERNS)
     # www -> apex. Two rules because "/:path*" does not match the bare root on Vercel.
     www = [{"source": "/", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/", "permanent": True},
            {"source": "/:path*", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/:path*", "permanent": True}]
@@ -852,6 +859,11 @@ def build_vercel():
         "trailingSlash": False,
         "headers": [
             {"source": "/(.*)", "headers": sec},
+            # Any *.vercel.app host serving this project is a duplicate of the real
+            # domain. Vercel noindexes preview URLs itself, but NOT the production
+            # alias (legacymedical.vercel.app answered 200 with index,follow on
+            # 2026-10-14). Keyed on host, so legacymedicalpalmbeach.com is untouched.
+            {"source": "/(.*)", "has": [{"type": "host", "value": ".*\\.vercel\\.app"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow"}]},
             {"source": "/assets/(css|js)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
             {"source": "/assets/fonts/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
             {"source": "/assets/(img|video)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400"}]},
@@ -866,20 +878,31 @@ def build_vercel():
         f.write("\n")
     # cmedjupiter.com: the domain is not ours yet. Three ready-to-use forms.
     cm = {**R.CMED, **R.post_map("cmedjupiter.com")}
+    cm_short = R.shortlink_map("cmedjupiter.com", cm)
     d = os.path.join(ROOT, "_dev", "redirects")
     os.makedirs(d, exist_ok=True)
-    vr = R.vercel_rules(cm, R.CMED_PATTERNS, absolute=True)
+    vr = R.shortlink_rules(cm_short, absolute=True) + R.vercel_rules(cm, R.CMED_PATTERNS, absolute=True)
     json.dump({"redirects": vr}, open(os.path.join(d, "cmedjupiter.vercel.json"), "w"), indent=2)
-    ht = ["# cmedjupiter.com -> legacymedicalpalmbeach.com (301).", "# Place at the top of the site root .htaccess, ABOVE the \"# BEGIN WordPress\" block.", "# NE keeps \"#reviews\" from being escaped to %23.", "RewriteEngine On"]
+    ht = ["# cmedjupiter.com -> legacymedicalpalmbeach.com (301).", "# Place at the top of the site root .htaccess, ABOVE the \"# BEGIN WordPress\" block.", "# NE keeps \"#reviews\" from being escaped to %23.",
+          "# Once live, every path on this host redirects, wp-admin included: retire the WordPress install.", "RewriteEngine On",
+          "# WordPress shortlinks (/?p=ID). QSD (Apache 2.4+) drops the old query string."]
+    for pid, dst in sorted(cm_short.items()):
+        ht.append("RewriteCond %%{QUERY_STRING} (^|&)p=%d(&|$)" % pid)
+        ht.append("RewriteRule ^$ %s%s [R=301,L,NE,QSD]" % (R.NEW, dst))
     for src, dst in sorted(cm.items(), key=lambda kv: -len(kv[0])):
         pat = "^" + re.escape(src.strip("/")) + "/?$" if src != "/" else "^$"
         ht.append("RewriteRule %s %s%s [R=301,L,NE]" % (pat, R.NEW, dst))
+    ht.append("RewriteRule ^robots\\.txt$ %s/robots.txt [R=301,L]" % R.NEW)
+    ht.append("RewriteRule ^wp-sitemap.*\\.xml$ %s/sitemap.xml [R=301,L]" % R.NEW)
+    ht.append("RewriteRule ^(comments/)?feed/?$ %s/journal/feed.xml [R=301,L]" % R.NEW)
     ht.append("RewriteRule ^(category|tag|author)/ %s/journal [R=301,L]" % R.NEW)
     ht.append("RewriteRule ^\\d{4}/ %s/journal [R=301,L]" % R.NEW)
     ht.append("RewriteRule ^ %s/ [R=301,L]" % R.NEW)
     open(os.path.join(d, "cmedjupiter.htaccess"), "w").write("\n".join(ht) + "\n")
     rows = ["old_url,new_url"] + ["https://cmedjupiter.com%s,%s%s" % (k, R.NEW, v) for k, v in sorted(cm.items())]
-    rows += ["https://legacymedicalpalmbeach.com%s,%s%s" % (k, R.NEW, v) for k, v in sorted({**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}.items())]
+    rows += ["https://cmedjupiter.com/?p=%d,%s%s" % (k, R.NEW, v) for k, v in sorted(cm_short.items())]
+    rows += ["https://legacymedicalpalmbeach.com%s,%s%s" % (k, R.NEW, v) for k, v in sorted(main_exact.items())]
+    rows += ["https://legacymedicalpalmbeach.com/?p=%d,%s%s" % (k, R.NEW, v) for k, v in sorted(R.shortlink_map("legacymedicalpalmbeach.com", main_exact).items())]
     open(os.path.join(d, "redirect-map.csv"), "w").write("\n".join(rows) + "\n")
 
 

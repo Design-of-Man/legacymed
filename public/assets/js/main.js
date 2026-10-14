@@ -9,16 +9,22 @@
   const desktopNav = window.matchMedia("(min-width: 1101px)"); // keep in sync with site.css
 
   /* ---------- analytics shim: no-op unless GA4 was loaded with consent ---------- */
+  // Mirrored to Vercel Web Analytics when its script is on the page. Payloads
+  // carry placement and path only, never a field value, condition or service.
   const track = (name, params) => {
-    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+    const data = Object.assign({ page_path: location.pathname }, params || {});
+    if (typeof window.gtag === "function") window.gtag("event", name, data);
+    if (typeof window.va === "function") window.va("event", { name: name, data: data });
   };
   document.addEventListener("click", (e) => {
-    const a = e.target.closest("a[href^='tel:'], a[href^='mailto:'], [data-track]");
+    const a = e.target.closest("a[href^='tel:'], a[href^='mailto:'], a[href^='/meet-and-greet'], [data-track]");
     if (!a) return;
-    if (a.matches("a[href^='tel:']")) track("call_click", { link_location: a.dataset.loc || "page" });
-    else if (a.matches("a[href^='mailto:']")) track("email_click", { link_location: a.dataset.loc || "page" });
-    else track(a.dataset.track, { link_location: a.dataset.loc || "page" });
-  });
+    const loc = { link_location: a.dataset.loc || "page" };
+    if (a.matches("a[href^='tel:']")) track("call_click", loc);
+    else if (a.matches("a[href^='mailto:']")) track("email_click", loc);
+    else if (a.matches("a[href^='/meet-and-greet']")) track("appointment_cta", loc);
+    else track(a.dataset.track, loc);
+  }, true);
 
   /* ---------- header: solid after the hero, tucks away while reading ---------- */
   const header = document.querySelector(".site-header");
@@ -27,6 +33,9 @@
   if (hero) body.classList.add("has-hero");
   let lastY = window.scrollY;
   let ticking = false;
+  // The quick-contact bar never sits over a form (it covered the submit button
+  // at 393px): it stays hidden while any form in <main> is on screen.
+  let formInView = false;
   const onScroll = () => {
     const y = window.scrollY;
     const threshold = hero ? hero.offsetHeight - 120 : 24;
@@ -37,7 +46,7 @@
       if (goingDown && y > 520) header.classList.add("tucked");
       else if (goingUp || y < 520) header.classList.remove("tucked");
     }
-    if (callbar) callbar.classList.toggle("show", y > (hero ? threshold * 0.6 : 400));
+    if (callbar) callbar.classList.toggle("show", !formInView && y > (hero ? threshold * 0.6 : 400));
     // Nothing floats over the hero: the chat launcher waits until it is passed.
     body.classList.toggle("past-hero", !hero || y > threshold * 0.6);
     lastY = y;
@@ -46,6 +55,16 @@
   window.addEventListener("scroll", () => {
     if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
   }, { passive: true });
+  const forms = document.querySelectorAll("main form");
+  if (callbar && forms.length && "IntersectionObserver" in window) {
+    const onScreen = new Set();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => (e.isIntersecting ? onScreen.add(e.target) : onScreen.delete(e.target)));
+      formInView = onScreen.size > 0;
+      onScroll();
+    });
+    forms.forEach((f) => io.observe(f));
+  }
   header.addEventListener("focusin", () => header.classList.remove("tucked"));
 
   onScroll();
