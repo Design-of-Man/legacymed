@@ -25,3 +25,12 @@ Nothing below was guessed on the site. Each item is either left out of the copy 
 - A short signed letter from Dr. Shtern (why she started Legacy Medical). The strongest honest signal on MD² and Private Medical; needs her own words.
 - A stated panel size ("we care for about N members"). Only with a number she confirms.
 - "Accepting new members" status line. Only if true and kept current.
+
+## Journal: 40 articles added Oct 14, 2026 (need Dr. Shtern's review)
+Batches in journal_batch_a..d.py. reviewed_by stays None until she signs off. Lines the writers flagged:
+- Fast-moving guidance: 2026 ACC/AHA cholesterol guideline (statins post), pneumococcal age 50 (CDC 2024), USPSTF prostate and cervical (2018, updates in progress), hepatitis B and RSV vaccine ages.
+- Inferred wording to confirm: "PPSV23 only, a conjugate vaccine is usually still recommended"; shingles post mentions the 2025 Zostavax/dementia study (remove if she prefers).
+- General clinical advice without a single source: AAA ultrasound fasting, colonoscopy prep, gout "hot joint with fever needs same-day care".
+- Fiber targets (28 g men / 22 g women over 50) vs National Academies 30/21; fiber intake stat is from a conference abstract.
+- Advance directives post is general information only, with a pointer to a Florida attorney.
+- PSA "drawn in the office" follows from in-office labs but is not stated in content.py literally.
