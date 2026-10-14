@@ -1983,7 +1983,7 @@ REDIRECTS = [('https://cmedjupiter.com/2020/08/11/covid-19-5-tips-on-how-to-avoi
 # Articles written for the 2026 rebuild go first (newest), then the migrated ones.
 from journal_concierge import NEW_POSTS  # noqa: E402
 import importlib  # noqa: E402
-for _m in ("journal_batch_b", "journal_batch_c", "journal_batch_d"):
+for _m in ("journal_batch_a", "journal_batch_b", "journal_batch_c", "journal_batch_d"):
     try:
         NEW_POSTS = NEW_POSTS + importlib.import_module(_m).POSTS
     except ModuleNotFoundError:

@@ -2131,5 +2131,165 @@
    "avif"
   ],
   "og": true
+ },
+ "j-ckd-stages-egfr-and-albuminuria": {
+  "file": "journal/ckd-stages-egfr-and-albuminuria.jpg",
+  "alt": "Flat stepping stones leading through green grass in a leafy garden beside a large boulder",
+  "credit": "Kathan",
+  "source": "https://www.pexels.com/photo/serene-stone-pathway-in-a-lush-garden-39117267/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-uacr-protein-in-urine-test": {
+  "file": "journal/uacr-protein-in-urine-test.jpg",
+  "alt": "Red, amber and clear glass bottles with a dried flower stem and eucalyptus on a cream backdrop",
+  "credit": "RDNE Stock project",
+  "source": "https://www.pexels.com/photo/glass-vases-on-the-table-8903266/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-kidney-stones-causes-and-prevention": {
+  "file": "journal/kidney-stones-causes-and-prevention.jpg",
+  "alt": "Smooth pebbles on a lakeshore in the foreground, with still water and green trees softly blurred behind",
+  "credit": "Chris F",
+  "source": "https://www.pexels.com/photo/selective-focus-photograph-of-stones-8227402/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-diabetes-and-kidney-disease": {
+  "file": "journal/diabetes-and-kidney-disease.jpg",
+  "alt": "Carrots, leeks, broccoli, cauliflower, radishes and cherry tomatoes laid out on a light wooden table",
+  "credit": "Yaroslav Shuraev",
+  "source": "https://www.pexels.com/photo/variety-of-fresh-vegetables-on-wooden-table-5084088/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-medicines-supplements-kidney-damage": {
+  "file": "journal/medicines-supplements-kidney-damage.jpg",
+  "alt": "Pale herbal capsules and a single ginkgo leaf on a white marble surface",
+  "credit": "Nataliya Vaitkevich",
+  "source": "https://www.pexels.com/photo/ginkgo-leaf-and-capsules-7615616/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-gout-and-uric-acid": {
+  "file": "journal/gout-and-uric-acid.jpg",
+  "alt": "Looking down at a pair of bare feet and rolled-up jeans standing in soft beach sand",
+  "credit": "Elena Golovchenko",
+  "source": "https://www.pexels.com/photo/feet-of-person-standing-barefoot-on-beach-26604293/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-salt-sodium-and-blood-pressure": {
+  "file": "journal/salt-sodium-and-blood-pressure.jpg",
+  "alt": "Coarse white salt heaped in a square wooden bowl with a small wooden scoop",
+  "credit": "Tara Winstead",
+  "source": "https://www.pexels.com/photo/rock-salt-on-a-wooden-container-6690838/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-white-coat-and-masked-hypertension": {
+  "file": "journal/white-coat-and-masked-hypertension.jpg",
+  "alt": "A digital blood pressure monitor and its folded arm cuff lying on a plain white surface",
+  "credit": "Mikhail Nilov",
+  "source": "https://www.pexels.com/photo/a-sphygmomanometer-up-close-8670204/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-potassium-high-and-low-levels": {
+  "file": "journal/potassium-high-and-low-levels.jpg",
+  "alt": "Peeled, chunky slices of orange sweet potato with a rosemary sprig on linen over a wooden table",
+  "credit": "Jess Loiterton",
+  "source": "https://www.pexels.com/photo/overhead-shot-of-chopped-sweet-potatoes-on-a-piece-of-cloth-5505464/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
+ },
+ "j-resistant-hypertension": {
+  "file": "journal/resistant-hypertension.jpg",
+  "alt": "A curving paved walkway lined with tall palm trees and green lawn in a park",
+  "credit": "Thể Phạm",
+  "source": "https://www.pexels.com/photo/palm-trees-in-park-17282415/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
  }
 }
