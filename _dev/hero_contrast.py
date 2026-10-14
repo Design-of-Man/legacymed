@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Measure text-over-video contrast in the home hero.
 
-The hero is the film alone; the only text over it is the play/pause pill.
+The copy sits low on the left over the film, with a gradient shade behind it.
 Hides the text, photographs the box it occupied, and compares the text
 colour with the 98th-percentile brightest pixel behind it (the poster is the
 video's first frame, so this is what visitors see before and during play).
@@ -12,7 +12,7 @@ import verify as V
 from PIL import Image
 from playwright.async_api import async_playwright
 
-SEL = [(".hero-toggle .t", 4.5)]
+SEL = [(".hero-kicker", 4.5), (".hero-title", 3.0), (".hero-lede", 4.5), (".hero-facts dd", 4.5), (".hero-facts dt", 4.5), (".hero-toggle .t", 4.5)]
 
 def lum(rgb):
     def f(c):
@@ -33,12 +33,14 @@ async def main():
             colors = {}
             for sel, _ in SEL:
                 colors[sel] = await pg.evaluate("s => getComputedStyle(document.querySelector(s)).color", sel)
-            await pg.add_style_tag(content=".hero *{color:transparent!important;text-shadow:none!important} .hero-toggle svg{visibility:hidden}")
+            await pg.add_style_tag(content=".hero *{color:transparent!important;text-shadow:none!important;border-color:transparent!important} .hero .btn{visibility:hidden} .hero-toggle svg{visibility:hidden}")
             for sel, need in SEL:
                 els = await pg.query_selector_all(sel)
                 worst = 99
                 for el in els:
                     box = await el.bounding_box()
+                    if not box or box["width"] < 2 or not await el.is_visible():
+                        continue
                     png = await pg.screenshot(clip=box, full_page=True)
                     im = Image.open(io.BytesIO(png)).convert("RGB")
                     ls = sorted(lum(px) for px in im.get_flattened_data())

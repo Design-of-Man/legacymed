@@ -54,13 +54,11 @@ def home(B):
                '<link rel="preload" as="image" type="image/avif" href="%(pa)s" media="(max-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"]]
 
     title_lines = "".join('<span class="ln">%s</span>' % ln for ln in H["hero_lines"])
-    # The film stands on its own; the words sit beside Dr. Shtern right below it.
-    hero = """<section class="hero" aria-label="The Jupiter Inlet at sunset">
+    # The film fills the screen; a compact block of copy sits low on the left (Elite-style).
+    hero = """<section class="hero" aria-labelledby="hero-h">
   <div class="hero-media">%(poster)s%(video)s</div>
-  <div class="hero-ctl"><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Jupiter Inlet film</span></button></div>
-</section>""" % {"poster": poster, "video": video, "play": B.ICONS["play"], "pause": B.ICONS["pause"].replace('class="i-pause"', 'class="i-pause" hidden')}
-
-    intro_card = """<div class="intro-card">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
       <h1 id="hero-h"><span class="hero-kicker">%(kicker)s</span><span class="hero-title">%(lines)s</span></h1>
       <p class="hero-lede">%(lede)s</p>
       <div class="btn-row">
@@ -72,9 +70,13 @@ def home(B):
         <div><dt>Office</dt><dd><a href="%(maps)s" rel="noopener" target="_blank">%(street)s<span class="sr-only"> (opens Google Maps)</span></a><br>%(city)s, FL %(postal)s</dd></div>
         <div><dt>Hours</dt><dd>Mon–Thu 9–5, Fri 9–2<br>Members: phone 24/7</dd></div>
       </dl>
-    </div>""" % {"kicker": esc(H["kicker"]), "lines": title_lines, "lede": H["hero_lede"],
+    </div>
+  </div>
+  <div class="hero-ctl"><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Jupiter Inlet film</span></button></div>
+</section>""" % {"poster": poster, "video": video, "kicker": esc(H["kicker"]), "lines": title_lines, "lede": H["hero_lede"],
                  "arrow": icon("arrow"), "tel": P["tel"], "phone": P["phone"], "phoneico": icon("phone"),
-                 "maps": esc(P["google_maps"]), "street": P["street_short"], "city": P["city"], "postal": P["postal"]}
+                 "maps": esc(P["google_maps"]), "street": P["street_short"], "city": P["city"], "postal": P["postal"],
+                 "play": B.ICONS["play"], "pause": B.ICONS["pause"].replace('class="i-pause"', 'class="i-pause" hidden')}
 
     problem = """<section class="section" aria-labelledby="problem-h">
   <div class="wrap split">
@@ -92,29 +94,24 @@ def home(B):
 
     creds = "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v) for k, v in D["home_creds"])
     q = C.TESTIMONIALS[0]
-    guide = """<section class="section doc-feature" aria-labelledby="hero-h">
-  <div class="wrap intro">
-    %(card)s
-    <div class="intro-doc">
-      <div class="doc-head">
-        <figure class="cap-fig"><div class="doctor-photo" data-reveal="clip">%(photo)s</div></figure>
-        <div>
-          <p class="eyebrow">Your physician</p>
-          <h2 id="doc-h" class="doc-name">Dr. Yana Shtern<span>, MD</span></h2>
-          <p class="doc-role">Board-certified in internal medicine and nephrology</p>
-        </div>
-      </div>
+    guide = """<section class="section doc-feature" aria-labelledby="doc-h">
+  <div class="wrap doctor">
+    <figure class="cap-fig"><div class="doctor-photo" data-reveal="clip">%(photo)s</div><figcaption class="ph-cap">Dr. Yana Shtern, MD<span>Legacy Medical, Palm Beach Gardens</span></figcaption></figure>
+    <div>
+      <p class="eyebrow">Your physician</p>
+      <h2 id="doc-h" class="doc-name">Dr. Yana Shtern<span>, MD</span></h2>
+      <p class="doc-role">Board-certified in internal medicine and nephrology</p>
       <p class="doc-line">%(line)s</p>
       <div class="stack" style="margin-top:1.5rem;max-width:36rem">%(body)s</div>
       <dl class="creds">%(creds)s</dl>
       <blockquote class="doc-quote"><p>%(quote)s</p><footer>%(who)s, %(src)s</footer></blockquote>
-      <div class="btn-row" style="margin-top:2rem"><a class="btn ghost" href="/dr-yana-shtern" data-loc="doctor">Her background %(arrow)s</a></div>
+      <div class="btn-row" style="margin-top:2rem"><a class="btn" href="/meet-and-greet" data-loc="doctor">Book a meet and greet %(arrow)s</a><a class="btn ghost" href="/dr-yana-shtern" data-loc="doctor">Her background</a></div>
     </div>
   </div>
-</section>""" % {"photo": photo(D["photo"], "Dr. Yana Shtern, MD, at Legacy Medical in Palm Beach Gardens", sizes="(max-width: 880px) 40vw, 16rem", max_w=800),
+</section>""" % {"photo": photo(D["photo"], "Dr. Yana Shtern, MD, at Legacy Medical in Palm Beach Gardens", sizes="(max-width: 880px) 90vw, 42vw", max_w=1200),
                  "line": esc(H["guide_h"]), "body": H["guide_body"], "creds": creds,
                  "quote": esc("She identified the cause of my problem rather than only trying to treat my symptoms as the other doctors I saw did."),
-                 "who": "Patient review", "src": q["source_html"], "arrow": icon("arrow"), "card": intro_card}
+                 "who": "Patient review", "src": q["source_html"], "arrow": icon("arrow")}
 
     (m1, a1), (m2, a2) = H["manifesto_photos"]
     manifesto = """<section class="section manifesto" aria-labelledby="mani-h">
@@ -212,7 +209,7 @@ def home(B):
                      {"@type": "WebPage", "@id": B.url("") + "#webpage", "url": B.url(""), "name": C.HOME_TITLE,
                       "isPartOf": {"@id": B.SITE_ID}, "about": {"@id": B.ORG_ID}, "primaryImageOfPage": B.BASE + v["posters"]["j1920"],
                       "inLanguage": "en-US"})
-    B.write_page("", C.HOME_TITLE, C.HOME_DESC, body, schema=schema, og_image="/assets/img/og/home.jpg", preload=preload)
+    B.write_page("", C.HOME_TITLE, C.HOME_DESC, body, schema=schema, og_image="/assets/img/og/home.jpg", preload=preload, over_hero=True)
 
 
 def clock_section(B):
