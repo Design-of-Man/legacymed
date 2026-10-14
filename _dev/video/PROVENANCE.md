@@ -1,5 +1,33 @@
 # Hero video: Jupiter Inlet sunset
 
+> **Current encode (Oct 14, 2026): from the 4K original, full clip, no crossfade.** The owner found the
+> 1080p crossfade loop blurry (the 1.25 s dissolve doubles the jetty, and AV1 crf 42 smeared the water).
+> The sections below the line describe the older 1440p loop and are kept for history.
+>
+> - Source: Dropbox `/Nicholas Kashuba/kashuba/Jupiter Inlet Sunset.mov`, 3840x2160 H.264, 50.8 Mb/s,
+>   23.976 fps, 444 frames (18.52 s), sha256 `0f6d4909465c97083dd37b76caf3a81900d0f7015fc0df3da14d90f3c38e88c6`.
+> - No trim, no dissolve, no grade: the whole shot loops with a plain cut. The CSS `filter` on `.hero-media`
+>   adds the saturation.
+> - main.js picks a set by the device pixels the film fills: > 2400 → 2160p, > 1600 → 1440p, else 1080p;
+>   portrait screens get the 1080x1920 crop. Each set lists AV1 webm, then HEVC mp4 (Safari), then H.264.
+>
+> ```sh
+> C="-color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv"
+> A="-an -c:v libsvtav1 -preset 5 -g 48 -pix_fmt yuv420p10le -svtav1-params tune=0:scd=0:enable-overlays=1 $C"
+> H="-an -c:v libx265 -preset medium -tag:v hvc1 -pix_fmt yuv420p $C -movflags +faststart -x265-params keyint=48:min-keyint=48:scenecut=0"
+> X="-an -c:v libx264 -profile:v high -preset slow -tune film -g 48 -keyint_min 48 -sc_threshold 0 -pix_fmt yuv420p $C -movflags +faststart"
+> P="crop=1215:2160:1312:0,scale=1080:1920:flags=lanczos"
+> ffmpeg -i SRC -vf "$P" $A -crf 36 inlet-portrait.webm;  ffmpeg -i SRC -vf "$P" $H -crf 26 inlet-portrait-hevc.mp4;  ffmpeg -i SRC -vf "$P" $X -crf 26 inlet-portrait.mp4
+> ffmpeg -i SRC -vf scale=1920:1080:flags=lanczos $A -crf 36 inlet-1080.webm;  ... $H -crf 26 inlet-1080-hevc.mp4;  ... $X -crf 26 inlet-1080.mp4
+> ffmpeg -i SRC -vf scale=2560:1440:flags=lanczos $A -crf 38 inlet-1440.webm;  ... $H -crf 27 inlet-1440-hevc.mp4
+> ffmpeg -i SRC $A -crf 38 inlet-2160.webm
+> ```
+> Posters: frame 0 of the source, Pillow LANCZOS to 2560/1920/1280/768 wide (AVIF q50-60, WebP q70-72, JPEG q84)
+> and the portrait crop (1312,0)-(2527,2160) to 1080x1920. At crf 36-40 the AV1 frames matched the source
+> side by side on the water and jetty; the source itself is soft drone footage.
+
+---
+
 ## Source
 
 - Dropbox: `/Nicholas Kashuba/kashuba/Jupiter Inlet Sunset-1440p.mp4`

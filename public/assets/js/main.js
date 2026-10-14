@@ -157,12 +157,14 @@
       if (loaded) return;
       loaded = true;
       const portrait = window.matchMedia("(max-aspect-ratio: 4/5)").matches;
-      const wide = window.matchMedia("(min-width: 1000px)").matches;
-      const set = portrait ? video.dataset.portrait : (wide ? video.dataset.hd : video.dataset.sd);
-      const [webm, mp4] = set.split("|");
-      const s1 = document.createElement("source"); s1.src = webm; s1.type = 'video/webm; codecs="av01.0.05M.08"';
-      const s2 = document.createElement("source"); s2.src = mp4; s2.type = "video/mp4";
-      video.append(s1, s2);
+      // Pick by the pixels the film actually fills, so it is never upscaled.
+      const px = video.clientWidth * Math.min(window.devicePixelRatio || 1, 3);
+      const set = portrait ? video.dataset.portrait : (px > 2400 ? video.dataset.uhd : px > 1600 ? video.dataset.qhd : video.dataset.hd);
+      const [av1, hevc, avc] = set.split("|");
+      const types = ['video/webm; codecs="av01.0.12M.10"', 'video/mp4; codecs="hvc1.1.6.L150.B0"', "video/mp4"];
+      [av1, hevc, avc].forEach((src, i) => {
+        const s = document.createElement("source"); s.src = src; s.type = types[i]; video.append(s);
+      });
       video.load();
     };
     const play = () => {

@@ -42,15 +42,15 @@ def home(B):
     v = C.HERO_VIDEO
     poster = ('<picture><source type="image/avif" media="(max-aspect-ratio: 4/5)" srcset="%(pa)s">'
               '<source type="image/webp" media="(max-aspect-ratio: 4/5)" srcset="%(pw)s">'
-              '<source type="image/avif" srcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" sizes="100vw">'
-              '<source type="image/webp" srcset="%(w768)s 768w, %(w1280)s 1280w, %(w1920)s 1920w" sizes="100vw">'
-              '<img src="%(j1280)s" srcset="%(j768)s 768w, %(j1280)s 1280w, %(j1920)s 1920w" sizes="100vw" width="1920" height="1080" '
+              '<source type="image/avif" srcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w, %(a2560)s 2560w" sizes="100vw">'
+              '<source type="image/webp" srcset="%(w768)s 768w, %(w1280)s 1280w, %(w1920)s 1920w, %(w2560)s 2560w" sizes="100vw">'
+              '<img src="%(j1280)s" srcset="%(j768)s 768w, %(j1280)s 1280w, %(j1920)s 1920w, %(j2560)s 2560w" sizes="100vw" width="1920" height="1080" '
               'alt="" fetchpriority="high" decoding="async"></picture>') % v["posters"]
     # No poster attribute: the <picture> underneath is the poster, so the
     # browser never fetches a second copy of the same frame.
     video = ('<video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" disablepictureinpicture '
-             'data-hd="%s" data-sd="%s" data-portrait="%s"></video>' % (v["hd"], v["sd"], v["portrait"]))
-    preload = ['<link rel="preload" as="image" type="image/avif" imagesrcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" imagesizes="100vw" media="(min-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"],
+             'data-uhd="%s" data-qhd="%s" data-hd="%s" data-portrait="%s"></video>' % (v["uhd"], v["qhd"], v["hd"], v["portrait"]))
+    preload = ['<link rel="preload" as="image" type="image/avif" imagesrcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w, %(a2560)s 2560w" imagesizes="100vw" media="(min-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"],
                '<link rel="preload" as="image" type="image/avif" href="%(pa)s" media="(max-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"]]
 
     title_lines = "".join('<span class="ln">%s</span>' % ln for ln in H["hero_lines"])

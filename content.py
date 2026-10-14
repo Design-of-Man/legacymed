@@ -148,14 +148,17 @@ HOME_DESC = ("Concierge internal medicine in Palm Beach Gardens with Dr. Yana Sh
              "One patient at a time, same or next-day visits and 24/7 phone access.")
 
 HERO_VIDEO = {
-    "hd": "/assets/video/inlet-1080.webm|/assets/video/inlet-1080.mp4",
-    "sd": "/assets/video/inlet-720.webm|/assets/video/inlet-720.mp4",
-    "portrait": "/assets/video/inlet-portrait.webm|/assets/video/inlet-portrait.mp4",
+    # Encoded from the 3840x2160 original (see _dev/video/PROVENANCE.md). main.js picks by device pixels.
+    # Each set: AV1 webm | HEVC mp4 (Safari) | H.264 mp4 (last resort).
+    "uhd": "/assets/video/inlet-2160.webm|/assets/video/inlet-1440-hevc.mp4|/assets/video/inlet-1080.mp4",
+    "qhd": "/assets/video/inlet-1440.webm|/assets/video/inlet-1440-hevc.mp4|/assets/video/inlet-1080.mp4",
+    "hd": "/assets/video/inlet-1080.webm|/assets/video/inlet-1080-hevc.mp4|/assets/video/inlet-1080.mp4",
+    "portrait": "/assets/video/inlet-portrait.webm|/assets/video/inlet-portrait-hevc.mp4|/assets/video/inlet-portrait.mp4",
     "posters": {
-        "a768": "/assets/video/inlet-poster-768.avif", "a1280": "/assets/video/inlet-poster-1280.avif", "a1920": "/assets/video/inlet-poster-1920.avif",
-        "w768": "/assets/video/inlet-poster-768.webp", "w1280": "/assets/video/inlet-poster-1280.webp", "w1920": "/assets/video/inlet-poster-1920.webp",
-        "j768": "/assets/video/inlet-poster-768.jpg", "j1280": "/assets/video/inlet-poster-1280.jpg", "j1920": "/assets/video/inlet-poster-1920.jpg",
-        "pa": "/assets/video/inlet-poster-portrait-720.avif", "pw": "/assets/video/inlet-poster-portrait-720.webp", "pj": "/assets/video/inlet-poster-portrait-720.jpg",
+        "a768": "/assets/video/inlet-poster-768.avif", "a1280": "/assets/video/inlet-poster-1280.avif", "a1920": "/assets/video/inlet-poster-1920.avif", "a2560": "/assets/video/inlet-poster-2560.avif",
+        "w768": "/assets/video/inlet-poster-768.webp", "w1280": "/assets/video/inlet-poster-1280.webp", "w1920": "/assets/video/inlet-poster-1920.webp", "w2560": "/assets/video/inlet-poster-2560.webp",
+        "j768": "/assets/video/inlet-poster-768.jpg", "j1280": "/assets/video/inlet-poster-1280.jpg", "j1920": "/assets/video/inlet-poster-1920.jpg", "j2560": "/assets/video/inlet-poster-2560.jpg",
+        "pa": "/assets/video/inlet-poster-portrait-1080.avif", "pw": "/assets/video/inlet-poster-portrait-1080.webp", "pj": "/assets/video/inlet-poster-portrait-1080.jpg",
     },
 }
 
