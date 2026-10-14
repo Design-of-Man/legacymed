@@ -162,7 +162,10 @@ def resolve(url, vercel, ht):
 def live_chain(base, path):
     hops, url = [], "https://%s%s" % (base, path)
     for _ in range(8):
-        r = subprocess.run(["curl", "-sS", "-m", "25", "-o", "/dev/null", "-w", "%{http_code} %{redirect_url}", url], capture_output=True, text=True).stdout.split(" ", 1)
+        for _try in range(3):  # retry network failures (status 000), not real answers
+            r = subprocess.run(["curl", "-sS", "-m", "25", "-o", "/dev/null", "-w", "%{http_code} %{redirect_url}", url], capture_output=True, text=True).stdout.split(" ", 1)
+            if r[0] not in ("", "000"):
+                break
         code, loc = r[0], (r[1].strip() if len(r) > 1 else "")
         if code.startswith("3") and loc:
             hops.append(code)
