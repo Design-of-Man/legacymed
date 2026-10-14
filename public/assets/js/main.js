@@ -9,23 +9,33 @@
   const desktopNav = window.matchMedia("(min-width: 1101px)"); // keep in sync with site.css
 
   /* ---------- analytics shim: no-op unless GA4 was loaded with consent ---------- */
+  // Mirrored to Vercel Web Analytics when its script is on the page. Payloads
+  // carry placement and path only, never a field value, condition or service.
   const track = (name, params) => {
-    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+    const data = Object.assign({ page_path: location.pathname }, params || {});
+    if (typeof window.gtag === "function") window.gtag("event", name, data);
+    if (typeof window.va === "function") window.va("event", { name: name, data: data });
   };
   document.addEventListener("click", (e) => {
-    const a = e.target.closest("a[href^='tel:'], a[href^='mailto:'], [data-track]");
+    const a = e.target.closest("a[href^='tel:'], a[href^='mailto:'], a[href^='/meet-and-greet'], [data-track]");
     if (!a) return;
-    if (a.matches("a[href^='tel:']")) track("call_click", { link_location: a.dataset.loc || "page" });
-    else if (a.matches("a[href^='mailto:']")) track("email_click", { link_location: a.dataset.loc || "page" });
-    else track(a.dataset.track, { link_location: a.dataset.loc || "page" });
-  });
+    const loc = { link_location: a.dataset.loc || "page" };
+    if (a.matches("a[href^='tel:']")) track("call_click", loc);
+    else if (a.matches("a[href^='mailto:']")) track("email_click", loc);
+    else if (a.matches("a[href^='/meet-and-greet']")) track("appointment_cta", loc);
+    else track(a.dataset.track, loc);
+  }, true);
 
   /* ---------- header: solid after the hero, tucks away while reading ---------- */
   const header = document.querySelector(".site-header");
   const hero = document.querySelector(".hero");
   const callbar = document.querySelector(".callbar");
+  if (hero) body.classList.add("has-hero");
   let lastY = window.scrollY;
   let ticking = false;
+  // The quick-contact bar never sits over a form (it covered the submit button
+  // at 393px): it stays hidden while any form in <main> is on screen.
+  let formInView = false;
   const onScroll = () => {
     const y = window.scrollY;
     const threshold = hero ? hero.offsetHeight - 120 : 24;
@@ -36,14 +46,27 @@
       if (goingDown && y > 520) header.classList.add("tucked");
       else if (goingUp || y < 520) header.classList.remove("tucked");
     }
-    if (callbar) callbar.classList.toggle("show", y > (hero ? threshold * 0.6 : 400));
+    if (callbar) callbar.classList.toggle("show", !formInView && y > (hero ? threshold * 0.6 : 400));
+    // Nothing floats over the hero: the chat launcher waits until it is passed.
+    body.classList.toggle("past-hero", !hero || y > threshold * 0.6);
     lastY = y;
     ticking = false;
   };
   window.addEventListener("scroll", () => {
     if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
   }, { passive: true });
+  const forms = document.querySelectorAll("main form");
+  if (callbar && forms.length && "IntersectionObserver" in window) {
+    const onScreen = new Set();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => (e.isIntersecting ? onScreen.add(e.target) : onScreen.delete(e.target)));
+      formInView = onScreen.size > 0;
+      onScroll();
+    });
+    forms.forEach((f) => io.observe(f));
+  }
   header.addEventListener("focusin", () => header.classList.remove("tucked"));
+
   onScroll();
 
   /* ---------- navigation ---------- */
@@ -101,6 +124,22 @@
     });
   });
 
+  /* ---------- videos: swap the poster for the player only on press ---------- */
+  document.querySelectorAll(".vid[data-yt]").forEach((box) => {
+    const btn = box.querySelector(".vid-play");
+    if (!btn) return;
+    btn.addEventListener("click", () => {
+      const f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(box.dataset.yt) + "?autoplay=1&rel=0&playsinline=1";
+      f.title = box.dataset.title || "Video";
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      f.referrerPolicy = "strict-origin-when-cross-origin";
+      box.replaceChildren(f);
+      f.focus();
+    });
+  });
+
   /* ---------- reveal on scroll ---------- */
   const revealables = document.querySelectorAll("[data-reveal], .clock");
   if ("IntersectionObserver" in window && !reduceMotion.matches) {
@@ -129,7 +168,7 @@
     let wantPlay = false;
     const setToggle = (playing) => {
       vToggle.setAttribute("aria-pressed", String(playing));
-      vToggle.setAttribute("aria-label", playing ? "Pause background video" : "Play background video");
+      vToggle.querySelector(".t").textContent = playing ? "Pause" : "Play";
       vToggle.querySelector(".i-play").toggleAttribute("hidden", playing);
       vToggle.querySelector(".i-pause").toggleAttribute("hidden", !playing);
     };
@@ -137,12 +176,14 @@
       if (loaded) return;
       loaded = true;
       const portrait = window.matchMedia("(max-aspect-ratio: 4/5)").matches;
-      const wide = window.matchMedia("(min-width: 1000px)").matches;
-      const set = portrait ? video.dataset.portrait : (wide ? video.dataset.hd : video.dataset.sd);
-      const [webm, mp4] = set.split("|");
-      const s1 = document.createElement("source"); s1.src = webm; s1.type = 'video/webm; codecs="av01.0.05M.08"';
-      const s2 = document.createElement("source"); s2.src = mp4; s2.type = "video/mp4";
-      video.append(s1, s2);
+      // Pick by the pixels the film actually fills, so it is never upscaled.
+      const px = video.clientWidth * Math.min(window.devicePixelRatio || 1, 3);
+      const set = portrait ? video.dataset.portrait : (px > 2400 ? video.dataset.uhd : px > 1600 ? video.dataset.qhd : video.dataset.hd);
+      const [av1, hevc, avc] = set.split("|");
+      const types = ['video/webm; codecs="av01.0.12M.10"', 'video/mp4; codecs="hvc1.1.6.L150.B0"', "video/mp4"];
+      [av1, hevc, avc].forEach((src, i) => {
+        const s = document.createElement("source"); s.src = src; s.type = types[i]; video.append(s);
+      });
       video.load();
     };
     const play = () => {
@@ -223,12 +264,31 @@
   /* ---------- journal filter ---------- */
   const chips = document.querySelectorAll(".chips button");
   if (chips.length) {
-    const posts = document.querySelectorAll(".post-list li");
+    const posts = document.querySelectorAll(".post-grid li, .post-list li");
+    const more = document.querySelector("[data-more]");
+    const LIMIT = 24;
+    let cat = "all", expanded = false;
+    const apply = () => {
+      let n = 0;
+      posts.forEach((p) => {
+        const match = cat === "all" || p.dataset.cat === cat;
+        p.hidden = !match || (cat === "all" && !expanded && n >= LIMIT);
+        if (match) n++;
+      });
+      if (more) more.hidden = !(cat === "all" && !expanded && n > LIMIT);
+    };
     chips.forEach((c) => c.addEventListener("click", () => {
       chips.forEach((o) => o.setAttribute("aria-pressed", String(o === c)));
-      const cat = c.dataset.cat;
-      posts.forEach((p) => { p.hidden = cat !== "all" && p.dataset.cat !== cat; });
+      cat = c.dataset.cat;
+      apply();
     }));
+    if (more) more.addEventListener("click", () => {
+      const first = [...posts].find((p) => p.hidden);
+      expanded = true;
+      apply();
+      if (first) { const a = first.querySelector("a"); if (a) a.focus(); }
+    });
+    apply();
   }
 
   /* ---------- live Google reviews (only when the API is configured) ---------- */

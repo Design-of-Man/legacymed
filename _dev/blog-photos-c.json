@@ -1,0 +1,162 @@
+{
+  "j-colon-cancer-screening-colonoscopy-stool-tests": {
+    "file": "journal/colon-cancer-screening-colonoscopy-stool-tests.jpg",
+    "alt": "A cream ceramic bowl of red apples and yellow pears on a linen cloth on a light table",
+    "credit": "Julia Olson",
+    "source": "https://www.pexels.com/photo/elegant-still-life-of-apples-and-pears-in-bowl-36988020/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  },
+  "j-prostate-cancer-screening-psa-test": {
+    "file": "journal/prostate-cancer-screening-psa-test.jpg",
+    "alt": "A hand holding a turquoise mug of black coffee over a pale wooden table",
+    "credit": "Aleksandar Cvetanovic",
+    "source": "https://www.pexels.com/photo/person-holding-green-ceramic-mug-1422348/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  },
+  "j-abdominal-aortic-aneurysm-screening": {
+    "file": "journal/abdominal-aortic-aneurysm-screening.jpg",
+    "alt": "A still lake reflecting palm trees, green scrub and a blue sky with white clouds",
+    "credit": "Jeffrey Eisen",
+    "source": "https://www.pexels.com/photo/wood-landscape-water-summer-17376055/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  },
+  "j-hepatitis-c-and-hepatitis-b-screening": {
+    "file": "journal/hepatitis-c-and-hepatitis-b-screening.jpg",
+    "alt": "Three lemons on a clear glass plate against a soft peach background",
+    "credit": "Tara Winstead",
+    "source": "https://www.pexels.com/photo/plate-with-lemons-on-beige-surface-6489737/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  },
+  "j-eye-health-after-50": {
+    "file": "journal/eye-health-after-50.jpg",
+    "alt": "Black-framed eyeglasses resting on an open book against a pale wall",
+    "credit": "ugurlu photographer",
+    "source": "https://www.pexels.com/photo/close-up-of-eyeglasses-on-book-336407/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  },
+  "j-depression-in-older-adults": {
+    "file": "journal/depression-in-older-adults.jpg",
+    "alt": "An empty upholstered armchair by a curtained window, with two lit table lamps on either side",
+    "credit": "Katrīne Skrebele",
+    "source": "https://www.pexels.com/photo/a-chair-by-the-window-11433090/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  },
+  "j-loneliness-and-social-connection": {
+    "file": "journal/loneliness-and-social-connection.jpg",
+    "alt": "Two people's hands working on a jigsaw puzzle together on a wooden table",
+    "credit": "Mikhail Nilov",
+    "source": "https://www.pexels.com/photo/close-up-shot-of-two-people-playing-jigsaw-puzzle-on-a-wooden-surface-8654527/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  },
+  "j-brain-health-what-the-evidence-supports": {
+    "file": "journal/brain-health-what-the-evidence-supports.jpg",
+    "alt": "A wooden boardwalk winding through a green mangrove forest in daylight",
+    "credit": "icon0 com",
+    "source": "https://www.pexels.com/photo/brown-wooden-bridge-beside-green-leafy-trees-726298/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  },
+  "j-caregiver-burnout-caring-for-a-parent": {
+    "file": "journal/caregiver-burnout-caring-for-a-parent.jpg",
+    "alt": "An older person's hands clasped with a younger person's hands on a round wooden table",
+    "credit": "Kindel Media",
+    "source": "https://www.pexels.com/photo/a-close-up-shot-of-people-holding-hands-8172607/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  },
+  "j-florida-advance-directives-health-care-surrogate": {
+    "file": "journal/florida-advance-directives-health-care-surrogate.jpg",
+    "alt": "A hand signing a printed document with a silver fountain pen on a light wooden desk",
+    "credit": "Cytonn Photography",
+    "source": "https://www.pexels.com/photo/white-paper-and-silver-fountain-pen-955394/",
+    "q": 76,
+    "widths": [
+      800,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "og": true
+  }
+}

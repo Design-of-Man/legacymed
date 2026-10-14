@@ -8,15 +8,15 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 PRIVACY = """
 <p><strong>Effective October 10, 2026.</strong> This notice covers this website, legacymedicalpalmbeach.com. How Legacy Medical PLLC uses and protects your health information as a patient is described separately in our <a href="/notice-of-privacy-practices">Notice of Privacy Practices</a>.</p>
 <h2>What we collect</h2>
-<p>If you send a tour or contact request, through the form or the site assistant, we receive what you type: your name, phone number, email address, what you are interested in, the best time to reach you, and any short note. The form asks you not to include medical details. Please follow that request; email and web forms are not the right place for health information.</p>
+<p>If you send a meet and greet or contact request, through the form or the site assistant, we receive what you type: your name, phone number, email address, what you are interested in, the best time to reach you, and any short note. The form asks you not to include medical details. Please follow that request; email and web forms are not the right place for health information.</p>
 <p>Our hosting provider, Vercel, keeps standard server logs (such as IP address, browser type and the page requested) to deliver and protect the site.</p>
 <h2>Analytics</h2>
 <p>We may measure which pages are visited so we can improve the site. Google Analytics only loads if you choose "Allow" on the banner, and it never loads on pages that contain a form. We do not use advertising pixels, retargeting, session recording, or social media tracking, and we do not sell or share personal information for advertising.</p>
 <p>The site may also use Vercel Web Analytics, which counts visits without cookies and without identifying individual visitors.</p>
 <h2>How we use what you send</h2>
-<p>We use form submissions only to reply to you and arrange a tour or call. Submissions are delivered to the practice by email through our email provider. We do not add you to marketing lists.</p>
+<p>We use form submissions only to reply to you and arrange a meet and greet or call. Submissions are delivered to the practice by email through our email provider. We do not add you to marketing lists.</p>
 <h2>Maps and outside links</h2>
-<p>Pages with a map load an embedded Google Map, and Google may set its own cookies when it does. The map does not receive anything you type into our forms. Links to other websites, such as hospital or review sites, are governed by those sites' own policies.</p>
+<p>Pages with a map load an embedded Google Map, and Google may set its own cookies when it does. The map does not receive anything you type into our forms. The Videos page shows our own copy of each video's preview image; YouTube only loads, from its privacy-enhanced youtube-nocookie.com domain, when you press play, and YouTube's own policies apply from then on. Links to other websites, such as hospital or review sites, are governed by those sites' own policies.</p>
 <h2>Your choices</h2>
 <p>You can clear your analytics choice by clearing this site's data in your browser. To ask what we hold about you from this website, or to have it deleted, contact us at <a href="mailto:info@legacymedicalpalmbeach.com">info@legacymedicalpalmbeach.com</a> or (561) 834-9280.</p>
 <h2>Children</h2>
@@ -51,7 +51,7 @@ _npp_html = _npp()
 LEGAL = {
     "privacy": {"title": "Website Privacy Notice | Legacy Medical", "crumb": "Website privacy", "eyebrow": "Privacy",
                 "h1": "Website privacy notice", "lede": "What this website collects, and what it does not.",
-                "desc": "How the Legacy Medical website handles information: tour requests, consent-based analytics, no advertising pixels, and no tracking on form pages.",
+                "desc": "How the Legacy Medical website handles information: meet and greet requests, consent-based analytics, no advertising pixels, and no tracking on form pages.",
                 "body": PRIVACY},
     "accessibility": {"title": "Accessibility Statement | Legacy Medical", "crumb": "Accessibility", "eyebrow": "Accessibility",
                       "h1": "Accessibility statement", "lede": "",

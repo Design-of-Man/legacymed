@@ -28,7 +28,16 @@ def main():
     spec = json.load(open(os.path.join(ROOT, "tools", "images.json"), encoding="utf-8"))
     os.makedirs(OUT, exist_ok=True)
     manifest = {}
+    only = set(sys.argv[1:])  # optional: build just these stems
+    old = {}
+    mpath = os.path.join(OUT, "manifest.json")
+    if only and os.path.exists(mpath):
+        old = json.load(open(mpath))
     for stem, s in spec.items():
+        if only and stem not in only:
+            if stem in old:
+                manifest[stem] = old[stem]
+            continue
         path = os.path.join(SRC, s["file"])
         im = Image.open(path)
         im = ImageOps.exif_transpose(im)
@@ -37,20 +46,26 @@ def main():
             im = im.crop((l, t, r, b))
         im = im.convert("RGB")
         w, h = im.size
-        widths = [x for x in WIDTHS if x <= w] or [w]
-        if w not in widths and w < WIDTHS[-1] and w > widths[-1]:
+        want = s.get("widths", WIDTHS)
+        fmts = s.get("formats", ["jpg", "webp", "avif"])
+        widths = [x for x in want if x <= w] or [w]
+        if w not in widths and w < want[-1] and w > widths[-1]:
             widths.append(w)  # small originals: keep full resolution as the top rendition
         made = []
         for tw in widths:
             th = round(h * tw / w)
             r = im if tw == w else im.resize((tw, th), Image.LANCZOS)
             base = os.path.join(OUT, "%s-%d" % (stem, tw))
-            r.save(base + ".jpg", "JPEG", quality=s.get("q", 80), optimize=True, progressive=True)
+            if "jpg" in fmts:
+                r.save(base + ".jpg", "JPEG", quality=s.get("q", 80), optimize=True, progressive=True)
             r.save(base + ".webp", "WEBP", quality=s.get("q", 80) - 2, method=6)
             r.save(base + ".avif", "AVIF", quality=s.get("q", 80) - 22, speed=4)
             made.append(tw)
+        if s.get("og"):  # a 1200-wide JPEG for social share cards
+            ow = min(1200, w)
+            im.resize((ow, round(h * ow / w)), Image.LANCZOS).save(os.path.join(OUT, "%s-og.jpg" % stem), "JPEG", quality=78, optimize=True, progressive=True)
         manifest[stem] = {"w": w, "h": h, "widths": made, "focal": s.get("focal", "50% 50%"),
-                          "alt": s.get("alt", ""), "source": s.get("source", ""), "credit": s.get("credit", "")}
+                          "alt": s.get("alt", ""), "source": s.get("source", ""), "credit": s.get("credit", ""), "formats": fmts}
         sizes = sum(os.path.getsize(os.path.join(OUT, "%s-%d.avif" % (stem, x))) for x in made)
         print("%-28s %4dx%-4d -> %s  (avif total %d KB)" % (stem, w, h, made, sizes // 1024))
     json.dump(manifest, open(os.path.join(OUT, "manifest.json"), "w"), indent=1, sort_keys=True)

@@ -283,14 +283,22 @@ if os.path.exists(cm):
         dst = r["destination"][len(DOMAIN):] or "/"
         if ":" not in dst and not os.path.exists(target(dst) or ""):
             blockers.append(("REDIRECT", "cmedjupiter %s -> %s has no target page" % (r["source"], r["destination"])))
+# Every old URL (both WordPress sites) must land on its real new page.
+rc = subprocess.run([sys.executable, os.path.join(ROOT, "_dev", "redirect_coverage.py")], cwd=ROOT, capture_output=True, text=True)
+if rc.returncode != 0:
+    blockers.append(("REDIRECT", "old-URL coverage failed:\n" + rc.stdout[-3000:] + rc.stderr[-1000:]))
+else:
+    notes.append(("REDIRECT", rc.stdout.strip().splitlines()[-1]))
 
 for path in glob.glob(os.path.join(PUB, "assets", "**", "*"), recursive=True):
     ext = os.path.splitext(path)[1]
     if ext in ASSET_BUDGET_KB and os.path.getsize(path) > ASSET_BUDGET_KB[ext] * 1024:
         blockers.append(("WEIGHT", "%s is %d KB (budget %d KB)" % (os.path.relpath(path, PUB), os.path.getsize(path) // 1024, ASSET_BUDGET_KB[ext])))
 for path in glob.glob(os.path.join(PUB, "assets", "video", "*.mp4")) + glob.glob(os.path.join(PUB, "assets", "video", "*.webm")):
-    if os.path.getsize(path) > 5 * 1024 * 1024:
-        blockers.append(("WEIGHT", "%s over 5 MB" % os.path.relpath(path, PUB)))
+    # Owner asked for the 4K-sourced film (Oct 2026). It never loads before the page does
+    # (preload="none", attached after load, tap-to-play on phones), so the cap is generous.
+    if os.path.getsize(path) > 22 * 1024 * 1024:
+        blockers.append(("WEIGHT", "%s over 22 MB" % os.path.relpath(path, PUB)))
 
 for need in ["MedicalClinic", "Physician", "WebSite", "FAQPage", "BreadcrumbList", "BlogPosting", "MedicalWebPage", "OpeningHoursSpecification", "GeoCoordinates"]:
     if need not in all_types:

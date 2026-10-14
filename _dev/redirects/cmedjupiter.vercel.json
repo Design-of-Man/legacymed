@@ -2,6 +2,582 @@
   "redirects": [
     {
       "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/dr-yana-shtern",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/notice-of-privacy-practices",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "498"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "499"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "500"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "501"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "755"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/executive-physical-exam-what-to-expect",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "762"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/concierge-doctor-hospital-stay",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "766"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/heart-healthy-foods",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1087"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/pandemic-fatigue-tips",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1244"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/covid-19-booster-update",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1285"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/nsaids-risks-and-side-effects",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1287"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/magnesium-low-and-high-levels",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1292"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/breast-cancer-screening-mammogram-age-40",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1345"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/low-dose-ct-lung-cancer-screening",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1776"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/concierge-medicine",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "1972"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/membership",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2391"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/contact",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2410"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2460"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/our-team",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2743"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/#reviews",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "2760"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/faq",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3851"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/accessibility",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3857"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/covid-19-tips-to-avoid-spreading-the-virus",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3858"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/is-a-concierge-doctor-right-for-me",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3859"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/arthritis-tips-for-managing-pain",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3860"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/how-to-wash-your-hands",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3861"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/tips-to-reduce-stress",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3863"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/what-is-concierge-medicine",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3865"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/concierge-medicine-pros-and-cons",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3866"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/hair-loss-in-men-and-women",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3868"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/hyperhidrosis-excessive-sweating",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3869"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/how-much-sleep-do-adults-need",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3870"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/obesity-is-a-disease",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3871"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/fully-vaccinated-covid-19",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3877"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/cancer-prevention-risk-factors",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3878"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/mediterranean-diet-heart-health",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3879"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/multivitamin-supplements-who-needs-them",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3880"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/antibiotics-when-they-help-and-harm",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3881"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/banana-nutrition-benefits",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3882"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/over-the-counter-pain-medication-safety",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3884"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/pulse-oximeter-how-to-use",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3885"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/constipation-and-squatty-potty",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3886"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/health-benefits-of-exercise",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3887"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/how-often-should-you-urinate",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3888"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/yearly-flu-vaccine-benefits",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "3889"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/journal/rsv-infection-in-adults",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "4083"
+        }
+      ],
+      "destination": "https://legacymedicalpalmbeach.com/accessibility",
+      "permanent": true
+    },
+    {
+      "source": "/",
       "destination": "https://legacymedicalpalmbeach.com/",
       "permanent": true
     },
@@ -471,6 +1047,21 @@
       "permanent": true
     },
     {
+      "source": "/legacy-blog/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "permanent": true
+    },
+    {
+      "source": "/:file(wp-sitemap.*\\.xml)",
+      "destination": "https://legacymedicalpalmbeach.com/sitemap.xml",
+      "permanent": true
+    },
+    {
       "source": "/feed",
       "destination": "https://legacymedicalpalmbeach.com/journal/feed.xml",
       "permanent": true
@@ -487,6 +1078,11 @@
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug",
+      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "permanent": true
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})",
       "destination": "https://legacymedicalpalmbeach.com/journal",
       "permanent": true
     },

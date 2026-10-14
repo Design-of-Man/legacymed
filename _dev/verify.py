@@ -26,7 +26,8 @@ import threading
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 PUB = os.path.join(ROOT, "public")
-AXE = os.path.join("/tmp/claude-0/-home-user-legacymed/a710e1f1-cec8-5210-8b4d-b0bba68caef7/scratchpad/tools/node_modules/axe-core/axe.min.js")
+# Set AXE_JS to wherever axe-core is installed (npm i axe-core); the default is the original build session's path.
+AXE = os.environ.get("AXE_JS") or "/tmp/claude-0/-home-user-legacymed/a710e1f1-cec8-5210-8b4d-b0bba68caef7/scratchpad/tools/node_modules/axe-core/axe.min.js"
 VIEWS = {"phone": (375, 812), "tablet": (768, 1024), "desktop": (1440, 900)}
 
 

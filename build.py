@@ -120,6 +120,11 @@ def fmt12(t):
     return ("%d:%02d %s" % (h, m, suffix)).replace(":00 ", " ")
 
 
+def hx(text):
+    """Escape a heading but keep its <em> accent phrase."""
+    return esc(text).replace("&lt;em&gt;", "<em>").replace("&lt;/em&gt;", "</em>")
+
+
 def words_spans(text):
     """Split a statement into word spans for the scroll-fill effect."""
     out = []
@@ -204,11 +209,12 @@ def photo(stem, alt, sizes="100vw", cls="", eager=False, focal=None, max_w=None,
         attrs += ' loading="lazy" decoding="async"'
     if cls:
         attrs += ' class="%s"' % cls
+    fb = "jpg" if "jpg" in m.get("formats", ["jpg"]) else "webp"
     return ('<picture><source type="image/avif" srcset="%s" sizes="%s">'
             '<source type="image/webp" srcset="%s" sizes="%s">'
-            '<img src="/assets/img/%s-%d.jpg" srcset="%s" sizes="%s" %s></picture>'
-            % (srcset("avif"), sizes, srcset("webp"), sizes, stem, widths[min(1, len(widths) - 1)],
-               srcset("jpg"), sizes, attrs))
+            '<img src="/assets/img/%s-%d.%s" srcset="%s" sizes="%s" %s></picture>'
+            % (srcset("avif"), sizes, srcset("webp"), sizes, stem, widths[min(1, len(widths) - 1)], fb,
+               srcset(fb), sizes, attrs))
 
 
 # --------------------------------------------------------------------------
@@ -218,6 +224,8 @@ NAV = [
     ("About", None, [
         ("dr-yana-shtern", "Dr. Yana Shtern, MD", "Internist and nephrologist"),
         ("our-team", "Our team", "Who answers when you call"),
+        ("for-families", "For families", "Caring for a parent"),
+        ("seasonal-residents", "Seasonal residents", "Care between seasons"),
     ]),
     ("Care", None, [
         ("concierge-medicine", "Concierge medicine", "How the practice works"),
@@ -228,12 +236,22 @@ NAV = [
         ("telehealth", "Telehealth", "Visits by video"),
     ]),
     ("Membership", None, [
-        ("membership", "How to join", "Tour the practice first"),
+        ("meet-and-greet", "Meet and greet", "Your first visit"),
+        ("membership", "How to join", "Three unhurried steps"),
         ("insurance-and-fees", "Insurance and fees", "What insurance still covers"),
+        ("concierge-vs-traditional-primary-care", "Concierge vs. traditional", "A side-by-side look"),
         ("faq", "Questions", "Straight answers"),
     ]),
+    ("Patients", None, [
+        ("patients", "For patients", "Visits, calls, labs, records"),
+        ("same-or-next-day-visits", "Same or next day visits", "Seen when you need it"),
+        ("chronic-care", "Chronic care support", "Ongoing conditions"),
+        ("specialists-and-hospital-care", "Specialists and hospitals", "Care that stays in one place"),
+        ("labs-and-tests", "Labs and tests", "Done in the office"),
+        ("journal", "Journal", "Articles on health"),
+        ("videos", "Videos", "Watch and learn"),
+    ]),
     ("Areas", "areas-we-serve", None),
-    ("Journal", "journal", None),
     ("Contact", "contact", None),
 ]
 
@@ -256,7 +274,7 @@ def nav_html(current):
     for i, (label, href, kids) in enumerate(NAV):
         if kids:
             mid = "menu-%d" % i
-            is_cur = any(k[0] == current for k in kids)
+            is_cur = any(k[0] == current for k in kids) or (current.startswith("journal/") and any(k[0] == "journal" for k in kids))
             links = "".join(
                 '<li><a href="/%s"%s>%s<small>%s</small></a></li>' % (
                     k[0], ' aria-current="page"' if k[0] == current else "", esc(k[1]), esc(k[2]))
@@ -280,18 +298,20 @@ def header(current):
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul class="nav-list">%(items)s</ul>
       <div class="mobile-cta">
-        <a class="btn" href="/membership#tour" data-loc="mobile-menu">Request a tour %(arrow)s</a>
+        <a class="btn" href="/meet-and-greet" data-loc="mobile-menu">Book a meet and greet %(arrow)s</a>
         <a class="btn ghost" href="tel:%(tel)s" data-loc="mobile-menu">Call %(phone)s</a>
+        <p class="menu-foot">%(street)s, %(city)s<br>Mon–Thu 9–5 · Fri 9–2 · Members: phone 24/7</p>
       </div>
     </nav>
     <div class="header-actions">
       <a class="header-phone" href="tel:%(tel)s" data-loc="header">%(ico)s<span class="label">%(phone)s</span><span class="sr-only"> (call the office)</span></a>
-      <a class="btn small" href="/membership#tour" data-loc="header">Request a tour</a>
+      <a class="btn small" href="/meet-and-greet" data-loc="header">Book a meet &amp; greet</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
     </div>
   </div>
 </header>""" % {"mark": brand_mark(), "items": "".join(items), "tel": p["tel"], "phone": p["phone"],
-                 "ico": icon("phone"), "arrow": icon("arrow")}
+                 "ico": icon("phone"), "arrow": icon("arrow"),
+                 "street": p["street_short"], "city": p["city"]}
 
 
 def brand_mark():
@@ -352,7 +372,7 @@ def callbar():
     p = PRACTICE
     return ('<div class="callbar" aria-label="Quick contact" role="region">'
             '<a class="btn ghost small" href="tel:%s" data-loc="callbar">%s Call</a>'
-            '<a class="btn small" href="/membership#tour" data-loc="callbar">Request a tour</a></div>' % (p["tel"], icon("phone")))
+            '<a class="btn small" href="/meet-and-greet" data-loc="callbar">Meet &amp; greet</a></div>' % (p["tel"], icon("phone")))
 
 
 # --------------------------------------------------------------------------
@@ -479,6 +499,7 @@ JS_FLAG = "document.documentElement.classList.add('js')"
 GA_INLINE = ("window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
              "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});"
              "gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',false);")
+VA_INLINE = "window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};"
 INLINE_SCRIPTS_INIT = [JS_FLAG]
 
 
@@ -491,6 +512,10 @@ def analytics_tags(allow):
         INLINE_SCRIPTS.add(GA_INLINE)
         out.append('<script>%s</script>\n<script defer src="%s" data-ga="%s"></script>' % (GA_INLINE, a("assets/js/consent.js"), esc(GA4_ID)))
     if VERCEL_ANALYTICS:
+        # Queue stub so main.js can record custom events (call_click,
+        # appointment_cta) before the deferred script has loaded.
+        INLINE_SCRIPTS.add(VA_INLINE)
+        out.append('<script>%s</script>' % VA_INLINE)
         out.append('<script defer src="/_vercel/insights/script.js"></script>')
         out.append('<script defer src="/_vercel/speed-insights/script.js"></script>')
     return "\n".join(out)
@@ -543,7 +568,7 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
 %(robots)s
 %(canon)s
 <meta name="theme-color" content="#0E0D0B">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
 <meta name="format-detection" content="telephone=no">
 <link rel="preload" href="/assets/fonts/legacy-display-v1.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/legacy-sans-v1.woff2" as="font" type="font/woff2" crossorigin>
@@ -644,15 +669,17 @@ def trail_for(slug, name):
     t = [("Home", "")]
     if sec and href and href != slug:
         t.append((sec, href))
+    elif sec == "Patients" and slug != "patients":
+        t.append(("For patients", "patients"))
     t.append((name, slug))
     return t
 
 
-def page_hero(trail, eyebrow, h1, lede, media=None, cta=True, h1_html=None):
+def page_hero(trail, eyebrow, h1, lede, media=None, cta=True, h1_html=None, cta_href="/meet-and-greet", cta_label="Book a meet and greet"):
     btns = ""
     if cta:
-        btns = ('<div class="btn-row"><a class="btn" href="/membership#tour" data-loc="page-hero">Request a tour %s</a>'
-                '<a class="btn ghost" href="tel:%s" data-loc="page-hero">Call %s</a></div>' % (icon("arrow"), PRACTICE["tel"], PRACTICE["phone"]))
+        btns = ('<div class="btn-row"><a class="btn" href="%s" data-loc="page-hero">%s %s</a>'
+                '<a class="btn ghost" href="tel:%s" data-loc="page-hero">Call %s</a></div>' % (cta_href, esc(cta_label), icon("arrow"), PRACTICE["tel"], PRACTICE["phone"]))
     text = """<div>%s<p class="eyebrow">%s</p><h1>%s</h1>%s%s</div>""" % (
         crumbs_html(trail), esc(eyebrow), h1_html or esc(h1), ('<p class="lede">%s</p>' % lede) if lede else "", btns)
     if media:
@@ -662,25 +689,26 @@ def page_hero(trail, eyebrow, h1, lede, media=None, cta=True, h1_html=None):
 
 def cta_band(heading=None, lede=None, night=True):
     p = PRACTICE
-    heading = heading or "Come see the office before you decide."
-    lede = lede or ("A tour is free and comes with no obligation. Meet Dr. Shtern, see the office, and ask whatever you like "
-                    "about membership.")
+    heading = heading or "Meet Dr. Shtern <em>before you decide.</em>"
+    lede = lede or ("Every membership starts with a complimentary meet and greet. Sit down with Dr. Shtern, see the office, "
+                    "and ask whatever you like. There is no obligation to join.")
     return """<section class="section cta-band%s" aria-labelledby="cta-h">
   <div class="wrap cta-grid">
     <div>
       <p class="eyebrow">Next step</p>
       <h2 id="cta-h" style="margin-top:1.25rem">%s</h2>
       <p class="lede">%s</p>
-      <div class="btn-row"><a class="btn" href="/membership#tour" data-loc="cta-band">Request a tour %s</a><a class="btn ghost" href="tel:%s" data-loc="cta-band">Call %s</a></div>
+      <div class="btn-row"><a class="btn" href="/meet-and-greet" data-loc="cta-band">Book a meet and greet %s</a><a class="btn ghost" href="tel:%s" data-loc="cta-band">Call %s</a></div>
     </div>
-    <dl class="facts">
-      <div><dt>Office</dt><dd>%s<br>%s, FL %s</dd></div>
-      <div><dt>Hours</dt><dd>Mon–Thu 9 AM–5 PM<br>Fri 9 AM–2 PM</dd></div>
-      <div><dt>Members</dt><dd>Phone access 24 hours a day</dd></div>
-    </dl>
+    <nav class="towns" aria-label="Drive times to the office">
+      <p class="towns-h">Drive times to the office</p>
+      <ul>%s</ul>
+      <a class="text-link" href="/areas-we-serve">All areas we serve %s</a>
+    </nav>
   </div>
-</section>""" % (" night" if night else " sunk", esc(heading), lede, icon("arrow"), p["tel"], p["phone"],
-                  p["street_short"], p["city"], p["postal"])
+</section>""" % (" night" if night else " sunk", hx(heading), lede, icon("arrow"), p["tel"], p["phone"],
+                  "".join('<li><a href="/areas/%s">%s<span>%d min</span></a></li>' % (l["slug"], esc(l["name"]), l["drive_min"])
+                          for l in C.LOCATIONS[:6]), icon("arrow"))
 
 
 def faq_html(pairs, heading_id=None):
@@ -692,11 +720,11 @@ def faq_html(pairs, heading_id=None):
 
 def related_cards(slugs):
     cards = []
-    lookup = {k[0]: k for k in NAV[1][2] + NAV[2][2] + NAV[0][2]}
+    lookup = {k[0]: k for _, _, kids in NAV if kids for k in kids}
     for s in slugs:
         k = lookup[s]
         cards.append('<div class="card"><p class="meta">%s</p><h3><a class="stretch" href="/%s" style="text-decoration:none;color:inherit">%s</a></h3><p>%s</p><span class="more">Read more %s</span></div>'
-                     % ("Care" if s in [x[0] for x in NAV[1][2]] else "Practice", s, esc(k[1]), esc(C.CARD_BLURBS.get(s, k[2])), icon("arrow")))
+                     % ("Care" if s in [x[0] for x in NAV[1][2]] else ("For patients" if s in [x[0] for x in NAV[3][2]] else "Practice"), s, esc(k[1]), esc(C.CARD_BLURBS.get(s, k[2])), icon("arrow")))
     return '<div class="cards">%s</div>' % "".join(cards)
 
 
@@ -795,7 +823,7 @@ def csp():
         "font-src 'self'",
         "media-src 'self'",
         "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
-        "frame-src https://www.google.com https://maps.google.com",
+        "frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com",
         "object-src 'none'",
         "base-uri 'self'",
         "form-action 'self'",
@@ -806,7 +834,9 @@ def csp():
 
 def build_vercel():
     import redirects as R
-    rules = R.vercel_rules({**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}, R.MAIN_PATTERNS)
+    main_exact = {**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}
+    # /?p=ID shortlinks first: they are the only rules on "/" for the apex host.
+    rules = R.shortlink_rules(R.shortlink_map("legacymedicalpalmbeach.com", main_exact)) + R.vercel_rules(main_exact, R.MAIN_PATTERNS)
     # www -> apex. Two rules because "/:path*" does not match the bare root on Vercel.
     www = [{"source": "/", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/", "permanent": True},
            {"source": "/:path*", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/:path*", "permanent": True}]
@@ -829,10 +859,15 @@ def build_vercel():
         "trailingSlash": False,
         "headers": [
             {"source": "/(.*)", "headers": sec},
+            # Any *.vercel.app host serving this project is a duplicate of the real
+            # domain. Vercel noindexes preview URLs itself, but NOT the production
+            # alias (legacymedical.vercel.app answered 200 with index,follow on
+            # 2026-10-14). Keyed on host, so legacymedicalpalmbeach.com is untouched.
+            {"source": "/(.*)", "has": [{"type": "host", "value": ".*\\.vercel\\.app"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow"}]},
             {"source": "/assets/(css|js)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
             {"source": "/assets/fonts/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},
             {"source": "/assets/(img|video)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400"}]},
-            {"source": "/(membership|contact)", "headers": [{"key": "Cache-Control", "value": "public, max-age=0, must-revalidate"}]},
+            {"source": "/(meet-and-greet|contact)", "headers": [{"key": "Cache-Control", "value": "public, max-age=0, must-revalidate"}]},
             {"source": "/(llms.txt|robots.txt)", "headers": [{"key": "Content-Type", "value": "text/plain; charset=utf-8"}, {"key": "Cache-Control", "value": "public, max-age=3600"}]},
             {"source": "/api/(.*)", "headers": [{"key": "Cache-Control", "value": "no-store"}]},
         ],
@@ -843,46 +878,95 @@ def build_vercel():
         f.write("\n")
     # cmedjupiter.com: the domain is not ours yet. Three ready-to-use forms.
     cm = {**R.CMED, **R.post_map("cmedjupiter.com")}
+    cm_short = R.shortlink_map("cmedjupiter.com", cm)
     d = os.path.join(ROOT, "_dev", "redirects")
     os.makedirs(d, exist_ok=True)
-    vr = R.vercel_rules(cm, R.CMED_PATTERNS, absolute=True)
+    vr = R.shortlink_rules(cm_short, absolute=True) + R.vercel_rules(cm, R.CMED_PATTERNS, absolute=True)
     json.dump({"redirects": vr}, open(os.path.join(d, "cmedjupiter.vercel.json"), "w"), indent=2)
-    ht = ["# cmedjupiter.com -> legacymedicalpalmbeach.com (301).", "# Place at the top of the site root .htaccess, ABOVE the \"# BEGIN WordPress\" block.", "# NE keeps \"#reviews\" from being escaped to %23.", "RewriteEngine On"]
+    ht = ["# cmedjupiter.com -> legacymedicalpalmbeach.com (301).", "# Place at the top of the site root .htaccess, ABOVE the \"# BEGIN WordPress\" block.", "# NE keeps \"#reviews\" from being escaped to %23.",
+          "# Once live, every path on this host redirects, wp-admin included: retire the WordPress install.", "RewriteEngine On",
+          "# WordPress shortlinks (/?p=ID). QSD (Apache 2.4+) drops the old query string."]
+    for pid, dst in sorted(cm_short.items()):
+        ht.append("RewriteCond %%{QUERY_STRING} (^|&)p=%d(&|$)" % pid)
+        ht.append("RewriteRule ^$ %s%s [R=301,L,NE,QSD]" % (R.NEW, dst))
     for src, dst in sorted(cm.items(), key=lambda kv: -len(kv[0])):
         pat = "^" + re.escape(src.strip("/")) + "/?$" if src != "/" else "^$"
         ht.append("RewriteRule %s %s%s [R=301,L,NE]" % (pat, R.NEW, dst))
+    ht.append("RewriteRule ^robots\\.txt$ %s/robots.txt [R=301,L]" % R.NEW)
+    ht.append("RewriteRule ^wp-sitemap.*\\.xml$ %s/sitemap.xml [R=301,L]" % R.NEW)
+    ht.append("RewriteRule ^(comments/)?feed/?$ %s/journal/feed.xml [R=301,L]" % R.NEW)
     ht.append("RewriteRule ^(category|tag|author)/ %s/journal [R=301,L]" % R.NEW)
     ht.append("RewriteRule ^\\d{4}/ %s/journal [R=301,L]" % R.NEW)
     ht.append("RewriteRule ^ %s/ [R=301,L]" % R.NEW)
     open(os.path.join(d, "cmedjupiter.htaccess"), "w").write("\n".join(ht) + "\n")
     rows = ["old_url,new_url"] + ["https://cmedjupiter.com%s,%s%s" % (k, R.NEW, v) for k, v in sorted(cm.items())]
-    rows += ["https://legacymedicalpalmbeach.com%s,%s%s" % (k, R.NEW, v) for k, v in sorted({**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}.items())]
+    rows += ["https://cmedjupiter.com/?p=%d,%s%s" % (k, R.NEW, v) for k, v in sorted(cm_short.items())]
+    rows += ["https://legacymedicalpalmbeach.com%s,%s%s" % (k, R.NEW, v) for k, v in sorted(main_exact.items())]
+    rows += ["https://legacymedicalpalmbeach.com/?p=%d,%s%s" % (k, R.NEW, v) for k, v in sorted(R.shortlink_map("legacymedicalpalmbeach.com", main_exact).items())]
     open(os.path.join(d, "redirect-map.csv"), "w").write("\n".join(rows) + "\n")
 
 
 def build_assist():
-    """Set answers for the site assistant, from the FAQ and the facts above."""
+    """Everything the site assistant knows, written to assets/assist.json.
+
+    faq: every question answered anywhere on the site (FAQ page, home, every
+    service, town, guide and membership page) plus assistant-only answers.
+    pages: every page and article with a one-line description, so a question
+    with no set answer still gets pointed at the right page."""
     def plain(h):
         h = re.sub(r"</p>\s*<p>", " ", h)
         return re.sub(r"</?p>", "", h).strip()
-    items = []
+    items, seen = [], set()
+    def add(q, a, k=None, url_=None):
+        key = re.sub(r"[^a-z0-9 ]", "", (q or a).lower()).strip()
+        if key in seen:
+            return
+        seen.add(key)
+        it = {"a": plain(a), "k": k or []}
+        if q:
+            it["q"] = q
+        if url_ is not None:
+            it["u"] = "/" + url_
+        items.append(it)
     for g in C.FAQ_GROUPS:
         for q, a in g["pairs"]:
             if q not in C.ASSIST_KEYWORDS:
                 raise SystemExit("assistant: no keywords for FAQ %r (add them to ASSIST_KEYWORDS)" % q)
-            items.append({"q": q, "k": C.ASSIST_KEYWORDS[q], "a": plain(a)})
+            add(q, a, C.ASSIST_KEYWORDS[q], "faq")
+    for l in C.LOCATIONS:
+        add("How far is the office from %s?" % l["name"],
+            "About %s miles from %s, roughly %s minutes without traffic. Usual route: %s. <a href=\"/areas/%s\">Concierge care near %s</a>." % (
+                l["distance_mi"], l["from_label"], l["drive_min"], l["route"], l["slug"], l["name"]),
+            [l["name"].lower(), "from " + l["name"].lower()])
     for x in C.ASSIST_EXTRA:
-        items.append({"k": x["k"], "a": x["a"]})
+        add(None, x["a"], x["k"])
+    sources = [("", C.HOME_FAQ), ("meet-and-greet", C.MEET["faqs"]), ("membership", C.MEMBERSHIP["faqs"]),
+               ("insurance-and-fees", C.INSURANCE["faqs"]), ("concierge-medicine", C.CONCIERGE["faqs"])]
+    sources += [(slug, s["faqs"]) for slug, s in C.SERVICE_PAGES.items()]
+    sources += [(slug, s["faqs"]) for slug, s in C.GUIDES.items()]
+    sources += [("areas/" + l["slug"], l.get("faqs", [])) for l in C.LOCATIONS]
+    for slug, pairs in sources:
+        for q, a in pairs:
+            add(q, a, None, slug)
+    pages = []
+    for label, href, kids in NAV:
+        for slug, name, sub in (kids or []):
+            pages.append({"t": name, "u": "/" + slug, "d": C.CARD_BLURBS.get(slug, sub)})
+    pages += [{"t": "Areas we serve", "u": "/areas-we-serve", "d": "Towns members come from, with drive times to the office."},
+              {"t": "Contact and directions", "u": "/contact", "d": "Phone, address, hours and directions to the office."},
+              {"t": "Journal", "u": "/journal", "d": "Articles on concierge medicine and health."}]
+    pages += [{"t": "Concierge doctor near " + l["name"], "u": "/areas/" + l["slug"], "d": l["desc"]} for l in C.LOCATIONS]
+    pages += [{"t": p["title"], "u": "/journal/" + p["slug"], "d": p["excerpt"]} for p in J.POSTS]
     p = PRACTICE
     data = {"phone": p["phone"], "tel": p["tel"], "email": p["email"],
-            "hours": "Mon to Thu 9 to 5, Fri 9 to 2", "faq": items}
-    for it in items:
+            "hours": "Mon to Thu 9 to 5, Fri 9 to 2", "faq": items, "pages": pages}
+    for it in items + pages:
+        txt = visible_text(it.get("a", "") + " " + it.get("q", "") + " " + it.get("t", "") + " " + it.get("d", ""))
         for pat in BANNED:
-            if re.search(pat, visible_text(it["a"]), flags=re.I):
-                raise SystemExit("assistant answer breaks copy rule %r: %s" % (pat, it["a"][:80]))
+            if re.search(pat, txt, flags=re.I):
+                raise SystemExit("assistant text breaks copy rule %r: %s" % (pat, txt[:80]))
     with open(os.path.join(PUB, "assets", "assist.json"), "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
-
 
 def main():
     build_assist()  # first, so pages can hash it
