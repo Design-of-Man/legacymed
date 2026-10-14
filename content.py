@@ -798,7 +798,7 @@ GUIDES_PATIENTS = {
         "related": ["telehealth", "labs-and-tests", "concierge-medicine"],
     },
     "chronic-care": {
-        "title": "Chronic Care Support: Blood Pressure, Diabetes, Kidney | Legacy Medical",
+        "title": "Chronic Care: Blood Pressure, Diabetes, Kidney | Legacy Medical",
         "desc": "Ongoing care for blood pressure, diabetes, cholesterol, kidney and thyroid conditions from Dr. Yana Shtern, a concierge internist and nephrologist in Palm Beach Gardens.",
         "crumb": "Chronic care support", "eyebrow": "For patients",
         "h1": "Long-term conditions, followed closely between visits.",
