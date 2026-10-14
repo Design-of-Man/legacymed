@@ -19,6 +19,6 @@ Static site for Legacy Medical, Dr. Yana Shtern's concierge internal medicine pr
 - Never invent facts, reviews, staff, stats or prices. Unconfirmed items live in `_dev/OPEN-ITEMS.md`, not on the site.
 - No tracking on pages with a form (`track=False` in write_page for /meet-and-greet and /contact). GA4 is consent-gated and only loads when GA4_ID is set.
 - No self-serving review stars in schema (preflight blocks AggregateRating/Review).
-- Hero: the full-bleed Jupiter Inlet film is the hero, with the copy in a cream card off to the side (the RegenOrtho layout the owner asked for). No dark scrim over the film. Keep the headline painted at first frame (no clip/translate-from-hidden), no italic face in it, and no `poster` attribute on the video (the <picture> is the poster). `_dev/hero_contrast.py` must stay all-pass.
+- Hero: the full-bleed Jupiter Inlet film stands alone (owner asked, Oct 2026), with only the play/pause pill on it. The practice card (h1, lede, CTAs, facts) sits right below, beside Dr. Shtern's profile (`.intro`). No dark scrim over the film, no `poster` attribute on the video (the <picture> is the poster). `_dev/hero_contrast.py` checks the pill and must stay all-pass.
 - The photo reel uses only real practice photos. The 2020 "Concierge Medicine of Jupiter" shoot shows an earlier location and unidentified people: keep it out.
 - Hosting/DNS for the domain is with Unkind Designs. Do not touch DNS.

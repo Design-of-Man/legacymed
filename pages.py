@@ -53,29 +53,28 @@ def home(B):
     preload = ['<link rel="preload" as="image" type="image/avif" imagesrcset="%(a768)s 768w, %(a1280)s 1280w, %(a1920)s 1920w" imagesizes="100vw" media="(min-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"],
                '<link rel="preload" as="image" type="image/avif" href="%(pa)s" media="(max-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"]]
 
-    title_lines = "".join('<span class="rise"><span style="--i:%d">%s</span></span>' % (i + 1, ln) for i, ln in enumerate(H["hero_lines"]))
-    hero = """<section class="hero" aria-labelledby="hero-h">
+    title_lines = "".join('<span class="ln">%s</span>' % ln for ln in H["hero_lines"])
+    # The film stands on its own; the words sit beside Dr. Shtern right below it.
+    hero = """<section class="hero" aria-label="The Jupiter Inlet at sunset">
   <div class="hero-media">%(poster)s%(video)s</div>
-  <div class="wrap hero-inner">
-    <div class="hero-copy">
-      <h1 id="hero-h"><span class="hero-kicker fade-in" style="--i:0">%(kicker)s</span><span class="hero-title">%(lines)s</span></h1>
-      <p class="hero-lede fade-in" style="--i:3">%(lede)s</p>
-      <div class="btn-row fade-in" style="--i:4">
+  <div class="hero-ctl"><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Jupiter Inlet film</span></button></div>
+</section>""" % {"poster": poster, "video": video, "play": B.ICONS["play"], "pause": B.ICONS["pause"].replace('class="i-pause"', 'class="i-pause" hidden')}
+
+    intro_card = """<div class="intro-card">
+      <h1 id="hero-h"><span class="hero-kicker">%(kicker)s</span><span class="hero-title">%(lines)s</span></h1>
+      <p class="hero-lede">%(lede)s</p>
+      <div class="btn-row">
         <a class="btn" href="/meet-and-greet" data-loc="hero">Book a meet and greet %(arrow)s</a>
         <a class="btn ghost" href="tel:%(tel)s" data-loc="hero">%(phoneico)s Call %(phone)s</a>
       </div>
-      <dl class="hero-facts fade-in" style="--i:5">
+      <dl class="hero-facts">
         <div><dt>Physician</dt><dd><a href="/dr-yana-shtern">Dr. Yana Shtern, MD</a><br>Internal medicine and nephrology</dd></div>
         <div><dt>Office</dt><dd><a href="%(maps)s" rel="noopener" target="_blank">%(street)s<span class="sr-only"> (opens Google Maps)</span></a><br>%(city)s, FL %(postal)s</dd></div>
         <div><dt>Hours</dt><dd>Mon–Thu 9–5, Fri 9–2<br>Members: phone 24/7</dd></div>
-        <div class="hero-vid"><dt>Film</dt><dd><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Jupiter Inlet film</span></button></dd></div>
       </dl>
-    </div>
-  </div>
-</section>""" % {"poster": poster, "video": video, "kicker": esc(H["kicker"]), "lines": title_lines, "lede": H["hero_lede"],
+    </div>""" % {"kicker": esc(H["kicker"]), "lines": title_lines, "lede": H["hero_lede"],
                  "arrow": icon("arrow"), "tel": P["tel"], "phone": P["phone"], "phoneico": icon("phone"),
-                 "maps": esc(P["google_maps"]), "street": P["street_short"], "city": P["city"], "postal": P["postal"],
-                 "play": B.ICONS["play"], "pause": B.ICONS["pause"].replace('class="i-pause"', 'class="i-pause" hidden')}
+                 "maps": esc(P["google_maps"]), "street": P["street_short"], "city": P["city"], "postal": P["postal"]}
 
     problem = """<section class="section" aria-labelledby="problem-h">
   <div class="wrap split">
@@ -93,31 +92,36 @@ def home(B):
 
     creds = "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v) for k, v in D["home_creds"])
     q = C.TESTIMONIALS[0]
-    guide = """<section class="section doc-feature" aria-labelledby="doc-h">
-  <div class="wrap doctor">
-    <figure class="cap-fig"><div class="doctor-photo" data-reveal="clip">%(photo)s</div><figcaption class="ph-cap">Dr. Yana Shtern, MD<span>Legacy Medical, Palm Beach Gardens</span></figcaption></figure>
-    <div>
-      <p class="eyebrow">Your physician</p>
-      <h2 id="doc-h" class="doc-name">Dr. Yana Shtern<span>, MD</span></h2>
-      <p class="doc-role">Board-certified in internal medicine and nephrology</p>
+    guide = """<section class="section doc-feature" aria-labelledby="hero-h">
+  <div class="wrap intro">
+    %(card)s
+    <div class="intro-doc">
+      <div class="doc-head">
+        <figure class="cap-fig"><div class="doctor-photo" data-reveal="clip">%(photo)s</div></figure>
+        <div>
+          <p class="eyebrow">Your physician</p>
+          <h2 id="doc-h" class="doc-name">Dr. Yana Shtern<span>, MD</span></h2>
+          <p class="doc-role">Board-certified in internal medicine and nephrology</p>
+        </div>
+      </div>
       <p class="doc-line">%(line)s</p>
       <div class="stack" style="margin-top:1.5rem;max-width:36rem">%(body)s</div>
       <dl class="creds">%(creds)s</dl>
       <blockquote class="doc-quote"><p>%(quote)s</p><footer>%(who)s, %(src)s</footer></blockquote>
-      <div class="btn-row" style="margin-top:2rem"><a class="btn" href="/meet-and-greet" data-loc="doctor">Book a meet and greet %(arrow)s</a><a class="btn ghost" href="/dr-yana-shtern" data-loc="doctor">Her background</a></div>
+      <div class="btn-row" style="margin-top:2rem"><a class="btn ghost" href="/dr-yana-shtern" data-loc="doctor">Her background %(arrow)s</a></div>
     </div>
   </div>
-</section>""" % {"photo": photo(D["photo"], "Dr. Yana Shtern, MD, at Legacy Medical in Palm Beach Gardens", sizes="(max-width: 880px) 90vw, 42vw", max_w=1200),
+</section>""" % {"photo": photo(D["photo"], "Dr. Yana Shtern, MD, at Legacy Medical in Palm Beach Gardens", sizes="(max-width: 880px) 40vw, 16rem", max_w=800),
                  "line": esc(H["guide_h"]), "body": H["guide_body"], "creds": creds,
                  "quote": esc("She identified the cause of my problem rather than only trying to treat my symptoms as the other doctors I saw did."),
-                 "who": "Patient review", "src": q["source_html"], "arrow": icon("arrow")}
+                 "who": "Patient review", "src": q["source_html"], "arrow": icon("arrow"), "card": intro_card}
 
     (m1, a1), (m2, a2) = H["manifesto_photos"]
     manifesto = """<section class="section manifesto" aria-labelledby="mani-h">
   <div class="wrap mani-grid">
     <figure class="mani-fig a"><div class="mani-ph" data-reveal="clip">%s</div><figcaption class="ph-cap">The front desk<span>Prosperity Farms Road</span></figcaption></figure>
     <h2 id="mani-h" class="mani-text" data-fill>%s</h2>
-    <figure class="mani-fig b"><div class="mani-ph" data-reveal="clip">%s</div><figcaption class="ph-cap">Dr. Shtern and the team<span>Palm Beach Gardens</span></figcaption></figure>
+    <figure class="mani-fig b"><div class="mani-ph" data-reveal="clip">%s</div><figcaption class="ph-cap">Legacy Medical<span>Palm Beach Gardens</span></figcaption></figure>
   </div>
 </section>""" % (photo(m1, a1, sizes="(max-width: 880px) 44vw, 18vw", max_w=800), B.words_spans(H["manifesto"]),
                   photo(m2, a2, sizes="(max-width: 880px) 44vw, 18vw", max_w=800))
