@@ -246,11 +246,30 @@
   const chips = document.querySelectorAll(".chips button");
   if (chips.length) {
     const posts = document.querySelectorAll(".post-grid li, .post-list li");
+    const more = document.querySelector("[data-more]");
+    const LIMIT = 24;
+    let cat = "all", expanded = false;
+    const apply = () => {
+      let n = 0;
+      posts.forEach((p) => {
+        const match = cat === "all" || p.dataset.cat === cat;
+        p.hidden = !match || (cat === "all" && !expanded && n >= LIMIT);
+        if (match) n++;
+      });
+      if (more) more.hidden = !(cat === "all" && !expanded && n > LIMIT);
+    };
     chips.forEach((c) => c.addEventListener("click", () => {
       chips.forEach((o) => o.setAttribute("aria-pressed", String(o === c)));
-      const cat = c.dataset.cat;
-      posts.forEach((p) => { p.hidden = cat !== "all" && p.dataset.cat !== cat; });
+      cat = c.dataset.cat;
+      apply();
     }));
+    if (more) more.addEventListener("click", () => {
+      const first = [...posts].find((p) => p.hidden);
+      expanded = true;
+      apply();
+      if (first) { const a = first.querySelector("a"); if (a) a.focus(); }
+    });
+    apply();
   }
 
   /* ---------- live Google reviews (only when the API is configured) ---------- */

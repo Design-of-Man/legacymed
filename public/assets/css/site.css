@@ -802,3 +802,8 @@ body.has-hero:not(.past-hero) .as-launch{opacity:0;transform:translateY(1rem);vi
 .ms-img img{width:100%;height:100%;object-fit:cover}
 .ms-text{max-width:36rem}
 @media (max-width:880px){.media-split{grid-template-columns:1fr}.media-split.flip .ms-img{order:0}}
+
+/* journal: topic counts and the show-all row */
+.chips .n{margin-left:.35rem;font-size:.78em;opacity:.65}
+.more-row{margin-top:clamp(2rem,1.5rem + 2vw,3rem);text-align:center}
+.more-row [hidden]{display:none}

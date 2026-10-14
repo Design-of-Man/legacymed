@@ -728,15 +728,16 @@ def journal(B):
     for p in J.POSTS:
         if p["category"] not in cats:
             cats.append(p["category"])
-    chips = '<div class="chips" role="group" aria-label="Filter by topic"><button type="button" aria-pressed="true" data-cat="all">All</button>%s</div>' % "".join(
-        '<button type="button" aria-pressed="false" data-cat="%s">%s</button>' % (esc(c), esc(c)) for c in cats)
+    cats.sort(key=lambda c: -sum(1 for p in J.POSTS if p["category"] == c))
+    chips = '<div class="chips" role="group" aria-label="Filter by topic"><button type="button" aria-pressed="true" data-cat="all">All <span class="n">%d</span></button>%s</div>' % (len(J.POSTS), "".join(
+        '<button type="button" aria-pressed="false" data-cat="%s">%s <span class="n">%d</span></button>' % (esc(c), esc(c), sum(1 for p in J.POSTS if p["category"] == c)) for c in cats))
     lead, rest = J.POSTS[0], J.POSTS[1:]
     feature = """<section class="section flush-top" aria-labelledby="lead-h"><div class="wrap"><a class="feature-post" href="/journal/%s">%s<div class="fp-body"><p class="eyebrow">Latest · %s</p><h2 id="lead-h">%s</h2><p class="lede">%s</p><p class="pc-meta"><span>%s</span><span>%d min read</span></p><span class="more">Read the article %s</span></div></a></div></section>""" % (
         lead["slug"], ('<figure class="fp-img">%s</figure>' % post_image(B, lead, "(max-width: 900px) 92vw, 58vw", eager=True)) if post_image(B, lead, "1px") else "",
         esc(lead["category"]), esc(lead["title"]), esc(lead["excerpt"]), human_date(lead["date"]), read_mins(lead), icon("arrow"))
     items = "".join('<li data-cat="%s">%s</li>' % (esc(p["category"]), post_card(B, p, i)) for i, p in enumerate(rest))
     hero = B.page_hero(trail, "Journal", "Notes on health, from a concierge practice", C.JOURNAL_LEDE, cta=False)
-    body = hero + feature + '<section class="section flush-top" aria-labelledby="all-h"><div class="wrap"><div class="headline-row"><h2 id="all-h" style="font-size:var(--step-3)">All articles</h2></div>%s<ul class="post-grid">%s</ul></div></section>' % (chips, items) + B.cta_band()
+    body = hero + feature + '<section class="section flush-top" aria-labelledby="all-h"><div class="wrap"><div class="headline-row"><h2 id="all-h" style="font-size:var(--step-3)">All articles</h2></div>%s<ul class="post-grid">%s</ul><p class="more-row"><button class="btn ghost" type="button" data-more hidden>Show all articles</button></p></div></section>' % (chips, items) + B.cta_band()
     schema = B.graph({"@type": "Blog", "@id": B.url(slug) + "#blog", "url": B.url(slug), "name": "Legacy Medical Journal", "publisher": {"@id": B.ORG_ID},
                       "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": B.url("journal/" + p["slug"]), "datePublished": p["date"]} for p in J.POSTS]},
                      B.breadcrumb_node(trail))
