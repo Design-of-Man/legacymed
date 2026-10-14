@@ -29,10 +29,20 @@ would see a chain of redirects.
   **above** the `# BEGIN WordPress` block. If it goes below, WordPress handles the
   request first and the redirects never run.
 - What it covers: every old page and post, each with a 301 straight to its new
-  page (45 URLs, listed in `redirect-map.csv`). Category, tag, author and
+  page (45 URLs), plus the 48 WordPress shortlinks (`/?p=ID`), all listed in
+  `redirect-map.csv`. Feeds go to `/journal/feed.xml`, the WordPress sitemaps to
+  `/sitemap.xml`, `robots.txt` to the new `robots.txt`. Category, tag, author and
   date-archive pages go to `/journal`. Anything else goes to the new homepage.
   The rule sending the testimonials page to the reviews section (`/#reviews`)
   carries the `NE` flag, so the `#` isn't escaped.
+- Coverage, checked 2026-10-14 by `python3 _dev/redirect_coverage.py`: 156/156
+  cmedjupiter.com URLs land on their real new page in one hop (inventory in
+  `old-urls.txt`: both WordPress sitemaps, every link on every old page, every
+  shortlink). Only the theme's four demo items ("wws_portfolio") and one
+  Elementor template have no equivalent and go to the homepage.
+- Once these rules are live, every path on cmedjupiter.com redirects, including
+  `/wp-admin`. That retires the old WordPress install: export anything still
+  needed from it first.
 - These rules point straight at the **new** URLs. If a temporary pre-launch set
   of cmed rules pointing at the old WordPress URLs is already live, replace it
   completely. Don't stack the new rules on top of it.
@@ -47,7 +57,21 @@ for u in / /dr-shtern/ /our-team/ /patient-testimonials/ /contact/ \
   curl -sI "https://cmedjupiter.com$u" | grep -iE '^(HTTP|location)'
 done
 ```
-Run the same check on `https://www.cmedjupiter.com` and on `http://`.
+Run the same check on `https://www.cmedjupiter.com` and on `http://`, and on
+one shortlink: `curl -sI "https://cmedjupiter.com/?p=2"` should answer 301 to
+`/dr-yana-shtern` with no `?p=2` left on the new URL.
+
+For legacymedicalpalmbeach.com itself, once the domain points at Vercel:
+
+```sh
+python3 _dev/redirect_coverage.py --live legacymedicalpalmbeach.com
+```
+
+It requests all 52 old addresses on the live domain and compares each with the
+simulated result. Expect two permanent hops (308) for old URLs that end in a
+slash: Vercel strips the slash before it applies vercel.json redirects (measured
+on the production deployment 2026-10-14). Both hops are permanent and Google
+follows them; it is not a failure. A 404 or a 200 on an old address is.
 
 ### 4. Verify every property in Search Console
 Use the same Google account for all of them, with **Owner** permission.

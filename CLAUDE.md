@@ -5,7 +5,7 @@ Static site for Legacy Medical, Dr. Yana Shtern's concierge internal medicine pr
 ## Build
 - `python3 build.py --check` regenerates every page into `public/`, plus sitemap.xml, robots.txt, llms.txt, journal/feed.xml, site.webmanifest, **vercel.json** (headers, CSP with hashed inline scripts, redirects) and `_dev/redirects/` (cmedjupiter.com 301 maps). `--check` fails on banned copy (em dashes, stock AI phrases; list in build.py `BANNED`).
 - Stdlib only. Vercel runs the same command (`buildCommand`) and serves `public/` only, so env vars (GA4_ID, VERCEL_ANALYTICS, GOOGLE_PLACES_API_KEY) take effect at build time.
-- Gates before any push: `python3 _dev/preflight.py` (must print READY TO DEPLOY), `python3 _dev/verify.py` (axe + console + 404s + overflow on every page at 375/768/1440, light and dark; needs `pip install playwright` and axe-core from npm, path at the top of the file), `python3 _dev/hero_contrast.py` (text over the hero video).
+- Gates before any push: `python3 _dev/preflight.py` (must print READY TO DEPLOY), `python3 _dev/verify.py` (axe + console + 404s + overflow on every page at 375/768/1440, light and dark; needs `pip install playwright` and axe-core from npm; point `AXE_JS` at its axe.min.js), `python3 _dev/hero_contrast.py` (text over the hero video).
 
 ## Where things live
 - Facts (phone, address, hours, insurance, socials): `PRACTICE` in build.py and `DOCTOR`/`TEAM` in content.py. Footer, schema, llms.txt and the hours ring all read from these.
@@ -22,3 +22,10 @@ Static site for Legacy Medical, Dr. Yana Shtern's concierge internal medicine pr
 - Hero: the full-bleed Jupiter Inlet film fills the screen under a transparent header. A compact block of copy (kicker, h1, lede, two buttons, facts) sits low on the left, Elite-style, kept small at the owner's request, with a gradient shade only where the words sit. No italic in the h1, no `poster` attribute on the video (the <picture> is the poster). `_dev/hero_contrast.py` must stay all-pass.
 - The photo reel uses only real practice photos. The 2020 "Concierge Medicine of Jupiter" shoot shows an earlier location and unidentified people: keep it out.
 - Hosting/DNS for the domain is with Unkind Designs. Do not touch DNS.
+
+## SEO and the cutover
+- **Start at `docs/seo-kit/README.md`**: the index of every SEO and local-authority document, with the status of each.
+- Every old URL on legacymedicalpalmbeach.com and cmedjupiter.com is listed in `_dev/redirects/old-urls.txt` and must land on its real new page: `python3 _dev/redirect_coverage.py` (preflight runs it and blocks on any miss). Never a mass redirect to the home page. Add Search Console pages to the inventory once the properties are readable.
+- Vercel strips the trailing slash before it applies vercel.json redirects, so old WordPress URLs take two permanent hops on the main domain. Expected, not a bug.
+- Any `*.vercel.app` host gets `X-Robots-Tag: noindex, nofollow` (build.py `build_vercel`). The production alias legacymedical.vercel.app was indexable without it.
+- Medicare figures on /insurance-and-fees (`INSURANCE["medicare"]` in content.py) are dated 2026 values from CMS: update them and the "checked" date every January.
