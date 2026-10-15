@@ -63,7 +63,7 @@ def home(B):
       <p class="hero-lede">%(lede)s</p>
       <div class="btn-row">
         <a class="btn" href="/meet-and-greet" data-loc="hero">Book a meet and greet %(arrow)s</a>
-        <a class="btn ghost" href="tel:%(tel)s" data-loc="hero">%(phoneico)s Call %(phone)s</a>
+        <a class="btn ghost" href="tel:%(tel)s" data-loc="hero">%(phoneico)s Call<span class="hide-sm"> %(phone)s</span></a>
       </div>
       <dl class="hero-facts">
         <div><dt>Physician</dt><dd><a href="/dr-yana-shtern">Dr. Yana Shtern, MD</a><br>Internal medicine and nephrology</dd></div>

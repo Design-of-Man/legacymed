@@ -564,7 +564,7 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
 %(canon)s
 <meta name="theme-color" content="#0E0D0B">
 <meta name="color-scheme" content="light">
-<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no">
 <link rel="preload" href="/assets/fonts/legacy-display-v1.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/legacy-sans-v1.woff2" as="font" type="font/woff2" crossorigin>
 %(preload)s
