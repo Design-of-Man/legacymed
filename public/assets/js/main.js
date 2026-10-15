@@ -137,14 +137,12 @@
   /* ---------- hero video ----------
      The poster is the LCP element and ships in the HTML. The video gets no
      <source> until after load, and only when the visitor's settings allow it:
-     never under reduced motion or Save-Data, and on narrow screens only when
-     the visitor presses play. */
+     never under reduced motion or Save-Data. Phones get the portrait cut. */
   const video = document.querySelector(".hero-media video");
   const vToggle = document.querySelector(".hero-toggle");
   if (video && vToggle) {
     const conn = navigator.connection || {};
     const saveData = conn.saveData === true || /(^|-)2g$/.test(conn.effectiveType || "");
-    const narrow = window.matchMedia("(max-width: 760px)").matches;
     let loaded = false;
     let wantPlay = false;
     const setToggle = (playing) => {
@@ -179,7 +177,7 @@
       if (video.paused) { play(); track("hero_video_play"); }
       else { wantPlay = false; video.pause(); }
     });
-    const autoOK = !reduceMotion.matches && !saveData && !narrow;
+    const autoOK = !reduceMotion.matches && !saveData;
     vToggle.hidden = false;
     setToggle(false);
     if (autoOK) {

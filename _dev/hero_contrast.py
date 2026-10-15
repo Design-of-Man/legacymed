@@ -12,7 +12,7 @@ import verify as V
 from PIL import Image
 from playwright.async_api import async_playwright
 
-SEL = [(".hero-kicker", 4.5), (".hero-title", 3.0), (".hero-lede", 4.5), (".hero-facts dd", 4.5), (".hero-facts dt", 4.5), (".hero-toggle .t", 4.5)]
+SEL = [(".hero-kicker", 4.5), (".hero-title", 3.0), (".hero-lede", 4.5), (".hero-facts dd", 4.5), (".hero-facts dt", 4.5)]
 
 def lum(rgb):
     def f(c):

@@ -235,6 +235,8 @@ body.nav-open .menu-toggle span::after{transform:translateY(-.36rem) rotate(-45d
 .hero-toggle svg{width:.7rem;height:.7rem}
 .hero-toggle:hover{border-color:var(--gold)}
 .hero-toggle[hidden]{display:none}
+/* No visible play button (owner's call). The control stays for keyboard and screen-reader users and shows on focus. */
+.hero-ctl:not(:focus-within){position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 @media (max-width:760px){
   .hero{min-height:34rem}
   /* Phones: one clean shade from the bottom instead of the glow, a compact block, no facts row. */
