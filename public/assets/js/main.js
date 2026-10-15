@@ -20,7 +20,7 @@
     else track(a.dataset.track, { link_location: a.dataset.loc || "page" });
   });
 
-  /* ---------- header: solid after the hero, tucks away while reading ---------- */
+  /* ---------- header: a solid banner as soon as the page scrolls, always in view ---------- */
   const header = document.querySelector(".site-header");
   const hero = document.querySelector(".hero");
   const callbar = document.querySelector(".callbar");
@@ -30,13 +30,7 @@
   const onScroll = () => {
     const y = window.scrollY;
     const threshold = hero ? hero.offsetHeight - 120 : 24;
-    header.classList.toggle("solid", y > (hero ? threshold : 24));
-    const goingDown = y > lastY + 4;
-    const goingUp = y < lastY - 4;
-    if (!body.classList.contains("nav-open") && !header.contains(document.activeElement)) {
-      if (goingDown && y > 520) header.classList.add("tucked");
-      else if (goingUp || y < 520) header.classList.remove("tucked");
-    }
+    header.classList.toggle("solid", y > 12);
     if (callbar) callbar.classList.toggle("show", y > (hero ? threshold * 0.6 : 400));
     // Nothing floats over the hero: the chat launcher waits until it is passed.
     body.classList.toggle("past-hero", !hero || y > threshold * 0.6);
@@ -46,7 +40,6 @@
   window.addEventListener("scroll", () => {
     if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
   }, { passive: true });
-  header.addEventListener("focusin", () => header.classList.remove("tucked"));
 
   onScroll();
 
