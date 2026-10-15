@@ -156,14 +156,14 @@ async def motion_pass(browser, base):
         out.append("reel not running: %s" % reel)
     out += ["console: " + e for e in errs]
     await ctx.close()
-    # narrow screen: poster only until the visitor presses play
+    # narrow screen: the film autoplays too (owner's call), using the portrait cut
     ctx = await browser.new_context(viewport={"width": 390, "height": 844})
     page = await ctx.new_page()
     await page.goto(base + "/", wait_until="load")
     await page.wait_for_timeout(2500)
     src = await page.evaluate("document.querySelector('.hero-media video').currentSrc")
-    if src:
-        out.append("phone attached video without a tap: %s" % src)
+    if "portrait" not in (src or ""):
+        out.append("phone did not attach the portrait film: %s" % src)
     await ctx.close()
     return out, state, reel
 
