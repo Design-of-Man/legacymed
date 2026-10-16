@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
   }
   const headers = { "X-Goog-Api-Key": key, "Content-Type": "application/json" };
   try {
-    let id = process.env.GOOGLE_PLACE_ID;
+    let id = process.env.GOOGLE_PLACE_ID || "ChIJ9-heFHwr34gRt2Rs2caAsOY"; // Legacy Medical Concierge - Dr. Yana Shtern
     if (!id) {
       const s = await fetch("https://places.googleapis.com/v1/places:searchText", {
         method: "POST",

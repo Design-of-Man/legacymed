@@ -14,10 +14,9 @@ Nothing below was guessed on the site. Each item is either left out of the copy 
 - **Healthgrades/US News/Zocdoc listings** still show old Jupiter or Brooklyn addresses (see audit). Claim and correct.
 
 ## From the Oct 16, 2026 client round
-- **Instagram handle.** The client asked for an Instagram section. No account could be found (the old site's Instagram icon pointed at LinkedIn). Set `INSTAGRAM = {"handle": "...", "url": "https://www.instagram.com/..."}` in content.py and the home page section plus the footer icon appear on the next build.
 - **Hero film source.** The coastline clip supplied on Oct 16 is a 1280x720 export (`DJI_..._0426_D_1.mov`), not the 4K camera file. It plays fine but is soft on large screens. Ask for the original from the drone and re-encode per `_dev/video/PROVENANCE.md`.
-- **Google reviews.** The home page reviews block already switches to live Google reviews when `GOOGLE_PLACES_API_KEY` (and ideally `GOOGLE_PLACE_ID`) are set in the Vercel project. The client asked for Google reviews; the key is still missing. Static Google review text is never typed in by hand.
-- **"Blog" keeps the /journal URLs.** Only the label changed (nav, footer, breadcrumbs, page title, RSS title). Moving the 111 posts to /blog/... would need 301s for every post; do it only if the client wants the URL to match.
+- **Google reviews.** The home page shows the Google rating (5.0, 45 reviews) and four verbatim Google reviews as a snapshot dated October 2026 (`GOOGLE`, `GOOGLE_REVIEWS` in content.py, read from the public listing, place ID ChIJ9-heFHwr34gRt2Rs2caAsOY). Refresh the snapshot now and then, or set `GOOGLE_PLACES_API_KEY` in Vercel and the block goes live automatically.
+- **Blog moved to /blog.** Posts live at /blog/<slug>, feed at /blog/feed.xml; /journal, /journal/feed.xml and /journal/:slug 301 to the new paths (vercel.json). Nothing else to do unless Search Console shows old /journal URLs indexed.
 
 ## Needs account access
 - **Domain + DNS** for legacymedicalpalmbeach.com sit with Unkind Designs. Point the domain at the Vercel project when the handover happens; the vercel.json redirect map and www→apex rules go live with it.

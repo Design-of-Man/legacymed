@@ -67,12 +67,12 @@
     },
     {
       "source": "/blog",
-      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
       "permanent": true
     },
     {
       "source": "/blog/",
-      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
       "permanent": true
     },
     {
@@ -117,332 +117,342 @@
     },
     {
       "source": "/2020/08/11/covid-19-5-tips-on-how-to-avoid-spreading-the-virus",
-      "destination": "https://legacymedicalpalmbeach.com/journal/covid-19-tips-to-avoid-spreading-the-virus",
+      "destination": "https://legacymedicalpalmbeach.com/blog/covid-19-tips-to-avoid-spreading-the-virus",
       "permanent": true
     },
     {
       "source": "/2020/08/11/covid-19-5-tips-on-how-to-avoid-spreading-the-virus/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/covid-19-tips-to-avoid-spreading-the-virus",
+      "destination": "https://legacymedicalpalmbeach.com/blog/covid-19-tips-to-avoid-spreading-the-virus",
       "permanent": true
     },
     {
       "source": "/2020/08/20/everything-you-need-to-know-about-executive-level-physical-exams",
-      "destination": "https://legacymedicalpalmbeach.com/journal/executive-physical-exam-what-to-expect",
+      "destination": "https://legacymedicalpalmbeach.com/blog/executive-physical-exam-what-to-expect",
       "permanent": true
     },
     {
       "source": "/2020/08/20/everything-you-need-to-know-about-executive-level-physical-exams/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/executive-physical-exam-what-to-expect",
+      "destination": "https://legacymedicalpalmbeach.com/blog/executive-physical-exam-what-to-expect",
       "permanent": true
     },
     {
       "source": "/2020/08/20/how-to-know-if-a-concierge-doctor-is-right-for-me",
-      "destination": "https://legacymedicalpalmbeach.com/journal/is-a-concierge-doctor-right-for-me",
+      "destination": "https://legacymedicalpalmbeach.com/blog/is-a-concierge-doctor-right-for-me",
       "permanent": true
     },
     {
       "source": "/2020/08/20/how-to-know-if-a-concierge-doctor-is-right-for-me/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/is-a-concierge-doctor-right-for-me",
+      "destination": "https://legacymedicalpalmbeach.com/blog/is-a-concierge-doctor-right-for-me",
       "permanent": true
     },
     {
       "source": "/2020/09/14/how-concierge-medicine-works-with-your-hospitalization",
-      "destination": "https://legacymedicalpalmbeach.com/journal/concierge-doctor-hospital-stay",
+      "destination": "https://legacymedicalpalmbeach.com/blog/concierge-doctor-hospital-stay",
       "permanent": true
     },
     {
       "source": "/2020/09/14/how-concierge-medicine-works-with-your-hospitalization/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/concierge-doctor-hospital-stay",
+      "destination": "https://legacymedicalpalmbeach.com/blog/concierge-doctor-hospital-stay",
       "permanent": true
     },
     {
       "source": "/2020/09/14/top-10-foods-that-promote-a-healthy-heart",
-      "destination": "https://legacymedicalpalmbeach.com/journal/heart-healthy-foods",
+      "destination": "https://legacymedicalpalmbeach.com/blog/heart-healthy-foods",
       "permanent": true
     },
     {
       "source": "/2020/09/14/top-10-foods-that-promote-a-healthy-heart/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/heart-healthy-foods",
+      "destination": "https://legacymedicalpalmbeach.com/blog/heart-healthy-foods",
       "permanent": true
     },
     {
       "source": "/2020/10/14/5-quick-tips-to-reduce-your-stress",
-      "destination": "https://legacymedicalpalmbeach.com/journal/tips-to-reduce-stress",
+      "destination": "https://legacymedicalpalmbeach.com/blog/tips-to-reduce-stress",
       "permanent": true
     },
     {
       "source": "/2020/10/14/5-quick-tips-to-reduce-your-stress/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/tips-to-reduce-stress",
+      "destination": "https://legacymedicalpalmbeach.com/blog/tips-to-reduce-stress",
       "permanent": true
     },
     {
       "source": "/2020/10/14/arthritis-common-helpful-tips",
-      "destination": "https://legacymedicalpalmbeach.com/journal/arthritis-tips-for-managing-pain",
+      "destination": "https://legacymedicalpalmbeach.com/blog/arthritis-tips-for-managing-pain",
       "permanent": true
     },
     {
       "source": "/2020/10/14/arthritis-common-helpful-tips/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/arthritis-tips-for-managing-pain",
+      "destination": "https://legacymedicalpalmbeach.com/blog/arthritis-tips-for-managing-pain",
       "permanent": true
     },
     {
       "source": "/2020/10/14/the-best-method-to-washing-your-hands",
-      "destination": "https://legacymedicalpalmbeach.com/journal/how-to-wash-your-hands",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-to-wash-your-hands",
       "permanent": true
     },
     {
       "source": "/2020/10/14/the-best-method-to-washing-your-hands/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/how-to-wash-your-hands",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-to-wash-your-hands",
       "permanent": true
     },
     {
       "source": "/2020/11/18/what-is-concierge-medicine",
-      "destination": "https://legacymedicalpalmbeach.com/journal/what-is-concierge-medicine",
+      "destination": "https://legacymedicalpalmbeach.com/blog/what-is-concierge-medicine",
       "permanent": true
     },
     {
       "source": "/2020/11/18/what-is-concierge-medicine/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/what-is-concierge-medicine",
+      "destination": "https://legacymedicalpalmbeach.com/blog/what-is-concierge-medicine",
       "permanent": true
     },
     {
       "source": "/2020/12/02/concierge-medicine-pros-and-cons",
-      "destination": "https://legacymedicalpalmbeach.com/journal/concierge-medicine-pros-and-cons",
+      "destination": "https://legacymedicalpalmbeach.com/blog/concierge-medicine-pros-and-cons",
       "permanent": true
     },
     {
       "source": "/2020/12/02/concierge-medicine-pros-and-cons/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/concierge-medicine-pros-and-cons",
+      "destination": "https://legacymedicalpalmbeach.com/blog/concierge-medicine-pros-and-cons",
       "permanent": true
     },
     {
       "source": "/2020/12/16/pandemic-fatigue-tips",
-      "destination": "https://legacymedicalpalmbeach.com/journal/pandemic-fatigue-tips",
+      "destination": "https://legacymedicalpalmbeach.com/blog/pandemic-fatigue-tips",
       "permanent": true
     },
     {
       "source": "/2020/12/16/pandemic-fatigue-tips/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/pandemic-fatigue-tips",
+      "destination": "https://legacymedicalpalmbeach.com/blog/pandemic-fatigue-tips",
       "permanent": true
     },
     {
       "source": "/2020/12/30/hair-loss-in-men-and-women",
-      "destination": "https://legacymedicalpalmbeach.com/journal/hair-loss-in-men-and-women",
+      "destination": "https://legacymedicalpalmbeach.com/blog/hair-loss-in-men-and-women",
       "permanent": true
     },
     {
       "source": "/2020/12/30/hair-loss-in-men-and-women/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/hair-loss-in-men-and-women",
+      "destination": "https://legacymedicalpalmbeach.com/blog/hair-loss-in-men-and-women",
       "permanent": true
     },
     {
       "source": "/2021/01/25/what-is-hyperhidrosis",
-      "destination": "https://legacymedicalpalmbeach.com/journal/hyperhidrosis-excessive-sweating",
+      "destination": "https://legacymedicalpalmbeach.com/blog/hyperhidrosis-excessive-sweating",
       "permanent": true
     },
     {
       "source": "/2021/01/25/what-is-hyperhidrosis/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/hyperhidrosis-excessive-sweating",
+      "destination": "https://legacymedicalpalmbeach.com/blog/hyperhidrosis-excessive-sweating",
       "permanent": true
     },
     {
       "source": "/2021/02/26/are-you-getting-enough-sleep-are-you-sleeping-too-much",
-      "destination": "https://legacymedicalpalmbeach.com/journal/how-much-sleep-do-adults-need",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-much-sleep-do-adults-need",
       "permanent": true
     },
     {
       "source": "/2021/02/26/are-you-getting-enough-sleep-are-you-sleeping-too-much/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/how-much-sleep-do-adults-need",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-much-sleep-do-adults-need",
       "permanent": true
     },
     {
       "source": "/2021/03/24/why-is-obesity-a-disease",
-      "destination": "https://legacymedicalpalmbeach.com/journal/obesity-is-a-disease",
+      "destination": "https://legacymedicalpalmbeach.com/blog/obesity-is-a-disease",
       "permanent": true
     },
     {
       "source": "/2021/03/24/why-is-obesity-a-disease/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/obesity-is-a-disease",
+      "destination": "https://legacymedicalpalmbeach.com/blog/obesity-is-a-disease",
       "permanent": true
     },
     {
       "source": "/2021/04/09/fully-vaccinated-now-what",
-      "destination": "https://legacymedicalpalmbeach.com/journal/fully-vaccinated-covid-19",
+      "destination": "https://legacymedicalpalmbeach.com/blog/fully-vaccinated-covid-19",
       "permanent": true
     },
     {
       "source": "/2021/04/09/fully-vaccinated-now-what/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/fully-vaccinated-covid-19",
+      "destination": "https://legacymedicalpalmbeach.com/blog/fully-vaccinated-covid-19",
       "permanent": true
     },
     {
       "source": "/2021/05/11/is-cancer-preventable",
-      "destination": "https://legacymedicalpalmbeach.com/journal/cancer-prevention-risk-factors",
+      "destination": "https://legacymedicalpalmbeach.com/blog/cancer-prevention-risk-factors",
       "permanent": true
     },
     {
       "source": "/2021/05/11/is-cancer-preventable/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/cancer-prevention-risk-factors",
+      "destination": "https://legacymedicalpalmbeach.com/blog/cancer-prevention-risk-factors",
       "permanent": true
     },
     {
       "source": "/2021/07/07/mediterranean-diet-approach",
-      "destination": "https://legacymedicalpalmbeach.com/journal/mediterranean-diet-heart-health",
+      "destination": "https://legacymedicalpalmbeach.com/blog/mediterranean-diet-heart-health",
       "permanent": true
     },
     {
       "source": "/2021/07/07/mediterranean-diet-approach/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/mediterranean-diet-heart-health",
+      "destination": "https://legacymedicalpalmbeach.com/blog/mediterranean-diet-heart-health",
       "permanent": true
     },
     {
       "source": "/2021/07/26/vitamin-supplementation",
-      "destination": "https://legacymedicalpalmbeach.com/journal/multivitamin-supplements-who-needs-them",
+      "destination": "https://legacymedicalpalmbeach.com/blog/multivitamin-supplements-who-needs-them",
       "permanent": true
     },
     {
       "source": "/2021/07/26/vitamin-supplementation/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/multivitamin-supplements-who-needs-them",
+      "destination": "https://legacymedicalpalmbeach.com/blog/multivitamin-supplements-who-needs-them",
       "permanent": true
     },
     {
       "source": "/2021/08/27/lets-talk-about-antibiotics-the-good-the-bad-and-the-ugly",
-      "destination": "https://legacymedicalpalmbeach.com/journal/antibiotics-when-they-help-and-harm",
+      "destination": "https://legacymedicalpalmbeach.com/blog/antibiotics-when-they-help-and-harm",
       "permanent": true
     },
     {
       "source": "/2021/08/27/lets-talk-about-antibiotics-the-good-the-bad-and-the-ugly/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/antibiotics-when-they-help-and-harm",
+      "destination": "https://legacymedicalpalmbeach.com/blog/antibiotics-when-they-help-and-harm",
       "permanent": true
     },
     {
       "source": "/2021/09/23/everyone-is-going-bananas",
-      "destination": "https://legacymedicalpalmbeach.com/journal/banana-nutrition-benefits",
+      "destination": "https://legacymedicalpalmbeach.com/blog/banana-nutrition-benefits",
       "permanent": true
     },
     {
       "source": "/2021/09/23/everyone-is-going-bananas/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/banana-nutrition-benefits",
+      "destination": "https://legacymedicalpalmbeach.com/blog/banana-nutrition-benefits",
       "permanent": true
     },
     {
       "source": "/2021/11/01/cdc-booster-update",
-      "destination": "https://legacymedicalpalmbeach.com/journal/covid-19-booster-update",
+      "destination": "https://legacymedicalpalmbeach.com/blog/covid-19-booster-update",
       "permanent": true
     },
     {
       "source": "/2021/11/01/cdc-booster-update/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/covid-19-booster-update",
+      "destination": "https://legacymedicalpalmbeach.com/blog/covid-19-booster-update",
       "permanent": true
     },
     {
       "source": "/2021/12/13/safety-of-over-the-counter-oral-pain-medications",
-      "destination": "https://legacymedicalpalmbeach.com/journal/over-the-counter-pain-medication-safety",
+      "destination": "https://legacymedicalpalmbeach.com/blog/over-the-counter-pain-medication-safety",
       "permanent": true
     },
     {
       "source": "/2021/12/13/safety-of-over-the-counter-oral-pain-medications/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/over-the-counter-pain-medication-safety",
+      "destination": "https://legacymedicalpalmbeach.com/blog/over-the-counter-pain-medication-safety",
       "permanent": true
     },
     {
       "source": "/2022/02/01/what-is-a-pulse-oximeter",
-      "destination": "https://legacymedicalpalmbeach.com/journal/pulse-oximeter-how-to-use",
+      "destination": "https://legacymedicalpalmbeach.com/blog/pulse-oximeter-how-to-use",
       "permanent": true
     },
     {
       "source": "/2022/02/01/what-is-a-pulse-oximeter/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/pulse-oximeter-how-to-use",
+      "destination": "https://legacymedicalpalmbeach.com/blog/pulse-oximeter-how-to-use",
       "permanent": true
     },
     {
       "source": "/2022/03/30/potty-like-a-rockstar",
-      "destination": "https://legacymedicalpalmbeach.com/journal/constipation-and-squatty-potty",
+      "destination": "https://legacymedicalpalmbeach.com/blog/constipation-and-squatty-potty",
       "permanent": true
     },
     {
       "source": "/2022/03/30/potty-like-a-rockstar/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/constipation-and-squatty-potty",
+      "destination": "https://legacymedicalpalmbeach.com/blog/constipation-and-squatty-potty",
       "permanent": true
     },
     {
       "source": "/2022/05/03/the-benefits-of-exercising",
-      "destination": "https://legacymedicalpalmbeach.com/journal/health-benefits-of-exercise",
+      "destination": "https://legacymedicalpalmbeach.com/blog/health-benefits-of-exercise",
       "permanent": true
     },
     {
       "source": "/2022/05/03/the-benefits-of-exercising/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/health-benefits-of-exercise",
+      "destination": "https://legacymedicalpalmbeach.com/blog/health-benefits-of-exercise",
       "permanent": true
     },
     {
       "source": "/2022/06/28/what-is-low-dose-computed-tomography",
-      "destination": "https://legacymedicalpalmbeach.com/journal/low-dose-ct-lung-cancer-screening",
+      "destination": "https://legacymedicalpalmbeach.com/blog/low-dose-ct-lung-cancer-screening",
       "permanent": true
     },
     {
       "source": "/2022/06/28/what-is-low-dose-computed-tomography/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/low-dose-ct-lung-cancer-screening",
+      "destination": "https://legacymedicalpalmbeach.com/blog/low-dose-ct-lung-cancer-screening",
       "permanent": true
     },
     {
       "source": "/2022/08/17/how-often-should-someone-urinate",
-      "destination": "https://legacymedicalpalmbeach.com/journal/how-often-should-you-urinate",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-often-should-you-urinate",
       "permanent": true
     },
     {
       "source": "/2022/08/17/how-often-should-someone-urinate/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/how-often-should-you-urinate",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-often-should-you-urinate",
       "permanent": true
     },
     {
       "source": "/2022/10/31/benefits-of-yearly-influenza-vaccination",
-      "destination": "https://legacymedicalpalmbeach.com/journal/yearly-flu-vaccine-benefits",
+      "destination": "https://legacymedicalpalmbeach.com/blog/yearly-flu-vaccine-benefits",
       "permanent": true
     },
     {
       "source": "/2022/10/31/benefits-of-yearly-influenza-vaccination/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/yearly-flu-vaccine-benefits",
+      "destination": "https://legacymedicalpalmbeach.com/blog/yearly-flu-vaccine-benefits",
       "permanent": true
     },
     {
       "source": "/2022/12/27/rsv-infection-in-adults",
-      "destination": "https://legacymedicalpalmbeach.com/journal/rsv-infection-in-adults",
+      "destination": "https://legacymedicalpalmbeach.com/blog/rsv-infection-in-adults",
       "permanent": true
     },
     {
       "source": "/2022/12/27/rsv-infection-in-adults/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/rsv-infection-in-adults",
+      "destination": "https://legacymedicalpalmbeach.com/blog/rsv-infection-in-adults",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2",
-      "destination": "https://legacymedicalpalmbeach.com/journal/magnesium-low-and-high-levels",
+      "destination": "https://legacymedicalpalmbeach.com/blog/magnesium-low-and-high-levels",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/magnesium-low-and-high-levels",
+      "destination": "https://legacymedicalpalmbeach.com/blog/magnesium-low-and-high-levels",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3",
-      "destination": "https://legacymedicalpalmbeach.com/journal/breast-cancer-screening-mammogram-age-40",
+      "destination": "https://legacymedicalpalmbeach.com/blog/breast-cancer-screening-mammogram-age-40",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/breast-cancer-screening-mammogram-age-40",
+      "destination": "https://legacymedicalpalmbeach.com/blog/breast-cancer-screening-mammogram-age-40",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus",
-      "destination": "https://legacymedicalpalmbeach.com/journal/nsaids-risks-and-side-effects",
+      "destination": "https://legacymedicalpalmbeach.com/blog/nsaids-risks-and-side-effects",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus/",
-      "destination": "https://legacymedicalpalmbeach.com/journal/nsaids-risks-and-side-effects",
+      "destination": "https://legacymedicalpalmbeach.com/blog/nsaids-risks-and-side-effects",
+      "permanent": true
+    },
+    {
+      "source": "/journal/feed.xml",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/journal/:slug",
+      "destination": "https://legacymedicalpalmbeach.com/blog/:slug",
       "permanent": true
     },
     {
@@ -457,47 +467,47 @@
     },
     {
       "source": "/author/:path*",
-      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
       "permanent": true
     },
     {
       "source": "/category/:path*",
-      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
       "permanent": true
     },
     {
       "source": "/tag/:path*",
-      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
       "permanent": true
     },
     {
       "source": "/feed",
-      "destination": "https://legacymedicalpalmbeach.com/journal/feed.xml",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
       "permanent": true
     },
     {
       "source": "/comments/feed",
-      "destination": "https://legacymedicalpalmbeach.com/journal/feed.xml",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
       "permanent": true
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed",
-      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
       "permanent": true
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug",
-      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
       "permanent": true
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})",
-      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
       "permanent": true
     },
     {
       "source": "/:y(\\d{4})",
-      "destination": "https://legacymedicalpalmbeach.com/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
       "permanent": true
     },
     {

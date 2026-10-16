@@ -207,7 +207,7 @@ def home(B):
     posts = J.POSTS[:3]
     journal_sec = """<section class="section sunk" aria-labelledby="j-h">
   <div class="wrap">
-    <div class="headline-row"><div><p class="eyebrow">Blog</p><h2 id="j-h" style="margin-top:1.25rem">Notes from <em>the practice</em></h2></div><a class="text-link" href="/journal">All articles %s</a></div>
+    <div class="headline-row"><div><p class="eyebrow">Blog</p><h2 id="j-h" style="margin-top:1.25rem">Notes from <em>the practice</em></h2></div><a class="text-link" href="/blog">All articles %s</a></div>
     <div class="post-row">%s</div>
   </div>
 </section>""" % (icon("arrow"), "".join(post_card(B, p) for p in posts))
@@ -287,16 +287,24 @@ def clock_section(B):
 
 
 def reviews_section(B):
+    """Google reviews. The rating badge and the four quotes are a dated snapshot from the public
+    listing (content.GOOGLE / GOOGLE_REVIEWS); main.js swaps in live Google data when /api/reviews
+    is configured. No AggregateRating schema (preflight blocks self-serving stars)."""
     esc = B.esc
-    quotes = "".join('<figure class="quote" data-reveal style="--d:%d"><blockquote><p>%s</p></blockquote><figcaption><b>%s</b> · %s</figcaption></figure>' % (
-        i % 2, esc(t["quote"]), esc(t["who"]), t["source_html"]) for i, t in enumerate(C.TESTIMONIALS[1:3]))
+    G = C.GOOGLE
+    quotes = "".join('<figure class="quote" data-reveal style="--d:%d"><blockquote><p>%s</p></blockquote><figcaption><b>%s</b> \u00b7 Google review \u00b7 %s</figcaption></figure>' % (
+        i % 2, esc(t["quote"]), esc(t["who"]), esc(t["when"])) for i, t in enumerate(C.GOOGLE_REVIEWS[:4]))
     ratings = "".join('<li><a class="inline-link" href="%s" rel="noopener" target="_blank">%s<span class="sr-only"> (opens in a new tab)</span></a></li>' % (esc(r["url"]), esc(r["label"])) for r in C.RATING_LINKS)
+    stars = '<span class="stars" aria-hidden="true">%s</span>' % (B.ICONS["star"] * 5)
+    badge = ('<a class="rating-badge" href="%s" rel="noopener" target="_blank" data-live-badge><b>%s</b><span>%s<span class="sr-only">%s out of 5 stars, </span>'
+             'Google rating from %d reviews<br><span class="small muted">As of %s</span></span><span class="sr-only"> (opens in a new tab)</span></a>') % (
+        esc(G["url"]), esc(G["rating"]), stars, esc(G["rating"]), G["count"], esc(G["as_of"]))
     live_attr = ' data-live-reviews' if B.LIVE_REVIEWS else ""
     return """<section class="section surface" id="reviews" aria-labelledby="rev-h"%s>
   <div class="wrap">
     <div class="reviews-head">
       <div><p class="eyebrow">Patients</p><h2 id="rev-h" style="margin-top:1.25rem">%s</h2></div>
-      <div class="rating-badge" data-live-badge hidden></div>
+      %s
     </div>
     <div class="quotes" data-live-list>%s</div>
     <div style="margin-top:2.25rem;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center">
@@ -304,7 +312,7 @@ def reviews_section(B):
       <ul class="pill-list" style="gap:.5rem 1.25rem">%s</ul>
     </div>
   </div>
-</section>""" % (live_attr, esc(C.HOME["reviews_h"]), quotes, C.HOME["reviews_note"], ratings)
+</section>""" % (live_attr, B.hx(C.HOME["reviews_h"]), badge, quotes, C.HOME["reviews_note"], ratings)
 
 
 def human_date(iso):
@@ -498,7 +506,7 @@ def guide_page(B, slug):
     posts = {p["slug"]: p for p in J.POSTS}
     reads = [posts[s] for s in S.get("related_posts", []) if s in posts]
     if reads:
-        cards = "".join('<a class="card" href="/journal/%s"><p class="meta">%s</p><h3>%s</h3><p>%s</p><span class="more">Read %s</span></a>' % (
+        cards = "".join('<a class="card" href="/blog/%s"><p class="meta">%s</p><h3>%s</h3><p>%s</p><span class="more">Read %s</span></a>' % (
             p["slug"], esc(p["category"]), esc(p["title"]), esc(p["excerpt"]), icon("arrow")) for p in reads[:3])
         body += '<section class="section" aria-labelledby="gread-h"><div class="wrap"><h2 id="gread-h" style="font-size:var(--step-3);margin-bottom:2rem">From the blog</h2><div class="cards">%s</div></div></section>' % cards
     body += '<section class="section sunk" aria-labelledby="grel-h"><div class="wrap"><h2 id="grel-h" style="font-size:var(--step-3);margin-bottom:2rem">Related</h2>%s</div></section>' % B.related_cards(S["related"])
@@ -544,7 +552,7 @@ def patients(B):
     learn = """<section class="section sunk" aria-labelledby="learn-h"><div class="wrap">
 <div class="headline-row"><div><p class="eyebrow">Learn</p><h2 id="learn-h" style="margin-top:1.25rem">Read, watch, <em>ask</em></h2></div><p class="lede">Articles and videos on the questions members bring to their visits.</p></div>
 <div class="learn-grid">
-<a class="learn-card" href="/journal"><span class="eyebrow">Blog</span><h3>Articles on concierge care, the heart, kidneys, prevention and healthy aging</h3><span class="text-link">Read the blog %(a)s</span></a>
+<a class="learn-card" href="/blog"><span class="eyebrow">Blog</span><h3>Articles on concierge care, the heart, kidneys, prevention and healthy aging</h3><span class="text-link">Read the blog %(a)s</span></a>
 <a class="learn-card" href="/videos"><span class="eyebrow">Videos</span><h3>A film from the practice and trusted explainers from public health organizations</h3><span class="text-link">Watch the videos %(a)s</span></a>
 <a class="learn-card" href="/faq"><span class="eyebrow">FAQ</span><h3>Straight answers on access, fees, insurance, labs and hospitals</h3><span class="text-link">Read the FAQ %(a)s</span></a>
 </div></div></section>""" % {"a": icon("arrow")}
@@ -730,13 +738,13 @@ def read_mins(p):
 def post_card(B, p, i=0, tag="h3"):
     esc, icon = B.esc, B.icon
     img = post_image(B, p, "(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 30vw")
-    return """<a class="post-card" href="/journal/%s">%s<div class="pc-body"><p class="pc-meta"><span class="cat">%s</span><span>%d min read</span></p><%s>%s</%s><p class="pc-ex">%s</p><span class="more">Read %s</span></div></a>""" % (
+    return """<a class="post-card" href="/blog/%s">%s<div class="pc-body"><p class="pc-meta"><span class="cat">%s</span><span>%d min read</span></p><%s>%s</%s><p class="pc-ex">%s</p><span class="more">Read %s</span></div></a>""" % (
         p["slug"], ('<figure class="pc-img">%s</figure>' % img) if img else "", esc(p["category"]), read_mins(p), tag, esc(p["title"]), tag, esc(p["excerpt"]), icon("arrow"))
 
 
 def journal(B):
     esc, icon = B.esc, B.icon
-    slug = "journal"
+    slug = "blog"
     trail = [("Home", ""), ("Blog", slug)]
     cats = []
     for p in J.POSTS:
@@ -746,14 +754,14 @@ def journal(B):
     chips = '<div class="chips" role="group" aria-label="Filter by topic"><button type="button" aria-pressed="true" data-cat="all">All <span class="n">%d</span></button>%s</div>' % (len(J.POSTS), "".join(
         '<button type="button" aria-pressed="false" data-cat="%s">%s <span class="n">%d</span></button>' % (esc(c), esc(c), sum(1 for p in J.POSTS if p["category"] == c)) for c in cats))
     lead, rest = J.POSTS[0], J.POSTS[1:]
-    feature = """<section class="section flush-top" aria-labelledby="lead-h"><div class="wrap"><a class="feature-post" href="/journal/%s">%s<div class="fp-body"><p class="eyebrow">Latest · %s</p><h2 id="lead-h">%s</h2><p class="lede">%s</p><p class="pc-meta"><span>%s</span><span>%d min read</span></p><span class="more">Read the article %s</span></div></a></div></section>""" % (
+    feature = """<section class="section flush-top" aria-labelledby="lead-h"><div class="wrap"><a class="feature-post" href="/blog/%s">%s<div class="fp-body"><p class="eyebrow">Latest · %s</p><h2 id="lead-h">%s</h2><p class="lede">%s</p><p class="pc-meta"><span>%s</span><span>%d min read</span></p><span class="more">Read the article %s</span></div></a></div></section>""" % (
         lead["slug"], ('<figure class="fp-img">%s</figure>' % post_image(B, lead, "(max-width: 900px) 92vw, 58vw", eager=True)) if post_image(B, lead, "1px") else "",
         esc(lead["category"]), esc(lead["title"]), esc(lead["excerpt"]), human_date(lead["date"]), read_mins(lead), icon("arrow"))
     items = "".join('<li data-cat="%s">%s</li>' % (esc(p["category"]), post_card(B, p, i)) for i, p in enumerate(rest))
     hero = B.page_hero(trail, "Blog", "Notes on health, from a concierge practice", C.JOURNAL_LEDE, cta=False)
     body = hero + feature + '<section class="section flush-top" aria-labelledby="all-h"><div class="wrap"><div class="headline-row"><h2 id="all-h" style="font-size:var(--step-3)">All articles</h2></div>%s<ul class="post-grid">%s</ul><p class="more-row"><button class="btn ghost" type="button" data-more hidden>Show all articles</button></p></div></section>' % (chips, items) + B.cta_band()
     schema = B.graph({"@type": "Blog", "@id": B.url(slug) + "#blog", "url": B.url(slug), "name": "Legacy Medical Blog", "publisher": {"@id": B.ORG_ID},
-                      "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": B.url("journal/" + p["slug"]), "datePublished": p["date"]} for p in J.POSTS]},
+                      "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": B.url("blog/" + p["slug"]), "datePublished": p["date"]} for p in J.POSTS]},
                      B.breadcrumb_node(trail))
     B.write_page(slug, "Blog: Health Notes from Legacy Medical, Palm Beach Gardens", C.JOURNAL_DESC, body, schema=schema)
     for i, p in enumerate(J.POSTS):
@@ -803,8 +811,8 @@ def inline(B, text):
 
 def post(B, p, all_posts):
     esc, icon = B.esc, B.icon
-    slug = "journal/" + p["slug"]
-    trail = [("Home", ""), ("Blog", "journal"), (p["title"], slug)]
+    slug = "blog/" + p["slug"]
+    trail = [("Home", ""), ("Blog", "blog"), (p["title"], slug)]
     body_html = render_blocks(B, p["blocks"])
     if p.get("stale_note"):
         body_html = '<div class="notice">%s<p>%s</p></div>' % (B.ICONS["info"], esc(p["stale_note"])) + body_html
@@ -842,7 +850,7 @@ def post(B, p, all_posts):
 <div class="prose article-prose">%(body)s
 <p class="small muted disclaimer">This article is general information, not advice for your situation. Members can call the office with questions about their own care.</p></div>
 </div></article>
-<section class="section sunk" aria-labelledby="more-h"><div class="wrap"><div class="headline-row"><h2 id="more-h" style="font-size:var(--step-3)">Keep reading</h2><a class="text-link" href="/journal">All articles %(arrow)s</a></div><div class="post-row">%(cards)s</div></div></section>""" % {
+<section class="section sunk" aria-labelledby="more-h"><div class="wrap"><div class="headline-row"><h2 id="more-h" style="font-size:var(--step-3)">Keep reading</h2><a class="text-link" href="/blog">All articles %(arrow)s</a></div><div class="post-row">%(cards)s</div></div></section>""" % {
         "crumbs": B.crumbs_html(trail), "cat": esc(p["category"]), "title": esc(p["title"]), "dek": esc(p["excerpt"]), "d": p["date"][:10],
         "date": human_date(p["date"]), "mins": mins, "rev": reviewed, "lead": lead, "toc": toc, "owner": owner_html, "body": body_html,
         "arrow": icon("arrow"), "cards": "".join(post_card(B, x) for x in related)}
@@ -850,7 +858,7 @@ def post(B, p, all_posts):
     node = {"@type": "BlogPosting", "@id": B.url(slug) + "#article", "headline": p["title"][:110], "description": p["excerpt"],
             "datePublished": p["date"], "dateModified": p.get("modified", p["date"]), "url": B.url(slug), "mainEntityOfPage": B.url(slug),
             "author": {"@id": B.ORG_ID}, "publisher": {"@id": B.ORG_ID}, "articleSection": p["category"], "wordCount": words,
-            "inLanguage": "en-US", "isPartOf": {"@id": B.url("journal") + "#blog"},
+            "inLanguage": "en-US", "isPartOf": {"@id": B.url("blog") + "#blog"},
             "image": B.BASE + (("/assets/img/%s-og.jpg" % stem) if stem in B.IMG else "/assets/img/og/journal.jpg")}
     if p.get("reviewed_by"):
         node["reviewedBy"] = {"@id": B.DOC_ID}
@@ -867,10 +875,10 @@ def feed(B):
         import datetime
         d = datetime.datetime.fromisoformat(p["date"][:19])
         items.append("<item><title>%s</title><link>%s</link><guid>%s</guid><pubDate>%s</pubDate><description>%s</description></item>" % (
-            B.esc(p["title"]), B.url("journal/" + p["slug"]), B.url("journal/" + p["slug"]), d.strftime("%a, %d %b %Y %H:%M:%S +0000"), B.esc(p["excerpt"])))
-    xml = '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Legacy Medical Blog</title><link>%s</link><description>Health notes from Legacy Medical, a Concierge Internal Medicine practice in Palm Beach Gardens, Florida.</description><language>en-us</language>%s</channel></rss>\n' % (B.url("journal"), "".join(items))
-    os.makedirs(os.path.join(B.PUB, "journal"), exist_ok=True)
-    open(os.path.join(B.PUB, "journal/feed.xml"), "w", encoding="utf-8").write(xml)
+            B.esc(p["title"]), B.url("blog/" + p["slug"]), B.url("blog/" + p["slug"]), d.strftime("%a, %d %b %Y %H:%M:%S +0000"), B.esc(p["excerpt"])))
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Legacy Medical Blog</title><link>%s</link><description>Health notes from Legacy Medical, a Concierge Internal Medicine practice in Palm Beach Gardens, Florida.</description><language>en-us</language>%s</channel></rss>\n' % (B.url("blog"), "".join(items))
+    os.makedirs(os.path.join(B.PUB, "blog"), exist_ok=True)
+    open(os.path.join(B.PUB, "blog/feed.xml"), "w", encoding="utf-8").write(xml)
 
 
 # ---------------------------------------------------------------- contact, legal, 404
@@ -916,7 +924,7 @@ def legal(B):
 def not_found(B):
     body = """<section class="wrap page-hero not-found"><p class="eyebrow">Page not found</p><h1>That page has moved or no longer exists.</h1>
 <p class="lede">Our website was rebuilt in 2026 and some old addresses changed. These are the pages people usually look for:</p>
-<div class="area-links" style="margin-top:2rem"><a href="/">Home</a><a href="/dr-yana-shtern">Dr. Shtern</a><a href="/concierge-medicine">Concierge medicine</a><a href="/membership">How to join</a><a href="/journal">Journal</a><a href="/contact">Contact</a></div>
+<div class="area-links" style="margin-top:2rem"><a href="/">Home</a><a href="/dr-yana-shtern">Dr. Shtern</a><a href="/concierge-medicine">Concierge medicine</a><a href="/membership">How to join</a><a href="/blog">Journal</a><a href="/contact">Contact</a></div>
 <p style="margin-top:2rem">Or call <a class="inline-link" href="tel:%s">%s</a>.</p></section>""" % (B.PRACTICE["tel"], B.PRACTICE["phone"])
     out = B.document("404", "Page not found | Legacy Medical", "This page could not be found. Find Dr. Yana Shtern's concierge practice in Palm Beach Gardens, or call the office.", body, noindex=True, canonical=False)
     open(os.path.join(B.PUB, "404.html"), "w", encoding="utf-8").write(B.smart_quotes(out))

@@ -15,7 +15,7 @@ SOCIALS = [  # only profiles the practice itself links. The old site's "Instagra
 CLINIC_SAME_AS = ["https://www.youtube.com/@LegacyMedicalConciergeofPa-i6d"]
 # Instagram: the home page gets a "Follow along" section and the footer an icon
 # as soon as the practice confirms its account. Left empty until then (never guess a handle).
-INSTAGRAM = {"handle": "", "url": ""}
+INSTAGRAM = {"handle": "legacymedicalconcierge", "url": "https://www.instagram.com/legacymedicalconcierge/"}  # confirmed by the owner, Oct 16 2026
 if INSTAGRAM["url"]:
     SOCIALS.append({"label": "Legacy Medical on Instagram", "url": INSTAGRAM["url"], "icon": "instagram"})
 PRICE_RANGE = None  # fee not published; do not guess
@@ -222,8 +222,8 @@ HOME = {
         ("Join and book your first visit", "If it is a fit, enroll and schedule your first patient visit. With your permission, the office requests your records from your previous doctor."),
     ],
     "agreement": "<strong>Your insurance still works here.</strong> The membership fee covers access and the extra time. Office visits, labs and tests are billed to your insurance the way they are today.",
-    "reviews_h": "What patients say",
-    "reviews_note": "Quoted as published on Healthgrades. More patient reviews:",
+    "reviews_h": "What patients say on <em>Google</em>",
+    "reviews_note": "Quoted as published on Google. More patient reviews:",
     "stakes_h": "Small changes are easier to catch early.",
     "stakes_body": "<p>A creatinine that creeps up a little each year, blood pressure that is fine in the office and high at home, a new medicine that does not sit well with an old one. In a rushed system these slip between visits.</p><p>With a doctor who knows your baseline, they come up in conversation instead of in the emergency room.</p>",
     "areas_h": "Close to Jupiter, Juno Beach and the Palm Beaches",
@@ -246,10 +246,28 @@ TESTIMONIALS = [
     {"quote": "Wonderful doctor! Dr. Shtern is extremely caring and professional. Takes the time to talk and explain everything. Highly recommended doctor.", "who": "Patient review", "source_html": _HG + ", November 2021"},
     {"quote": "I've been a patient for 3 months and I can attest that Dr. Shtern is a brilliant physician. She quickly saw a problem I had/have after exam and lab work that 2 other doctors dismissed and she made sure it was taken care off. Thank you doctor!", "who": "Patient review", "source_html": _HG + ", January 2023"},
 ]
+# Google Business Profile: "Legacy Medical Concierge - Dr. Yana Shtern". Rating and count are a
+# snapshot read from the public listing on Oct 16, 2026 and shown with that date; main.js replaces
+# them with live figures whenever /api/reviews is configured. Never typed in by hand.
+GOOGLE = {
+    "place_id": "ChIJ9-heFHwr34gRt2Rs2caAsOY",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJ9-heFHwr34gRt2Rs2caAsOY",
+    "rating": "5.0", "count": 45, "as_of": "October 2026",
+}
+# Verbatim Google reviews, names as the reviewers published them on Google. Each one was read from
+# the listing on Oct 16, 2026 (date = month the review was posted).
+GOOGLE_REVIEWS = [
+    {"quote": "Dr. Shtern and her team are fantastic! Extremely knowledgeable, detailed, thoughtful, caring, and attentive. She is always communicating with other doctors and whenever there's an issue she is on top of it. Her office is beautiful, clean, and very efficiently run.", "who": "Rich Anderson", "when": "April 2026"},
+    {"quote": "My mother and I are patients of Dr. Shtern and we are very pleased with the great level of care that we have received from her over the years. She knows all the best specialists in the community and is always in communication with our other doctors. She is a great communicator and her attention to details is second to none. We highly recommend Dr. Shtern.", "who": "Noah Forgione", "when": "February 2025"},
+    {"quote": "Dr. Shtern is an outstanding doctor, very personable, thoughtful, and detailed. She takes time to learn about her patients and asks questions that help her understand her patients medical issues, concerns, and needs. I've seen many doctors in my life, and Dr. Yana Shtern is unquestionably one of the very best. I couldn't be happier that she's my primary care doctor, and I look forward to years of being in her care.", "who": "John Pearson", "when": "February 2025"},
+    {"quote": "Dr. Yana Shtern is an exceptional physician. She is incredibly thorough and takes the time to deeply investigate each patient's condition before making a diagnosis. With her background in nephrology, she is especially knowledgeable in managing hypertension and heart disease.", "who": "Ekaterina Simakova", "when": "April 2026"},
+    {"quote": "Dr Shtern is a wonderful physician and a pleasure to work with. She is an excellent clinician and a compassionate person, with a deep commitment to her patients' needs. Her staff is efficient, attentive, and most competent. She's a superstar - Highest recommendation!!", "who": "Marc F. Matarazzo", "when": "January 2026"},
+    {"quote": "Dr. Shtern is everything I can possibly ask for in a doctor. She's very attentive and caring. She's extremely knowledgeable in her work and takes her time to listen to my needs and always delivers great care.", "who": "Evelyn G", "when": "September 2024"},
+]
 RATING_LINKS = [
+    {"label": "Google", "url": GOOGLE["url"]},
     {"label": "Healthgrades", "url": "https://www.healthgrades.com/physician/dr-yana-shtern-gfc4n"},
     {"label": "US News", "url": "https://health.usnews.com/doctors/yana-shtern-650087"},
-    {"label": "Google", "url": "https://www.google.com/maps/search/?api=1&query=Legacy%20Medical%20Concierge%20Dr.%20Yana%20Shtern"},
 ]
 
 # Practice photos only: Dr. Shtern, the team, the Palm Beach Gardens office.
@@ -727,12 +745,12 @@ def llms_txt(P, D, pages, url):
         "## Pages",
     ]
     for pg in pages:
-        if pg["slug"].startswith("journal/"):
+        if pg["slug"].startswith("blog/"):
             continue
         lines.append("- [%s](%s): %s" % (pg["title"], url(pg["slug"]), pg["desc"]))
     lines += ["", "## Blog"]
     for pg in pages:
-        if pg["slug"].startswith("journal/"):
+        if pg["slug"].startswith("blog/"):
             lines.append("- [%s](%s)" % (pg["title"].replace(" | Legacy Medical", ""), url(pg["slug"])))
     return "\n".join(lines) + "\n"
 
@@ -820,13 +838,13 @@ GUIDES_PATIENTS = {
         "photo": "p-geri-meds", "photo_alt": "A weekly pill organizer on a linen tablecloth",
         "sections": [
             ("One doctor for the whole picture", "<p>Chronic conditions rarely come one at a time. High blood pressure, diabetes, cholesterol and kidney function affect each other, and so do the medicines used to treat them. Dr. Shtern is board-certified in Internal Medicine and in Nephrology, so the kidney side of that picture is part of the same visit rather than a separate referral.</p><p>See <a href=\"/hypertension\">hypertension</a> and <a href=\"/kidney-care\">kidney care</a>.</p>"),
-            ("Medication management", "<p>One doctor keeps an eye on every prescription, dose and interaction. That matters most when several specialists are involved, when a kidney or liver condition changes how a medicine is cleared, or when a new prescription quietly duplicates an old one. <a href=\"/journal/medication-review-older-adults\">Why a full medication review matters</a>.</p>"),
+            ("Medication management", "<p>One doctor keeps an eye on every prescription, dose and interaction. That matters most when several specialists are involved, when a kidney or liver condition changes how a medicine is cleared, or when a new prescription quietly duplicates an old one. <a href=\"/blog/medication-review-older-adults\">Why a full medication review matters</a>.</p>"),
             ("Between visits", "<p>Labs are drawn in the office and reviewed with you, home blood pressure readings can be sent in and discussed, and many check-ins can happen by video. When something changes, members are seen the same or next business day.</p>"),
         ],
         "faqs": [
             ("Which conditions does Dr. Shtern manage?", "<p>Blood pressure, diabetes, cholesterol, kidney and thyroid conditions, among the other problems an internist looks after. She is also board-certified in Nephrology.</p>"),
             ("Will you work with my specialists?", "<p>Yes. Dr. Shtern chooses specialists when you need one, contacts them, and follows up on what they find. <a href=\"/specialists-and-hospital-care\">Specialists and hospital care</a>.</p>"),
-            ("Can I send home blood pressure readings?", "<p>Yes. Bring or send your log so the numbers can be reviewed together. <a href=\"/journal/home-blood-pressure-monitoring\">How to take an accurate home reading</a>.</p>"),
+            ("Can I send home blood pressure readings?", "<p>Yes. Bring or send your log so the numbers can be reviewed together. <a href=\"/blog/home-blood-pressure-monitoring\">How to take an accurate home reading</a>.</p>"),
         ],
         "related_posts": ["home-blood-pressure-monitoring", "egfr-kidney-lab-results-explained", "medication-review-older-adults"],
         "related": ["hypertension", "kidney-care", "preventive-care"],
@@ -840,7 +858,7 @@ GUIDES_PATIENTS = {
         "photo": "p-family-hands", "photo_alt": "Two people holding hands in a quiet room",
         "sections": [
             ("When you need a specialist", "<p>Dr. Shtern picks the specialist for your situation, contacts them, and follows up on what they find, so the plan comes back to one doctor who knows your whole history. You are not left carrying results between offices.</p>"),
-            ("If you are admitted", "<p>Dr. Shtern holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and stays involved when members are in the hospital. <a href=\"/journal/concierge-doctor-hospital-stay\">What a concierge doctor does during a hospital stay</a>.</p>"),
+            ("If you are admitted", "<p>Dr. Shtern holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and stays involved when members are in the hospital. <a href=\"/blog/concierge-doctor-hospital-stay\">What a concierge doctor does during a hospital stay</a>.</p>"),
             ("Someone on your side", "<p>Part of membership is advocacy: screenings on schedule, vaccines up to date, and a doctor who helps when the system gets complicated. For families arranging care for a parent, see <a href=\"/for-families\">for families</a>.</p>"),
         ],
         "faqs": [
@@ -860,7 +878,7 @@ GUIDES_PATIENTS = {
         "photo": "p-kidney-labs", "photo_alt": "Sample tubes in a rack in soft light",
         "sections": [
             ("What is done in the office", "<ul><li>Blood draws for routine and follow-up lab work</li><li>ECGs (electrocardiograms) during your visit</li><li>Stool occult blood testing</li><li>Rapid tests for flu A and B, COVID-19 and strep</li></ul><p>Imaging and specialized tests are arranged with trusted local providers when you need them.</p>"),
-            ("Results you go through together", "<p>The annual Legacy physical includes lab work and an ECG, then time to go through the results together. Numbers like eGFR, A1c and cholesterol are easier to act on when the doctor who ordered them explains what changed and why. <a href=\"/journal/egfr-kidney-lab-results-explained\">Reading your kidney labs</a>.</p>"),
+            ("Results you go through together", "<p>The annual Legacy physical includes lab work and an ECG, then time to go through the results together. Numbers like eGFR, A1c and cholesterol are easier to act on when the doctor who ordered them explains what changed and why. <a href=\"/blog/egfr-kidney-lab-results-explained\">Reading your kidney labs</a>.</p>"),
             ("Insurance", "<p>Labs and covered tests are billed to your insurance as they are today. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
         ],
         "faqs": [
@@ -886,7 +904,7 @@ PATIENTS_PAGE = {
         ("Labs and tests", "Blood draws, ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done in the office.", "labs-and-tests", "Labs and tests"),
         ("Ongoing conditions", "Blood pressure, diabetes, cholesterol, kidney and thyroid care, with one doctor managing every prescription.", "chronic-care", "Chronic care support"),
         ("Specialists and hospitals", "Dr. Shtern chooses and contacts specialists and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.", "specialists-and-hospital-care", "Specialists and hospital care"),
-        ("Records and the portal", "With your permission the office requests your records from your previous doctor. Ask the office for patient portal access when you join.", "journal/transfer-medical-records-to-florida-doctor", "Moving your records"),
+        ("Records and the portal", "With your permission the office requests your records from your previous doctor. Ask the office for patient portal access when you join.", "blog/transfer-medical-records-to-florida-doctor", "Moving your records"),
         ("Insurance", "Office visits, labs and covered tests are billed to your insurance, including Medicare. The membership fee is separate.", "insurance-and-fees", "Insurance and fees"),
         ("Video visits", "Many follow-ups and results reviews can be done by video when coming in is not practical.", "telehealth", "Telehealth"),
         ("Part of the year away", "Seasonal residents get one doctor here who stays in touch with their physicians elsewhere.", "seasonal-residents", "Seasonal residents"),
@@ -899,7 +917,7 @@ CARD_BLURBS.update({
     "specialists-and-hospital-care": "Dr. Shtern picks the specialist and stays involved in the hospital.",
     "labs-and-tests": "Blood draws, ECGs and rapid tests done during your visit.",
     "patients": "Visits, calls, labs, records and insurance, in one place.",
-    "journal": "Articles on concierge care, prevention and healthy aging.",
+    "blog": "Articles on concierge care, prevention and healthy aging.",
     "videos": "A film from the practice and trusted health explainers.",
 })
 
@@ -926,29 +944,29 @@ PRACTICE_FILMS = [
 ]
 VIDEO_LIBRARY = [
     {"id": 'TLiD3vh_X8o', "title": 'Blood pressure done right: The correct way to measure yours at home.', "channel": 'American Heart Association', "topic": 'Blood pressure',
-     "summary": 'Step by step, how to sit, position your arm and cuff, and take an accurate blood pressure reading at home.', "related": 'journal/home-blood-pressure-monitoring'},
+     "summary": 'Step by step, how to sit, position your arm and cuff, and take an accurate blood pressure reading at home.', "related": 'blog/home-blood-pressure-monitoring'},
     {"id": 'r5XTTeP039Q', "title": 'Mayo Clinic Explains Hypertension', "channel": 'Mayo Clinic', "topic": 'Blood pressure',
      "summary": 'A Mayo Clinic nephrologist explains what the two blood pressure numbers mean, who gets hypertension, how it is diagnosed and treated.', "related": 'hypertension'},
     {"id": 'g4SV7SJLP_g', "title": 'Get to Know Your Kidneys', "channel": "NIH (NIDDK)", "topic": 'Kidney health',
      "summary": 'What your kidneys do every day, why kidney disease is often silent at first, and everyday habits that help protect them.', "related": 'kidney-care'},
     {"id": 'fFn0ygOOBuI', "title": 'What is eGFR, and how is it used to measure kidney function?', "channel": 'National Kidney Foundation', "topic": 'Kidney health',
-     "summary": 'A kidney specialist explains how eGFR is calculated from a blood test and what a higher or lower number says about kidney function.', "related": 'journal/egfr-kidney-lab-results-explained'},
+     "summary": 'A kidney specialist explains how eGFR is calculated from a blood test and what a higher or lower number says about kidney function.', "related": 'blog/egfr-kidney-lab-results-explained'},
     {"id": '1PKBTpVhvVk', "title": 'Mayo Clinic Minute: Avoiding kidney stones', "channel": 'Mayo Clinic', "topic": 'Kidney health',
-     "summary": 'A Mayo Clinic nephrologist explains why kidney stones form and why drinking enough water each day is the simplest way to prevent them.', "related": 'journal/heat-hydration-kidney-health'},
+     "summary": 'A Mayo Clinic nephrologist explains why kidney stones form and why drinking enough water each day is the simplest way to prevent them.', "related": 'blog/heat-hydration-kidney-health'},
     {"id": 'Ih_4BHoZv0U', "title": 'Mayo Clinic Minute: The role of cholesterol in heart health', "channel": 'Mayo Clinic', "topic": "Heart health",
-     "summary": 'What cholesterol is, how the bad kind builds plaque in arteries, and which food choices can help bring your levels down.', "related": 'journal/heart-healthy-foods'},
+     "summary": 'What cholesterol is, how the bad kind builds plaque in arteries, and which food choices can help bring your levels down.', "related": 'blog/heart-healthy-foods'},
     {"id": 'gfFMSaSoU6U', "title": 'Turning back the clock on prediabetes', "channel": "CDC", "topic": 'Diabetes and metabolism',
      "summary": 'How the CDC National Diabetes Prevention Program helps people with prediabetes make small, lasting changes that lower their risk of type 2 diabetes.', "related": 'preventive-care'},
     {"id": 'G1lwVhnnkoU', "title": '10-minute Workout for Older Adults', "channel": 'National Institute on Aging', "topic": 'Healthy aging',
-     "summary": 'A follow-along routine for older adults with a warm-up, leg and arm strength moves, balance work and stretching, using only a chair.', "related": 'journal/health-benefits-of-exercise'},
+     "summary": 'A follow-along routine for older adults with a warm-up, leg and arm strength moves, balance work and stretching, using only a chair.', "related": 'blog/health-benefits-of-exercise'},
     {"id": 'UAlxu7NiKNk', "title": 'STEADI for Older Adults', "channel": "CDC", "topic": 'Healthy aging',
-     "summary": 'Simple steps that lower fall risk after 65, including strength and balance exercise, medication and vision checks, footwear and home safety.', "related": 'journal/concierge-care-for-aging-parents'},
+     "summary": 'Simple steps that lower fall risk after 65, including strength and balance exercise, medication and vision checks, footwear and home safety.', "related": 'blog/concierge-care-for-aging-parents'},
     {"id": '0xubzGiAjEU', "title": 'Mayo Clinic Minute: Heat exhaustion and heatstroke', "channel": 'Mayo Clinic', "topic": 'Everyday health',
-     "summary": 'How to recognize heat exhaustion before it becomes heatstroke, the warning sign of confusion, and how hydration and breaks keep you safe.', "related": 'journal/heat-hydration-kidney-health'},
+     "summary": 'How to recognize heat exhaustion before it becomes heatstroke, the warning sign of confusion, and how hydration and breaks keep you safe.', "related": 'blog/heat-hydration-kidney-health'},
     {"id": 'qTkqm6weTX4', "title": 'Mayo Clinic Minute - Who should be screened for colorectal cancer?', "channel": 'Mayo Clinic', "topic": 'Screening and vaccines',
-     "summary": 'Who is at higher risk for colorectal cancer, why screening starting at age 45 matters, and why early detection makes it highly treatable.', "related": 'journal/cancer-prevention-risk-factors'},
+     "summary": 'Who is at higher risk for colorectal cancer, why screening starting at age 45 matters, and why early detection makes it highly treatable.', "related": 'blog/cancer-prevention-risk-factors'},
     {"id": 'zhGxsKdLNkE', "title": 'Mayo Clinic Minute: Why vaccines are especially important for older people', "channel": 'Mayo Clinic', "topic": 'Screening and vaccines',
-     "summary": 'Why the immune system weakens with age and how flu, shingles and other vaccines help older adults avoid serious complications and hospital stays.', "related": 'journal/yearly-flu-vaccine-benefits'},
+     "summary": 'Why the immune system weakens with age and how flu, shingles and other vaccines help older adults avoid serious complications and hospital stays.', "related": 'blog/yearly-flu-vaccine-benefits'},
 ]
 
 MEET = {
@@ -1036,10 +1054,10 @@ GUIDES_BASE = {
             ("Why the numbers matter", "<p>A 2005 report by the U.S. Government Accountability Office looked at physicians who had switched to concierge care. Before switching, their practices averaged about 2,700 patients; afterward, about 490. The number of patients they saw in a day fell from roughly 26 to about 10. <a href=\"https://www.gao.gov/products/gao-05-929\" rel=\"noopener\">Read the GAO report</a>. The figures are two decades old, but the trade-off they describe is the same today: fewer patients per doctor is what makes time and access possible.</p>"),
             ("What stays the same", "<p>Concierge care is still primary care. At Legacy Medical your insurance, including Medicare, is billed for office visits, labs and tests, as it is now. You keep your specialists, and prescriptions work the same way.</p>"),
             ("What the membership fee pays for", "<p>The annual fee covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, unhurried visits, and phone access around the clock. <a href=\"https://www.medicare.gov/coverage/concierge-care\" rel=\"noopener\">Medicare does not cover membership fees</a>. Legacy Medical explains its fee in person at the meet and greet rather than posting a number without context.</p>"),
-            ("Who tends to find it worthwhile", "<p>People who see several specialists, manage blood pressure, kidney disease or diabetes, travel or split the year between two homes, or are arranging care for a parent. People who rarely see a doctor may find a traditional practice suits them fine. <a href=\"/journal/is-a-concierge-doctor-right-for-me\">Is a concierge doctor right for you?</a></p>"),
+            ("Who tends to find it worthwhile", "<p>People who see several specialists, manage blood pressure, kidney disease or diabetes, travel or split the year between two homes, or are arranging care for a parent. People who rarely see a doctor may find a traditional practice suits them fine. <a href=\"/blog/is-a-concierge-doctor-right-for-me\">Is a concierge doctor right for you?</a></p>"),
         ],
         "faqs": [
-            ("Is concierge medicine the same as direct primary care?", "<p>No. Direct primary care practices usually do not bill insurance and charge a monthly fee for most primary care. Concierge practices like Legacy Medical bill insurance for visits and tests and charge a separate membership fee. <a href=\"/journal/concierge-vs-direct-primary-care\">More on the difference</a>.</p>"),
+            ("Is concierge medicine the same as direct primary care?", "<p>No. Direct primary care practices usually do not bill insurance and charge a monthly fee for most primary care. Concierge practices like Legacy Medical bill insurance for visits and tests and charge a separate membership fee. <a href=\"/blog/concierge-vs-direct-primary-care\">More on the difference</a>.</p>"),
             ("Do I lose my insurance if I join?", "<p>No. Insurance, including Medicare, is still billed for office visits, labs and tests. The membership fee is separate.</p>"),
             ("How do I find out what membership costs?", "<p>Call the office or ask at your complimentary meet and greet.</p>"),
         ],
@@ -1111,11 +1129,11 @@ ASSIST_EXTRA += [
     {"k": ["records", "medical records", "transfer", "previous doctor", "old doctor"],
      "a": "If you join, the office requests your records from your previous doctor with your permission. You do not need them for the meet and greet."},
     {"k": ["mdvip", "signaturemd", "concierge choice"],
-     "a": "Legacy Medical is an independent practice, not part of a national network. <a href=\"/journal/concierge-medicine-vs-mdvip\">How the models differ</a>."},
+     "a": "Legacy Medical is an independent practice, not part of a national network. <a href=\"/blog/concierge-medicine-vs-mdvip\">How the models differ</a>."},
     {"k": ["direct primary care", "dpc"],
-     "a": "Direct primary care practices usually do not bill insurance. Legacy Medical bills insurance for visits and tests and charges a separate membership fee. <a href=\"/journal/concierge-vs-direct-primary-care\">More on the difference</a>."},
+     "a": "Direct primary care practices usually do not bill insurance. Legacy Medical bills insurance for visits and tests and charges a separate membership fee. <a href=\"/blog/concierge-vs-direct-primary-care\">More on the difference</a>."},
     {"k": ["hsa", "fsa", "health savings", "flexible spending", "tax deductible", "deductible"],
-     "a": "Whether a membership fee can come from an HSA or FSA depends on your plan and the tax rules, so please check with a tax advisor. <a href=\"/journal/hsa-fsa-concierge-medicine-fees\">What the 2026 rules say</a>."},
+     "a": "Whether a membership fee can come from an HSA or FSA depends on your plan and the tax rules, so please check with a tax advisor. <a href=\"/blog/hsa-fsa-concierge-medicine-fees\">What the 2026 rules say</a>."},
     {"k": ["worth it", "why concierge", "benefit", "advantages", "versus", " vs ", "traditional", "regular doctor"],
      "a": "Concierge care means a smaller practice: same or next business day visits, unhurried appointments and phone access at any hour, with insurance still billed for visits and tests. <a href=\"/concierge-vs-traditional-primary-care\">Concierge and traditional care side by side</a>."},
     {"k": ["cancel", "reschedule", "change my appointment", "running late", "late"],

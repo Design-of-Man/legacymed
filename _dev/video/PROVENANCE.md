@@ -4,9 +4,12 @@
 > drone shot along the Singer Island / Riviera Beach shoreline (turquoise water, condo towers, the Intracoastal behind).
 > Everything below the first rule describes the earlier Jupiter Inlet encodes and is kept for history.
 >
-> - Source: the owner's upload `DJI_20261013234059_0426_D_1.mov`, 1280x720 HEVC Main 10 (yuv420p10le), bt709 tv range,
->   29.97 fps, 556 frames (18.55 s), 5,726,562 bytes, no audio. **This is a 720p export, not the camera original.**
->   If the 4K file from the drone turns up, re-run the commands below on it and the 1440/2160 sets come back.
+> - Source: the owner's second upload of `DJI_20261013234059_0426_D_1.mov` (Oct 16, later in the day), 1280x720 H.264 High
+>   (yuv420p), bt709 tv range, 29.97 fps, 556 frames (18.55 s), 17,860,760 bytes at 7.4 Mb/s, no audio,
+>   sha256 `bc10600f418231c178a250582a19e09e4cef5789cf9f307e2f820e7a2f906b43`. The first upload was the same shot as a
+>   2.2 Mb/s HEVC export (sha256 `4663408e…`); this one is cleaner so the set was re-encoded from it.
+>   **Both are 720p exports, not the camera original.** If the 4K file from the drone turns up, re-run the commands
+>   below on it and the 1440/2160 sets come back.
 > - No trim, no dissolve, no grade: the whole shot loops with a plain cut (same as the previous encode).
 > - Because the source is 720p there is one landscape set; content.py points `hd` at it and pages.py hands the same
 >   set to main.js for `uhd` and `qhd`, so the script is unchanged and a 4K master can be dropped in later.
@@ -28,12 +31,12 @@
 >
 > | File | Codec | Dims | Duration | Bytes |
 > |---|---|---|---|---|
-> | coast-720.webm | AV1 Main 10-bit | 1280x720 | 18.55 s (556 f) | 4,431,323 |
-> | coast-720-hevc.mp4 | HEVC Main (hvc1) | 1280x720 | 18.55 s | 3,980,337 |
-> | coast-720.mp4 | H.264 High | 1280x720 | 18.55 s | 5,356,143 |
-> | coast-portrait.webm | AV1 Main 10-bit | 406x720 | 18.55 s | 1,169,356 |
-> | coast-portrait-hevc.mp4 | HEVC Main | 406x720 | 18.55 s | 995,428 |
-> | coast-portrait.mp4 | H.264 High | 406x720 | 18.55 s | 1,474,641 |
+> | coast-720.webm | AV1 Main 10-bit | 1280x720 | 18.55 s (556 f) | 3,999,015 |
+> | coast-720-hevc.mp4 | HEVC Main (hvc1) | 1280x720 | 18.55 s | 3,901,830 |
+> | coast-720.mp4 | H.264 High | 1280x720 | 18.55 s | 5,232,048 |
+> | coast-portrait.webm | AV1 Main 10-bit | 406x720 | 18.55 s | 1,139,382 |
+> | coast-portrait-hevc.mp4 | HEVC Main | 406x720 | 18.55 s | 1,003,544 |
+> | coast-portrait.mp4 | H.264 High | 406x720 | 18.55 s | 1,481,530 |
 > | coast-poster-1280 .avif / .webp / .jpg | | 1280x720 | | 70,867 / 67,352 / 150,032 |
 > | coast-poster-768 .avif / .webp / .jpg | | 768x432 | | 25,033 / 30,984 / 64,193 |
 > | coast-poster-portrait-720 .avif / .webp / .jpg | | 406x720 | | 18,723 / 22,902 / 51,775 |
