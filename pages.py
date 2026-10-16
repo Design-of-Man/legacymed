@@ -99,7 +99,7 @@ def home(B):
     <figure class="cap-fig"><div class="doctor-photo" data-reveal="clip">%(photo)s</div><figcaption class="ph-cap">Dr. Yana Shtern, MD<span>Legacy Medical, Palm Beach Gardens</span></figcaption></figure>
     <div>
       <p class="eyebrow">Your physician</p>
-      <h2 id="doc-h" class="doc-name">Dr. Yana Shtern<span>, MD</span></h2>
+      <h2 id="doc-h" class="doc-name">Dr. Yana Shtern, MD</h2>
       <p class="doc-role">Board-certified in Internal Medicine and Nephrology</p>
       <p class="doc-line">%(line)s</p>
       <div class="stack" style="margin-top:1.5rem;max-width:36rem">%(body)s</div>

@@ -753,7 +753,6 @@ body.has-hero:not(.past-hero) .as-launch{opacity:0;transform:translateY(1rem);vi
 .doc-feature .doctor-photo{aspect-ratio:4/5;border-radius:.5rem;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
 .doc-feature .doctor-photo::after{content:"";position:absolute;inset:.85rem;border:1px solid rgba(233,211,163,.55);border-radius:.25rem;pointer-events:none}
 .doc-name{margin-top:1.4rem;font-family:var(--serif);font-weight:300;font-size:var(--step-5);line-height:1;letter-spacing:-.035em}
-.doc-name span{font-size:.45em;letter-spacing:0;color:var(--ink-2)}
 .doc-role{margin-top:1rem;font:600 .78rem/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text)}
 .doc-line{margin-top:1.75rem;font-family:var(--serif);font-size:var(--step-2);line-height:1.25;max-width:30rem}
 .doc-quote{margin:2.75rem 0 0;padding-top:1.4rem;position:relative;max-width:34rem}
