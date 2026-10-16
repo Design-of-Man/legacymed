@@ -4,3 +4,4 @@ node_modules/
 .vercel/
 .DS_Store
 _dev/shots/
+_dev/source-images/**/tmp-*
