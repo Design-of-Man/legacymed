@@ -281,11 +281,9 @@ RATING_LINKS = [
 REEL = [
     {"stem": "reception-desk", "alt": "The reception desk and gold Legacy Medical sign"},
     {"stem": "dr-shtern-desk", "alt": "Dr. Yana Shtern at her desk"},
-    {"stem": "front-desk-team", "alt": "Dr. Shtern with a member of her team at the front desk"},
     {"stem": "yan-konevsky-rn-oct-2026", "alt": "Yan Konevsky, RN, office manager"},
     {"stem": "dr-yana-shtern", "alt": "Dr. Yana Shtern, MD"},
     {"stem": "reception-wall", "alt": "The Legacy Medical reception wall"},
-    {"stem": "team-member", "alt": "A member of the Legacy Medical team"},
     {"stem": "front-desk-scrubs", "alt": "At the Legacy Medical front desk"},
     {"stem": "dr-shtern-full", "alt": "Dr. Shtern at the front desk"},
 ]
@@ -419,7 +417,7 @@ SERVICE_PAGES = {
         "about": ["Dementia", "Mild cognitive impairment", "Polypharmacy", "Falls"],
         "related": ["preventive-care", "kidney-care", "concierge-medicine"],
         "cta_h": "Bring your parent, or your questions, to a meet and greet.",
-        "photo": "front-desk-team", "photo_alt": "Dr. Shtern and her team at the Legacy Medical front desk",
+        "photo": "dr-shtern-full", "photo_alt": "Dr. Yana Shtern at the Legacy Medical front desk",
     },
     "preventive-care": {
         "title": "Executive Physicals in Palm Beach Gardens | Annual Physical",
@@ -1036,7 +1034,7 @@ GUIDES_BASE = {
         "crumb": "For families", "eyebrow": "For families",
         "h1": "Care for a parent, with room for the family in it.",
         "lede": "Often the person arranging care is an adult child, sometimes living in another state. Dr. Shtern works with families: one physician who knows your parent well, keeps the specialists in step, and keeps you informed when your parent wants you to be.",
-        "photo": "front-desk-team", "photo_alt": "Dr. Yana Shtern with a member of her team at the Legacy Medical front desk",
+        "photo": "front-desk-scrubs", "photo_alt": "Dr. Yana Shtern at the Legacy Medical front desk",
         "sections": [
             ("Come to the meet and greet together", "<p>Families are welcome at the first visit. It is a good time to ask how the practice handles calls from family, how hospital stays are followed, and what happens when something changes on a weekend. <a href=\"/meet-and-greet\">About the meet and greet</a>.</p>"),
             ("Keeping you informed", "<p>With your parent's written permission, Dr. Shtern can update family members, talk with home health agencies and other doctors, and help everyone plan ahead. Members, and the family helping them, can reach the practice by phone at any hour.</p>"),
