@@ -542,7 +542,7 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
     SEEN_TITLES[title] = slug
     desc = clamp_desc(desc)
     page_url = url(slug)
-    og = og_image or "/assets/img/og/default.jpg"
+    og = og_image or "/assets/img/og/default-oct-2026.jpg"
     og_abs = og if og.startswith("http") else BASE + og.split("?")[0]
     css = inline_css()
     js = a("assets/js/main.js")

@@ -20,13 +20,6 @@
   "source": "legacymedicalpalmbeach.com (www.jpg, 592x705)",
   "q": 84
  },
- "front-desk-team": {
-  "file": "dr-shtern-front-desk-team.jpg",
-  "focal": "50% 30%",
-  "alt": "Dr. Yana Shtern with a member of her team at the Legacy Medical front desk",
-  "source": "legacymedicalpalmbeach.com (ww.jpg, 934x740)",
-  "q": 84
- },
  "front-desk-scrubs": {
   "file": "front-desk-scrubs.jpg",
   "focal": "60% 30%",
@@ -46,13 +39,6 @@
   "focal": "50% 30%",
   "alt": "Yan Konevsky, RN, office manager at Legacy Medical",
   "source": "owner upload, Oct 16 2026 (1290x1925, replaces the old-site image1.jpg)",
-  "q": 80
- },
- "team-member": {
-  "file": "team-member-scrubs.jpg",
-  "focal": "50% 20%",
-  "alt": "A member of the Legacy Medical team in practice scrubs",
-  "source": "legacymedicalpalmbeach.com (unnamed-3.jpg, 1290x1692)",
   "q": 80
  },
  "reception-desk": {
