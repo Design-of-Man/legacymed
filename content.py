@@ -49,7 +49,7 @@ DOCTOR = {
         "https://health.usnews.com/doctors/yana-shtern-650087",
         "https://www.castleconnolly.com/top-doctors/yana-shtern-internal-medicine-62cc071652",
     ],
-    "page_title": "Dr. Yana Shtern, MD | Internist and Nephrologist, Palm Beach Gardens",
+    "page_title": "Dr. Yana Shtern, MD | Internist in Palm Beach Gardens",
     "page_desc": ("Dr. Yana Shtern is double board-certified in internal medicine and nephrology, with privileges at Jupiter Medical Center "
                   "and Palm Beach Gardens Medical Center. Her training, background and how she practices."),
     "hero_lede": ("Board-certified in internal medicine and in nephrology, Dr. Shtern has practiced for close to twenty years, first in "
@@ -304,7 +304,7 @@ CONCIERGE = {
 # ---------------------------------------------------------------- service pages
 SERVICE_PAGES = {
     "kidney-care": {
-        "title": "Kidney Doctor in Palm Beach Gardens | Nephrology Care, Dr. Yana Shtern",
+        "title": "Kidney Doctor in Palm Beach Gardens | Dr. Yana Shtern",
         "desc": "Board-certified nephrologist Dr. Yana Shtern cares for chronic kidney disease, rising creatinine, kidney stones and electrolyte problems at her Palm Beach Gardens practice.",
         "crumb": "Kidney care",
         "eyebrow": "Nephrology",
@@ -467,7 +467,7 @@ CATEGORY_OWNERS = {  # journal category -> the page that owns the topic
 
 # ---------------------------------------------------------------- membership
 MEMBERSHIP = {
-    "title": "How to Join Legacy Medical | Concierge Membership, Palm Beach Gardens",
+    "title": "Concierge Membership | Legacy Medical, Palm Beach Gardens",
     "desc": "How to become a member of Legacy Medical, Dr. Yana Shtern's concierge practice in Palm Beach Gardens. Start with a complimentary meet and greet with Dr. Shtern.",
     "eyebrow": "Membership",
     "h1": "Meet us first. Then decide.",
@@ -586,7 +586,7 @@ GEO_DATA = {
 _LOC_COPY = {
     "jupiter": {
         "name": "Jupiter",
-        "title": "Concierge Doctor for Jupiter, FL | Legacy Medical, 15 Minutes Away",
+        "title": "Concierge Doctor for Jupiter, FL | Legacy Medical",
         "desc": "A concierge internist about 15 minutes from Jupiter. Dr. Yana Shtern has privileges at Jupiter Medical Center and sees members the same or next business day.",
         "h1": "A concierge doctor for Jupiter, with Jupiter Medical Center privileges.",
         "lede": "From Jupiter the office is about 15 minutes south, down Alternate A1A or US-1. And if you ever need the hospital, Dr. Shtern has privileges at Jupiter Medical Center, which is likely the closest one to home.",
@@ -603,7 +603,7 @@ _LOC_COPY = {
     },
     "north-palm-beach": {
         "name": "North Palm Beach",
-        "title": "Concierge Doctor in North Palm Beach | Legacy Medical, 6 Minutes Away",
+        "title": "Concierge Doctor in North Palm Beach | Legacy Medical",
         "desc": "Concierge internal medicine about six minutes from North Palm Beach. Same or next-day visits, labs in the office, and 24/7 phone access with Dr. Yana Shtern.",
         "h1": "A concierge internist six minutes from North Palm Beach.",
         "lede": "The office is just up Prosperity Farms Road from the village, close enough that a same-day sick visit is a short trip rather than an afternoon.",
@@ -617,7 +617,7 @@ _LOC_COPY = {
     },
     "juno-beach": {
         "name": "Juno Beach",
-        "title": "Concierge Doctor Near Juno Beach | Legacy Medical, Palm Beach Gardens",
+        "title": "Concierge Doctor Near Juno Beach, FL | Legacy Medical",
         "desc": "A concierge internist about seven minutes from Juno Beach, between Jupiter Medical Center and Palm Beach Gardens Medical Center, both hospitals where Dr. Shtern has privileges.",
         "h1": "Seven minutes from Juno Beach, with two hospitals close by.",
         "lede": "Juno Beach sits almost exactly between the two hospitals where Dr. Shtern has privileges, and the office is a short drive down US-1 and across PGA Boulevard.",
@@ -631,7 +631,7 @@ _LOC_COPY = {
     },
     "tequesta": {
         "name": "Tequesta",
-        "title": "Private Physician for Tequesta | Legacy Medical Concierge Practice",
+        "title": "Private Physician for Tequesta, FL | Legacy Medical",
         "desc": "Concierge internal medicine for Tequesta residents, about 17 minutes south. Dr. Yana Shtern has privileges at nearby Jupiter Medical Center.",
         "h1": "A private physician for Tequesta, a short drive down US-1.",
         "lede": "From Tequesta the office is about 17 minutes south on US-1. Jupiter Medical Center, where Dr. Shtern has privileges, is closer still.",
@@ -659,7 +659,7 @@ _LOC_COPY = {
     },
     "west-palm-beach": {
         "name": "West Palm Beach",
-        "title": "Concierge Doctor for West Palm Beach | Legacy Medical, Dr. Yana Shtern",
+        "title": "Concierge Doctor for West Palm Beach | Legacy Medical",
         "desc": "Concierge internal medicine and nephrology for West Palm Beach residents, about 20 minutes up I-95 in Palm Beach Gardens. Same or next-day visits.",
         "h1": "Twenty minutes up I-95 from West Palm Beach.",
         "lede": "For West Palm Beach residents, the office is a straight run up I-95 to PGA Boulevard. Members are seen the same or next business day.",
@@ -778,7 +778,7 @@ ASSIST_EXTRA = [
 # sites. Every statement comes from SERVICES_INCLUDED, FAQ_GROUPS or DOCTOR.
 GUIDES_PATIENTS = {
     "same-or-next-day-visits": {
-        "title": "Same or Next Business Day Visits | Legacy Medical, Palm Beach Gardens",
+        "title": "Same or Next Business Day Visits | Legacy Medical",
         "desc": "Legacy Medical members are seen the same or next business day when something comes up, with phone access to the practice around the clock.",
         "crumb": "Same or next day visits", "eyebrow": "For patients",
         "h1": "Seen today or tomorrow, by the doctor who knows you.",
@@ -818,7 +818,7 @@ GUIDES_PATIENTS = {
         "related": ["hypertension", "kidney-care", "preventive-care"],
     },
     "specialists-and-hospital-care": {
-        "title": "Specialists and Hospital Care | Legacy Medical, Palm Beach Gardens",
+        "title": "Specialists and Hospital Care | Legacy Medical",
         "desc": "Dr. Yana Shtern chooses and contacts specialists, follows up on what they find, and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.",
         "crumb": "Specialists and hospital care", "eyebrow": "For patients",
         "h1": "Your care stays in one place, even when it moves around.",
@@ -938,7 +938,7 @@ VIDEO_LIBRARY = [
 ]
 
 MEET = {
-    "title": "Meet and Greet with Dr. Shtern | Legacy Medical, Palm Beach Gardens",
+    "title": "Meet and Greet with Dr. Shtern | Legacy Medical",
     "desc": "Your first visit to Legacy Medical is a complimentary meet and greet with Dr. Yana Shtern in Palm Beach Gardens. What happens, what to ask, and how to book.",
     "eyebrow": "Your first visit",
     "h1": "It starts with a conversation.",
@@ -969,7 +969,7 @@ MEET = {
 # about the practice; outside facts carry a link to the source.
 GUIDES_BASE = {
     "seasonal-residents": {
-        "title": "Concierge Doctor for Seasonal Residents | Legacy Medical, Palm Beach",
+        "title": "Concierge Doctor for Seasonal Residents | Legacy Medical",
         "desc": "Primary care for seasonal residents of Palm Beach County: one internist who keeps your records current, coordinates with your doctors up north, and stays reachable.",
         "crumb": "Seasonal residents", "eyebrow": "Seasonal residents",
         "h1": "One doctor here who keeps up with you between seasons.",
