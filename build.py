@@ -252,6 +252,7 @@ NAV = [
         ("videos", "Videos", "Watch and learn"),
     ]),
     ("Areas Served", "areas-we-serve", None),
+    ("FAQ", "faq", None),
     ("Contact", "contact", None),
 ]
 

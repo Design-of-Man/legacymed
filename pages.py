@@ -134,7 +134,7 @@ def home(B):
   <div class="wrap">
     <div class="headline-row"><div><p class="eyebrow">The difference</p><h2 id="why-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
     <ul class="ledger">%s</ul>
-    <p class="small muted" style="margin-top:1.5rem">GAO figures: U.S. Government Accountability Office, <a class="inline-link" href="https://www.gao.gov/products/gao-05-929" rel="noopener">Physician Services: Concierge Care Characteristics</a> (2005). <a class="inline-link" href="/concierge-vs-traditional-primary-care">Concierge and traditional care, side by side</a>.</p>
+    <p class="small muted" style="margin-top:1.5rem">The 300, 8 and one-hour figures are Legacy Medical's own limits. Primary care averages: U.S. Government Accountability Office, <a class="inline-link" href="https://www.gao.gov/products/gao-05-929" rel="noopener">Physician Services: Concierge Care Characteristics</a> (2005); Neprash et al., <a class="inline-link" href="https://pubmed.ncbi.nlm.nih.gov/33301282/" rel="noopener">Measuring Primary Care Exam Length Using Electronic Health Record Data</a>, <em>Medical Care</em> (2021). <a class="inline-link" href="/concierge-vs-traditional-primary-care">Concierge and traditional care, side by side</a>.</p>
   </div>
 </section>""" % (B.hx(H["why_h"]), H["why_lede"], "".join(stat(s) for s in H["why_stats"]))
 

@@ -182,14 +182,17 @@ HOME = {
     "guide_body": "<p>Dr. Shtern trained in Internal Medicine and then in Nephrology, and is board-certified in both. That combination matters more than it sounds: kidney function and blood pressure shape almost every prescription an internist writes.</p><p>She started Legacy Medical so she could take on fewer patients and do more for each of them. You see her at every visit, and members can reach the practice by phone at any hour.</p>",
     # Centered statement between two practice photos (Private Medical's move).
     "manifesto": "One patient at a time. A <em>very</em> small practice on purpose, so there is time to listen, to follow up, and to pick up the phone.",
-    # Why concierge matters: figures are the GAO's (2005) or the practice's own.
+    # Why concierge matters. "Before" figures are published averages (GAO 2005; Medical Care 2021);
+    # the "after" figures are Legacy Medical's own limits (client, Oct 2026): no more than 300 members,
+    # no more than 8 patients a day, appointments of about an hour.
     "why_h": "Why concierge care <em>matters</em>",
-    "why_lede": ("Most primary care physicians run on short appointments and a list of thousands of patients. Concierge medicine changes the arithmetic: "
-                 "fewer patients per doctor, so each one gets real time, quick access, and a physician who follows through."),
+    "why_lede": ("Most primary care physicians run on short appointments and a list of thousands of patients. Legacy Medical changes the arithmetic: "
+                 "a small practice by design, so each member gets real time, quick access, and a physician who follows through."),
     "why_stats": [
         ("One", "patient at a time", "Dr. Shtern does not double-book. Your appointment time is yours alone."),
-        ("2,700 → 490", "patients per doctor", "Average practice size before and after physicians moved to concierge care.", "GAO, 2005"),
-        ("26 → 10", "patients a day", "Patients seen in a day, before and after the same switch.", "GAO, 2005"),
+        ("2,700 → 300", "patients per doctor", "The average primary care practice carries about 2,700 patients. Legacy Medical takes no more than 300.", "Before: GAO, 2005"),
+        ("26 → 8", "patients a day", "A typical primary care physician sees about 26 patients a day. Dr. Shtern sees no more than 8.", "Before: GAO, 2005"),
+        ("18 min → 1 hr", "per appointment", "The average primary care visit lasts 18 minutes. A Legacy appointment runs about an hour, and longer when you need it.", "Before: Medical Care, 2021"),
         ("24/7", "phone access", "Members reach the practice at any hour, including weekends and holidays."),
     ],
     "manifesto_photos": [("reception-desk", "The front desk at Legacy Medical"), ("front-desk-scrubs", "At the Legacy Medical front desk")],
@@ -316,7 +319,7 @@ CONCIERGE = {
         ("What is concierge medicine?", "<p>A model of primary care where patients pay an annual membership fee and the doctor keeps a much smaller patient list. The smaller list is what makes same-day visits, longer appointments and direct phone access possible.</p>"),
         ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a meet and greet and ask Dr. Shtern directly; she will be straight with you.</p>"),
         ("Do I still need health insurance?", "<p>Yes. The membership fee does not replace insurance. You will still need coverage for hospital care, specialists, imaging, prescriptions and emergencies, and Legacy Medical bills your insurance for office visits and tests.</p>"),
-        ("How many patients does Dr. Shtern see?", "<p>Far fewer than a typical practice, and the panel is capped. She sees one patient at a time, never two booked into the same slot. Concierge practices typically see six to ten patients a day; ask at your meet and greet how the schedule works here.</p>"),
+        ("How many patients does Dr. Shtern see?", "<p>Far fewer than a typical practice. Legacy Medical takes no more than 300 members, and Dr. Shtern sees no more than eight patients a day, one at a time, never two booked into the same slot. Appointments run about an hour, and longer when your needs call for it.</p>"),
         ("Will I always see Dr. Shtern?", "<p>Yes. She is the physician for every member.</p>"),
     ],
     "about": [{"@type": "MedicalSpecialty", "name": "Primary care"}, {"@type": "Thing", "name": "Concierge medicine"}],
@@ -1158,7 +1161,7 @@ ASSIST_EXTRA += [
     {"k": ["one patient", "one at a time", "double book", "double-book", "overbook", "how many patients a day", "waiting room", "wait long", "rushed"],
      "a": "Dr. Shtern sees one patient at a time. Appointments are not double-booked, so your time with her is yours alone and unhurried. <a href=\"/concierge-medicine\">How concierge care works here</a>."},
     {"k": ["why concierge", "is concierge worth it", "worth it", "benefits of concierge", "why join", "why choose"],
-     "a": "Concierge care means a much smaller practice. When physicians move to concierge care, the GAO found practices fell from about 2,700 patients to about 490, and daily visits from about 26 to 10. At Legacy Medical that means one patient at a time, same or next business day visits, and phone access at any hour. <a href=\"/concierge-vs-traditional-primary-care\">Concierge and traditional care compared</a>."},
+     "a": "Concierge care means a much smaller practice. The average primary care practice carries about 2,700 patients and sees about 26 a day (GAO, 2005); Legacy Medical takes no more than 300 members and Dr. Shtern sees no more than 8 a day. That means appointments of about an hour, one patient at a time, same or next business day visits, and phone access at any hour. <a href=\"/concierge-vs-traditional-primary-care\">Concierge and traditional care compared</a>."},
     {"k": ["child", "children", "kids", "pediatric", "baby", "teen", "teenager"],
      "a": "Dr. Shtern is an internist: a physician trained in the care of adults. For a question about a younger family member, please call the office at (561) 834-9280."},
     {"k": ["parking", "park"],
