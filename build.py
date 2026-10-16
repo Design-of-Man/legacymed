@@ -858,6 +858,9 @@ def build_vercel():
             {"source": "/(meet-and-greet|contact)", "headers": [{"key": "Cache-Control", "value": "public, max-age=0, must-revalidate"}]},
             {"source": "/(llms.txt|robots.txt)", "headers": [{"key": "Content-Type", "value": "text/plain; charset=utf-8"}, {"key": "Cache-Control", "value": "public, max-age=3600"}]},
             {"source": "/api/(.*)", "headers": [{"key": "Cache-Control", "value": "no-store"}]},
+            # The vercel.app aliases serve the same pages as the real domain: keep them out of search.
+            {"source": "/(.*)", "has": [{"type": "host", "value": ".*\\.vercel\\.app"}],
+             "headers": [{"key": "X-Robots-Tag", "value": "noindex"}]},
         ],
         "redirects": www + rules,
     }

@@ -782,7 +782,7 @@ ASSIST_EXTRA = [
 # sites. Every statement comes from SERVICES_INCLUDED, FAQ_GROUPS or DOCTOR.
 GUIDES_PATIENTS = {
     "same-or-next-day-visits": {
-        "title": "Same or Next Business Day Visits | Legacy Medical, Palm Beach Gardens",
+        "title": "Same or Next Business Day Visits | Legacy Medical",
         "desc": "Legacy Medical members are seen the same or next business day when something comes up, with phone access to the practice around the clock.",
         "crumb": "Same or next day visits", "eyebrow": "For patients",
         "h1": "Seen today or tomorrow, by the doctor who knows you.",
@@ -822,7 +822,7 @@ GUIDES_PATIENTS = {
         "related": ["hypertension", "kidney-care", "preventive-care"],
     },
     "specialists-and-hospital-care": {
-        "title": "Specialists and Hospital Care | Legacy Medical, Palm Beach Gardens",
+        "title": "Specialists and Hospital Care | Legacy Medical",
         "desc": "Dr. Yana Shtern chooses and contacts specialists, follows up on what they find, and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.",
         "crumb": "Specialists and hospital care", "eyebrow": "For patients",
         "h1": "Your care stays in one place, even when it moves around.",
@@ -942,7 +942,7 @@ VIDEO_LIBRARY = [
 ]
 
 MEET = {
-    "title": "Meet and Greet with Dr. Shtern | Legacy Medical, Palm Beach Gardens",
+    "title": "Meet and Greet with Dr. Shtern | Legacy Medical",
     "desc": "Your first visit to Legacy Medical is a complimentary meet and greet with Dr. Yana Shtern in Palm Beach Gardens. What happens, what to ask, and how to book.",
     "eyebrow": "Your first visit",
     "h1": "It starts with a conversation.",
@@ -973,7 +973,7 @@ MEET = {
 # about the practice; outside facts carry a link to the source.
 GUIDES_BASE = {
     "seasonal-residents": {
-        "title": "Concierge Doctor for Seasonal Residents | Legacy Medical, Palm Beach",
+        "title": "Concierge Doctor for Seasonal Residents | Legacy Medical",
         "desc": "Primary care for seasonal residents of Palm Beach County: one internist who keeps your records current, coordinates with your doctors up north, and stays reachable.",
         "crumb": "Seasonal residents", "eyebrow": "Seasonal residents",
         "h1": "One doctor here who keeps up with you between seasons.",
