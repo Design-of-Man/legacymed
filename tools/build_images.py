@@ -10,6 +10,10 @@ build.py reads. Every rendition is re-encoded from pixels, so EXIF, XMP,
 Photoshop and IPTC metadata never reach the site (the old site shipped a
 472x666 photo as 3.8 MB of Photoshop data).
 
+Renditions keep their file names between builds and are cached for a week
+(vercel.json), so when a photo is replaced give it a new stem (e.g. a date
+suffix) rather than overwriting the old files under the same names.
+
 Needs Pillow with AVIF support. build.py itself never imports Pillow.
 """
 import json
