@@ -54,9 +54,9 @@ DOCTOR = {
         "https://health.usnews.com/doctors/yana-shtern-650087",
         "https://www.castleconnolly.com/top-doctors/yana-shtern-internal-medicine-62cc071652",
     ],
-    "page_title": "Dr. Yana Shtern, MD | Internist and Nephrologist, Palm Beach Gardens",
-    "page_desc": ("Dr. Yana Shtern is double board-certified in Internal Medicine and Nephrology, with privileges at Jupiter Medical Center "
-                  "and Palm Beach Gardens Medical Center. Her training, background and how she practices."),
+    "page_title": "Internist in Palm Beach Gardens | Dr. Yana Shtern, MD",
+    "page_desc": ("Dr. Yana Shtern is a concierge internist in Palm Beach Gardens, double board-certified in Internal Medicine and "
+                  "Nephrology. Her training, hospital privileges and how she practices."),
     "hero_lede": ("Board-certified in Internal Medicine and in Nephrology, Dr. Shtern has practiced for close to twenty years, first in "
                   "New York City and now in Palm Beach Gardens, where she runs Legacy Medical as a small concierge practice."),
     "home_creds": [
@@ -132,22 +132,22 @@ SERVICES_INCLUDED = [
 
 CARD_BLURBS = {
     "concierge-medicine": "How membership works, what it includes, and what it does not.",
-    "kidney-care": "Nephrology from your own internist: CKD, stones, electrolytes, creatinine that keeps creeping up.",
+    "kidney-care": "A board-certified nephrologist who is also your internist: CKD, stones, electrolytes, creatinine that keeps creeping up.",
     "hypertension": "Blood pressure that will not come down, or comes down with side effects you do not like.",
     "geriatric-memory-care": "Care for older adults and the families who help them, including memory concerns.",
-    "preventive-care": "The annual Legacy physical, screenings, and an executive-style exam without the day at a hospital.",
+    "preventive-care": "Executive and annual physicals: the Legacy physical, screenings, and no day at a hospital.",
     "telehealth": "Video visits for follow-ups, results and questions that do not need an exam.",
     "membership": "Meet Dr. Shtern first, then decide.",
-    "insurance-and-fees": "What the membership fee covers and what your insurance still pays for.",
+    "insurance-and-fees": "What concierge medicine costs here: the membership fee, and what your insurance still pays for.",
     "faq": "Answers about access, insurance, hospitals and joining.",
     "dr-yana-shtern": "Training, certifications and hospital privileges.",
     "our-team": "Who answers when you call.",
 }
 
 # ---------------------------------------------------------------- home
-HOME_TITLE = "Concierge Doctor in Palm Beach Gardens | Legacy Medical"
-HOME_DESC = ("Concierge Internal Medicine in Palm Beach Gardens with Dr. Yana Shtern, MD, board-certified in Internal Medicine and Nephrology. "
-             "One patient at a time, same or next-day visits and 24/7 phone access.")
+HOME_TITLE = "Concierge Doctor in Palm Beach Gardens, FL | Legacy Medical"
+HOME_DESC = ("Concierge doctor in Palm Beach Gardens: Dr. Yana Shtern, MD, board-certified in Internal Medicine and Nephrology. "
+             "One patient at a time, 24/7 phone access.")
 
 HERO_VIDEO = {
     # The coastline clip the owner supplied on Oct 16, 2026 (DJI, 1280x720 HEVC); see _dev/video/PROVENANCE.md.
@@ -212,7 +212,7 @@ HOME = {
         ("kidney-care", "Kidney care", "CKD, rising creatinine, kidney stones, electrolyte problems, and care for people on dialysis."),
         ("hypertension", "Hypertension", "Blood pressure that stays high on two or three medicines, or comes with side effects."),
         ("geriatric-memory-care", "Geriatric and memory care", "Healthy aging, memory concerns, and fewer, better prescriptions."),
-        ("preventive-care", "Preventive care and physicals", "The annual Legacy physical, with labs and an ECG done here."),
+        ("preventive-care", "Executive and annual physicals", "The annual Legacy physical, with labs and an ECG done here."),
         ("telehealth", "Telehealth", "Video visits for follow-ups, results and medication questions."),
     ],
     "plan_h": "Three steps, <em>no pressure</em>",
@@ -260,7 +260,7 @@ GOOGLE_REVIEWS = [
     {"quote": "Dr. Shtern and her team are fantastic! Extremely knowledgeable, detailed, thoughtful, caring, and attentive. She is always communicating with other doctors and whenever there's an issue she is on top of it. Her office is beautiful, clean, and very efficiently run.", "who": "Rich Anderson", "when": "April 2026"},
     {"quote": "My mother and I are patients of Dr. Shtern and we are very pleased with the great level of care that we have received from her over the years. She knows all the best specialists in the community and is always in communication with our other doctors. She is a great communicator and her attention to details is second to none. We highly recommend Dr. Shtern.", "who": "Noah Forgione", "when": "February 2025"},
     {"quote": "Dr. Shtern is an outstanding doctor, very personable, thoughtful, and detailed. She takes time to learn about her patients and asks questions that help her understand her patients medical issues, concerns, and needs. I've seen many doctors in my life, and Dr. Yana Shtern is unquestionably one of the very best. I couldn't be happier that she's my primary care doctor, and I look forward to years of being in her care.", "who": "John Pearson", "when": "February 2025"},
-    {"quote": "Dr. Yana Shtern is an exceptional physician. She is incredibly thorough and takes the time to deeply investigate each patient's condition before making a diagnosis. With her background in nephrology, she is especially knowledgeable in managing hypertension and heart disease.", "who": "Ekaterina Simakova", "when": "April 2026"},
+    {"quote": "Dr. Yana Shtern is an exceptional physician. She is incredibly thorough and takes the time to deeply investigate each patient's condition before making a diagnosis. With her background in Nephrology, she is especially knowledgeable in managing hypertension and heart disease.", "who": "Ekaterina Simakova", "when": "April 2026"},
     {"quote": "Dr Shtern is a wonderful physician and a pleasure to work with. She is an excellent clinician and a compassionate person, with a deep commitment to her patients' needs. Her staff is efficient, attentive, and most competent. She's a superstar - Highest recommendation!!", "who": "Marc F. Matarazzo", "when": "January 2026"},
     {"quote": "Dr. Shtern is everything I can possibly ask for in a doctor. She's very attentive and caring. She's extremely knowledgeable in her work and takes her time to listen to my needs and always delivers great care.", "who": "Evelyn G", "when": "September 2024"},
 ]
@@ -287,10 +287,10 @@ REEL = [
 
 # ---------------------------------------------------------------- concierge medicine
 CONCIERGE = {
-    "title": "How Concierge Medicine Works | Legacy Medical, Palm Beach Gardens",
-    "desc": "How concierge medicine works at Legacy Medical in Palm Beach Gardens: what the membership includes, what insurance still covers, and how it compares with a typical practice.",
+    "title": "What Is Concierge Medicine? How It Works | Legacy Medical",
+    "desc": "What is concierge medicine, and how does it work? At Legacy Medical in Palm Beach Gardens: what membership includes, what insurance covers, and how it compares.",
     "eyebrow": "Concierge medicine",
-    "h1": "Primary care with fewer patients and more time.",
+    "h1": "Concierge medicine: primary care with fewer patients and more time.",
     "lede": "Concierge medicine is a simple trade. You pay an annual membership fee, and in return the practice keeps its patient list small enough that you get your doctor's time and attention when you need them.",
     "included_lede": "Membership covers access to Dr. Shtern and the extra time. These are part of every membership.",
     "compare_lede": "Concierge practices vary. This is how Legacy Medical works, next to the high-volume model most people are used to.",
@@ -306,7 +306,7 @@ CONCIERGE = {
     ],
     "sections": [
         ("Why the panel is small", "<p>A typical primary care doctor carries a list of two thousand patients or more. Concierge practices typically keep a few hundred. That is the whole idea: fewer patients means a schedule with room in it, so a same-day visit is normal rather than lucky, and a phone call gets returned by the doctor who knows you.</p><p>Dr. Shtern limits the number of members she takes on, and she sees one patient at a time.</p>"),
-        ("What the fee does not cover", "<p>The membership fee is not insurance. It does not pay for hospital stays, emergency care, specialists, imaging, or prescriptions. Keep your health insurance, including Medicare and any supplemental plan. Office visits and covered tests at Legacy Medical are billed to that insurance as usual.</p><p>If you are weighing the cost, the useful question is what the access is worth to you: how often you have waited weeks to be seen, or gone to urgent care because your doctor could not fit you in. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
+        ("What the fee does not cover", "<p>The membership fee is not insurance. It does not pay for hospital stays, emergency care, specialists, imaging, or prescriptions. Keep your health insurance, including Medicare and any supplemental plan. Office visits and covered tests at Legacy Medical are billed to that insurance as usual.</p><p>If you are weighing the cost, the useful question is what the access is worth to you: how often you have waited weeks to be seen, or gone to urgent care because your doctor could not fit you in. <a href=\"/insurance-and-fees\">What concierge medicine costs here</a>.</p>"),
         ("Who it suits", "<p>Concierge care tends to suit people who want one doctor to keep track of everything: adults managing high blood pressure, kidney disease or diabetes; retirees and seasonal residents who want continuity between Florida and up north; busy professionals who cannot wait three weeks for an appointment; and adult children arranging care for a parent.</p><p>If your care is simple and your current doctor is easy to reach, you may not need a concierge practice. We will tell you that at your tour if it is true.</p>"),
         ("Concierge care and direct primary care", "<p>The two are often confused. Direct primary care practices usually replace insurance billing with a monthly fee and do not bill insurance at all. Legacy Medical is a concierge practice: the membership covers access, and your insurance is still billed for visits and tests.</p>"),
     ],
@@ -324,11 +324,11 @@ CONCIERGE = {
 # ---------------------------------------------------------------- service pages
 SERVICE_PAGES = {
     "kidney-care": {
-        "title": "Kidney Doctor in Palm Beach Gardens | Nephrology Care, Dr. Yana Shtern",
-        "desc": "Board-certified nephrologist Dr. Yana Shtern cares for chronic kidney disease, rising creatinine, kidney stones and electrolyte problems at her Palm Beach Gardens practice.",
+        "title": "Nephrologist and Kidney Doctor in Palm Beach Gardens, FL",
+        "desc": "Dr. Yana Shtern is a board-certified nephrologist and internist in Palm Beach Gardens: chronic kidney disease treatment, rising creatinine, stones and electrolytes.",
         "crumb": "Kidney care",
-        "eyebrow": "Nephrology",
-        "h1": "Kidney care from a doctor who is also your internist.",
+        "eyebrow": "Nephrology in Palm Beach Gardens",
+        "h1": "A kidney doctor who is also your internist.",
         "lede": "Dr. Shtern is board-certified in Nephrology as well as Internal Medicine. For members, that means kidney problems are looked after by the same doctor who manages everything else, with no handoff in between.",
         "specialty": "Renal",
         "points": [
@@ -341,7 +341,7 @@ SERVICE_PAGES = {
         ],
         "sections": [
             ("When to think about your kidneys", "<p>Kidney disease rarely causes symptoms until it is advanced. Most people find out from a routine blood test: a creatinine that is a little high, an eGFR that has dropped since last year, or protein in a urine sample. High blood pressure and diabetes are the two most common causes, and both are things an internist is already treating.</p><p>That is why it helps to have one doctor reading all of it. A blood pressure medicine, an anti-inflammatory for a sore knee, a contrast scan and a dehydrating summer can each nudge kidney function. Together they add up.</p>"),
-            ("What care looks like here", "<p>For members, kidney care is part of membership rather than a separate referral. Dr. Shtern reviews your labs over time, not just the latest result, checks every prescription against your kidney function, and explains what the numbers mean in plain language.</p><p>Labs are drawn in the office. If you need imaging, a procedure, or dialysis planning, she arranges it and stays involved. She holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
+            ("Chronic kidney disease treatment and follow-up", "<p>For members, kidney care is part of membership rather than a separate referral. Dr. Shtern reviews your labs over time, not just the latest result, checks every prescription against your kidney function, and explains what the numbers mean in plain language.</p><p>Labs are drawn in the office. If you need imaging, a procedure, or dialysis planning, she arranges it and stays involved. She holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
             ("Conditions Dr. Shtern manages", "<ul><li>Chronic kidney disease, all stages</li><li>Acute kidney injury and recovery</li><li>Protein in the urine (proteinuria)</li><li>Kidney stones: medical evaluation and prevention</li><li>Sodium, potassium, calcium and other electrolyte disorders</li><li>Kidney effects of diabetes and high blood pressure</li><li>Medication dosing for reduced kidney function</li><li>Care for patients with end-stage kidney disease, drawing on her dialysis experience</li></ul>"),
         ],
         "faq_h": "Kidney care questions",
@@ -358,9 +358,9 @@ SERVICE_PAGES = {
     },
     "hypertension": {
         "title": "Hypertension Specialist in Palm Beach Gardens | Legacy Medical",
-        "desc": "Help for high blood pressure that will not come down, from Dr. Yana Shtern, an internist and nephrologist in Palm Beach Gardens. Home readings, causes, and fewer side effects.",
+        "desc": "A high blood pressure doctor in Palm Beach Gardens: Dr. Yana Shtern, internist and nephrologist, for pressure that will not come down. Home readings, causes, fewer side effects.",
         "crumb": "Hypertension",
-        "eyebrow": "Hypertension",
+        "eyebrow": "Hypertension specialist care",
         "h1": "When blood pressure will not come down.",
         "lede": "High blood pressure is common and usually straightforward. When it is not, because the numbers stay high on several medicines, swing between home and office, or come with side effects, it helps to see a doctor who has spent a career on it.",
         "specialty": "Renal",
@@ -387,8 +387,8 @@ SERVICE_PAGES = {
         "photo": "dr-shtern-desk", "photo_alt": "Dr. Yana Shtern at her desk in Palm Beach Gardens",
     },
     "geriatric-memory-care": {
-        "title": "Geriatric and Memory Care in Palm Beach Gardens | Legacy Medical",
-        "desc": "Concierge care for older adults in Palm Beach Gardens and Jupiter: memory concerns, medication reviews, fall prevention, and a doctor who keeps families informed.",
+        "title": "Geriatric Care Doctor in Palm Beach Gardens | Legacy Medical",
+        "desc": "Geriatric care in Palm Beach Gardens and Jupiter from a concierge doctor: memory concerns, medication reviews, fall prevention, and families kept informed.",
         "crumb": "Geriatric and memory care",
         "eyebrow": "Geriatric medicine",
         "h1": "Care for older adults, and the people who help them.",
@@ -417,10 +417,10 @@ SERVICE_PAGES = {
         "photo": "front-desk-team", "photo_alt": "Dr. Shtern and her team at the Legacy Medical front desk",
     },
     "preventive-care": {
-        "title": "Executive Physicals in Palm Beach Gardens | Legacy Medical",
-        "desc": "The annual Legacy physical: an extended exam with in-office labs and ECG, screenings on schedule, and time to go over results with Dr. Yana Shtern in Palm Beach Gardens.",
+        "title": "Executive Physicals in Palm Beach Gardens | Annual Physical",
+        "desc": "Executive physicals in Palm Beach Gardens: the annual Legacy physical, an extended exam with in-office labs and ECG, then time with Dr. Yana Shtern to go over results.",
         "crumb": "Preventive care and physicals",
-        "eyebrow": "Preventive care",
+        "eyebrow": "Executive and annual physicals",
         "h1": "A physical with the time to mean something.",
         "lede": "Every member gets an annual Legacy physical: an extended exam with labs and an ECG done in the office, and a follow-up conversation about what the results mean for you.",
         "specialty": "PrimaryCare",
@@ -449,10 +449,10 @@ SERVICE_PAGES = {
         "photo": "dr-yana-shtern", "photo_alt": "Dr. Yana Shtern, MD",
     },
     "telehealth": {
-        "title": "Telehealth Visits with Dr. Yana Shtern | Legacy Medical",
-        "desc": "Video visits with your own concierge doctor in Palm Beach Gardens for follow-ups, results and questions, so you do not always have to come in.",
+        "title": "Concierge Telehealth with Dr. Yana Shtern | Legacy Medical",
+        "desc": "Concierge telehealth: video visits with Dr. Yana Shtern, your own doctor in Palm Beach Gardens, for follow-ups, lab results and medication questions.",
         "crumb": "Telehealth",
-        "eyebrow": "Telehealth",
+        "eyebrow": "Concierge telehealth",
         "h1": "See your doctor without the drive.",
         "lede": "Plenty of medical care does not need an exam table. For members, many follow-ups, lab reviews and medication questions can happen by video with Dr. Shtern.",
         "specialty": "PrimaryCare",
@@ -487,9 +487,9 @@ CATEGORY_OWNERS = {  # journal category -> the page that owns the topic
 
 # ---------------------------------------------------------------- membership
 MEMBERSHIP = {
-    "title": "How to Join Legacy Medical | Concierge Membership, Palm Beach Gardens",
-    "desc": "How to become a member of Legacy Medical, Dr. Yana Shtern's concierge practice in Palm Beach Gardens. Start with a complimentary meet and greet with Dr. Shtern.",
-    "eyebrow": "Membership",
+    "title": "Concierge Medicine Membership in Palm Beach Gardens",
+    "desc": "How to join Legacy Medical, a concierge medicine membership with Dr. Yana Shtern in Palm Beach Gardens. Start with a complimentary meet and greet, then decide.",
+    "eyebrow": "Concierge membership",
     "h1": "Meet us first. Then decide.",
     "lede": "Joining starts with a conversation, not a contract. Visit the office, meet Dr. Shtern, and ask everything you want to know about how the practice works and what it costs.",
     "steps": [
@@ -512,10 +512,10 @@ MEMBERSHIP = {
 }
 
 INSURANCE = {
-    "title": "Insurance and Membership Fees | Legacy Medical Concierge Practice",
-    "desc": "How the concierge membership fee and your health insurance work together at Legacy Medical in Palm Beach Gardens, including Medicare, HSAs and what the fee covers.",
+    "title": "Concierge Medicine Cost and How It Works With Insurance",
+    "desc": "How much does concierge medicine cost? How the membership fee and your insurance, including Medicare and HSAs, work together at Legacy Medical in Palm Beach Gardens.",
     "eyebrow": "Insurance and fees",
-    "h1": "Two parts: a membership fee, and your insurance.",
+    "h1": "What concierge medicine costs: a membership fee, plus your insurance.",
     "lede": "Legacy Medical is a concierge practice that still works with insurance. The membership fee pays for access and time. Your insurance pays for visits and tests, as it does now.",
     "sections": [
         ("The membership fee", "<p>Members pay an annual fee directly to the practice. It covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, extended visits, 24/7 phone access and Dr. Shtern's time coordinating your care.</p><p>The fee is not published online yet. Call <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your tour and the office will go through it with you.</p>"),
@@ -523,6 +523,8 @@ INSURANCE = {
         ("Medicare", "<p>Medicare does not pay concierge membership fees. If you have Medicare, the fee is separate, and covered services at your visits are billed to Medicare under its usual rules. Ask the office how this works for your plan, including any Medicare Advantage or supplemental coverage.</p>"),
     ],
     "faqs": [
+        ("How much does concierge medicine cost here?", "<p>The annual membership fee is not published online yet. Call the office at <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your meet and greet and we will go through it. Office visits, labs and covered tests are billed to your insurance separately, as they are today.</p>"),
+        ("How does concierge medicine work with insurance?", "<p>The membership fee is paid directly to the practice and covers access and time. Office visits, lab work, ECGs and other covered services are billed to your health insurance, including Medicare, under your plan's usual rules.</p>"),
         ("Does insurance cover the concierge fee?", "<p>No. Health insurance, including Medicare, does not pay the membership fee. It does pay for covered services at your visits.</p>"),
         ("Can I use an HSA or FSA for the fee?", "<p>Rules on using health savings or flexible spending accounts for concierge fees are not settled and depend on your plan. Ask your plan administrator or tax adviser before you count on it.</p>"),
         ("Is the concierge fee tax deductible?", "<p>That depends on your situation. A tax adviser can tell you whether it counts as a deductible medical expense for you.</p>"),
@@ -532,8 +534,8 @@ INSURANCE = {
 }
 
 FAQ_PAGE = {
-    "title": "FAQ: Concierge Medicine at Legacy Medical, Palm Beach Gardens",
-    "desc": "Answers about Legacy Medical's concierge practice in Palm Beach Gardens: appointments, after-hours calls, insurance, Medicare, hospitals, labs and joining.",
+    "title": "Concierge Medicine FAQ: Is It Worth It? | Legacy Medical",
+    "desc": "Is concierge medicine worth it? Answers about Legacy Medical in Palm Beach Gardens: appointments, after-hours calls, insurance, Medicare, hospitals and joining.",
     "h1": "Frequently asked questions.",
     "lede": "Straight answers about how the practice works. If your question is not here, call the office at (561) 834-9280.",
 }
@@ -553,6 +555,7 @@ FAQ_GROUPS = [
     ]},
     {"name": "Insurance and fees", "pairs": [
         ("How much does membership cost?", "<p>There is an annual concierge fee. It covers what insurance will not or may not pay for: the extended Legacy physical, health promotion, and much greater access to your physician. Office visits, services and tests are billed through your insurance, as in a traditional Internal Medicine practice. The fee itself is not published online. Call the office or ask at your meet and greet.</p>"),
+        ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a meet and greet and ask Dr. Shtern directly; she will be straight with you. <a href=\"/concierge-medicine\">How concierge medicine works here</a>.</p>"),
         ("Do you bill insurance?", "<p>Yes, for office visits, labs and covered tests. Plans include Medicare, Aetna, Cigna and BlueCross BlueShield. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
         ("Does Medicare pay the membership fee?", "<p>No. Medicare does not cover concierge fees. Covered services at your visits are billed to Medicare as usual.</p>"),
     ]},
@@ -574,7 +577,7 @@ FAQ_GROUPS = [
 
 # ---------------------------------------------------------------- areas
 AREAS_PAGE = {
-    "title": "Areas We Serve: Jupiter, Juno Beach and the Palm Beaches",
+    "title": "Concierge Medicine for Jupiter, Stuart and the Palm Beaches",
     "desc": "Legacy Medical's Palm Beach Gardens office serves Jupiter, North Palm Beach, Juno Beach, Tequesta, Palm Beach, West Palm Beach, Hobe Sound and Stuart. Drive times and routes.",
     "h1": "Most of North County is less than twenty minutes away.",
     "lede": "The office is on Prosperity Farms Road, just north of PGA Boulevard in Palm Beach Gardens. These are the towns members most often come from, with honest drive times.",
@@ -613,8 +616,8 @@ GEO_DATA = {
 _LOC_COPY = {
     "jupiter": {
         "name": "Jupiter",
-        "title": "Concierge Doctor for Jupiter, FL | Legacy Medical, 15 Minutes Away",
-        "desc": "A concierge internist about 15 minutes from Jupiter. Dr. Yana Shtern has privileges at Jupiter Medical Center and sees members the same or next business day.",
+        "title": "Concierge Doctor for Jupiter, FL | Legacy Medical",
+        "desc": "A concierge doctor about 15 minutes from Jupiter. Dr. Yana Shtern, internist, has privileges at Jupiter Medical Center and sees members the same or next business day.",
         "h1": "A concierge doctor for Jupiter, with Jupiter Medical Center privileges.",
         "lede": "From Jupiter the office is about 15 minutes south, down Alternate A1A or US-1. And if you ever need the hospital, Dr. Shtern has privileges at Jupiter Medical Center, which is likely the closest one to home.",
         "from_label": "central Jupiter",
@@ -630,9 +633,9 @@ _LOC_COPY = {
     },
     "north-palm-beach": {
         "name": "North Palm Beach",
-        "title": "Concierge Doctor in North Palm Beach | Legacy Medical, 6 Minutes Away",
-        "desc": "Concierge Internal Medicine about six minutes from North Palm Beach. Same or next-day visits, labs in the office, and 24/7 phone access with Dr. Yana Shtern.",
-        "h1": "A concierge internist six minutes from North Palm Beach.",
+        "title": "Concierge Doctor for North Palm Beach | Legacy Medical",
+        "desc": "A concierge doctor about six minutes from North Palm Beach. Same or next-day visits, labs in the office, and 24/7 phone access with Dr. Yana Shtern, internist.",
+        "h1": "A concierge doctor six minutes from North Palm Beach.",
         "lede": "The office is just up Prosperity Farms Road from the village, close enough that a same-day sick visit is a short trip rather than an afternoon.",
         "from_label": "North Palm Beach",
         "sections": [
@@ -644,9 +647,9 @@ _LOC_COPY = {
     },
     "juno-beach": {
         "name": "Juno Beach",
-        "title": "Concierge Doctor Near Juno Beach | Legacy Medical, Palm Beach Gardens",
-        "desc": "A concierge internist about seven minutes from Juno Beach, between Jupiter Medical Center and Palm Beach Gardens Medical Center, both hospitals where Dr. Shtern has privileges.",
-        "h1": "Seven minutes from Juno Beach, with two hospitals close by.",
+        "title": "Concierge Doctor for Juno Beach, FL | Legacy Medical",
+        "desc": "A concierge doctor about seven minutes from Juno Beach, between Jupiter Medical Center and Palm Beach Gardens Medical Center, where Dr. Shtern has privileges.",
+        "h1": "A concierge doctor seven minutes from Juno Beach, with two hospitals close by.",
         "lede": "Juno Beach sits almost exactly between the two hospitals where Dr. Shtern has privileges, and the office is a short drive down US-1 and across PGA Boulevard.",
         "from_label": "Juno Beach",
         "sections": [
@@ -658,9 +661,9 @@ _LOC_COPY = {
     },
     "tequesta": {
         "name": "Tequesta",
-        "title": "Private Physician for Tequesta | Legacy Medical Concierge Practice",
-        "desc": "Concierge Internal Medicine for Tequesta residents, about 17 minutes south. Dr. Yana Shtern has privileges at nearby Jupiter Medical Center.",
-        "h1": "A private physician for Tequesta, a short drive down US-1.",
+        "title": "Concierge Doctor and Private Physician for Tequesta, FL",
+        "desc": "A concierge doctor and private physician for Tequesta, about 17 minutes south in Palm Beach Gardens. Dr. Yana Shtern has privileges at nearby Jupiter Medical Center.",
+        "h1": "A concierge doctor and private physician for Tequesta, a short drive down US-1.",
         "lede": "From Tequesta the office is about 17 minutes south on US-1. Jupiter Medical Center, where Dr. Shtern has privileges, is closer still.",
         "from_label": "Tequesta",
         "sections": [
@@ -672,8 +675,8 @@ _LOC_COPY = {
     },
     "palm-beach": {
         "name": "Palm Beach",
-        "title": "Concierge Medicine for Palm Beach Residents | Legacy Medical",
-        "desc": "Concierge Internal Medicine for Palm Beach island residents with Dr. Yana Shtern, board-certified in Internal Medicine and Nephrology, about 25 minutes north in Palm Beach Gardens.",
+        "title": "Concierge Doctor for Palm Beach, FL | Legacy Medical",
+        "desc": "A concierge doctor for Palm Beach island residents: Dr. Yana Shtern, board-certified in Internal Medicine and Nephrology, about 25 minutes north in Palm Beach Gardens.",
         "h1": "Concierge medicine for Palm Beach, without the island waitlist.",
         "lede": "Palm Beach has plenty of concierge practices, and many are full. Legacy Medical is about 25 minutes north, and its physician is double board-certified in Internal Medicine and Nephrology.",
         "from_label": "the town of Palm Beach",
@@ -686,9 +689,9 @@ _LOC_COPY = {
     },
     "west-palm-beach": {
         "name": "West Palm Beach",
-        "title": "Concierge Doctor for West Palm Beach | Legacy Medical, Dr. Yana Shtern",
-        "desc": "Concierge Internal Medicine and Nephrology for West Palm Beach residents, about 20 minutes up I-95 in Palm Beach Gardens. Same or next-day visits.",
-        "h1": "Twenty minutes up I-95 from West Palm Beach.",
+        "title": "Concierge Medicine for West Palm Beach | Legacy Medical",
+        "desc": "Concierge medicine for West Palm Beach residents from a doctor who is also a nephrologist, about 20 minutes up I-95 in Palm Beach Gardens. Same or next-day visits.",
+        "h1": "A concierge doctor twenty minutes up I-95 from West Palm Beach.",
         "lede": "For West Palm Beach residents, the office is a straight run up I-95 to PGA Boulevard. Members are seen the same or next business day.",
         "from_label": "downtown West Palm Beach",
         "sections": [
@@ -766,6 +769,7 @@ ASSIST_KEYWORDS = {
     "Do you offer video visits?": ["video", "telehealth", "virtual", "zoom", "remote"],
     "What are the office hours?": ["hour", "open", "close", "friday", "monday", "when are you"],
     "How much does membership cost?": ["cost", "price", "fee", "how much", "expensive", "annual", "afford"],
+    "Is concierge medicine worth it?": ["worth it", "is it worth", "worthwhile", "worth the"],
     "Do you bill insurance?": ["insurance", "aetna", "cigna", "blue cross", "bluecross", "bcbs", "covered", "coverage", "bill", "take medicare", "accept medicare", "medicare patients", "my plan"],
     "Does Medicare pay the membership fee?": ["medicare pay", "medicare cover", "does medicare", "medicare and the fee", "medicare fee"],
     "Are labs done in the office?": [" lab", "blood", "draw", "ecg", "ekg", "test", "covid", "flu", "strep"],
@@ -810,7 +814,7 @@ ASSIST_EXTRA = [
 # sites. Every statement comes from SERVICES_INCLUDED, FAQ_GROUPS or DOCTOR.
 GUIDES_PATIENTS = {
     "same-or-next-day-visits": {
-        "title": "Same or Next Business Day Visits | Legacy Medical, Palm Beach Gardens",
+        "title": "Same or Next Business Day Visits | Legacy Medical",
         "desc": "Legacy Medical members are seen the same or next business day when something comes up, with phone access to the practice around the clock.",
         "crumb": "Same or next day visits", "eyebrow": "For patients",
         "h1": "Seen today or tomorrow, by the doctor who knows you.",
@@ -850,7 +854,7 @@ GUIDES_PATIENTS = {
         "related": ["hypertension", "kidney-care", "preventive-care"],
     },
     "specialists-and-hospital-care": {
-        "title": "Specialists and Hospital Care | Legacy Medical, Palm Beach Gardens",
+        "title": "Specialists and Hospital Care | Legacy Medical",
         "desc": "Dr. Yana Shtern chooses and contacts specialists, follows up on what they find, and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.",
         "crumb": "Specialists and hospital care", "eyebrow": "For patients",
         "h1": "Your care stays in one place, even when it moves around.",
@@ -970,7 +974,7 @@ VIDEO_LIBRARY = [
 ]
 
 MEET = {
-    "title": "Meet and Greet with Dr. Shtern | Legacy Medical, Palm Beach Gardens",
+    "title": "Meet and Greet with Dr. Shtern | Legacy Medical",
     "desc": "Your first visit to Legacy Medical is a complimentary meet and greet with Dr. Yana Shtern in Palm Beach Gardens. What happens, what to ask, and how to book.",
     "eyebrow": "Your first visit",
     "h1": "It starts with a conversation.",
@@ -1001,7 +1005,7 @@ MEET = {
 # about the practice; outside facts carry a link to the source.
 GUIDES_BASE = {
     "seasonal-residents": {
-        "title": "Concierge Doctor for Seasonal Residents | Legacy Medical, Palm Beach",
+        "title": "Concierge Doctor for Seasonal Residents | Legacy Medical",
         "desc": "Primary care for seasonal residents of Palm Beach County: one internist who keeps your records current, coordinates with your doctors up north, and stays reachable.",
         "crumb": "Seasonal residents", "eyebrow": "Seasonal residents",
         "h1": "One doctor here who keeps up with you between seasons.",
