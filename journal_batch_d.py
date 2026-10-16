@@ -55,14 +55,14 @@ POSTS = [
               'Allergies and past bad reactions to medicines.']},
    {'type': 'p',
     'text': "If you take five or more medicines, ask for a dedicated review. Our article on [medication reviews "
-            "for older adults](/journal/medication-review-older-adults) explains what that involves."},
+            "for older adults](/blog/medication-review-older-adults) explains what that involves."},
    {'type': 'h2', 'text': 'What to bring on the day'},
    {'type': 'ul',
     'items': ['Your list of concerns and your medication list.',
               'Insurance and Medicare cards and a photo ID.',
               'Recent results or records from other doctors, if the office does not already have them.',
               'Home readings, such as a blood pressure or blood sugar log. See [home blood pressure '
-              'monitoring](/journal/home-blood-pressure-monitoring) for how to take readings the right way.',
+              'monitoring](/blog/home-blood-pressure-monitoring) for how to take readings the right way.',
               'Your glasses and working hearing aids, which the National Institute on Aging specifically '
               'reminds people to bring.',
               'A notepad, or a family member or friend who can take notes.']},
@@ -97,7 +97,7 @@ POSTS = [
     'text': "Update your medication list the same day if anything changed, and throw out the old version. Put "
             "follow-up tests and appointments on the calendar. If you were referred to a specialist, ask how "
             "the two offices will share notes. Our piece on [the annual "
-            "physical](/journal/annual-physical-what-you-need) covers what a yearly visit should include."},
+            "physical](/blog/annual-physical-what-you-need) covers what a yearly visit should include."},
    {'type': 'p',
     'text': "At Legacy Medical, visits are unhurried by design, and Dr. Shtern reviews your records and "
             "medicines with you rather than around you. Members can reach the practice by phone at any hour, "
@@ -161,7 +161,7 @@ POSTS = [
     'items': ['**Glucose** is your blood sugar. The CDC lists a [fasting result of 99 mg/dL or less as normal, '
               '100 to 125 as prediabetes and 126 or higher as diabetes '
               'range](https://www.cdc.gov/diabetes/diabetes-testing/index.html). A non-fasting sample reads '
-              'higher, so it matters whether you ate. See [prediabetes and A1c](/journal/prediabetes-and-a1c).',
+              'higher, so it matters whether you ate. See [prediabetes and A1c](/blog/prediabetes-and-a1c).',
               '**Electrolytes: sodium, potassium, chloride and bicarbonate** help control fluid balance, nerve '
               'and muscle function and the acid-base balance of your blood. Diuretics and some blood pressure '
               'medicines commonly shift these.',
@@ -182,7 +182,7 @@ POSTS = [
             "disease](https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/tests-diagnosis). "
             "Creatinine comes from muscle, so very low or very high muscle mass, dehydration and some medicines "
             "can move it. Our article on [reading your kidney lab "
-            "results](/journal/egfr-kidney-lab-results-explained) walks through eGFR and the urine test that "
+            "results](/blog/egfr-kidney-lab-results-explained) walks through eGFR and the urine test that "
             "goes with it."},
    {'type': 'h2', 'text': 'Questions worth asking about your results'},
    {'type': 'ul',
@@ -290,7 +290,7 @@ POSTS = [
     'text': "Ask for a copy of the discharge summary and any test results, and send them to your regular "
             "doctor. Bring the paperwork and any new prescriptions to your follow-up so your medication list "
             "stays accurate. Our article on [having a concierge doctor during a hospital "
-            "stay](/journal/concierge-doctor-hospital-stay) covers what coordination looks like after a "
+            "stay](/blog/concierge-doctor-hospital-stay) covers what coordination looks like after a "
             "bigger event."},
    {'type': 'p',
     'text': "At Legacy Medical, members can reach the practice by phone at any hour, which often settles the "
@@ -360,7 +360,7 @@ POSTS = [
               'rules vary, so call the number on your card.',
               '**Consider a national pharmacy chain or mail order**, so refills can be filled in either state.',
               '**Keep one up-to-date medication list** that both of your doctors see. Our article on [medication '
-              'reviews](/journal/medication-review-older-adults) explains why this matters.',
+              'reviews](/blog/medication-review-older-adults) explains why this matters.',
               '**Plan ahead for controlled medicines** such as some pain, sleep and attention medicines, which '
               'have stricter refill and transfer rules. Your prescriber and pharmacist can tell you what applies '
               'to you.']},
@@ -386,8 +386,8 @@ POSTS = [
               'Save your doctors\' and pharmacies\' numbers in your phone.']},
    {'type': 'p',
     'text': "For more on splitting the year, see [Medicare when you live in two "
-            "states](/journal/medicare-living-in-two-states) and [moving your medical records to a Florida "
-            "doctor](/journal/transfer-medical-records-to-florida-doctor)."},
+            "states](/blog/medicare-living-in-two-states) and [moving your medical records to a Florida "
+            "doctor](/blog/transfer-medical-records-to-florida-doctor)."},
    {'type': 'p',
     'text': "Legacy Medical cares for many patients who spend part of the year away, with video visits through "
             "[telehealth](/telehealth) when you are out of town. The [seasonal residents](/seasonal-residents) "
@@ -477,7 +477,7 @@ POSTS = [
             "work no longer does, or if symptoms do not respond to treatment. Also call if you have wheezing, "
             "shortness of breath or chest tightness, facial pain with fever, or symptoms that keep you from "
             "sleeping. Antibiotics do not help allergies; our article on [when antibiotics help and "
-            "harm](/journal/antibiotics-when-they-help-and-harm) explains why."},
+            "harm](/blog/antibiotics-when-they-help-and-harm) explains why."},
    {'type': 'p',
     'text': "At Legacy Medical, Dr. Shtern can help sort out allergy from infection, choose treatments that fit "
             "your blood pressure and other medicines, and refer you to an allergist when testing or "
@@ -572,8 +572,8 @@ POSTS = [
             "with signs of a stroke or severe confusion should call 911."},
    {'type': 'p',
     'text': "For other seasonal Florida concerns, see the [hurricane season health "
-            "checklist](/journal/hurricane-season-health-checklist) and [skin cancer checks in "
-            "Florida](/journal/skin-cancer-checks-florida)."},
+            "checklist](/blog/hurricane-season-health-checklist) and [skin cancer checks in "
+            "Florida](/blog/skin-cancer-checks-florida)."},
    {'type': 'p',
     'text': "At Legacy Medical, members can reach the practice by phone at any hour about a new fever, and "
             "[same or next business day visits](/same-or-next-day-visits) allow a prompt exam and testing when "
@@ -612,7 +612,7 @@ POSTS = [
     'items': ['**Blood pressure.** The USPSTF (2021) recommends screening all adults and suggests [checking '
               'yearly from age 40](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/hypertension-in-adults-screening), '
               'with a high office reading confirmed by home or ambulatory readings before treatment. See [home '
-              'blood pressure monitoring](/journal/home-blood-pressure-monitoring).',
+              'blood pressure monitoring](/blog/home-blood-pressure-monitoring).',
               '**Blood sugar.** Screening for prediabetes and type 2 diabetes is recommended for adults 35 to 70 '
               'who have overweight or obesity ([USPSTF, '
               '2021](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-for-prediabetes-and-type-2-diabetes)), '
@@ -621,8 +621,8 @@ POSTS = [
               'cardiovascular risk of 10 percent or more, the USPSTF (2022) [recommends a '
               'statin](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication); '
               'between 7.5 and 10 percent, it is an individual decision. Some men benefit from extra tests such '
-              'as [ApoB and Lp(a)](/journal/apob-and-lipoprotein-a) or a [coronary calcium '
-              'score](/journal/coronary-artery-calcium-score).']},
+              'as [ApoB and Lp(a)](/blog/apob-and-lipoprotein-a) or a [coronary calcium '
+              'score](/blog/coronary-artery-calcium-score).']},
    {'type': 'h2', 'text': 'Cancer screening'},
    {'type': 'ul',
     'items': ['**Colorectal cancer.** Recommended from 45 through 75, with a selective decision from 76 to 85 '
@@ -631,9 +631,9 @@ POSTS = [
               '**Lung cancer.** A yearly low-dose CT is recommended for adults 50 to 80 with at least a '
               '20 pack-year smoking history who still smoke or quit within the past 15 years ([USPSTF, '
               '2021](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening)). '
-              'More in [low-dose CT for lung cancer](/journal/low-dose-ct-lung-cancer-screening).',
+              'More in [low-dose CT for lung cancer](/blog/low-dose-ct-lung-cancer-screening).',
               '**Skin.** Florida sun makes regular skin checks worth discussing; see [skin cancer checks in '
-              'Florida](/journal/skin-cancer-checks-florida).']},
+              'Florida](/blog/skin-cancer-checks-florida).']},
    {'type': 'h2', 'text': 'Two checks specific to men'},
    {'type': 'p',
     'text': "**Prostate cancer.** The current USPSTF recommendation (2018) says that for men 55 to 69, [the "
@@ -658,20 +658,20 @@ POSTS = [
               '**Pneumococcal.** The CDC now recommends pneumococcal vaccination for [all adults 50 and '
               'older](https://www.cdc.gov/pneumococcal/vaccines/index.html).',
               '**RSV.** Recommended for [all adults 75 and older, and for those 50 to 74 at increased '
-              'risk](https://www.cdc.gov/rsv/vaccines/index.html). See [RSV in adults](/journal/rsv-infection-in-adults).',
+              'risk](https://www.cdc.gov/rsv/vaccines/index.html). See [RSV in adults](/blog/rsv-infection-in-adults).',
               '**Flu and COVID-19.** Discussed each fall; see [the yearly flu '
-              'vaccine](/journal/yearly-flu-vaccine-benefits).',
+              'vaccine](/blog/yearly-flu-vaccine-benefits).',
               '**Falls.** For adults 65 and older at increased risk of falling, the USPSTF (2024) recommends '
               '[exercise programs to prevent '
               'falls](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions). '
-              'See [balance and fall prevention](/journal/balance-and-fall-prevention).',
+              'See [balance and fall prevention](/blog/balance-and-fall-prevention).',
               '**Hearing, mood, sleep and alcohol** deserve a few minutes too. See [hearing loss and '
-              'memory](/journal/hearing-loss-and-memory) and [alcohol after 50](/journal/alcohol-after-50).']},
+              'memory](/blog/hearing-loss-and-memory) and [alcohol after 50](/blog/alcohol-after-50).']},
    {'type': 'p',
     'text': "Bone density testing in men is a gray area: the USPSTF (2025) found the evidence insufficient to "
             "recommend for or against routine screening, so it is a judgment call based on risk factors such as "
             "long-term steroid use or a prior fracture. Our article on [bone density "
-            "screening](/journal/bone-density-screening) has more."},
+            "screening](/blog/bone-density-screening) has more."},
    {'type': 'p',
     'text': "At Legacy Medical, the annual [Legacy physical](/preventive-care) is where Dr. Shtern puts this list "
             "together for you, keeps track of what is due, and talks through the judgment calls such as PSA "
@@ -717,7 +717,7 @@ POSTS = [
    {'type': 'p',
     'text': "Heart symptoms in women can be less obvious. Along with chest discomfort, the CDC lists pain in the "
             "neck, jaw, throat, upper abdomen or back, nausea, and unusual tiredness. If those come on "
-            "suddenly, call 911. Our article on [menopause and heart health](/journal/menopause-and-heart-health) "
+            "suddenly, call 911. Our article on [menopause and heart health](/blog/menopause-and-heart-health) "
             "covers why risk rises after menopause."},
    {'type': 'h2', 'text': 'Breast and cervical cancer'},
    {'type': 'p',
@@ -725,7 +725,7 @@ POSTS = [
             "74](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening). "
             "For women 75 and older, it found the evidence insufficient, so the decision depends on health and "
             "preferences. If you have dense breasts or a strong family history, ask whether extra imaging makes sense for you. See [breast cancer "
-            "screening from 40](/journal/breast-cancer-screening-mammogram-age-40)."},
+            "screening from 40](/blog/breast-cancer-screening-mammogram-age-40)."},
    {'type': 'p',
     'text': "**Cervical cancer.** Screening continues to 65. After that, the current USPSTF recommendation "
             "(2018) is [no further screening for women who have had adequate prior "
@@ -740,13 +740,13 @@ POSTS = [
               'older](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening), '
               'and for younger postmenopausal women with risk factors such as a parent who broke a hip, '
               'smoking, low body weight or heavy drinking. See [bone density '
-              'screening](/journal/bone-density-screening).',
+              'screening](/blog/bone-density-screening).',
               '**Colorectal cancer.** From 45 through 75, with a selective decision from 76 to 85 ([USPSTF, '
               '2021](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening)).',
               '**Lung cancer.** Yearly low-dose CT for adults 50 to 80 with at least a 20 pack-year history who '
               'smoke now or quit within 15 years ([USPSTF, '
               '2021](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening)).',
-              '**Skin.** Worth discussing in Florida; see [skin cancer checks](/journal/skin-cancer-checks-florida).']},
+              '**Skin.** Worth discussing in Florida; see [skin cancer checks](/blog/skin-cancer-checks-florida).']},
    {'type': 'h2', 'text': 'Vaccines, falls and the conversations to have'},
    {'type': 'ul',
     'items': ['**Shingles:** two doses of Shingrix for [adults 50 and '
@@ -758,7 +758,7 @@ POSTS = [
               '**Falls:** exercise programs for adults 65 and older at increased risk ([USPSTF, '
               '2024](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions)). '
               'Strength work helps both bones and balance; see [strength training after '
-              '50](/journal/strength-training-after-50).']},
+              '50](/blog/strength-training-after-50).']},
    {'type': 'p',
     'text': "Some topics do not appear on screening lists but belong in the visit: menopause symptoms and "
             "whether treatment makes sense for you, bladder control, sleep, mood, memory and hearing. Many "
@@ -800,7 +800,7 @@ POSTS = [
    {'type': 'p',
     'text': "Other common reasons older adults run low include water pills (diuretics), diabetes with high blood "
             "sugar, illness with fever, vomiting or diarrhea, and cutting back on drinks to avoid trips to the "
-            "bathroom. Our article on [how often you should urinate](/journal/how-often-should-you-urinate) "
+            "bathroom. Our article on [how often you should urinate](/blog/how-often-should-you-urinate) "
             "covers the bladder side of that trade-off."},
    {'type': 'h2', 'text': 'What the reference numbers say'},
    {'type': 'p',
@@ -858,7 +858,7 @@ POSTS = [
    {'type': 'p',
     'text': "As a nephrologist, Dr. Shtern sees both sides of this: kidney strain from too little fluid in the "
             "heat, and fluid overload when the heart or kidneys cannot keep up. Our article on [heat, hydration "
-            "and kidney health](/journal/heat-hydration-kidney-health) goes further into the kidney side, and "
+            "and kidney health](/blog/heat-hydration-kidney-health) goes further into the kidney side, and "
             "[kidney care](/kidney-care) explains her approach. To meet her, book a complimentary [meet and "
             "greet](/meet-and-greet)."}],
   'sources': [],
@@ -927,7 +927,7 @@ POSTS = [
             "products, such as two loaves of bread or two boxes of cereal. The differences are often larger "
             "than you would guess, and the higher-fiber choice usually costs no more."},
    {'type': 'p',
-    'text': "These fit easily into the [Mediterranean diet](/journal/mediterranean-diet-heart-health), which is "
+    'text': "These fit easily into the [Mediterranean diet](/blog/mediterranean-diet-heart-health), which is "
             "built around the same foods. Whole foods also bring vitamins, minerals and other plant compounds "
             "that a supplement does not."},
    {'type': 'h2', 'text': 'Adding fiber without discomfort'},
@@ -936,12 +936,12 @@ POSTS = [
             "time](https://www.niddk.nih.gov/health-information/digestive-diseases/constipation/eating-diet-nutrition) "
             "so your body can adjust, and drinking plenty of liquids to help it work. Going from very little to "
             "a lot in one week is the usual reason for gas and bloating. Increase over a few weeks, and see "
-            "[hydration for older adults](/journal/hydration-for-older-adults) for the fluid side."},
+            "[hydration for older adults](/blog/hydration-for-older-adults) for the fluid side."},
    {'type': 'p',
     'text': "Talk with your doctor before a big change if you have a bowel condition, a history of bowel "
             "obstruction, trouble swallowing, or kidney disease with a potassium limit, since beans, lentils "
             "and some fruits are high in potassium. If you are thinking about a fiber supplement, ask whether "
-            "to space it from your medicines. Our article on [constipation](/journal/constipation-and-squatty-potty) "
+            "to space it from your medicines. Our article on [constipation](/blog/constipation-and-squatty-potty) "
             "has more on bowel habits."},
    {'type': 'p',
     'text': "At Legacy Medical, Dr. Shtern can look at your diet alongside your cholesterol, blood sugar and "

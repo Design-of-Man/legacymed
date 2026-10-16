@@ -26,7 +26,7 @@ import threading
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 PUB = os.path.join(ROOT, "public")
-AXE = os.path.join("/tmp/claude-0/-home-user-legacymed/a710e1f1-cec8-5210-8b4d-b0bba68caef7/scratchpad/tools/node_modules/axe-core/axe.min.js")
+AXE = os.environ.get("AXE") or os.path.join("/tmp/claude-0/-home-user-legacymed/a710e1f1-cec8-5210-8b4d-b0bba68caef7/scratchpad/tools/node_modules/axe-core/axe.min.js")
 VIEWS = {"phone": (375, 812), "tablet": (768, 1024), "desktop": (1440, 900)}
 
 

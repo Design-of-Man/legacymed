@@ -93,7 +93,7 @@ POSTS = [
              "your doctor rather than waiting for your next screening date. Heavy rectal bleeding, or bleeding with "
              "dizziness or fainting, needs emergency care."},
             {"type": "p", "text": "For a broader look at lowering cancer risk, see our article on [cancer prevention "
-             "and risk factors](/journal/cancer-prevention-risk-factors)."},
+             "and risk factors](/blog/cancer-prevention-risk-factors)."},
             {"type": "p", "text": "At Legacy Medical, Dr. Shtern goes over your family history and past reports, "
              "helps you pick the test that fits, and offers stool occult blood testing in the office. If a "
              "colonoscopy is the right choice, she [coordinates the referral](/specialists-and-hospital-care) and "
@@ -185,7 +185,7 @@ POSTS = [
             {"type": "p", "text": "Urinary symptoms are a separate matter from screening. Trouble starting, a weak "
              "stream, getting up often at night, or blood in the urine or semen deserve a visit whatever your "
              "screening choice. Our article on [how often you should "
-             "urinate](/journal/how-often-should-you-urinate) covers what is typical."},
+             "urinate](/blog/how-often-should-you-urinate) covers what is typical."},
             {"type": "p", "text": "At Legacy Medical, appointments leave room for this kind of decision, and labs "
              "including PSA are drawn in the office if you choose to test. Dr. Shtern can walk through your own risk "
              "and results at the annual [Legacy physical](/preventive-care). If you would like to meet her first, "
@@ -268,11 +268,11 @@ POSTS = [
              "light-headedness and a rapid heart rate. If you or someone with you has these symptoms, call 911. "
              "Do not drive yourself to the hospital."},
             {"type": "p", "text": "Because blood pressure and cholesterol both affect the aorta, our articles on "
-             "[home blood pressure monitoring](/journal/home-blood-pressure-monitoring) and [ApoB and lipoprotein(a)]"
-             "(/journal/apob-and-lipoprotein-a) are useful companions to this one."},
+             "[home blood pressure monitoring](/blog/home-blood-pressure-monitoring) and [ApoB and lipoprotein(a)]"
+             "(/blog/apob-and-lipoprotein-a) are useful companions to this one."},
             {"type": "p", "text": "At Legacy Medical, Dr. Shtern reviews which screenings fit your age, smoking "
              "history and family history, writes the referral when the scan makes sense, and keeps track of any "
-             "follow-up. Her nephrology training means [blood pressure](/hypertension) and kidney health get close "
+             "follow-up. Her Nephrology training means [blood pressure](/hypertension) and kidney health get close "
              "attention too. If you would like to meet her, the first visit is a complimentary [meet and "
              "greet](/meet-and-greet)."},
         ],
@@ -361,7 +361,7 @@ POSTS = [
              "fatigue](https://www.cdc.gov/hepatitis-c/about/index.html). If you notice yellowing of the skin or "
              "eyes, call your doctor promptly. Confusion, vomiting blood or black stools need emergency care."},
             {"type": "p", "text": "For a fuller picture of routine blood work, see [what you need from an annual "
-             "physical](/journal/annual-physical-what-you-need)."},
+             "physical](/blog/annual-physical-what-you-need)."},
             {"type": "p", "text": "At Legacy Medical, blood is drawn in the office, so hepatitis B and C screening can "
              "be added to the [labs](/labs-and-tests) you are already having. If a result is positive, Dr. Shtern "
              "explains it and coordinates the right specialist. To meet her first, the first visit is a "
@@ -444,8 +444,8 @@ POSTS = [
             ]},
             {"type": "p", "text": "Eye health ties into the rest of your care. Blood sugar, blood pressure and "
              "smoking all affect the eyes, and our articles on [prediabetes and the A1c "
-             "test](/journal/prediabetes-and-a1c) and [protecting your skin in the Florida "
-             "sun](/journal/skin-cancer-checks-florida) cover related ground."},
+             "test](/blog/prediabetes-and-a1c) and [protecting your skin in the Florida "
+             "sun](/blog/skin-cancer-checks-florida) cover related ground."},
             {"type": "p", "text": "At Legacy Medical, Dr. Shtern keeps track of when your last eye exam was, makes sure "
              "your eye doctor knows about conditions such as diabetes, and reviews medicines like steroids that can "
              "affect the eyes. She [coordinates with specialists](/specialists-and-hospital-care) so results come "
@@ -537,9 +537,9 @@ POSTS = [
              "is immediate danger, call 911. The NIA notes that asking someone directly whether they are thinking "
              "about suicide does not make them more likely to act on it, and can help them open up."},
             {"type": "p", "text": "Related reading: [memory changes and when to see a "
-             "doctor](/journal/memory-changes-when-to-see-a-doctor), [hearing loss and "
-             "memory](/journal/hearing-loss-and-memory), and [reviewing medicines in older "
-             "adults](/journal/medication-review-older-adults)."},
+             "doctor](/blog/memory-changes-when-to-see-a-doctor), [hearing loss and "
+             "memory](/blog/hearing-loss-and-memory), and [reviewing medicines in older "
+             "adults](/blog/medication-review-older-adults)."},
             {"type": "p", "text": "At Legacy Medical, visits are unhurried, which makes it easier to bring up mood, "
              "sleep or grief. Dr. Shtern checks for medical causes, reviews every medicine, and refers to a mental "
              "health professional when that is the right step. Families of older patients can read more on "
@@ -616,7 +616,7 @@ POSTS = [
             {"type": "p", "text": "Sometimes the barrier is medical. Hearing loss is a common one: the NIA notes that "
              "people who cannot follow conversations may withdraw, and can even be mistaken for confused. Treating "
              "it can reopen a social life. Our article on [hearing loss and "
-             "memory](/journal/hearing-loss-and-memory) explains why it matters. Poor vision, fear of falling, "
+             "memory](/blog/hearing-loss-and-memory) explains why it matters. Poor vision, fear of falling, "
              "incontinence, chronic pain and depression can all keep people at home, and all can be addressed."},
             {"type": "p", "text": "Other barriers are practical. The NIA lists lack of transportation, being unable to "
              "leave home without help, financial strain and language barriers among the risk factors for isolation. "
@@ -625,7 +625,7 @@ POSTS = [
             {"type": "p", "text": "If you feel lonely much of the time, tell your doctor. That is part of your health, "
              "and it often connects to sleep, mood, blood pressure and memory. If loneliness comes with persistent "
              "sadness or thoughts of self-harm, see our article on [depression in older "
-             "adults](/journal/depression-in-older-adults), and call or text 988 in a crisis."},
+             "adults](/blog/depression-in-older-adults), and call or text 988 in a crisis."},
             {"type": "p", "text": "At Legacy Medical, Dr. Shtern asks about the parts of life that affect health "
              "beyond lab numbers, and has the time to listen. For adult children watching a parent become more "
              "isolated, our page on [care for families](/for-families) explains how she can help. The first visit is "
@@ -667,7 +667,7 @@ POSTS = [
              "The [lower target reduced mild cognitive impairment](https://pubmed.ncbi.nlm.nih.gov/30688979/), often a "
              "step before dementia. The reduction in dementia itself did not reach statistical significance, and the "
              "authors noted the trial ended early and may have been too small to show it. Our article on [blood "
-             "pressure and brain health](/journal/blood-pressure-and-brain-health) covers this in more detail."},
+             "pressure and brain health](/blog/blood-pressure-and-brain-health) covers this in more detail."},
             {"type": "p", "text": "**A combination of healthy habits.** The US POINTER trial, published in JAMA in "
              "2025, followed more than 2,000 adults aged 60 to 79 at higher risk of decline. Both groups were "
              "encouraged to exercise, eat well, stay mentally and socially active and monitor heart health. The "
@@ -679,11 +679,11 @@ POSTS = [
              "while noting that more research is needed on exactly how much exercise prevents decline. Since activity "
              "also lowers blood pressure, blood sugar and depression, it supports several risk factors at once."},
             {"type": "p", "text": "**Hearing.** Hearing loss is one of the larger risk factors in the Lancet list. "
-             "Our article on [hearing loss and memory](/journal/hearing-loss-and-memory) explains the link and the "
+             "Our article on [hearing loss and memory](/blog/hearing-loss-and-memory) explains the link and the "
              "case for testing."},
             {"type": "p", "text": "**Social contact.** The NIA cites research in which high social engagement, such as "
              "visiting neighbors and volunteering, was associated with better thinking in later life. See [loneliness "
-             "and social connection](/journal/loneliness-and-social-connection)."},
+             "and social connection](/blog/loneliness-and-social-connection)."},
             {"type": "h2", "text": "What has weaker support"},
             {"type": "ul", "items": [
                 "**Supplements.** The NIA states that no vitamin or supplement is currently recommended for "
@@ -697,7 +697,7 @@ POSTS = [
             ]},
             {"type": "h2", "text": "A practical checklist"},
             {"type": "ul", "items": [
-                "Know your blood pressure, ideally from [home readings](/journal/home-blood-pressure-monitoring), "
+                "Know your blood pressure, ideally from [home readings](/blog/home-blood-pressure-monitoring), "
                 "and treat it if it is high.",
                 "Check LDL cholesterol and blood sugar, and treat them when needed.",
                 "Have your hearing and vision tested, and use hearing aids or glasses if they help.",
@@ -709,8 +709,8 @@ POSTS = [
             ]},
             {"type": "p", "text": "One more item belongs on the list. The NIA notes that some medicines and "
              "combinations of medicines can cause confusion and memory problems in older adults. A [medication "
-             "review](/journal/medication-review-older-adults) is a simple place to start. And if memory is already "
-             "changing, see [memory changes: when to see a doctor](/journal/memory-changes-when-to-see-a-doctor)."},
+             "review](/blog/medication-review-older-adults) is a simple place to start. And if memory is already "
+             "changing, see [memory changes: when to see a doctor](/blog/memory-changes-when-to-see-a-doctor)."},
             {"type": "p", "text": "At Legacy Medical, Dr. Shtern works through these risk factors with you over time, "
              "with labs drawn in the office and close attention to blood pressure. For patients and families "
              "concerned about memory, our page on [geriatric and memory care](/geriatric-memory-care) explains how "
@@ -760,7 +760,7 @@ POSTS = [
             ]},
             {"type": "p", "text": "If sadness or hopelessness lasts more than a couple of weeks, that may be "
              "depression, which is treatable. Our article on [depression in older "
-             "adults](/journal/depression-in-older-adults) lists the signs, and they apply at any age. If you ever "
+             "adults](/blog/depression-in-older-adults) lists the signs, and they apply at any age. If you ever "
              "feel you might harm yourself or the person you care for, call or text 988, or call 911 in an emergency."},
             {"type": "h2", "text": "Asking for help, and making it specific"},
             {"type": "p", "text": "Many caregivers say they did too much on their own. The NIA suggests a few ways to "
@@ -796,8 +796,8 @@ POSTS = [
             ]},
             {"type": "p", "text": "Paperwork helps too. Having your parent's medication list, doctors and advance "
              "directives in one place saves hours in a crisis. See our articles on [concierge care for aging "
-             "parents](/journal/concierge-care-for-aging-parents) and [Florida advance "
-             "directives](/journal/florida-advance-directives-health-care-surrogate)."},
+             "parents](/blog/concierge-care-for-aging-parents) and [Florida advance "
+             "directives](/blog/florida-advance-directives-health-care-surrogate)."},
             {"type": "p", "text": "At Legacy Medical, members reach the practice by phone at any hour, and Dr. "
              "Shtern coordinates specialists and hospital care, which takes some of the load off family. With your "
              "parent's permission, she can keep you informed. Our page on [care for families](/for-families) "
@@ -893,8 +893,8 @@ POSTS = [
             {"type": "p", "text": "Financial decisions are handled differently, usually through a durable power of "
              "attorney under a separate chapter of Florida law. An attorney can explain how the documents fit together."},
             {"type": "p", "text": "Our articles on [concierge care for aging "
-             "parents](/journal/concierge-care-for-aging-parents) and [what happens with a concierge doctor during a "
-             "hospital stay](/journal/concierge-doctor-hospital-stay) cover the medical side of planning ahead."},
+             "parents](/blog/concierge-care-for-aging-parents) and [what happens with a concierge doctor during a "
+             "hospital stay](/blog/concierge-doctor-hospital-stay) cover the medical side of planning ahead."},
             {"type": "p", "text": "At Legacy Medical, Dr. Shtern is glad to talk through the medical questions behind "
              "a living will, such as what a ventilator or feeding tube involves, and to keep copies of your "
              "directives in your chart. She holds privileges at local hospitals and stays involved if you are "

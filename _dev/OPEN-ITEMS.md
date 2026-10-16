@@ -13,6 +13,11 @@ Nothing below was guessed on the site. Each item is either left out of the copy 
 - **Privacy Officer phone (561) 316-7199** in the HIPAA notice (carried over unchanged). Confirm it is still current.
 - **Healthgrades/US News/Zocdoc listings** still show old Jupiter or Brooklyn addresses (see audit). Claim and correct.
 
+## From the Oct 16, 2026 client round
+- **Hero film source.** The coastline clip supplied on Oct 16 is a 1280x720 export (`DJI_..._0426_D_1.mov`), not the 4K camera file. It plays fine but is soft on large screens. Ask for the original from the drone and re-encode per `_dev/video/PROVENANCE.md`.
+- **Google reviews.** The home page shows the Google rating (5.0, 45 reviews) and four verbatim Google reviews as a snapshot dated October 2026 (`GOOGLE`, `GOOGLE_REVIEWS` in content.py, read from the public listing, place ID ChIJ9-heFHwr34gRt2Rs2caAsOY). Refresh the snapshot now and then, or set `GOOGLE_PLACES_API_KEY` in Vercel and the block goes live automatically.
+- **Blog moved to /blog.** Posts live at /blog/<slug>, feed at /blog/feed.xml; /journal, /journal/feed.xml and /journal/:slug 301 to the new paths (vercel.json). Nothing else to do unless Search Console shows old /journal URLs indexed.
+
 ## Needs account access
 - **Domain + DNS** for legacymedicalpalmbeach.com sit with Unkind Designs. Point the domain at the Vercel project when the handover happens; the vercel.json redirect map and www→apex rules go live with it.
 - **cmedjupiter.com.** Ready-made 301 maps in `_dev/redirects/` (Vercel JSON, Apache .htaccess, CSV). Apply whichever matches where that domain ends up, then follow `_dev/redirects/CHANGE-OF-ADDRESS.md` (Search Console Change of Address, in order). This is the single biggest SEO fix: that domain currently outranks the real one.

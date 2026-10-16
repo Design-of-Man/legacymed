@@ -13,11 +13,16 @@ SOCIALS = [  # only profiles the practice itself links. The old site's "Instagra
     {"label": "Legacy Medical on Facebook", "url": "https://www.facebook.com/legacymedicalpalmbeach", "icon": "facebook"},
 ]
 CLINIC_SAME_AS = ["https://www.youtube.com/@LegacyMedicalConciergeofPa-i6d"]
+# Instagram: the home page gets a "Follow along" section and the footer an icon
+# as soon as the practice confirms its account. Left empty until then (never guess a handle).
+INSTAGRAM = {"handle": "legacymedicalconcierge", "url": "https://www.instagram.com/legacymedicalconcierge/"}  # confirmed by the owner, Oct 16 2026
+if INSTAGRAM["url"]:
+    SOCIALS.append({"label": "Legacy Medical on Instagram", "url": INSTAGRAM["url"], "icon": "instagram"})
 PRICE_RANGE = None  # fee not published; do not guess
 HEALTH_PLANS = []
 
-ONE_LINER = ("Legacy Medical is a concierge internal medicine practice in Palm Beach Gardens, Florida. "
-             "Dr. Yana Shtern, board-certified in internal medicine and nephrology, keeps a small patient panel "
+ONE_LINER = ("Legacy Medical is a Concierge Internal Medicine practice in Palm Beach Gardens, Florida. "
+             "Dr. Yana Shtern, board-certified in Internal Medicine and Nephrology, keeps a small patient panel "
              "so members get same or next-business-day visits, appointments with time to talk, and phone access "
              "around the clock.")
 
@@ -40,7 +45,7 @@ DOCTOR = {
         {"name": "St. George's University School of Medicine", "college": True},
         {"name": "Maimonides Medical Center"},
     ],
-    "knows_about": ["Internal medicine", "Nephrology", "Hypertension", "Chronic kidney disease", "Electrolyte disorders",
+    "knows_about": ["Internal Medicine", "Nephrology", "Hypertension", "Chronic kidney disease", "Electrolyte disorders",
                     "Kidney stones", "Preventive medicine", "Geriatric care"],
     "same_as": [
         "https://www.healthgrades.com/physician/dr-yana-shtern-gfc4n",
@@ -50,12 +55,12 @@ DOCTOR = {
         "https://www.castleconnolly.com/top-doctors/yana-shtern-internal-medicine-62cc071652",
     ],
     "page_title": "Internist in Palm Beach Gardens | Dr. Yana Shtern, MD",
-    "page_desc": ("Dr. Yana Shtern is a concierge internist in Palm Beach Gardens, double board-certified in internal medicine and "
-                  "nephrology. Her training, hospital privileges and how she practices."),
-    "hero_lede": ("Board-certified in internal medicine and in nephrology, Dr. Shtern has practiced for close to twenty years, first in "
+    "page_desc": ("Dr. Yana Shtern is a concierge internist in Palm Beach Gardens, double board-certified in Internal Medicine and "
+                  "Nephrology. Her training, hospital privileges and how she practices."),
+    "hero_lede": ("Board-certified in Internal Medicine and in Nephrology, Dr. Shtern has practiced for close to twenty years, first in "
                   "New York City and now in Palm Beach Gardens, where she runs Legacy Medical as a small concierge practice."),
     "home_creds": [
-        ("Board certification", "Internal medicine and nephrology, American Board of Internal Medicine"),
+        ("Board certification", "Internal Medicine and Nephrology, American Board of Internal Medicine"),
         ("Hospital privileges", "Jupiter Medical Center and Palm Beach Gardens Medical Center"),
         ("In practice", "Close to twenty years, in New York City and Palm Beach County"),
         ("Recognition", "Castle Connolly Top Doctor since 2023"),
@@ -63,25 +68,23 @@ DOCTOR = {
     "facts": [
         ("Board certification", "Internal Medicine and Nephrology (ABIM)"),
         ("Medical degree", "St. George's University School of Medicine, 2007"),
-        ("Residency and fellowship", "Internal medicine residency and nephrology fellowship, Maimonides Medical Center, Brooklyn"),
+        ("Residency and fellowship", "Internal Medicine residency and Nephrology fellowship, Maimonides Medical Center, New York City"),
         ("Undergraduate", "BS in Pharmacology, Stony Brook University"),
         ("Hospital privileges", "Jupiter Medical Center; Palm Beach Gardens Medical Center"),
         ("Committee work", "Continuing Medical Education Committee, Jupiter Medical Center"),
-        ("NPI", "1497940852"),
-        ("Florida license", "ME114615"),
     ],
     "bio": [
-        "Most of what Dr. Shtern does in a day is internal medicine: physicals, blood pressure, cholesterol, diabetes, infections, the questions that come with getting older, and keeping track of everything a patient's other doctors are doing. Her second board certification, in nephrology, shapes how she does it. Kidney function and blood pressure affect nearly every medication decision, and she reads those numbers the way a kidney specialist does.",
-        "She studied pharmacology at Stony Brook University before medical school at St. George's University, then completed her internal medicine residency and a nephrology fellowship at Maimonides Medical Center in Brooklyn. In New York she ran her own practice, served as medical director of an outpatient hemodialysis center, and worked in interventional nephrology.",
+        "Most of what Dr. Shtern does in a day is Internal Medicine: physicals, blood pressure, cholesterol, diabetes, infections, the questions that come with getting older, and keeping track of everything a patient's other doctors are doing. Her second board certification, in Nephrology, shapes how she does it. Kidney function and blood pressure affect nearly every medication decision, and she reads those numbers the way a kidney specialist does.",
+        "She studied pharmacology at Stony Brook University before medical school at St. George's University, then completed her Internal Medicine residency and a Nephrology fellowship at Maimonides Medical Center in New York City. In New York she ran her own private practice, served as medical director of an outpatient hemodialysis center, and worked in Interventional Nephrology.",
         "In Palm Beach County she holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and sits on the Continuing Medical Education Committee at Jupiter Medical Center. She chose the concierge model so she could keep her panel small enough to know every patient well, be reachable when they need her, and stay involved when they are in the hospital.",
     ],
     "training_h": "From pharmacology to two board certifications",
     "timeline": [
         ("Stony Brook", "BS in Pharmacology", "Stony Brook University, New York."),
         ("2007", "Doctor of Medicine", "St. George's University School of Medicine."),
-        ("Brooklyn", "Residency and fellowship", "Internal medicine residency and nephrology fellowship at Maimonides Medical Center, New York City."),
-        ("New York", "Private practice and dialysis", "Ran a private practice; medical director of an outpatient hemodialysis center; interventional nephrology."),
-        ("Palm Beach", "Legacy Medical", "Concierge internal medicine in Palm Beach Gardens, with privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center."),
+        ("NYC", "Residency and fellowship", "Internal Medicine residency and Nephrology fellowship at Maimonides Medical Center, New York City."),
+        ("New York", "Private practice and dialysis", "Ran a private practice; medical director of an outpatient hemodialysis center; Interventional Nephrology."),
+        ("Palm Beach", "Legacy Medical", "Concierge Internal Medicine in Palm Beach Gardens, with privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center."),
     ],
     "verify_intro": "Board certification, licensing and hospital privileges are public record. These are the places to check them:",
     "verify_links": [
@@ -90,14 +93,13 @@ DOCTOR = {
         ("Jupiter Medical Center physician directory", "https://www.jupitermed.com/find-a-physician/yana-shtern-md/", ""),
         ("Healthgrades profile", "https://www.healthgrades.com/physician/dr-yana-shtern-gfc4n", "(Patient Favorite award)"),
         ("Doximity profile", "https://www.doximity.com/pub/yana-shtern-md", ""),
-        ("Florida Department of Health license search", "https://mqa-internet.doh.state.fl.us/MQASearchServices/HealthCareProviders", "(license ME114615)"),
     ],
     "personal": "Dr. Shtern has been married for more than fifteen years and has two teenagers. When she is not at the office she is usually at hot yoga, out fishing, or cooking.",
 }
 
 TEAM = [
     {"name": "Dr. Yana Shtern, MD", "role": "Physician and founder", "photo": "dr-yana-shtern", "is_doctor": True,
-     "bio": ["Board-certified in internal medicine and nephrology. Dr. Shtern sees every member herself, from the annual physical to a same-day sick visit."],
+     "bio": ["Board-certified in Internal Medicine and Nephrology. Dr. Shtern sees every member herself, from the annual physical to a same-day sick visit."],
      "link": "/dr-yana-shtern", "link_label": "Full background"},
     {"name": "Yan Konevsky, RN", "role": "Registered nurse and office manager", "photo": "yan-konevsky-rn",
      "creds": ["Registered Nurse", "BSN, Wagner College", "BBA in Finance, Hofstra University"],
@@ -144,28 +146,28 @@ CARD_BLURBS = {
 
 # ---------------------------------------------------------------- home
 HOME_TITLE = "Concierge Doctor in Palm Beach Gardens, FL | Legacy Medical"
-HOME_DESC = ("Concierge doctor in Palm Beach Gardens: Dr. Yana Shtern, MD, board-certified in internal medicine and nephrology. "
+HOME_DESC = ("Concierge doctor in Palm Beach Gardens: Dr. Yana Shtern, MD, board-certified in Internal Medicine and Nephrology. "
              "One patient at a time, 24/7 phone access.")
 
 HERO_VIDEO = {
-    # Encoded from the 3840x2160 original (see _dev/video/PROVENANCE.md). main.js picks by device pixels.
+    # The coastline clip the owner supplied on Oct 16, 2026 (DJI, 1280x720 HEVC); see _dev/video/PROVENANCE.md.
+    # The source is 720p, so every screen gets the same 720p set. main.js still asks for uhd/qhd/hd by device
+    # pixels, so a 4K master can be dropped in later without touching the script.
     # Each set: AV1 webm | HEVC mp4 (Safari) | H.264 mp4 (last resort).
-    "uhd": "/assets/video/inlet-2160.webm|/assets/video/inlet-1440-hevc.mp4|/assets/video/inlet-1080.mp4",
-    "qhd": "/assets/video/inlet-1440.webm|/assets/video/inlet-1440-hevc.mp4|/assets/video/inlet-1080.mp4",
-    "hd": "/assets/video/inlet-1080.webm|/assets/video/inlet-1080-hevc.mp4|/assets/video/inlet-1080.mp4",
-    "portrait": "/assets/video/inlet-portrait.webm|/assets/video/inlet-portrait-hevc.mp4|/assets/video/inlet-portrait.mp4",
+    "hd": "/assets/video/coast-720.webm|/assets/video/coast-720-hevc.mp4|/assets/video/coast-720.mp4",
+    "portrait": "/assets/video/coast-portrait.webm|/assets/video/coast-portrait-hevc.mp4|/assets/video/coast-portrait.mp4",
     "posters": {
-        "a768": "/assets/video/inlet-poster-768.avif", "a1280": "/assets/video/inlet-poster-1280.avif", "a1920": "/assets/video/inlet-poster-1920.avif", "a2560": "/assets/video/inlet-poster-2560.avif",
-        "w768": "/assets/video/inlet-poster-768.webp", "w1280": "/assets/video/inlet-poster-1280.webp", "w1920": "/assets/video/inlet-poster-1920.webp", "w2560": "/assets/video/inlet-poster-2560.webp",
-        "j768": "/assets/video/inlet-poster-768.jpg", "j1280": "/assets/video/inlet-poster-1280.jpg", "j1920": "/assets/video/inlet-poster-1920.jpg", "j2560": "/assets/video/inlet-poster-2560.jpg",
-        "pa": "/assets/video/inlet-poster-portrait-1080.avif", "pw": "/assets/video/inlet-poster-portrait-1080.webp", "pj": "/assets/video/inlet-poster-portrait-1080.jpg",
+        "a768": "/assets/video/coast-poster-768.avif", "a1280": "/assets/video/coast-poster-1280.avif",
+        "w768": "/assets/video/coast-poster-768.webp", "w1280": "/assets/video/coast-poster-1280.webp",
+        "j768": "/assets/video/coast-poster-768.jpg", "j1280": "/assets/video/coast-poster-1280.jpg",
+        "pa": "/assets/video/coast-poster-portrait-720.avif", "pw": "/assets/video/coast-poster-portrait-720.webp", "pj": "/assets/video/coast-poster-portrait-720.jpg",
     },
 }
 
 HOME = {
     "kicker": "One-on-one concierge medicine · Palm Beach Gardens",
-    "hero_lines": ["Concierge medicine", "with a doctor who", "<em>knows you</em>."],  # <em> is styled gold, upright: no italic font on the LCP path
-    "hero_lede": "Dr. Yana Shtern keeps a small practice on purpose and sees one patient at a time, so every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",
+    "hero_lines": ["A medical practice", "where patients", "<em>come first</em>."],  # <em> is styled gold, upright: no italic font on the LCP path
+    "hero_lede": "Dr. Yana Shtern keeps a very small practice on purpose and sees one patient at a time. Every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",
     "problem_eyebrow": "The usual way",
     "problem_statement": "Fifteen minutes, a portal message, and a referral to someone you have never met.",
     "problem_lede": "Most primary care runs on volume. It is not that doctors stop caring. A schedule with thirty patients a day leaves no room to listen, to call you back, or to notice what changed since last year.",
@@ -175,12 +177,12 @@ HOME = {
         ("Questions that wait", "A message at 7 p.m. gets an answer in two days, from whoever is covering."),
     ],
     "guide_h": "One physician who knows your history, and has the time to use it.",
-    "guide_body": "<p>Dr. Shtern trained in internal medicine and then in nephrology, and is board-certified in both. That combination matters more than it sounds: kidney function and blood pressure shape almost every prescription an internist writes.</p><p>She started Legacy Medical so she could take on fewer patients and do more for each of them. You see her at every visit, and members can reach the practice by phone at any hour.</p>",
+    "guide_body": "<p>Dr. Shtern trained in Internal Medicine and then in Nephrology, and is board-certified in both. That combination matters more than it sounds: kidney function and blood pressure shape almost every prescription an internist writes.</p><p>She started Legacy Medical so she could take on fewer patients and do more for each of them. You see her at every visit, and members can reach the practice by phone at any hour.</p>",
     # Centered statement between two practice photos (Private Medical's move).
-    "manifesto": "One patient at a time. A small practice on purpose, so there is time to <em>listen</em>, to follow up, and to pick up the phone.",
+    "manifesto": "One patient at a time. A <em>very</em> small practice on purpose, so there is time to listen, to follow up, and to pick up the phone.",
     # Why concierge matters: figures are the GAO's (2005) or the practice's own.
     "why_h": "Why concierge care <em>matters</em>",
-    "why_lede": ("Most primary care runs on short appointments and a list of thousands. Concierge medicine changes the arithmetic: "
+    "why_lede": ("Most primary care physicians run on short appointments and a list of thousands of patients. Concierge medicine changes the arithmetic: "
                  "fewer patients per doctor, so each one gets real time, quick access, and a physician who follows through."),
     "why_stats": [
         ("One", "patient at a time", "Dr. Shtern does not double-book. Your appointment time is yours alone."),
@@ -204,7 +206,7 @@ HOME = {
     "included_lede": "An annual membership fee covers access to Dr. Shtern. Office visits and tests are billed to your insurance, as they are now.",
     "clock_h": "The office keeps hours. Your access does not.",
     "clock_lede": "The office is open Monday to Friday. Outside those hours, members can still reach the practice by phone, at night, on weekends and on holidays.",
-    "spec_h": "Internal medicine, plus a <em>nephrologist's eye</em>",
+    "spec_h": "Internal Medicine, plus a <em>nephrologist's eye</em>",
     "spec_lede": "Every member gets complete primary care. These are the areas where Dr. Shtern's second specialty and experience add the most.",
     "specialties": [
         ("kidney-care", "Kidney care", "CKD, rising creatinine, kidney stones, electrolyte problems, and care for people on dialysis."),
@@ -217,11 +219,11 @@ HOME = {
     "steps": [
         ("Book a meet and greet", "Call or send a request. We will find a time that suits you."),
         ("Meet Dr. Shtern", "A complimentary meet-and-greet at the office. Ask about anything: the fee, your conditions, how after-hours calls work."),
-        ("Join and book your physical", "If it is a fit, enroll and schedule your first Legacy physical. With your permission, the office requests your records from your previous doctor."),
+        ("Join and book your first visit", "If it is a fit, enroll and schedule your first patient visit. With your permission, the office requests your records from your previous doctor."),
     ],
     "agreement": "<strong>Your insurance still works here.</strong> The membership fee covers access and the extra time. Office visits, labs and tests are billed to your insurance the way they are today.",
-    "reviews_h": "What patients say",
-    "reviews_note": "Quoted as published on Healthgrades. More patient reviews:",
+    "reviews_h": "What patients say on <em>Google</em>",
+    "reviews_note": "Quoted as published on Google. More patient reviews:",
     "stakes_h": "Small changes are easier to catch early.",
     "stakes_body": "<p>A creatinine that creeps up a little each year, blood pressure that is fine in the office and high at home, a new medicine that does not sit well with an old one. In a rushed system these slip between visits.</p><p>With a doctor who knows your baseline, they come up in conversation instead of in the emergency room.</p>",
     "areas_h": "Close to Jupiter, Juno Beach and the Palm Beaches",
@@ -231,7 +233,7 @@ HOME = {
 HOME_FAQ = [
     ("How much is the membership fee?", "<p>The fee is not posted online yet. Call the office at <a href=\"tel:+15618349280\">(561) 834-9280</a> and we will go through it, or ask at your meet and greet. Office visits and tests are still billed to your insurance.</p>"),
     ("Do you take insurance?", "<p>Yes, for visits and tests. Medicare, Aetna, Cigna and BlueCross BlueShield are among the plans the practice works with. The membership fee itself is separate and is not billed to insurance. <a href=\"/insurance-and-fees\">How the fee and insurance fit together</a>.</p>"),
-    ("Can I meet Dr. Shtern before joining?", "<p>Yes. Your first visit is a complimentary meet and greet, with no obligation. <a href=\"/meet-and-greet\">Book one here</a> or call.</p>"),
+    ("Can I meet Dr. Shtern before joining?", "<p>Yes. Your first visit is a complimentary meet and greet. <a href=\"/meet-and-greet\">Book one here</a> or call.</p>"),
     ("Where is the office?", "<p>11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens, FL 33410. It is a first-floor suite with accessible entry.</p>"),
 ]
 
@@ -244,10 +246,28 @@ TESTIMONIALS = [
     {"quote": "Wonderful doctor! Dr. Shtern is extremely caring and professional. Takes the time to talk and explain everything. Highly recommended doctor.", "who": "Patient review", "source_html": _HG + ", November 2021"},
     {"quote": "I've been a patient for 3 months and I can attest that Dr. Shtern is a brilliant physician. She quickly saw a problem I had/have after exam and lab work that 2 other doctors dismissed and she made sure it was taken care off. Thank you doctor!", "who": "Patient review", "source_html": _HG + ", January 2023"},
 ]
+# Google Business Profile: "Legacy Medical Concierge - Dr. Yana Shtern". Rating and count are a
+# snapshot read from the public listing on Oct 16, 2026 and shown with that date; main.js replaces
+# them with live figures whenever /api/reviews is configured. Never typed in by hand.
+GOOGLE = {
+    "place_id": "ChIJ9-heFHwr34gRt2Rs2caAsOY",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJ9-heFHwr34gRt2Rs2caAsOY",
+    "rating": "5.0", "count": 45, "as_of": "October 2026",
+}
+# Verbatim Google reviews, names as the reviewers published them on Google. Each one was read from
+# the listing on Oct 16, 2026 (date = month the review was posted).
+GOOGLE_REVIEWS = [
+    {"quote": "Dr. Shtern and her team are fantastic! Extremely knowledgeable, detailed, thoughtful, caring, and attentive. She is always communicating with other doctors and whenever there's an issue she is on top of it. Her office is beautiful, clean, and very efficiently run.", "who": "Rich Anderson", "when": "April 2026"},
+    {"quote": "My mother and I are patients of Dr. Shtern and we are very pleased with the great level of care that we have received from her over the years. She knows all the best specialists in the community and is always in communication with our other doctors. She is a great communicator and her attention to details is second to none. We highly recommend Dr. Shtern.", "who": "Noah Forgione", "when": "February 2025"},
+    {"quote": "Dr. Shtern is an outstanding doctor, very personable, thoughtful, and detailed. She takes time to learn about her patients and asks questions that help her understand her patients medical issues, concerns, and needs. I've seen many doctors in my life, and Dr. Yana Shtern is unquestionably one of the very best. I couldn't be happier that she's my primary care doctor, and I look forward to years of being in her care.", "who": "John Pearson", "when": "February 2025"},
+    {"quote": "Dr. Yana Shtern is an exceptional physician. She is incredibly thorough and takes the time to deeply investigate each patient's condition before making a diagnosis. With her background in Nephrology, she is especially knowledgeable in managing hypertension and heart disease.", "who": "Ekaterina Simakova", "when": "April 2026"},
+    {"quote": "Dr Shtern is a wonderful physician and a pleasure to work with. She is an excellent clinician and a compassionate person, with a deep commitment to her patients' needs. Her staff is efficient, attentive, and most competent. She's a superstar - Highest recommendation!!", "who": "Marc F. Matarazzo", "when": "January 2026"},
+    {"quote": "Dr. Shtern is everything I can possibly ask for in a doctor. She's very attentive and caring. She's extremely knowledgeable in her work and takes her time to listen to my needs and always delivers great care.", "who": "Evelyn G", "when": "September 2024"},
+]
 RATING_LINKS = [
+    {"label": "Google", "url": GOOGLE["url"]},
     {"label": "Healthgrades", "url": "https://www.healthgrades.com/physician/dr-yana-shtern-gfc4n"},
     {"label": "US News", "url": "https://health.usnews.com/doctors/yana-shtern-650087"},
-    {"label": "Google", "url": "https://www.google.com/maps/search/?api=1&query=Legacy%20Medical%20Concierge%20Dr.%20Yana%20Shtern"},
 ]
 
 # Practice photos only: Dr. Shtern, the team, the Palm Beach Gardens office.
@@ -309,7 +329,7 @@ SERVICE_PAGES = {
         "crumb": "Kidney care",
         "eyebrow": "Nephrology in Palm Beach Gardens",
         "h1": "A kidney doctor who is also your internist.",
-        "lede": "Dr. Shtern is board-certified in nephrology as well as internal medicine. For members, that means kidney problems are looked after by the same doctor who manages everything else, with no handoff in between.",
+        "lede": "Dr. Shtern is board-certified in Nephrology as well as Internal Medicine. For members, that means kidney problems are looked after by the same doctor who manages everything else, with no handoff in between.",
         "specialty": "Renal",
         "points": [
             ("kidney", "Chronic kidney disease", "Staging, slowing progression, and adjusting every medication for kidney function."),
@@ -326,7 +346,7 @@ SERVICE_PAGES = {
         ],
         "faq_h": "Kidney care questions",
         "faqs": [
-            ("When should I see a nephrologist?", "<p>Common reasons are an eGFR below 60 that persists, a rapid drop in kidney function, protein or blood in the urine, recurring kidney stones, or blood pressure that will not come under control. If you are a member, you do not need a separate referral: Dr. Shtern is board-certified in nephrology.</p>"),
+            ("When should I see a nephrologist?", "<p>Common reasons are an eGFR below 60 that persists, a rapid drop in kidney function, protein or blood in the urine, recurring kidney stones, or blood pressure that will not come under control. If you are a member, you do not need a separate referral: Dr. Shtern is board-certified in Nephrology.</p>"),
             ("What does eGFR mean?", "<p>Estimated glomerular filtration rate. It is calculated from your creatinine level, age and sex, and estimates how well your kidneys filter blood. Lower numbers mean less filtering, and a single low result is less important than the trend over time.</p>"),
             ("Can kidney disease be slowed?", "<p>Often, yes. Controlling blood pressure and blood sugar, choosing medications carefully, and avoiding things that strain the kidneys all help. Some newer medicines also slow progression for the right patients.</p>"),
             ("Do I need to be a member to see Dr. Shtern for kidney care?", "<p>Legacy Medical is a membership practice. Call the office to talk through your situation.</p>"),
@@ -351,7 +371,7 @@ SERVICE_PAGES = {
             ("pill", "Simpler regimens", "Fewer pills, better timing, and fewer side effects."),
         ],
         "sections": [
-            ("Why it gets complicated", "<p>The kidneys regulate salt and fluid, which is why blood pressure and kidney health are so closely linked, and why hypertension is part of nephrology training. Some high blood pressure has a specific cause, such as narrowed kidney arteries, an adrenal gland that makes too much aldosterone, sleep apnea, or a medicine like an anti-inflammatory or a decongestant. Finding that cause can change the treatment completely.</p>"),
+            ("Why it gets complicated", "<p>The kidneys regulate salt and fluid, which is why blood pressure and kidney health are so closely linked, and why hypertension is part of Nephrology training. Some high blood pressure has a specific cause, such as narrowed kidney arteries, an adrenal gland that makes too much aldosterone, sleep apnea, or a medicine like an anti-inflammatory or a decongestant. Finding that cause can change the treatment completely.</p>"),
             ("How Dr. Shtern approaches it", "<p>It starts with good numbers. Office readings alone can mislead, so Dr. Shtern relies on accurate home readings and looks at the pattern rather than one visit. She reviews every medication and supplement, checks kidney function and electrolytes with labs drawn in the office, and looks for secondary causes when the history suggests one.</p><p>The goal is blood pressure that is controlled on a regimen you can live with. Because members can reach her directly, adjusting a dose does not have to wait for the next appointment.</p>"),
             ("Taking a good home reading", "<ol><li>Sit quietly for five minutes first, back supported, feet flat, arm resting at heart level.</li><li>Use a validated upper-arm cuff in the right size. Wrist cuffs are less reliable.</li><li>No caffeine, exercise or smoking in the 30 minutes before.</li><li>Take two readings a minute apart, morning and evening, and write both down.</li><li>Bring the log, or the cuff itself, to your visit.</li></ol>"),
         ],
@@ -475,17 +495,17 @@ MEMBERSHIP = {
     "steps": [
         ("Book a meet and greet", "Use the request form or call (561) 834-9280. We will find a time that suits you."),
         ("Meet Dr. Shtern", "A complimentary meet-and-greet at the office. Bring your questions, and a family member if you like."),
-        ("Enroll and book your physical", "If it is a good fit, you enroll, we request your records, and you schedule your first Legacy physical."),
+        ("Enroll and book your first visit", "If it is a good fit, you enroll, we request your records, and you schedule your first patient visit."),
     ],
-    "agreement": "<strong>No obligation.</strong> The meet and greet is complimentary, and joining is your decision to make afterward.",
+    "agreement": "<strong>Meet first, decide later.</strong> The meet and greet is complimentary, and joining is your decision to make afterward.",
     "sections": [
-        ("What to bring to the meet and greet", "<ul><li>Your questions about the fee, access and how after-hours calls work</li><li>A list of your current medicines and doctors, if you have one handy</li><li>Your insurance card, so we can tell you how visits are billed</li></ul><p>You do not need medical records for the meet and greet. If you join, we request them from your current doctor with your permission.</p>"),
+        ("What to bring to the meet and greet", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p><p>You do not need medical records. If you join, the office requests them from your current doctor with your permission.</p>"),
         ("Who the practice is a good fit for", "<p>Adults who want one physician to know their whole history, people managing blood pressure, kidney disease, diabetes or several specialists, seasonal residents who want continuity, and families arranging care for a parent. Dr. Shtern is an internist: a physician trained in the care of adults.</p>"),
     ],
     "form_h": "Book a meet and greet",
     "form_lede": "Leave your details and the office will call or email you to set up a time. Prefer the phone? Call us during office hours.",
     "faqs": [
-        ("Is the meet and greet really free?", "<p>Yes. The meet and greet is complimentary and there is no obligation to join.</p>"),
+        ("Is the meet and greet really free?", "<p>Yes. The meet and greet is complimentary.</p>"),
         ("What does membership cost?", "<p>The fee is not posted online. Call the office or ask at your meet and greet and we will go through it in full. Insurance is still billed for visits and tests.</p>"),
         ("How many members does the practice take?", "<p>The panel is limited, which is what keeps same-day visits possible. Ask the office whether new members are being accepted right now.</p>"),
     ],
@@ -516,35 +536,42 @@ INSURANCE = {
 FAQ_PAGE = {
     "title": "Concierge Medicine FAQ: Is It Worth It? | Legacy Medical",
     "desc": "Is concierge medicine worth it? Answers about Legacy Medical in Palm Beach Gardens: appointments, after-hours calls, insurance, Medicare, hospitals and joining.",
-    "h1": "Straight answers.",
-    "lede": "If your question is not here, call the office at (561) 834-9280.",
+    "h1": "Frequently asked questions.",
+    "lede": "Straight answers about how the practice works. If your question is not here, call the office at (561) 834-9280.",
 }
 
 FAQ_GROUPS = [
+    {"name": "Concierge medicine", "pairs": [
+        ("Why choose concierge medicine?", "<p>Concierge medicine is a membership model: you pay an annual fee, the practice keeps its patient list small, and in return you get around-the-clock phone access, same or next-business-day appointments, and visits long enough to cover everything on your mind. It restores the relationship between physician and patient that a high-volume practice has no room for. <a href=\"/concierge-medicine\">How it works here</a>.</p>"),
+        ("Is there a limit to how many people can join?", "<p>Yes. The practice limits membership to a small number of patients so that appointments stay prompt and every patient gets the attention they need. Ask the office whether new members are being accepted right now.</p>"),
+    ]},
     {"name": "Access and appointments", "pairs": [
         ("How quickly can I be seen?", "<p>Members are seen the same or next business day when something comes up. Routine visits are scheduled at a time that suits you.</p>"),
         ("Can I reach Dr. Shtern after hours?", "<p>Yes. Members have phone access to the practice 24 hours a day, 7 days a week. In an emergency, always call 911 first.</p>"),
+        ("What is Dr. Shtern's availability?", "<p>The practice is available to members by phone 24/7. In-person visits are booked the same or next business day with little to no wait, and telehealth visits are available when coming in is not practical.</p>"),
         ("How long are visits?", "<p>Long enough to cover what you came in for. Visits are not booked in 15-minute slots.</p>"),
         ("Do you offer video visits?", "<p>Yes, for many follow-ups and results reviews. <a href=\"/telehealth\">About telehealth</a>.</p>"),
         ("What are the office hours?", "<p>Monday to Thursday 9:00 AM to 5:00 PM, Friday 9:00 AM to 2:00 PM. Closed on weekends, with member phone access around the clock.</p>"),
     ]},
     {"name": "Insurance and fees", "pairs": [
-        ("How much does membership cost?", "<p>The fee is not published online. Call the office or ask at your meet and greet. <a href=\"/insurance-and-fees\">How the fee and insurance work</a>.</p>"),
+        ("How much does membership cost?", "<p>There is an annual concierge fee. It covers what insurance will not or may not pay for: the extended Legacy physical, health promotion, and much greater access to your physician. Office visits, services and tests are billed through your insurance, as in a traditional Internal Medicine practice. The fee itself is not published online. Call the office or ask at your meet and greet.</p>"),
         ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a meet and greet and ask Dr. Shtern directly; she will be straight with you. <a href=\"/concierge-medicine\">How concierge medicine works here</a>.</p>"),
         ("Do you bill insurance?", "<p>Yes, for office visits, labs and covered tests. Plans include Medicare, Aetna, Cigna and BlueCross BlueShield. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
         ("Does Medicare pay the membership fee?", "<p>No. Medicare does not cover concierge fees. Covered services at your visits are billed to Medicare as usual.</p>"),
     ]},
     {"name": "Care and coordination", "pairs": [
         ("Are labs done in the office?", "<p>Yes. Blood is drawn in the office, and ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done here too.</p>"),
-        ("What happens if I need a specialist?", "<p>Dr. Shtern chooses the specialist, contacts them, and follows up on what they find, so your care stays in one place.</p>"),
+        ("What happens if I need a specialist?", "<p>Dr. Shtern coordinates your care the way a quarterback runs a team. She chooses the specialist, contacts them, works with the specialists you already see, and follows up on what they find, so your care stays in one place.</p>"),
+        ("How do I get prescription refills?", "<p>Refills for established patients are issued during regular office hours. Request them through the patient portal or by calling (561) 834-9280, and ask a few days before you run out so there is no gap in your medication.</p>"),
         ("Which hospitals does Dr. Shtern use?", "<p>She has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
-        ("Do you treat kidney disease and high blood pressure?", "<p>Yes. Dr. Shtern is board-certified in nephrology as well as internal medicine. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
+        ("Do you treat kidney disease and high blood pressure?", "<p>Yes. Dr. Shtern is board-certified in Nephrology as well as Internal Medicine. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
         ("Is there a patient portal?", "<p>Yes. Ask the office for access when you join.</p>"),
     ]},
     {"name": "Joining", "pairs": [
         ("How do I join?", "<p>Start with a complimentary meet and greet with Dr. Shtern. <a href=\"/meet-and-greet\">Book a meet and greet</a> or call (561) 834-9280.</p>"),
         ("What happens to my medical records?", "<p>With your permission, the office requests them from your previous doctor when you join.</p>"),
         ("Where are you located?", "<p>11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens, FL 33410, on the first floor. See <a href=\"/contact\">directions</a>.</p>"),
+        ("Is the office easy to get to from where I live?", "<p>The office is in the heart of Palm Beach Gardens, and members come from Jupiter, Juno Beach, Tequesta, Hobe Sound, Stuart, North Palm Beach, Palm Beach and West Palm Beach. <a href=\"/areas-we-serve\">Drive times from each town</a>.</p>"),
     ]},
 ]
 
@@ -649,12 +676,12 @@ _LOC_COPY = {
     "palm-beach": {
         "name": "Palm Beach",
         "title": "Concierge Doctor for Palm Beach, FL | Legacy Medical",
-        "desc": "A concierge doctor for Palm Beach island residents: Dr. Yana Shtern, board-certified in internal medicine and nephrology, about 25 minutes north in Palm Beach Gardens.",
+        "desc": "A concierge doctor for Palm Beach island residents: Dr. Yana Shtern, board-certified in Internal Medicine and Nephrology, about 25 minutes north in Palm Beach Gardens.",
         "h1": "Concierge medicine for Palm Beach, without the island waitlist.",
-        "lede": "Palm Beach has plenty of concierge practices, and many are full. Legacy Medical is about 25 minutes north, and its physician is double board-certified in internal medicine and nephrology.",
+        "lede": "Palm Beach has plenty of concierge practices, and many are full. Legacy Medical is about 25 minutes north, and its physician is double board-certified in Internal Medicine and Nephrology.",
         "from_label": "the town of Palm Beach",
         "sections": [
-            ("A different kind of credential", "<p>Most concierge internists are trained in internal medicine alone. Dr. Shtern is also board-certified in nephrology and was medical director of a dialysis center, which makes a difference for anyone managing high blood pressure, kidney disease, or a long list of medications.</p>"),
+            ("A different kind of credential", "<p>Most concierge internists are trained in Internal Medicine alone. Dr. Shtern is also board-certified in Nephrology and was medical director of a dialysis center, which makes a difference for anyone managing high blood pressure, kidney disease, or a long list of medications.</p>"),
             ("Making the drive easy", "<p>Many visits happen by <a href=\"/telehealth\">video</a>. For the rest, the office is a first-floor suite with accessible entry and minimal time in the waiting room.</p>"),
         ],
         "directions": "From Palm Beach, cross to Okeechobee Boulevard, take I-95 north to PGA Boulevard, head east, then north on Prosperity Farms Road.",
@@ -668,7 +695,7 @@ _LOC_COPY = {
         "lede": "For West Palm Beach residents, the office is a straight run up I-95 to PGA Boulevard. Members are seen the same or next business day.",
         "from_label": "downtown West Palm Beach",
         "sections": [
-            ("Internist and nephrologist", "<p>Dr. Shtern is board-certified in internal medicine and nephrology. If you are managing kidney disease, hard-to-control blood pressure or electrolyte problems, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
+            ("Internist and nephrologist", "<p>Dr. Shtern is board-certified in Internal Medicine and Nephrology. If you are managing kidney disease, hard-to-control blood pressure or electrolyte problems, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
             ("When you cannot come in", "<p>Many follow-ups, lab reviews and medication checks happen by <a href=\"/telehealth\">video visit</a>, and members can reach the practice by phone at any hour.</p>"),
         ],
         "directions": "Take I-95 north to the PGA Boulevard exit, head east, then turn north on Prosperity Farms Road to Suite 114.",
@@ -693,7 +720,7 @@ CONTACT_LEDE = "The quickest way to reach us is by phone during office hours. Me
 DIRECTIONS = "From I-95, take the PGA Boulevard exit east, then turn north on Prosperity Farms Road. From US-1, head west on PGA Boulevard and turn north. Suite 114 is on the first floor and is wheelchair accessible."
 
 JOURNAL_LEDE = "Articles from the practice on blood pressure, kidney health, prevention and getting the most out of your care. General information, not advice for your situation."
-JOURNAL_DESC = "Health articles from Legacy Medical, a concierge internal medicine practice in Palm Beach Gardens: blood pressure, kidney health, nutrition, prevention and more."
+JOURNAL_DESC = "Health articles from Legacy Medical, a Concierge Internal Medicine practice in Palm Beach Gardens: blood pressure, kidney health, nutrition, prevention and more."
 
 LEGAL = {}  # privacy, notice-of-privacy-practices, accessibility: see legal_content.py
 from legal_content import LEGAL  # noqa: E402,F811
@@ -706,8 +733,8 @@ def llms_txt(P, D, pages, url):
         "> " + ONE_LINER,
         "",
         "## Facts",
-        "- Practice: Legacy Medical (legal name Legacy Medical PLLC), concierge internal medicine",
-        "- Physician: Dr. Yana Shtern, MD. Board-certified (ABIM) in Internal Medicine and Nephrology. NPI 1497940852. Florida license ME114615.",
+        "- Practice: Legacy Medical (legal name Legacy Medical PLLC), Concierge Internal Medicine",
+        "- Physician: Dr. Yana Shtern, MD. Board-certified (ABIM) in Internal Medicine and Nephrology.",
         "- Hospital privileges: Jupiter Medical Center; Palm Beach Gardens Medical Center",
         "- Address: %s, %s, %s %s" % (P["street"], P["city"], P["region"], P["postal"]),
         "- Phone: %s. Fax: %s. Email: %s" % (P["phone"], P["fax"], P["email"]),
@@ -715,18 +742,18 @@ def llms_txt(P, D, pages, url):
         "- Model: annual membership fee (not covered by insurance) plus insurance billing for visits and tests. Plans include Medicare, Aetna, Cigna, BlueCross BlueShield. The fee is not published; call the office.",
         "- How to join: a complimentary meet and greet with Dr. Shtern. Call or book at %s" % url("meet-and-greet"),
         "- Areas served: " + ", ".join(P["service_area"]) + ", Martin County",
-        "- Internal medicine: care for adults.",
+        "- Internal Medicine: care for adults.",
         "- Previous domain: cmedjupiter.com was an older copy of this site. legacymedicalpalmbeach.com is the current, authoritative site.",
         "",
         "## Pages",
     ]
     for pg in pages:
-        if pg["slug"].startswith("journal/"):
+        if pg["slug"].startswith("blog/"):
             continue
         lines.append("- [%s](%s): %s" % (pg["title"], url(pg["slug"]), pg["desc"]))
-    lines += ["", "## Journal"]
+    lines += ["", "## Blog"]
     for pg in pages:
-        if pg["slug"].startswith("journal/"):
+        if pg["slug"].startswith("blog/"):
             lines.append("- [%s](%s)" % (pg["title"].replace(" | Legacy Medical", ""), url(pg["slug"])))
     return "\n".join(lines) + "\n"
 
@@ -753,6 +780,11 @@ ASSIST_KEYWORDS = {
     "How do I join?": ["join", "sign up", "enroll", "become a patient", "new patient", "accepting", "tour", "meet", "greet", "first visit", "consultation"],
     "What happens to my medical records?": ["records", "transfer", "previous doctor", "chart"],
     "Where are you located?": ["where", "address", "located", "location", "directions", "parking", "find you"],
+    "Why choose concierge medicine?": ["why concierge", "why choose", "worth it", "benefit", "advantage", "subscription", "relationship"],
+    "Is there a limit to how many people can join?": ["limit", "how many patients", "how many members", "panel", "full", "waiting list", "waitlist"],
+    "What is Dr. Shtern's availability?": ["availability", "available", "reach the doctor", "get hold"],
+    "How do I get prescription refills?": ["refill", "prescription", "pharmacy", "medication", "renew"],
+    "Is the office easy to get to from where I live?": ["easy to get", "how far", "far from", "accessible from", "near me", "close to me"],
 }
 
 ASSIST_EXTRA = [
@@ -761,7 +793,7 @@ ASSIST_EXTRA = [
     {"k": ["phone number", "your number", "telephone", "contact you", "how do i contact", "email address"],
      "a": "Call (561) 834-9280 or email info@legacymedicalpalmbeach.com. The fax is (561) 834-9279."},
     {"k": ["dr. shtern", "dr shtern", "shtern", "doctor", "who is", "physician", "credentials", "board"],
-     "a": "Dr. Yana Shtern, MD is board-certified in internal medicine and nephrology. She has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center. <a href=\"/dr-yana-shtern\">About Dr. Shtern</a>."},
+     "a": "Dr. Yana Shtern, MD is board-certified in Internal Medicine and Nephrology. She has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center. <a href=\"/dr-yana-shtern\">About Dr. Shtern</a>."},
     {"k": ["concierge", "what is", "how does it work", "difference", "membership include", "included", "what do i get"],
      "a": "Concierge medicine means a smaller practice: same or next business day visits, unhurried appointments, and phone access to the practice around the clock. <a href=\"/concierge-medicine\">How it works here</a>."},
     {"k": ["area", "serve", "jupiter", "tequesta", "juno", "north palm", "palm beach", "stuart", "hobe sound"],
@@ -776,7 +808,7 @@ ASSIST_EXTRA = [
 
 # ---------------------------------------------------------------- meet and greet
 # The first visit. Only facts the practice has confirmed: it is complimentary,
-# in person at the office, with Dr. Shtern, and carries no obligation.
+# in person at the office, with Dr. Shtern.
 # ---------------------------------------------------------------- for patients
 # Practical pages modelled on the "For patients" section of leading concierge
 # sites. Every statement comes from SERVICES_INCLUDED, FAQ_GROUPS or DOCTOR.
@@ -809,14 +841,14 @@ GUIDES_PATIENTS = {
         "lede": "Blood pressure, diabetes, cholesterol, kidney and thyroid conditions do best with one doctor watching the whole picture. At Legacy Medical, that doctor is Dr. Shtern, every time.",
         "photo": "p-geri-meds", "photo_alt": "A weekly pill organizer on a linen tablecloth",
         "sections": [
-            ("One doctor for the whole picture", "<p>Chronic conditions rarely come one at a time. High blood pressure, diabetes, cholesterol and kidney function affect each other, and so do the medicines used to treat them. Dr. Shtern is board-certified in internal medicine and in nephrology, so the kidney side of that picture is part of the same visit rather than a separate referral.</p><p>See <a href=\"/hypertension\">hypertension</a> and <a href=\"/kidney-care\">kidney care</a>.</p>"),
-            ("Medication management", "<p>One doctor keeps an eye on every prescription, dose and interaction. That matters most when several specialists are involved, when a kidney or liver condition changes how a medicine is cleared, or when a new prescription quietly duplicates an old one. <a href=\"/journal/medication-review-older-adults\">Why a full medication review matters</a>.</p>"),
+            ("One doctor for the whole picture", "<p>Chronic conditions rarely come one at a time. High blood pressure, diabetes, cholesterol and kidney function affect each other, and so do the medicines used to treat them. Dr. Shtern is board-certified in Internal Medicine and in Nephrology, so the kidney side of that picture is part of the same visit rather than a separate referral.</p><p>See <a href=\"/hypertension\">hypertension</a> and <a href=\"/kidney-care\">kidney care</a>.</p>"),
+            ("Medication management", "<p>One doctor keeps an eye on every prescription, dose and interaction. That matters most when several specialists are involved, when a kidney or liver condition changes how a medicine is cleared, or when a new prescription quietly duplicates an old one. <a href=\"/blog/medication-review-older-adults\">Why a full medication review matters</a>.</p>"),
             ("Between visits", "<p>Labs are drawn in the office and reviewed with you, home blood pressure readings can be sent in and discussed, and many check-ins can happen by video. When something changes, members are seen the same or next business day.</p>"),
         ],
         "faqs": [
-            ("Which conditions does Dr. Shtern manage?", "<p>Blood pressure, diabetes, cholesterol, kidney and thyroid conditions, among the other problems an internist looks after. She is also board-certified in nephrology.</p>"),
+            ("Which conditions does Dr. Shtern manage?", "<p>Blood pressure, diabetes, cholesterol, kidney and thyroid conditions, among the other problems an internist looks after. She is also board-certified in Nephrology.</p>"),
             ("Will you work with my specialists?", "<p>Yes. Dr. Shtern chooses specialists when you need one, contacts them, and follows up on what they find. <a href=\"/specialists-and-hospital-care\">Specialists and hospital care</a>.</p>"),
-            ("Can I send home blood pressure readings?", "<p>Yes. Bring or send your log so the numbers can be reviewed together. <a href=\"/journal/home-blood-pressure-monitoring\">How to take an accurate home reading</a>.</p>"),
+            ("Can I send home blood pressure readings?", "<p>Yes. Bring or send your log so the numbers can be reviewed together. <a href=\"/blog/home-blood-pressure-monitoring\">How to take an accurate home reading</a>.</p>"),
         ],
         "related_posts": ["home-blood-pressure-monitoring", "egfr-kidney-lab-results-explained", "medication-review-older-adults"],
         "related": ["hypertension", "kidney-care", "preventive-care"],
@@ -830,7 +862,7 @@ GUIDES_PATIENTS = {
         "photo": "p-family-hands", "photo_alt": "Two people holding hands in a quiet room",
         "sections": [
             ("When you need a specialist", "<p>Dr. Shtern picks the specialist for your situation, contacts them, and follows up on what they find, so the plan comes back to one doctor who knows your whole history. You are not left carrying results between offices.</p>"),
-            ("If you are admitted", "<p>Dr. Shtern holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and stays involved when members are in the hospital. <a href=\"/journal/concierge-doctor-hospital-stay\">What a concierge doctor does during a hospital stay</a>.</p>"),
+            ("If you are admitted", "<p>Dr. Shtern holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and stays involved when members are in the hospital. <a href=\"/blog/concierge-doctor-hospital-stay\">What a concierge doctor does during a hospital stay</a>.</p>"),
             ("Someone on your side", "<p>Part of membership is advocacy: screenings on schedule, vaccines up to date, and a doctor who helps when the system gets complicated. For families arranging care for a parent, see <a href=\"/for-families\">for families</a>.</p>"),
         ],
         "faqs": [
@@ -850,7 +882,7 @@ GUIDES_PATIENTS = {
         "photo": "p-kidney-labs", "photo_alt": "Sample tubes in a rack in soft light",
         "sections": [
             ("What is done in the office", "<ul><li>Blood draws for routine and follow-up lab work</li><li>ECGs (electrocardiograms) during your visit</li><li>Stool occult blood testing</li><li>Rapid tests for flu A and B, COVID-19 and strep</li></ul><p>Imaging and specialized tests are arranged with trusted local providers when you need them.</p>"),
-            ("Results you go through together", "<p>The annual Legacy physical includes lab work and an ECG, then time to go through the results together. Numbers like eGFR, A1c and cholesterol are easier to act on when the doctor who ordered them explains what changed and why. <a href=\"/journal/egfr-kidney-lab-results-explained\">Reading your kidney labs</a>.</p>"),
+            ("Results you go through together", "<p>The annual Legacy physical includes lab work and an ECG, then time to go through the results together. Numbers like eGFR, A1c and cholesterol are easier to act on when the doctor who ordered them explains what changed and why. <a href=\"/blog/egfr-kidney-lab-results-explained\">Reading your kidney labs</a>.</p>"),
             ("Insurance", "<p>Labs and covered tests are billed to your insurance as they are today. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
         ],
         "faqs": [
@@ -876,7 +908,7 @@ PATIENTS_PAGE = {
         ("Labs and tests", "Blood draws, ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done in the office.", "labs-and-tests", "Labs and tests"),
         ("Ongoing conditions", "Blood pressure, diabetes, cholesterol, kidney and thyroid care, with one doctor managing every prescription.", "chronic-care", "Chronic care support"),
         ("Specialists and hospitals", "Dr. Shtern chooses and contacts specialists and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.", "specialists-and-hospital-care", "Specialists and hospital care"),
-        ("Records and the portal", "With your permission the office requests your records from your previous doctor. Ask the office for patient portal access when you join.", "journal/transfer-medical-records-to-florida-doctor", "Moving your records"),
+        ("Records and the portal", "With your permission the office requests your records from your previous doctor. Ask the office for patient portal access when you join.", "blog/transfer-medical-records-to-florida-doctor", "Moving your records"),
         ("Insurance", "Office visits, labs and covered tests are billed to your insurance, including Medicare. The membership fee is separate.", "insurance-and-fees", "Insurance and fees"),
         ("Video visits", "Many follow-ups and results reviews can be done by video when coming in is not practical.", "telehealth", "Telehealth"),
         ("Part of the year away", "Seasonal residents get one doctor here who stays in touch with their physicians elsewhere.", "seasonal-residents", "Seasonal residents"),
@@ -889,7 +921,7 @@ CARD_BLURBS.update({
     "specialists-and-hospital-care": "Dr. Shtern picks the specialist and stays involved in the hospital.",
     "labs-and-tests": "Blood draws, ECGs and rapid tests done during your visit.",
     "patients": "Visits, calls, labs, records and insurance, in one place.",
-    "journal": "Articles on concierge care, prevention and healthy aging.",
+    "blog": "Articles on concierge care, prevention and healthy aging.",
     "videos": "A film from the practice and trusted health explainers.",
 })
 
@@ -916,29 +948,29 @@ PRACTICE_FILMS = [
 ]
 VIDEO_LIBRARY = [
     {"id": 'TLiD3vh_X8o', "title": 'Blood pressure done right: The correct way to measure yours at home.', "channel": 'American Heart Association', "topic": 'Blood pressure',
-     "summary": 'Step by step, how to sit, position your arm and cuff, and take an accurate blood pressure reading at home.', "related": 'journal/home-blood-pressure-monitoring'},
+     "summary": 'Step by step, how to sit, position your arm and cuff, and take an accurate blood pressure reading at home.', "related": 'blog/home-blood-pressure-monitoring'},
     {"id": 'r5XTTeP039Q', "title": 'Mayo Clinic Explains Hypertension', "channel": 'Mayo Clinic', "topic": 'Blood pressure',
      "summary": 'A Mayo Clinic nephrologist explains what the two blood pressure numbers mean, who gets hypertension, how it is diagnosed and treated.', "related": 'hypertension'},
     {"id": 'g4SV7SJLP_g', "title": 'Get to Know Your Kidneys', "channel": "NIH (NIDDK)", "topic": 'Kidney health',
      "summary": 'What your kidneys do every day, why kidney disease is often silent at first, and everyday habits that help protect them.', "related": 'kidney-care'},
     {"id": 'fFn0ygOOBuI', "title": 'What is eGFR, and how is it used to measure kidney function?', "channel": 'National Kidney Foundation', "topic": 'Kidney health',
-     "summary": 'A kidney specialist explains how eGFR is calculated from a blood test and what a higher or lower number says about kidney function.', "related": 'journal/egfr-kidney-lab-results-explained'},
+     "summary": 'A kidney specialist explains how eGFR is calculated from a blood test and what a higher or lower number says about kidney function.', "related": 'blog/egfr-kidney-lab-results-explained'},
     {"id": '1PKBTpVhvVk', "title": 'Mayo Clinic Minute: Avoiding kidney stones', "channel": 'Mayo Clinic', "topic": 'Kidney health',
-     "summary": 'A Mayo Clinic nephrologist explains why kidney stones form and why drinking enough water each day is the simplest way to prevent them.', "related": 'journal/heat-hydration-kidney-health'},
+     "summary": 'A Mayo Clinic nephrologist explains why kidney stones form and why drinking enough water each day is the simplest way to prevent them.', "related": 'blog/heat-hydration-kidney-health'},
     {"id": 'Ih_4BHoZv0U', "title": 'Mayo Clinic Minute: The role of cholesterol in heart health', "channel": 'Mayo Clinic', "topic": "Heart health",
-     "summary": 'What cholesterol is, how the bad kind builds plaque in arteries, and which food choices can help bring your levels down.', "related": 'journal/heart-healthy-foods'},
+     "summary": 'What cholesterol is, how the bad kind builds plaque in arteries, and which food choices can help bring your levels down.', "related": 'blog/heart-healthy-foods'},
     {"id": 'gfFMSaSoU6U', "title": 'Turning back the clock on prediabetes', "channel": "CDC", "topic": 'Diabetes and metabolism',
      "summary": 'How the CDC National Diabetes Prevention Program helps people with prediabetes make small, lasting changes that lower their risk of type 2 diabetes.', "related": 'preventive-care'},
     {"id": 'G1lwVhnnkoU', "title": '10-minute Workout for Older Adults', "channel": 'National Institute on Aging', "topic": 'Healthy aging',
-     "summary": 'A follow-along routine for older adults with a warm-up, leg and arm strength moves, balance work and stretching, using only a chair.', "related": 'journal/health-benefits-of-exercise'},
+     "summary": 'A follow-along routine for older adults with a warm-up, leg and arm strength moves, balance work and stretching, using only a chair.', "related": 'blog/health-benefits-of-exercise'},
     {"id": 'UAlxu7NiKNk', "title": 'STEADI for Older Adults', "channel": "CDC", "topic": 'Healthy aging',
-     "summary": 'Simple steps that lower fall risk after 65, including strength and balance exercise, medication and vision checks, footwear and home safety.', "related": 'journal/concierge-care-for-aging-parents'},
+     "summary": 'Simple steps that lower fall risk after 65, including strength and balance exercise, medication and vision checks, footwear and home safety.', "related": 'blog/concierge-care-for-aging-parents'},
     {"id": '0xubzGiAjEU', "title": 'Mayo Clinic Minute: Heat exhaustion and heatstroke', "channel": 'Mayo Clinic', "topic": 'Everyday health',
-     "summary": 'How to recognize heat exhaustion before it becomes heatstroke, the warning sign of confusion, and how hydration and breaks keep you safe.', "related": 'journal/heat-hydration-kidney-health'},
+     "summary": 'How to recognize heat exhaustion before it becomes heatstroke, the warning sign of confusion, and how hydration and breaks keep you safe.', "related": 'blog/heat-hydration-kidney-health'},
     {"id": 'qTkqm6weTX4', "title": 'Mayo Clinic Minute - Who should be screened for colorectal cancer?', "channel": 'Mayo Clinic', "topic": 'Screening and vaccines',
-     "summary": 'Who is at higher risk for colorectal cancer, why screening starting at age 45 matters, and why early detection makes it highly treatable.', "related": 'journal/cancer-prevention-risk-factors'},
+     "summary": 'Who is at higher risk for colorectal cancer, why screening starting at age 45 matters, and why early detection makes it highly treatable.', "related": 'blog/cancer-prevention-risk-factors'},
     {"id": 'zhGxsKdLNkE', "title": 'Mayo Clinic Minute: Why vaccines are especially important for older people', "channel": 'Mayo Clinic', "topic": 'Screening and vaccines',
-     "summary": 'Why the immune system weakens with age and how flu, shingles and other vaccines help older adults avoid serious complications and hospital stays.', "related": 'journal/yearly-flu-vaccine-benefits'},
+     "summary": 'Why the immune system weakens with age and how flu, shingles and other vaccines help older adults avoid serious complications and hospital stays.', "related": 'blog/yearly-flu-vaccine-benefits'},
 ]
 
 MEET = {
@@ -946,22 +978,22 @@ MEET = {
     "desc": "Your first visit to Legacy Medical is a complimentary meet and greet with Dr. Yana Shtern in Palm Beach Gardens. What happens, what to ask, and how to book.",
     "eyebrow": "Your first visit",
     "h1": "It starts with a conversation.",
-    "lede": "Before anyone joins, they sit down with Dr. Shtern. The meet and greet is complimentary, it happens at the office, and there is no obligation to join.",
+    "lede": "Before anyone joins, they sit down with Dr. Shtern. The meet and greet is complimentary, and it happens at the office.",
     "steps": [
         ("You get in touch", "Call (561) 834-9280 or send the short form on this page. The office finds a time that suits you."),
         ("You meet Dr. Shtern", "A relaxed conversation in her office on Prosperity Farms Road. Bring a spouse or an adult child if you like."),
-        ("You decide later", "There is no pressure to decide in the room. If you join, the office requests your records and books your first Legacy physical."),
+        ("You decide later", "There is no pressure to decide in the room. If you join, the office requests your records and books your first patient visit."),
     ],
     "sections": [
         ("What the meet and greet is", "<p>A chance for you and Dr. Shtern to see whether the practice is right for you. You talk about what you want from a doctor, how your care is going now, and how membership works day to day. Dr. Shtern explains how she practices, how members reach her, and what the membership fee includes.</p>"),
-        ("Questions worth asking", "<ul><li>How quickly can members be seen when something comes up?</li><li>How do after-hours calls work, and who answers?</li><li>What does the membership fee include, and what is still billed to insurance?</li><li>How do you work with my specialists and with the hospital if I am admitted?</li><li>How large is the practice, and are new members being accepted right now?</li><li>What happens to my care when I am away for the summer?</li></ul><p>There are no wrong questions. Many people bring a written list.</p>"),
-        ("What to bring", "<ul><li>Your questions, written down if that helps</li><li>A list of your current medicines and the doctors you see, if you have one handy</li><li>Your insurance card, so the office can tell you how visits are billed</li></ul><p>You do not need medical records. If you join, the office requests them from your current doctor with your permission.</p>"),
+        ("Questions worth asking", "<ul><li>How quickly can members be seen when something comes up?</li><li>How do after-hours calls work, and who answers?</li><li>What does the membership fee include, and what is still billed to insurance?</li><li>How do you work with my specialists and with the hospital if I am admitted?</li><li>How large is the practice, and are new members being accepted right now?</li><li>What happens to my care when I am away for the summer?</li></ul>"),
+        ("What to bring", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p><p>You do not need medical records. If you join, the office requests them from your current doctor with your permission.</p>"),
         ("Coming with a parent or partner", "<p>Families are welcome. Adult children often come along when they are arranging care for a parent, and couples often meet Dr. Shtern together. With the patient's written permission, she can keep family members updated later on.</p>"),
     ],
     "form_h": "Book a meet and greet",
     "form_lede": "Leave your details and the office will call or email you to set a time. Prefer the phone? Call during office hours.",
     "faqs": [
-        ("Is the meet and greet really free?", "<p>Yes. It is complimentary and there is no obligation to join.</p>"),
+        ("Is the meet and greet really free?", "<p>Yes. It is complimentary.</p>"),
         ("Where does it take place?", "<p>At the office: 11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens. It is a first-floor suite with accessible entry.</p>"),
         ("Can I ask about the membership fee?", "<p>Please do. The fee is not posted online, and Dr. Shtern and the office would rather explain it in person, with what it covers.</p>"),
         ("Can my family member come?", "<p>Yes. Spouses and adult children are welcome.</p>"),
@@ -1026,10 +1058,10 @@ GUIDES_BASE = {
             ("Why the numbers matter", "<p>A 2005 report by the U.S. Government Accountability Office looked at physicians who had switched to concierge care. Before switching, their practices averaged about 2,700 patients; afterward, about 490. The number of patients they saw in a day fell from roughly 26 to about 10. <a href=\"https://www.gao.gov/products/gao-05-929\" rel=\"noopener\">Read the GAO report</a>. The figures are two decades old, but the trade-off they describe is the same today: fewer patients per doctor is what makes time and access possible.</p>"),
             ("What stays the same", "<p>Concierge care is still primary care. At Legacy Medical your insurance, including Medicare, is billed for office visits, labs and tests, as it is now. You keep your specialists, and prescriptions work the same way.</p>"),
             ("What the membership fee pays for", "<p>The annual fee covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, unhurried visits, and phone access around the clock. <a href=\"https://www.medicare.gov/coverage/concierge-care\" rel=\"noopener\">Medicare does not cover membership fees</a>. Legacy Medical explains its fee in person at the meet and greet rather than posting a number without context.</p>"),
-            ("Who tends to find it worthwhile", "<p>People who see several specialists, manage blood pressure, kidney disease or diabetes, travel or split the year between two homes, or are arranging care for a parent. People who rarely see a doctor may find a traditional practice suits them fine. <a href=\"/journal/is-a-concierge-doctor-right-for-me\">Is a concierge doctor right for you?</a></p>"),
+            ("Who tends to find it worthwhile", "<p>People who see several specialists, manage blood pressure, kidney disease or diabetes, travel or split the year between two homes, or are arranging care for a parent. People who rarely see a doctor may find a traditional practice suits them fine. <a href=\"/blog/is-a-concierge-doctor-right-for-me\">Is a concierge doctor right for you?</a></p>"),
         ],
         "faqs": [
-            ("Is concierge medicine the same as direct primary care?", "<p>No. Direct primary care practices usually do not bill insurance and charge a monthly fee for most primary care. Concierge practices like Legacy Medical bill insurance for visits and tests and charge a separate membership fee. <a href=\"/journal/concierge-vs-direct-primary-care\">More on the difference</a>.</p>"),
+            ("Is concierge medicine the same as direct primary care?", "<p>No. Direct primary care practices usually do not bill insurance and charge a monthly fee for most primary care. Concierge practices like Legacy Medical bill insurance for visits and tests and charge a separate membership fee. <a href=\"/blog/concierge-vs-direct-primary-care\">More on the difference</a>.</p>"),
             ("Do I lose my insurance if I join?", "<p>No. Insurance, including Medicare, is still billed for office visits, labs and tests. The membership fee is separate.</p>"),
             ("How do I find out what membership costs?", "<p>Call the office or ask at your complimentary meet and greet.</p>"),
         ],
@@ -1046,7 +1078,7 @@ CARD_BLURBS.update({
 })
 CATEGORY_OWNERS.update({
     "Seasonal residents": ("seasonal-residents", "Care for seasonal residents"),
-    "Kidney health": ("kidney-care", "Kidney care and nephrology"),
+    "Kidney health": ("kidney-care", "Kidney care and Nephrology"),
     "Aging and family": ("for-families", "Care for an aging parent"),
     "Healthy aging": ("preventive-care", "Preventive care and the Legacy physical"),
 })
@@ -1055,9 +1087,9 @@ CATEGORY_OWNERS.update({
 # practice has not confirmed gets "please ask the office".
 ASSIST_EXTRA += [
     {"k": ["meet and greet", "meet & greet", "first visit", "first appointment", "consultation", "free visit", "complimentary"],
-     "a": "Your first visit is a complimentary meet and greet with Dr. Shtern at the office. You talk about what you want from a doctor and how membership works, ask anything you like, and there is no obligation to join. <a href=\"/meet-and-greet\">About the meet and greet</a>."},
+     "a": "Your first visit is a complimentary meet and greet with Dr. Shtern at the office. You talk about what you want from a doctor and how membership works, and ask anything you like. <a href=\"/meet-and-greet\">About the meet and greet</a>."},
     {"k": ["what to bring", "bring with me", "should i bring"],
-     "a": "For the meet and greet: your questions, a list of your current medicines and doctors if you have one, and your insurance card. You do not need medical records. <a href=\"/meet-and-greet\">More about the first visit</a>."},
+     "a": "Nothing is needed for the meet and greet. Come see the office, meet Dr. Shtern, and find out whether the practice is a fit. Bring your questions if you have them. You do not need medical records. <a href=\"/meet-and-greet\">More about the first visit</a>."},
     {"k": ["friday", "weekend", "saturday", "sunday", "holiday"],
      "a": "The office is open Monday to Thursday 9 AM to 5 PM and Friday 9 AM to 2 PM, and closed on weekends. Members can still reach the practice by phone at any hour, including weekends and holidays."},
     {"k": ["wheelchair", "accessible", "accessibility", "walker", "stairs", "elevator", "first floor"],
@@ -1073,13 +1105,13 @@ ASSIST_EXTRA += [
     {"k": ["nurse", "yan", "konevsky", "office manager", "staff", "team"],
      "a": "Yan Konevsky, RN is the practice's registered nurse and office manager. Before Legacy Medical he managed an outpatient hemodialysis center in New York City. <a href=\"/our-team\">Meet the team</a>."},
     {"k": ["education", "medical school", "trained", "training", "residency", "fellowship", "where did she"],
-     "a": "Dr. Shtern earned her medical degree at St. George's University School of Medicine and completed her internal medicine residency and nephrology fellowship at Maimonides Medical Center in Brooklyn. <a href=\"/dr-yana-shtern\">Her full background</a>."},
+     "a": "Dr. Shtern earned her medical degree at St. George's University School of Medicine and completed her Internal Medicine residency and Nephrology fellowship at Maimonides Medical Center in New York City. <a href=\"/dr-yana-shtern\">Her full background</a>."},
     {"k": ["castle connolly", "award", "recognition", "top doctor"],
      "a": "Dr. Shtern has been recognized as a Castle Connolly Top Doctor since 2023. <a href=\"/dr-yana-shtern\">About Dr. Shtern</a>."},
     {"k": ["license", "npi", "verify", "board certified", "board-certified", "certified"],
-     "a": "Dr. Shtern is board-certified by the American Board of Internal Medicine in internal medicine and nephrology. Her Florida license is ME114615 and her NPI is 1497940852. <a href=\"/dr-yana-shtern\">Links to verify her credentials</a>."},
-    {"k": ["kidney", "ckd", "creatinine", "egfr", "dialysis", "kidney stone", "nephrologist", "nephrology"],
-     "a": "Dr. Shtern is board-certified in nephrology as well as internal medicine, so kidney care is part of her everyday practice: chronic kidney disease, rising creatinine, stones, electrolyte problems and care for people on dialysis. <a href=\"/kidney-care\">Kidney care</a>."},
+     "a": "Dr. Shtern is board-certified by the American Board of Internal Medicine in Internal Medicine and Nephrology. <a href=\"/dr-yana-shtern\">Links to verify her credentials</a>."},
+    {"k": ["kidney", "ckd", "creatinine", "egfr", "dialysis", "kidney stone", "nephrologist", "Nephrology"],
+     "a": "Dr. Shtern is board-certified in Nephrology as well as Internal Medicine, so kidney care is part of her everyday practice: chronic kidney disease, rising creatinine, stones, electrolyte problems and care for people on dialysis. <a href=\"/kidney-care\">Kidney care</a>."},
     {"k": ["blood pressure", "hypertension", "bp "],
      "a": "High blood pressure, including blood pressure that stays high on two or three medicines, is one of Dr. Shtern's focus areas. <a href=\"/hypertension\">Hypertension care</a>."},
     {"k": ["diabetes", "cholesterol", "thyroid", "chronic"],
@@ -1101,11 +1133,11 @@ ASSIST_EXTRA += [
     {"k": ["records", "medical records", "transfer", "previous doctor", "old doctor"],
      "a": "If you join, the office requests your records from your previous doctor with your permission. You do not need them for the meet and greet."},
     {"k": ["mdvip", "signaturemd", "concierge choice"],
-     "a": "Legacy Medical is an independent practice, not part of a national network. <a href=\"/journal/concierge-medicine-vs-mdvip\">How the models differ</a>."},
+     "a": "Legacy Medical is an independent practice, not part of a national network. <a href=\"/blog/concierge-medicine-vs-mdvip\">How the models differ</a>."},
     {"k": ["direct primary care", "dpc"],
-     "a": "Direct primary care practices usually do not bill insurance. Legacy Medical bills insurance for visits and tests and charges a separate membership fee. <a href=\"/journal/concierge-vs-direct-primary-care\">More on the difference</a>."},
+     "a": "Direct primary care practices usually do not bill insurance. Legacy Medical bills insurance for visits and tests and charges a separate membership fee. <a href=\"/blog/concierge-vs-direct-primary-care\">More on the difference</a>."},
     {"k": ["hsa", "fsa", "health savings", "flexible spending", "tax deductible", "deductible"],
-     "a": "Whether a membership fee can come from an HSA or FSA depends on your plan and the tax rules, so please check with a tax advisor. <a href=\"/journal/hsa-fsa-concierge-medicine-fees\">What the 2026 rules say</a>."},
+     "a": "Whether a membership fee can come from an HSA or FSA depends on your plan and the tax rules, so please check with a tax advisor. <a href=\"/blog/hsa-fsa-concierge-medicine-fees\">What the 2026 rules say</a>."},
     {"k": ["worth it", "why concierge", "benefit", "advantages", "versus", " vs ", "traditional", "regular doctor"],
      "a": "Concierge care means a smaller practice: same or next business day visits, unhurried appointments and phone access at any hour, with insurance still billed for visits and tests. <a href=\"/concierge-vs-traditional-primary-care\">Concierge and traditional care side by side</a>."},
     {"k": ["cancel", "reschedule", "change my appointment", "running late", "late"],
@@ -1148,5 +1180,4 @@ SECTION_IMAGES = {
     "meet-and-greet": {"What the meet and greet is": "p-meet-coffee", "Coming with a parent or partner": "front-desk-scrubs"},
     "membership": {"What to bring to the meet and greet": "reception-wall"},
     "insurance-and-fees": {"The membership fee": "p-insurance-papers"},
-    "areas-we-serve": {"Seasonal residents": "p-areas-palms"},
 }

@@ -97,7 +97,7 @@ POSTS = [
    {'type': 'p',
     'text': 'A TSH is part of the blood work Dr. Shtern can order and review with you, with results explained in '
             'plain language. Our [labs and tests](/labs-and-tests) page covers how testing works at the practice, '
-            'and our article on [medication reviews](/journal/medication-review-older-adults) explains why '
+            'and our article on [medication reviews](/blog/medication-review-older-adults) explains why '
             'supplements belong on the list. If you would like to meet Dr. Shtern first, the first '
             'visit is a complimentary [meet and greet](/meet-and-greet).'}],
   'sources': [],
@@ -134,7 +134,7 @@ POSTS = [
             'you are not at goal or your treatment has just changed. People who wear a continuous glucose '
             'monitor also get a "time in range" number, and the ADA suggests more than 70 percent time in range '
             'as a goal for many adults. If you have been told you have prediabetes rather than diabetes, our '
-            'article on [prediabetes and A1C](/journal/prediabetes-and-a1c) covers that stage.'},
+            'article on [prediabetes and A1C](/blog/prediabetes-and-a1c) covers that stage.'},
    {'type': 'h2', 'text': 'Blood pressure and cholesterol'},
    {'type': 'p',
     'text': 'Diabetes raises the risk of heart attack and stroke, so the ADA\'s heart recommendations matter '
@@ -142,12 +142,12 @@ POSTS = [
             'checked at every routine visit](https://pmc.ncbi.nlm.nih.gov/articles/PMC12690187/), and that the '
             'treatment goal is **below 130/80** if it can be reached safely, with a top number under 120 encouraged '
             'for people at high heart or kidney risk. Home readings help; see our guide to [home blood pressure '
-            'monitoring](/journal/home-blood-pressure-monitoring).'},
+            'monitoring](/blog/home-blood-pressure-monitoring).'},
    {'type': 'p',
     'text': 'For cholesterol, the same section recommends a moderate-intensity statin, along with lifestyle '
             'changes, for people with diabetes aged 40 to 75 who do not already have heart disease. LDL cholesterol '
             'is rechecked 4 to 12 weeks after starting or changing a statin, then yearly. Our article on '
-            '[statins](/journal/statins-benefits-and-side-effects) explains the benefits and the side effects '
+            '[statins](/blog/statins-benefits-and-side-effects) explains the benefits and the side effects '
             'people worry about.'},
    {'type': 'p',
     'text': 'The NIDDK sums this up as the [diabetes '
@@ -167,7 +167,7 @@ POSTS = [
     'text': 'Both matter, because either one can be abnormal while the other looks fine. When kidney disease is '
             'found, there are now medicines that slow it down. The ADA recommends an SGLT2 inhibitor for people '
             'with type 2 diabetes and chronic kidney disease whose eGFR is 20 or higher, to slow kidney decline and '
-            'lower heart risk. Our article on [eGFR and kidney labs](/journal/egfr-kidney-lab-results-explained) '
+            'lower heart risk. Our article on [eGFR and kidney labs](/blog/egfr-kidney-lab-results-explained) '
             'walks through the numbers.'},
    {'type': 'h2', 'text': 'Eyes and feet'},
    {'type': 'p',
@@ -191,7 +191,7 @@ POSTS = [
             'stay much higher than usual, frequent lows, a foot sore that is not healing, or new changes in vision. '
             'Confusion, fainting, or a low you cannot bring up are reasons to call 911.'},
    {'type': 'p',
-    'text': 'Because Dr. Shtern is board-certified in both internal medicine and nephrology, the kidney side of '
+    'text': 'Because Dr. Shtern is board-certified in both Internal Medicine and Nephrology, the kidney side of '
             'diabetes is part of everyday care at Legacy Medical. Our [chronic care](/chronic-care) and [kidney '
             'care](/kidney-care) pages describe how ongoing conditions are followed. If you would like to talk it '
             'over first, the first visit is a complimentary [meet and greet](/meet-and-greet).'}],
@@ -238,8 +238,8 @@ POSTS = [
    {'type': 'p',
     'text': 'The guideline also endorses a coronary artery calcium scan for men 40 and older and women 45 and '
             'older when the decision is uncertain. We explain that test in [coronary artery calcium '
-            'score](/journal/coronary-artery-calcium-score), and lipoprotein(a) in [ApoB and '
-            'Lp(a)](/journal/apob-and-lipoprotein-a).'},
+            'score](/blog/coronary-artery-calcium-score), and lipoprotein(a) in [ApoB and '
+            'Lp(a)](/blog/apob-and-lipoprotein-a).'},
    {'type': 'p',
     'text': 'The U.S. Preventive Services Task Force uses older thresholds. Its 2022 recommendation advises a '
             'statin for adults 40 to 75 with at least one risk factor (high cholesterol, diabetes, high blood '
@@ -279,7 +279,7 @@ POSTS = [
     'text': 'What is my 10-year risk, and what would a statin change? Would a calcium score help us decide? What '
             'LDL goal makes sense for me? If I had side effects before, which options have we not tried? Food '
             'still matters alongside any medicine; our article on the [Mediterranean '
-            'diet](/journal/mediterranean-diet-heart-health) is a good place to start. Do not stop a statin on '
+            'diet](/blog/mediterranean-diet-heart-health) is a good place to start. Do not stop a statin on '
             'your own without talking to your doctor. Chest pain, pressure, or sudden weakness or trouble '
             'speaking are reasons to call 911.'},
    {'type': 'p',
@@ -361,8 +361,8 @@ POSTS = [
     'text': '**Treating the causes.** The guideline calls lifestyle and risk factor changes a pillar of AFib care: '
             'losing weight when needed, regular exercise, quitting tobacco, limiting alcohol, controlling blood '
             'pressure, and screening for sleep apnea. These can reduce how often AFib returns. Our articles on '
-            '[sleep apnea and the heart](/journal/sleep-apnea-and-heart-health) and [alcohol after '
-            '50](/journal/alcohol-after-50) go further.'},
+            '[sleep apnea and the heart](/blog/sleep-apnea-and-heart-health) and [alcohol after '
+            '50](/blog/alcohol-after-50) go further.'},
    {'type': 'h2', 'text': 'When to call, and when to call 911'},
    {'type': 'p',
     'text': 'Call your doctor soon if you notice a new irregular pulse, a smartwatch alert you cannot explain, or '
@@ -431,8 +431,8 @@ POSTS = [
     'text': 'The statement recommends screening for sleep apnea in people with high blood pressure that is hard '
             'to control, and in people whose atrial fibrillation returns after cardioversion or ablation. We cover '
             'that connection in [atrial fibrillation and stroke '
-            'risk](/journal/atrial-fibrillation-stroke-risk) and the blood pressure side in [blood pressure and '
-            'brain health](/journal/blood-pressure-and-brain-health).'},
+            'risk](/blog/atrial-fibrillation-stroke-risk) and the blood pressure side in [blood pressure and '
+            'brain health](/blog/blood-pressure-and-brain-health).'},
    {'type': 'h2', 'text': 'Testing'},
    {'type': 'p',
     'text': 'Questionnaires can raise suspicion, but they cannot make the diagnosis. The U.S. Preventive Services '
@@ -459,11 +459,11 @@ POSTS = [
               'for moderate to severe obstructive sleep apnea in adults with '
               'obesity](https://www.fda.gov/news-events/press-announcements/fda-approves-first-medication-obstructive-sleep-apnea), '
               'used with diet and exercise. Our article on [GLP-1 '
-              'medications](/journal/glp-1-medications-for-weight-loss) has more on that class.',
+              'medications](/blog/glp-1-medications-for-weight-loss) has more on that class.',
               '**Surgery** is an option for some people when other treatments do not work.']},
    {'type': 'p',
     'text': 'A follow-up sleep test is often done to confirm that treatment is working. For more on why good sleep '
-            'matters as we age, see [sleep and healthy aging](/journal/sleep-and-healthy-aging).'},
+            'matters as we age, see [sleep and healthy aging](/blog/sleep-and-healthy-aging).'},
    {'type': 'p',
     'text': 'Never drive drowsy. Call your doctor if a partner notices pauses in your breathing or you are '
             'sleepy during the day despite a full night in bed. If you are worried about any of this, Dr. Shtern '
@@ -533,7 +533,7 @@ POSTS = [
             'lowest dose that controls symptoms. When medicines and habit changes are not enough, or someone wants to '
             'stop long-term medicine, the NIDDK notes that surgery is an option; the most common operation, '
             'fundoplication, usually brings long-term relief. Any long-term acid medicine belongs on your medication list for '
-            'review; see our article on [medication reviews](/journal/medication-review-older-adults).'},
+            'review; see our article on [medication reviews](/blog/medication-review-older-adults).'},
    {'type': 'h2', 'text': 'Warning signs that need a doctor'},
    {'type': 'p',
     'text': 'See a doctor if heartburn does not improve with over-the-counter medicines and habit changes, or if '
@@ -554,7 +554,7 @@ POSTS = [
     'text': 'Heartburn that keeps coming back is the kind of problem that gets better with a doctor who knows your '
             'medicines and history. Legacy Medical offers [same or next business day '
             'visits](/same-or-next-day-visits), and Dr. Shtern can arrange specialist care when an endoscopy is '
-            'needed. If you take NSAIDs regularly, our article on [NSAID risks](/journal/nsaids-risks-and-side-effects) '
+            'needed. If you take NSAIDs regularly, our article on [NSAID risks](/blog/nsaids-risks-and-side-effects) '
             'is worth a read. To meet Dr. Shtern first, the first visit is a complimentary [meet and '
             'greet](/meet-and-greet).'}],
   'sources': [],
@@ -587,7 +587,7 @@ POSTS = [
             'amounts](https://ods.od.nih.gov/factsheets/VitaminD-Consumer/) for adults as **600 IU (15 mcg) through '
             'age 70** and **800 IU (20 mcg) from age 71**. Sunshine is not a safe substitute for diet or '
             'supplements, since the same ultraviolet light raises skin cancer risk, something we write about in '
-            '[skin cancer checks in Florida](/journal/skin-cancer-checks-florida).'},
+            '[skin cancer checks in Florida](/blog/skin-cancer-checks-florida).'},
    {'type': 'h2', 'text': 'Who should be tested'},
    {'type': 'p',
     'text': 'For adults without symptoms, routine testing is not recommended by the major groups. The U.S. '
@@ -619,7 +619,7 @@ POSTS = [
             'or a placebo for about five years. Vitamin D [did not lower the rate of cancer or of heart attacks, '
             'strokes and cardiovascular deaths](https://pubmed.ncbi.nlm.nih.gov/30415629/). For bones, vitamin D '
             'works best as part of a bigger plan; our article on [bone density '
-            'screening](/journal/bone-density-screening) covers the rest.'},
+            'screening](/blog/bone-density-screening) covers the rest.'},
    {'type': 'h2', 'text': 'How much is too much'},
    {'type': 'p',
     'text': 'More is not better. The NIH sets the upper limit for adults at **4,000 IU (100 mcg) a day** from all '
@@ -631,10 +631,10 @@ POSTS = [
     'text': 'Check for interactions too. The NIH notes that high-dose vitamin D may make some statins work less '
             'well, that thiazide water pills plus vitamin D can raise calcium too high, and that steroids such as '
             'prednisone can lower vitamin D. Many multivitamins already contain vitamin D, so add up every '
-            'source; see [multivitamins: who needs them](/journal/multivitamin-supplements-who-needs-them).'},
+            'source; see [multivitamins: who needs them](/blog/multivitamin-supplements-who-needs-them).'},
    {'type': 'p',
     'text': 'For people with kidney disease, vitamin D and calcium are handled differently, and decisions should '
-            'go through your doctor. Dr. Shtern is board-certified in internal medicine and nephrology and can '
+            'go through your doctor. Dr. Shtern is board-certified in Internal Medicine and Nephrology and can '
             'help you decide whether a test or a supplement makes sense for you. Our [labs and '
             'tests](/labs-and-tests) page explains how testing works at Legacy Medical, and the first visit is a '
             'complimentary [meet and greet](/meet-and-greet).'}],
@@ -714,12 +714,12 @@ POSTS = [
             'doctor prescribes more. Too much can cause stomach problems, and people with hereditary '
             'hemochromatosis, an inherited iron overload condition, should avoid iron supplements '
             'altogether. Iron also interacts with medicines: it can reduce absorption of levothyroxine, our '
-            'subject in [underactive thyroid and the TSH test](/journal/underactive-thyroid-tsh-test), and of '
+            'subject in [underactive thyroid and the TSH test](/blog/underactive-thyroid-tsh-test), and of '
             'levodopa, while acid-reducing PPIs can lower iron absorption from food.'},
    {'type': 'p',
-    'text': 'Anemia is one of the places where internal medicine and kidney care overlap, and as a board-certified '
+    'text': 'Anemia is one of the places where Internal Medicine and kidney care overlap, and as a board-certified '
             'internist and nephrologist, Dr. Shtern looks at both. If you take aspirin or an NSAID regularly, our '
-            'article on [NSAID risks](/journal/nsaids-risks-and-side-effects) is worth a read. Our [labs and '
+            'article on [NSAID risks](/blog/nsaids-risks-and-side-effects) is worth a read. Our [labs and '
             'tests](/labs-and-tests) page explains how blood work is handled, and the first visit is a '
             'complimentary [meet and greet](/meet-and-greet).'}],
   'sources': [],
@@ -799,8 +799,8 @@ POSTS = [
             'copayment. If you have other coverage, check with your plan.'},
    {'type': 'p',
     'text': 'Shingles is one of several vaccines that matter more after 50. Our articles on the [yearly flu '
-            'vaccine](/journal/yearly-flu-vaccine-benefits), [RSV](/journal/rsv-infection-in-adults) and '
-            '[pneumococcal vaccines](/journal/pneumococcal-vaccine-adults) cover the others. Dr. Shtern can '
+            'vaccine](/blog/yearly-flu-vaccine-benefits), [RSV](/blog/rsv-infection-in-adults) and '
+            '[pneumococcal vaccines](/blog/pneumococcal-vaccine-adults) cover the others. Dr. Shtern can '
             'review which vaccines you are due for as part of your [preventive care](/preventive-care), and the '
             'first visit is a complimentary [meet and greet](/meet-and-greet).'}],
   'sources': [],
@@ -878,7 +878,7 @@ POSTS = [
    {'type': 'p',
     'text': 'Records can be hard to find, especially for people who split the year between two states. A list of '
             'your past vaccines with dates makes this easy to sort out; our article on [moving your medical '
-            'records to Florida](/journal/transfer-medical-records-to-florida-doctor) has tips.'},
+            'records to Florida](/blog/transfer-medical-records-to-florida-doctor) has tips.'},
    {'type': 'h2', 'text': 'Side effects and coverage'},
    {'type': 'p',
     'text': 'The CDC lists [pain, redness and swelling where the shot was '
@@ -889,8 +889,8 @@ POSTS = [
             'assignment.'},
    {'type': 'p',
     'text': 'Pneumococcal vaccine is one part of staying ahead of respiratory illness after 50, along with the '
-            '[yearly flu shot](/journal/yearly-flu-vaccine-benefits), [RSV](/journal/rsv-infection-in-adults) '
-            'and [shingles](/journal/shingles-vaccine-after-50) vaccines. Dr. Shtern can sort out your vaccine '
+            '[yearly flu shot](/blog/yearly-flu-vaccine-benefits), [RSV](/blog/rsv-infection-in-adults) '
+            'and [shingles](/blog/shingles-vaccine-after-50) vaccines. Dr. Shtern can sort out your vaccine '
             'history and what you are due for as part of your [preventive care](/preventive-care). If you would '
             'like to meet her first, the first visit is a complimentary [meet and greet](/meet-and-greet).'}],
   'sources': [],

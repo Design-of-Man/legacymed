@@ -1,4 +1,49 @@
-# Hero video: Jupiter Inlet sunset
+# Hero video
+
+> **Current encode (Oct 16, 2026): the coastline clip.** The owner replaced the Jupiter Inlet sunset with a daytime
+> drone shot along the Singer Island / Riviera Beach shoreline (turquoise water, condo towers, the Intracoastal behind).
+> Everything below the first rule describes the earlier Jupiter Inlet encodes and is kept for history.
+>
+> - Source: the owner's second upload of `DJI_20261013234059_0426_D_1.mov` (Oct 16, later in the day), 1280x720 H.264 High
+>   (yuv420p), bt709 tv range, 29.97 fps, 556 frames (18.55 s), 17,860,760 bytes at 7.4 Mb/s, no audio,
+>   sha256 `bc10600f418231c178a250582a19e09e4cef5789cf9f307e2f820e7a2f906b43`. The first upload was the same shot as a
+>   2.2 Mb/s HEVC export (sha256 `4663408e…`); this one is cleaner so the set was re-encoded from it.
+>   **Both are 720p exports, not the camera original.** If the 4K file from the drone turns up, re-run the commands
+>   below on it and the 1440/2160 sets come back.
+> - No trim, no dissolve, no grade: the whole shot loops with a plain cut (same as the previous encode).
+> - Because the source is 720p there is one landscape set; content.py points `hd` at it and pages.py hands the same
+>   set to main.js for `uhd` and `qhd`, so the script is unchanged and a 4K master can be dropped in later.
+> - Portrait phones get a 406x720 centre-right crop (`crop=406:720:618:0`), chosen so the towers stay in frame from the
+>   first frame to the last as the drone drifts right.
+>
+> ```sh
+> C="-color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv"
+> A="-an -c:v libsvtav1 -preset 5 -g 60 -pix_fmt yuv420p10le -svtav1-params tune=0:scd=0:enable-overlays=1 $C"
+> H="-an -c:v libx265 -preset medium -tag:v hvc1 -pix_fmt yuv420p $C -movflags +faststart -x265-params keyint=60:min-keyint=60:scenecut=0"
+> X="-an -c:v libx264 -profile:v high -preset slow -tune film -g 60 -keyint_min 60 -sc_threshold 0 -pix_fmt yuv420p $C -movflags +faststart"
+> P="crop=406:720:618:0"
+> ffmpeg -i SRC $A -crf 32 coast-720.webm;   ffmpeg -i SRC $H -crf 24 coast-720-hevc.mp4;   ffmpeg -i SRC $X -crf 23 coast-720.mp4
+> ffmpeg -i SRC -vf "$P" $A -crf 32 coast-portrait.webm;  ... $H -crf 24 coast-portrait-hevc.mp4;  ... $X -crf 23 coast-portrait.mp4
+> ffmpeg -i SRC -frames:v 1 -vf "scale=in_range=tv:out_range=pc:in_color_matrix=bt709,format=rgb24" poster_src.png
+> ```
+> Posters: frame 0 of the source. Pillow 12.3: 1280x720 as is and LANCZOS to 768x432 (AVIF q55-60, WebP q70-72,
+> JPEG q84 progressive), plus the portrait crop at 406x720. `poster-lqip.txt` is the 32x18 blurred WebP data URI.
+>
+> | File | Codec | Dims | Duration | Bytes |
+> |---|---|---|---|---|
+> | coast-720.webm | AV1 Main 10-bit | 1280x720 | 18.55 s (556 f) | 3,999,015 |
+> | coast-720-hevc.mp4 | HEVC Main (hvc1) | 1280x720 | 18.55 s | 3,901,830 |
+> | coast-720.mp4 | H.264 High | 1280x720 | 18.55 s | 5,232,048 |
+> | coast-portrait.webm | AV1 Main 10-bit | 406x720 | 18.55 s | 1,139,382 |
+> | coast-portrait-hevc.mp4 | HEVC Main | 406x720 | 18.55 s | 1,003,544 |
+> | coast-portrait.mp4 | H.264 High | 406x720 | 18.55 s | 1,481,530 |
+> | coast-poster-1280 .avif / .webp / .jpg | | 1280x720 | | 70,867 / 67,352 / 150,032 |
+> | coast-poster-768 .avif / .webp / .jpg | | 768x432 | | 25,033 / 30,984 / 64,193 |
+> | coast-poster-portrait-720 .avif / .webp / .jpg | | 406x720 | | 18,723 / 22,902 / 51,775 |
+
+---
+
+# Earlier hero: Jupiter Inlet sunset (history)
 
 > **Current encode (Oct 14, 2026): from the 4K original, full clip, no crossfade.** The owner found the
 > 1080p crossfade loop blurry (the 1.25 s dissolve doubles the jetty, and AV1 crf 42 smeared the water).

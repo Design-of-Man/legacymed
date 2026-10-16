@@ -227,9 +227,9 @@ NAV = [
         ("for-families", "For families", "Caring for a parent"),
         ("seasonal-residents", "Seasonal residents", "Care between seasons"),
     ]),
-    ("Care", None, [
+    ("Services", None, [
         ("concierge-medicine", "Concierge medicine", "How the practice works"),
-        ("kidney-care", "Kidney care and nephrology", "CKD, stones, electrolytes"),
+        ("kidney-care", "Kidney care and Nephrology", "CKD, stones, electrolytes"),
         ("hypertension", "Hypertension", "Hard-to-control blood pressure"),
         ("geriatric-memory-care", "Geriatric and memory care", "Healthy aging, cognition"),
         ("preventive-care", "Preventive care and physicals", "The annual Legacy physical"),
@@ -240,7 +240,7 @@ NAV = [
         ("membership", "How to join", "Three unhurried steps"),
         ("insurance-and-fees", "Insurance and fees", "What insurance still covers"),
         ("concierge-vs-traditional-primary-care", "Concierge vs. traditional", "A side-by-side look"),
-        ("faq", "Questions", "Straight answers"),
+        ("faq", "FAQ", "Straight answers"),
     ]),
     ("Patients", None, [
         ("patients", "For patients", "Visits, calls, labs, records"),
@@ -248,10 +248,10 @@ NAV = [
         ("chronic-care", "Chronic care support", "Ongoing conditions"),
         ("specialists-and-hospital-care", "Specialists and hospitals", "Care that stays in one place"),
         ("labs-and-tests", "Labs and tests", "Done in the office"),
-        ("journal", "Journal", "Articles on health"),
+        ("blog", "Blog", "Articles on health"),
         ("videos", "Videos", "Watch and learn"),
     ]),
-    ("Areas", "areas-we-serve", None),
+    ("Areas Served", "areas-we-serve", None),
     ("Contact", "contact", None),
 ]
 
@@ -263,9 +263,9 @@ def section_of(slug):
         if kids and any(k[0] == slug for k in kids):
             return label, None
     if slug.startswith("areas/"):
-        return "Areas", "areas-we-serve"
-    if slug.startswith("journal/"):
-        return "Journal", "journal"
+        return "Areas Served", "areas-we-serve"
+    if slug.startswith("blog/"):
+        return "Blog", "blog"
     return None, None
 
 
@@ -274,7 +274,7 @@ def nav_html(current):
     for i, (label, href, kids) in enumerate(NAV):
         if kids:
             mid = "menu-%d" % i
-            is_cur = any(k[0] == current for k in kids) or (current.startswith("journal/") and any(k[0] == "journal" for k in kids))
+            is_cur = any(k[0] == current for k in kids) or (current.startswith("blog/") and any(k[0] == "blog" for k in kids))
             links = "".join(
                 '<li><a href="/%s"%s>%s<small>%s</small></a></li>' % (
                     k[0], ' aria-current="page"' if k[0] == current else "", esc(k[1]), esc(k[2]))
@@ -283,7 +283,7 @@ def nav_html(current):
                 '<li><button class="nav-trigger%s" type="button" aria-expanded="false" aria-controls="%s">%s %s</button>'
                 '<ul class="menu" id="%s">%s</ul></li>' % (" current" if is_cur else "", mid, esc(label), icon("chev"), mid, links))
         else:
-            cur = current == href or (href == "areas-we-serve" and current.startswith("areas/")) or (href == "journal" and current.startswith("journal/"))
+            cur = current == href or (href == "areas-we-serve" and current.startswith("areas/")) or (href == "blog" and current.startswith("blog/"))
             items.append('<li><a class="nav-link" href="/%s"%s>%s</a></li>' % (href, ' aria-current="page"' if cur else "", esc(label)))
     return items
 
@@ -327,9 +327,9 @@ def footer():
         title, "".join('<li><a href="/%s">%s</a></li>' % (h, esc(t)) for h, t in links))
     care = [(k[0], k[1]) for k in NAV[1][2]]
     practice = [("dr-yana-shtern", "Dr. Yana Shtern"), ("our-team", "Our team"), ("membership", "How to join"),
-                ("insurance-and-fees", "Insurance and fees"), ("faq", "Questions"), ("journal", "Journal"),
+                ("insurance-and-fees", "Insurance and fees"), ("faq", "FAQ"), ("blog", "Blog"),
                 ("contact", "Contact")]
-    areas = [("areas/" + l["slug"], l["name"]) for l in C.LOCATIONS] + [("areas-we-serve", "All areas we serve")]
+    areas = [("areas/" + l["slug"], l["name"]) for l in C.LOCATIONS] + [("areas-we-serve", "All areas served")]
     socials = "".join('<a href="%s" rel="noopener" target="_blank">%s<span class="sr-only">%s (opens in a new tab)</span></a>' % (
         esc(s["url"]), icon(s["icon"]), esc(s["label"])) for s in p["socials"])
     hours = "<br>".join(["Mon–Thu 9:00 AM – 5:00 PM", "Fri 9:00 AM – 2:00 PM", "Sat–Sun closed"])
@@ -337,7 +337,7 @@ def footer():
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <h2>Unhurried care, close to home.</h2>
+        <h2>One patient at a time. A <em>very</em> small practice on purpose.</h2>
         <address class="footer-contact">
           <span>%(street)s<br>%(city)s, %(region)s %(postal)s</span>
           <a href="tel:%(tel)s" data-loc="footer">%(phone)s</a>
@@ -351,7 +351,7 @@ def footer():
     </div>
     <div class="footer-word" aria-hidden="true" data-word="Legacy Medical"></div>
     <div class="footer-bottom">
-      <p>© %(year)s %(legal)s. Concierge internal medicine in Palm Beach Gardens, Florida.</p>
+      <p>© %(year)s %(legal)s. Concierge Internal Medicine in Palm Beach Gardens, Florida.</p>
       <ul>
         <li><a href="/privacy">Website privacy</a></li>
         <li><a href="/notice-of-privacy-practices">Notice of Privacy Practices</a></li>
@@ -364,7 +364,7 @@ def footer():
         "street": p["street"], "city": p["city"], "region": p["region"], "postal": p["postal"],
         "tel": p["tel"], "phone": p["phone"], "fax": p["fax"], "email": p["email"], "hours": hours,
         "socials": ('<div class="socials">%s</div>' % socials) if socials else "",
-        "care": col("Care", care), "practice": col("Practice", practice), "areas": col("Areas we serve", areas),
+        "care": col("Services", care), "practice": col("Practice", practice), "areas": col("Areas served", areas),
         "year": SITE_UPDATED[:4], "legal": p["legal_name"]}
 
 
@@ -574,7 +574,7 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="alternate" type="application/rss+xml" title="Legacy Medical Journal" href="/journal/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Legacy Medical Blog" href="/blog/feed.xml">
 <meta property="og:type" content="%(ogtype)s">
 <meta property="og:site_name" content="Legacy Medical">
 <meta property="og:locale" content="en_US">
@@ -610,7 +610,7 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
 </body>
 </html>
 """ % {"title": esc(title), "desc": esc(desc), "robots": robots, "canon": canon, "css": css, "js": js,
-       "url": page_url, "og": esc(og_abs), "ogalt": esc(title), "ogtype": "article" if slug.startswith("journal/") and slug != "journal" else "website",
+       "url": page_url, "og": esc(og_abs), "ogalt": esc(title), "ogtype": "article" if slug.startswith("blog/") and slug != "blog" else "website",
        "lat": PRACTICE["geo"]["lat"], "lng": PRACTICE["geo"]["lng"], "ld": ld, "extra": extra_head,
        "analytics": analytics_tags(track), "scripts": script_tags, "bodycls": body_cls,
        "header": header(slug), "body": body, "jsflag": JS_FLAG, "footer": footer(), "callbar": callbar(), "preload": preload_html,
@@ -618,7 +618,7 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
 
 
 def write_page(slug, title, desc, body, sitemap=True, **kw):
-    out = "index.html" if slug == "" else (slug + "/index.html" if slug in ("journal",) else slug + ".html")
+    out = "index.html" if slug == "" else (slug + "/index.html" if slug in ("blog",) else slug + ".html")
     path = os.path.join(PUB, out)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     lastmod = kw.pop("lastmod_override", None)
@@ -686,7 +686,7 @@ def cta_band(heading=None, lede=None, night=True):
     p = PRACTICE
     heading = heading or "Meet Dr. Shtern <em>before you decide.</em>"
     lede = lede or ("Every membership starts with a complimentary meet and greet. Sit down with Dr. Shtern, see the office, "
-                    "and ask whatever you like. There is no obligation to join.")
+                    "and ask whatever you like.")
     return """<section class="section cta-band%s" aria-labelledby="cta-h">
   <div class="wrap cta-grid">
     <div>
@@ -698,7 +698,7 @@ def cta_band(heading=None, lede=None, night=True):
     <nav class="towns" aria-label="Drive times to the office">
       <p class="towns-h">Drive times to the office</p>
       <ul>%s</ul>
-      <a class="text-link" href="/areas-we-serve">All areas we serve %s</a>
+      <a class="text-link" href="/areas-we-serve">All areas served %s</a>
     </nav>
   </div>
 </section>""" % (" night" if night else " sunk", hx(heading), lede, icon("arrow"), p["tel"], p["phone"],
@@ -719,7 +719,7 @@ def related_cards(slugs):
     for s in slugs:
         k = lookup[s]
         cards.append('<div class="card"><p class="meta">%s</p><h3><a class="stretch" href="/%s" style="text-decoration:none;color:inherit">%s</a></h3><p>%s</p><span class="more">Read more %s</span></div>'
-                     % ("Care" if s in [x[0] for x in NAV[1][2]] else ("For patients" if s in [x[0] for x in NAV[3][2]] else "Practice"), s, esc(k[1]), esc(C.CARD_BLURBS.get(s, k[2])), icon("arrow")))
+                     % ("Services" if s in [x[0] for x in NAV[1][2]] else ("For patients" if s in [x[0] for x in NAV[3][2]] else "Practice"), s, esc(k[1]), esc(C.CARD_BLURBS.get(s, k[2])), icon("arrow")))
     return '<div class="cards">%s</div>' % "".join(cards)
 
 
@@ -877,8 +877,8 @@ def build_vercel():
     for src, dst in sorted(cm.items(), key=lambda kv: -len(kv[0])):
         pat = "^" + re.escape(src.strip("/")) + "/?$" if src != "/" else "^$"
         ht.append("RewriteRule %s %s%s [R=301,L,NE]" % (pat, R.NEW, dst))
-    ht.append("RewriteRule ^(category|tag|author)/ %s/journal [R=301,L]" % R.NEW)
-    ht.append("RewriteRule ^\\d{4}/ %s/journal [R=301,L]" % R.NEW)
+    ht.append("RewriteRule ^(category|tag|author)/ %s/blog [R=301,L]" % R.NEW)
+    ht.append("RewriteRule ^\\d{4}/ %s/blog [R=301,L]" % R.NEW)
     ht.append("RewriteRule ^ %s/ [R=301,L]" % R.NEW)
     open(os.path.join(d, "cmedjupiter.htaccess"), "w").write("\n".join(ht) + "\n")
     rows = ["old_url,new_url"] + ["https://cmedjupiter.com%s,%s%s" % (k, R.NEW, v) for k, v in sorted(cm.items())]
@@ -932,11 +932,11 @@ def build_assist():
     for label, href, kids in NAV:
         for slug, name, sub in (kids or []):
             pages.append({"t": name, "u": "/" + slug, "d": C.CARD_BLURBS.get(slug, sub)})
-    pages += [{"t": "Areas we serve", "u": "/areas-we-serve", "d": "Towns members come from, with drive times to the office."},
+    pages += [{"t": "Areas served", "u": "/areas-we-serve", "d": "Towns members come from, with drive times to the office."},
               {"t": "Contact and directions", "u": "/contact", "d": "Phone, address, hours and directions to the office."},
-              {"t": "Journal", "u": "/journal", "d": "Articles on concierge medicine and health."}]
+              {"t": "Blog", "u": "/blog", "d": "Articles on concierge medicine and health."}]
     pages += [{"t": "Concierge doctor near " + l["name"], "u": "/areas/" + l["slug"], "d": l["desc"]} for l in C.LOCATIONS]
-    pages += [{"t": p["title"], "u": "/journal/" + p["slug"], "d": p["excerpt"]} for p in J.POSTS]
+    pages += [{"t": p["title"], "u": "/blog/" + p["slug"], "d": p["excerpt"]} for p in J.POSTS]
     p = PRACTICE
     data = {"phone": p["phone"], "tel": p["tel"], "email": p["email"],
             "hours": "Mon to Thu 9 to 5, Fri 9 to 2", "faq": items, "pages": pages}

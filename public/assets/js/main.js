@@ -273,7 +273,9 @@
         const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
         const badge = live.querySelector("[data-live-badge]");
         if (badge) {
-          badge.innerHTML = '<b>' + esc(Number(data.rating).toFixed(1)) + '</b><span>Google rating from ' + esc(data.count) + ' reviews<br><span class="small muted">Live from Google</span></span>';
+          const stars = badge.querySelector(".stars");
+          badge.innerHTML = '<b>' + esc(Number(data.rating).toFixed(1)) + '</b><span>' + (stars ? stars.outerHTML : '') + 'Google rating from ' + esc(data.count) + ' reviews<br><span class="small muted">Live from Google</span></span>';
+          if (data.url) badge.href = data.url;
           badge.hidden = false;
         }
         const list = live.querySelector("[data-live-list]");

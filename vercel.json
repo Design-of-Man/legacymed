@@ -179,12 +179,12 @@
     },
     {
       "source": "/legacy-blog",
-      "destination": "/journal",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/legacy-blog/",
-      "destination": "/journal",
+      "destination": "/blog",
       "permanent": true
     },
     {
@@ -238,73 +238,83 @@
       "permanent": true
     },
     {
-      "source": "/blog",
-      "destination": "/journal",
+      "source": "/journal",
+      "destination": "/blog",
       "permanent": true
     },
     {
-      "source": "/blog/",
-      "destination": "/journal",
+      "source": "/journal/",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2",
-      "destination": "/journal/magnesium-low-and-high-levels",
+      "destination": "/blog/magnesium-low-and-high-levels",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2/",
-      "destination": "/journal/magnesium-low-and-high-levels",
+      "destination": "/blog/magnesium-low-and-high-levels",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus",
-      "destination": "/journal/nsaids-risks-and-side-effects",
+      "destination": "/blog/nsaids-risks-and-side-effects",
       "permanent": true
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus/",
-      "destination": "/journal/nsaids-risks-and-side-effects",
+      "destination": "/blog/nsaids-risks-and-side-effects",
       "permanent": true
     },
     {
       "source": "/2024/05/01/safety-of-over-the-counter-meds",
-      "destination": "/journal/over-the-counter-pain-medication-safety",
+      "destination": "/blog/over-the-counter-pain-medication-safety",
       "permanent": true
     },
     {
       "source": "/2024/05/01/safety-of-over-the-counter-meds/",
-      "destination": "/journal/over-the-counter-pain-medication-safety",
+      "destination": "/blog/over-the-counter-pain-medication-safety",
       "permanent": true
     },
     {
       "source": "/2024/10/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3",
-      "destination": "/journal/breast-cancer-screening-mammogram-age-40",
+      "destination": "/blog/breast-cancer-screening-mammogram-age-40",
       "permanent": true
     },
     {
       "source": "/2024/10/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3/",
-      "destination": "/journal/breast-cancer-screening-mammogram-age-40",
+      "destination": "/blog/breast-cancer-screening-mammogram-age-40",
       "permanent": true
     },
     {
       "source": "/2024/10/07/vitamins-that-can-be-taken-in-the-morning",
-      "destination": "/journal/vitamins-to-take-in-the-morning",
+      "destination": "/blog/vitamins-to-take-in-the-morning",
       "permanent": true
     },
     {
       "source": "/2024/10/07/vitamins-that-can-be-taken-in-the-morning/",
-      "destination": "/journal/vitamins-to-take-in-the-morning",
+      "destination": "/blog/vitamins-to-take-in-the-morning",
       "permanent": true
     },
     {
       "source": "/2024/12/11/bananas-are-an-amazing-source-of-nutrition",
-      "destination": "/journal/banana-nutrition-benefits",
+      "destination": "/blog/banana-nutrition-benefits",
       "permanent": true
     },
     {
       "source": "/2024/12/11/bananas-are-an-amazing-source-of-nutrition/",
-      "destination": "/journal/banana-nutrition-benefits",
+      "destination": "/blog/banana-nutrition-benefits",
+      "permanent": true
+    },
+    {
+      "source": "/journal/feed.xml",
+      "destination": "/blog/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/journal/:slug",
+      "destination": "/blog/:slug",
       "permanent": true
     },
     {
@@ -319,47 +329,47 @@
     },
     {
       "source": "/author/:path*",
-      "destination": "/journal",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/category/:path*",
-      "destination": "/journal",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/tag/:path*",
-      "destination": "/journal",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/feed",
-      "destination": "/journal/feed.xml",
+      "destination": "/blog/feed.xml",
       "permanent": true
     },
     {
       "source": "/comments/feed",
-      "destination": "/journal/feed.xml",
+      "destination": "/blog/feed.xml",
       "permanent": true
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed",
-      "destination": "/journal",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug",
-      "destination": "/journal",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})",
-      "destination": "/journal",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/:y(\\d{4})",
-      "destination": "/journal",
+      "destination": "/blog",
       "permanent": true
     }
   ]

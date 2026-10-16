@@ -82,12 +82,12 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'blood sugar, it supports balance, and it can change how some lab values read. Creatinine, the '
                       'blood test most often used to estimate kidney function, comes from muscle, so very low or very '
                       'high muscle mass can affect the result. Our article on [reading your kidney '
-                      'labs](/journal/egfr-kidney-lab-results-explained) explains why.'},
+                      'labs](/blog/egfr-kidney-lab-results-explained) explains why.'},
              {'type': 'p',
               'text': 'If you are weighing a weight-loss medicine, strength training deserves a place in the plan, '
                       'since the goal is to lose fat while keeping muscle. We cover that in [GLP-1 medications for '
-                      'weight](/journal/glp-1-medications-for-weight-loss). For balance specifically, see [balance and '
-                      'fall prevention](/journal/balance-and-fall-prevention).'},
+                      'weight](/blog/glp-1-medications-for-weight-loss). For balance specifically, see [balance and '
+                      'fall prevention](/blog/balance-and-fall-prevention).'},
              {'type': 'p',
               'text': 'At Legacy Medical, Dr. Shtern can talk through which exercises suit your joints, heart and '
                       'medicines, and how to fit strength work into a week that already has walking, golf or tennis in '
@@ -163,10 +163,10 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'items': ['**Waist circumference**, as above.',
                         '**Blood pressure**, measured carefully in the office and, ideally, at home as well.',
                         '**Blood sugar and cholesterol.** An A1c and a lipid panel show how weight is affecting '
-                        'metabolism. Our article on [prediabetes and A1c](/journal/prediabetes-and-a1c) explains the '
+                        'metabolism. Our article on [prediabetes and A1c](/blog/prediabetes-and-a1c) explains the '
                         'numbers.',
                         '**Strength and function.** How easily you rise from a chair, climb stairs and keep your '
-                        'balance. See [strength training after 50](/journal/strength-training-after-50).',
+                        'balance. See [strength training after 50](/blog/strength-training-after-50).',
                         '**Trends over time**, which say more than any single visit.']},
              {'type': 'h2', 'text': 'If you want to change your composition'},
              {'type': 'p',
@@ -183,7 +183,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'BMI is a starting point, and a reasonable one. It works best as one line in a fuller picture '
                       'that includes where weight sits, how strong you are, and what your blood work shows. The '
-                      'earlier article on [why obesity is considered a disease](/journal/obesity-is-a-disease) covers '
+                      'earlier article on [why obesity is considered a disease](/blog/obesity-is-a-disease) covers '
                       'the medical side of weight in more depth.'},
              {'type': 'p',
               'text': 'At Legacy Medical, labs are drawn in the office and the annual [Legacy '
@@ -268,7 +268,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                         '**Be consistent.** Fitness fades when training stops. A schedule you can keep through a '
                         'Florida summer matters more than an ambitious one.',
                         '**Pair it with strength work.** Stronger legs make every aerobic activity easier. See '
-                        '[strength training after 50](/journal/strength-training-after-50).']},
+                        '[strength training after 50](/blog/strength-training-after-50).']},
              {'type': 'h2', 'text': 'When to check with your doctor first'},
              {'type': 'p',
               'text': 'Talk with your doctor before stepping up intensity if you have heart disease, chest pain or '
@@ -278,8 +278,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Heat is also a factor here. Exercising outdoors in South Florida means planning around the '
                       'hottest hours and drinking enough fluid. Our article on [heat, hydration and your '
-                      'kidneys](/journal/heat-hydration-kidney-health) has practical tips, and [the benefits of '
-                      'exercising](/journal/health-benefits-of-exercise) covers the basics.'},
+                      'kidneys](/blog/heat-hydration-kidney-health) has practical tips, and [the benefits of '
+                      'exercising](/blog/health-benefits-of-exercise) covers the basics.'},
              {'type': 'p',
               'text': 'An ECG is done in the office at Legacy Medical, and the annual [Legacy '
                       'physical](/preventive-care) includes one, which gives Dr. Shtern a baseline before you train '
@@ -303,7 +303,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'This article covers what changes, what does not, and when poor sleep is worth bringing to your '
                       'doctor. For the basics of how much sleep adults need, see [are you getting enough '
-                      'sleep](/journal/how-much-sleep-do-adults-need).'},
+                      'sleep](/blog/how-much-sleep-do-adults-need).'},
              {'type': 'h2', 'text': 'What changes with age, and what does not'},
              {'type': 'p',
               'text': 'According to the National Institute on Aging, older adults [need about the same amount of sleep '
@@ -342,7 +342,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'be used long term](https://www.nia.nih.gov/health/sleep/sleep-and-older-adults). In older '
                       'adults, some sleep aids, including some sold over the counter, can cause next-day grogginess, '
                       'confusion and falls. Our article on [medication reviews for older '
-                      'adults](/journal/medication-review-older-adults) explains why every sleep aid belongs on your '
+                      'adults](/blog/medication-review-older-adults) explains why every sleep aid belongs on your '
                       'medicine list.'},
              {'type': 'h2', 'text': 'Sleep apnea'},
              {'type': 'p',
@@ -371,7 +371,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                         '**Get morning light and daytime activity.** Both help set your body clock.',
                         '**Limit late naps** to keep sleep pressure for the night.',
                         '**Watch caffeine and alcohol.** NIA suggests avoiding caffeine late in the day and avoiding '
-                        'alcohol, even small amounts. See [alcohol after 50](/journal/alcohol-after-50).',
+                        'alcohol, even small amounts. See [alcohol after 50](/blog/alcohol-after-50).',
                         '**Avoid large meals and lots of fluid** in the two to three hours before bed, as NIA '
                         'suggests.',
                         '**Keep a sleep diary for two weeks** before your appointment. It makes the conversation far '
@@ -469,8 +469,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'history and Lp(a). Insurance coverage varies, so ask your plan before you schedule.'},
              {'type': 'p',
               'text': 'It also helps to know the rest of your numbers first. Our articles on [ApoB and '
-                      'lipoprotein(a)](/journal/apob-and-lipoprotein-a) and [menopause and heart '
-                      'health](/journal/menopause-and-heart-health) cover other factors that can tip a borderline '
+                      'lipoprotein(a)](/blog/apob-and-lipoprotein-a) and [menopause and heart '
+                      'health](/blog/menopause-and-heart-health) cover other factors that can tip a borderline '
                       "decision. The USPSTF's separate guidance on [statin use for "
                       'prevention](https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/statin-use-in-adults-preventive-medication) '
                       'explains how risk estimates are used.'},
@@ -556,9 +556,9 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'ongoing; ask Dr. Shtern about the current state of the evidence.'},
              {'type': 'p',
               'text': 'A high Lp(a) or ApoB can also be one of the findings that makes a [coronary artery calcium '
-                      'score](/journal/coronary-artery-calcium-score) worth considering. The [Mediterranean '
-                      'diet](/journal/mediterranean-diet-heart-health) and [heart-healthy '
-                      'foods](/journal/heart-healthy-foods) still help with LDL and overall risk, even if they do '
+                      'score](/blog/coronary-artery-calcium-score) worth considering. The [Mediterranean '
+                      'diet](/blog/mediterranean-diet-heart-health) and [heart-healthy '
+                      'foods](/blog/heart-healthy-foods) still help with LDL and overall risk, even if they do '
                       'little for Lp(a).'},
              {'type': 'h2', 'text': 'Reading the result'},
              {'type': 'p',
@@ -657,12 +657,12 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'items': ['**Modest weight loss.** For many people, 5 to 7 percent of body weight is enough to move the '
                         'numbers.',
                         '**Regular activity.** Walking after meals, strength training and anything that gets you '
-                        'moving most days. See [strength training after 50](/journal/strength-training-after-50).',
+                        'moving most days. See [strength training after 50](/blog/strength-training-after-50).',
                         '**A steady eating pattern.** Fewer sugary drinks and refined starches, more vegetables, '
                         'legumes, whole grains and fiber. A Mediterranean-style pattern is a good fit.',
                         '**Sleep.** NHLBI links ongoing [sleep '
                         'deficiency](https://www.nhlbi.nih.gov/health/sleep-deprivation) to diabetes, among other '
-                        'conditions. See [how sleep changes with age](/journal/sleep-and-healthy-aging).',
+                        'conditions. See [how sleep changes with age](/blog/sleep-and-healthy-aging).',
                         '**A structured program**, if you like support. The CDC-recognized [National Diabetes '
                         'Prevention Program](https://www.cdc.gov/diabetes-prevention/index.html) is based on the '
                         'original study, and the CDC says lifestyle change can [cut the risk of type 2 diabetes in '
@@ -681,7 +681,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Prediabetes rarely travels alone. It often comes with high blood pressure, high triglycerides, '
                       'fatty liver and early changes in kidney function. Because Dr. Shtern is also a nephrologist, '
                       'she pays close attention to the kidney side; our article on [eGFR, creatinine and '
-                      'UACR](/journal/egfr-kidney-lab-results-explained) explains those tests. If weight is part of '
+                      'UACR](/blog/egfr-kidney-lab-results-explained) explains those tests. If weight is part of '
                       'the plan, you may also want to read about GLP-1 medications, covered elsewhere in the journal.'},
              {'type': 'p',
               'text': 'At Legacy Medical, labs including an A1c are drawn in the office, and [chronic disease '
@@ -755,8 +755,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'For older adults, the aim is to lose fat while keeping as much muscle and bone as possible, '
                       'which is why strength training and enough protein belong in the plan. See [strength training '
-                      'after 50](/journal/strength-training-after-50) and [body composition vs. '
-                      'BMI](/journal/body-composition-vs-bmi).'},
+                      'after 50](/blog/strength-training-after-50) and [body composition vs. '
+                      'BMI](/blog/body-composition-vs-bmi).'},
              {'type': 'h2', 'text': 'What happens when you stop'},
              {'type': 'p',
               'text': 'These are generally long-term treatments. In an extension of the STEP 1 trial, people who '
@@ -787,7 +787,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                         'What is the plan if side effects or cost become a problem?']},
              {'type': 'p',
               'text': 'Obesity is a chronic condition, as our earlier article on [why obesity is a '
-                      'disease](/journal/obesity-is-a-disease) explains, and it deserves the same careful approach as '
+                      'disease](/blog/obesity-is-a-disease) explains, and it deserves the same careful approach as '
                       'any other. At Legacy Medical, Dr. Shtern reviews every prescription you take and keeps track of '
                       'how a new one is going, with many follow-ups by [video](/telehealth). To talk it through in '
                       'person, book a complimentary [meet and greet](/meet-and-greet).'}],
@@ -882,14 +882,14 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'ul',
               'items': ['**Blood pressure**, in the office and at home.',
                         '**A lipid panel**, and consider asking about [ApoB and '
-                        'lipoprotein(a)](/journal/apob-and-lipoprotein-a).',
+                        'lipoprotein(a)](/blog/apob-and-lipoprotein-a).',
                         '**A1c or fasting glucose.**',
                         '**Waist size and weight trend.**',
                         '**Bone health**, especially after early menopause. See [bone density '
-                        'screening](/journal/bone-density-screening).']},
+                        'screening](/blog/bone-density-screening).']},
              {'type': 'p',
               'text': 'If your estimated risk is borderline, a [coronary artery calcium '
-                      'score](/journal/coronary-artery-calcium-score) is sometimes used to help decide on treatment, '
+                      'score](/blog/coronary-artery-calcium-score) is sometimes used to help decide on treatment, '
                       'as the [2019 prevention guideline](https://pubmed.ncbi.nlm.nih.gov/30879355/) describes.'},
              {'type': 'p',
               'text': 'It helps to bring a short history to your next visit: your age at menopause, any pregnancy '
@@ -991,20 +991,20 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'h2', 'text': 'Protecting your bones'},
              {'type': 'ul',
               'items': ['**Weight-bearing and strength exercise.** Walking, stair climbing and resistance training '
-                        'load the bones. See [strength training after 50](/journal/strength-training-after-50).',
+                        'load the bones. See [strength training after 50](/blog/strength-training-after-50).',
                         '**Enough calcium and vitamin D**, preferably from food, with supplements only if your doctor '
                         'suggests them. See our article on [vitamin '
-                        'supplements](/journal/multivitamin-supplements-who-needs-them).',
+                        'supplements](/blog/multivitamin-supplements-who-needs-them).',
                         '**No smoking, and modest or no alcohol.**',
                         '**Fall prevention**, since most fractures start with a fall. See [balance and fall '
-                        'prevention](/journal/balance-and-fall-prevention).',
+                        'prevention](/blog/balance-and-fall-prevention).',
                         '**A medicine review**, because some medicines thin bone and others raise fall risk.']},
              {'type': 'p',
               'text': 'If a scan shows osteoporosis, effective treatments exist, and the choice among them depends on '
                       'your fracture risk, kidney function and other medicines.'},
              {'type': 'p',
               'text': "Kidney function is part of choosing among bone medicines, an area where Dr. Shtern's background "
-                      'in nephrology is useful. At Legacy Medical, she can review your risk, order a scan when it is '
+                      'in Nephrology is useful. At Legacy Medical, she can review your risk, order a scan when it is '
                       'due and go through the result with you. To meet her, book a complimentary [meet and '
                       'greet](/meet-and-greet).'}],
   'sources': [],
@@ -1080,7 +1080,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Office readings can run high from nerves, or low because you rested in the waiting room. Home '
                       'readings, taken correctly, give a truer picture of your everyday blood pressure. Our guide on '
-                      '[how to check your blood pressure at home](/journal/home-blood-pressure-monitoring) explains '
+                      '[how to check your blood pressure at home](/blog/home-blood-pressure-monitoring) explains '
                       'the technique and how to keep a log.'},
              {'type': 'ul',
               'items': ['Measure at the same times each day, seated, after a few minutes of rest.',
@@ -1094,9 +1094,9 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Blood pressure, kidney function and brain health are linked through the same small blood '
                       'vessels. Kidney disease raises blood pressure, high blood pressure damages the kidneys, and '
                       'both affect which medicines are safest. This overlap is the reason Dr. Shtern, who is '
-                      'board-certified in internal medicine and nephrology, follows them together. Read more about '
+                      'board-certified in Internal Medicine and Nephrology, follows them together. Read more about '
                       '[hypertension care](/hypertension) and about [memory changes and when to see a '
-                      'doctor](/journal/memory-changes-when-to-see-a-doctor).'},
+                      'doctor](/blog/memory-changes-when-to-see-a-doctor).'},
              {'type': 'p',
               'text': 'At Legacy Medical, many blood pressure follow-ups work well by video with your home log in '
                       'hand, and members are seen the same or next business day when something comes up. To meet Dr. '
@@ -1205,7 +1205,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'At Legacy Medical, Dr. Shtern coordinates specialist care, which includes choosing a '
                       'dermatologist, making the referral and keeping track of what they find, so your records stay in '
                       'one place. If you split the year between Florida and somewhere else, our [guide for seasonal '
-                      'residents](/journal/snowbird-primary-care-palm-beach) covers how to keep care continuous. To '
+                      'residents](/blog/snowbird-primary-care-palm-beach) covers how to keep care continuous. To '
                       'meet her, book a complimentary [meet and greet](/meet-and-greet), or read more about '
                       '[preventive care](/preventive-care) at the practice.'}],
   'sources': [],
@@ -1278,7 +1278,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                         'bleeding.',
                         '**Acetaminophen and anti-inflammatory pain relievers**, which carry liver and stomach risks '
                         'of their own. See our article on [over-the-counter pain medication '
-                        'safety](/journal/over-the-counter-pain-medication-safety).']},
+                        'safety](/blog/over-the-counter-pain-medication-safety).']},
              {'type': 'p',
               'text': 'NIAAA also notes that many cough, cold and allergy remedies contain more than one ingredient, '
                       'and some liquid medicines contain alcohol themselves. Reading labels and asking your pharmacist '
@@ -1287,7 +1287,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Alcohol can make you drowsy at bedtime, but NIA advises [avoiding alcohol, even small amounts, '
                       'for better sleep](https://www.nia.nih.gov/health/sleep/sleep-and-older-adults) in older adults. '
-                      'See [how sleep changes with age](/journal/sleep-and-healthy-aging).'},
+                      'See [how sleep changes with age](/blog/sleep-and-healthy-aging).'},
              {'type': 'h2', 'text': 'Questions worth asking yourself'},
              {'type': 'p',
               'text': 'Drink sizes have grown. The CDC cautions that [a single beverage can contain more than one '
@@ -1309,7 +1309,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'At Legacy Medical, Dr. Shtern reviews every medicine you take, including over-the-counter '
                       'remedies, and can help you decide what makes sense for your health. Read more about [medication '
-                      'reviews](/journal/medication-review-older-adults), or book a complimentary [meet and '
+                      'reviews](/blog/medication-review-older-adults), or book a complimentary [meet and '
                       'greet](/meet-and-greet).'}],
   'sources': [],
   'stale_note': None,
@@ -1365,7 +1365,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'ul',
               'items': ['**Strength.** Leg and hip strength is the foundation. Rising from a chair without using your '
                         'hands is a simple exercise and a useful test. See [strength training after '
-                        '50](/journal/strength-training-after-50).',
+                        '50](/blog/strength-training-after-50).',
                         '**Balance practice.** Standing on one foot near a counter, heel-to-toe walking and similar '
                         'exercises, done safely and progressed slowly.',
                         '**Tai chi.** NCCIH notes that tai chi [may improve balance and help prevent falls in older '
@@ -1382,13 +1382,13 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'ul',
               'items': ['**A medicine review**, looking for drugs that cause drowsiness, dizziness or a drop in blood '
                         'pressure on standing. See [why a full medication review '
-                        'matters](/journal/medication-review-older-adults).',
+                        'matters](/blog/medication-review-older-adults).',
                         '**Blood pressure lying and standing**, to catch drops that cause lightheadedness.',
                         '**Vision and hearing**, and whether glasses or hearing aids are up to date.',
                         '**Feet and footwear.**',
                         '**A quick look at gait, strength and balance.**',
                         '**Bone health**, because the same fall is far more dangerous with thin bones. See [bone '
-                        'density screening](/journal/bone-density-screening).']},
+                        'density screening](/blog/bone-density-screening).']},
              {'type': 'p',
               'text': "Vitamin D deficiency is on the CDC's list of fall risk factors, and a simple blood test can "
                       'check your level. The CDC also offers a one-page [chair rise exercise and other STEADI '
@@ -1453,7 +1453,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'The 2024 Lancet Commission on dementia prevention included hearing loss among [14 modifiable '
                       'risk factors for dementia](https://pubmed.ncbi.nlm.nih.gov/39096926/), alongside high blood '
                       'pressure, high LDL cholesterol, physical inactivity and others. Our article on [midlife blood '
-                      'pressure and brain health](/journal/blood-pressure-and-brain-health) covers another item on '
+                      'pressure and brain health](/blog/blood-pressure-and-brain-health) covers another item on '
                       'that list.'},
              {'type': 'h2', 'text': 'What the ACHIEVE trial found'},
              {'type': 'p',
@@ -1512,12 +1512,12 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Your internist can look in the ears for wax or infection, review medicines that can affect '
                       'hearing or cause ringing, and refer you to an audiologist or ear, nose and throat specialist. '
                       'Hearing also matters for safety, since it is part of how we keep our balance and notice what is '
-                      'around us. See [balance and fall prevention](/journal/balance-and-fall-prevention).'},
+                      'around us. See [balance and fall prevention](/blog/balance-and-fall-prevention).'},
              {'type': 'p',
               'text': 'At Legacy Medical, Dr. Shtern coordinates referrals and keeps track of what specialists find, '
                       "and family members are welcome at visits with the patient's permission. If memory is part of "
                       'the concern, read [memory changes: what is '
-                      'normal](/journal/memory-changes-when-to-see-a-doctor), or book a complimentary [meet and '
+                      'normal](/blog/memory-changes-when-to-see-a-doctor), or book a complimentary [meet and '
                       'greet](/meet-and-greet).'}],
   'sources': [],
   'stale_note': None,
@@ -1543,7 +1543,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'A good annual visit is more than a checklist. It is the time to look at trends: weight and '
                       'waist, blood pressure at home and in the office, cholesterol, blood sugar and kidney function, '
                       'compared with last year and the year before. Our article on [your annual '
-                      'physical](/journal/annual-physical-what-you-need) covers the screenings the evidence supports '
+                      'physical](/blog/annual-physical-what-you-need) covers the screenings the evidence supports '
                       'by age.'},
              {'type': 'p',
               'text': 'If you have Medicare, it helps to know the difference between visits. Medicare Part B covers a '
@@ -1564,16 +1564,16 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'ul',
               'items': ['Set one fitness goal for the year, such as walking briskly for 30 minutes most days.',
                         'Add strength training twice a week. See [strength training after '
-                        '50](/journal/strength-training-after-50).',
+                        '50](/blog/strength-training-after-50).',
                         'Track something simple, such as how long a familiar walk takes. See [VO2 max and '
-                        'fitness](/journal/vo2-max-and-fitness-for-longevity).']},
+                        'fitness](/blog/vo2-max-and-fitness-for-longevity).']},
              {'type': 'h2', 'text': 'Know your numbers, and the ones worth adding'},
              {'type': 'p',
               'text': 'Blood pressure, LDL cholesterol, A1c and kidney function do most of the work in predicting '
                       'heart attack, stroke, diabetes and kidney disease. Beyond those, a few tests can add useful '
                       'detail for some people: a one-time lipoprotein(a), an ApoB, or a coronary calcium score when a '
                       'treatment decision is close. Our article on [ApoB and '
-                      'lipoprotein(a)](/journal/apob-and-lipoprotein-a) explains when they help.'},
+                      'lipoprotein(a)](/blog/apob-and-lipoprotein-a) explains when they help.'},
              {'type': 'p',
               'text': 'More testing is not automatically better. Each test should answer a question that would change '
                       'what you do. Tests that are not backed by screening guidelines can turn up incidental findings '
@@ -1657,7 +1657,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'practice that bills insurance for care, or charges more than the monthly limits, likely does '
                       'not meet the definition. The IRS has not issued a ruling on concierge fees in general. We '
                       'explain the broader differences in [concierge medicine and direct primary care are not the '
-                      'same](/journal/concierge-vs-direct-primary-care).'},
+                      'same](/blog/concierge-vs-direct-primary-care).'},
              {'type': 'h2', 'text': 'Why HSA eligibility matters'},
              {'type': 'p',
               'text': 'An HSA comes with rules about who may contribute. The IRS describes those rules in [Publication '
@@ -1703,11 +1703,11 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Our [insurance and fees](/insurance-and-fees) page explains how billing works, and our '
                       '[membership](/membership) page outlines what members receive. For a wider look at costs, see '
-                      '[how much concierge medicine costs](/journal/concierge-medicine-cost).'},
+                      '[how much concierge medicine costs](/blog/concierge-medicine-cost).'},
              {'type': 'p',
               'text': 'If you would like to go over the agreement in person before you decide, Dr. Shtern offers a '
-                      'complimentary [meet and greet](/meet-and-greet) at our Palm Beach Gardens office. There is no '
-                      'obligation, and you can take the paperwork home to show your advisor.'}],
+                      'complimentary [meet and greet](/meet-and-greet) at our Palm Beach Gardens office. You can take the paperwork '
+                      'home to show your advisor.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -1774,7 +1774,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Each practice defines this differently, so ask for the agreement in writing and read what the '
                       'fee includes. Our article on [how much concierge medicine '
-                      'costs](/journal/concierge-medicine-cost) has questions that help.'},
+                      'costs](/blog/concierge-medicine-cost) has questions that help.'},
              {'type': 'h2', 'text': 'Questions to ask about Medicare'},
              {'type': 'p',
               'text': 'A few direct questions will tell you most of what you need to know before joining a concierge '
@@ -1800,8 +1800,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Many of our patients are retirees and seasonal residents who want a doctor they can reach '
                       'easily. If you would like to see how the practice would fit with your Medicare coverage, start '
-                      'with a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. There is no obligation, '
-                      'and family members are welcome.'}],
+                      'with a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. Family members '
+                      'are welcome.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -1861,7 +1861,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'care, or charges more than those limits, likely does not fit the definition. The IRS has not '
                       'issued a ruling on concierge fees in general. If this matters to you, ask a tax advisor before '
                       'you count on using HSA money. We go into more detail in [Can you pay concierge fees from an HSA '
-                      'or FSA?](/journal/hsa-fsa-concierge-medicine-fees)'},
+                      'or FSA?](/blog/hsa-fsa-concierge-medicine-fees)'},
              {'type': 'h2', 'text': 'What Florida law says'},
              {'type': 'p',
               'text': 'Florida addresses these arrangements in [section 624.27 of the Florida '
@@ -1882,18 +1882,18 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Neither model replaces health insurance for the care a primary care office cannot provide. If '
                       'you are weighing the options, [concierge vs. traditional primary '
                       'care](/concierge-vs-traditional-primary-care) lays out another useful comparison, and [what is '
-                      'concierge medicine](/journal/what-is-concierge-medicine) covers the basics.'},
+                      'concierge medicine](/blog/what-is-concierge-medicine) covers the basics.'},
              {'type': 'h2', 'text': 'Where Legacy Medical stands'},
              {'type': 'p',
-              'text': 'Legacy Medical is a concierge internal medicine practice. We bill insurance, including '
+              'text': 'Legacy Medical is a Concierge Internal Medicine practice. We bill insurance, including '
                       'Medicare, Aetna, Cigna and BlueCross BlueShield, for visits, labs and tests, and members pay an '
                       'annual membership fee that is not billed to insurance. Members are seen the same or next '
                       'business day and can reach the practice by phone at any hour. Our [insurance and '
                       'fees](/insurance-and-fees) page explains the details.'},
              {'type': 'p',
               'text': 'If you would like to understand how it would work with your own coverage, start with a '
-                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. There is no obligation, and '
-                      'you are welcome to bring your insurance card and your questions.'}],
+                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. You are welcome to bring '
+                      'your insurance card and your questions.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -1967,12 +1967,12 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                         'What are the cancellation and refund terms if I move or my needs change?']},
              {'type': 'p',
               'text': 'We have a longer list in [12 questions to ask at a concierge meet and '
-                      'greet](/journal/questions-to-ask-a-concierge-doctor), and a broader look at the trade-offs in '
-                      '[concierge medicine pros and cons](/journal/concierge-medicine-pros-and-cons).'},
+                      'greet](/blog/questions-to-ask-a-concierge-doctor), and a broader look at the trade-offs in '
+                      '[concierge medicine pros and cons](/blog/concierge-medicine-pros-and-cons).'},
              {'type': 'h2', 'text': 'Where Legacy Medical fits'},
              {'type': 'p',
               'text': 'Legacy Medical is an independent practice led by Dr. Yana Shtern, MD. She is board certified by '
-                      'the American Board of Internal Medicine in internal medicine and nephrology, and has nearly '
+                      'the American Board of Internal Medicine in Internal Medicine and Nephrology, and has nearly '
                       'twenty years of practice in New York City and Palm Beach County. She holds privileges at '
                       'Jupiter Medical Center and Palm Beach Gardens Medical Center and has been named a Castle '
                       "Connolly Top Doctor since 2023. You can read more on [Dr. Shtern's page](/dr-yana-shtern)."},
@@ -1982,8 +1982,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'Medicare, is billed for visits, labs and tests, and the annual fee is explained in person.'},
              {'type': 'p',
               'text': 'The simplest way to compare is to sit down with the doctor. Dr. Shtern offers a complimentary '
-                      '[meet and greet](/meet-and-greet) at our Palm Beach Gardens office, with no obligation. Bring '
-                      'your questions, and bring a family member if that helps.'}],
+                      '[meet and greet](/meet-and-greet) at our Palm Beach Gardens office. Bring your questions, and '
+                      'bring a family member if that helps.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -2046,7 +2046,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'medical care and the membership fee covers its wellness program. That is one common structure. '
                       'Independent practices set their own terms, so the only way to compare is to ask each one '
                       'directly. We cover the differences in more detail in [Concierge medicine vs. '
-                      'MDVIP](/journal/concierge-medicine-vs-mdvip).'},
+                      'MDVIP](/blog/concierge-medicine-vs-mdvip).'},
              {'type': 'h2', 'text': 'Questions to ask any practice about cost'},
              {'type': 'p',
               'text': 'Before you compare fees, it helps to know exactly what each one buys. These questions tend to '
@@ -2060,7 +2060,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Some people also ask whether the fee can come from a health savings account. The answer is less '
                       'simple than it sounds, and we explain why in [Can you pay concierge fees from an HSA or '
-                      'FSA?](/journal/hsa-fsa-concierge-medicine-fees)'},
+                      'FSA?](/blog/hsa-fsa-concierge-medicine-fees)'},
              {'type': 'h2', 'text': 'How Legacy Medical handles the fee'},
              {'type': 'p',
               'text': 'Legacy Medical charges an annual membership fee and bills insurance, including Medicare, Aetna, '
@@ -2075,8 +2075,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'page](/membership) outlines what members receive.'},
              {'type': 'p',
               'text': 'If you would like to talk it through, the first step is a complimentary [meet and '
-                      'greet](/meet-and-greet) with Dr. Shtern at our Palm Beach Gardens office. There is no '
-                      'obligation, and family members are welcome to come along.'}],
+                      'greet](/meet-and-greet) with Dr. Shtern at our Palm Beach Gardens office. Family members are '
+                      'welcome to come along.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -2090,7 +2090,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              'insurance, hospitals, family updates and records.',
   'blocks': [{'type': 'p',
               'text': 'Most concierge practices offer a first meeting before you join. It is a chance to see the '
-                      'office, meet the doctor and ask direct questions, with no obligation. The trouble is that many '
+                      'office, meet the doctor and ask direct questions. The trouble is that many '
                       'people walk in without a list and walk out having talked mostly about the weather.'},
              {'type': 'p',
               'text': 'Below are twelve questions we think are worth bringing, grouped by theme, with a short note on '
@@ -2100,16 +2100,16 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'h3', 'text': '1. What is your training, and are you board certified?'},
              {'type': 'p',
               'text': 'A medical license is what allows a doctor to practice. Board certification is a separate '
-                      'credential in a specialty, such as internal medicine. You can check certification yourself on '
+                      'credential in a specialty, such as Internal Medicine. You can check certification yourself on '
                       'the [American Board of Internal Medicine verification '
                       'page](https://www.abim.org/verify-physician/), and our guide to [choosing a concierge '
-                      'doctor](/journal/how-to-choose-a-concierge-doctor) walks through the license lookup as well.'},
+                      'doctor](/blog/how-to-choose-a-concierge-doctor) walks through the license lookup as well.'},
              {'type': 'h3', 'text': '2. Which hospitals do you have privileges at?'},
              {'type': 'p',
               'text': 'If you are admitted, the hospital where your doctor has privileges shapes how involved they can '
                       'be. Ask which local hospitals they work with and what they do when a patient is admitted. We '
                       'explain what that can look like in [a concierge doctor during a hospital '
-                      'stay](/journal/concierge-doctor-hospital-stay).'},
+                      'stay](/blog/concierge-doctor-hospital-stay).'},
              {'type': 'h3', 'text': '3. Who covers when you are away?'},
              {'type': 'p',
               'text': 'Every doctor takes vacations and attends conferences. A solo practice in particular should be '
@@ -2132,7 +2132,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Fees vary widely between practices, and so does what they include. Ask for the answer in '
                       'writing: which visits, tests and services are part of membership, and which are billed '
-                      'separately. Our piece on [what concierge medicine costs](/journal/concierge-medicine-cost) '
+                      'separately. Our piece on [what concierge medicine costs](/blog/concierge-medicine-cost) '
                       'explains what tends to shape the fee.'},
              {'type': 'h3', 'text': '8. What gets billed to my insurance or to Medicare?'},
              {'type': 'p',
@@ -2199,7 +2199,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'A state license is the legal requirement to practice medicine. Board certification is a '
                       "separate credential that shows a doctor has met a specialty board's standards. For internists, "
                       'that board is the American Board of Internal Medicine, which also certifies subspecialties such '
-                      'as nephrology and cardiology.'},
+                      'as Nephrology and cardiology.'},
              {'type': 'p',
               'text': "Anyone can look up a physician's status on the [ABIM verification "
                       'page](https://www.abim.org/verify-physician/). Search by name and state, and note whether '
@@ -2226,7 +2226,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Ask which hospitals the doctor works with and what happens when a member is admitted. Do they '
                       'visit, call the hospital team, review results, help plan the discharge? Our article on [a '
-                      'concierge doctor during a hospital stay](/journal/concierge-doctor-hospital-stay) goes into '
+                      'concierge doctor during a hospital stay](/blog/concierge-doctor-hospital-stay) goes into '
                       'more detail. For reference, [Dr. Yana Shtern](/dr-yana-shtern) has privileges at Jupiter '
                       'Medical Center and Palm Beach Gardens Medical Center.'},
              {'type': 'h2', 'text': 'Understand the model and the money'},
@@ -2260,7 +2260,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'thought them through will describe them without hesitation.'},
              {'type': 'p',
               'text': 'It is reasonable to meet more than one practice before deciding. We keep a printable list of '
-                      '[questions to ask at a concierge meet and greet](/journal/questions-to-ask-a-concierge-doctor) '
+                      '[questions to ask at a concierge meet and greet](/blog/questions-to-ask-a-concierge-doctor) '
                       'that works for any practice, not only ours.'},
              {'type': 'h2', 'text': 'A few cautions'},
              {'type': 'p',
@@ -2277,8 +2277,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'unhurried conversation is usually more reliable.'},
              {'type': 'p',
               'text': 'If you would like to meet us as part of your search, the first visit at Legacy Medical is a '
-                      'complimentary [meet and greet with Dr. Shtern](/meet-and-greet), with no obligation. Bring your '
-                      'questions and your list of medicines, and we will answer as plainly as we can.'}],
+                      'complimentary [meet and greet with Dr. Shtern](/meet-and-greet). Bring your questions '
+                      'and your list of medicines, and we will answer as plainly as we can.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -2388,14 +2388,14 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
   'modified': '2026-10-12T09:00:00',
   'category': 'Kidney health',
   'excerpt': 'Kidneys, blood pressure, diabetes and medicines are closely linked. Here is why it helps to have one '
-             'doctor trained in both internal medicine and nephrology.',
+             'doctor trained in both Internal Medicine and Nephrology.',
   'blocks': [{'type': 'p',
               'text': 'Most people meet a nephrologist, a kidney specialist, only after a lab result raises a flag. By '
                       'then they already have a primary care doctor, a cardiologist and perhaps an endocrinologist, '
                       'each looking at one part of the picture.'},
              {'type': 'p',
               'text': 'Dr. Yana Shtern is board certified by the American Board of Internal Medicine in both internal '
-                      'medicine and nephrology. That combination matters more than it might sound in a primary care '
+                      'medicine and Nephrology. That combination matters more than it might sound in a primary care '
                       'practice, because the kidneys sit at the center of several conditions that are common after '
                       '50.'},
              {'type': 'h2', 'text': 'Kidney disease is common and usually silent'},
@@ -2418,7 +2418,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'then have a harder time removing extra fluid, which can raise blood pressure further.'},
              {'type': 'p',
               'text': 'The CDC estimates that more than 2 in 10 adults with high blood pressure have CKD. So when '
-                      'blood pressure is hard to control, a doctor trained in nephrology will look at the kidneys as a '
+                      'blood pressure is hard to control, a doctor trained in Nephrology will look at the kidneys as a '
                       'possible cause as well as a possible victim. Our [high blood pressure page](/hypertension) '
                       'describes how we approach it.'},
              {'type': 'h2', 'text': 'Diabetes, kidneys and the heart'},
@@ -2446,14 +2446,14 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Over-the-counter pain relievers are a common example. The NIDDK warns that NSAIDs such as '
                       'ibuprofen and naproxen can damage the kidneys, especially in people with kidney disease, '
                       'diabetes or high blood pressure. We cover this in more detail in [NSAIDs: risks and side '
-                      'effects](/journal/nsaids-risks-and-side-effects).'},
+                      'effects](/blog/nsaids-risks-and-side-effects).'},
              {'type': 'p',
               'text': 'Some blood pressure medicines, on the other hand, can help. The NIDDK notes that two classes, '
                       'ACE inhibitors and ARBs, may slow kidney disease. Choosing among options, and checking labs '
                       'after a change, is easier when one doctor is watching the whole list.'},
              {'type': 'h2', 'text': 'What this looks like in practice'},
              {'type': 'p',
-              'text': 'Having both trainings in one doctor does not replace a separate nephrology practice for '
+              'text': 'Having both trainings in one doctor does not replace a separate Nephrology practice for '
                       'everyone. People with advanced kidney disease, dialysis or a transplant usually need a '
                       'dedicated kidney team. For many patients with early or stable CKD, though, it can mean fewer '
                       'handoffs and one clear plan.'},
@@ -2558,7 +2558,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Some tests are done because of your history rather than a population recommendation. A kidney '
                       'panel for someone on blood pressure medicine is a common example. Our article on the [executive '
-                      'physical](/journal/executive-physical-exam-what-to-expect) discusses how extra testing fits in, '
+                      'physical](/blog/executive-physical-exam-what-to-expect) discusses how extra testing fits in, '
                       'and when more is not better.'},
              {'type': 'h2', 'text': "Medicare's wellness visit is not a physical"},
              {'type': 'p',
@@ -2570,7 +2570,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'That visit is useful, but it is different from a hands-on exam. If you have Medicare and want '
                       'to understand what is and is not billed at a concierge practice, see our piece on [whether '
-                      'Medicare covers concierge medicine](/journal/does-medicare-cover-concierge-medicine).'},
+                      'Medicare covers concierge medicine](/blog/does-medicare-cover-concierge-medicine).'},
              {'type': 'h2', 'text': 'The Legacy physical'},
              {'type': 'p',
               'text': 'At Legacy Medical, members have an annual Legacy physical with labs and an ECG. Labs are drawn '
@@ -2637,7 +2637,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Recent lab results, imaging reports, ECGs, specialist letters and a vaccine record are the '
                       'core. We go through the steps in [how to move your medical records to a Florida '
-                      'doctor](/journal/transfer-medical-records-to-florida-doctor).'},
+                      'doctor](/blog/transfer-medical-records-to-florida-doctor).'},
              {'type': 'h2', 'text': 'Check how your insurance works in each state'},
              {'type': 'p',
               'text': 'Seasonal residents on Medicare should look closely at how their coverage handles two addresses. '
@@ -2647,7 +2647,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'comparison](https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/your-coverage-options/compare-original-medicare-medicare-advantage)).'},
              {'type': 'p',
               'text': 'That difference can decide whether a routine visit in Florida is covered at all. Our article on '
-                      '[Medicare when you live in two states](/journal/medicare-living-in-two-states) covers drug '
+                      '[Medicare when you live in two states](/blog/medicare-living-in-two-states) covers drug '
                       'plans, pharmacies and enrollment dates as well.'},
              {'type': 'h2', 'text': 'Know what video visits can and cannot do while you are away'},
              {'type': 'p',
@@ -2662,8 +2662,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'to call over the summer for a question, and who to see in person if something new comes up.'},
              {'type': 'h2', 'text': 'How we work with seasonal residents'},
              {'type': 'p',
-              'text': 'Legacy Medical is a small concierge internal medicine practice in Palm Beach Gardens led by Dr. '
-                      'Yana Shtern, who is board certified in internal medicine and nephrology. Members can reach the '
+              'text': 'Legacy Medical is a small Concierge Internal Medicine practice in Palm Beach Gardens led by Dr. '
+                      'Yana Shtern, who is board certified in Internal Medicine and Nephrology. Members can reach the '
                       'practice by phone around the clock and are seen the same or next business day while they are in '
                       'town. Labs are drawn in the office, so a season can start with current results rather than a '
                       'week of waiting.'},
@@ -2720,7 +2720,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'the past five years or so:'},
              {'type': 'ul',
               'items': ['Your current primary care doctor',
-                        'Specialists, such as cardiology, nephrology, endocrinology, gastroenterology or dermatology',
+                        'Specialists, such as cardiology, Nephrology, endocrinology, gastroenterology or dermatology',
                         'Hospitals where you had a stay, emergency visit or procedure',
                         'Imaging centers and outside labs',
                         'Any urgent care or walk-in clinic you used for something significant']},
@@ -2763,7 +2763,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'If you split your year between two places, this is also the time to agree on how your doctors '
                       "will share updates. We cover that in [a seasonal resident's guide to primary care in Palm "
-                      'Beach](/journal/snowbird-primary-care-palm-beach).'},
+                      'Beach](/blog/snowbird-primary-care-palm-beach).'},
              {'type': 'h2', 'text': 'Moving your records to Legacy Medical'},
              {'type': 'p',
               'text': 'If you are joining Legacy Medical, sending your records ahead of your first visit gives Dr. '
@@ -2864,7 +2864,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'for services Medicare already covers '
                       '([Medicare.gov](https://www.medicare.gov/coverage/concierge-care)). We explain this in more '
                       'detail in [does Medicare cover concierge '
-                      'medicine?](/journal/does-medicare-cover-concierge-medicine).'},
+                      'medicine?](/blog/does-medicare-cover-concierge-medicine).'},
              {'type': 'p',
               'text': 'At Legacy Medical, insurance, including Medicare, is billed for visits, labs and tests, and the '
                       'annual membership fee is separate. You can read more on our [insurance and '
@@ -2872,7 +2872,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'If you are weighing your options this fall and want to see how a concierge practice would work '
                       'alongside your coverage, a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern is a '
-                      'good place to talk it through. There is no obligation.'}],
+                      'good place to talk it through.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -2956,7 +2956,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'missed. Ask your nephrologist and dialysis dietitian to go over it with you before the season '
                       'starts, not during a storm watch. If you have kidney disease but are not yet on dialysis, it is '
                       'still worth asking how a missed week of usual care would affect you. Our [kidney '
-                      "care](/kidney-care) page explains how Dr. Shtern's nephrology training shapes the care she "
+                      "care](/kidney-care) page explains how Dr. Shtern's Nephrology training shapes the care she "
                       'provides.'},
              {'type': 'h2', 'text': 'Heat after the storm'},
              {'type': 'p',
@@ -2965,7 +2965,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       "more likely to take medicines that affect the body's ability to control temperature or sweat "
                       '([CDC](https://www.cdc.gov/heat-health/risk-factors/heat-and-older-adults-aged-65.html)). Plan '
                       'where you would go to cool down, and who would check on you. We cover this more in [heat, '
-                      'hydration and your kidneys in South Florida](/journal/heat-hydration-kidney-health).'},
+                      'hydration and your kidneys in South Florida](/blog/heat-hydration-kidney-health).'},
              {'type': 'p',
               'text': 'If you would like to go over your own hurricane health plan with a doctor who knows your '
                       'medicines and history, you are welcome to start with a complimentary [meet and '
@@ -3025,7 +3025,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Pain relievers deserve a mention too. The National Kidney Foundation points out that some pain '
                       'medicines, including the NSAID family that contains ibuprofen and naproxen, can harm the '
                       'kidneys ([NKF](https://www.kidney.org/kidney-topics/pain-medicines-and-kidney-disease)). We '
-                      'explain more in [NSAIDs: risks and side effects](/journal/nsaids-risks-and-side-effects).'},
+                      'explain more in [NSAIDs: risks and side effects](/blog/nsaids-risks-and-side-effects).'},
              {'type': 'p',
               'text': 'None of this means you should stop a medicine on your own. CDC is clear on that point: do not '
                       'stop or change your medicines until you talk to your doctor. Many of these drugs protect the '
@@ -3058,7 +3058,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'anything that feels like an emergency, call 911.'},
              {'type': 'h2', 'text': 'Where a nephrologist helps'},
              {'type': 'p',
-              'text': 'Dr. Yana Shtern is board certified in both internal medicine and nephrology, so questions about '
+              'text': 'Dr. Yana Shtern is board certified in both Internal Medicine and Nephrology, so questions about '
                       'kidney function, blood pressure medicines and fluids sit within one practice. Labs are drawn in '
                       'our office, which makes it straightforward to check kidney function when the season or a '
                       'medicine changes. You can read more on our [kidney care](/kidney-care) and '
@@ -3156,7 +3156,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'while it is fresh.'},
              {'type': 'p',
               'text': 'If you have noticed changes in thinking or memory, our article on [memory changes and when to '
-                      'see a doctor](/journal/memory-changes-when-to-see-a-doctor) lists the signs the National '
+                      'see a doctor](/blog/memory-changes-when-to-see-a-doctor) lists the signs the National '
                       'Institute on Aging suggests raising. The [for families](/for-families) page describes how '
                       'Legacy Medical works with adult children and spouses.'},
              {'type': 'p',
@@ -3167,8 +3167,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'If you are weighing whether a smaller practice suits your parent, the first visit is a '
                       'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern at our Palm Beach Gardens '
-                      'office, with no obligation. Family members are welcome to come along and ask their own '
-                      'questions.'}],
+                      'office. Family members are welcome to come along and ask their own questions.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -3235,9 +3234,9 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'fades. If they persist beyond a few weeks, NIA advises talking with a doctor.'},
              {'type': 'p',
               'text': 'Medicines deserve special attention because older adults often take several. Our article on '
-                      '[why a full medication review matters](/journal/medication-review-older-adults) explains how a '
+                      '[why a full medication review matters](/blog/medication-review-older-adults) explains how a '
                       'doctor looks for drugs that may affect thinking. Sleep matters too; see [how much sleep adults '
-                      'need](/journal/how-much-sleep-do-adults-need).'},
+                      'need](/blog/how-much-sleep-do-adults-need).'},
              {'type': 'h2', 'text': 'What Medicare covers for memory concerns'},
              {'type': 'p',
               'text': 'For people with Medicare, the [yearly Wellness '
@@ -3271,8 +3270,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'possible.'},
              {'type': 'p',
               'text': 'If you would like to meet the doctor before deciding anything, the first visit at Legacy '
-                      'Medical is a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern, with no '
-                      'obligation. Family members are welcome.'}],
+                      'Medical is a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. Family '
+                      'members are welcome.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -3333,11 +3332,11 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'warns that nonsteroidal anti-inflammatory drugs (NSAIDs), including ibuprofen and naproxen, can '
                       'damage the kidneys, and that NSAIDs appear in many headache, pain and cold products under '
                       'different brand names. Our article on [NSAID risks and side '
-                      'effects](/journal/nsaids-risks-and-side-effects) covers this in more detail.'},
+                      'effects](/blog/nsaids-risks-and-side-effects) covers this in more detail.'},
              {'type': 'p',
-              'text': 'Dr. Shtern is board-certified in both internal medicine and nephrology, so kidney function is '
+              'text': 'Dr. Shtern is board-certified in both Internal Medicine and Nephrology, so kidney function is '
                       'something she looks at as a matter of course. If you want to understand the numbers on your own '
-                      'lab report, see [reading your kidney labs](/journal/egfr-kidney-lab-results-explained), and our '
+                      'lab report, see [reading your kidney labs](/blog/egfr-kidney-lab-results-explained), and our '
                       '[kidney care](/kidney-care) page describes how the practice approaches kidney health.'},
              {'type': 'h2', 'text': 'How to prepare for a medication review'},
              {'type': 'p',
@@ -3367,7 +3366,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'with the prescribing specialist when needed.'},
              {'type': 'p',
               'text': 'If you would like to bring your bag of bottles and meet the doctor first, the first visit is a '
-                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern, with no obligation.'}],
+                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -3453,16 +3452,16 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Blood pressure is closely tied to kidney health. NIDDK calls controlling blood pressure the '
                       'most important step in treating kidney disease, and it warns that NSAID pain relievers such as '
                       'ibuprofen and naproxen can harm the kidneys. Our guide to [checking blood pressure at '
-                      'home](/journal/home-blood-pressure-monitoring) is a practical place to start.'},
+                      'home](/blog/home-blood-pressure-monitoring) is a practical place to start.'},
              {'type': 'p',
-              'text': 'Dr. Shtern is board-certified in internal medicine and nephrology. Our article on [why it helps '
-                      'when your internist is also a nephrologist](/journal/internist-and-nephrologist) explains how '
+              'text': 'Dr. Shtern is board-certified in Internal Medicine and Nephrology. Our article on [why it helps '
+                      'when your internist is also a nephrologist](/blog/internist-and-nephrologist) explains how '
                       "that overlap works day to day, and [kidney care](/kidney-care) describes the practice's "
                       'approach. At Legacy Medical, labs are drawn in the office.'},
              {'type': 'p',
               'text': 'If you have kidney results you would like to understand better, the first visit is a '
-                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern, with no obligation. Bring your '
-                      'recent reports along.'}],
+                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. Bring your recent '
+                      'reports along.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -3549,13 +3548,13 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'sleep. Look for patterns over weeks rather than reacting to single days.'},
              {'type': 'p',
               'text': 'Blood pressure and kidney health are closely linked, which is one reason Dr. Shtern, who is '
-                      'board-certified in internal medicine and nephrology, pays close attention to both. Our '
+                      'board-certified in Internal Medicine and Nephrology, pays close attention to both. Our '
                       "[hypertension](/hypertension) page describes the practice's approach, and [reading your kidney "
-                      'labs](/journal/egfr-kidney-lab-results-explained) explains the related lab tests. Many blood '
+                      'labs](/blog/egfr-kidney-lab-results-explained) explains the related lab tests. Many blood '
                       'pressure follow-ups work well by [video visit](/telehealth), with your home log in hand.'},
              {'type': 'p',
               'text': 'If you would like to bring your monitor and meet the doctor, the first visit at Legacy Medical '
-                      'is a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern, with no obligation.'}],
+                      'is a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None}]
