@@ -13,6 +13,12 @@ Nothing below was guessed on the site. Each item is either left out of the copy 
 - **Privacy Officer phone (561) 316-7199** in the HIPAA notice (carried over unchanged). Confirm it is still current.
 - **Healthgrades/US News/Zocdoc listings** still show old Jupiter or Brooklyn addresses (see audit). Claim and correct.
 
+## From the Oct 16, 2026 client round
+- **Instagram handle.** The client asked for an Instagram section. No account could be found (the old site's Instagram icon pointed at LinkedIn). Set `INSTAGRAM = {"handle": "...", "url": "https://www.instagram.com/..."}` in content.py and the home page section plus the footer icon appear on the next build.
+- **Hero film source.** The coastline clip supplied on Oct 16 is a 1280x720 export (`DJI_..._0426_D_1.mov`), not the 4K camera file. It plays fine but is soft on large screens. Ask for the original from the drone and re-encode per `_dev/video/PROVENANCE.md`.
+- **Google reviews.** The home page reviews block already switches to live Google reviews when `GOOGLE_PLACES_API_KEY` (and ideally `GOOGLE_PLACE_ID`) are set in the Vercel project. The client asked for Google reviews; the key is still missing. Static Google review text is never typed in by hand.
+- **"Blog" keeps the /journal URLs.** Only the label changed (nav, footer, breadcrumbs, page title, RSS title). Moving the 111 posts to /blog/... would need 301s for every post; do it only if the client wants the URL to match.
+
 ## Needs account access
 - **Domain + DNS** for legacymedicalpalmbeach.com sit with Unkind Designs. Point the domain at the Vercel project when the handover happens; the vercel.json redirect map and www→apex rules go live with it.
 - **cmedjupiter.com.** Ready-made 301 maps in `_dev/redirects/` (Vercel JSON, Apache .htaccess, CSV). Apply whichever matches where that domain ends up, then follow `_dev/redirects/CHANGE-OF-ADDRESS.md` (Search Console Change of Address, in order). This is the single biggest SEO fix: that domain currently outranks the real one.

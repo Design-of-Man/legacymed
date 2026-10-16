@@ -1004,7 +1004,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'your fracture risk, kidney function and other medicines.'},
              {'type': 'p',
               'text': "Kidney function is part of choosing among bone medicines, an area where Dr. Shtern's background "
-                      'in nephrology is useful. At Legacy Medical, she can review your risk, order a scan when it is '
+                      'in Nephrology is useful. At Legacy Medical, she can review your risk, order a scan when it is '
                       'due and go through the result with you. To meet her, book a complimentary [meet and '
                       'greet](/meet-and-greet).'}],
   'sources': [],
@@ -1094,7 +1094,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Blood pressure, kidney function and brain health are linked through the same small blood '
                       'vessels. Kidney disease raises blood pressure, high blood pressure damages the kidneys, and '
                       'both affect which medicines are safest. This overlap is the reason Dr. Shtern, who is '
-                      'board-certified in internal medicine and nephrology, follows them together. Read more about '
+                      'board-certified in Internal Medicine and Nephrology, follows them together. Read more about '
                       '[hypertension care](/hypertension) and about [memory changes and when to see a '
                       'doctor](/journal/memory-changes-when-to-see-a-doctor).'},
              {'type': 'p',
@@ -1706,8 +1706,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       '[how much concierge medicine costs](/journal/concierge-medicine-cost).'},
              {'type': 'p',
               'text': 'If you would like to go over the agreement in person before you decide, Dr. Shtern offers a '
-                      'complimentary [meet and greet](/meet-and-greet) at our Palm Beach Gardens office. There is no '
-                      'obligation, and you can take the paperwork home to show your advisor.'}],
+                      'complimentary [meet and greet](/meet-and-greet) at our Palm Beach Gardens office. You can take the paperwork '
+                      'home to show your advisor.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -1800,8 +1800,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Many of our patients are retirees and seasonal residents who want a doctor they can reach '
                       'easily. If you would like to see how the practice would fit with your Medicare coverage, start '
-                      'with a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. There is no obligation, '
-                      'and family members are welcome.'}],
+                      'with a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. Family members '
+                      'are welcome.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -1885,15 +1885,15 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'concierge medicine](/journal/what-is-concierge-medicine) covers the basics.'},
              {'type': 'h2', 'text': 'Where Legacy Medical stands'},
              {'type': 'p',
-              'text': 'Legacy Medical is a concierge internal medicine practice. We bill insurance, including '
+              'text': 'Legacy Medical is a Concierge Internal Medicine practice. We bill insurance, including '
                       'Medicare, Aetna, Cigna and BlueCross BlueShield, for visits, labs and tests, and members pay an '
                       'annual membership fee that is not billed to insurance. Members are seen the same or next '
                       'business day and can reach the practice by phone at any hour. Our [insurance and '
                       'fees](/insurance-and-fees) page explains the details.'},
              {'type': 'p',
               'text': 'If you would like to understand how it would work with your own coverage, start with a '
-                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. There is no obligation, and '
-                      'you are welcome to bring your insurance card and your questions.'}],
+                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. You are welcome to bring '
+                      'your insurance card and your questions.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -1972,7 +1972,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'h2', 'text': 'Where Legacy Medical fits'},
              {'type': 'p',
               'text': 'Legacy Medical is an independent practice led by Dr. Yana Shtern, MD. She is board certified by '
-                      'the American Board of Internal Medicine in internal medicine and nephrology, and has nearly '
+                      'the American Board of Internal Medicine in Internal Medicine and Nephrology, and has nearly '
                       'twenty years of practice in New York City and Palm Beach County. She holds privileges at '
                       'Jupiter Medical Center and Palm Beach Gardens Medical Center and has been named a Castle '
                       "Connolly Top Doctor since 2023. You can read more on [Dr. Shtern's page](/dr-yana-shtern)."},
@@ -1982,8 +1982,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'Medicare, is billed for visits, labs and tests, and the annual fee is explained in person.'},
              {'type': 'p',
               'text': 'The simplest way to compare is to sit down with the doctor. Dr. Shtern offers a complimentary '
-                      '[meet and greet](/meet-and-greet) at our Palm Beach Gardens office, with no obligation. Bring '
-                      'your questions, and bring a family member if that helps.'}],
+                      '[meet and greet](/meet-and-greet) at our Palm Beach Gardens office. Bring your questions, and '
+                      'bring a family member if that helps.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -2075,8 +2075,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'page](/membership) outlines what members receive.'},
              {'type': 'p',
               'text': 'If you would like to talk it through, the first step is a complimentary [meet and '
-                      'greet](/meet-and-greet) with Dr. Shtern at our Palm Beach Gardens office. There is no '
-                      'obligation, and family members are welcome to come along.'}],
+                      'greet](/meet-and-greet) with Dr. Shtern at our Palm Beach Gardens office. Family members are '
+                      'welcome to come along.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -2090,7 +2090,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              'insurance, hospitals, family updates and records.',
   'blocks': [{'type': 'p',
               'text': 'Most concierge practices offer a first meeting before you join. It is a chance to see the '
-                      'office, meet the doctor and ask direct questions, with no obligation. The trouble is that many '
+                      'office, meet the doctor and ask direct questions. The trouble is that many '
                       'people walk in without a list and walk out having talked mostly about the weather.'},
              {'type': 'p',
               'text': 'Below are twelve questions we think are worth bringing, grouped by theme, with a short note on '
@@ -2100,7 +2100,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'h3', 'text': '1. What is your training, and are you board certified?'},
              {'type': 'p',
               'text': 'A medical license is what allows a doctor to practice. Board certification is a separate '
-                      'credential in a specialty, such as internal medicine. You can check certification yourself on '
+                      'credential in a specialty, such as Internal Medicine. You can check certification yourself on '
                       'the [American Board of Internal Medicine verification '
                       'page](https://www.abim.org/verify-physician/), and our guide to [choosing a concierge '
                       'doctor](/journal/how-to-choose-a-concierge-doctor) walks through the license lookup as well.'},
@@ -2199,7 +2199,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'A state license is the legal requirement to practice medicine. Board certification is a '
                       "separate credential that shows a doctor has met a specialty board's standards. For internists, "
                       'that board is the American Board of Internal Medicine, which also certifies subspecialties such '
-                      'as nephrology and cardiology.'},
+                      'as Nephrology and cardiology.'},
              {'type': 'p',
               'text': "Anyone can look up a physician's status on the [ABIM verification "
                       'page](https://www.abim.org/verify-physician/). Search by name and state, and note whether '
@@ -2277,8 +2277,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'unhurried conversation is usually more reliable.'},
              {'type': 'p',
               'text': 'If you would like to meet us as part of your search, the first visit at Legacy Medical is a '
-                      'complimentary [meet and greet with Dr. Shtern](/meet-and-greet), with no obligation. Bring your '
-                      'questions and your list of medicines, and we will answer as plainly as we can.'}],
+                      'complimentary [meet and greet with Dr. Shtern](/meet-and-greet). Bring your questions '
+                      'and your list of medicines, and we will answer as plainly as we can.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -2388,14 +2388,14 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
   'modified': '2026-10-12T09:00:00',
   'category': 'Kidney health',
   'excerpt': 'Kidneys, blood pressure, diabetes and medicines are closely linked. Here is why it helps to have one '
-             'doctor trained in both internal medicine and nephrology.',
+             'doctor trained in both Internal Medicine and Nephrology.',
   'blocks': [{'type': 'p',
               'text': 'Most people meet a nephrologist, a kidney specialist, only after a lab result raises a flag. By '
                       'then they already have a primary care doctor, a cardiologist and perhaps an endocrinologist, '
                       'each looking at one part of the picture.'},
              {'type': 'p',
               'text': 'Dr. Yana Shtern is board certified by the American Board of Internal Medicine in both internal '
-                      'medicine and nephrology. That combination matters more than it might sound in a primary care '
+                      'medicine and Nephrology. That combination matters more than it might sound in a primary care '
                       'practice, because the kidneys sit at the center of several conditions that are common after '
                       '50.'},
              {'type': 'h2', 'text': 'Kidney disease is common and usually silent'},
@@ -2418,7 +2418,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'then have a harder time removing extra fluid, which can raise blood pressure further.'},
              {'type': 'p',
               'text': 'The CDC estimates that more than 2 in 10 adults with high blood pressure have CKD. So when '
-                      'blood pressure is hard to control, a doctor trained in nephrology will look at the kidneys as a '
+                      'blood pressure is hard to control, a doctor trained in Nephrology will look at the kidneys as a '
                       'possible cause as well as a possible victim. Our [high blood pressure page](/hypertension) '
                       'describes how we approach it.'},
              {'type': 'h2', 'text': 'Diabetes, kidneys and the heart'},
@@ -2453,7 +2453,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'after a change, is easier when one doctor is watching the whole list.'},
              {'type': 'h2', 'text': 'What this looks like in practice'},
              {'type': 'p',
-              'text': 'Having both trainings in one doctor does not replace a separate nephrology practice for '
+              'text': 'Having both trainings in one doctor does not replace a separate Nephrology practice for '
                       'everyone. People with advanced kidney disease, dialysis or a transplant usually need a '
                       'dedicated kidney team. For many patients with early or stable CKD, though, it can mean fewer '
                       'handoffs and one clear plan.'},
@@ -2662,8 +2662,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'to call over the summer for a question, and who to see in person if something new comes up.'},
              {'type': 'h2', 'text': 'How we work with seasonal residents'},
              {'type': 'p',
-              'text': 'Legacy Medical is a small concierge internal medicine practice in Palm Beach Gardens led by Dr. '
-                      'Yana Shtern, who is board certified in internal medicine and nephrology. Members can reach the '
+              'text': 'Legacy Medical is a small Concierge Internal Medicine practice in Palm Beach Gardens led by Dr. '
+                      'Yana Shtern, who is board certified in Internal Medicine and Nephrology. Members can reach the '
                       'practice by phone around the clock and are seen the same or next business day while they are in '
                       'town. Labs are drawn in the office, so a season can start with current results rather than a '
                       'week of waiting.'},
@@ -2720,7 +2720,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'the past five years or so:'},
              {'type': 'ul',
               'items': ['Your current primary care doctor',
-                        'Specialists, such as cardiology, nephrology, endocrinology, gastroenterology or dermatology',
+                        'Specialists, such as cardiology, Nephrology, endocrinology, gastroenterology or dermatology',
                         'Hospitals where you had a stay, emergency visit or procedure',
                         'Imaging centers and outside labs',
                         'Any urgent care or walk-in clinic you used for something significant']},
@@ -2872,7 +2872,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'If you are weighing your options this fall and want to see how a concierge practice would work '
                       'alongside your coverage, a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern is a '
-                      'good place to talk it through. There is no obligation.'}],
+                      'good place to talk it through.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -2956,7 +2956,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'missed. Ask your nephrologist and dialysis dietitian to go over it with you before the season '
                       'starts, not during a storm watch. If you have kidney disease but are not yet on dialysis, it is '
                       'still worth asking how a missed week of usual care would affect you. Our [kidney '
-                      "care](/kidney-care) page explains how Dr. Shtern's nephrology training shapes the care she "
+                      "care](/kidney-care) page explains how Dr. Shtern's Nephrology training shapes the care she "
                       'provides.'},
              {'type': 'h2', 'text': 'Heat after the storm'},
              {'type': 'p',
@@ -3058,7 +3058,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'anything that feels like an emergency, call 911.'},
              {'type': 'h2', 'text': 'Where a nephrologist helps'},
              {'type': 'p',
-              'text': 'Dr. Yana Shtern is board certified in both internal medicine and nephrology, so questions about '
+              'text': 'Dr. Yana Shtern is board certified in both Internal Medicine and Nephrology, so questions about '
                       'kidney function, blood pressure medicines and fluids sit within one practice. Labs are drawn in '
                       'our office, which makes it straightforward to check kidney function when the season or a '
                       'medicine changes. You can read more on our [kidney care](/kidney-care) and '
@@ -3167,8 +3167,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'If you are weighing whether a smaller practice suits your parent, the first visit is a '
                       'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern at our Palm Beach Gardens '
-                      'office, with no obligation. Family members are welcome to come along and ask their own '
-                      'questions.'}],
+                      'office. Family members are welcome to come along and ask their own questions.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -3271,8 +3270,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'possible.'},
              {'type': 'p',
               'text': 'If you would like to meet the doctor before deciding anything, the first visit at Legacy '
-                      'Medical is a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern, with no '
-                      'obligation. Family members are welcome.'}],
+                      'Medical is a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. Family '
+                      'members are welcome.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -3335,7 +3334,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'different brand names. Our article on [NSAID risks and side '
                       'effects](/journal/nsaids-risks-and-side-effects) covers this in more detail.'},
              {'type': 'p',
-              'text': 'Dr. Shtern is board-certified in both internal medicine and nephrology, so kidney function is '
+              'text': 'Dr. Shtern is board-certified in both Internal Medicine and Nephrology, so kidney function is '
                       'something she looks at as a matter of course. If you want to understand the numbers on your own '
                       'lab report, see [reading your kidney labs](/journal/egfr-kidney-lab-results-explained), and our '
                       '[kidney care](/kidney-care) page describes how the practice approaches kidney health.'},
@@ -3367,7 +3366,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'with the prescribing specialist when needed.'},
              {'type': 'p',
               'text': 'If you would like to bring your bag of bottles and meet the doctor first, the first visit is a '
-                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern, with no obligation.'}],
+                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -3455,14 +3454,14 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'ibuprofen and naproxen can harm the kidneys. Our guide to [checking blood pressure at '
                       'home](/journal/home-blood-pressure-monitoring) is a practical place to start.'},
              {'type': 'p',
-              'text': 'Dr. Shtern is board-certified in internal medicine and nephrology. Our article on [why it helps '
+              'text': 'Dr. Shtern is board-certified in Internal Medicine and Nephrology. Our article on [why it helps '
                       'when your internist is also a nephrologist](/journal/internist-and-nephrologist) explains how '
                       "that overlap works day to day, and [kidney care](/kidney-care) describes the practice's "
                       'approach. At Legacy Medical, labs are drawn in the office.'},
              {'type': 'p',
               'text': 'If you have kidney results you would like to understand better, the first visit is a '
-                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern, with no obligation. Bring your '
-                      'recent reports along.'}],
+                      'complimentary [meet and greet](/meet-and-greet) with Dr. Shtern. Bring your recent '
+                      'reports along.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None},
@@ -3549,13 +3548,13 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'sleep. Look for patterns over weeks rather than reacting to single days.'},
              {'type': 'p',
               'text': 'Blood pressure and kidney health are closely linked, which is one reason Dr. Shtern, who is '
-                      'board-certified in internal medicine and nephrology, pays close attention to both. Our '
+                      'board-certified in Internal Medicine and Nephrology, pays close attention to both. Our '
                       "[hypertension](/hypertension) page describes the practice's approach, and [reading your kidney "
                       'labs](/journal/egfr-kidney-lab-results-explained) explains the related lab tests. Many blood '
                       'pressure follow-ups work well by [video visit](/telehealth), with your home log in hand.'},
              {'type': 'p',
               'text': 'If you would like to bring your monitor and meet the doctor, the first visit at Legacy Medical '
-                      'is a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern, with no obligation.'}],
+                      'is a complimentary [meet and greet](/meet-and-greet) with Dr. Shtern.'}],
   'sources': [],
   'stale_note': None,
   'reviewed_by': None}]

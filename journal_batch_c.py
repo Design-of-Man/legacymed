@@ -272,7 +272,7 @@ POSTS = [
              "(/journal/apob-and-lipoprotein-a) are useful companions to this one."},
             {"type": "p", "text": "At Legacy Medical, Dr. Shtern reviews which screenings fit your age, smoking "
              "history and family history, writes the referral when the scan makes sense, and keeps track of any "
-             "follow-up. Her nephrology training means [blood pressure](/hypertension) and kidney health get close "
+             "follow-up. Her Nephrology training means [blood pressure](/hypertension) and kidney health get close "
              "attention too. If you would like to meet her, the first visit is a complimentary [meet and "
              "greet](/meet-and-greet)."},
         ],

@@ -191,7 +191,7 @@ POSTS = [
             'stay much higher than usual, frequent lows, a foot sore that is not healing, or new changes in vision. '
             'Confusion, fainting, or a low you cannot bring up are reasons to call 911.'},
    {'type': 'p',
-    'text': 'Because Dr. Shtern is board-certified in both internal medicine and nephrology, the kidney side of '
+    'text': 'Because Dr. Shtern is board-certified in both Internal Medicine and Nephrology, the kidney side of '
             'diabetes is part of everyday care at Legacy Medical. Our [chronic care](/chronic-care) and [kidney '
             'care](/kidney-care) pages describe how ongoing conditions are followed. If you would like to talk it '
             'over first, the first visit is a complimentary [meet and greet](/meet-and-greet).'}],
@@ -634,7 +634,7 @@ POSTS = [
             'source; see [multivitamins: who needs them](/journal/multivitamin-supplements-who-needs-them).'},
    {'type': 'p',
     'text': 'For people with kidney disease, vitamin D and calcium are handled differently, and decisions should '
-            'go through your doctor. Dr. Shtern is board-certified in internal medicine and nephrology and can '
+            'go through your doctor. Dr. Shtern is board-certified in Internal Medicine and Nephrology and can '
             'help you decide whether a test or a supplement makes sense for you. Our [labs and '
             'tests](/labs-and-tests) page explains how testing works at Legacy Medical, and the first visit is a '
             'complimentary [meet and greet](/meet-and-greet).'}],
@@ -717,7 +717,7 @@ POSTS = [
             'subject in [underactive thyroid and the TSH test](/journal/underactive-thyroid-tsh-test), and of '
             'levodopa, while acid-reducing PPIs can lower iron absorption from food.'},
    {'type': 'p',
-    'text': 'Anemia is one of the places where internal medicine and kidney care overlap, and as a board-certified '
+    'text': 'Anemia is one of the places where Internal Medicine and kidney care overlap, and as a board-certified '
             'internist and nephrologist, Dr. Shtern looks at both. If you take aspirin or an NSAID regularly, our '
             'article on [NSAID risks](/journal/nsaids-risks-and-side-effects) is worth a read. Our [labs and '
             'tests](/labs-and-tests) page explains how blood work is handled, and the first visit is a '
