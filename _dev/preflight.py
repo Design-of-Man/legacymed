@@ -289,8 +289,10 @@ for path in glob.glob(os.path.join(PUB, "assets", "**", "*"), recursive=True):
     if ext in ASSET_BUDGET_KB and os.path.getsize(path) > ASSET_BUDGET_KB[ext] * 1024:
         blockers.append(("WEIGHT", "%s is %d KB (budget %d KB)" % (os.path.relpath(path, PUB), os.path.getsize(path) // 1024, ASSET_BUDGET_KB[ext])))
 for path in glob.glob(os.path.join(PUB, "assets", "video", "*.mp4")) + glob.glob(os.path.join(PUB, "assets", "video", "*.webm")):
-    if os.path.getsize(path) > 5 * 1024 * 1024:
-        blockers.append(("WEIGHT", "%s over 5 MB" % os.path.relpath(path, PUB)))
+    # Owner asked for the 4K-sourced film (Oct 2026). It never loads before the page does
+    # (preload="none", attached after load, tap-to-play on phones), so the cap is generous.
+    if os.path.getsize(path) > 22 * 1024 * 1024:
+        blockers.append(("WEIGHT", "%s over 22 MB" % os.path.relpath(path, PUB)))
 
 for need in ["MedicalClinic", "Physician", "WebSite", "FAQPage", "BreadcrumbList", "BlogPosting", "MedicalWebPage", "OpeningHoursSpecification", "GeoCoordinates"]:
     if need not in all_types:
