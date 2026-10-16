@@ -2359,15 +2359,20 @@
  "yan-konevsky-rn": {
   "alt": "Yan Konevsky, RN, office manager at Legacy Medical",
   "credit": "",
-  "focal": "50% 18%",
-  "h": 2825,
-  "source": "legacymedicalpalmbeach.com (image1.jpg, 2000x2825)",
-  "w": 2000,
+  "focal": "50% 30%",
+  "formats": [
+   "jpg",
+   "webp",
+   "avif"
+  ],
+  "h": 1925,
+  "source": "owner upload, Oct 16 2026 (1290x1925, replaces the old-site image1.jpg)",
+  "w": 1290,
   "widths": [
    480,
    768,
    1200,
-   1600
+   1290
   ]
  }
 }
