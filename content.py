@@ -504,7 +504,7 @@ MEMBERSHIP = {
     ],
     "agreement": "<strong>Meet first, decide later.</strong> The meet and greet is complimentary, and joining is your decision to make afterward.",
     "sections": [
-        ("What to bring to the meet and greet", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p><p>You do not need medical records. If you join, the office requests them from your current doctor with your permission.</p>"),
+        ("What to bring to the meet and greet", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p>"),
         ("Who the practice is a good fit for", "<p>Adults who want one physician to know their whole history, people managing blood pressure, kidney disease, diabetes or several specialists, seasonal residents who want continuity, and families arranging care for a parent. Dr. Shtern is an internist: a physician trained in the care of adults.</p>"),
     ],
     "form_h": "Book a meet and greet",
@@ -992,7 +992,7 @@ MEET = {
     "sections": [
         ("What the meet and greet is", "<p>A chance for you and Dr. Shtern to see whether the practice is right for you. You talk about what you want from a doctor, how your care is going now, and how membership works day to day. Dr. Shtern explains how she practices, how members reach her, and what the concierge fee includes.</p>"),
         ("Questions worth asking", "<ul><li>How quickly can members be seen when something comes up?</li><li>How do after-hours calls work, and who answers?</li><li>What does the concierge fee include, and what is still billed to insurance?</li><li>How do you work with my specialists and with the hospital if I am admitted?</li><li>How large is the practice, and are new members being accepted right now?</li><li>What happens to my care when I am away for the summer?</li></ul>"),
-        ("What to bring", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p><p>You do not need medical records. If you join, the office requests them from your current doctor with your permission.</p>"),
+        ("What to bring", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p>"),
         ("Coming with a parent or partner", "<p>Families are welcome. Adult children often come along when they are arranging care for a parent, and couples often meet Dr. Shtern together. With the patient's written permission, she can keep family members updated later on.</p>"),
     ],
     "form_h": "Book a meet and greet",
@@ -1094,7 +1094,7 @@ ASSIST_EXTRA += [
     {"k": ["meet and greet", "meet & greet", "first visit", "first appointment", "consultation", "free visit", "complimentary"],
      "a": "Your first visit is a complimentary meet and greet with Dr. Shtern at the office. You talk about what you want from a doctor and how membership works, and ask anything you like. <a href=\"/meet-and-greet\">About the meet and greet</a>."},
     {"k": ["what to bring", "bring with me", "should i bring"],
-     "a": "Nothing is needed for the meet and greet. Come see the office, meet Dr. Shtern, and find out whether the practice is a fit. Bring your questions if you have them. You do not need medical records. <a href=\"/meet-and-greet\">More about the first visit</a>."},
+     "a": "Nothing is needed for the meet and greet. Come see the office, meet Dr. Shtern, and find out whether the practice is a fit. Bring your questions if you have them. <a href=\"/meet-and-greet\">More about the first visit</a>."},
     {"k": ["friday", "weekend", "saturday", "sunday", "holiday"],
      "a": "The office is open Monday to Thursday 9 AM to 5 PM and Friday 9 AM to 2 PM, and closed on weekends. Members can still reach the practice by phone at any hour, including weekends and holidays."},
     {"k": ["wheelchair", "accessible", "accessibility", "walker", "stairs", "elevator", "first floor"],
