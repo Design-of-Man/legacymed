@@ -706,6 +706,35 @@ _LOC_COPY = {
         "directions": "Take I-95 north to the PGA Boulevard exit, head east, then turn north on Prosperity Farms Road to Suite 114.",
         "faqs": [("How far is Legacy Medical from West Palm Beach?", "<p>About 14 miles from downtown, roughly 21 minutes without traffic.</p>")],
     },
+    # Added Oct 17, 2026: the practice has patients from both towns (client). Distances and routes are GEO_DATA's.
+    "hobe-sound": {
+        "name": "Hobe Sound",
+        "title": "Concierge Doctor for Hobe Sound, FL | Legacy Medical",
+        "desc": "A concierge doctor for Hobe Sound, about 30 minutes south on US-1 in Palm Beach Gardens. Dr. Yana Shtern, internist, sees members the same or next business day.",
+        "h1": "A concierge doctor for Hobe Sound, about half an hour down US-1.",
+        "lede": "Legacy Medical already cares for patients from Hobe Sound. The office is about 30 minutes south on US-1, and many follow-ups happen by video, so not every visit means the drive.",
+        "from_label": "Hobe Sound",
+        "sections": [
+            ("Fewer trips, more time when you come", "<p>When you do come in, visits are unhurried, and labs and ECGs are done in the office, so one trip covers what might otherwise take several. Results reviews, medication checks and many follow-ups happen by <a href=\"/telehealth\">video</a>, and members can reach the practice by phone at any hour.</p>"),
+            ("If you need the hospital", "<p>Of the hospitals Dr. Shtern is affiliated with, Jupiter Medical Center is the nearer one to Hobe Sound, on the way down US-1. She is also affiliated with Palm Beach Gardens Medical Center.</p>"),
+        ],
+        "directions": "From Hobe Sound, take US-1 south past Jonathan Dickinson State Park and through Tequesta and Jupiter to PGA Boulevard, turn west, then north on Prosperity Farms Road to Suite 114.",
+        "faqs": [("How far is Legacy Medical from Hobe Sound?", "<p>About 18 miles, roughly 31 minutes without traffic, longer in season.</p>")],
+    },
+    "stuart": {
+        "name": "Stuart",
+        "title": "Concierge Doctor for Stuart, FL | Legacy Medical",
+        "desc": "Concierge medicine for Stuart residents, about 40 minutes down I-95 in Palm Beach Gardens, from a doctor board-certified in Internal Medicine and Nephrology.",
+        "h1": "Concierge medicine for Stuart, a straight run down I-95.",
+        "lede": "Legacy Medical already cares for patients from Stuart. The office is about 40 minutes south by I-95, and video visits and around-the-clock phone access mean much of your care does not need the drive.",
+        "from_label": "Stuart",
+        "sections": [
+            ("Internist and nephrologist", "<p>Dr. Shtern is board-certified in Internal Medicine and Nephrology, so if you are managing kidney disease, hard-to-control blood pressure or a long medication list, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
+            ("Making the distance work", "<p>Many follow-ups, lab reviews and medication checks happen by <a href=\"/telehealth\">video visit</a>. When you come in, labs are drawn in the office, so there is no separate trip to a lab.</p>"),
+        ],
+        "directions": "From Stuart, take Kanner Highway to I-95 south, exit at PGA Boulevard and head east, then turn north on Prosperity Farms Road to Suite 114.",
+        "faqs": [("How far is Legacy Medical from Stuart?", "<p>About 30 miles, roughly 39 minutes without traffic.</p>")],
+    },
 }
 
 for slug, copy in _LOC_COPY.items():
