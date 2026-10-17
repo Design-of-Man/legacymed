@@ -217,7 +217,7 @@ HOME = {
         ("kidney-care", "Kidney care", "CKD, rising creatinine, kidney stones, electrolyte problems, and care for people on dialysis."),
         ("hypertension", "Hypertension", "Blood pressure that stays high on two or three medicines, or comes with side effects."),
         ("geriatric-memory-care", "Geriatric and memory care", "Healthy aging, memory concerns, and fewer, better prescriptions."),
-        ("preventive-care", "Executive annual physicals", "The annual executive physical, with labs and an ECG done here."),
+        ("preventive-care", "Executive annual physicals", "Annual executive physical, with labs and ECG done here."),
         ("telehealth", "Telehealth", "Video visits for follow-ups, results and medication questions."),
     ],
     "plan_h": "Three steps, <em>no pressure</em>",
