@@ -552,7 +552,7 @@ FAQ_GROUPS = [
         ("How quickly can I be seen?", "<p>Members are seen the same or next business day when something comes up. Routine visits are scheduled at a time that suits you.</p>"),
         ("Can I reach Dr. Shtern after hours?", "<p>Yes. Members have phone access to the practice 24 hours a day, 7 days a week. In an emergency, always call 911 first.</p>"),
         ("What is Dr. Shtern's availability?", "<p>The practice is available to members by phone 24/7. In-person visits are booked the same or next business day with little to no wait, and telehealth visits are available when coming in is not practical.</p>"),
-        ("How long are visits?", "<p>Long enough to cover what you came in for. Visits are not booked in 15-minute slots.</p>"),
+        ("How long are visits?", "<p>As long as you need. Visits are not booked in 15-minute slots, so there is time to cover everything you came in for without feeling rushed.</p>"),
         ("Do you offer video visits?", "<p>Yes, for many follow-ups and results reviews. <a href=\"/telehealth\">About telehealth</a>.</p>"),
         ("What are the office hours?", "<p>Monday to Thursday 9:00 AM to 5:00 PM, Friday 9:00 AM to 2:00 PM. Closed on weekends, with member phone access around the clock.</p>"),
     ]},
