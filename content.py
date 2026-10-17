@@ -56,12 +56,12 @@ DOCTOR = {
     ],
     "page_title": "Internist in Palm Beach Gardens | Dr. Yana Shtern, MD",
     "page_desc": ("Dr. Yana Shtern is a concierge internist in Palm Beach Gardens, double board-certified in Internal Medicine and "
-                  "Nephrology. Her training, hospital privileges and how she practices."),
+                  "Nephrology. Her training, hospital affiliations and how she practices."),
     "hero_lede": ("Board-certified in Internal Medicine and in Nephrology, Dr. Shtern has practiced for close to twenty years, first in "
                   "New York City and now in Palm Beach Gardens, where she runs Legacy Medical as a small concierge practice."),
     "home_creds": [
         ("Board certification", "Internal Medicine and Nephrology, American Board of Internal Medicine"),
-        ("Hospital privileges", "Jupiter Medical Center and Palm Beach Gardens Medical Center"),
+        ("Hospital affiliations", "Jupiter Medical Center and Palm Beach Gardens Medical Center"),
         ("In practice", "Close to twenty years, in New York City and Palm Beach County"),
         ("Recognition", "Castle Connolly Top Doctor since 2023"),
     ],
@@ -70,7 +70,7 @@ DOCTOR = {
         ("Medical degree", "St. George's University School of Medicine, 2007"),
         ("Residency and fellowship", "Internal Medicine residency and Nephrology fellowship, Maimonides Medical Center, New York City"),
         ("Undergraduate", "BS in Pharmacology, Stony Brook University"),
-        ("Hospital privileges", "Jupiter Medical Center; Palm Beach Gardens Medical Center"),
+        ("Hospital affiliations", "Jupiter Medical Center; Palm Beach Gardens Medical Center"),
         ("Committee work", "Continuing Medical Education Committee, Jupiter Medical Center"),
     ],
     "bio": [
@@ -142,7 +142,7 @@ CARD_BLURBS = {
     "membership": "Meet Dr. Shtern first, then decide.",
     "insurance-and-fees": "What concierge medicine costs here: the membership fee, and what your insurance still pays for.",
     "faq": "Answers about access, insurance, hospitals and joining.",
-    "dr-yana-shtern": "Training, certifications and hospital privileges.",
+    "dr-yana-shtern": "Training, certifications and hospital affiliations.",
     "our-team": "Who answers when you call.",
 }
 
@@ -740,7 +740,7 @@ def llms_txt(P, D, pages, url):
         "## Facts",
         "- Practice: Legacy Medical (legal name Legacy Medical PLLC), Concierge Internal Medicine",
         "- Physician: Dr. Yana Shtern, MD. Board-certified (ABIM) in Internal Medicine and Nephrology.",
-        "- Hospital privileges: Jupiter Medical Center; Palm Beach Gardens Medical Center",
+        "- Hospital affiliations: Jupiter Medical Center; Palm Beach Gardens Medical Center",
         "- Address: %s, %s, %s %s" % (P["street"], P["city"], P["region"], P["postal"]),
         "- Phone: %s. Fax: %s. Email: %s" % (P["phone"], P["fax"], P["email"]),
         "- Hours: Monday to Thursday 9:00 AM to 5:00 PM; Friday 9:00 AM to 2:00 PM; closed Saturday and Sunday. Members have 24/7 phone access.",

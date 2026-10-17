@@ -10,8 +10,11 @@
 >   The loop uses RegenOrtho's edit to hide that inside a dissolve: A = 1.0-8.2 s (pier approach), B = 9.6-15.65 s
 >   (post-pier glide), C = 0.55-1.15 s (wrap stub), all slowed to 0.8x and set to 30 fps, A->B crossfade 1.2 s at 7.8 s,
 >   ->C crossfade 0.6 s at 14.7625 s. Result: 466 frames, 15.53 s.
-> - **No grade.** RegenOrtho bakes in `eq=gamma=1.12:brightness=0.02:saturation=1.12`; this site's rule is no colour filter
->   on the hero film, so that step is left out and the pixels are as the camera recorded them.
+> - **Grade: a little darker.** The owner asked (Oct 17) for the film "a bit darker as to flow into our color scheme".
+>   The loop master goes through `curves=all='0/0 0.25/0.19 0.5/0.40 0.75/0.64 1/0.90'` into `graded.mp4`
+>   (mean luma about 15% lower: 123 to 104 on a mid-approach frame; highlights capped at 90% so the sand stops glaring).
+>   Three strengths were compared side by side; this was the middle one, the strongest that still reads as natural.
+>   It is baked into the files, not a CSS overlay. RegenOrtho's brightening grade (`eq=gamma=1.12:...`) is not used.
 > - Sets: `hd` = 1080p, `qhd` and `uhd` = native 1512p (H.264 fallback for both is the 1080p file). Portrait phones get
 >   the 850x1512 crop at x=919 (the same crop RegenOrtho uses; the pier stays in frame throughout).
 >
@@ -25,6 +28,8 @@
 > [A][B]xfade=transition=fade:duration=1.2:offset=7.8[AB];\
 > [AB][Cc]xfade=transition=fade:duration=0.6:offset=14.7625,format=yuv420p[v]" \
 >  -map "[v]" -an -c:v libx264 -preset medium -crf 6 $C master.mp4
+> ffmpeg -i master.mp4 -vf "curves=all='0/0 0.25/0.19 0.5/0.40 0.75/0.64 1/0.90',format=yuv420p" -an -c:v libx264 -preset medium -crf 6 $C graded.mp4
+> # every rendition and the poster below read graded.mp4 (written as master.mp4 for brevity)
 > A="-an -c:v libsvtav1 -preset 5 -g 60 -pix_fmt yuv420p10le -svtav1-params tune=0:scd=0:enable-overlays=1 $C"
 > H="-an -c:v libx265 -preset medium -tag:v hvc1 -pix_fmt yuv420p $C -movflags +faststart -x265-params keyint=60:min-keyint=60:scenecut=0"
 > X="-an -c:v libx264 -profile:v high -preset slow -tune film -g 60 -keyint_min 60 -sc_threshold 0 -pix_fmt yuv420p $C -movflags +faststart"
@@ -34,22 +39,22 @@
 > ffmpeg -i master.mp4 -vf $P $A -crf 34 juno-portrait.webm; ... -vf $P $H -crf 26 juno-portrait-hevc.mp4; ... -vf $P $X -crf 25 juno-portrait.mp4
 > ffmpeg -i master.mp4 -frames:v 1 -vf "scale=in_range=tv:out_range=pc:in_color_matrix=bt709,format=rgb24" poster_src.png
 > ```
-> Posters: frame 0 of the loop. Pillow 12.3, LANCZOS: 1280x720 and 768x432 (AVIF q58, WebP q72, JPEG q84 progressive),
+> Posters: frame 0 of the graded loop. Pillow 12.3, LANCZOS: 1280x720 and 768x432 (AVIF q58, WebP q72, JPEG q84 progressive),
 > plus the portrait crop (919,0)-(1769,1512) at 608x1080.
 >
 > | File | Codec | Dims | Bytes |
 > |---|---|---|---|
-> | juno-1512.webm | AV1 Main 10-bit | 2688x1512 | 10,889,724 |
-> | juno-1512-hevc.mp4 | HEVC Main (hvc1) | 2688x1512 | 12,661,942 |
-> | juno-1080.webm | AV1 Main 10-bit | 1920x1080 | 7,889,189 |
-> | juno-1080-hevc.mp4 | HEVC Main | 1920x1080 | 8,866,889 |
-> | juno-1080.mp4 | H.264 High | 1920x1080 | 11,711,509 |
-> | juno-portrait.webm | AV1 Main 10-bit | 850x1512 | 4,728,540 |
-> | juno-portrait-hevc.mp4 | HEVC Main | 850x1512 | 4,829,002 |
-> | juno-portrait.mp4 | H.264 High | 850x1512 | 6,441,676 |
-> | juno-poster-1280 .avif / .webp / .jpg | | 1280x720 | 70,105 / 68,584 / 157,493 |
-> | juno-poster-768 .avif / .webp / .jpg | | 768x432 | 28,402 / 28,146 / 60,867 |
-> | juno-poster-portrait .avif / .webp / .jpg | | 608x1080 | 45,676 / 44,316 / 103,082 |
+> | juno-1512.webm | AV1 Main 10-bit | 2688x1512 | 9,824,386 |
+> | juno-1512-hevc.mp4 | HEVC Main (hvc1) | 2688x1512 | 11,217,014 |
+> | juno-1080.webm | AV1 Main 10-bit | 1920x1080 | 7,146,228 |
+> | juno-1080-hevc.mp4 | HEVC Main | 1920x1080 | 7,993,051 |
+> | juno-1080.mp4 | H.264 High | 1920x1080 | 10,844,941 |
+> | juno-portrait.webm | AV1 Main 10-bit | 850x1512 | 4,441,094 |
+> | juno-portrait-hevc.mp4 | HEVC Main | 850x1512 | 4,562,925 |
+> | juno-portrait.mp4 | H.264 High | 850x1512 | 6,178,425 |
+> | juno-poster-1280 .avif / .webp / .jpg | | 1280x720 | 65,805 / 61,142 / 149,092 |
+> | juno-poster-768 .avif / .webp / .jpg | | 768x432 | 26,879 / 25,782 / 57,680 |
+> | juno-poster-portrait .avif / .webp / .jpg | | 608x1080 | 44,325 / 42,152 / 100,479 |
 
 ---
 
