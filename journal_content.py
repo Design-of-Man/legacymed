@@ -1787,7 +1787,7 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
                       'part of your membership. Some of the additional benefits we provide our patients at Legacy '
                       'Medical include:'},
              {'type': 'ul',
-              'items': ['An annual Legacy physical with extended time',
+              'items': ['An annual executive physical with extended time',
                         'Coordination of patient care with specialists',
                         'ECG in the office',
                         'In-office blood draws and lab work',

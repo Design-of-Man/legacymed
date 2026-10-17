@@ -91,7 +91,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'At Legacy Medical, Dr. Shtern can talk through which exercises suit your joints, heart and '
                       'medicines, and how to fit strength work into a week that already has walking, golf or tennis in '
-                      'it. The annual [Legacy physical](/preventive-care) is a good moment for that conversation. If '
+                      'it. The annual [executive physical](/preventive-care) is a good moment for that conversation. If '
                       'you would like to meet her first, the first visit is a complimentary [meet and '
                       'greet](/meet-and-greet).'}],
   'sources': [],
@@ -186,7 +186,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'earlier article on [why obesity is considered a disease](/blog/obesity-is-a-disease) covers '
                       'the medical side of weight in more depth.'},
              {'type': 'p',
-              'text': 'At Legacy Medical, labs are drawn in the office and the annual [Legacy '
+              'text': 'At Legacy Medical, labs are drawn in the office and the annual [executive '
                       'physical](/preventive-care) includes time to go through the results together, so the numbers '
                       'come with context. If you would like to see how that works, start with a complimentary [meet '
                       'and greet](/meet-and-greet) with Dr. Shtern.'}],
@@ -281,7 +281,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'kidneys](/blog/heat-hydration-kidney-health) has practical tips, and [the benefits of '
                       'exercising](/blog/health-benefits-of-exercise) covers the basics.'},
              {'type': 'p',
-              'text': 'An ECG is done in the office at Legacy Medical, and the annual [Legacy '
+              'text': 'An ECG is done in the office at Legacy Medical, and the annual [executive '
                       'physical](/preventive-care) includes one, which gives Dr. Shtern a baseline before you train '
                       'harder. To meet her and talk about your goals, book a complimentary [meet and '
                       'greet](/meet-and-greet).'}],
@@ -578,7 +578,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'At Legacy Medical, blood is drawn in the office and Dr. Shtern takes the time to explain what '
                       'each number means for you, including how cholesterol, blood pressure and kidney function fit '
-                      'together. The annual [Legacy physical](/preventive-care) is a natural time to ask. To meet her '
+                      'together. The annual [executive physical](/preventive-care) is a natural time to ask. To meet her '
                       'first, book a complimentary [meet and greet](/meet-and-greet).'}],
   'sources': [],
   'stale_note': None,
@@ -899,7 +899,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Menopause care often gets split between a gynecologist, a cardiologist and a primary care '
                       'doctor, with no one holding all of it. At Legacy Medical, Dr. Shtern follows blood pressure, '
-                      'cholesterol and blood sugar over time, does an ECG in the office as part of the annual [Legacy '
+                      'cholesterol and blood sugar over time, does an ECG in the office as part of the annual [executive '
                       'physical](/preventive-care), and coordinates with your other doctors. To talk it through, book '
                       'a complimentary [meet and greet](/meet-and-greet).'}],
   'sources': [],
@@ -1552,7 +1552,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'a conversation-based visit to create a personalized prevention plan. Medicare is clear that it '
                       'is not a routine physical exam.'},
              {'type': 'p',
-              'text': 'At Legacy Medical, the annual [Legacy physical](/preventive-care) includes lab work and an ECG, '
+              'text': 'At Legacy Medical, the annual [executive physical](/preventive-care) includes lab work and an ECG, '
                       'with time afterward to go through the results together.'},
              {'type': 'h2', 'text': 'Fitness and strength: the two strongest levers'},
              {'type': 'p',
@@ -1794,7 +1794,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Legacy Medical bills Medicare for visits, labs and tests, along with other insurance such as '
                       'Aetna, Cigna and BlueCross BlueShield. The annual membership fee is separate and is not billed '
-                      'to insurance. Labs are drawn in our office, and members have a yearly Legacy physical with labs '
+                      'to insurance. Labs are drawn in our office, and members have a yearly executive physical with labs '
                       'and an ECG. Our [insurance and fees](/insurance-and-fees) page and our [frequently asked '
                       'questions](/faq) cover the common billing questions.'},
              {'type': 'p',
@@ -2066,7 +2066,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Legacy Medical charges an annual membership fee and bills insurance, including Medicare, Aetna, '
                       'Cigna and BlueCross BlueShield, for visits, labs and tests. The fee itself is not billed to '
                       'insurance. Members are seen the same or next business day, can reach the practice by phone '
-                      'around the clock, and have labs drawn in our office. Each year includes a Legacy physical with '
+                      'around the clock, and have labs drawn in our office. Each year includes an executive physical with '
                       'labs and an ECG.'},
              {'type': 'p',
               'text': 'We do not publish the fee online. We prefer to explain it in person, along with what it covers, '
@@ -2571,9 +2571,9 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'That visit is useful, but it is different from a hands-on exam. If you have Medicare and want '
                       'to understand what is and is not billed at a concierge practice, see our piece on [whether '
                       'Medicare covers concierge medicine](/blog/does-medicare-cover-concierge-medicine).'},
-             {'type': 'h2', 'text': 'The Legacy physical'},
+             {'type': 'h2', 'text': 'The annual executive physical'},
              {'type': 'p',
-              'text': 'At Legacy Medical, members have an annual Legacy physical with labs and an ECG. Labs are drawn '
+              'text': 'At Legacy Medical, members have an annual executive physical with labs and an ECG. Labs are drawn '
                       'in the office, and the visit is unhurried, so there is time to review your screening schedule '
                       'against the recommendations above and against your own history. Our [preventive care '
                       'page](/preventive-care) describes it in more detail.'},

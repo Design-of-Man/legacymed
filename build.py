@@ -232,7 +232,7 @@ NAV = [
         ("kidney-care", "Kidney care and Nephrology", "CKD, stones, electrolytes"),
         ("hypertension", "Hypertension", "Hard-to-control blood pressure"),
         ("geriatric-memory-care", "Geriatric and memory care", "Healthy aging, cognition"),
-        ("preventive-care", "Preventive care and physicals", "The annual Legacy physical"),
+        ("preventive-care", "Preventive care and physicals", "The annual executive physical"),
         ("telehealth", "Telehealth", "Visits by video"),
     ]),
     ("Membership", None, [
