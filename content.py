@@ -546,7 +546,7 @@ FAQ_PAGE = {
 FAQ_GROUPS = [
     {"name": "Concierge medicine", "pairs": [
         ("Why choose concierge medicine?", "<p>Concierge medicine is a membership model: you pay an annual fee, the practice keeps its patient list small, and in return you get around-the-clock phone access, same or next-business-day appointments, and visits long enough to cover everything on your mind. It restores the relationship between physician and patient that a high-volume practice has no room for. <a href=\"/concierge-medicine\">How it works here</a>.</p>"),
-        ("Is there a limit to how many people can join?", "<p>Yes. The practice limits membership to a small number of patients so that appointments stay prompt and every patient gets the attention they need. Ask the office whether new members are being accepted right now.</p>"),
+        ("Is there a limit to how many people can join?", "<p>Yes. The practice limits membership to a small number of patients so that every patient gets as much time as they need. Appointments are never hurried: Dr. Shtern takes her time with each visit. Ask the office whether new members are being accepted right now.</p>"),
     ]},
     {"name": "Access and appointments", "pairs": [
         ("How quickly can I be seen?", "<p>Members are seen the same or next business day when something comes up. Routine visits are scheduled at a time that suits you.</p>"),
