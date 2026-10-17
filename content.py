@@ -152,17 +152,19 @@ HOME_DESC = ("Concierge doctor in Palm Beach Gardens: Dr. Yana Shtern, MD, board
              "One patient at a time, 24/7 phone access.")
 
 HERO_VIDEO = {
-    # The coastline clip the owner supplied on Oct 16, 2026 (DJI, 1280x720 HEVC); see _dev/video/PROVENANCE.md.
-    # The source is 720p, so every screen gets the same 720p set. main.js still asks for uhd/qhd/hd by device
-    # pixels, so a 4K master can be dropped in later without touching the script.
+    # Juno Beach Pier drone clip (Juno.MP4 in Dropbox /kashuba, 2688x1512), the same shot as the RegenOrtho hero.
+    # Same edit as RegenOrtho (slowed approach, dissolve over the exposure snap) but no grade; see _dev/video/PROVENANCE.md.
+    # 1512 is the camera's native height, so uhd and qhd both get the 1512 set and are never upscaled.
     # Each set: AV1 webm | HEVC mp4 (Safari) | H.264 mp4 (last resort).
-    "hd": "/assets/video/coast-720.webm|/assets/video/coast-720-hevc.mp4|/assets/video/coast-720.mp4",
-    "portrait": "/assets/video/coast-portrait.webm|/assets/video/coast-portrait-hevc.mp4|/assets/video/coast-portrait.mp4",
+    "uhd": "/assets/video/juno-1512.webm|/assets/video/juno-1512-hevc.mp4|/assets/video/juno-1080.mp4",
+    "qhd": "/assets/video/juno-1512.webm|/assets/video/juno-1512-hevc.mp4|/assets/video/juno-1080.mp4",
+    "hd": "/assets/video/juno-1080.webm|/assets/video/juno-1080-hevc.mp4|/assets/video/juno-1080.mp4",
+    "portrait": "/assets/video/juno-portrait.webm|/assets/video/juno-portrait-hevc.mp4|/assets/video/juno-portrait.mp4",
     "posters": {
-        "a768": "/assets/video/coast-poster-768.avif", "a1280": "/assets/video/coast-poster-1280.avif",
-        "w768": "/assets/video/coast-poster-768.webp", "w1280": "/assets/video/coast-poster-1280.webp",
-        "j768": "/assets/video/coast-poster-768.jpg", "j1280": "/assets/video/coast-poster-1280.jpg",
-        "pa": "/assets/video/coast-poster-portrait-720.avif", "pw": "/assets/video/coast-poster-portrait-720.webp", "pj": "/assets/video/coast-poster-portrait-720.jpg",
+        "a768": "/assets/video/juno-poster-768.avif", "a1280": "/assets/video/juno-poster-1280.avif",
+        "w768": "/assets/video/juno-poster-768.webp", "w1280": "/assets/video/juno-poster-1280.webp",
+        "j768": "/assets/video/juno-poster-768.jpg", "j1280": "/assets/video/juno-poster-1280.jpg",
+        "pa": "/assets/video/juno-poster-portrait.avif", "pw": "/assets/video/juno-poster-portrait.webp", "pj": "/assets/video/juno-poster-portrait.jpg",
     },
 }
 
