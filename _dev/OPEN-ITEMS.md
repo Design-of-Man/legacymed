@@ -13,8 +13,11 @@ Nothing below was guessed on the site. Each item is either left out of the copy 
 - **Privacy Officer phone (561) 316-7199** in the HIPAA notice (carried over unchanged). Confirm it is still current.
 - **Healthgrades/US News/Zocdoc listings** still show old Jupiter or Brooklyn addresses (see audit). Claim and correct.
 
+## From the Oct 17, 2026 client round
+- **Third hospital affiliation.** Dr. Shtern (Oct 17) is awaiting courtesy privileges at another facility and wants to add it once granted. The label is now "Hospital affiliations"; add the facility to `DOCTOR["home_creds"]`, `DOCTOR["facts"]` and the llms.txt line in content.py when she confirms the name. Copy elsewhere still says she "has privileges at" Jupiter Medical Center and Palm Beach Gardens Medical Center.
+
 ## From the Oct 16, 2026 client round
-- **Hero film source.** The coastline clip supplied on Oct 16 is a 1280x720 export (`DJI_..._0426_D_1.mov`), not the 4K camera file. It plays fine but is soft on large screens. Ask for the original from the drone and re-encode per `_dev/video/PROVENANCE.md`.
+- **Hero film source.** Resolved Oct 17: the hero is now the Juno Beach Pier clip from the 2688x1512 camera original, so large screens get a native 1512p file. The 720p coastline clip is retired.
 - **Google reviews.** The home page shows the Google rating (5.0, 45 reviews) and four verbatim Google reviews as a snapshot dated October 2026 (`GOOGLE`, `GOOGLE_REVIEWS` in content.py, read from the public listing, place ID ChIJ9-heFHwr34gRt2Rs2caAsOY). Refresh the snapshot now and then, or set `GOOGLE_PLACES_API_KEY` in Vercel and the block goes live automatically.
 - **Blog moved to /blog.** Posts live at /blog/<slug>, feed at /blog/feed.xml; /journal, /journal/feed.xml and /journal/:slug 301 to the new paths (vercel.json). Nothing else to do unless Search Console shows old /journal URLs indexed.
 

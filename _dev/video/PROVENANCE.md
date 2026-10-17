@@ -1,6 +1,66 @@
 # Hero video
 
-> **Current encode (Oct 16, 2026): the coastline clip.** The owner replaced the Jupiter Inlet sunset with a daytime
+> **Current encode (Oct 17, 2026): the Juno Beach Pier clip.** Requested by Design of Man: the same drone shot as the
+> RegenOrtho hero. Everything below the first rule describes earlier encodes and is kept for history.
+>
+> - Source: Dropbox `/Nicholas Kashuba/kashuba/Juno.MP4`, 2688x1512 H.264, 59.94 fps, 938 frames (15.65 s), 175,925,573 bytes,
+>   sha256 `e17a2c754a4e680a5cf2a33e915503fa71d1471b642d005843410db726360443`. This is the camera's native resolution:
+>   there is no 4K master, so nothing here is upscaled past 1512.
+> - The drone's auto-exposure dips crossing the pier (mean luma 127 down to 110 at ~8.5 s) and snaps up to 134 at 9.0 s.
+>   The loop uses RegenOrtho's edit to hide that inside a dissolve: A = 1.0-8.2 s (pier approach), B = 9.6-15.65 s
+>   (post-pier glide), C = 0.55-1.15 s (wrap stub), all slowed to 0.8x and set to 30 fps, A->B crossfade 1.2 s at 7.8 s,
+>   ->C crossfade 0.6 s at 14.7625 s. Result: 466 frames, 15.53 s.
+> - **Grade: a little darker.** The owner asked (Oct 17) for the film "a bit darker as to flow into our color scheme".
+>   The loop master goes through `curves=all='0/0 0.25/0.19 0.5/0.40 0.75/0.64 1/0.90'` into `graded.mp4`
+>   (mean luma about 15% lower: 123 to 104 on a mid-approach frame; highlights capped at 90% so the sand stops glaring).
+>   Three strengths were compared side by side; this was the middle one, the strongest that still reads as natural.
+>   It is baked into the files, not a CSS overlay. RegenOrtho's brightening grade (`eq=gamma=1.12:...`) is not used.
+> - Sets: `hd` = 1080p, `qhd` and `uhd` = native 1512p (H.264 fallback for both is the 1080p file). Portrait phones get
+>   the 850x1512 crop at x=919 (the same crop RegenOrtho uses; the pier stays in frame throughout).
+>
+> ```sh
+> SRC=Juno.MP4
+> C="-color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv"
+> ffmpeg -i $SRC -filter_complex "[0:v]split=3[a][b][c];\
+> [a]trim=1.0:8.2,setpts=(PTS-STARTPTS)/0.8,fps=30[A];\
+> [b]trim=9.6:15.65,setpts=(PTS-STARTPTS)/0.8,fps=30[B];\
+> [c]trim=0.55:1.15,setpts=(PTS-STARTPTS)/0.8,fps=30[Cc];\
+> [A][B]xfade=transition=fade:duration=1.2:offset=7.8[AB];\
+> [AB][Cc]xfade=transition=fade:duration=0.6:offset=14.7625,format=yuv420p[v]" \
+>  -map "[v]" -an -c:v libx264 -preset medium -crf 6 $C master.mp4
+> ffmpeg -i master.mp4 -vf "curves=all='0/0 0.25/0.19 0.5/0.40 0.75/0.64 1/0.90',format=yuv420p" -an -c:v libx264 -preset medium -crf 6 $C graded.mp4
+> # every rendition and the poster below read graded.mp4 (written as master.mp4 for brevity)
+> A="-an -c:v libsvtav1 -preset 5 -g 60 -pix_fmt yuv420p10le -svtav1-params tune=0:scd=0:enable-overlays=1 $C"
+> H="-an -c:v libx265 -preset medium -tag:v hvc1 -pix_fmt yuv420p $C -movflags +faststart -x265-params keyint=60:min-keyint=60:scenecut=0"
+> X="-an -c:v libx264 -profile:v high -preset slow -tune film -g 60 -keyint_min 60 -sc_threshold 0 -pix_fmt yuv420p $C -movflags +faststart"
+> P="crop=850:1512:919:0"; S="scale=1920:1080:flags=lanczos"
+> ffmpeg -i master.mp4 $A -crf 36 juno-1512.webm;          ffmpeg -i master.mp4 $H -crf 26 juno-1512-hevc.mp4
+> ffmpeg -i master.mp4 -vf $S $A -crf 34 juno-1080.webm;   ... -vf $S $H -crf 25 juno-1080-hevc.mp4;   ... -vf $S $X -crf 24 juno-1080.mp4
+> ffmpeg -i master.mp4 -vf $P $A -crf 34 juno-portrait.webm; ... -vf $P $H -crf 26 juno-portrait-hevc.mp4; ... -vf $P $X -crf 25 juno-portrait.mp4
+> ffmpeg -i master.mp4 -frames:v 1 -vf "scale=in_range=tv:out_range=pc:in_color_matrix=bt709,format=rgb24" poster_src.png
+> ```
+> Posters: frame 0 of the graded loop. Pillow 12.3, LANCZOS: 1280x720 and 768x432 (AVIF q58, WebP q72, JPEG q84 progressive),
+> plus the portrait crop (919,0)-(1769,1512) at 608x1080.
+>
+> | File | Codec | Dims | Bytes |
+> |---|---|---|---|
+> | juno-1512.webm | AV1 Main 10-bit | 2688x1512 | 9,824,386 |
+> | juno-1512-hevc.mp4 | HEVC Main (hvc1) | 2688x1512 | 11,217,014 |
+> | juno-1080.webm | AV1 Main 10-bit | 1920x1080 | 7,146,228 |
+> | juno-1080-hevc.mp4 | HEVC Main | 1920x1080 | 7,993,051 |
+> | juno-1080.mp4 | H.264 High | 1920x1080 | 10,844,941 |
+> | juno-portrait.webm | AV1 Main 10-bit | 850x1512 | 4,441,094 |
+> | juno-portrait-hevc.mp4 | HEVC Main | 850x1512 | 4,562,925 |
+> | juno-portrait.mp4 | H.264 High | 850x1512 | 6,178,425 |
+> | juno-poster-1280 .avif / .webp / .jpg | | 1280x720 | 65,805 / 61,142 / 149,092 |
+> | juno-poster-768 .avif / .webp / .jpg | | 768x432 | 26,879 / 25,782 / 57,680 |
+> | juno-poster-portrait .avif / .webp / .jpg | | 608x1080 | 44,325 / 42,152 / 100,479 |
+
+---
+
+# Earlier hero: the coastline clip (Oct 16, 2026; history)
+
+> **Encode of Oct 16, 2026: the coastline clip.** The owner replaced the Jupiter Inlet sunset with a daytime
 > drone shot along the Singer Island / Riviera Beach shoreline (turquoise water, condo towers, the Intracoastal behind).
 > Everything below the first rule describes the earlier Jupiter Inlet encodes and is kept for history.
 >

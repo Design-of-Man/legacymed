@@ -91,7 +91,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'At Legacy Medical, Dr. Shtern can talk through which exercises suit your joints, heart and '
                       'medicines, and how to fit strength work into a week that already has walking, golf or tennis in '
-                      'it. The annual [Legacy physical](/preventive-care) is a good moment for that conversation. If '
+                      'it. The annual [executive physical](/preventive-care) is a good moment for that conversation. If '
                       'you would like to meet her first, the first visit is a complimentary [meet and '
                       'greet](/meet-and-greet).'}],
   'sources': [],
@@ -186,7 +186,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'earlier article on [why obesity is considered a disease](/blog/obesity-is-a-disease) covers '
                       'the medical side of weight in more depth.'},
              {'type': 'p',
-              'text': 'At Legacy Medical, labs are drawn in the office and the annual [Legacy '
+              'text': 'At Legacy Medical, labs are drawn in the office and the annual [executive '
                       'physical](/preventive-care) includes time to go through the results together, so the numbers '
                       'come with context. If you would like to see how that works, start with a complimentary [meet '
                       'and greet](/meet-and-greet) with Dr. Shtern.'}],
@@ -281,7 +281,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'kidneys](/blog/heat-hydration-kidney-health) has practical tips, and [the benefits of '
                       'exercising](/blog/health-benefits-of-exercise) covers the basics.'},
              {'type': 'p',
-              'text': 'An ECG is done in the office at Legacy Medical, and the annual [Legacy '
+              'text': 'An ECG is done in the office at Legacy Medical, and the annual [executive '
                       'physical](/preventive-care) includes one, which gives Dr. Shtern a baseline before you train '
                       'harder. To meet her and talk about your goals, book a complimentary [meet and '
                       'greet](/meet-and-greet).'}],
@@ -578,7 +578,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'At Legacy Medical, blood is drawn in the office and Dr. Shtern takes the time to explain what '
                       'each number means for you, including how cholesterol, blood pressure and kidney function fit '
-                      'together. The annual [Legacy physical](/preventive-care) is a natural time to ask. To meet her '
+                      'together. The annual [executive physical](/preventive-care) is a natural time to ask. To meet her '
                       'first, book a complimentary [meet and greet](/meet-and-greet).'}],
   'sources': [],
   'stale_note': None,
@@ -899,7 +899,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Menopause care often gets split between a gynecologist, a cardiologist and a primary care '
                       'doctor, with no one holding all of it. At Legacy Medical, Dr. Shtern follows blood pressure, '
-                      'cholesterol and blood sugar over time, does an ECG in the office as part of the annual [Legacy '
+                      'cholesterol and blood sugar over time, does an ECG in the office as part of the annual [executive '
                       'physical](/preventive-care), and coordinates with your other doctors. To talk it through, book '
                       'a complimentary [meet and greet](/meet-and-greet).'}],
   'sources': [],
@@ -1552,7 +1552,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'a conversation-based visit to create a personalized prevention plan. Medicare is clear that it '
                       'is not a routine physical exam.'},
              {'type': 'p',
-              'text': 'At Legacy Medical, the annual [Legacy physical](/preventive-care) includes lab work and an ECG, '
+              'text': 'At Legacy Medical, the annual [executive physical](/preventive-care) includes lab work and an ECG, '
                       'with time afterward to go through the results together.'},
              {'type': 'h2', 'text': 'Fitness and strength: the two strongest levers'},
              {'type': 'p',
@@ -1653,7 +1653,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'IRS guidance sets out which arrangements qualify.'},
              {'type': 'p',
               'text': 'Concierge medicine usually works differently. A concierge practice generally bills insurance '
-                      'for visits and tests and charges a separate membership fee, often once a year. A concierge '
+                      'for visits and tests and charges a separate concierge fee, often once a year. A concierge '
                       'practice that bills insurance for care, or charges more than the monthly limits, likely does '
                       'not meet the definition. The IRS has not issued a ruling on concierge fees in general. We '
                       'explain the broader differences in [concierge medicine and direct primary care are not the '
@@ -1674,7 +1674,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'A health FSA is offered through an employer, and what it will reimburse depends on the IRS '
                       "rules for medical expenses and on your employer's plan. The IRS explains what generally counts "
                       'as a medical expense in [Publication 502](https://www.irs.gov/publications/p502). Some plan '
-                      'administrators will ask for a breakdown of what a membership fee pays for before they decide '
+                      'administrators will ask for a breakdown of what a concierge fee pays for before they decide '
                       'whether to reimburse it.'},
              {'type': 'p',
               'text': 'Separately, the visits, labs and tests a concierge practice bills to insurance still produce '
@@ -1689,14 +1689,14 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'items': ['Ask the practice for its membership agreement and a written description of what the fee '
                         'covers.',
                         'Ask whether the practice bills insurance for visits and tests.',
-                        'Ask your HSA or FSA administrator how it treats membership fees.',
+                        'Ask your HSA or FSA administrator how it treats concierge fees.',
                         'Ask a tax advisor whether paying the fee from an HSA, or joining at all, could affect your '
                         'eligibility to contribute.',
                         'Keep copies of the agreement and receipts with your tax records.']},
              {'type': 'h2', 'text': 'How it works at Legacy Medical'},
              {'type': 'p',
               'text': 'Legacy Medical is a concierge practice, not a direct primary care practice. We bill insurance, '
-                      'including Medicare, for visits, labs and tests, and members pay an annual membership fee that '
+                      'including Medicare, for visits, labs and tests, and members pay an annual concierge fee that '
                       'is not billed to insurance. Because of that structure, we do not describe our fee as '
                       'HSA-eligible, and we encourage anyone who uses an HSA or FSA to check with a tax advisor '
                       'first.'},
@@ -1717,17 +1717,17 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
   'date': '2026-10-12T12:00:00',
   'modified': '2026-10-12T12:00:00',
   'category': 'Concierge medicine',
-  'excerpt': 'Medicare does not pay concierge membership fees, but it still covers your visits and tests. Here is how '
+  'excerpt': 'Medicare does not pay concierge fees, but it still covers your visits and tests. Here is how '
              'assignment works and what gets billed to Medicare.',
   'blocks': [{'type': 'p',
               'text': 'Many people considering concierge medicine are on Medicare, and the first thing they want to '
                       'know is whether Medicare will pay for it. The answer has two parts. Medicare does not pay the '
-                      'membership fee. It does continue to cover the medical care you receive, the same way it would '
+                      'concierge fee. It does continue to cover the medical care you receive, the same way it would '
                       "at any doctor's office. Here is how that works."},
              {'type': 'h2', 'text': 'What Medicare says'},
              {'type': 'p',
               'text': "Medicare's own page on [concierge care](https://www.medicare.gov/coverage/concierge-care) is "
-                      'direct: Medicare does not cover membership fees for concierge care. You pay the fee yourself. '
+                      'direct: Medicare does not cover concierge fees. You pay the fee yourself. '
                       'Medicare also notes that concierge care goes by other names, including retainer-based medicine, '
                       'boutique medicine and direct care, so the same rule applies whatever a practice calls itself.'},
              {'type': 'p',
@@ -1741,7 +1741,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'deductible and coinsurance.'},
              {'type': 'p',
               'text': 'According to Medicare, a doctor who accepts assignment cannot charge you extra for '
-                      'Medicare-covered services, and the membership fee cannot include extra charges for things '
+                      'Medicare-covered services, and the concierge fee cannot include extra charges for things '
                       'Medicare usually covers. If Medicare will not pay for a particular item or service, the doctor '
                       'must give you a written notice, called an Advance Beneficiary Notice of Noncoverage, before '
                       'charging you for it.'},
@@ -1764,8 +1764,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                         'Covered preventive screenings, based on your age and history.']},
              {'type': 'p',
               'text': 'Your Part B deductible and coinsurance, or any supplemental coverage you have, work the same '
-                      'way they would anywhere else. The membership fee sits outside that system.'},
-             {'type': 'h2', 'text': 'What the membership fee is for'},
+                      'way they would anywhere else. The concierge fee sits outside that system.'},
+             {'type': 'h2', 'text': 'What the concierge fee is for'},
              {'type': 'p',
               'text': 'If Medicare covers the care, people reasonably ask what the fee buys. In most concierge '
                       'practices it pays for the way care is delivered: a smaller panel, faster appointments, more '
@@ -1788,13 +1788,13 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': "If you have a Medicare Advantage plan rather than Original Medicare, the plan's network rules "
                       'also matter. Before you join any practice, check with your plan that the doctor is in network, '
-                      'so that your visits and tests are covered the way you expect. The membership fee is still not '
+                      'so that your visits and tests are covered the way you expect. The concierge fee is still not '
                       'covered.'},
              {'type': 'h2', 'text': 'How Legacy Medical works with Medicare'},
              {'type': 'p',
               'text': 'Legacy Medical bills Medicare for visits, labs and tests, along with other insurance such as '
-                      'Aetna, Cigna and BlueCross BlueShield. The annual membership fee is separate and is not billed '
-                      'to insurance. Labs are drawn in our office, and members have a yearly Legacy physical with labs '
+                      'Aetna, Cigna and BlueCross BlueShield. The annual concierge fee is separate and is not billed '
+                      'to insurance. Labs are drawn in our office, and members have a yearly executive physical with labs '
                       'and an ECG. Our [insurance and fees](/insurance-and-fees) page and our [frequently asked '
                       'questions](/faq) cover the common billing questions.'},
              {'type': 'p',
@@ -1815,12 +1815,12 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              'billing, fee structure, Florida law and the new HSA rule.',
   'blocks': [{'type': 'p',
               'text': 'Concierge medicine and direct primary care are often mentioned in the same breath. Both involve '
-                      "paying a doctor's office a membership fee, and both promise more time and easier access. "
+                      "paying a doctor's office a concierge fee, and both promise more time and easier access. "
                       'Underneath, they are built differently, and the difference affects how you pay for care, how '
                       'insurance fits in, and even how your health savings account can be used.'},
              {'type': 'p', 'text': 'Here is the short version:'},
              {'type': 'ul',
-              'items': ['**Concierge medicine** usually charges a membership fee and also bills your insurance, '
+              'items': ['**Concierge medicine** usually charges a concierge fee and also bills your insurance, '
                         'including Medicare, for visits, labs and tests.',
                         '**Direct primary care**, often called DPC, usually charges a monthly fee that covers primary '
                         'care services, and the practice generally does not bill insurance for them.']},
@@ -1830,9 +1830,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'h2', 'text': 'How insurance fits in'},
              {'type': 'p',
               'text': "In a concierge practice, insurance does much of the same work it does at any doctor's office. "
-                      'Visits and tests are billed, and your copays and deductibles apply. The membership fee is '
-                      'separate. Medicare, for instance, [does not cover concierge membership '
-                      'fees](https://www.medicare.gov/coverage/concierge-care), and a doctor who accepts assignment '
+                      'Visits and tests are billed, and your copays and deductibles apply. The concierge fee is '
+                      'separate. Medicare, for instance, [does not cover concierge fees](https://www.medicare.gov/coverage/concierge-care), and a doctor who accepts assignment '
                       'cannot charge extra for Medicare-covered services.'},
              {'type': 'p',
               'text': 'Many DPC practices take insurance out of primary care altogether. The monthly fee replaces '
@@ -1887,7 +1886,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Legacy Medical is a Concierge Internal Medicine practice. We bill insurance, including '
                       'Medicare, Aetna, Cigna and BlueCross BlueShield, for visits, labs and tests, and members pay an '
-                      'annual membership fee that is not billed to insurance. Members are seen the same or next '
+                      'annual concierge fee that is not billed to insurance. Members are seen the same or next '
                       'business day and can reach the practice by phone at any hour. Our [insurance and '
                       'fees](/insurance-and-fees) page explains the details.'},
              {'type': 'p',
@@ -1914,7 +1913,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'MDVIP [describes itself](https://www.mdvip.com/about-mdvip) as a national network founded in '
                       '2000, with more than 1,400 affiliated physicians and more than 400,000 patients. According to '
-                      'its own description, the membership fee covers its wellness program, and insurance is billed '
+                      'its own description, the concierge fee covers its wellness program, and insurance is billed '
                       'for medical care such as visits and tests.'},
              {'type': 'p',
               'text': 'In practical terms, an MDVIP-affiliated doctor runs a practice that follows a shared program '
@@ -1943,10 +1942,9 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'items': ['A smaller panel than a typical primary care practice, so the doctor has more time.',
                         'Faster access to appointments, often the same or next day.',
                         'A longer annual physical than most insurance-based offices provide.',
-                        'Insurance billed for covered care, with the membership fee paid separately.']},
+                        'Insurance billed for covered care, with the concierge fee paid separately.']},
              {'type': 'p',
-              'text': 'Medicare rules apply to both. Medicare does [not cover concierge membership '
-                      'fees](https://www.medicare.gov/coverage/concierge-care), and a doctor who accepts assignment '
+              'text': 'Medicare rules apply to both. Medicare does [not cover concierge fees](https://www.medicare.gov/coverage/concierge-care), and a doctor who accepts assignment '
                       'cannot charge you extra for Medicare-covered services. That holds whether the practice is part '
                       'of a network or stands on its own.'},
              {'type': 'p',
@@ -1998,22 +1996,22 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
   'blocks': [{'type': 'p',
               'text': 'Most people who look into concierge medicine start with the same practical question: what does '
                       'it cost? The honest answer is that there is no single price. Each practice sets its own '
-                      'membership fee, and what that fee pays for differs from one office to the next. This article '
+                      'concierge fee, and what that fee pays for differs from one office to the next. This article '
                       'walks through what shapes a fee, what the public record says, and how to compare practices on '
                       'more than the number.'},
              {'type': 'h2', 'text': 'Two kinds of cost, not one'},
              {'type': 'p',
               'text': 'At most concierge practices you are looking at two separate kinds of cost. The first is the '
-                      'membership fee, usually charged once a year or in installments. The second is the ordinary cost '
+                      'concierge fee, usually charged once a year or in installments. The second is the ordinary cost '
                       'of medical care: office visits, lab work, imaging and tests, which many practices bill to your '
                       'insurance the same way any doctor would.'},
              {'type': 'p',
               'text': 'That second part matters more than people expect. Medicare, for example, [does not cover '
-                      'concierge membership fees](https://www.medicare.gov/coverage/concierge-care), but a concierge '
+                      'concierge fees](https://www.medicare.gov/coverage/concierge-care), but a concierge '
                       'doctor who accepts assignment still bills Medicare for covered services and cannot charge you '
                       'extra for them. So your deductibles, copays and coinsurance still apply to visits and tests, on '
                       'top of the membership.'},
-             {'type': 'h2', 'text': 'What shapes a membership fee'},
+             {'type': 'h2', 'text': 'What shapes a concierge fee'},
              {'type': 'p',
               'text': 'Practices arrive at their fees in different ways, but a few factors come up again and again:'},
              {'type': 'ul',
@@ -2043,7 +2041,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'MDVIP, a national network of affiliated physicians, [describes '
                       'itself](https://www.mdvip.com/about-mdvip) as founded in 2000, with more than 1,400 affiliated '
                       'physicians and more than 400,000 patients. By its own description, insurance is billed for '
-                      'medical care and the membership fee covers its wellness program. That is one common structure. '
+                      'medical care and the concierge fee covers its wellness program. That is one common structure. '
                       'Independent practices set their own terms, so the only way to compare is to ask each one '
                       'directly. We cover the differences in more detail in [Concierge medicine vs. '
                       'MDVIP](/blog/concierge-medicine-vs-mdvip).'},
@@ -2052,7 +2050,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Before you compare fees, it helps to know exactly what each one buys. These questions tend to '
                       'bring out the useful answers:'},
              {'type': 'ol',
-              'items': ['What does the membership fee include, and what is billed separately?',
+              'items': ['What does the concierge fee include, and what is billed separately?',
                         'Which insurance plans do you bill for visits, labs and tests?',
                         'How quickly can I be seen when I am sick, and how do I reach the doctor after hours?',
                         'Is there a written agreement, and how do I cancel or get a refund if I move?',
@@ -2063,10 +2061,10 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'FSA?](/blog/hsa-fsa-concierge-medicine-fees)'},
              {'type': 'h2', 'text': 'How Legacy Medical handles the fee'},
              {'type': 'p',
-              'text': 'Legacy Medical charges an annual membership fee and bills insurance, including Medicare, Aetna, '
+              'text': 'Legacy Medical charges an annual concierge fee and bills insurance, including Medicare, Aetna, '
                       'Cigna and BlueCross BlueShield, for visits, labs and tests. The fee itself is not billed to '
                       'insurance. Members are seen the same or next business day, can reach the practice by phone '
-                      'around the clock, and have labs drawn in our office. Each year includes a Legacy physical with '
+                      'around the clock, and have labs drawn in our office. Each year includes an executive physical with '
                       'labs and an ECG.'},
              {'type': 'p',
               'text': 'We do not publish the fee online. We prefer to explain it in person, along with what it covers, '
@@ -2128,7 +2126,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Video visits can save a trip for follow-ups, lab reviews and medication questions. They are '
                       'less useful when you need an exam, so ask how the practice decides which is which.'},
              {'type': 'h2', 'text': 'Fees, insurance and Medicare'},
-             {'type': 'h3', 'text': '7. What does the membership fee cover, and what does it not?'},
+             {'type': 'h3', 'text': '7. What does the concierge fee cover, and what does it not?'},
              {'type': 'p',
               'text': 'Fees vary widely between practices, and so does what they include. Ask for the answer in '
                       'writing: which visits, tests and services are part of membership, and which are billed '
@@ -2137,7 +2135,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'h3', 'text': '8. What gets billed to my insurance or to Medicare?'},
              {'type': 'p',
               'text': 'Many concierge practices still bill insurance for visits, labs and tests. [Medicare does not '
-                      'cover concierge membership fees](https://www.medicare.gov/coverage/concierge-care), and a '
+                      'cover concierge fees](https://www.medicare.gov/coverage/concierge-care), and a '
                       'doctor who accepts Medicare assignment cannot charge you extra for services Medicare already '
                       'covers. Ask how the practice handles that line.'},
              {'type': 'h3', 'text': '9. How do I leave, and is any of the fee refunded?'},
@@ -2189,7 +2187,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              'to judge the harder part: whether the fit is right.',
   'blocks': [{'type': 'p',
               'text': 'Choosing a concierge doctor is a bigger decision than picking a name from an insurance '
-                      'directory. You are paying a membership fee for a closer relationship, so it makes sense to '
+                      'directory. You are paying a concierge fee for a closer relationship, so it makes sense to '
                       'check the basics carefully and then spend real time on fit.'},
              {'type': 'p',
               'text': 'This guide covers both. The first half is homework you can do from a laptop in an evening. The '
@@ -2235,8 +2233,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'independent. Some bill insurance for visits and tests, others do not. Before comparing fees, '
                       'make sure you are comparing the same thing.'},
              {'type': 'p',
-              'text': 'If you have Medicare, know that [Medicare does not cover concierge membership '
-                      'fees](https://www.medicare.gov/coverage/concierge-care), and that a doctor who accepts '
+              'text': 'If you have Medicare, know that [Medicare does not cover concierge fees](https://www.medicare.gov/coverage/concierge-care), and that a doctor who accepts '
                       'assignment cannot charge you extra for services Medicare covers. Ask each practice to explain '
                       'in writing what the fee includes and what is billed to insurance. Our page on [concierge versus '
                       'traditional primary care](/concierge-vs-traditional-primary-care) lays out the usual '
@@ -2571,9 +2568,9 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'That visit is useful, but it is different from a hands-on exam. If you have Medicare and want '
                       'to understand what is and is not billed at a concierge practice, see our piece on [whether '
                       'Medicare covers concierge medicine](/blog/does-medicare-cover-concierge-medicine).'},
-             {'type': 'h2', 'text': 'The Legacy physical'},
+             {'type': 'h2', 'text': 'The annual executive physical'},
              {'type': 'p',
-              'text': 'At Legacy Medical, members have an annual Legacy physical with labs and an ECG. Labs are drawn '
+              'text': 'At Legacy Medical, members have an annual executive physical with labs and an ECG. Labs are drawn '
                       'in the office, and the visit is unhurried, so there is time to review your screening schedule '
                       'against the recommendations above and against your own history. Our [preventive care '
                       'page](/preventive-care) describes it in more detail.'},
@@ -2860,14 +2857,14 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'h2', 'text': 'Where a concierge practice fits'},
              {'type': 'p',
               'text': 'A concierge membership does not replace Medicare. Medicare.gov states that Medicare does not '
-                      'cover concierge membership fees, and that doctors who accept assignment cannot charge you extra '
+                      'cover concierge fees, and that doctors who accept assignment cannot charge you extra '
                       'for services Medicare already covers '
                       '([Medicare.gov](https://www.medicare.gov/coverage/concierge-care)). We explain this in more '
                       'detail in [does Medicare cover concierge '
                       'medicine?](/blog/does-medicare-cover-concierge-medicine).'},
              {'type': 'p',
               'text': 'At Legacy Medical, insurance, including Medicare, is billed for visits, labs and tests, and the '
-                      'annual membership fee is separate. You can read more on our [insurance and '
+                      'annual concierge fee is separate. You can read more on our [insurance and '
                       'fees](/insurance-and-fees) page and our page for [seasonal residents](/seasonal-residents).'},
              {'type': 'p',
               'text': 'If you are weighing your options this fall and want to see how a concierge practice would work '

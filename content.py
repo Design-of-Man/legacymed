@@ -56,12 +56,12 @@ DOCTOR = {
     ],
     "page_title": "Internist in Palm Beach Gardens | Dr. Yana Shtern, MD",
     "page_desc": ("Dr. Yana Shtern is a concierge internist in Palm Beach Gardens, double board-certified in Internal Medicine and "
-                  "Nephrology. Her training, hospital privileges and how she practices."),
+                  "Nephrology. Her training, hospital affiliations and how she practices."),
     "hero_lede": ("Board-certified in Internal Medicine and in Nephrology, Dr. Shtern has practiced for close to twenty years, first in "
                   "New York City and now in Palm Beach Gardens, where she runs Legacy Medical as a small concierge practice."),
     "home_creds": [
         ("Board certification", "Internal Medicine and Nephrology, American Board of Internal Medicine"),
-        ("Hospital privileges", "Jupiter Medical Center and Palm Beach Gardens Medical Center"),
+        ("Hospital affiliations", "Jupiter Medical Center and Palm Beach Gardens Medical Center"),
         ("In practice", "Close to twenty years, in New York City and Palm Beach County"),
         ("Recognition", "Castle Connolly Top Doctor since 2023"),
     ],
@@ -70,7 +70,7 @@ DOCTOR = {
         ("Medical degree", "St. George's University School of Medicine, 2007"),
         ("Residency and fellowship", "Internal Medicine residency and Nephrology fellowship, Maimonides Medical Center, New York City"),
         ("Undergraduate", "BS in Pharmacology, Stony Brook University"),
-        ("Hospital privileges", "Jupiter Medical Center; Palm Beach Gardens Medical Center"),
+        ("Hospital affiliations", "Jupiter Medical Center; Palm Beach Gardens Medical Center"),
         ("Committee work", "Continuing Medical Education Committee, Jupiter Medical Center"),
     ],
     "bio": [
@@ -121,7 +121,7 @@ SERVICES_INCLUDED = [
     {"name": "Same or next-business-day visits", "icon": "calendar", "text": "When something comes up, you are seen that day or the next business day, not in three weeks."},
     {"name": "Phone access around the clock", "icon": "phone", "text": "Members can reach the practice by phone 24 hours a day, 7 days a week, including weekends and holidays."},
     {"name": "Extended visits", "icon": "time", "text": "Appointments are long enough to cover everything on your list, with minimal time in the waiting room."},
-    {"name": "The annual Legacy physical", "icon": "heart", "text": "A thorough yearly exam with lab work and an ECG, then time to go through the results together.", "schema": True, "procedure": True},
+    {"name": "The annual executive physical", "icon": "heart", "text": "A thorough yearly exam with lab work and an ECG, then time to go through the results together.", "schema": True, "procedure": True},
     {"name": "Lab draws in the office", "icon": "lab", "text": "Blood is drawn here, so there is no separate trip to a lab. Stool occult blood testing too.", "schema": True, "procedure": True},
     {"name": "ECGs in the office", "icon": "ecg", "text": "Electrocardiograms done during your visit, without a separate appointment elsewhere.", "schema": True, "procedure": True},
     {"name": "Rapid respiratory tests", "icon": "shield", "text": "In-office testing for flu A and B, COVID-19 and strep, so a sick visit ends with an answer.", "schema": True, "procedure": True},
@@ -137,12 +137,12 @@ CARD_BLURBS = {
     "kidney-care": "A board-certified nephrologist who is also your internist: CKD, stones, electrolytes, creatinine that keeps creeping up.",
     "hypertension": "Blood pressure that will not come down, or comes down with side effects you do not like.",
     "geriatric-memory-care": "Care for older adults and the families who help them, including memory concerns.",
-    "preventive-care": "Executive and annual physicals: the Legacy physical, screenings, and no day at a hospital.",
+    "preventive-care": "Executive annual physicals, screenings, and no day at a hospital.",
     "telehealth": "Video visits for follow-ups, results and questions that do not need an exam.",
     "membership": "Meet Dr. Shtern first, then decide.",
-    "insurance-and-fees": "What concierge medicine costs here: the membership fee, and what your insurance still pays for.",
+    "insurance-and-fees": "What concierge medicine costs here: the concierge fee, and what your insurance still pays for.",
     "faq": "Answers about access, insurance, hospitals and joining.",
-    "dr-yana-shtern": "Training, certifications and hospital privileges.",
+    "dr-yana-shtern": "Training, certifications and hospital affiliations.",
     "our-team": "Who answers when you call.",
 }
 
@@ -152,17 +152,19 @@ HOME_DESC = ("Concierge doctor in Palm Beach Gardens: Dr. Yana Shtern, MD, board
              "One patient at a time, 24/7 phone access.")
 
 HERO_VIDEO = {
-    # The coastline clip the owner supplied on Oct 16, 2026 (DJI, 1280x720 HEVC); see _dev/video/PROVENANCE.md.
-    # The source is 720p, so every screen gets the same 720p set. main.js still asks for uhd/qhd/hd by device
-    # pixels, so a 4K master can be dropped in later without touching the script.
+    # Juno Beach Pier drone clip (Juno.MP4 in Dropbox /kashuba, 2688x1512), the same shot as the RegenOrtho hero.
+    # Same edit as RegenOrtho (slowed approach, dissolve over the exposure snap) but no grade; see _dev/video/PROVENANCE.md.
+    # 1512 is the camera's native height, so uhd and qhd both get the 1512 set and are never upscaled.
     # Each set: AV1 webm | HEVC mp4 (Safari) | H.264 mp4 (last resort).
-    "hd": "/assets/video/coast-720.webm|/assets/video/coast-720-hevc.mp4|/assets/video/coast-720.mp4",
-    "portrait": "/assets/video/coast-portrait.webm|/assets/video/coast-portrait-hevc.mp4|/assets/video/coast-portrait.mp4",
+    "uhd": "/assets/video/juno-1512.webm|/assets/video/juno-1512-hevc.mp4|/assets/video/juno-1080.mp4",
+    "qhd": "/assets/video/juno-1512.webm|/assets/video/juno-1512-hevc.mp4|/assets/video/juno-1080.mp4",
+    "hd": "/assets/video/juno-1080.webm|/assets/video/juno-1080-hevc.mp4|/assets/video/juno-1080.mp4",
+    "portrait": "/assets/video/juno-portrait.webm|/assets/video/juno-portrait-hevc.mp4|/assets/video/juno-portrait.mp4",
     "posters": {
-        "a768": "/assets/video/coast-poster-768.avif", "a1280": "/assets/video/coast-poster-1280.avif",
-        "w768": "/assets/video/coast-poster-768.webp", "w1280": "/assets/video/coast-poster-1280.webp",
-        "j768": "/assets/video/coast-poster-768.jpg", "j1280": "/assets/video/coast-poster-1280.jpg",
-        "pa": "/assets/video/coast-poster-portrait-720.avif", "pw": "/assets/video/coast-poster-portrait-720.webp", "pj": "/assets/video/coast-poster-portrait-720.jpg",
+        "a768": "/assets/video/juno-poster-768.avif", "a1280": "/assets/video/juno-poster-1280.avif",
+        "w768": "/assets/video/juno-poster-768.webp", "w1280": "/assets/video/juno-poster-1280.webp",
+        "j768": "/assets/video/juno-poster-768.jpg", "j1280": "/assets/video/juno-poster-1280.jpg",
+        "pa": "/assets/video/juno-poster-portrait.avif", "pw": "/assets/video/juno-poster-portrait.webp", "pj": "/assets/video/juno-poster-portrait.jpg",
     },
 }
 
@@ -208,7 +210,7 @@ HOME = {
         ("With you in the hospital", "She holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and stays involved if you are admitted."),
     ],
     "included_h": "What membership <em>includes</em>",
-    "included_lede": "An annual membership fee covers access to Dr. Shtern. Office visits and tests are billed to your insurance, as they are now.",
+    "included_lede": "An annual concierge fee covers access to Dr. Shtern. Office visits and tests are billed to your insurance, as they are now.",
     "clock_h": "The office keeps hours. Your access does not.",
     "clock_lede": "The office is open Monday to Friday. Outside those hours, members can still reach the practice by phone, at night, on weekends and on holidays.",
     "spec_h": "Internal Medicine, plus a <em>nephrologist's eye</em>",
@@ -217,7 +219,7 @@ HOME = {
         ("kidney-care", "Kidney care", "CKD, rising creatinine, kidney stones, electrolyte problems, and care for people on dialysis."),
         ("hypertension", "Hypertension", "Blood pressure that stays high on two or three medicines, or comes with side effects."),
         ("geriatric-memory-care", "Geriatric and memory care", "Healthy aging, memory concerns, and fewer, better prescriptions."),
-        ("preventive-care", "Executive and annual physicals", "The annual Legacy physical, with labs and an ECG done here."),
+        ("preventive-care", "Executive annual physicals", "Annual executive physical, with labs and ECG done here."),
         ("telehealth", "Telehealth", "Video visits for follow-ups, results and medication questions."),
     ],
     "plan_h": "Three steps, <em>no pressure</em>",
@@ -226,7 +228,7 @@ HOME = {
         ("Meet Dr. Shtern", "A complimentary meet-and-greet at the office. Ask about anything: the fee, your conditions, how after-hours calls work."),
         ("Join and book your first visit", "If it is a fit, enroll and schedule your first patient visit. With your permission, the office requests your records from your previous doctor."),
     ],
-    "agreement": "<strong>Your insurance still works here.</strong> The membership fee covers access and the extra time. Office visits, labs and tests are billed to your insurance the way they are today.",
+    "agreement": "<strong>Your insurance still works here.</strong> The concierge fee covers access and the extra time. Office visits, labs and tests are billed to your insurance the way they are today.",
     "reviews_h": "What patients say on <em>Google</em>",
     "reviews_note": "Quoted as published on Google. More patient reviews:",
     "stakes_h": "Small changes are easier to catch early.",
@@ -236,8 +238,8 @@ HOME = {
 }
 
 HOME_FAQ = [
-    ("How much is the membership fee?", "<p>The fee is not posted online yet. Call the office at <a href=\"tel:+15618349280\">(561) 834-9280</a> and we will go through it, or ask at your meet and greet. Office visits and tests are still billed to your insurance.</p>"),
-    ("Do you take insurance?", "<p>Yes, for visits and tests. Medicare, Aetna, Cigna and BlueCross BlueShield are among the plans the practice works with. The membership fee itself is separate and is not billed to insurance. <a href=\"/insurance-and-fees\">How the fee and insurance fit together</a>.</p>"),
+    ("How much is the concierge fee?", "<p>The fee is not posted online yet. Call the office at <a href=\"tel:+15618349280\">(561) 834-9280</a> and we will go through it, or ask at your meet and greet. Office visits and tests are still billed to your insurance.</p>"),
+    ("Do you take insurance?", "<p>Yes, for visits and tests. Medicare, Aetna, Cigna and BlueCross BlueShield are among the plans the practice works with. The concierge fee itself is separate and is not billed to insurance. <a href=\"/insurance-and-fees\">How the fee and insurance fit together</a>.</p>"),
     ("Can I meet Dr. Shtern before joining?", "<p>Yes. Your first visit is a complimentary meet and greet. <a href=\"/meet-and-greet\">Book one here</a> or call.</p>"),
     ("Where is the office?", "<p>11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens, FL 33410. It is a first-floor suite with accessible entry.</p>"),
 ]
@@ -294,7 +296,7 @@ CONCIERGE = {
     "desc": "What is concierge medicine, and how does it work? At Legacy Medical in Palm Beach Gardens: what membership includes, what insurance covers, and how it compares.",
     "eyebrow": "Concierge medicine",
     "h1": "Concierge medicine: primary care with fewer patients and more time.",
-    "lede": "Concierge medicine is a simple trade. You pay an annual membership fee, and in return the practice keeps its patient list small enough that you get your doctor's time and attention when you need them.",
+    "lede": "Concierge medicine is a simple trade. You pay an annual concierge fee, and in return the practice keeps its patient list small enough that you get your doctor's time and attention when you need them.",
     "included_lede": "Membership covers access to Dr. Shtern and the extra time. These are part of every membership.",
     "compare_lede": "Concierge practices vary. This is how Legacy Medical works, next to the high-volume model most people are used to.",
     "compare": [
@@ -305,18 +307,18 @@ CONCIERGE = {
         ("Labs and ECG", "Separate trip to a lab", "Drawn and done in the office"),
         ("Specialists", "A referral slip and a phone number", "Dr. Shtern chooses, calls and follows up"),
         ("Hospital stays", "A hospitalist you have never met", "Your doctor has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center"),
-        ("Insurance", "Billed for visits and tests", "Still billed for visits and tests; the membership fee is separate"),
+        ("Insurance", "Billed for visits and tests", "Still billed for visits and tests; the concierge fee is separate"),
     ],
     "sections": [
         ("Why the panel is small", "<p>A typical primary care doctor carries a list of two thousand patients or more. Concierge practices typically keep a few hundred. That is the whole idea: fewer patients means a schedule with room in it, so a same-day visit is normal rather than lucky, and a phone call gets returned by the doctor who knows you.</p><p>Dr. Shtern limits the number of members she takes on, and she sees one patient at a time.</p>"),
-        ("What the fee does not cover", "<p>The membership fee is not insurance. It does not pay for hospital stays, emergency care, specialists, imaging, or prescriptions. Keep your health insurance, including Medicare and any supplemental plan. Office visits and covered tests at Legacy Medical are billed to that insurance as usual.</p><p>If you are weighing the cost, the useful question is what the access is worth to you: how often you have waited weeks to be seen, or gone to urgent care because your doctor could not fit you in. <a href=\"/insurance-and-fees\">What concierge medicine costs here</a>.</p>"),
+        ("What the fee does not cover", "<p>The concierge fee is not insurance. It does not pay for hospital stays, emergency care, specialists, imaging, or prescriptions. Keep your health insurance, including Medicare and any supplemental plan. Office visits and covered tests at Legacy Medical are billed to that insurance as usual.</p><p>If you are weighing the cost, the useful question is what the access is worth to you: how often you have waited weeks to be seen, or gone to urgent care because your doctor could not fit you in. <a href=\"/insurance-and-fees\">What concierge medicine costs here</a>.</p>"),
         ("Who it suits", "<p>Concierge care tends to suit people who want one doctor to keep track of everything: adults managing high blood pressure, kidney disease or diabetes; retirees and seasonal residents who want continuity between Florida and up north; busy professionals who cannot wait three weeks for an appointment; and adult children arranging care for a parent.</p><p>If your care is simple and your current doctor is easy to reach, you may not need a concierge practice. We will tell you that at your tour if it is true.</p>"),
         ("Concierge care and direct primary care", "<p>The two are often confused. Direct primary care practices usually replace insurance billing with a monthly fee and do not bill insurance at all. Legacy Medical is a concierge practice: the membership covers access, and your insurance is still billed for visits and tests.</p>"),
     ],
     "faqs": [
-        ("What is concierge medicine?", "<p>A model of primary care where patients pay an annual membership fee and the doctor keeps a much smaller patient list. The smaller list is what makes same-day visits, longer appointments and direct phone access possible.</p>"),
+        ("What is concierge medicine?", "<p>A model of primary care where patients pay an annual concierge fee and the doctor keeps a much smaller patient list. The smaller list is what makes same-day visits, longer appointments and direct phone access possible.</p>"),
         ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a meet and greet and ask Dr. Shtern directly; she will be straight with you.</p>"),
-        ("Do I still need health insurance?", "<p>Yes. The membership fee does not replace insurance. You will still need coverage for hospital care, specialists, imaging, prescriptions and emergencies, and Legacy Medical bills your insurance for office visits and tests.</p>"),
+        ("Do I still need health insurance?", "<p>Yes. The concierge fee does not replace insurance. You will still need coverage for hospital care, specialists, imaging, prescriptions and emergencies, and Legacy Medical bills your insurance for office visits and tests.</p>"),
         ("How many patients does Dr. Shtern see?", "<p>Far fewer than a typical practice. Legacy Medical takes no more than 300 members, and Dr. Shtern sees no more than eight patients a day, one at a time, never two booked into the same slot. Appointments run about an hour, and longer when your needs call for it.</p>"),
         ("Will I always see Dr. Shtern?", "<p>Yes. She is the physician for every member.</p>"),
     ],
@@ -412,7 +414,7 @@ SERVICE_PAGES = {
         "faqs": [
             ("My parent is forgetting things. Where do we start?", "<p>Start with a visit where there is time to take a full history and do a cognitive screen, ideally with you present. Several common causes of memory trouble are treatable, so it is worth checking properly.</p>"),
             ("Can you talk to me about my parent's care?", "<p>Yes, with your parent's written authorization. Once that is on file, Dr. Shtern can discuss their care with you directly.</p>"),
-            ("Is a Medicare Annual Wellness Visit the same as a physical?", "<p>No. The Medicare Annual Wellness Visit is mostly a planning conversation and screening questionnaire. A physical includes an examination. Members get the annual Legacy physical; ask the office how Medicare billing applies to your visits.</p>"),
+            ("Is a Medicare Annual Wellness Visit the same as a physical?", "<p>No. The Medicare Annual Wellness Visit is mostly a planning conversation and screening questionnaire. A physical includes an examination. Members get the annual executive physical; ask the office how Medicare billing applies to your visits.</p>"),
         ],
         "about": ["Dementia", "Mild cognitive impairment", "Polypharmacy", "Falls"],
         "related": ["preventive-care", "kidney-care", "concierge-medicine"],
@@ -421,13 +423,13 @@ SERVICE_PAGES = {
     },
     "preventive-care": {
         "title": "Executive Physicals in Palm Beach Gardens | Annual Physical",
-        "desc": "Executive physicals in Palm Beach Gardens: the annual Legacy physical, an extended exam with in-office labs and ECG, then time with Dr. Yana Shtern to go over results.",
+        "desc": "Executive physicals in Palm Beach Gardens: the annual executive physical, an extended exam with in-office labs and ECG, then time with Dr. Yana Shtern to go over results.",
         "crumb": "Preventive care and physicals",
-        "eyebrow": "Executive and annual physicals",
+        "eyebrow": "Executive annual physicals",
         "h1": "A physical with the time to mean something.",
-        "lede": "Every member gets an annual Legacy physical: an extended exam with labs and an ECG done in the office, and a follow-up conversation about what the results mean for you.",
+        "lede": "Every member gets an annual executive physical: an extended exam with labs and an ECG done in the office, and a follow-up conversation about what the results mean for you.",
         "specialty": "PrimaryCare",
-        "service_node": {"@type": "MedicalProcedure", "name": "Annual Legacy physical", "procedureType": "https://schema.org/NoninvasiveProcedure",
+        "service_node": {"@type": "MedicalProcedure", "name": "Annual executive physical", "procedureType": "https://schema.org/NoninvasiveProcedure",
                          "description": "An extended annual physical examination with in-office blood work and electrocardiogram, followed by a results review with the physician."},
         "points": [
             ("time", "An extended visit", "Time for your history, your family's history, and every question on your list."),
@@ -436,14 +438,14 @@ SERVICE_PAGES = {
             ("calendar", "Screenings on schedule", "Colonoscopy, mammography, bone density and others, arranged and tracked."),
         ],
         "sections": [
-            ("What the Legacy physical covers", "<p>The physical starts with a conversation: your history, your family's history, your medicines and supplements, sleep, exercise, and anything that has changed. Then a full examination, an ECG, and blood work drawn in the office.</p><p>When results are back, you and Dr. Shtern go through them together. You leave with a plan for the year: which screenings are due, what to watch, and what to change.</p>"),
-            ("An executive-style exam, without the hospital day", "<p>Executive physical programs often run a full day at a hospital campus with a team you will not see again. The Legacy physical covers the core of that work with your own physician, and Dr. Shtern adds imaging or specialist testing when your history or results call for it, rather than by default.</p>"),
+            ("What the annual executive physical covers", "<p>The physical starts with a conversation: your history, your family's history, your medicines and supplements, sleep, exercise, and anything that has changed. Then a full examination, an ECG, and blood work drawn in the office.</p><p>When results are back, you and Dr. Shtern go through them together. You leave with a plan for the year: which screenings are due, what to watch, and what to change.</p>"),
+            ("An executive-style exam, without the hospital day", "<p>Executive physical programs often run a full day at a hospital campus with a team you will not see again. The annual executive physical here covers the core of that work with your own physician, and Dr. Shtern adds imaging or specialist testing when your history or results call for it, rather than by default.</p>"),
             ("Screenings and vaccines", "<p>Dr. Shtern keeps track of what is due and when: colon cancer screening, mammograms, cervical screening, bone density, lung cancer screening for people with a smoking history, and adult vaccines. She arranges the ones done elsewhere and follows up on the results.</p>"),
         ],
         "faq_h": "Physical exam questions",
         "faqs": [
-            ("What is included in an executive physical?", "<p>It varies by program. Most include an extended history and exam, thorough blood work, an ECG, and age-appropriate screenings. The Legacy physical includes all of these, with further testing ordered when it is warranted.</p>"),
-            ("Is the annual physical covered by insurance?", "<p>Many plans cover a yearly preventive exam and standard screening labs. Coverage varies, so ask the office how your plan applies. The membership fee itself is separate from insurance.</p>"),
+            ("What is included in an executive physical?", "<p>It varies by program. Most include an extended history and exam, thorough blood work, an ECG, and age-appropriate screenings. The annual executive physical here includes all of these, with further testing ordered when it is warranted.</p>"),
+            ("Is the annual physical covered by insurance?", "<p>Many plans cover a yearly preventive exam and standard screening labs. Coverage varies, so ask the office how your plan applies. The concierge fee itself is separate from insurance.</p>"),
             ("Do I need to fast before my physical?", "<p>Often, yes, for certain blood tests. The office will tell you when you book.</p>"),
         ],
         "about": ["Preventive medicine", "Physical examination", "Cancer screening"],
@@ -480,9 +482,9 @@ SERVICE_PAGES = {
 
 CATEGORY_OWNERS = {  # journal category -> the page that owns the topic
     "Concierge medicine": ("concierge-medicine", "How concierge medicine works here"),
-    "Prevention and screening": ("preventive-care", "Preventive care and the Legacy physical"),
+    "Prevention and screening": ("preventive-care", "Preventive care and the annual executive physical"),
     "Heart and blood pressure": ("hypertension", "Help for high blood pressure"),
-    "Nutrition": ("preventive-care", "Preventive care and the Legacy physical"),
+    "Nutrition": ("preventive-care", "Preventive care and the annual executive physical"),
     "Medications": ("geriatric-memory-care", "Medication reviews"),
     "Infections and vaccines": ("faq", "Same-day sick visits and testing"),
     "Everyday health": ("concierge-medicine", "How concierge medicine works here"),
@@ -502,7 +504,7 @@ MEMBERSHIP = {
     ],
     "agreement": "<strong>Meet first, decide later.</strong> The meet and greet is complimentary, and joining is your decision to make afterward.",
     "sections": [
-        ("What to bring to the meet and greet", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p><p>You do not need medical records. If you join, the office requests them from your current doctor with your permission.</p>"),
+        ("What to bring to the meet and greet", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p>"),
         ("Who the practice is a good fit for", "<p>Adults who want one physician to know their whole history, people managing blood pressure, kidney disease, diabetes or several specialists, seasonal residents who want continuity, and families arranging care for a parent. Dr. Shtern is an internist: a physician trained in the care of adults.</p>"),
     ],
     "form_h": "Book a meet and greet",
@@ -516,19 +518,19 @@ MEMBERSHIP = {
 
 INSURANCE = {
     "title": "Concierge Medicine Cost and How It Works With Insurance",
-    "desc": "How much does concierge medicine cost? How the membership fee and your insurance, including Medicare and HSAs, work together at Legacy Medical in Palm Beach Gardens.",
+    "desc": "How much does concierge medicine cost? How the concierge fee and your insurance, including Medicare and HSAs, work together at Legacy Medical in Palm Beach Gardens.",
     "eyebrow": "Insurance and fees",
-    "h1": "What concierge medicine costs: a membership fee, plus your insurance.",
-    "lede": "Legacy Medical is a concierge practice that still works with insurance. The membership fee pays for access and time. Your insurance pays for visits and tests, as it does now.",
+    "h1": "What concierge medicine costs: a concierge fee, plus your insurance.",
+    "lede": "Legacy Medical is a concierge practice that still works with insurance. The concierge fee pays for access and time. Your insurance pays for visits and tests, as it does now.",
     "sections": [
-        ("The membership fee", "<p>Members pay an annual fee directly to the practice. It covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, extended visits, 24/7 phone access and Dr. Shtern's time coordinating your care.</p><p>The fee is not published online yet. Call <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your tour and the office will go through it with you.</p>"),
+        ("The concierge fee", "<p>Members pay an annual fee directly to the practice. It covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, extended visits, 24/7 phone access and Dr. Shtern's time coordinating your care.</p><p>The fee is not published online yet. Call <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your tour and the office will go through it with you.</p>"),
         ("What insurance still pays for", "<p>Office visits, lab work, ECGs and other covered services are billed to your health insurance. Plans the practice works with include Medicare, Aetna, Cigna and BlueCross BlueShield. Coverage, copays and deductibles depend on your plan, so check with the office before your first visit.</p><p>Keep your insurance. The membership does not cover hospital care, specialists, imaging, emergency care or prescriptions.</p>"),
-        ("Medicare", "<p>Medicare does not pay concierge membership fees. If you have Medicare, the fee is separate, and covered services at your visits are billed to Medicare under its usual rules. Ask the office how this works for your plan, including any Medicare Advantage or supplemental coverage.</p>"),
+        ("Medicare", "<p>Medicare does not pay concierge fees. If you have Medicare, the fee is separate, and covered services at your visits are billed to Medicare under its usual rules. Ask the office how this works for your plan, including any Medicare Advantage or supplemental coverage.</p>"),
     ],
     "faqs": [
-        ("How much does concierge medicine cost here?", "<p>The annual membership fee is not published online yet. Call the office at <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your meet and greet and we will go through it. Office visits, labs and covered tests are billed to your insurance separately, as they are today.</p>"),
-        ("How does concierge medicine work with insurance?", "<p>The membership fee is paid directly to the practice and covers access and time. Office visits, lab work, ECGs and other covered services are billed to your health insurance, including Medicare, under your plan's usual rules.</p>"),
-        ("Does insurance cover the concierge fee?", "<p>No. Health insurance, including Medicare, does not pay the membership fee. It does pay for covered services at your visits.</p>"),
+        ("How much does concierge medicine cost here?", "<p>The annual concierge fee is not published online yet. Call the office at <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your meet and greet and we will go through it. Office visits, labs and covered tests are billed to your insurance separately, as they are today.</p>"),
+        ("How does concierge medicine work with insurance?", "<p>The concierge fee is paid directly to the practice and covers access and time. Office visits, lab work, ECGs and other covered services are billed to your health insurance, including Medicare, under your plan's usual rules.</p>"),
+        ("Does insurance cover the concierge fee?", "<p>No. Health insurance, including Medicare, does not pay the concierge fee. It does pay for covered services at your visits.</p>"),
         ("Can I use an HSA or FSA for the fee?", "<p>Rules on using health savings or flexible spending accounts for concierge fees are not settled and depend on your plan. Ask your plan administrator or tax adviser before you count on it.</p>"),
         ("Is the concierge fee tax deductible?", "<p>That depends on your situation. A tax adviser can tell you whether it counts as a deductible medical expense for you.</p>"),
         ("Which insurance plans do you accept?", "<p>The practice works with Medicare, Aetna, Cigna and BlueCross BlueShield, among others. Plans change, so call the office to confirm yours.</p>"),
@@ -546,21 +548,21 @@ FAQ_PAGE = {
 FAQ_GROUPS = [
     {"name": "Concierge medicine", "pairs": [
         ("Why choose concierge medicine?", "<p>Concierge medicine is a membership model: you pay an annual fee, the practice keeps its patient list small, and in return you get around-the-clock phone access, same or next-business-day appointments, and visits long enough to cover everything on your mind. It restores the relationship between physician and patient that a high-volume practice has no room for. <a href=\"/concierge-medicine\">How it works here</a>.</p>"),
-        ("Is there a limit to how many people can join?", "<p>Yes. The practice limits membership to a small number of patients so that appointments stay prompt and every patient gets the attention they need. Ask the office whether new members are being accepted right now.</p>"),
+        ("Is there a limit to how many people can join?", "<p>Yes. The practice limits membership to a small number of patients so that every patient gets as much time as they need. Appointments are never hurried: Dr. Shtern takes her time with each visit. Ask the office whether new members are being accepted right now.</p>"),
     ]},
     {"name": "Access and appointments", "pairs": [
         ("How quickly can I be seen?", "<p>Members are seen the same or next business day when something comes up. Routine visits are scheduled at a time that suits you.</p>"),
         ("Can I reach Dr. Shtern after hours?", "<p>Yes. Members have phone access to the practice 24 hours a day, 7 days a week. In an emergency, always call 911 first.</p>"),
         ("What is Dr. Shtern's availability?", "<p>The practice is available to members by phone 24/7. In-person visits are booked the same or next business day with little to no wait, and telehealth visits are available when coming in is not practical.</p>"),
-        ("How long are visits?", "<p>Long enough to cover what you came in for. Visits are not booked in 15-minute slots.</p>"),
+        ("How long are visits?", "<p>As long as you need. Visits are not booked in 15-minute slots, so there is time to cover everything you came in for without feeling rushed.</p>"),
         ("Do you offer video visits?", "<p>Yes, for many follow-ups and results reviews. <a href=\"/telehealth\">About telehealth</a>.</p>"),
         ("What are the office hours?", "<p>Monday to Thursday 9:00 AM to 5:00 PM, Friday 9:00 AM to 2:00 PM. Closed on weekends, with member phone access around the clock.</p>"),
     ]},
     {"name": "Insurance and fees", "pairs": [
-        ("How much does membership cost?", "<p>There is an annual concierge fee. It covers what insurance will not or may not pay for: the extended Legacy physical, health promotion, and much greater access to your physician. Office visits, services and tests are billed through your insurance, as in a traditional Internal Medicine practice. The fee itself is not published online. Call the office or ask at your meet and greet.</p>"),
+        ("How much does membership cost?", "<p>There is an annual concierge fee. It covers what insurance will not or may not pay for: the extended annual executive physical, health promotion, and much greater access to your physician. Office visits, services and tests are billed through your insurance, as in a traditional Internal Medicine practice. The fee itself is not published online. Call the office or ask at your meet and greet.</p>"),
         ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a meet and greet and ask Dr. Shtern directly; she will be straight with you. <a href=\"/concierge-medicine\">How concierge medicine works here</a>.</p>"),
         ("Do you bill insurance?", "<p>Yes, for office visits, labs and covered tests. Plans include Medicare, Aetna, Cigna and BlueCross BlueShield. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
-        ("Does Medicare pay the membership fee?", "<p>No. Medicare does not cover concierge fees. Covered services at your visits are billed to Medicare as usual.</p>"),
+        ("Does Medicare pay the concierge fee?", "<p>No. Medicare does not cover concierge fees. Covered services at your visits are billed to Medicare as usual.</p>"),
     ]},
     {"name": "Care and coordination", "pairs": [
         ("Are labs done in the office?", "<p>Yes. Blood is drawn in the office, and ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done here too.</p>"),
@@ -704,6 +706,35 @@ _LOC_COPY = {
         "directions": "Take I-95 north to the PGA Boulevard exit, head east, then turn north on Prosperity Farms Road to Suite 114.",
         "faqs": [("How far is Legacy Medical from West Palm Beach?", "<p>About 14 miles from downtown, roughly 21 minutes without traffic.</p>")],
     },
+    # Added Oct 17, 2026: the practice has patients from both towns (client). Distances and routes are GEO_DATA's.
+    "hobe-sound": {
+        "name": "Hobe Sound",
+        "title": "Concierge Doctor for Hobe Sound, FL | Legacy Medical",
+        "desc": "A concierge doctor for Hobe Sound, about 30 minutes south on US-1 in Palm Beach Gardens. Dr. Yana Shtern, internist, sees members the same or next business day.",
+        "h1": "A concierge doctor for Hobe Sound, about half an hour down US-1.",
+        "lede": "Legacy Medical already cares for patients from Hobe Sound. The office is about 30 minutes south on US-1, and many follow-ups happen by video, so not every visit means the drive.",
+        "from_label": "Hobe Sound",
+        "sections": [
+            ("Fewer trips, more time when you come", "<p>When you do come in, visits are unhurried, and labs and ECGs are done in the office, so one trip covers what might otherwise take several. Results reviews, medication checks and many follow-ups happen by <a href=\"/telehealth\">video</a>, and members can reach the practice by phone at any hour.</p>"),
+            ("If you need the hospital", "<p>Of the hospitals Dr. Shtern is affiliated with, Jupiter Medical Center is the nearer one to Hobe Sound, on the way down US-1. She is also affiliated with Palm Beach Gardens Medical Center.</p>"),
+        ],
+        "directions": "From Hobe Sound, take US-1 south past Jonathan Dickinson State Park and through Tequesta and Jupiter to PGA Boulevard, turn west, then north on Prosperity Farms Road to Suite 114.",
+        "faqs": [("How far is Legacy Medical from Hobe Sound?", "<p>About 18 miles, roughly 31 minutes without traffic, longer in season.</p>")],
+    },
+    "stuart": {
+        "name": "Stuart",
+        "title": "Concierge Doctor for Stuart, FL | Legacy Medical",
+        "desc": "Concierge medicine for Stuart residents, about 40 minutes down I-95 in Palm Beach Gardens, from a doctor board-certified in Internal Medicine and Nephrology.",
+        "h1": "Concierge medicine for Stuart, a straight run down I-95.",
+        "lede": "Legacy Medical already cares for patients from Stuart. The office is about 40 minutes south by I-95, and video visits and around-the-clock phone access mean much of your care does not need the drive.",
+        "from_label": "Stuart",
+        "sections": [
+            ("Internist and nephrologist", "<p>Dr. Shtern is board-certified in Internal Medicine and Nephrology, so if you are managing kidney disease, hard-to-control blood pressure or a long medication list, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
+            ("Making the distance work", "<p>Many follow-ups, lab reviews and medication checks happen by <a href=\"/telehealth\">video visit</a>. When you come in, labs are drawn in the office, so there is no separate trip to a lab.</p>"),
+        ],
+        "directions": "From Stuart, take Kanner Highway to I-95 south, exit at PGA Boulevard and head east, then turn north on Prosperity Farms Road to Suite 114.",
+        "faqs": [("How far is Legacy Medical from Stuart?", "<p>About 30 miles, roughly 39 minutes without traffic.</p>")],
+    },
 }
 
 for slug, copy in _LOC_COPY.items():
@@ -738,11 +769,11 @@ def llms_txt(P, D, pages, url):
         "## Facts",
         "- Practice: Legacy Medical (legal name Legacy Medical PLLC), Concierge Internal Medicine",
         "- Physician: Dr. Yana Shtern, MD. Board-certified (ABIM) in Internal Medicine and Nephrology.",
-        "- Hospital privileges: Jupiter Medical Center; Palm Beach Gardens Medical Center",
+        "- Hospital affiliations: Jupiter Medical Center; Palm Beach Gardens Medical Center",
         "- Address: %s, %s, %s %s" % (P["street"], P["city"], P["region"], P["postal"]),
         "- Phone: %s. Fax: %s. Email: %s" % (P["phone"], P["fax"], P["email"]),
         "- Hours: Monday to Thursday 9:00 AM to 5:00 PM; Friday 9:00 AM to 2:00 PM; closed Saturday and Sunday. Members have 24/7 phone access.",
-        "- Model: annual membership fee (not covered by insurance) plus insurance billing for visits and tests. Plans include Medicare, Aetna, Cigna, BlueCross BlueShield. The fee is not published; call the office.",
+        "- Model: annual concierge fee (not covered by insurance) plus insurance billing for visits and tests. Plans include Medicare, Aetna, Cigna, BlueCross BlueShield. The fee is not published; call the office.",
         "- How to join: a complimentary meet and greet with Dr. Shtern. Call or book at %s" % url("meet-and-greet"),
         "- Areas served: " + ", ".join(P["service_area"]) + ", Martin County",
         "- Internal Medicine: care for adults.",
@@ -774,7 +805,7 @@ ASSIST_KEYWORDS = {
     "How much does membership cost?": ["cost", "price", "fee", "how much", "expensive", "annual", "afford"],
     "Is concierge medicine worth it?": ["worth it", "is it worth", "worthwhile", "worth the"],
     "Do you bill insurance?": ["insurance", "aetna", "cigna", "blue cross", "bluecross", "bcbs", "covered", "coverage", "bill", "take medicare", "accept medicare", "medicare patients", "my plan"],
-    "Does Medicare pay the membership fee?": ["medicare pay", "medicare cover", "does medicare", "medicare and the fee", "medicare fee"],
+    "Does Medicare pay the concierge fee?": ["medicare pay", "medicare cover", "does medicare", "medicare and the fee", "medicare fee"],
     "Are labs done in the office?": [" lab", "blood", "draw", "ecg", "ekg", "test", "covid", "flu", "strep"],
     "What happens if I need a specialist?": ["specialist", "referral", "refer", "cardiologist", "dermatologist"],
     "Which hospitals does Dr. Shtern use?": ["hospital", "jupiter medical", "gardens medical", "admitted", "privileges"],
@@ -802,7 +833,7 @@ ASSIST_EXTRA = [
     {"k": ["area", "serve", "jupiter", "tequesta", "juno", "north palm", "palm beach", "stuart", "hobe sound"],
      "a": "Members come from across North County: Jupiter, Juno Beach, Tequesta, North Palm Beach, Palm Beach and West Palm Beach, plus Hobe Sound and Stuart. <a href=\"/areas-we-serve\">Areas and drive times</a>."},
     {"k": ["physical", "annual exam", "checkup", "check-up", "preventive", "screening"],
-     "a": "Members get the annual Legacy physical: a thorough yearly exam with lab work and an ECG, then time to go through the results together. <a href=\"/preventive-care\">Preventive care and physicals</a>."},
+     "a": "Members get the annual executive physical: a thorough yearly exam with lab work and an ECG, then time to go through the results together. <a href=\"/preventive-care\">Preventive care and physicals</a>."},
     {"k": ["memory", "dementia", "elderly", "parent", "geriatric", "aging"],
      "a": "Dr. Shtern cares for older adults and the families who help them, including memory concerns and medication reviews. With the patient's written permission she can keep family members updated. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>."},
     {"k": ["prescription", "refill", "medication", "pharmacy"],
@@ -885,7 +916,7 @@ GUIDES_PATIENTS = {
         "photo": "p-kidney-labs", "photo_alt": "Sample tubes in a rack in soft light",
         "sections": [
             ("What is done in the office", "<ul><li>Blood draws for routine and follow-up lab work</li><li>ECGs (electrocardiograms) during your visit</li><li>Stool occult blood testing</li><li>Rapid tests for flu A and B, COVID-19 and strep</li></ul><p>Imaging and specialized tests are arranged with trusted local providers when you need them.</p>"),
-            ("Results you go through together", "<p>The annual Legacy physical includes lab work and an ECG, then time to go through the results together. Numbers like eGFR, A1c and cholesterol are easier to act on when the doctor who ordered them explains what changed and why. <a href=\"/blog/egfr-kidney-lab-results-explained\">Reading your kidney labs</a>.</p>"),
+            ("Results you go through together", "<p>The annual executive physical includes lab work and an ECG, then time to go through the results together. Numbers like eGFR, A1c and cholesterol are easier to act on when the doctor who ordered them explains what changed and why. <a href=\"/blog/egfr-kidney-lab-results-explained\">Reading your kidney labs</a>.</p>"),
             ("Insurance", "<p>Labs and covered tests are billed to your insurance as they are today. <a href=\"/insurance-and-fees\">More on insurance and fees</a>.</p>"),
         ],
         "faqs": [
@@ -912,7 +943,7 @@ PATIENTS_PAGE = {
         ("Ongoing conditions", "Blood pressure, diabetes, cholesterol, kidney and thyroid care, with one doctor managing every prescription.", "chronic-care", "Chronic care support"),
         ("Specialists and hospitals", "Dr. Shtern chooses and contacts specialists and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.", "specialists-and-hospital-care", "Specialists and hospital care"),
         ("Records and the portal", "With your permission the office requests your records from your previous doctor. Ask the office for patient portal access when you join.", "blog/transfer-medical-records-to-florida-doctor", "Moving your records"),
-        ("Insurance", "Office visits, labs and covered tests are billed to your insurance, including Medicare. The membership fee is separate.", "insurance-and-fees", "Insurance and fees"),
+        ("Insurance", "Office visits, labs and covered tests are billed to your insurance, including Medicare. The concierge fee is separate.", "insurance-and-fees", "Insurance and fees"),
         ("Video visits", "Many follow-ups and results reviews can be done by video when coming in is not practical.", "telehealth", "Telehealth"),
         ("Part of the year away", "Seasonal residents get one doctor here who stays in touch with their physicians elsewhere.", "seasonal-residents", "Seasonal residents"),
     ],
@@ -988,9 +1019,9 @@ MEET = {
         ("You decide later", "There is no pressure to decide in the room. If you join, the office requests your records and books your first patient visit."),
     ],
     "sections": [
-        ("What the meet and greet is", "<p>A chance for you and Dr. Shtern to see whether the practice is right for you. You talk about what you want from a doctor, how your care is going now, and how membership works day to day. Dr. Shtern explains how she practices, how members reach her, and what the membership fee includes.</p>"),
-        ("Questions worth asking", "<ul><li>How quickly can members be seen when something comes up?</li><li>How do after-hours calls work, and who answers?</li><li>What does the membership fee include, and what is still billed to insurance?</li><li>How do you work with my specialists and with the hospital if I am admitted?</li><li>How large is the practice, and are new members being accepted right now?</li><li>What happens to my care when I am away for the summer?</li></ul>"),
-        ("What to bring", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p><p>You do not need medical records. If you join, the office requests them from your current doctor with your permission.</p>"),
+        ("What the meet and greet is", "<p>A chance for you and Dr. Shtern to see whether the practice is right for you. You talk about what you want from a doctor, how your care is going now, and how membership works day to day. Dr. Shtern explains how she practices, how members reach her, and what the concierge fee includes.</p>"),
+        ("Questions worth asking", "<ul><li>How quickly can members be seen when something comes up?</li><li>How do after-hours calls work, and who answers?</li><li>What does the concierge fee include, and what is still billed to insurance?</li><li>How do you work with my specialists and with the hospital if I am admitted?</li><li>How large is the practice, and are new members being accepted right now?</li><li>What happens to my care when I am away for the summer?</li></ul>"),
+        ("What to bring", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p>"),
         ("Coming with a parent or partner", "<p>Families are welcome. Adult children often come along when they are arranging care for a parent, and couples often meet Dr. Shtern together. With the patient's written permission, she can keep family members updated later on.</p>"),
     ],
     "form_h": "Book a meet and greet",
@@ -998,7 +1029,7 @@ MEET = {
     "faqs": [
         ("Is the meet and greet really free?", "<p>Yes. It is complimentary.</p>"),
         ("Where does it take place?", "<p>At the office: 11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens. It is a first-floor suite with accessible entry.</p>"),
-        ("Can I ask about the membership fee?", "<p>Please do. The fee is not posted online, and Dr. Shtern and the office would rather explain it in person, with what it covers.</p>"),
+        ("Can I ask about the concierge fee?", "<p>Please do. The fee is not posted online, and Dr. Shtern and the office would rather explain it in person, with what it covers.</p>"),
         ("Can my family member come?", "<p>Yes. Spouses and adult children are welcome.</p>"),
     ],
 }
@@ -1018,7 +1049,7 @@ GUIDES_BASE = {
             ("When you arrive for the season", "<p>A doctor who has your records before you land makes the first weeks easier. With your permission, the office requests records from your physicians up north, so recent labs, imaging and medication changes are already in your chart.</p><p>Members are seen the same or next business day, so a cough that started on the drive down, or a prescription that needs adjusting, does not have to wait.</p>"),
             ("While you are here", "<p>Labs are drawn in the office, and ECGs and rapid flu, COVID-19 and strep tests are done there too. If you need a specialist, Dr. Shtern chooses one, makes the call and follows up on what they find. If you are admitted, she has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
             ("When you head north", "<p>Before you leave, it helps to go over your medicines, refills and anything that should be followed up while you are away. With your permission, the office can send notes and results to your doctors at home so nobody starts from scratch.</p><p>Members can reach the practice by phone at any hour. Video visits work well for many follow-ups and results reviews, though licensing rules differ from state to state, so ask the office what applies where you will be.</p>"),
-            ("Medicare in two places", "<p>Original Medicare works with participating doctors anywhere in the country, while Medicare Advantage plans usually use regional networks. <a href=\"https://www.medicare.gov/health-drug-plans/health-plans/your-coverage-options\" rel=\"noopener\">Medicare explains the difference</a>, and it matters if you see doctors in two states. The membership fee itself is not covered by Medicare; visits and tests are billed as usual. <a href=\"/insurance-and-fees\">How the fee and insurance fit together</a>.</p>"),
+            ("Medicare in two places", "<p>Original Medicare works with participating doctors anywhere in the country, while Medicare Advantage plans usually use regional networks. <a href=\"https://www.medicare.gov/health-drug-plans/health-plans/your-coverage-options\" rel=\"noopener\">Medicare explains the difference</a>, and it matters if you see doctors in two states. The concierge fee itself is not covered by Medicare; visits and tests are billed as usual. <a href=\"/insurance-and-fees\">How the fee and insurance fit together</a>.</p>"),
         ],
         "faqs": [
             ("Can I join if I live in Florida only part of the year?", "<p>Ask at your meet and greet. Dr. Shtern can explain how membership works around your time away.</p>"),
@@ -1060,12 +1091,12 @@ GUIDES_BASE = {
         "sections": [
             ("Why the numbers matter", "<p>A 2005 report by the U.S. Government Accountability Office looked at physicians who had switched to concierge care. Before switching, their practices averaged about 2,700 patients; afterward, about 490. The number of patients they saw in a day fell from roughly 26 to about 10. <a href=\"https://www.gao.gov/products/gao-05-929\" rel=\"noopener\">Read the GAO report</a>. The figures are two decades old, but the trade-off they describe is the same today: fewer patients per doctor is what makes time and access possible.</p>"),
             ("What stays the same", "<p>Concierge care is still primary care. At Legacy Medical your insurance, including Medicare, is billed for office visits, labs and tests, as it is now. You keep your specialists, and prescriptions work the same way.</p>"),
-            ("What the membership fee pays for", "<p>The annual fee covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, unhurried visits, and phone access around the clock. <a href=\"https://www.medicare.gov/coverage/concierge-care\" rel=\"noopener\">Medicare does not cover membership fees</a>. Legacy Medical explains its fee in person at the meet and greet rather than posting a number without context.</p>"),
+            ("What the concierge fee pays for", "<p>The annual fee covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, unhurried visits, and phone access around the clock. <a href=\"https://www.medicare.gov/coverage/concierge-care\" rel=\"noopener\">Medicare does not cover concierge fees</a>. Legacy Medical explains its fee in person at the meet and greet rather than posting a number without context.</p>"),
             ("Who tends to find it worthwhile", "<p>People who see several specialists, manage blood pressure, kidney disease or diabetes, travel or split the year between two homes, or are arranging care for a parent. People who rarely see a doctor may find a traditional practice suits them fine. <a href=\"/blog/is-a-concierge-doctor-right-for-me\">Is a concierge doctor right for you?</a></p>"),
         ],
         "faqs": [
-            ("Is concierge medicine the same as direct primary care?", "<p>No. Direct primary care practices usually do not bill insurance and charge a monthly fee for most primary care. Concierge practices like Legacy Medical bill insurance for visits and tests and charge a separate membership fee. <a href=\"/blog/concierge-vs-direct-primary-care\">More on the difference</a>.</p>"),
-            ("Do I lose my insurance if I join?", "<p>No. Insurance, including Medicare, is still billed for office visits, labs and tests. The membership fee is separate.</p>"),
+            ("Is concierge medicine the same as direct primary care?", "<p>No. Direct primary care practices usually do not bill insurance and charge a monthly fee for most primary care. Concierge practices like Legacy Medical bill insurance for visits and tests and charge a separate concierge fee. <a href=\"/blog/concierge-vs-direct-primary-care\">More on the difference</a>.</p>"),
+            ("Do I lose my insurance if I join?", "<p>No. Insurance, including Medicare, is still billed for office visits, labs and tests. The concierge fee is separate.</p>"),
             ("How do I find out what membership costs?", "<p>Call the office or ask at your complimentary meet and greet.</p>"),
         ],
         "related_posts": ["concierge-medicine-cost", "concierge-medicine-vs-mdvip", "does-medicare-cover-concierge-medicine", "questions-to-ask-a-concierge-doctor"],
@@ -1083,7 +1114,7 @@ CATEGORY_OWNERS.update({
     "Seasonal residents": ("seasonal-residents", "Care for seasonal residents"),
     "Kidney health": ("kidney-care", "Kidney care and Nephrology"),
     "Aging and family": ("for-families", "Care for an aging parent"),
-    "Healthy aging": ("preventive-care", "Preventive care and the Legacy physical"),
+    "Healthy aging": ("preventive-care", "Preventive care and the annual executive physical"),
 })
 
 # More set answers for the assistant. Facts only from this file; anything the
@@ -1092,7 +1123,7 @@ ASSIST_EXTRA += [
     {"k": ["meet and greet", "meet & greet", "first visit", "first appointment", "consultation", "free visit", "complimentary"],
      "a": "Your first visit is a complimentary meet and greet with Dr. Shtern at the office. You talk about what you want from a doctor and how membership works, and ask anything you like. <a href=\"/meet-and-greet\">About the meet and greet</a>."},
     {"k": ["what to bring", "bring with me", "should i bring"],
-     "a": "Nothing is needed for the meet and greet. Come see the office, meet Dr. Shtern, and find out whether the practice is a fit. Bring your questions if you have them. You do not need medical records. <a href=\"/meet-and-greet\">More about the first visit</a>."},
+     "a": "Nothing is needed for the meet and greet. Come see the office, meet Dr. Shtern, and find out whether the practice is a fit. Bring your questions if you have them. <a href=\"/meet-and-greet\">More about the first visit</a>."},
     {"k": ["friday", "weekend", "saturday", "sunday", "holiday"],
      "a": "The office is open Monday to Thursday 9 AM to 5 PM and Friday 9 AM to 2 PM, and closed on weekends. Members can still reach the practice by phone at any hour, including weekends and holidays."},
     {"k": ["wheelchair", "accessible", "accessibility", "walker", "stairs", "elevator", "first floor"],
@@ -1120,11 +1151,11 @@ ASSIST_EXTRA += [
     {"k": ["diabetes", "cholesterol", "thyroid", "chronic"],
      "a": "Chronic disease management, including diabetes and cholesterol, is part of membership. For a question about your own condition, please call the office at (561) 834-9280. <a href=\"/concierge-medicine\">What membership includes</a>."},
     {"k": ["ecg", "ekg", "electrocardiogram", "heart test"],
-     "a": "ECGs are done in the office, and an ECG is part of the annual Legacy physical."},
+     "a": "ECGs are done in the office, and an ECG is part of the annual executive physical."},
     {"k": ["flu test", "covid test", "strep", "rapid test", "sick visit", "sick", "cold", "fever"],
      "a": "Rapid flu, COVID-19 and strep tests are done in the office, and members are seen the same or next business day when they are sick. If you feel seriously unwell, call 911."},
     {"k": ["executive physical", "annual physical", "legacy physical", "check up", "checkup"],
-     "a": "Members get the annual Legacy physical: a thorough yearly exam with lab work and an ECG, then time to go through the results together. <a href=\"/preventive-care\">Preventive care and physicals</a>."},
+     "a": "Members get the annual executive physical: a thorough yearly exam with lab work and an ECG, then time to go through the results together. <a href=\"/preventive-care\">Preventive care and physicals</a>."},
     {"k": ["video", "telehealth", "virtual visit", "zoom", "remote"],
      "a": "Video visits work well for many follow-ups, results reviews and medication questions. <a href=\"/telehealth\">About telehealth</a>."},
     {"k": ["snowbird", "seasonal", "part of the year", "up north", "summer", "two homes"],
@@ -1138,9 +1169,9 @@ ASSIST_EXTRA += [
     {"k": ["mdvip", "signaturemd", "concierge choice"],
      "a": "Legacy Medical is an independent practice, not part of a national network. <a href=\"/blog/concierge-medicine-vs-mdvip\">How the models differ</a>."},
     {"k": ["direct primary care", "dpc"],
-     "a": "Direct primary care practices usually do not bill insurance. Legacy Medical bills insurance for visits and tests and charges a separate membership fee. <a href=\"/blog/concierge-vs-direct-primary-care\">More on the difference</a>."},
+     "a": "Direct primary care practices usually do not bill insurance. Legacy Medical bills insurance for visits and tests and charges a separate concierge fee. <a href=\"/blog/concierge-vs-direct-primary-care\">More on the difference</a>."},
     {"k": ["hsa", "fsa", "health savings", "flexible spending", "tax deductible", "deductible"],
-     "a": "Whether a membership fee can come from an HSA or FSA depends on your plan and the tax rules, so please check with a tax advisor. <a href=\"/blog/hsa-fsa-concierge-medicine-fees\">What the 2026 rules say</a>."},
+     "a": "Whether a concierge fee can come from an HSA or FSA depends on your plan and the tax rules, so please check with a tax advisor. <a href=\"/blog/hsa-fsa-concierge-medicine-fees\">What the 2026 rules say</a>."},
     {"k": ["worth it", "why concierge", "benefit", "advantages", "versus", " vs ", "traditional", "regular doctor"],
      "a": "Concierge care means a smaller practice: same or next business day visits, unhurried appointments and phone access at any hour, with insurance still billed for visits and tests. <a href=\"/concierge-vs-traditional-primary-care\">Concierge and traditional care side by side</a>."},
     {"k": ["cancel", "reschedule", "change my appointment", "running late", "late"],
@@ -1174,7 +1205,7 @@ SECTION_IMAGES = {
     "kidney-care": {"When to think about your kidneys": "p-kidney-water", "Conditions Dr. Shtern manages": "p-kidney-labs"},
     "hypertension": {"Why it gets complicated": "p-bp-walk", "Taking a good home reading": "p-bp-cuff"},
     "geriatric-memory-care": {"Memory and thinking": "p-geri-couple", "Fewer, better prescriptions": "p-geri-meds"},
-    "preventive-care": {"What the Legacy physical covers": "p-prev-stetho", "Screenings and vaccines": "p-prev-run"},
+    "preventive-care": {"What the annual executive physical covers": "p-prev-stetho", "Screenings and vaccines": "p-prev-run"},
     "telehealth": {"What works well by video": "p-tele-laptop"},
     "seasonal-residents": {"When you arrive for the season": "p-seasonal-coast", "When you head north": "p-seasonal-travel"},
     "for-families": {"Come to the meet and greet together": "p-family-talk", "If your parent is in the hospital": "p-family-hands"},
@@ -1182,5 +1213,5 @@ SECTION_IMAGES = {
     "concierge-medicine": {"Why the panel is small": "p-concierge-phone", "Who it suits": "reception-desk"},
     "meet-and-greet": {"What the meet and greet is": "p-meet-coffee", "Coming with a parent or partner": "front-desk-scrubs"},
     "membership": {"What to bring to the meet and greet": "reception-wall"},
-    "insurance-and-fees": {"The membership fee": "p-insurance-papers"},
+    "insurance-and-fees": {"The concierge fee": "p-insurance-papers"},
 }

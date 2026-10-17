@@ -673,7 +673,7 @@ POSTS = [
             "long-term steroid use or a prior fracture. Our article on [bone density "
             "screening](/blog/bone-density-screening) has more."},
    {'type': 'p',
-    'text': "At Legacy Medical, the annual [Legacy physical](/preventive-care) is where Dr. Shtern puts this list "
+    'text': "At Legacy Medical, the annual [executive physical](/preventive-care) is where Dr. Shtern puts this list "
             "together for you, keeps track of what is due, and talks through the judgment calls such as PSA "
             "testing. To meet her first, book a complimentary [meet and greet](/meet-and-greet)."}],
   'sources': [],
@@ -769,7 +769,7 @@ POSTS = [
             "scattered across several offices, or across two states for seasonal residents, are the most "
             "common reason a screening is repeated too soon or quietly missed."},
    {'type': 'p',
-    'text': "At Legacy Medical, the annual [Legacy physical](/preventive-care) is where Dr. Shtern keeps track of "
+    'text': "At Legacy Medical, the annual [executive physical](/preventive-care) is where Dr. Shtern keeps track of "
             "what is due and when, coordinates with your gynecologist and other specialists, and makes time "
             "for the questions that do not fit a checklist. To meet her first, book a complimentary [meet and "
             "greet](/meet-and-greet)."}],
@@ -945,7 +945,7 @@ POSTS = [
             "has more on bowel habits."},
    {'type': 'p',
     'text': "At Legacy Medical, Dr. Shtern can look at your diet alongside your cholesterol, blood sugar and "
-            "kidney numbers and suggest changes that fit your health and your kitchen. The annual [Legacy "
+            "kidney numbers and suggest changes that fit your health and your kitchen. The annual [executive "
             "physical](/preventive-care) is a natural time for that conversation, and a complimentary [meet "
             "and greet](/meet-and-greet) is the way to start."}],
   'sources': [],

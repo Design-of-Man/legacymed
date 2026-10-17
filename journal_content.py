@@ -1247,7 +1247,7 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
   'modified': '2024-12-19T03:20:27',
   'category': 'Concierge medicine',
   'excerpt': 'The pros of concierge medicine, such as direct access, quick replies and fewer referrals, weighed '
-             "against the con: a membership fee insurance won't cover.",
+             "against the con: a concierge fee insurance won't cover.",
   'blocks': [{'type': 'p',
               'text': 'Many people have expressed frustration at the impersonal and often complicated nature of the '
                       'medical system. One solution to these complaints is [concierge medicine](/concierge-medicine).'},
@@ -1270,10 +1270,10 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
                       'more compassionate and personalized as well as convenient.'},
              {'type': 'h2', 'text': 'The cons of concierge medicine'},
              {'type': 'p',
-              'text': "“What's the catch?” you may ask. Concierge medicine involves a [membership "
+              'text': "“What's the catch?” you may ask. Concierge medicine involves a [concierge "
                       'fee](/insurance-and-fees), which is an out-of-pocket cost that your medical insurance will not '
                       'pay. However, if you make the most of your membership, and really use it to get the focused, '
-                      'personalized care you deserve, you will find the membership fee a worthwhile investment. Many '
+                      'personalized care you deserve, you will find the concierge fee a worthwhile investment. Many '
                       'studies have confirmed that concierge medicine can actually save costs by preventing '
                       'hospitalizations and unnecessary tests.'},
              {'type': 'p',
@@ -1333,7 +1333,7 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
                       'histories make concierge medicine particularly well suited to the needs of those living with '
                       'chronic medical conditions.'},
              {'type': 'p',
-              'text': 'While the flat-rate membership fee does not cover specialty care services that some patients '
+              'text': 'While the flat-rate concierge fee does not cover specialty care services that some patients '
                       'with chronic illnesses may require, the unrestricted physician access, whether over the phone '
                       "or in the doctor's office, gives these patients the support they need."},
              {'type': 'h2', 'text': 'What are the benefits of concierge medicine?'},
@@ -1787,7 +1787,7 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
                       'part of your membership. Some of the additional benefits we provide our patients at Legacy '
                       'Medical include:'},
              {'type': 'ul',
-              'items': ['An annual Legacy physical with extended time',
+              'items': ['An annual executive physical with extended time',
                         'Coordination of patient care with specialists',
                         'ECG in the office',
                         'In-office blood draws and lab work',

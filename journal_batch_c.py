@@ -188,7 +188,7 @@ POSTS = [
              "urinate](/blog/how-often-should-you-urinate) covers what is typical."},
             {"type": "p", "text": "At Legacy Medical, appointments leave room for this kind of decision, and labs "
              "including PSA are drawn in the office if you choose to test. Dr. Shtern can walk through your own risk "
-             "and results at the annual [Legacy physical](/preventive-care). If you would like to meet her first, "
+             "and results at the annual [executive physical](/preventive-care). If you would like to meet her first, "
              "the first visit is a complimentary [meet and greet](/meet-and-greet)."},
         ],
         "sources": [],
