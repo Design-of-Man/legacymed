@@ -77,7 +77,7 @@ DOCTOR = {
         "What Dr. Shtern does in a day is Internal Medicine: physicals, blood pressure, cholesterol, diabetes, infections, the questions that come with getting older, and keeping track of everything a patient’s other doctors are doing. Her second board certification, in Nephrology, shapes how she does it. Kidney function and blood pressure affect nearly every medication decision, and she reads those numbers the way a kidney specialist does.",
         "Dr. Yana Shtern is a double board-certified Internist, Nephrologist and Hypertension specialist and she has been practicing medicine for nearly 20 years. She received a Bachelor of Science degree in Pharmacology from Stony Brook University. She then earned her medical degree from St. George’s University School of Medicine. Dr. Shtern completed both her Internal Medicine residency and Nephrology fellowship training at Maimonides Medical Center in New York City.",
         "Dr. Shtern holds American Board of Internal Medicine certifications in both Internal Medicine and Nephrology. Prior to her work as a concierge physician in Florida, Dr. Shtern ran a successful medical practice in New York City, as well as having served as a Medical Director of an outpatient hemodialysis center. Dr. Shtern also has extensive training and experience as an Interventional Nephrologist having performed a variety of percutaneous endovascular surgical procedures for hemodialysis and cancer patients in numerous outpatient office-based surgical centers across New York City for many years.",
-        "Dr. Shtern has privileges at Jupiter Medical Center as well as Palm Beach Gardens Medical Center. She is also a member of the Continuing Medical Education Committee at Jupiter Medical Center.",
+        "Dr. Shtern is affiliated with Jupiter Medical Center as well as Palm Beach Gardens Medical Center. She is also a member of the Continuing Medical Education Committee at Jupiter Medical Center.",
         "Dr. Shtern places an emphasis on providing compassionate &amp; complete preventative medical care for her patients using a detail-oriented and personally planned approach for every individual. The concierge model of medicine allows her to provide highly individualized and personalized medical care. Dr. Shtern believes that reaching optimal health requires an ongoing, strong patient-physician relationship built on trust and integrity. Her goal is to provide complete &amp; thorough healthcare of the highest standard while forming a life-long bond for health with each and every one of her patients.",
     ],
     "training_h": "From pharmacology to two board certifications",
@@ -86,9 +86,9 @@ DOCTOR = {
         ("2007", "Doctor of Medicine", "St. George's University School of Medicine."),
         ("NYC", "Residency and fellowship", "Internal Medicine residency and Nephrology fellowship at Maimonides Medical Center, New York City."),
         ("New York", "Private practice and dialysis", "Ran a private practice; medical director of an outpatient hemodialysis center; Interventional Nephrology."),
-        ("Palm Beach", "Legacy Medical", "Concierge Internal Medicine in Palm Beach Gardens, with privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center."),
+        ("Palm Beach", "Legacy Medical", "Concierge Internal Medicine in Palm Beach Gardens, affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center."),
     ],
-    "verify_intro": "Board certification, licensing and hospital privileges are public record. These are the places to check them:",
+    "verify_intro": "Board certification and licensing are public record. These are the places to check them:",
     "verify_links": [
         ("ABIM board certification lookup", "https://www.abim.org/verify-physician.aspx?type=id&id=310989", ""),
         ("Castle Connolly Top Doctor profile", "https://www.castleconnolly.com/top-doctors/yana-shtern-internal-medicine-62cc071652", "(Top Doctor since 2023)"),
@@ -152,25 +152,26 @@ HOME_DESC = ("Concierge doctor in Palm Beach Gardens: Dr. Yana Shtern, MD, board
              "One patient at a time, 24/7 phone access.")
 
 HERO_VIDEO = {
-    # Juno Beach Pier drone clip (Juno.MP4 in Dropbox /kashuba, 2688x1512), the same shot as the RegenOrtho hero.
-    # Same edit as RegenOrtho (slowed approach, dissolve over the exposure snap) but no grade; see _dev/video/PROVENANCE.md.
-    # 1512 is the camera's native height, so uhd and qhd both get the 1512 set and are never upscaled.
+    # The Singer Island coastline clip the owner supplied on Oct 16, 2026 (DJI, 1280x720); see _dev/video/PROVENANCE.md.
+    # Back on the site Oct 19, 2026 (client asked for it over the Juno Beach clip). The source is 720p, so every
+    # screen gets the same 720p set; main.js still asks for uhd/qhd/hd by device pixels, so a 4K master can be dropped in later.
     # Each set: AV1 webm | HEVC mp4 (Safari) | H.264 mp4 (last resort).
-    "uhd": "/assets/video/juno-1512.webm|/assets/video/juno-1512-hevc.mp4|/assets/video/juno-1080.mp4",
-    "qhd": "/assets/video/juno-1512.webm|/assets/video/juno-1512-hevc.mp4|/assets/video/juno-1080.mp4",
-    "hd": "/assets/video/juno-1080.webm|/assets/video/juno-1080-hevc.mp4|/assets/video/juno-1080.mp4",
-    "portrait": "/assets/video/juno-portrait.webm|/assets/video/juno-portrait-hevc.mp4|/assets/video/juno-portrait.mp4",
+    "uhd": "/assets/video/coast-720.webm|/assets/video/coast-720-hevc.mp4|/assets/video/coast-720.mp4",
+    "qhd": "/assets/video/coast-720.webm|/assets/video/coast-720-hevc.mp4|/assets/video/coast-720.mp4",
+    "hd": "/assets/video/coast-720.webm|/assets/video/coast-720-hevc.mp4|/assets/video/coast-720.mp4",
+    "portrait": "/assets/video/coast-portrait.webm|/assets/video/coast-portrait-hevc.mp4|/assets/video/coast-portrait.mp4",
     "posters": {
-        "a768": "/assets/video/juno-poster-768.avif", "a1280": "/assets/video/juno-poster-1280.avif",
-        "w768": "/assets/video/juno-poster-768.webp", "w1280": "/assets/video/juno-poster-1280.webp",
-        "j768": "/assets/video/juno-poster-768.jpg", "j1280": "/assets/video/juno-poster-1280.jpg",
-        "pa": "/assets/video/juno-poster-portrait.avif", "pw": "/assets/video/juno-poster-portrait.webp", "pj": "/assets/video/juno-poster-portrait.jpg",
+        "a768": "/assets/video/coast-poster-768.avif", "a1280": "/assets/video/coast-poster-1280.avif",
+        "w768": "/assets/video/coast-poster-768.webp", "w1280": "/assets/video/coast-poster-1280.webp",
+        "j768": "/assets/video/coast-poster-768.jpg", "j1280": "/assets/video/coast-poster-1280.jpg",
+        "pa": "/assets/video/coast-poster-portrait-720.avif", "pw": "/assets/video/coast-poster-portrait-720.webp", "pj": "/assets/video/coast-poster-portrait-720.jpg",
     },
 }
 
 HOME = {
-    "kicker": "One-on-one concierge medicine · Palm Beach Gardens",
-    "hero_lines": ["A medical practice", "where patients", "<em>come first</em>."],  # <em> is styled gold, upright: no italic font on the LCP path
+    "kicker": "One-on-one care · Palm Beach Gardens",
+    "hero_title": "Concierge Medicine",  # client, Oct 19 2026: "Concierge Medicine" as the title, "A medical practice..." below it
+    "hero_sub": "A Medical Practice Where Patients Come First",  # one line under the title, title case, as on the current site
     "hero_lede": "Dr. Yana Shtern keeps a very small practice on purpose and sees one patient at a time. Every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",
     "problem_eyebrow": "The usual way",
     "problem_statement": "Fifteen minutes, a portal message, and a referral to someone you have never met.",
@@ -207,7 +208,7 @@ HOME = {
         ("One patient at a time", "She does not double-book. The time on your appointment is yours, long enough to cover everything on your list."),
         ("Seen when you need it", "Same or next business day visits when something comes up, and the practice answers the phone at any hour."),
         ("Results you go through together", "Labs and ECGs are done in the office, and she walks you through what the numbers mean."),
-        ("With you in the hospital", "She holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and stays involved if you are admitted."),
+        ("Two local hospitals", "She is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center."),
     ],
     "included_h": "What membership <em>includes</em>",
     "included_lede": "An annual concierge fee covers access to Dr. Shtern. Office visits and tests are billed to your insurance, as they are now.",
@@ -306,7 +307,6 @@ CONCIERGE = {
         ("After hours", "Answering service or urgent care", "Phone access 24/7 for members"),
         ("Labs and ECG", "Separate trip to a lab", "Drawn and done in the office"),
         ("Specialists", "A referral slip and a phone number", "Dr. Shtern chooses, calls and follows up"),
-        ("Hospital stays", "A hospitalist you have never met", "Your doctor has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center"),
         ("Insurance", "Billed for visits and tests", "Still billed for visits and tests; the concierge fee is separate"),
     ],
     "sections": [
@@ -346,7 +346,7 @@ SERVICE_PAGES = {
         ],
         "sections": [
             ("When to think about your kidneys", "<p>Kidney disease rarely causes symptoms until it is advanced. Most people find out from a routine blood test: a creatinine that is a little high, an eGFR that has dropped since last year, or protein in a urine sample. High blood pressure and diabetes are the two most common causes, and both are things an internist is already treating.</p><p>That is why it helps to have one doctor reading all of it. A blood pressure medicine, an anti-inflammatory for a sore knee, a contrast scan and a dehydrating summer can each nudge kidney function. Together they add up.</p>"),
-            ("Chronic kidney disease treatment and follow-up", "<p>For members, kidney care is part of membership rather than a separate referral. Dr. Shtern reviews your labs over time, not just the latest result, checks every prescription against your kidney function, and explains what the numbers mean in plain language.</p><p>Labs are drawn in the office. If you need imaging, a procedure, or dialysis planning, she arranges it and stays involved. She holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
+            ("Chronic kidney disease treatment and follow-up", "<p>For members, kidney care is part of membership rather than a separate referral. Dr. Shtern reviews your labs over time, not just the latest result, checks every prescription against your kidney function, and explains what the numbers mean in plain language.</p><p>Labs are drawn in the office. If you need imaging, a procedure, or dialysis planning, she arranges it and stays involved. She is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
             ("Conditions Dr. Shtern manages", "<ul><li>Chronic kidney disease, all stages</li><li>Acute kidney injury and recovery</li><li>Protein in the urine (proteinuria)</li><li>Kidney stones: medical evaluation and prevention</li><li>Sodium, potassium, calcium and other electrolyte disorders</li><li>Kidney effects of diabetes and high blood pressure</li><li>Medication dosing for reduced kidney function</li><li>Care for patients with end-stage kidney disease, drawing on her dialysis experience</li></ul>"),
         ],
         "faq_h": "Kidney care questions",
@@ -408,7 +408,7 @@ SERVICE_PAGES = {
         "sections": [
             ("Memory and thinking", "<p>Forgetfulness worries people, and it deserves a proper evaluation rather than reassurance or alarm. Dr. Shtern starts with a cognitive screen and a careful history, often with a family member present, and checks for causes that can be treated: thyroid problems, low vitamin B12, medication side effects, poor sleep, depression, hearing loss, or an infection.</p><p>When a memory disorder is likely, she arranges the right specialist and imaging, and stays your doctor throughout. Care for memory concerns changes over time, and continuity matters.</p>"),
             ("Fewer, better prescriptions", "<p>Older adults are more sensitive to many medicines, and kidney function, which Dr. Shtern watches closely as a nephrologist, changes how many drugs should be dosed. A full review often finds a medication that can be stopped, a dose that can be lowered, or two prescriptions from two specialists that should not be taken together.</p>"),
-            ("Help for families", "<p>Often the person arranging care is an adult child, sometimes living in another state. With the patient's written permission, Dr. Shtern can update family members, coordinate with home health and other doctors, and help everyone plan ahead. If your parent is hospitalized, she has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
+            ("Help for families", "<p>Often the person arranging care is an adult child, sometimes living in another state. With the patient's written permission, Dr. Shtern can update family members, coordinate with home health and other doctors, and help everyone plan ahead. Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
         ],
         "faq_h": "Questions from families",
         "faqs": [
@@ -568,7 +568,7 @@ FAQ_GROUPS = [
         ("Are labs done in the office?", "<p>Yes. Blood is drawn in the office, and ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done here too.</p>"),
         ("What happens if I need a specialist?", "<p>Dr. Shtern coordinates your care the way a quarterback runs a team. She chooses the specialist, contacts them, works with the specialists you already see, and follows up on what they find, so your care stays in one place.</p>"),
         ("How do I get prescription refills?", "<p>Refills for established patients are issued during regular office hours. Request them through the patient portal or by calling (561) 834-9280, and ask a few days before you run out so there is no gap in your medication.</p>"),
-        ("Which hospitals does Dr. Shtern use?", "<p>She has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
+        ("Which hospitals is Dr. Shtern affiliated with?", "<p>Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
         ("Do you treat kidney disease and high blood pressure?", "<p>Yes. Dr. Shtern is board-certified in Nephrology as well as Internal Medicine. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
         ("Is there a patient portal?", "<p>Yes. Ask the office for access when you join.</p>"),
     ]},
@@ -589,7 +589,7 @@ AREAS_PAGE = {
     "method_note": "Distances and drive times are estimates from the office to each town center, calculated with OpenStreetMap routing without traffic. In season, allow 20 to 50 percent longer.",
     "sections": [
         ("Seasonal residents", "<p>Many members split the year between Florida and somewhere else. Concierge care suits that well: one doctor keeps your records current, coordinates with your physicians up north, and is reachable by phone wherever you are.</p>"),
-        ("Hospitals", "<p>Dr. Shtern holds privileges at two hospitals: Jupiter Medical Center, on Old Dixie Highway in Jupiter, and Palm Beach Gardens Medical Center, on Burns Road about two miles from the office. Which one is nearer depends on where you live.</p>"),
+        ("Hospitals", "<p>Dr. Shtern is affiliated with two hospitals: Jupiter Medical Center, on Old Dixie Highway in Jupiter, and Palm Beach Gardens Medical Center, on Burns Road about two miles from the office. Which one is nearer depends on where you live.</p>"),
     ],
     "map_lede": "First-floor suite with accessible entry, a short drive east of I-95 and west of US-1.",
 }
@@ -622,18 +622,18 @@ _LOC_COPY = {
     "jupiter": {
         "name": "Jupiter",
         "title": "Concierge Doctor for Jupiter, FL | Legacy Medical",
-        "desc": "A concierge doctor about 15 minutes from Jupiter. Dr. Yana Shtern, internist, has privileges at Jupiter Medical Center and sees members the same or next business day.",
-        "h1": "A concierge doctor for Jupiter, with Jupiter Medical Center privileges.",
-        "lede": "From Jupiter the office is about 15 minutes south, down Alternate A1A or US-1. And if you ever need the hospital, Dr. Shtern has privileges at Jupiter Medical Center, which is likely the closest one to home.",
+        "desc": "A concierge doctor about 15 minutes from Jupiter. Dr. Yana Shtern, internist, is affiliated with Jupiter Medical Center and sees members the same or next business day.",
+        "h1": "A concierge doctor for Jupiter, affiliated with Jupiter Medical Center.",
+        "lede": "From Jupiter the office is about 15 minutes south, down Alternate A1A or US-1. Dr. Shtern is affiliated with Jupiter Medical Center, likely the closest hospital to home.",
         "from_label": "central Jupiter",
         "sections": [
             ("Why Jupiter members drive south", "<p>Jupiter has good hospitals and plenty of physicians, but a same-week appointment with your own primary care doctor can still be hard to get. From Jupiter, Abacoa or Jupiter Farms, the drive down Alt A1A is about a quarter of an hour.</p><p>Many visits do not need the drive at all. Results reviews and many follow-ups happen by <a href=\"/telehealth\">video</a>.</p>"),
-            ("If you are admitted to Jupiter Medical Center", "<p>Dr. Shtern holds privileges at Jupiter Medical Center on Old Dixie Highway and sits on its Continuing Medical Education Committee. If you are admitted, she can follow your care and talk with the hospital team, rather than leaving it to a doctor who has never met you.</p>"),
+            ("Jupiter Medical Center", "<p>Dr. Shtern is affiliated with Jupiter Medical Center on Old Dixie Highway and sits on its Continuing Medical Education Committee. She does not admit patients to the hospital herself.</p>"),
         ],
         "directions": "From central Jupiter, take Alternate A1A south to PGA Boulevard, head east, then turn north on Prosperity Farms Road. The office is on the left, Suite 114, first floor.",
         "faqs": [
             ("How far is Legacy Medical from Jupiter?", "<p>About 7.7 miles from central Jupiter, roughly 15 minutes without traffic.</p>"),
-            ("Does Dr. Shtern have privileges at Jupiter Medical Center?", "<p>Yes. She also has privileges at Palm Beach Gardens Medical Center.</p>"),
+            ("Is Dr. Shtern affiliated with Jupiter Medical Center?", "<p>Yes. She is also affiliated with Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
         ],
     },
     "north-palm-beach": {
@@ -645,7 +645,7 @@ _LOC_COPY = {
         "from_label": "North Palm Beach",
         "sections": [
             ("Close enough for same-day care", "<p>When something comes up, members are seen the same or next business day. From North Palm Beach that means a short drive up Prosperity Farms Road or US-1, a visit with Dr. Shtern, and often a lab draw or rapid test before you leave.</p>"),
-            ("Hospital care nearby", "<p>Palm Beach Gardens Medical Center on Burns Road is about two miles from the village, and Dr. Shtern holds privileges there. She also has privileges at Jupiter Medical Center.</p>"),
+            ("Hospital care nearby", "<p>Palm Beach Gardens Medical Center on Burns Road is about two miles from the village, and Dr. Shtern is affiliated with it. She is also affiliated with Jupiter Medical Center.</p>"),
         ],
         "directions": "From North Palm Beach, head north on Prosperity Farms Road past PGA Boulevard. The office is at 11380 Prosperity Farms Road, Suite 114.",
         "faqs": [("How far is the office from North Palm Beach?", "<p>About 2.6 miles, roughly 6 minutes by car.</p>")],
@@ -653,13 +653,13 @@ _LOC_COPY = {
     "juno-beach": {
         "name": "Juno Beach",
         "title": "Concierge Doctor for Juno Beach, FL | Legacy Medical",
-        "desc": "A concierge doctor about seven minutes from Juno Beach, between Jupiter Medical Center and Palm Beach Gardens Medical Center, where Dr. Shtern has privileges.",
+        "desc": "A concierge doctor about seven minutes from Juno Beach, between Jupiter Medical Center and Palm Beach Gardens Medical Center, the two hospitals Dr. Shtern is affiliated with.",
         "h1": "A concierge doctor seven minutes from Juno Beach, with two hospitals close by.",
-        "lede": "Juno Beach sits almost exactly between the two hospitals where Dr. Shtern has privileges, and the office is a short drive down US-1 and across PGA Boulevard.",
+        "lede": "Juno Beach sits almost exactly between the two hospitals Dr. Shtern is affiliated with, and the office is a short drive down US-1 and across PGA Boulevard.",
         "from_label": "Juno Beach",
         "sections": [
             ("Care for year-round and seasonal residents", "<p>If you live in Juno Beach part of the year, concierge care keeps your records current with one doctor, and phone access continues when you are away. Dr. Shtern coordinates with your physicians in other states when you need it.</p>"),
-            ("Two hospitals, one doctor", "<p>Jupiter Medical Center and Palm Beach Gardens Medical Center are each about four miles from Juno Beach. Dr. Shtern has privileges at both, so she can stay involved whichever one you are taken to.</p>"),
+            ("Two nearby hospitals", "<p>Jupiter Medical Center and Palm Beach Gardens Medical Center are each about four miles from Juno Beach. Dr. Shtern is affiliated with both.</p>"),
         ],
         "directions": "From Juno Beach, take US-1 south to PGA Boulevard, turn west, then north on Prosperity Farms Road to Suite 114.",
         "faqs": [("How far is Legacy Medical from Juno Beach?", "<p>About 3.5 miles, around 7 minutes without traffic.</p>")],
@@ -667,13 +667,13 @@ _LOC_COPY = {
     "tequesta": {
         "name": "Tequesta",
         "title": "Concierge Doctor and Private Physician for Tequesta, FL",
-        "desc": "A concierge doctor and private physician for Tequesta, about 17 minutes south in Palm Beach Gardens. Dr. Yana Shtern has privileges at nearby Jupiter Medical Center.",
+        "desc": "A concierge doctor and private physician for Tequesta, about 17 minutes south in Palm Beach Gardens. Dr. Yana Shtern is affiliated with nearby Jupiter Medical Center.",
         "h1": "A concierge doctor and private physician for Tequesta, a short drive down US-1.",
-        "lede": "From Tequesta the office is about 17 minutes south on US-1. Jupiter Medical Center, where Dr. Shtern has privileges, is closer still.",
+        "lede": "From Tequesta the office is about 17 minutes south on US-1. Jupiter Medical Center, which Dr. Shtern is affiliated with, is closer still.",
         "from_label": "Tequesta",
         "sections": [
             ("Worth the drive, and often no drive", "<p>Members come from Tequesta and Jupiter Inlet Colony for unhurried visits, labs done in the office and a doctor who returns calls. Plenty of follow-ups happen by <a href=\"/telehealth\">video</a>, which saves the trip altogether.</p>"),
-            ("If you need the hospital", "<p>Jupiter Medical Center is the nearest hospital to most of Tequesta, about three miles away. Dr. Shtern holds privileges there and at Palm Beach Gardens Medical Center.</p>"),
+            ("If you need the hospital", "<p>Jupiter Medical Center is the nearest hospital to most of Tequesta, about three miles away. Dr. Shtern is affiliated with it and with Palm Beach Gardens Medical Center.</p>"),
         ],
         "directions": "From Tequesta, follow US-1 south through Jupiter and Juno Beach to PGA Boulevard, turn west, then north on Prosperity Farms Road.",
         "faqs": [("How long is the drive from Tequesta?", "<p>About 9 miles, roughly 17 minutes without traffic, longer in season.</p>")],
@@ -808,7 +808,7 @@ ASSIST_KEYWORDS = {
     "Does Medicare pay the concierge fee?": ["medicare pay", "medicare cover", "does medicare", "medicare and the fee", "medicare fee"],
     "Are labs done in the office?": [" lab", "blood", "draw", "ecg", "ekg", "test", "covid", "flu", "strep"],
     "What happens if I need a specialist?": ["specialist", "referral", "refer", "cardiologist", "dermatologist"],
-    "Which hospitals does Dr. Shtern use?": ["hospital", "jupiter medical", "gardens medical", "admitted", "privileges"],
+    "Which hospitals is Dr. Shtern affiliated with?": ["hospital", "affiliated", "jupiter medical", "gardens medical", "admitted", "privileges"],
     "Do you treat kidney disease and high blood pressure?": ["kidney", "nephrolog", "blood pressure", "hypertension", "renal"],
     "Is there a patient portal?": ["portal", "message", "online access", "records online"],
     "How do I join?": ["join", "sign up", "enroll", "become a patient", "new patient", "accepting", "tour", "meet", "greet", "first visit", "consultation"],
@@ -827,7 +827,7 @@ ASSIST_EXTRA = [
     {"k": ["phone number", "your number", "telephone", "contact you", "how do i contact", "email address"],
      "a": "Call (561) 834-9280 or email info@legacymedicalpalmbeach.com. The fax is (561) 834-9279."},
     {"k": ["dr. shtern", "dr shtern", "shtern", "doctor", "who is", "physician", "credentials", "board"],
-     "a": "Dr. Yana Shtern, MD is board-certified in Internal Medicine and Nephrology. She has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center. <a href=\"/dr-yana-shtern\">About Dr. Shtern</a>."},
+     "a": "Dr. Yana Shtern, MD is board-certified in Internal Medicine and Nephrology. She is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center. <a href=\"/dr-yana-shtern\">About Dr. Shtern</a>."},
     {"k": ["concierge", "what is", "how does it work", "difference", "membership include", "included", "what do i get"],
      "a": "Concierge medicine means a smaller practice: same or next business day visits, unhurried appointments, and phone access to the practice around the clock. <a href=\"/concierge-medicine\">How it works here</a>."},
     {"k": ["area", "serve", "jupiter", "tequesta", "juno", "north palm", "palm beach", "stuart", "hobe sound"],
@@ -889,18 +889,18 @@ GUIDES_PATIENTS = {
     },
     "specialists-and-hospital-care": {
         "title": "Specialists and Hospital Care | Legacy Medical",
-        "desc": "Dr. Yana Shtern chooses and contacts specialists, follows up on what they find, and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.",
+        "desc": "Dr. Yana Shtern chooses and contacts specialists, follows up on what they find, and is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.",
         "crumb": "Specialists and hospital care", "eyebrow": "For patients",
         "h1": "Your care stays in one place, even when it moves around.",
-        "lede": "When you need a specialist or a hospital stay, Dr. Shtern stays involved. She chooses the specialist, makes the call, and keeps track of what they find.",
+        "lede": "When you need a specialist, Dr. Shtern stays involved. She chooses the specialist, makes the call, and keeps track of what they find.",
         "photo": "p-family-hands", "photo_alt": "Two people holding hands in a quiet room",
         "sections": [
             ("When you need a specialist", "<p>Dr. Shtern picks the specialist for your situation, contacts them, and follows up on what they find, so the plan comes back to one doctor who knows your whole history. You are not left carrying results between offices.</p>"),
-            ("If you are admitted", "<p>Dr. Shtern holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center, and stays involved when members are in the hospital. <a href=\"/blog/concierge-doctor-hospital-stay\">What a concierge doctor does during a hospital stay</a>.</p>"),
+            ("Hospital affiliations", "<p>Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself. <a href=\"/blog/concierge-doctor-hospital-stay\">Concierge care and a hospital stay</a>.</p>"),
             ("Someone on your side", "<p>Part of membership is advocacy: screenings on schedule, vaccines up to date, and a doctor who helps when the system gets complicated. For families arranging care for a parent, see <a href=\"/for-families\">for families</a>.</p>"),
         ],
         "faqs": [
-            ("Which hospitals does Dr. Shtern use?", "<p>She has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
+            ("Which hospitals is Dr. Shtern affiliated with?", "<p>Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
             ("What happens if I need a specialist?", "<p>Dr. Shtern chooses the specialist, contacts them, and follows up on what they find.</p>"),
             ("I split the year between two states. Can you work with my doctors up north?", "<p>Yes. Many members are seasonal residents. <a href=\"/seasonal-residents\">Care between seasons</a>.</p>"),
         ],
@@ -941,7 +941,7 @@ PATIENTS_PAGE = {
         ("After hours", "Members can reach the practice by phone 24 hours a day, including weekends and holidays. In an emergency, call 911 first.", "contact", "Contact the office"),
         ("Labs and tests", "Blood draws, ECGs, stool occult blood tests and rapid flu, COVID-19 and strep tests are done in the office.", "labs-and-tests", "Labs and tests"),
         ("Ongoing conditions", "Blood pressure, diabetes, cholesterol, kidney and thyroid care, with one doctor managing every prescription.", "chronic-care", "Chronic care support"),
-        ("Specialists and hospitals", "Dr. Shtern chooses and contacts specialists and holds privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.", "specialists-and-hospital-care", "Specialists and hospital care"),
+        ("Specialists and hospitals", "Dr. Shtern chooses and contacts specialists and is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.", "specialists-and-hospital-care", "Specialists and hospital care"),
         ("Records and the portal", "With your permission the office requests your records from your previous doctor. Ask the office for patient portal access when you join.", "blog/transfer-medical-records-to-florida-doctor", "Moving your records"),
         ("Insurance", "Office visits, labs and covered tests are billed to your insurance, including Medicare. The concierge fee is separate.", "insurance-and-fees", "Insurance and fees"),
         ("Video visits", "Many follow-ups and results reviews can be done by video when coming in is not practical.", "telehealth", "Telehealth"),
@@ -952,7 +952,7 @@ PATIENTS_PAGE = {
 CARD_BLURBS.update({
     "same-or-next-day-visits": "Seen the same or next business day, with phone access at any hour.",
     "chronic-care": "Blood pressure, diabetes, cholesterol, kidney and thyroid care, followed closely.",
-    "specialists-and-hospital-care": "Dr. Shtern picks the specialist and stays involved in the hospital.",
+    "specialists-and-hospital-care": "Dr. Shtern picks the specialist and follows up on what they find.",
     "labs-and-tests": "Blood draws, ECGs and rapid tests done during your visit.",
     "patients": "Visits, calls, labs, records and insurance, in one place.",
     "blog": "Articles on concierge care, prevention and healthy aging.",
@@ -1047,7 +1047,7 @@ GUIDES_BASE = {
         "photo": "dr-shtern-desk", "photo_alt": "Dr. Yana Shtern at her desk at Legacy Medical in Palm Beach Gardens",
         "sections": [
             ("When you arrive for the season", "<p>A doctor who has your records before you land makes the first weeks easier. With your permission, the office requests records from your physicians up north, so recent labs, imaging and medication changes are already in your chart.</p><p>Members are seen the same or next business day, so a cough that started on the drive down, or a prescription that needs adjusting, does not have to wait.</p>"),
-            ("While you are here", "<p>Labs are drawn in the office, and ECGs and rapid flu, COVID-19 and strep tests are done there too. If you need a specialist, Dr. Shtern chooses one, makes the call and follows up on what they find. If you are admitted, she has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
+            ("While you are here", "<p>Labs are drawn in the office, and ECGs and rapid flu, COVID-19 and strep tests are done there too. If you need a specialist, Dr. Shtern chooses one, makes the call and follows up on what they find. She is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
             ("When you head north", "<p>Before you leave, it helps to go over your medicines, refills and anything that should be followed up while you are away. With your permission, the office can send notes and results to your doctors at home so nobody starts from scratch.</p><p>Members can reach the practice by phone at any hour. Video visits work well for many follow-ups and results reviews, though licensing rules differ from state to state, so ask the office what applies where you will be.</p>"),
             ("Medicare in two places", "<p>Original Medicare works with participating doctors anywhere in the country, while Medicare Advantage plans usually use regional networks. <a href=\"https://www.medicare.gov/health-drug-plans/health-plans/your-coverage-options\" rel=\"noopener\">Medicare explains the difference</a>, and it matters if you see doctors in two states. The concierge fee itself is not covered by Medicare; visits and tests are billed as usual. <a href=\"/insurance-and-fees\">How the fee and insurance fit together</a>.</p>"),
         ],
@@ -1070,7 +1070,7 @@ GUIDES_BASE = {
             ("Come to the meet and greet together", "<p>Families are welcome at the first visit. It is a good time to ask how the practice handles calls from family, how hospital stays are followed, and what happens when something changes on a weekend. <a href=\"/meet-and-greet\">About the meet and greet</a>.</p>"),
             ("Keeping you informed", "<p>With your parent's written permission, Dr. Shtern can update family members, talk with home health agencies and other doctors, and help everyone plan ahead. Members, and the family helping them, can reach the practice by phone at any hour.</p>"),
             ("Fewer, better prescriptions", "<p>Older adults are more sensitive to many medicines, and kidney function, which Dr. Shtern watches closely as a nephrologist, changes how many drugs should be dosed. A full review often finds a medicine that can be stopped, a dose that can be lowered, or two prescriptions from two specialists that should not be taken together. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>.</p>"),
-            ("If your parent is in the hospital", "<p>Dr. Shtern has privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center. When a member is admitted, she can follow their care and talk with the hospital team, so the family has one doctor to ask.</p>"),
+            ("Hospital affiliations", "<p>Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
             ("Paperwork worth having in place", "<p>Two documents save a great deal of trouble later: a HIPAA authorization naming who the practice may speak with, and, in Florida, a designation of a health care surrogate who can make medical decisions if your parent cannot. <a href=\"https://www.flsenate.gov/Laws/Statutes/2025/765.202\" rel=\"noopener\">Florida law sets out how a surrogate is designated</a>; an elder law attorney can help with the details.</p>"),
         ],
         "faqs": [

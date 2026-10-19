@@ -897,8 +897,8 @@ POSTS = [
              "hospital stay](/blog/concierge-doctor-hospital-stay) cover the medical side of planning ahead."},
             {"type": "p", "text": "At Legacy Medical, Dr. Shtern is glad to talk through the medical questions behind "
              "a living will, such as what a ventilator or feeding tube involves, and to keep copies of your "
-             "directives in your chart. She holds privileges at local hospitals and stays involved if you are "
-             "admitted. Families can read more on [care for families](/for-families), and the first visit is a "
+             "directives in your chart. She is affiliated with "
+             "Jupiter Medical Center and Palm Beach Gardens Medical Center. Families can read more on [care for families](/for-families), and the first visit is a "
              "complimentary [meet and greet](/meet-and-greet)."},
         ],
         "sources": [],

@@ -53,13 +53,12 @@ def home(B):
     preload = ['<link rel="preload" as="image" type="image/avif" imagesrcset="%(a768)s 768w, %(a1280)s 1280w" imagesizes="100vw" media="(min-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"],
                '<link rel="preload" as="image" type="image/avif" href="%(pa)s" media="(max-aspect-ratio: 4/5)" fetchpriority="high">' % v["posters"]]
 
-    title_lines = "".join('<span class="ln">%s</span>' % ln for ln in H["hero_lines"])
     # The film fills the screen; a compact block of copy sits low on the left (Elite-style).
     hero = """<section class="hero" aria-labelledby="hero-h">
   <div class="hero-media">%(poster)s%(video)s</div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <h1 id="hero-h"><span class="hero-kicker">%(kicker)s</span><span class="hero-title">%(lines)s</span></h1>
+      <h1 id="hero-h"><span class="hero-kicker">%(kicker)s</span><span class="hero-title">%(title)s</span><span class="hero-sub">%(sub)s</span></h1>
       <p class="hero-lede">%(lede)s</p>
       <div class="btn-row">
         <a class="btn" href="/meet-and-greet" data-loc="hero">Book a meet and greet %(arrow)s</a>
@@ -72,8 +71,8 @@ def home(B):
       </dl>
     </div>
   </div>
-  <div class="hero-ctl"><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Juno Beach film</span></button></div>
-</section>""" % {"poster": poster, "video": video, "kicker": esc(H["kicker"]), "lines": title_lines, "lede": H["hero_lede"],
+  <div class="hero-ctl"><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the coastline film</span></button></div>
+</section>""" % {"poster": poster, "video": video, "kicker": esc(H["kicker"]), "title": esc(H["hero_title"]), "sub": esc(H["hero_sub"]), "lede": H["hero_lede"],
                  "arrow": icon("arrow"), "tel": P["tel"], "phone": P["phone"], "phoneico": icon("phone"),
                  "maps": esc(P["google_maps"]), "street": P["street_short"], "city": P["city"], "postal": P["postal"],
                  "play": B.ICONS["play"], "pause": B.ICONS["pause"].replace('class="i-pause"', 'class="i-pause" hidden')}

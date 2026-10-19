@@ -1668,24 +1668,21 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
   'date': '2020-09-14T22:22:31',
   'modified': '2024-12-19T03:11:10',
   'category': 'Concierge medicine',
-  'excerpt': 'How a concierge doctor coordinates your care with specialists and hospital staff from admission to '
-             'discharge, then sees you for a follow-up visit afterward.',
+  'excerpt': 'How concierge care fits around a hospital stay at Legacy Medical, and the follow-up visit with Dr. '
+             'Shtern after you are discharged.',
   'blocks': [{'type': 'p',
               'text': 'Unfortunately, the hospitalization process can sometimes add stress to an already trying time '
                       'for you and your loved ones. From admission to discharge, so much coordination is needed '
                       'between your specialists and the hospital staff that the burden of coordinating often falls on '
                       'your loved ones, who would rather be by your side throughout your stay.'},
              {'type': 'p',
-              'text': 'The solution to easing hospital stress, and ultimately getting quicker care, is having a '
-                      '[concierge doctor](/concierge-medicine). Your concierge doctor acts as the quarterback for the '
-                      'hospital staff team, making sure you receive the extraordinary care that you require.'},
+              'text': 'Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center, '
+                      'but she does not admit patients to the hospital herself. While you are in the hospital, the '
+                      "hospital's own physicians direct your care."},
              {'type': 'p',
-              'text': 'A concierge doctor is available to help you throughout your hospitalization and is involved in '
-                      'your care during this difficult time. A concierge doctor will oversee and coordinate your care '
-                      'with specialists from admission to discharge.'},
-             {'type': 'p',
-              'text': 'After discharge from the hospital, your concierge doctor will schedule a post-discharge visit '
-                      'with you at Legacy Medical.'}],
+              'text': 'Members can still call the practice at any hour with questions. After discharge from the '
+                      'hospital, Dr. Shtern will schedule a post-discharge visit with you at Legacy Medical. Read more '
+                      'about [concierge medicine](/concierge-medicine).'}],
   'sources': ['https://cmedjupiter.com/2020/09/14/how-concierge-medicine-works-with-your-hospitalization/'],
   'stale_note': None,
   'reviewed_by': None},
@@ -1765,8 +1762,8 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
                       'personalized, attentive medical care from one dedicated doctor who is familiar with their '
                       'medical history and unique health goals. Basically, a concierge doctor is like the quarterback '
                       'for the entire offense that is your health care plan. A concierge doctor will pull together all '
-                      'of your test results and the list of all your medications, and will handle the admitting and '
-                      'scheduling on your behalf. They act as a one-stop shop for your routine doctor visits.'},
+                      'of your test results and the list of all your medications, and will handle the scheduling on '
+                      'your behalf. They act as a one-stop shop for your routine doctor visits.'},
              {'type': 'p',
               'text': 'Concierge medicine is recognized by the American Medical Association and by the state medical '
                       'boards where these practices operate.'},
@@ -1781,7 +1778,7 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
                         'Direction of care with medical specialists',
                         'Virtual visits if preferred',
                         'Minimal or no wait times',
-                        'A physician with privileges at Jupiter Medical Center and Palm Beach Gardens Medical Center']},
+                        'A physician affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center']},
              {'type': 'p',
               'text': 'In addition to the basic benefits above, a concierge doctor may provide additional benefits as '
                       'part of your membership. Some of the additional benefits we provide our patients at Legacy '

@@ -1971,7 +1971,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'p',
               'text': 'Legacy Medical is an independent practice led by Dr. Yana Shtern, MD. She is board certified by '
                       'the American Board of Internal Medicine in Internal Medicine and Nephrology, and has nearly '
-                      'twenty years of practice in New York City and Palm Beach County. She holds privileges at '
+                      'twenty years of practice in New York City and Palm Beach County. She is affiliated with '
                       'Jupiter Medical Center and Palm Beach Gardens Medical Center and has been named a Castle '
                       "Connolly Top Doctor since 2023. You can read more on [Dr. Shtern's page](/dr-yana-shtern)."},
              {'type': 'p',
@@ -2225,8 +2225,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
               'text': 'Ask which hospitals the doctor works with and what happens when a member is admitted. Do they '
                       'visit, call the hospital team, review results, help plan the discharge? Our article on [a '
                       'concierge doctor during a hospital stay](/blog/concierge-doctor-hospital-stay) goes into '
-                      'more detail. For reference, [Dr. Yana Shtern](/dr-yana-shtern) has privileges at Jupiter '
-                      'Medical Center and Palm Beach Gardens Medical Center.'},
+                      'more detail. For reference, [Dr. Yana Shtern](/dr-yana-shtern) is affiliated with Jupiter '
+                      'Medical Center and Palm Beach Gardens Medical Center and does not admit patients herself.'},
              {'type': 'h2', 'text': 'Understand the model and the money'},
              {'type': 'p',
               'text': 'Concierge practices differ a great deal. Some belong to a national network, others are '
