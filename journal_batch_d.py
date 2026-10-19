@@ -195,7 +195,7 @@ POSTS = [
             "if you are told a value is far out of range and you feel unwell."},
    {'type': 'p',
     'text': "At Legacy Medical, Dr. Shtern goes over results with you and explains what they mean for your own "
-            "health, with an internist's and a nephrologist's eye on the kidney numbers in particular. The "
+            "health, with an internist's and a Nephrologist's eye on the kidney numbers in particular. The "
             "[labs and tests](/labs-and-tests) page explains how testing works at the practice. If you would "
             "like to meet her, start with a complimentary [meet and greet](/meet-and-greet)."}],
   'sources': [],
@@ -855,7 +855,7 @@ POSTS = [
             "it is very hot. The same applies to sports drinks and electrolyte packets, which can carry "
             "sodium, sugar or potassium you may need to watch."},
    {'type': 'p',
-    'text': "As a nephrologist, Dr. Shtern sees both sides of this: kidney strain from too little fluid in the "
+    'text': "As a Nephrologist, Dr. Shtern sees both sides of this: kidney strain from too little fluid in the "
             "heat, and fluid overload when the heart or kidneys cannot keep up. Our article on [heat, hydration "
             "and kidney health](/blog/heat-hydration-kidney-health) goes further into the kidney side, and "
             "[kidney care](/kidney-care) explains her approach. To meet her, book a complimentary [meet and "

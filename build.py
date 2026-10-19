@@ -222,7 +222,7 @@ def photo(stem, alt, sizes="100vw", cls="", eager=False, focal=None, max_w=None,
 # --------------------------------------------------------------------------
 NAV = [
     ("About", None, [
-        ("dr-yana-shtern", "Dr. Yana Shtern, MD", "Internist and nephrologist"),
+        ("dr-yana-shtern", "Dr. Yana Shtern, MD", "Internist and Nephrologist"),
         ("our-team", "Our team", "Who answers when you call"),
         ("for-families", "For families", "Caring for a parent"),
         ("seasonal-residents", "Seasonal residents", "Care between seasons"),

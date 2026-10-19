@@ -718,7 +718,7 @@ POSTS = [
             'levodopa, while acid-reducing PPIs can lower iron absorption from food.'},
    {'type': 'p',
     'text': 'Anemia is one of the places where Internal Medicine and kidney care overlap, and as a board-certified '
-            'internist and nephrologist, Dr. Shtern looks at both. If you take aspirin or an NSAID regularly, our '
+            'internist and Nephrologist, Dr. Shtern looks at both. If you take aspirin or an NSAID regularly, our '
             'article on [NSAID risks](/blog/nsaids-risks-and-side-effects) is worth a read. Our [labs and '
             'tests](/labs-and-tests) page explains how blood work is handled, and the first visit is a '
             'complimentary [meet and greet](/meet-and-greet).'}],
