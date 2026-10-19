@@ -348,7 +348,7 @@ def doctor(B):
                      {"@type": "ProfilePage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": D["page_title"],
                       "mainEntity": {"@id": B.DOC_ID}, "isPartOf": {"@id": B.SITE_ID}, "dateModified": B.SITE_UPDATED},
                      B.breadcrumb_node(trail))
-    B.write_page(slug, D["page_title"], D["page_desc"], body, schema=schema, og_image="/assets/img/og/dr-yana-shtern.jpg")
+    B.write_page(slug, D["page_title"], D["page_desc"], body, schema=schema, og_image="/assets/img/og/dr-yana-shtern-oct-2026.jpg")
 
 
 def team(B):
