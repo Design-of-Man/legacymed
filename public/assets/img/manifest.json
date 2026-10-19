@@ -2176,13 +2176,20 @@
  "reception-desk": {
   "alt": "The reception desk and gold Legacy Medical sign at the Palm Beach Gardens office",
   "credit": "",
-  "focal": "50% 40%",
-  "h": 480,
-  "source": "still from the practice's own YouTube office video raReWdCy3tA (640x480)",
-  "w": 640,
+  "focal": "50% 42%",
+  "formats": [
+   "jpg",
+   "webp",
+   "avif"
+  ],
+  "h": 4032,
+  "source": "owner photo IMG_2310, Oct 19 2026 (3024x4032); replaces the 640x480 YouTube still",
+  "w": 3024,
   "widths": [
    480,
-   640
+   768,
+   1200,
+   1600
   ]
  },
  "reception-wall": {
