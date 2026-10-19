@@ -170,7 +170,7 @@ HERO_VIDEO = {
 }
 
 HOME = {
-    "kicker": "One-on-one care · Palm Beach Gardens",
+    "kicker": "Legacy Medical · Palm Beach Gardens",
     "hero_title": "Concierge Medicine",  # client, Oct 19 2026: "Concierge Medicine" as the title, "A medical practice..." below it
     "hero_sub": "A Medical Practice Where Patients Come First",  # one line under the title, title case, as on the current site
     "hero_lede": "Dr. Yana Shtern offers exceptional, personalized and evidence-based care for her patients. She keeps a very small practice on purpose and every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",  # client, Oct 19 2026, verbatim ("business say" corrected to "business day")
