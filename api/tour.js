@@ -1,8 +1,11 @@
-// POST /api/tour — tour / contact requests from /membership and /contact.
+// POST /api/tour — tour / contact requests from /meet-and-greet and /contact.
 //
-// Delivers by email through Resend when RESEND_API_KEY and TOUR_TO_EMAIL are
-// set in the Vercel project. Until they are, it answers 503 "not_configured"
-// and the page tells the visitor to call; nothing is stored or logged.
+// Delivers by email to every address in TOUR_TO_EMAIL (comma-separated):
+// through Resend when RESEND_API_KEY is set, otherwise through FormSubmit
+// (formsubmit.co), which needs no key. FormSubmit sends the first address
+// an "Activate Form" email the first time; until someone clicks it, nothing
+// is delivered and the page tells the visitor to call. With no TOUR_TO_EMAIL
+// it answers 503 "not_configured". Nothing is stored or logged.
 //
 // HIPAA posture: the form asks for contact details and a preferred time only,
 // the page tells visitors not to send medical information, the message is
@@ -56,36 +59,57 @@ module.exports = async (req, res) => {
   if (String(body.no_medical) !== "yes") return res.status(400).json({ ok: false, error: "Please confirm the note has no medical details." });
 
   const key = process.env.RESEND_API_KEY;
-  const to = process.env.TOUR_TO_EMAIL;
+  const to = String(process.env.TOUR_TO_EMAIL || "").split(",").map((t) => t.trim()).filter(Boolean);
   const from = process.env.TOUR_FROM_EMAIL || "Legacy Medical website <onboarding@resend.dev>";
-  if (!key || !to) return res.status(503).json({ ok: false, error: "not_configured" });
+  if (!to.length) return res.status(503).json({ ok: false, error: "not_configured" });
 
   const rows = [
     ["Name", data.name], ["Phone", data.phone], ["Email", data.email],
     ["Interested in", data.reason], ["Prefers", data.contact_pref], ["Best time", data.best_time],
     ["Note", data.message], ["Sent from", data.page],
   ].filter(([, v]) => v);
-  const text = rows.map(([k, v]) => k + ": " + v).join("\n");
-  const html = "<table>" + rows.map(([k, v]) => "<tr><th align=left style=\"padding:4px 12px 4px 0\">" + k + "</th><td>" + escapeHtml(v) + "</td></tr>").join("") + "</table>";
+  const subject = "Website request: " + (data.reason || "tour") + " from " + data.name;
+  const failed = () => res.status(502).json({ ok: false, error: "We could not send that just now." });
 
   try {
-    const r = await fetch("https://api.resend.com/emails", {
+    if (key) {
+      const text = rows.map(([k, v]) => k + ": " + v).join("\n");
+      const html = "<table>" + rows.map(([k, v]) => "<tr><th align=left style=\"padding:4px 12px 4px 0\">" + k + "</th><td>" + escapeHtml(v) + "</td></tr>").join("") + "</table>";
+      const r = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { Authorization: "Bearer " + key, "Content-Type": "application/json" },
+        body: JSON.stringify({ from, to, reply_to: data.email || undefined, subject, text, html }),
+      });
+      if (!r.ok) {
+        console.error("tour: resend delivery failed with status", r.status); // status only, never the body
+        return failed();
+      }
+      return res.status(200).json({ ok: true });
+    }
+
+    // FormSubmit: first address is the account; the rest are copied (_cc).
+    const site = "https://legacymedicalpalmbeach.com";
+    const fields = Object.fromEntries(rows);
+    fields._subject = subject;
+    fields._template = "table";
+    fields._captcha = "false";
+    if (to.length > 1) fields._cc = to.slice(1).join(",");
+    if (data.email) fields._replyto = data.email;
+    const r = await fetch("https://formsubmit.co/ajax/" + encodeURIComponent(to[0]), {
       method: "POST",
-      headers: { Authorization: "Bearer " + key, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        from, to: to.split(",").map((s) => s.trim()).filter(Boolean),
-        reply_to: data.email || undefined,
-        subject: "Website request: " + (data.reason || "tour") + " from " + data.name,
-        text, html,
-      }),
+      headers: { "Content-Type": "application/json", Accept: "application/json", Origin: site, Referer: site + (data.page || "/") },
+      body: JSON.stringify(fields),
     });
-    if (!r.ok) {
-      console.error("tour: delivery failed with status", r.status); // status only, never the body
-      return res.status(502).json({ ok: false, error: "We could not send that just now." });
+    let out = null;
+    try { out = await r.json(); } catch (_) { out = null; }
+    if (!r.ok || !out || String(out.success) !== "true") {
+      // Before activation FormSubmit answers success "false" and emails the activation link.
+      console.error("tour: formsubmit delivery failed with status", r.status, out && String(out.success) === "false" ? "(not activated or rejected)" : "");
+      return failed();
     }
     return res.status(200).json({ ok: true });
   } catch (_) {
     console.error("tour: delivery threw");
-    return res.status(502).json({ ok: false, error: "We could not send that just now." });
+    return failed();
   }
 };

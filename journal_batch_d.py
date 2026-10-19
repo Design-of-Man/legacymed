@@ -289,9 +289,8 @@ POSTS = [
    {'type': 'p',
     'text': "Ask for a copy of the discharge summary and any test results, and send them to your regular "
             "doctor. Bring the paperwork and any new prescriptions to your follow-up so your medication list "
-            "stays accurate. Our article on [having a concierge doctor during a hospital "
-            "stay](/blog/concierge-doctor-hospital-stay) covers what coordination looks like after a "
-            "bigger event."},
+            "stays accurate. Our article on [concierge care and a hospital "
+            "stay](/blog/concierge-doctor-hospital-stay) covers the follow-up visit after a bigger event."},
    {'type': 'p',
     'text': "At Legacy Medical, members can reach the practice by phone at any hour, which often settles the "
             "\"is this urgent?\" question with a short conversation, and [same or next business day "

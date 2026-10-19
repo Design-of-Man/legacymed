@@ -799,7 +799,7 @@ POSTS = [
              "parents](/blog/concierge-care-for-aging-parents) and [Florida advance "
              "directives](/blog/florida-advance-directives-health-care-surrogate)."},
             {"type": "p", "text": "At Legacy Medical, members reach the practice by phone at any hour, and Dr. "
-             "Shtern coordinates specialists and hospital care, which takes some of the load off family. With your "
+             "Shtern coordinates specialists and is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center, which takes some of the load off family. With your "
              "parent's permission, she can keep you informed. Our page on [care for families](/for-families) "
              "explains how that works, and the first visit is a complimentary [meet and greet](/meet-and-greet)."},
         ],
