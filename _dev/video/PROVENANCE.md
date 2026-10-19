@@ -1,5 +1,9 @@
 # Hero video
 
+> **Oct 19, 2026: back to the coastline clip.** The client asked for the Singer Island coastline film again. The `coast-*`
+> files were restored unchanged from git (the Oct 16 re-encode described under "Earlier hero: the coastline clip" below)
+> and the `juno-*` set was removed from `public/`. The Juno section that follows is history; its files are in git at 018b726.
+
 > **Current encode (Oct 17, 2026): the Juno Beach Pier clip.** Requested by Design of Man: the same drone shot as the
 > RegenOrtho hero. Everything below the first rule describes earlier encodes and is kept for history.
 >

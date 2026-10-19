@@ -71,7 +71,7 @@ def home(B):
       </dl>
     </div>
   </div>
-  <div class="hero-ctl"><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the Juno Beach film</span></button></div>
+  <div class="hero-ctl"><button class="hero-toggle" type="button" aria-pressed="false" hidden>%(play)s%(pause)s<span class="t">Play</span><span class="sr-only"> the coastline film</span></button></div>
 </section>""" % {"poster": poster, "video": video, "kicker": esc(H["kicker"]), "title": esc(H["hero_title"]), "sub": esc(H["hero_sub"]), "lede": H["hero_lede"],
                  "arrow": icon("arrow"), "tel": P["tel"], "phone": P["phone"], "phoneico": icon("phone"),
                  "maps": esc(P["google_maps"]), "street": P["street_short"], "city": P["city"], "postal": P["postal"],
