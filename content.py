@@ -153,19 +153,19 @@ HOME_DESC = ("Concierge doctor in Palm Beach Gardens: Dr. Yana Shtern, MD, board
              "One patient at a time, 24/7 phone access.")
 
 HERO_VIDEO = {
-    # The Singer Island coastline clip the owner supplied on Oct 16, 2026 (DJI, 1280x720); see _dev/video/PROVENANCE.md.
-    # Back on the site Oct 19, 2026 (client asked for it over the Juno Beach clip). The source is 720p, so every
-    # screen gets the same 720p set; main.js still asks for uhd/qhd/hd by device pixels, so a 4K master can be dropped in later.
-    # Each set: AV1 webm | HEVC mp4 (Safari) | H.264 mp4 (last resort).
-    "uhd": "/assets/video/coast-720.webm|/assets/video/coast-720-hevc.mp4|/assets/video/coast-720.mp4",
-    "qhd": "/assets/video/coast-720.webm|/assets/video/coast-720-hevc.mp4|/assets/video/coast-720.mp4",
-    "hd": "/assets/video/coast-720.webm|/assets/video/coast-720-hevc.mp4|/assets/video/coast-720.mp4",
-    "portrait": "/assets/video/coast-portrait.webm|/assets/video/coast-portrait-hevc.mp4|/assets/video/coast-portrait.mp4",
+    # The Singer Island coastline clip, from the drone's 3840x2160 10-bit original (DJI_20261013234059_0426_D.MP4,
+    # Dropbox /Design of Man Team Folder/Drone) since Oct 19, 2026; it had been a 720p export. Shown as shot, no grade;
+    # the loop dissolves its last second into the first. See _dev/video/PROVENANCE.md.
+    # main.js picks uhd/qhd/hd by device pixels. Each set: AV1 webm | HEVC mp4 (Safari) | H.264 mp4 (last resort).
+    "uhd": "/assets/video/coast4k-2160.webm|/assets/video/coast4k-2160-hevc.mp4|/assets/video/coast4k-1080.mp4",
+    "qhd": "/assets/video/coast4k-1440.webm|/assets/video/coast4k-1440-hevc.mp4|/assets/video/coast4k-1080.mp4",
+    "hd": "/assets/video/coast4k-1080.webm|/assets/video/coast4k-1080-hevc.mp4|/assets/video/coast4k-1080.mp4",
+    "portrait": "/assets/video/coast4k-portrait.webm|/assets/video/coast4k-portrait-hevc.mp4|/assets/video/coast4k-portrait.mp4",
     "posters": {
-        "a768": "/assets/video/coast-poster-768.avif", "a1280": "/assets/video/coast-poster-1280.avif",
-        "w768": "/assets/video/coast-poster-768.webp", "w1280": "/assets/video/coast-poster-1280.webp",
-        "j768": "/assets/video/coast-poster-768.jpg", "j1280": "/assets/video/coast-poster-1280.jpg",
-        "pa": "/assets/video/coast-poster-portrait-720.avif", "pw": "/assets/video/coast-poster-portrait-720.webp", "pj": "/assets/video/coast-poster-portrait-720.jpg",
+        "a768": "/assets/video/coast4k-poster-768.avif", "a1280": "/assets/video/coast4k-poster-1280.avif",
+        "w768": "/assets/video/coast4k-poster-768.webp", "w1280": "/assets/video/coast4k-poster-1280.webp",
+        "j768": "/assets/video/coast4k-poster-768.jpg", "j1280": "/assets/video/coast4k-poster-1280.jpg",
+        "pa": "/assets/video/coast4k-poster-portrait.avif", "pw": "/assets/video/coast4k-poster-portrait.webp", "pj": "/assets/video/coast4k-poster-portrait.jpg",
     },
 }
 

@@ -1,5 +1,62 @@
 # Hero video
 
+> **Current encode (Oct 19, 2026): the coastline clip from the 4K original.** The 720p export was soft on large screens;
+> the client supplied the drone's camera file. Everything below the first rule is history.
+>
+> - Source: Dropbox `/Design of Man Team Folder/Drone/DJI_20261013234059_0426_D.MP4`, 3840x2160 HEVC Main 10 (yuv420p10le),
+>   bt709 tv range, 29.97 fps, 556 frames (18.55 s), 63.4 Mb/s, 180,277,093 bytes,
+>   sha256 `b90dfc4a243d2449ed63e89168a3db4e310ff6ea550d50fc37cd2b640821d806`. Same shot as the Oct 16 720p export.
+> - Shown as shot: no grade, no denoise, no sharpening (the camera already sharpens; more adds halos on the towers).
+> - Loop: the first second is dropped and the last second dissolves into it, so the end flows into the start with no jump
+>   (17.55 s, 527 frames). Master is 10-bit near-lossless HEVC.
+> - Size budgets (the sparkling water is expensive): AV1 is VBR to a target, HEVC/H.264 are CRF capped by maxrate. A plain
+>   CRF 30 pass gave 26 MB at 1080p, so it was redone with budgets.
+> - Files are prefixed `coast4k-` so no browser can serve a cached copy of the old 720p `coast-*` set.
+> - main.js picks `uhd` (2160) above 2400 device px, `qhd` (1440) above 1600, else `hd` (1080); portrait phones get
+>   the 1218x2160 crop at x=1854 (the same framing as the 720p crop) scaled to 1080x1916.
+>
+> ```sh
+> C="-color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv"
+> ffmpeg -i SRC -filter_complex "[0:v]split[a][b];[a]trim=start=1,setpts=PTS-STARTPTS[A];[b]trim=0:1,setpts=PTS-STARTPTS[B];\
+> [A][B]xfade=transition=fade:duration=1:offset=16.5519,format=yuv420p10le[v]" -map "[v]" -an -c:v libx265 -preset fast -crf 6 \
+>  -pix_fmt yuv420p10le $C master.mp4
+> A="-an -c:v libsvtav1 -preset 6 -g 60 -pix_fmt yuv420p10le -svtav1-params tune=0:scd=0:enable-overlays=1 $C"
+> H="-an -c:v libx265 -preset medium -tag:v hvc1 -pix_fmt yuv420p $C -movflags +faststart"   # x265: keyint=60:min-keyint=60:scenecut=0
+> X="-an -c:v libx264 -profile:v high -preset slow -tune film -g 60 -keyint_min 60 -sc_threshold 0 -pix_fmt yuv420p $C -movflags +faststart"
+> 1080 (scale=1920:1080:flags=lanczos): $A -b:v 4200k | $H -crf 24 vbv-maxrate=5000 | $X -crf 22 -maxrate 6500k -bufsize 13000k
+> portrait (crop=1218:2160:1854:0,scale=1080:1916:flags=lanczos): $A -b:v 3200k | $H -crf 25 vbv-maxrate=3800 | $X -crf 23 -maxrate 5000k
+> 1440 (scale=2560:1440:flags=lanczos): $A -b:v 6000k | $H -crf 25 vbv-maxrate=7000
+> 2160 (native): $A -b:v 8500k | $H -crf 26 vbv-maxrate=10000          # H.264 fallback for 1440/2160 is the 1080 file
+> ```
+> Posters: frame 0 of the loop. Pillow 12.3, LANCZOS: 1280x720 and 768x432, plus the portrait crop at 608x1078
+> (AVIF q60, WebP q74, JPEG q84 progressive).
+>
+> | File | Bytes |
+> |---|---|
+> | coast4k-1080-hevc.mp4 | 11,471,834 |
+> | coast4k-1080.mp4 | 14,807,855 |
+> | coast4k-1080.webm | 9,364,815 |
+> | coast4k-1440-hevc.mp4 | 16,069,276 |
+> | coast4k-1440.webm | 13,404,654 |
+> | coast4k-2160-hevc.mp4 | 22,919,143 |
+> | coast4k-2160.webm | 18,951,269 |
+> | coast4k-portrait-hevc.mp4 | 8,659,628 |
+> | coast4k-portrait.mp4 | 11,338,352 |
+> | coast4k-portrait.webm | 7,125,352 |
+> | coast4k-poster-1280.avif | 104,614 |
+> | coast4k-poster-1280.jpg | 199,156 |
+> | coast4k-poster-1280.webp | 114,880 |
+> | coast4k-poster-768.avif | 38,041 |
+> | coast4k-poster-768.jpg | 72,996 |
+> | coast4k-poster-768.webp | 41,950 |
+> | coast4k-poster-portrait.avif | 70,284 |
+> | coast4k-poster-portrait.jpg | 139,997 |
+> | coast4k-poster-portrait.webp | 75,646 |
+
+---
+
+# Earlier hero: the Juno Beach Pier clip (Oct 17-19, 2026; history)
+
 > **Oct 19, 2026: back to the coastline clip.** The client asked for the Singer Island coastline film again. The `coast-*`
 > files were restored unchanged from git (the Oct 16 re-encode described under "Earlier hero: the coastline clip" below)
 > and the `juno-*` set was removed from `public/`. The Juno section that follows is history; its files are in git at 018b726.
