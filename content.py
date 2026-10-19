@@ -410,7 +410,7 @@ SERVICE_PAGES = {
         "sections": [
             ("Memory and thinking", "<p>Forgetfulness worries people, and it deserves a proper evaluation rather than reassurance or alarm. Dr. Shtern starts with a cognitive screen and a careful history, often with a family member present, and checks for causes that can be treated: thyroid problems, low vitamin B12, medication side effects, poor sleep, depression, hearing loss, or an infection.</p><p>When a memory disorder is likely, she arranges the right specialist and imaging, and stays your doctor throughout. Care for memory concerns changes over time, and continuity matters.</p>"),
             ("Fewer, better prescriptions", "<p>Older adults are more sensitive to many medicines, and kidney function, which Dr. Shtern watches closely as a Nephrologist, changes how many drugs should be dosed. A full review often finds a medication that can be stopped, a dose that can be lowered, or two prescriptions from two specialists that should not be taken together.</p>"),
-            ("Help for families", "<p>Often the person arranging care is an adult child, sometimes living in another state. With the patient's written permission, Dr. Shtern can update family members, coordinate with home health and other doctors, and help everyone plan ahead. Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
+            ("Help for families", "<p>Often the person arranging care is an adult child, sometimes living in another state. With the patient's permission, Dr. Shtern can update family members, coordinate with home health and other doctors, and help everyone plan ahead. Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
         ],
         "faq_h": "Questions from families",
         "faqs": [
@@ -640,7 +640,7 @@ FAQ_GROUPS = [
         ("What happens after I leave the hospital?", "<p>Dr. Shtern sees you for a follow-up visit at Legacy Medical after you are discharged. <a href=\"/blog/concierge-doctor-hospital-stay\">Concierge care and a hospital stay</a>.</p>"),
     ]},
     {"name": "Families and seasonal residents", "pairs": [
-        ("Can you talk to me about my parent's care?", "<p>Yes, once your parent has given written permission naming you. The office can help with the form. <a href=\"/for-families\">For families</a>.</p>"),
+        ("Can you talk to me about my parent's care?", "<p>Yes, once your parent has given permission naming you. The office can help with the form. <a href=\"/for-families\">For families</a>.</p>"),
         ("I live out of state. How do I stay involved in my parent's care?", "<p>With your parent's permission, Dr. Shtern can update you by phone, and members and the family helping them can reach the practice at any hour.</p>"),
         ("What paperwork should my parent have in place?", "<p>Two documents save a great deal of trouble later: a HIPAA authorization naming who the practice may speak with, and, in Florida, a designation of a health care surrogate who can make medical decisions if your parent cannot. An elder law attorney can help with the details.</p>"),
         ("I split the year between two states. Can you work with my doctors up north?", "<p>Yes. Many members are seasonal residents. With your permission, the office requests records from your physicians up north and can send notes and results back to them. <a href=\"/seasonal-residents\">Care between seasons</a>.</p>"),
@@ -979,7 +979,7 @@ ASSIST_EXTRA = [
     {"k": ["physical", "annual exam", "checkup", "check-up", "preventive", "screening"],
      "a": "Members get the annual executive physical: a thorough yearly exam with lab work and an ECG, then time to go through the results together. <a href=\"/preventive-care\">Preventive care and physicals</a>."},
     {"k": ["memory", "dementia", "elderly", "parent", "geriatric", "aging"],
-     "a": "Dr. Shtern cares for older adults and the families who help them, including memory concerns and medication reviews. With the patient's written permission she can keep family members updated. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>."},
+     "a": "Dr. Shtern cares for older adults and the families who help them, including memory concerns and medication reviews. With the patient's permission she can keep family members updated. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>."},
     {"k": ["prescription", "refill", "medication", "pharmacy"],
      "a": "Questions about your own medications are best handled by phone, so please call the office at (561) 834-9280 rather than writing them here."},
 ]
@@ -1166,7 +1166,7 @@ MEET = {
         ("What the meet and greet is", "<p>A chance for you and Dr. Shtern to see whether the practice is right for you. You talk about what you want from a doctor, how your care is going now, and how membership works day to day. Dr. Shtern explains how she practices, how members reach her, and what the concierge fee includes.</p>"),
         ("Questions worth asking", "<ul><li>How quickly can members be seen when something comes up?</li><li>How do after-hours calls work, and who answers?</li><li>What does the concierge fee include, and what is still billed to insurance?</li><li>How do you work with my specialists?</li><li>Which hospitals are you affiliated with?</li><li>How large is the practice, and are new members being accepted right now?</li><li>What happens to my care when I am away for the summer?</li></ul>"),
         ("What to bring", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p>"),
-        ("Coming with a parent or partner", "<p>Families are welcome. Adult children often come along when they are arranging care for a parent, and couples often meet Dr. Shtern together. With the patient's written permission, she can keep family members updated later on.</p>"),
+        ("Coming with a parent or partner", "<p>Families are welcome. Adult children often come along when they are arranging care for a parent, and couples often meet Dr. Shtern together. With the patient's permission, she can keep family members updated later on.</p>"),
     ],
     "form_h": "Book a meet and greet",
     "form_lede": "Leave your details and the office will call or email you to set a time. Prefer the phone? Call during office hours.",
@@ -1212,13 +1212,13 @@ GUIDES_BASE = {
         "photo": "front-desk-scrubs", "photo_alt": "Dr. Yana Shtern at the Legacy Medical front desk",
         "sections": [
             ("Come to the meet and greet together", "<p>Families are welcome at the first visit. It is a good time to ask how the practice handles calls from family, and what happens when something changes on a weekend. <a href=\"/meet-and-greet\">About the meet and greet</a>.</p>"),
-            ("Keeping you informed", "<p>With your parent's written permission, Dr. Shtern can update family members, talk with home health agencies and other doctors, and help everyone plan ahead. Members, and the family helping them, can reach the practice by phone at any hour.</p>"),
+            ("Keeping you informed", "<p>With the patient's permission, Dr. Shtern can update family members, talk with home health agencies and other doctors, and help everyone plan ahead. Members, and the family helping them, can reach the practice by phone at any hour.</p>"),
             ("Fewer, better prescriptions", "<p>Older adults are more sensitive to many medicines, and kidney function, which Dr. Shtern watches closely as a Nephrologist, changes how many drugs should be dosed. A full review often finds a medicine that can be stopped, a dose that can be lowered, or two prescriptions from two specialists that should not be taken together. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>.</p>"),
             ("Hospital affiliations", "<p>Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
             ("Paperwork worth having in place", "<p>Two documents save a great deal of trouble later: a HIPAA authorization naming who the practice may speak with, and, in Florida, a designation of a health care surrogate who can make medical decisions if your parent cannot. <a href=\"https://www.flsenate.gov/Laws/Statutes/2025/765.202\" rel=\"noopener\">Florida law sets out how a surrogate is designated</a>; an elder law attorney can help with the details.</p>"),
         ],
         "faqs": [
-            ("Can you talk to me about my mother's care?", "<p>Yes, once she has given written permission naming you. The office can help with the form.</p>"),
+            ("Can you talk to me about my mother's care?", "<p>Yes, once she has given permission naming you. The office can help with the form.</p>"),
             ("I live out of state. How do I stay involved?", "<p>With your parent's permission, Dr. Shtern can update you by phone. Members can reach the practice at any hour.</p>"),
             ("Does Dr. Shtern see patients with memory problems?", "<p>Yes. Memory concerns are part of her geriatric care. <a href=\"/geriatric-memory-care\">More on geriatric and memory care</a>.</p>"),
         ],
@@ -1305,7 +1305,7 @@ ASSIST_EXTRA += [
     {"k": ["snowbird", "seasonal", "part of the year", "up north", "summer", "two homes"],
      "a": "Many members split the year between Florida and somewhere else. With your permission the office can request records from, and send notes to, your doctors up north, and members can reach the practice by phone at any hour. <a href=\"/seasonal-residents\">Care for seasonal residents</a>."},
     {"k": ["mother", "father", "mom", "dad", "parent", "family member", "caregiver", "adult child", "bring my", "daughter", "son ", "wife", "husband", "spouse", "partner"],
-     "a": "Families are welcome, including at the meet and greet. With your parent's written permission, Dr. Shtern can keep you informed and coordinate with other doctors and home health. <a href=\"/for-families\">For families</a>."},
+     "a": "Families are welcome, including at the meet and greet. With the patient's permission, Dr. Shtern can keep you informed and coordinate with other doctors and home health. <a href=\"/for-families\">For families</a>."},
     {"k": ["memory", "dementia", "alzheimer", "forgetful", "confusion"],
      "a": "Memory concerns are part of Dr. Shtern's geriatric care, alongside medication reviews and fall prevention. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>."},
     {"k": ["records", "medical records", "transfer", "previous doctor", "old doctor"],
