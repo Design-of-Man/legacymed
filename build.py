@@ -443,7 +443,7 @@ def physician_node(full=False):
         "honorificSuffix": "MD",
         "jobTitle": d["title"],
         "url": url("dr-yana-shtern"),
-        "image": BASE + "/assets/img/og/dr-yana-shtern.jpg",
+        "image": BASE + "/assets/img/og/dr-yana-shtern-oct-2026.jpg",
         "worksFor": {"@id": ORG_ID},
         "medicalSpecialty": ["https://schema.org/PrimaryCare", "https://schema.org/Renal"],
         "usNPI": d["npi"],

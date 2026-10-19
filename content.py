@@ -29,8 +29,8 @@ ONE_LINER = ("Legacy Medical is a Concierge Internal Medicine practice in Palm B
 DOCTOR = {
     "name": "Yana Shtern, MD",
     "title": "Concierge internist and nephrologist",
-    "photo": "dr-yana-shtern",
-    "home_photo": "dr-shtern-suit-oct-2026",  # client, Oct 19 2026: this portrait in the first photo slot below the home film
+    "photo": "dr-shtern-suit-oct-2026",  # client, Oct 19 2026: the black-suit portrait on the bio page and the home page
+    "home_photo": "dr-shtern-suit-oct-2026",
     "npi": "1497940852",
     "license": "ME114615",
     "board_certs": ["Internal Medicine", "Nephrology"],
@@ -101,7 +101,7 @@ DOCTOR = {
 }
 
 TEAM = [
-    {"name": "Dr. Yana Shtern, MD", "role": "Physician and founder", "photo": "dr-yana-shtern", "is_doctor": True,
+    {"name": "Dr. Yana Shtern, MD", "role": "Physician and founder", "photo": "dr-shtern-suit-oct-2026", "is_doctor": True,
      "bio": ["Board-certified in Internal Medicine and Nephrology. Dr. Shtern sees every member herself, from the annual physical to a same-day sick visit."],
      "link": "/dr-yana-shtern", "link_label": "Full background"},
     {"name": "Yan Konevsky, RN", "role": "Registered nurse and office manager", "photo": "yan-konevsky-rn-oct-2026",
@@ -173,7 +173,7 @@ HOME = {
     "kicker": "One-on-one care · Palm Beach Gardens",
     "hero_title": "Concierge Medicine",  # client, Oct 19 2026: "Concierge Medicine" as the title, "A medical practice..." below it
     "hero_sub": "A Medical Practice Where Patients Come First",  # one line under the title, title case, as on the current site
-    "hero_lede": "Dr. Yana Shtern keeps a very small practice on purpose and sees one patient at a time. Every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",
+    "hero_lede": "Dr. Yana Shtern offers exceptional, personalized and evidence-based care for her patients. She keeps a very small practice on purpose and every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",  # client, Oct 19 2026, verbatim ("business say" corrected to "business day")
     "problem_eyebrow": "The usual way",
     "problem_statement": "Fifteen minutes, a portal message, and a referral to someone you have never met.",
     "problem_lede": "Most primary care runs on volume. It is not that doctors stop caring. A schedule with thirty patients a day leaves no room to listen, to call you back, or to notice what changed since last year.",
@@ -284,12 +284,13 @@ RATING_LINKS = [
 # earlier location and unidentified people.
 REEL = [
     {"stem": "reception-desk", "alt": "The reception desk and gold Legacy Medical sign"},
-    {"stem": "dr-shtern-desk", "alt": "Dr. Yana Shtern at her desk"},
+    {"stem": "dr-shtern-laptop-oct-2026", "alt": "Dr. Yana Shtern at her desk with a laptop"},
     {"stem": "yan-konevsky-rn-oct-2026", "alt": "Yan Konevsky, RN, office manager"},
-    {"stem": "dr-yana-shtern", "alt": "Dr. Yana Shtern, MD"},
-    {"stem": "reception-wall", "alt": "The Legacy Medical reception wall"},
+    {"stem": "dr-shtern-exam-room-oct-2026", "alt": "Dr. Yana Shtern working in an exam room"},
     {"stem": "front-desk-scrubs", "alt": "At the Legacy Medical front desk"},
+    {"stem": "front-desk-dog-oct-2026", "alt": "A small white dog sitting on the front desk"},
     {"stem": "dr-shtern-full", "alt": "Dr. Shtern at the front desk"},
+    {"stem": "dr-shtern-desk", "alt": "Dr. Yana Shtern at her desk"},
 ]
 
 # ---------------------------------------------------------------- concierge medicine
