@@ -169,8 +169,9 @@ HERO_VIDEO = {
 }
 
 HOME = {
-    "kicker": "One-on-one concierge medicine · Palm Beach Gardens",
-    "hero_lines": ["A medical practice", "where patients", "<em>come first</em>."],  # <em> is styled gold, upright: no italic font on the LCP path
+    "kicker": "One-on-one care · Palm Beach Gardens",
+    "hero_title": "Concierge Medicine",  # client, Oct 19 2026: "Concierge Medicine" as the title, "A medical practice..." below it
+    "hero_sub": "A Medical Practice Where Patients Come First",  # one line under the title, title case, as on the current site
     "hero_lede": "Dr. Yana Shtern keeps a very small practice on purpose and sees one patient at a time. Every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",
     "problem_eyebrow": "The usual way",
     "problem_statement": "Fifteen minutes, a portal message, and a referral to someone you have never met.",
