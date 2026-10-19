@@ -679,7 +679,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
              {'type': 'h2', 'text': 'Why your internist cares about the whole picture'},
              {'type': 'p',
               'text': 'Prediabetes rarely travels alone. It often comes with high blood pressure, high triglycerides, '
-                      'fatty liver and early changes in kidney function. Because Dr. Shtern is also a nephrologist, '
+                      'fatty liver and early changes in kidney function. Because Dr. Shtern is also a Nephrologist, '
                       'she pays close attention to the kidney side; our article on [eGFR, creatinine and '
                       'UACR](/blog/egfr-kidney-lab-results-explained) explains those tests. If weight is part of '
                       'the plan, you may also want to read about GLP-1 medications, covered elsewhere in the journal.'},
@@ -2379,7 +2379,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
   'stale_note': None,
   'reviewed_by': None},
  {'slug': 'internist-and-nephrologist',
-  'title': 'Why it helps when your internist is also a nephrologist',
+  'title': 'Why it helps when your internist is also a Nephrologist',
   'seo_title': 'Internist and Nephrologist in One Doctor | Legacy Medical',
   'date': '2026-10-12T09:00:00',
   'modified': '2026-10-12T09:00:00',
@@ -2387,7 +2387,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
   'excerpt': 'Kidneys, blood pressure, diabetes and medicines are closely linked. Here is why it helps to have one '
              'doctor trained in both Internal Medicine and Nephrology.',
   'blocks': [{'type': 'p',
-              'text': 'Most people meet a nephrologist, a kidney specialist, only after a lab result raises a flag. By '
+              'text': 'Most people meet a Nephrologist, a kidney specialist, only after a lab result raises a flag. By '
                       'then they already have a primary care doctor, a cardiologist and perhaps an endocrinologist, '
                       'each looking at one part of the picture.'},
              {'type': 'p',
@@ -2430,7 +2430,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'kidneys filter, reported as eGFR, and a urine test looks for albumin, a protein that a healthy '
                       'kidney keeps out of the urine. The NIDDK describes both on its page about [kidney '
                       'tests](https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/tests-diagnosis). '
-                      'An internist who is also a nephrologist reads those results in the context of your blood sugar, '
+                      'An internist who is also a Nephrologist reads those results in the context of your blood sugar, '
                       'blood pressure and medicines, all at once.'},
              {'type': 'h2', 'text': 'Medicines and kidney function'},
              {'type': 'p',
@@ -2950,7 +2950,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'service restored quickly.'},
              {'type': 'p',
               'text': 'NKF also describes an emergency meal plan for people on dialysis to follow if treatments are '
-                      'missed. Ask your nephrologist and dialysis dietitian to go over it with you before the season '
+                      'missed. Ask your Nephrologist and dialysis dietitian to go over it with you before the season '
                       'starts, not during a storm watch. If you have kidney disease but are not yet on dialysis, it is '
                       'still worth asking how a missed week of usual care would affect you. Our [kidney '
                       "care](/kidney-care) page explains how Dr. Shtern's Nephrology training shapes the care she "
@@ -3053,7 +3053,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'illness and advises seeking medical care right away if they appear '
                       '([CDC](https://www.cdc.gov/heat-health/risk-factors/heat-and-older-adults-aged-65.html)). For '
                       'anything that feels like an emergency, call 911.'},
-             {'type': 'h2', 'text': 'Where a nephrologist helps'},
+             {'type': 'h2', 'text': 'Where a Nephrologist helps'},
              {'type': 'p',
               'text': 'Dr. Yana Shtern is board certified in both Internal Medicine and Nephrology, so questions about '
                       'kidney function, blood pressure medicines and fluids sit within one practice. Labs are drawn in '
@@ -3452,7 +3452,7 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'home](/blog/home-blood-pressure-monitoring) is a practical place to start.'},
              {'type': 'p',
               'text': 'Dr. Shtern is board-certified in Internal Medicine and Nephrology. Our article on [why it helps '
-                      'when your internist is also a nephrologist](/blog/internist-and-nephrologist) explains how '
+                      'when your internist is also a Nephrologist](/blog/internist-and-nephrologist) explains how '
                       "that overlap works day to day, and [kidney care](/kidney-care) describes the practice's "
                       'approach. At Legacy Medical, labs are drawn in the office.'},
              {'type': 'p',

@@ -28,7 +28,7 @@ ONE_LINER = ("Legacy Medical is a Concierge Internal Medicine practice in Palm B
 
 DOCTOR = {
     "name": "Yana Shtern, MD",
-    "title": "Concierge internist and nephrologist",
+    "title": "Concierge internist and Nephrologist",
     "photo": "dr-shtern-suit-oct-2026",  # client, Oct 19 2026: the black-suit portrait on the bio page and the home page
     "home_photo": "dr-shtern-suit-oct-2026",
     "npi": "1497940852",
@@ -135,7 +135,7 @@ SERVICES_INCLUDED = [
 
 CARD_BLURBS = {
     "concierge-medicine": "How membership works, what it includes, and what it does not.",
-    "kidney-care": "A board-certified nephrologist who is also your internist: CKD, stones, electrolytes, creatinine that keeps creeping up.",
+    "kidney-care": "A board-certified Nephrologist who is also your internist: CKD, stones, electrolytes, creatinine that keeps creeping up.",
     "hypertension": "Blood pressure that will not come down, or comes down with side effects you do not like.",
     "geriatric-memory-care": "Care for older adults and the families who help them, including memory concerns.",
     "preventive-care": "Executive annual physicals, screenings, and no day at a hospital.",
@@ -215,7 +215,7 @@ HOME = {
     "included_lede": "An annual concierge fee covers access to Dr. Shtern. Office visits and tests are billed to your insurance, as they are now.",
     "clock_h": "The office keeps hours. Your access does not.",
     "clock_lede": "The office is open Monday to Friday. Outside those hours, members can still reach the practice by phone, at night, on weekends and on holidays.",
-    "spec_h": "Internal Medicine, plus a <em>nephrologist's eye</em>",
+    "spec_h": "Internal Medicine, plus a <em>Nephrologist's eye</em>",
     "spec_lede": "Every member gets complete primary care. These are the areas where Dr. Shtern's second specialty and experience add the most.",
     "specialties": [
         ("kidney-care", "Kidney care", "CKD, rising creatinine, kidney stones, electrolyte problems, and care for people on dialysis."),
@@ -332,7 +332,7 @@ CONCIERGE = {
 SERVICE_PAGES = {
     "kidney-care": {
         "title": "Nephrologist and Kidney Doctor in Palm Beach Gardens, FL",
-        "desc": "Dr. Yana Shtern is a board-certified nephrologist and internist in Palm Beach Gardens: chronic kidney disease treatment, rising creatinine, stones and electrolytes.",
+        "desc": "Dr. Yana Shtern is a board-certified Nephrologist and internist in Palm Beach Gardens: chronic kidney disease treatment, rising creatinine, stones and electrolytes.",
         "crumb": "Kidney care",
         "eyebrow": "Nephrology in Palm Beach Gardens",
         "h1": "A kidney doctor who is also your internist.",
@@ -353,7 +353,7 @@ SERVICE_PAGES = {
         ],
         "faq_h": "Kidney care questions",
         "faqs": [
-            ("When should I see a nephrologist?", "<p>Common reasons are an eGFR below 60 that persists, a rapid drop in kidney function, protein or blood in the urine, recurring kidney stones, or blood pressure that will not come under control. If you are a member, you do not need a separate referral: Dr. Shtern is board-certified in Nephrology.</p>"),
+            ("When should I see a Nephrologist?", "<p>Common reasons are an eGFR below 60 that persists, a rapid drop in kidney function, protein or blood in the urine, recurring kidney stones, or blood pressure that will not come under control. If you are a member, you do not need a separate referral: Dr. Shtern is board-certified in Nephrology.</p>"),
             ("What does eGFR mean?", "<p>Estimated glomerular filtration rate. It is calculated from your creatinine level, age and sex, and estimates how well your kidneys filter blood. Lower numbers mean less filtering, and a single low result is less important than the trend over time.</p>"),
             ("Can kidney disease be slowed?", "<p>Often, yes. Controlling blood pressure and blood sugar, choosing medications carefully, and avoiding things that strain the kidneys all help. Some newer medicines also slow progression for the right patients.</p>"),
             ("Do I need to be a member to see Dr. Shtern for kidney care?", "<p>Legacy Medical is a membership practice. Call the office to talk through your situation.</p>"),
@@ -361,11 +361,11 @@ SERVICE_PAGES = {
         "about": ["Chronic kidney disease", "Acute kidney injury", "Proteinuria", "Kidney stones", "Electrolyte imbalance", "End-stage renal disease"],
         "related": ["hypertension", "preventive-care", "concierge-medicine"],
         "cta_h": "Questions about your kidney numbers?",
-        "photo": "dr-shtern-full", "photo_alt": "Dr. Yana Shtern, board-certified nephrologist, at Legacy Medical",
+        "photo": "dr-shtern-full", "photo_alt": "Dr. Yana Shtern, board-certified Nephrologist, at Legacy Medical",
     },
     "hypertension": {
         "title": "Hypertension Specialist in Palm Beach Gardens | Legacy Medical",
-        "desc": "A high blood pressure doctor in Palm Beach Gardens: Dr. Yana Shtern, internist and nephrologist, for pressure that will not come down. Home readings, causes, fewer side effects.",
+        "desc": "A high blood pressure doctor in Palm Beach Gardens: Dr. Yana Shtern, internist and Nephrologist, for pressure that will not come down. Home readings, causes, fewer side effects.",
         "crumb": "Hypertension",
         "eyebrow": "Hypertension specialist care",
         "h1": "When blood pressure will not come down.",
@@ -409,7 +409,7 @@ SERVICE_PAGES = {
         ],
         "sections": [
             ("Memory and thinking", "<p>Forgetfulness worries people, and it deserves a proper evaluation rather than reassurance or alarm. Dr. Shtern starts with a cognitive screen and a careful history, often with a family member present, and checks for causes that can be treated: thyroid problems, low vitamin B12, medication side effects, poor sleep, depression, hearing loss, or an infection.</p><p>When a memory disorder is likely, she arranges the right specialist and imaging, and stays your doctor throughout. Care for memory concerns changes over time, and continuity matters.</p>"),
-            ("Fewer, better prescriptions", "<p>Older adults are more sensitive to many medicines, and kidney function, which Dr. Shtern watches closely as a nephrologist, changes how many drugs should be dosed. A full review often finds a medication that can be stopped, a dose that can be lowered, or two prescriptions from two specialists that should not be taken together.</p>"),
+            ("Fewer, better prescriptions", "<p>Older adults are more sensitive to many medicines, and kidney function, which Dr. Shtern watches closely as a Nephrologist, changes how many drugs should be dosed. A full review often finds a medication that can be stopped, a dose that can be lowered, or two prescriptions from two specialists that should not be taken together.</p>"),
             ("Help for families", "<p>Often the person arranging care is an adult child, sometimes living in another state. With the patient's written permission, Dr. Shtern can update family members, coordinate with home health and other doctors, and help everyone plan ahead. Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
         ],
         "faq_h": "Questions from families",
@@ -562,12 +562,12 @@ FAQ_GROUPS = [
         ("How many patients does Dr. Shtern see in a day?", "<p>No more than eight, one at a time. She never books two patients into the same slot.</p>"),
     ]},
     {"name": "Dr. Shtern and the team", "pairs": [
-        ("Who is Dr. Shtern?", "<p>Dr. Yana Shtern, MD is a concierge internist and nephrologist, board-certified in Internal Medicine and Nephrology. She has practiced for close to twenty years, first in New York City and now in Palm Beach Gardens, where she runs Legacy Medical. <a href=\"/dr-yana-shtern\">Her full background</a>.</p>"),
+        ("Who is Dr. Shtern?", "<p>Dr. Yana Shtern, MD is a concierge internist and Nephrologist, board-certified in Internal Medicine and Nephrology. She has practiced for close to twenty years, first in New York City and now in Palm Beach Gardens, where she runs Legacy Medical. <a href=\"/dr-yana-shtern\">Her full background</a>.</p>"),
         ("Will I always see Dr. Shtern?", "<p>Yes. She is the physician for every member and sees each one herself, from the annual physical to a same-day sick visit.</p>"),
         ("What are Dr. Shtern's board certifications?", "<p>Internal Medicine and Nephrology, both from the American Board of Internal Medicine. You can confirm them on the <a href=\"https://www.abim.org/verify-physician.aspx?type=id&amp;id=310989\" rel=\"noopener\">ABIM verification page</a>.</p>"),
         ("Where did Dr. Shtern train?", "<p>She earned a BS in Pharmacology at Stony Brook University and her medical degree at St. George's University School of Medicine in 2007, then completed her Internal Medicine residency and Nephrology fellowship at Maimonides Medical Center in New York City.</p>"),
         ("What did Dr. Shtern do before Legacy Medical?", "<p>She ran a private practice in New York City, served as medical director of an outpatient hemodialysis center, and worked for many years as an Interventional Nephrologist.</p>"),
-        ("Why does it matter that my internist is also a nephrologist?", "<p>Kidney function and blood pressure affect nearly every medication decision an internist makes. Dr. Shtern reads those numbers the way a kidney specialist does, so the kidney side of your care is part of the same visit rather than a separate referral.</p>"),
+        ("Why does it matter that my internist is also a Nephrologist?", "<p>Kidney function and blood pressure affect nearly every medication decision an internist makes. Dr. Shtern reads those numbers the way a kidney specialist does, so the kidney side of your care is part of the same visit rather than a separate referral.</p>"),
         ("Has Dr. Shtern received any recognition?", "<p>She has been a Castle Connolly Top Doctor since 2023 and holds a Healthgrades Patient Favorite award. <a href=\"/dr-yana-shtern\">Profiles and links</a>.</p>"),
         ("Who else works at the office?", "<p>Yan Konevsky, RN runs the office and is a registered nurse. He holds a BSN from Wagner College and a BBA in finance from Hofstra University, and before Legacy Medical he managed an outpatient hemodialysis center in New York City. <a href=\"/our-team\">Our team</a>.</p>"),
     ]},
@@ -625,7 +625,7 @@ FAQ_GROUPS = [
     {"name": "Conditions and ongoing care", "pairs": [
         ("Do you treat kidney disease and high blood pressure?", "<p>Yes. Dr. Shtern is board-certified in Nephrology as well as Internal Medicine. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
         ("Which conditions does Dr. Shtern manage?", "<p>The problems an internist looks after, including blood pressure, diabetes, cholesterol, kidney and thyroid conditions, infections, and the questions that come with getting older. <a href=\"/chronic-care\">Chronic care support</a>.</p>"),
-        ("Do I need a separate referral to see a nephrologist?", "<p>Not as a member. Dr. Shtern is board-certified in Nephrology, so kidney care is part of membership rather than a separate referral.</p>"),
+        ("Do I need a separate referral to see a Nephrologist?", "<p>Not as a member. Dr. Shtern is board-certified in Nephrology, so kidney care is part of membership rather than a separate referral.</p>"),
         ("My blood pressure will not come down. Can Dr. Shtern help?", "<p>Yes. Pressure that stays high on several medicines often has a cause worth finding. She works from accurate home readings, reviews every medication and supplement, checks kidney function and electrolytes, and looks for secondary causes. <a href=\"/hypertension\">Help for high blood pressure</a>.</p>"),
         ("Can I send in my home blood pressure readings?", "<p>Yes. Bring or send your log so the numbers can be reviewed together. <a href=\"/blog/home-blood-pressure-monitoring\">How to take an accurate home reading</a>.</p>"),
         ("Can Dr. Shtern review all of my medications?", "<p>Yes. One doctor keeps an eye on every prescription, dose and interaction. A full review often finds a medicine that can be stopped, a dose that can be lowered, or two prescriptions that should not be taken together.</p>"),
@@ -774,12 +774,12 @@ _LOC_COPY = {
     "west-palm-beach": {
         "name": "West Palm Beach",
         "title": "Concierge Medicine for West Palm Beach | Legacy Medical",
-        "desc": "Concierge medicine for West Palm Beach residents from a doctor who is also a nephrologist, about 20 minutes up I-95 in Palm Beach Gardens. Same or next-day visits.",
+        "desc": "Concierge medicine for West Palm Beach residents from a doctor who is also a Nephrologist, about 20 minutes up I-95 in Palm Beach Gardens. Same or next-day visits.",
         "h1": "A concierge doctor twenty minutes up I-95 from West Palm Beach.",
         "lede": "For West Palm Beach residents, the office is a straight run up I-95 to PGA Boulevard. Members are seen the same or next business day.",
         "from_label": "downtown West Palm Beach",
         "sections": [
-            ("Internist and nephrologist", "<p>Dr. Shtern is board-certified in Internal Medicine and Nephrology. If you are managing kidney disease, hard-to-control blood pressure or electrolyte problems, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
+            ("Internist and Nephrologist", "<p>Dr. Shtern is board-certified in Internal Medicine and Nephrology. If you are managing kidney disease, hard-to-control blood pressure or electrolyte problems, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
             ("When you cannot come in", "<p>Many follow-ups, lab reviews and medication checks happen by <a href=\"/telehealth\">video visit</a>, and members can reach the practice by phone at any hour.</p>"),
         ],
         "directions": "Take I-95 north to the PGA Boulevard exit, head east, then turn north on Prosperity Farms Road to Suite 114.",
@@ -808,7 +808,7 @@ _LOC_COPY = {
         "lede": "Legacy Medical already cares for patients from Stuart. The office is about 40 minutes south by I-95, and video visits and around-the-clock phone access mean much of your care does not need the drive.",
         "from_label": "Stuart",
         "sections": [
-            ("Internist and nephrologist", "<p>Dr. Shtern is board-certified in Internal Medicine and Nephrology, so if you are managing kidney disease, hard-to-control blood pressure or a long medication list, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
+            ("Internist and Nephrologist", "<p>Dr. Shtern is board-certified in Internal Medicine and Nephrology, so if you are managing kidney disease, hard-to-control blood pressure or a long medication list, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
             ("Making the distance work", "<p>Many follow-ups, lab reviews and medication checks happen by <a href=\"/telehealth\">video visit</a>. When you come in, labs are drawn in the office, so there is no separate trip to a lab.</p>"),
         ],
         "directions": "From Stuart, take Kanner Highway to I-95 south, exit at PGA Boulevard and head east, then turn north on Prosperity Farms Road to Suite 114.",
@@ -909,7 +909,7 @@ ASSIST_KEYWORDS = {
     "What are Dr. Shtern's board certifications?": ["board certif", "board-certif", "certified", "abim", "credential", "qualified", "license"],
     "Where did Dr. Shtern train?": ["train", "medical school", "residency", "fellowship", "education", "degree"],
     "What did Dr. Shtern do before Legacy Medical?": ["before legacy", "new york", "experience", "background", "dialysis center"],
-    "Why does it matter that my internist is also a nephrologist?": ["why nephrolog", "internist and nephrolog", "kidney specialist as", "both specialties"],
+    "Why does it matter that my internist is also a Nephrologist?": ["why nephrolog", "internist and nephrolog", "kidney specialist as", "both specialties"],
     "Has Dr. Shtern received any recognition?": ["castle connolly", "top doctor", "award", "recognition", "healthgrades"],
     "Who else works at the office?": ["staff", "team", "who else", "nurse", "office manager", "yan"],
     "What is the meet and greet?": ["what is the meet", "meet and greet", "meet-and-greet", "consultation"],
@@ -944,7 +944,7 @@ ASSIST_KEYWORDS = {
     "What about imaging and other tests?": ["imaging", "x-ray", "xray", "mri", "ct scan", "ultrasound", "mammogram", "colonoscopy"],
     "Which screenings does Dr. Shtern keep track of?": ["screening", "cancer screen", "bone density", "vaccine", "shots", "immuniz"],
     "Which conditions does Dr. Shtern manage?": ["conditions", "diabetes", "cholesterol", "thyroid", "chronic", "treat"],
-    "Do I need a separate referral to see a nephrologist?": ["referral to nephrolog", "see a nephrolog", "kidney doctor", "need a nephrolog"],
+    "Do I need a separate referral to see a Nephrologist?": ["referral to nephrolog", "see a nephrolog", "kidney doctor", "need a nephrolog"],
     "My blood pressure will not come down. Can Dr. Shtern help?": ["won't come down", "will not come down", "resistant", "uncontrolled", "still high", "blood pressure high"],
     "Can I send in my home blood pressure readings?": ["home reading", "readings", "blood pressure log", "cuff"],
     "Can Dr. Shtern review all of my medications?": ["review my med", "medication review", "too many pills", "interaction", "polypharmacy"],
@@ -1013,7 +1013,7 @@ GUIDES_PATIENTS = {
     },
     "chronic-care": {
         "title": "Chronic Care: Blood Pressure, Diabetes, Kidney | Legacy Medical",
-        "desc": "Ongoing care for blood pressure, diabetes, cholesterol, kidney and thyroid conditions from Dr. Yana Shtern, a concierge internist and nephrologist in Palm Beach Gardens.",
+        "desc": "Ongoing care for blood pressure, diabetes, cholesterol, kidney and thyroid conditions from Dr. Yana Shtern, a concierge internist and Nephrologist in Palm Beach Gardens.",
         "crumb": "Chronic care support", "eyebrow": "For patients",
         "h1": "Long-term conditions, followed closely between visits.",
         "lede": "Blood pressure, diabetes, cholesterol, kidney and thyroid conditions do best with one doctor watching the whole picture. At Legacy Medical, that doctor is Dr. Shtern, every time.",
@@ -1128,13 +1128,13 @@ VIDEO_LIBRARY = [
     {"id": 'TLiD3vh_X8o', "title": 'Blood pressure done right: The correct way to measure yours at home.', "channel": 'American Heart Association', "topic": 'Blood pressure',
      "summary": 'Step by step, how to sit, position your arm and cuff, and take an accurate blood pressure reading at home.', "related": 'blog/home-blood-pressure-monitoring'},
     {"id": 'r5XTTeP039Q', "title": 'Mayo Clinic Explains Hypertension', "channel": 'Mayo Clinic', "topic": 'Blood pressure',
-     "summary": 'A Mayo Clinic nephrologist explains what the two blood pressure numbers mean, who gets hypertension, how it is diagnosed and treated.', "related": 'hypertension'},
+     "summary": 'A Mayo Clinic Nephrologist explains what the two blood pressure numbers mean, who gets hypertension, how it is diagnosed and treated.', "related": 'hypertension'},
     {"id": 'g4SV7SJLP_g', "title": 'Get to Know Your Kidneys', "channel": "NIH (NIDDK)", "topic": 'Kidney health',
      "summary": 'What your kidneys do every day, why kidney disease is often silent at first, and everyday habits that help protect them.', "related": 'kidney-care'},
     {"id": 'fFn0ygOOBuI', "title": 'What is eGFR, and how is it used to measure kidney function?', "channel": 'National Kidney Foundation', "topic": 'Kidney health',
      "summary": 'A kidney specialist explains how eGFR is calculated from a blood test and what a higher or lower number says about kidney function.', "related": 'blog/egfr-kidney-lab-results-explained'},
     {"id": '1PKBTpVhvVk', "title": 'Mayo Clinic Minute: Avoiding kidney stones', "channel": 'Mayo Clinic', "topic": 'Kidney health',
-     "summary": 'A Mayo Clinic nephrologist explains why kidney stones form and why drinking enough water each day is the simplest way to prevent them.', "related": 'blog/heat-hydration-kidney-health'},
+     "summary": 'A Mayo Clinic Nephrologist explains why kidney stones form and why drinking enough water each day is the simplest way to prevent them.', "related": 'blog/heat-hydration-kidney-health'},
     {"id": 'Ih_4BHoZv0U', "title": 'Mayo Clinic Minute: The role of cholesterol in heart health', "channel": 'Mayo Clinic', "topic": "Heart health",
      "summary": 'What cholesterol is, how the bad kind builds plaque in arteries, and which food choices can help bring your levels down.', "related": 'blog/heart-healthy-foods'},
     {"id": 'gfFMSaSoU6U', "title": 'Turning back the clock on prediabetes', "channel": "CDC", "topic": 'Diabetes and metabolism',
@@ -1213,7 +1213,7 @@ GUIDES_BASE = {
         "sections": [
             ("Come to the meet and greet together", "<p>Families are welcome at the first visit. It is a good time to ask how the practice handles calls from family, and what happens when something changes on a weekend. <a href=\"/meet-and-greet\">About the meet and greet</a>.</p>"),
             ("Keeping you informed", "<p>With your parent's written permission, Dr. Shtern can update family members, talk with home health agencies and other doctors, and help everyone plan ahead. Members, and the family helping them, can reach the practice by phone at any hour.</p>"),
-            ("Fewer, better prescriptions", "<p>Older adults are more sensitive to many medicines, and kidney function, which Dr. Shtern watches closely as a nephrologist, changes how many drugs should be dosed. A full review often finds a medicine that can be stopped, a dose that can be lowered, or two prescriptions from two specialists that should not be taken together. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>.</p>"),
+            ("Fewer, better prescriptions", "<p>Older adults are more sensitive to many medicines, and kidney function, which Dr. Shtern watches closely as a Nephrologist, changes how many drugs should be dosed. A full review often finds a medicine that can be stopped, a dose that can be lowered, or two prescriptions from two specialists that should not be taken together. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>.</p>"),
             ("Hospital affiliations", "<p>Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
             ("Paperwork worth having in place", "<p>Two documents save a great deal of trouble later: a HIPAA authorization naming who the practice may speak with, and, in Florida, a designation of a health care surrogate who can make medical decisions if your parent cannot. <a href=\"https://www.flsenate.gov/Laws/Statutes/2025/765.202\" rel=\"noopener\">Florida law sets out how a surrogate is designated</a>; an elder law attorney can help with the details.</p>"),
         ],
@@ -1288,7 +1288,7 @@ ASSIST_EXTRA += [
      "a": "Dr. Shtern has been recognized as a Castle Connolly Top Doctor since 2023. <a href=\"/dr-yana-shtern\">About Dr. Shtern</a>."},
     {"k": ["license", "npi", "verify", "board certified", "board-certified", "certified"],
      "a": "Dr. Shtern is board-certified by the American Board of Internal Medicine in Internal Medicine and Nephrology. <a href=\"/dr-yana-shtern\">Links to verify her credentials</a>."},
-    {"k": ["kidney", "ckd", "creatinine", "egfr", "dialysis", "kidney stone", "nephrologist", "Nephrology"],
+    {"k": ["kidney", "ckd", "creatinine", "egfr", "dialysis", "kidney stone", "Nephrologist", "Nephrology"],
      "a": "Dr. Shtern is board-certified in Nephrology as well as Internal Medicine, so kidney care is part of her everyday practice: chronic kidney disease, rising creatinine, stones, electrolyte problems and care for people on dialysis. <a href=\"/kidney-care\">Kidney care</a>."},
     {"k": ["blood pressure", "hypertension", "bp "],
      "a": "High blood pressure, including blood pressure that stays high on two or three medicines, is one of Dr. Shtern's focus areas. <a href=\"/hypertension\">Hypertension care</a>."},
