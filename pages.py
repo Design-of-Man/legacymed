@@ -107,7 +107,7 @@ def home(B):
       <div class="btn-row" style="margin-top:2rem"><a class="btn" href="/meet-and-greet" data-loc="doctor">Book a meet and greet %(arrow)s</a><a class="btn ghost" href="/dr-yana-shtern" data-loc="doctor">Her background</a></div>
     </div>
   </div>
-</section>""" % {"photo": photo(D["photo"], "Dr. Yana Shtern, MD, at Legacy Medical in Palm Beach Gardens", sizes="(max-width: 880px) 90vw, 42vw", max_w=1200),
+</section>""" % {"photo": photo(D["home_photo"], "Dr. Yana Shtern, MD, at Legacy Medical in Palm Beach Gardens", sizes="(max-width: 880px) 90vw, 42vw", max_w=1200),
                  "line": esc(H["guide_h"]), "body": H["guide_body"], "creds": creds,
                  "quote": esc("She identified the cause of my problem rather than only trying to treat my symptoms as the other doctors I saw did."),
                  "who": "Patient review", "src": q["source_html"], "arrow": icon("arrow")}

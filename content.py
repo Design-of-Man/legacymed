@@ -30,6 +30,7 @@ DOCTOR = {
     "name": "Yana Shtern, MD",
     "title": "Concierge internist and nephrologist",
     "photo": "dr-yana-shtern",
+    "home_photo": "dr-shtern-suit-oct-2026",  # client, Oct 19 2026: this portrait in the first photo slot below the home film
     "npi": "1497940852",
     "license": "ME114615",
     "board_certs": ["Internal Medicine", "Nephrology"],
