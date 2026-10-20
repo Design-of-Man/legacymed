@@ -599,6 +599,7 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
 %(analytics)s
 <script defer src="%(js)s"></script>
 <script defer src="%(assist)s" data-faq="%(faq)s"></script>
+<script defer src="%(userway)s" data-account="%(userway_account)s"></script>
 %(scripts)s
 </head>
 <body class="%(bodycls)s">
@@ -615,7 +616,8 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
        "lat": PRACTICE["geo"]["lat"], "lng": PRACTICE["geo"]["lng"], "ld": ld, "extra": extra_head,
        "analytics": analytics_tags(track), "scripts": script_tags, "bodycls": body_cls,
        "header": header(slug), "body": body, "jsflag": JS_FLAG, "footer": footer(), "callbar": callbar(), "preload": preload_html,
-       "assist": a("assets/js/assist.js"), "faq": a("assets/assist.json")}
+       "assist": a("assets/js/assist.js"), "faq": a("assets/assist.json"),
+       "userway": a("assets/js/userway.js"), "userway_account": USERWAY_ACCOUNT}
 
 
 def write_page(slug, title, desc, body, sitemap=True, **kw):
@@ -807,19 +809,21 @@ def check_copy():
 
 
 INLINE_SCRIPTS = {JS_FLAG}  # every inline <script> body, hashed into the CSP
+USERWAY_ACCOUNT = "QQECAXmKWE"  # the practice's UserWay accessibility widget (client, Oct 20 2026; same account as the old site)
+USERWAY = "https://*.userway.org"
 
 
 def csp():
     hashes = " ".join("'sha256-%s'" % __import__("base64").b64encode(hashlib.sha256(s.encode()).digest()).decode() for s in sorted(INLINE_SCRIPTS))
     return "; ".join([
         "default-src 'self'",
-        "script-src 'self' %s https://www.googletagmanager.com" % hashes,
-        "style-src 'self' 'unsafe-inline'",
-        "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com",
-        "font-src 'self'",
+        "script-src 'self' %s https://www.googletagmanager.com %s" % (hashes, USERWAY),
+        "style-src 'self' 'unsafe-inline' %s" % USERWAY,
+        "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com %s" % USERWAY,
+        "font-src 'self' %s" % USERWAY,
         "media-src 'self'",
-        "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
-        "frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com",
+        "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com %s" % USERWAY,
+        "frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com %s" % USERWAY,
         "object-src 'none'",
         "base-uri 'self'",
         "form-action 'self'",

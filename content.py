@@ -105,8 +105,8 @@ TEAM = [
      "bio": ["Board-certified in Internal Medicine and Nephrology. Dr. Shtern sees every member herself, from the annual physical to a same-day sick visit."],
      "link": "/dr-yana-shtern", "link_label": "Full background"},
     {"name": "Yan Konevsky, RN", "role": "Registered nurse and office manager", "photo": "yan-konevsky-rn-oct-2026",
-     "creds": ["Registered Nurse", "BSN, Wagner College", "BBA in Finance, Hofstra University"],
-     "bio": ["Yan runs the office and is a registered nurse. He holds a BSN from Wagner College and a BBA in finance from Hofstra University, and before Legacy Medical he managed an outpatient hemodialysis center in New York City.",
+     "creds": ["Registered Nurse", "BSN in Nursing, Wagner College", "BBA in Finance, Hofstra University"],
+     "bio": ["Yan runs the office and is a registered nurse. He holds a BSN in nursing from Wagner College and a BBA in finance from Hofstra University, and before Legacy Medical he managed an outpatient hemodialysis center in New York City.",
              ]},
 ]
 
@@ -170,7 +170,7 @@ HERO_VIDEO = {
 }
 
 HOME = {
-    "kicker": "One-on-one care · Palm Beach Gardens",
+    "kicker": "Legacy Medical Concierge · Palm Beach Gardens",  # client, Oct 20 2026
     "hero_title": "Concierge Medicine",  # client, Oct 19 2026: "Concierge Medicine" as the title, "A medical practice..." below it
     "hero_sub": "A Medical Practice Where Patients Come First",  # one line under the title, title case, as on the current site
     "hero_lede": "Dr. Yana Shtern offers exceptional, personalized and evidence-based care for her patients. She keeps a very small practice on purpose and every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",  # client, Oct 19 2026, verbatim ("business say" corrected to "business day")
@@ -569,7 +569,7 @@ FAQ_GROUPS = [
         ("What did Dr. Shtern do before Legacy Medical?", "<p>She ran a private practice in New York City, served as medical director of an outpatient hemodialysis center, and worked for many years as an Interventional Nephrologist.</p>"),
         ("Why does it matter that my internist is also a Nephrologist?", "<p>Kidney function and blood pressure affect nearly every medication decision an internist makes. Dr. Shtern reads those numbers the way a kidney specialist does, so the kidney side of your care is part of the same visit rather than a separate referral.</p>"),
         ("Has Dr. Shtern received any recognition?", "<p>She has been a Castle Connolly Top Doctor since 2023 and holds a Healthgrades Patient Favorite award. <a href=\"/dr-yana-shtern\">Profiles and links</a>.</p>"),
-        ("Who else works at the office?", "<p>Yan Konevsky, RN runs the office and is a registered nurse. He holds a BSN from Wagner College and a BBA in finance from Hofstra University, and before Legacy Medical he managed an outpatient hemodialysis center in New York City. <a href=\"/our-team\">Our team</a>.</p>"),
+        ("Who else works at the office?", "<p>Yan Konevsky, RN runs the office and is a registered nurse. He holds a BSN in nursing from Wagner College and a BBA in finance from Hofstra University, and before Legacy Medical he managed an outpatient hemodialysis center in New York City. <a href=\"/our-team\">Our team</a>.</p>"),
     ]},
     {"name": "Joining and the meet and greet", "pairs": [
         ("How do I join?", "<p>Start with a complimentary meet and greet with Dr. Shtern. <a href=\"/meet-and-greet\">Book a meet and greet</a> or call (561) 834-9280.</p>"),
@@ -1356,6 +1356,6 @@ SECTION_IMAGES = {
     "concierge-vs-traditional-primary-care": {"Why the numbers matter": "p-compare-calendar"},
     "concierge-medicine": {"Why the panel is small": "p-concierge-phone", "Who it suits": "reception-desk"},
     "meet-and-greet": {"What the meet and greet is": "p-meet-coffee", "Coming with a parent or partner": "front-desk-scrubs"},
-    "membership": {"What to bring to the meet and greet": "reception-wall"},
+    "membership": {"What to bring to the meet and greet": "dr-shtern-white-coat-oct-2026"},  # client, Oct 20 2026: the old still was fuzzy
     "insurance-and-fees": {"The concierge fee": "p-insurance-papers"},
 }

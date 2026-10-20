@@ -710,6 +710,8 @@ body.nav-open .menu-toggle span::after{transform:translateY(-.36rem) rotate(-45d
 .as-launch{transition:transform .5s var(--ease-out),opacity .4s,visibility 0s}
 body.has-hero:not(.past-hero) .as-launch{opacity:0;transform:translateY(1rem);visibility:hidden;transition:transform .5s var(--ease-out),opacity .4s,visibility 0s .5s}
 @media (max-width:760px){.as-launch{bottom:5.1rem;right:.75rem;padding:.75rem 1rem}}
+/* UserWay's accessibility button (assets/js/userway.js) sits bottom-left; on phones lift it above the call bar, level with the assistant. */
+@media (max-width:760px){.uwy .userway_buttons_wrapper{top:auto!important;bottom:5.1rem!important;left:.75rem!important}}
 .as-panel{position:fixed;right:1rem;bottom:1rem;z-index:105;width:min(24rem,calc(100vw - 2rem));height:min(37rem,calc(100dvh - 2rem));display:flex;flex-direction:column;overflow:hidden;background:var(--bg);color:var(--ink);border:1px solid var(--line-2);border-radius:1.25rem;box-shadow:0 30px 70px -20px rgba(0,0,0,.45)}
 .as-head{display:flex;align-items:center;gap:.75rem;padding:.9rem 1rem;background:var(--sunk);color:var(--ink);border-bottom:1px solid var(--line);flex-shrink:0}
 .as-head img{flex-shrink:0}
