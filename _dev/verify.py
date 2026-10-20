@@ -88,6 +88,10 @@ async def check(browser, base, slug, view, scheme, axe_src, shots):
     w, h = VIEWS[view]
     ctx = await browser.new_context(viewport={"width": w, "height": h}, reduced_motion="reduce", color_scheme=scheme,
                                     device_scale_factor=1)
+    # Third-party widgets (UserWay) are blocked here: this audits our pages, and the widget
+    # keeps the network busy so "networkidle" never comes. It gets its own pass below.
+    await ctx.route(re.compile(r"^https://([a-z0-9-]+\.)*userway\.org/"),
+                    lambda r: r.fulfill(status=200, content_type="application/javascript", body=""))
     page = await ctx.new_page()
     errors, failed = [], []
     page.on("pageerror", lambda e: errors.append(str(e)))
