@@ -117,6 +117,1139 @@
   "redirects": [
     {
       "source": "/",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/dr-shtern",
+      "destination": "https://legacymedicalpalmbeach.com/dr-yana-shtern",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/dr-shtern/",
+      "destination": "https://legacymedicalpalmbeach.com/dr-yana-shtern",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/our-team",
+      "destination": "https://legacymedicalpalmbeach.com/our-team",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/our-team/",
+      "destination": "https://legacymedicalpalmbeach.com/our-team",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/concierge-medicine",
+      "destination": "https://legacymedicalpalmbeach.com/concierge-medicine",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/concierge-medicine/",
+      "destination": "https://legacymedicalpalmbeach.com/concierge-medicine",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/membership-benefits",
+      "destination": "https://legacymedicalpalmbeach.com/membership",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/membership-benefits/",
+      "destination": "https://legacymedicalpalmbeach.com/membership",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/faq",
+      "destination": "https://legacymedicalpalmbeach.com/faq",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/faq/",
+      "destination": "https://legacymedicalpalmbeach.com/faq",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/contact",
+      "destination": "https://legacymedicalpalmbeach.com/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/contact/",
+      "destination": "https://legacymedicalpalmbeach.com/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/blog",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/blog/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/patient-testimonials",
+      "destination": "https://legacymedicalpalmbeach.com/#reviews",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/patient-testimonials/",
+      "destination": "https://legacymedicalpalmbeach.com/#reviews",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "https://legacymedicalpalmbeach.com/notice-of-privacy-practices",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "https://legacymedicalpalmbeach.com/notice-of-privacy-practices",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility",
+      "destination": "https://legacymedicalpalmbeach.com/accessibility",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility/",
+      "destination": "https://legacymedicalpalmbeach.com/accessibility",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility-statement",
+      "destination": "https://legacymedicalpalmbeach.com/accessibility",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility-statement/",
+      "destination": "https://legacymedicalpalmbeach.com/accessibility",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/08/11/covid-19-5-tips-on-how-to-avoid-spreading-the-virus",
+      "destination": "https://legacymedicalpalmbeach.com/blog/covid-19-tips-to-avoid-spreading-the-virus",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/08/11/covid-19-5-tips-on-how-to-avoid-spreading-the-virus/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/covid-19-tips-to-avoid-spreading-the-virus",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/08/20/everything-you-need-to-know-about-executive-level-physical-exams",
+      "destination": "https://legacymedicalpalmbeach.com/blog/executive-physical-exam-what-to-expect",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/08/20/everything-you-need-to-know-about-executive-level-physical-exams/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/executive-physical-exam-what-to-expect",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/08/20/how-to-know-if-a-concierge-doctor-is-right-for-me",
+      "destination": "https://legacymedicalpalmbeach.com/blog/is-a-concierge-doctor-right-for-me",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/08/20/how-to-know-if-a-concierge-doctor-is-right-for-me/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/is-a-concierge-doctor-right-for-me",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/09/14/how-concierge-medicine-works-with-your-hospitalization",
+      "destination": "https://legacymedicalpalmbeach.com/blog/concierge-doctor-hospital-stay",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/09/14/how-concierge-medicine-works-with-your-hospitalization/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/concierge-doctor-hospital-stay",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/09/14/top-10-foods-that-promote-a-healthy-heart",
+      "destination": "https://legacymedicalpalmbeach.com/blog/heart-healthy-foods",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/09/14/top-10-foods-that-promote-a-healthy-heart/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/heart-healthy-foods",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/10/14/5-quick-tips-to-reduce-your-stress",
+      "destination": "https://legacymedicalpalmbeach.com/blog/tips-to-reduce-stress",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/10/14/5-quick-tips-to-reduce-your-stress/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/tips-to-reduce-stress",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/10/14/arthritis-common-helpful-tips",
+      "destination": "https://legacymedicalpalmbeach.com/blog/arthritis-tips-for-managing-pain",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/10/14/arthritis-common-helpful-tips/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/arthritis-tips-for-managing-pain",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/10/14/the-best-method-to-washing-your-hands",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-to-wash-your-hands",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/10/14/the-best-method-to-washing-your-hands/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-to-wash-your-hands",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/11/18/what-is-concierge-medicine",
+      "destination": "https://legacymedicalpalmbeach.com/blog/what-is-concierge-medicine",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/11/18/what-is-concierge-medicine/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/what-is-concierge-medicine",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/12/02/concierge-medicine-pros-and-cons",
+      "destination": "https://legacymedicalpalmbeach.com/blog/concierge-medicine-pros-and-cons",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/12/02/concierge-medicine-pros-and-cons/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/concierge-medicine-pros-and-cons",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/12/16/pandemic-fatigue-tips",
+      "destination": "https://legacymedicalpalmbeach.com/blog/pandemic-fatigue-tips",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/12/16/pandemic-fatigue-tips/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/pandemic-fatigue-tips",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/12/30/hair-loss-in-men-and-women",
+      "destination": "https://legacymedicalpalmbeach.com/blog/hair-loss-in-men-and-women",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2020/12/30/hair-loss-in-men-and-women/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/hair-loss-in-men-and-women",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/01/25/what-is-hyperhidrosis",
+      "destination": "https://legacymedicalpalmbeach.com/blog/hyperhidrosis-excessive-sweating",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/01/25/what-is-hyperhidrosis/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/hyperhidrosis-excessive-sweating",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/02/26/are-you-getting-enough-sleep-are-you-sleeping-too-much",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-much-sleep-do-adults-need",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/02/26/are-you-getting-enough-sleep-are-you-sleeping-too-much/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-much-sleep-do-adults-need",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/03/24/why-is-obesity-a-disease",
+      "destination": "https://legacymedicalpalmbeach.com/blog/obesity-is-a-disease",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/03/24/why-is-obesity-a-disease/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/obesity-is-a-disease",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/04/09/fully-vaccinated-now-what",
+      "destination": "https://legacymedicalpalmbeach.com/blog/fully-vaccinated-covid-19",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/04/09/fully-vaccinated-now-what/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/fully-vaccinated-covid-19",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/05/11/is-cancer-preventable",
+      "destination": "https://legacymedicalpalmbeach.com/blog/cancer-prevention-risk-factors",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/05/11/is-cancer-preventable/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/cancer-prevention-risk-factors",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/07/07/mediterranean-diet-approach",
+      "destination": "https://legacymedicalpalmbeach.com/blog/mediterranean-diet-heart-health",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/07/07/mediterranean-diet-approach/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/mediterranean-diet-heart-health",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/07/26/vitamin-supplementation",
+      "destination": "https://legacymedicalpalmbeach.com/blog/multivitamin-supplements-who-needs-them",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/07/26/vitamin-supplementation/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/multivitamin-supplements-who-needs-them",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/08/27/lets-talk-about-antibiotics-the-good-the-bad-and-the-ugly",
+      "destination": "https://legacymedicalpalmbeach.com/blog/antibiotics-when-they-help-and-harm",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/08/27/lets-talk-about-antibiotics-the-good-the-bad-and-the-ugly/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/antibiotics-when-they-help-and-harm",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/09/23/everyone-is-going-bananas",
+      "destination": "https://legacymedicalpalmbeach.com/blog/banana-nutrition-benefits",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/09/23/everyone-is-going-bananas/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/banana-nutrition-benefits",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/11/01/cdc-booster-update",
+      "destination": "https://legacymedicalpalmbeach.com/blog/covid-19-booster-update",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/11/01/cdc-booster-update/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/covid-19-booster-update",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/12/13/safety-of-over-the-counter-oral-pain-medications",
+      "destination": "https://legacymedicalpalmbeach.com/blog/over-the-counter-pain-medication-safety",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2021/12/13/safety-of-over-the-counter-oral-pain-medications/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/over-the-counter-pain-medication-safety",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/02/01/what-is-a-pulse-oximeter",
+      "destination": "https://legacymedicalpalmbeach.com/blog/pulse-oximeter-how-to-use",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/02/01/what-is-a-pulse-oximeter/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/pulse-oximeter-how-to-use",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/03/30/potty-like-a-rockstar",
+      "destination": "https://legacymedicalpalmbeach.com/blog/constipation-and-squatty-potty",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/03/30/potty-like-a-rockstar/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/constipation-and-squatty-potty",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/05/03/the-benefits-of-exercising",
+      "destination": "https://legacymedicalpalmbeach.com/blog/health-benefits-of-exercise",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/05/03/the-benefits-of-exercising/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/health-benefits-of-exercise",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/06/28/what-is-low-dose-computed-tomography",
+      "destination": "https://legacymedicalpalmbeach.com/blog/low-dose-ct-lung-cancer-screening",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/06/28/what-is-low-dose-computed-tomography/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/low-dose-ct-lung-cancer-screening",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/08/17/how-often-should-someone-urinate",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-often-should-you-urinate",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/08/17/how-often-should-someone-urinate/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/how-often-should-you-urinate",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/10/31/benefits-of-yearly-influenza-vaccination",
+      "destination": "https://legacymedicalpalmbeach.com/blog/yearly-flu-vaccine-benefits",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/10/31/benefits-of-yearly-influenza-vaccination/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/yearly-flu-vaccine-benefits",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/12/27/rsv-infection-in-adults",
+      "destination": "https://legacymedicalpalmbeach.com/blog/rsv-infection-in-adults",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2022/12/27/rsv-infection-in-adults/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/rsv-infection-in-adults",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2",
+      "destination": "https://legacymedicalpalmbeach.com/blog/magnesium-low-and-high-levels",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/magnesium-low-and-high-levels",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3",
+      "destination": "https://legacymedicalpalmbeach.com/blog/breast-cancer-screening-mammogram-age-40",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/breast-cancer-screening-mammogram-age-40",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus",
+      "destination": "https://legacymedicalpalmbeach.com/blog/nsaids-risks-and-side-effects",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/nsaids-risks-and-side-effects",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/journal/feed.xml",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/journal/:slug",
+      "destination": "https://legacymedicalpalmbeach.com/blog/:slug",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/wws_portfolio/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/wws_portfolio_category/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/",
       "has": [
         {
           "type": "host",

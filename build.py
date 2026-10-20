@@ -835,6 +835,10 @@ def csp():
 def build_vercel():
     import redirects as R
     rules = R.vercel_rules({**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}, R.MAIN_PATTERNS)
+    # cmedjupiter.com (and www) is attached to this project: every old URL 301s to its new page. First, so the
+    # host-free rules above never see a cmedjupiter.com request; its last rule is a catch-all to the homepage.
+    cmed = R.vercel_rules({**R.CMED, **R.post_map("cmedjupiter.com")}, R.CMED_PATTERNS, absolute=True,
+                          host="(www\\.)?cmedjupiter\\.com")
     # www -> apex. Two rules because "/:path*" does not match the bare root on Vercel.
     www = [{"source": "/", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/", "permanent": True},
            {"source": "/:path*", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/:path*", "permanent": True}]
@@ -867,12 +871,12 @@ def build_vercel():
             {"source": "/(.*)", "has": [{"type": "host", "value": ".*\\.vercel\\.app"}],
              "headers": [{"key": "X-Robots-Tag", "value": "noindex"}]},
         ],
-        "redirects": www + rules,
+        "redirects": cmed + www + rules,
     }
     with open(os.path.join(ROOT, "vercel.json"), "w", encoding="utf-8") as f:
         json.dump(cfg, f, indent=2)
         f.write("\n")
-    # cmedjupiter.com: the domain is not ours yet. Three ready-to-use forms.
+    # cmedjupiter.com: the same map in other forms, for reference and for checking.
     cm = {**R.CMED, **R.post_map("cmedjupiter.com")}
     d = os.path.join(ROOT, "_dev", "redirects")
     os.makedirs(d, exist_ok=True)
