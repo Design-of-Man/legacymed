@@ -635,8 +635,8 @@ FAQ_GROUPS = [
     {"name": "Specialists and hospitals", "pairs": [
         ("What happens if I need a specialist?", "<p>Dr. Shtern coordinates your care the way a quarterback runs a team. She chooses the specialist, contacts them, works with the specialists you already see, and follows up on what they find, so your care stays in one place.</p>"),
         ("Can I keep the specialists I already see?", "<p>Yes. You keep your specialists, and Dr. Shtern works with them so the plan comes back to one doctor who knows your whole history.</p>"),
-        ("Which hospitals is Dr. Shtern affiliated with?", "<p>Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
-        ("Does Dr. Shtern admit patients to the hospital?", "<p>No. She is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center, but she does not admit patients herself. While you are in the hospital, the hospital's own physicians direct your care.</p>"),
+        ("Which hospitals is Dr. Shtern affiliated with?", "<p>Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
+        ("Does Dr. Shtern admit patients to the hospital?", "<p>No. She is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center, but she does not admit patients herself. While you are in the hospital, hospitalists direct your care. Dr. Shtern stays involved in your care throughout your stay and keeps in touch with the doctors treating you.</p>"),
         ("What happens after I leave the hospital?", "<p>Dr. Shtern sees you for a follow-up visit at Legacy Medical after you are discharged. <a href=\"/blog/concierge-doctor-hospital-stay\">Concierge care and a hospital stay</a>.</p>"),
     ]},
     {"name": "Families and seasonal residents", "pairs": [
@@ -707,12 +707,12 @@ _LOC_COPY = {
         "from_label": "central Jupiter",
         "sections": [
             ("Why Jupiter members drive south", "<p>Jupiter has good hospitals and plenty of physicians, but a same-week appointment with your own primary care doctor can still be hard to get. From Jupiter, Abacoa or Jupiter Farms, the drive down Alt A1A is about a quarter of an hour.</p><p>Many visits do not need the drive at all. Results reviews and many follow-ups happen by <a href=\"/telehealth\">video</a>.</p>"),
-            ("Jupiter Medical Center", "<p>Dr. Shtern is affiliated with Jupiter Medical Center on Old Dixie Highway and sits on its Continuing Medical Education Committee. She does not admit patients to the hospital herself.</p>"),
+            ("Jupiter Medical Center", "<p>Dr. Shtern is affiliated with Jupiter Medical Center on Old Dixie Highway and sits on its Continuing Medical Education Committee.</p>"),
         ],
         "directions": "From central Jupiter, take Alternate A1A south to PGA Boulevard, head east, then turn north on Prosperity Farms Road. The office is on the left, Suite 114, first floor.",
         "faqs": [
             ("How far is Legacy Medical from Jupiter?", "<p>About 7.7 miles from central Jupiter, roughly 15 minutes without traffic.</p>"),
-            ("Is Dr. Shtern affiliated with Jupiter Medical Center?", "<p>Yes. She is also affiliated with Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
+            ("Is Dr. Shtern affiliated with Jupiter Medical Center?", "<p>Yes. She is also affiliated with Palm Beach Gardens Medical Center.</p>"),
         ],
     },
     "north-palm-beach": {
@@ -1040,11 +1040,11 @@ GUIDES_PATIENTS = {
         "photo": "p-family-hands", "photo_alt": "Two people holding hands in a quiet room",
         "sections": [
             ("When you need a specialist", "<p>Dr. Shtern picks the specialist for your situation, contacts them, and follows up on what they find, so the plan comes back to one doctor who knows your whole history. You are not left carrying results between offices.</p>"),
-            ("Hospital affiliations", "<p>Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself. <a href=\"/blog/concierge-doctor-hospital-stay\">Concierge care and a hospital stay</a>.</p>"),
+            ("Hospital affiliations", "<p>Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center. <a href=\"/blog/concierge-doctor-hospital-stay\">Concierge care and a hospital stay</a>.</p>"),
             ("Someone on your side", "<p>Part of membership is advocacy: screenings on schedule, vaccines up to date, and a doctor who helps when the system gets complicated. For families arranging care for a parent, see <a href=\"/for-families\">for families</a>.</p>"),
         ],
         "faqs": [
-            ("Which hospitals is Dr. Shtern affiliated with?", "<p>Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
+            ("Which hospitals is Dr. Shtern affiliated with?", "<p>Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
             ("What happens if I need a specialist?", "<p>Dr. Shtern chooses the specialist, contacts them, and follows up on what they find.</p>"),
             ("I split the year between two states. Can you work with my doctors up north?", "<p>Yes. Many members are seasonal residents. <a href=\"/seasonal-residents\">Care between seasons</a>.</p>"),
         ],
@@ -1214,7 +1214,7 @@ GUIDES_BASE = {
             ("Come to the meet and greet together", "<p>Families are welcome at the first visit. It is a good time to ask how the practice handles calls from family, and what happens when something changes on a weekend. <a href=\"/meet-and-greet\">About the meet and greet</a>.</p>"),
             ("Keeping you informed", "<p>With the patient's permission, Dr. Shtern can update family members, talk with home health agencies and other doctors, and help everyone plan ahead. Members, and the family helping them, can reach the practice by phone at any hour.</p>"),
             ("Fewer, better prescriptions", "<p>Older adults are more sensitive to many medicines, and kidney function, which Dr. Shtern watches closely as a Nephrologist, changes how many drugs should be dosed. A full review often finds a medicine that can be stopped, a dose that can be lowered, or two prescriptions from two specialists that should not be taken together. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>.</p>"),
-            ("Hospital affiliations", "<p>Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center. She does not admit patients to the hospital herself.</p>"),
+            ("Hospital affiliations", "<p>Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
             ("Paperwork worth having in place", "<p>Two documents save a great deal of trouble later: a HIPAA authorization naming who the practice may speak with, and, in Florida, a designation of a health care surrogate who can make medical decisions if your parent cannot. <a href=\"https://www.flsenate.gov/Laws/Statutes/2025/765.202\" rel=\"noopener\">Florida law sets out how a surrogate is designated</a>; an elder law attorney can help with the details.</p>"),
         ],
         "faqs": [

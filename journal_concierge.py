@@ -2226,7 +2226,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'visit, call the hospital team, review results, help plan the discharge? Our article on [a '
                       'concierge doctor during a hospital stay](/blog/concierge-doctor-hospital-stay) goes into '
                       'more detail. For reference, [Dr. Yana Shtern](/dr-yana-shtern) is affiliated with Jupiter '
-                      'Medical Center and Palm Beach Gardens Medical Center and does not admit patients herself.'},
+                      'Medical Center and Palm Beach Gardens Medical Center. Hospitalists direct care during a stay, and she '
+                      'stays involved and keeps in touch with the doctors treating her patients.'},
              {'type': 'h2', 'text': 'Understand the model and the money'},
              {'type': 'p',
               'text': 'Concierge practices differ a great deal. Some belong to a national network, others are '

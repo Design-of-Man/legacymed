@@ -1677,8 +1677,8 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
                       'your loved ones, who would rather be by your side throughout your stay.'},
              {'type': 'p',
               'text': 'Dr. Shtern is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center, '
-                      'but she does not admit patients to the hospital herself. While you are in the hospital, the '
-                      "hospital's own physicians direct your care."},
+                      'but she does not admit patients to the hospital herself. While you are in the hospital, '
+                      'hospitalists direct your care. Dr. Shtern stays involved in your care throughout your stay and keeps in touch with the doctors treating you.'},
              {'type': 'p',
               'text': 'Members can still call the practice at any hour with questions. After discharge from the '
                       'hospital, Dr. Shtern will schedule a post-discharge visit with you at Legacy Medical. Read more '

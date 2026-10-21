@@ -50,7 +50,7 @@
 - [Videos | Legacy Medical, Palm Beach Gardens](https://legacymedicalpalmbeach.com/videos): Watch a short film from Legacy Medical and trusted explainers on blood pressure, kidney health, heart and stroke warning signs, screening and healthy aging.
 - [Contact Legacy Medical | (561) 834-9280, Palm Beach Gardens](https://legacymedicalpalmbeach.com/contact): Call (561) 834-9280 or visit Legacy Medical at 11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens, FL 33410. Office hours, directions and a contact…
 - [Website Privacy Notice | Legacy Medical](https://legacymedicalpalmbeach.com/privacy): How the Legacy Medical website handles information: meet and greet requests, consent-based analytics, no advertising pixels, and no tracking on form pages.
-- [Accessibility Statement | Legacy Medical](https://legacymedicalpalmbeach.com/accessibility): Legacy Medical's website accessibility statement: WCAG 2.2 AA, no overlay widgets, and how to reach us if any part of the site does not work for you.
+- [Accessibility Statement | Legacy Medical](https://legacymedicalpalmbeach.com/accessibility): Legacy Medical's website accessibility statement: WCAG 2.2 AA, the UserWay accessibility menu, and how to reach us if any part of the site does not work for…
 - [Notice of Privacy Practices (HIPAA) | Legacy Medical](https://legacymedicalpalmbeach.com/notice-of-privacy-practices): Legacy Medical PLLC's HIPAA Notice of Privacy Practices: how your medical information may be used and disclosed, and your rights as a patient.
 
 ## Blog

@@ -29,8 +29,8 @@ ACCESSIBILITY = """
 <p>Legacy Medical wants everyone to be able to use this website, including people who use screen readers, a keyboard alone, magnification or voice control.</p>
 <h2>What we aim for</h2>
 <p>This site is built to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at level AA. Every page is checked with automated testing at phone, tablet and desktop sizes before it is published, and the site is designed to be used fully with a keyboard. Motion on the site, including the video and the photo reel, stops if your device is set to reduce motion, and both can be paused.</p>
-<h2>No overlay widgets</h2>
-<p>We do not use accessibility overlay plugins. We build the pages themselves to work with the assistive technology you already use.</p>
+<h2>Accessibility tools</h2>
+<p>Every page also offers the UserWay accessibility menu (the round button at the side of the screen), with options such as larger text, higher contrast and a readable font. It is there as an extra. The pages themselves are built to work with the assistive technology you already use.</p>
 <h2>If something does not work</h2>
 <p>If you have trouble with any part of this site, please call us at <a href="tel:+15618349280">(561) 834-9280</a> or email <a href="mailto:info@legacymedicalpalmbeach.com">info@legacymedicalpalmbeach.com</a>. Tell us the page and what happened, and we will help you get the information another way and fix the problem.</p>
 <h2>The office</h2>
@@ -55,7 +55,7 @@ LEGAL = {
                 "body": PRIVACY},
     "accessibility": {"title": "Accessibility Statement | Legacy Medical", "crumb": "Accessibility", "eyebrow": "Accessibility",
                       "h1": "Accessibility statement", "lede": "",
-                      "desc": "Legacy Medical's website accessibility statement: WCAG 2.2 AA, no overlay widgets, and how to reach us if any part of the site does not work for you.",
+                      "desc": "Legacy Medical's website accessibility statement: WCAG 2.2 AA, the UserWay accessibility menu, and how to reach us if any part of the site does not work for you.",
                       "body": ACCESSIBILITY},
 }
 if _npp_html:
