@@ -10,7 +10,6 @@ Nothing below was guessed on the site. Each item is either left out of the copy 
 - **Languages spoken.** WebMD says Chinese and Spanish, US News says Spanish, Russian, English, Jupiter Medical Center says English and Russian. Not on the site until confirmed.
 - **The unnamed team member** (blonde, Legacy scrubs) appears in the photo reel as "a member of the team". Add her name and role to TEAM in content.py if she wants to be named.
 - **New photography.** Every current photo of Dr. Shtern is 934×740 or smaller. They look acceptable at the sizes used but soft on large retina screens. A half-day shoot (Dr. Shtern portrait at 3000px+, the office, exam room, the team) would lift the whole site.
-- **Privacy Officer phone (561) 316-7199** in the HIPAA notice (carried over unchanged). Confirm it is still current.
 - **Healthgrades/US News/Zocdoc listings** still show old Jupiter or Brooklyn addresses (see audit). Claim and correct.
 
 ## From the Oct 17, 2026 client round

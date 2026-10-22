@@ -173,7 +173,7 @@ HOME = {
     "kicker": "Legacy Medical Concierge · Palm Beach Gardens",  # client text, Oct 20 2026 (supersedes "Legacy Medical · Palm Beach Gardens" from PR #20)
     "hero_title": "Concierge Medicine",  # client, Oct 19 2026: "Concierge Medicine" as the title, "A medical practice..." below it
     "hero_sub": "A Medical Practice Where Patients Come First",  # one line under the title, title case, as on the current site
-    "hero_lede": "Dr. Yana Shtern offers exceptional, personalized and evidence-based care for her patients. She keeps a very small practice on purpose and every member gets same or next business day visits, unhurried appointments, and a phone answered at any hour.",  # client, Oct 19 2026, verbatim ("business say" corrected to "business day")
+    "hero_lede": "Dr. Yana Shtern provides exceptional, proactive, and personalized care for her patients. She keeps a very small practice on purpose and every member gets same or next business day visits, unhurried appointments, and a phone call answered at any hour.",  # client, Oct 19 2026, verbatim ("business say" corrected to "business day"); first sentence replaced by the client, Oct 22 2026, verbatim
     "problem_eyebrow": "The usual way",
     "problem_statement": "Fifteen minutes, a portal message, and a referral to someone you have never met.",
     "problem_lede": "Most primary care runs on volume. It is not that doctors stop caring. A schedule with thirty patients a day leaves no room to listen, to call you back, or to notice what changed since last year.",
