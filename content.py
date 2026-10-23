@@ -335,7 +335,7 @@ CONCIERGE = {
 SERVICE_PAGES = {
     "kidney-care": {
         "title": "Nephrologist and Kidney Doctor in Palm Beach Gardens, FL",
-        "desc": "Dr. Yana Shtern, a board-certified Nephrologist and kidney doctor in Palm Beach Gardens, FL: CKD, rising creatinine, stones, electrolytes and dialysis care.",
+        "desc": "Dr. Yana Shtern, a board-certified Nephrologist and kidney doctor in Palm Beach Gardens, FL: CKD, rising creatinine, stones, electrolytes and dialysis planning.",
         "crumb": "Kidney care",
         "eyebrow": "Nephrologist · Palm Beach Gardens",
         "h1": "A kidney doctor in Palm Beach Gardens who is also your internist.",
