@@ -298,10 +298,10 @@ REEL = [
 
 # ---------------------------------------------------------------- concierge medicine
 CONCIERGE = {
-    "title": "Concierge Medicine & Concierge Primary Care | Legacy Medical",
-    "desc": "Concierge medicine and concierge primary care in Palm Beach Gardens, FL: what Legacy Medical membership includes, what insurance covers, and how it compares.",
-    "eyebrow": "Concierge primary care · Palm Beach Gardens",
-    "h1": "Concierge medicine in Palm Beach Gardens: primary care with fewer patients and more time.",
+    "title": "Concierge Medicine in Palm Beach Gardens | Legacy Medical",
+    "desc": "Concierge primary care in Palm Beach Gardens, FL with Dr. Yana Shtern: same or next business day visits, appointments of about an hour, 24/7 phone access.",
+    "eyebrow": "Concierge medicine · Palm Beach Gardens",
+    "h1": "Concierge primary care in Palm Beach Gardens, with fewer patients and more time.",
     "lede": "Concierge medicine is a simple trade. You pay an annual concierge fee, and in return the practice keeps its patient list small enough that you get your doctor's time and attention when you need them. Legacy Medical offers concierge primary care from one office in Palm Beach Gardens, close to Jupiter, Juno Beach, North Palm Beach and the Palm Beaches. <a href=\"/areas-we-serve\">Areas served</a>.",
     "included_lede": "Membership covers access to Dr. Shtern and the extra time. These are part of every membership.",
     "compare_lede": "Concierge practices vary. This is how Legacy Medical works, next to the high-volume model most people are used to.",
@@ -318,7 +318,8 @@ CONCIERGE = {
         ("Why the panel is small", "<p>A typical primary care doctor carries a list of two thousand patients or more. Concierge practices typically keep a few hundred. That is the whole idea: fewer patients means a schedule with room in it, so a same-day visit is normal rather than lucky, and a phone call gets returned by the doctor who knows you.</p><p>Dr. Shtern limits the number of members she takes on, and she sees one patient at a time.</p>"),
         ("What the fee does not cover", "<p>The concierge fee is not insurance. It does not pay for hospital stays, emergency care, specialists, imaging, or prescriptions. Keep your health insurance, including Medicare and any supplemental plan. Office visits and covered tests at Legacy Medical are billed to that insurance as usual.</p><p>If you are weighing the cost, the useful question is what the access is worth to you: how often you have waited weeks to be seen, or gone to urgent care because your doctor could not fit you in. <a href=\"/insurance-and-fees\">What concierge medicine costs here</a>.</p>"),
         ("Who it suits", "<p>Concierge care tends to suit people who want one doctor to keep track of everything: adults managing high blood pressure, kidney disease or diabetes; retirees and seasonal residents who want continuity between Florida and up north; busy professionals who cannot wait three weeks for an appointment; and adult children arranging care for a parent.</p><p>If your care is simple and your current doctor is easy to reach, you may not need a concierge practice. We will tell you that at your tour if it is true.</p>"),
-        ("Concierge care and direct primary care", "<p>The two are often confused. Direct primary care practices usually replace insurance billing with a monthly fee and do not bill insurance at all. Legacy Medical is a concierge practice: the membership covers access, and your insurance is still billed for visits and tests.</p><p>So if you searched for direct primary care, know that Legacy Medical is a different model: your insurance is still billed for visits and tests, and the concierge fee covers access to Dr. Shtern. <a href=\"/blog/concierge-vs-direct-primary-care\">Concierge medicine and direct primary care, compared</a>.</p>"),
+        ("Concierge primary care near you", "<p>Legacy Medical has one office, at 11380 Prosperity Farms Road in Palm Beach Gardens. Members come from <a href=\"/areas/north-palm-beach\">North Palm Beach</a> (about 6 minutes), <a href=\"/areas/juno-beach\">Juno Beach</a> (7), <a href=\"/areas/jupiter\">Jupiter</a> (14), <a href=\"/areas/tequesta\">Tequesta</a> (17), <a href=\"/areas/west-palm-beach\">West Palm Beach</a> (21) and <a href=\"/areas/palm-beach\">Palm Beach</a> (23), and from <a href=\"/areas/hobe-sound\">Hobe Sound</a> and <a href=\"/areas/stuart\">Stuart</a> in Martin County.</p><p>Every visit is with Dr. Shtern, board-certified in Internal Medicine and Nephrology, and labs and ECGs are done in the office. <a href=\"/areas-we-serve\">Every town we serve, with drive times</a>.</p>"),
+        ("Concierge care and direct primary care", "<p>The two are often confused. Direct primary care practices usually replace insurance billing with a monthly fee and do not bill insurance at all. Legacy Medical is a concierge practice: the membership covers access, and your insurance is still billed for visits and tests.</p><p>If you were looking for direct primary care near you, what most people want from it is the same: a doctor with time for you, who answers the phone. Legacy Medical offers that as concierge primary care, and keeps billing your insurance for visits and tests. <a href=\"/blog/concierge-vs-direct-primary-care\">Concierge medicine and direct primary care, compared</a>.</p>"),
     ],
     "faqs": [
         ("What is concierge medicine?", "<p>A model of primary care where patients pay an annual concierge fee and the doctor keeps a much smaller patient list. The smaller list is what makes same-day visits, longer appointments and direct phone access possible.</p>"),
@@ -335,7 +336,7 @@ CONCIERGE = {
 SERVICE_PAGES = {
     "kidney-care": {
         "title": "Nephrologist and Kidney Doctor in Palm Beach Gardens, FL",
-        "desc": "Dr. Yana Shtern, a board-certified Nephrologist and kidney doctor in Palm Beach Gardens, FL: CKD, rising creatinine, stones, electrolytes and dialysis planning.",
+        "desc": "Dr. Yana Shtern is a board-certified Nephrologist and kidney doctor in Palm Beach Gardens, FL: chronic kidney disease, creatinine, stones and electrolytes.",
         "crumb": "Kidney care",
         "eyebrow": "Nephrologist · Palm Beach Gardens",
         "h1": "A kidney doctor in Palm Beach Gardens who is also your internist.",
