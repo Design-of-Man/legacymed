@@ -713,7 +713,12 @@ def location(B, L):
     body += B.cta_band("Visit the office from %s." % L["name"])
     nodes = [{"@type": "WebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": L["title"], "isPartOf": {"@id": B.SITE_ID},
               "about": {"@id": B.ORG_ID}, "spatialCoverage": {"@type": "City", "name": L["name"] + ", FL"},
-              "mentions": [{"@type": "Hospital", "name": L["hospital"]}]},
+              "mentions": [B.hospital_node(h) for h in B.DOCTOR["hospitals"] if h["name"] in L["hospital"]]},
+             B.clinic_node(),
+             # The town is served, not located: the clinic keeps its one real address above.
+             {"@type": "Service", "@id": B.url(slug) + "#service", "name": "Concierge Internal Medicine for " + L["name"] + ", FL",
+              "serviceType": "Concierge Internal Medicine", "provider": {"@id": B.ORG_ID},
+              "areaServed": {"@type": "City", "name": L["name"] + ", FL"}},
              B.breadcrumb_node(trail)]
     if L.get("faqs"):
         nodes.append(B.faq_node(L["faqs"], B.url(slug)))
@@ -864,7 +869,7 @@ def post(B, p, all_posts):
         node["@type"] = ["BlogPosting", "MedicalWebPage"]
     title = p.get("seo_title") or (p["title"] + " | Legacy Medical")
     og = ("/assets/img/%s-og.jpg" % stem) if stem in B.IMG else "/assets/img/og/journal.jpg"
-    B.write_page(slug, title, p["excerpt"], article, schema=B.graph(node, B.clinic_node(), B.breadcrumb_node(trail)), og_image=og,
+    B.write_page(slug, title, p.get("seo_desc") or p["excerpt"], article, schema=B.graph(node, B.clinic_node(), B.breadcrumb_node(trail)), og_image=og,
                  lastmod_override=p.get("modified", p["date"])[:10])
 
 

@@ -440,6 +440,11 @@ def clinic_node():
     return node
 
 
+def hospital_node(h):
+    """An affiliated hospital, always with its address (Hospital is a LocalBusiness type)."""
+    return {"@type": "Hospital", "name": h["name"], "url": h["url"], "address": h["address"]}
+
+
 def physician_node(full=False):
     d = DOCTOR
     node = {
@@ -455,10 +460,11 @@ def physician_node(full=False):
         "usNPI": d["npi"],
         "identifier": [{"@type": "PropertyValue", "propertyID": "NPI", "value": d["npi"]},
                        {"@type": "PropertyValue", "propertyID": "Florida medical license", "value": d["license"]}],
-        "hospitalAffiliation": [{"@type": "Hospital", "name": h["name"], "url": h["url"],
-                                 "address": h["address"]} for h in d["hospitals"]],
+        "hospitalAffiliation": [hospital_node(h) for h in d["hospitals"]],
         "memberOf": [{"@type": "Organization", "name": m} for m in d["member_of"]],
-        "alumniOf": [{"@type": "CollegeOrUniversity" if e.get("college") else "Hospital", "name": e["name"]} for e in d["education"]],
+        # Training hospitals are MedicalOrganization, not Hospital: Hospital is a LocalBusiness type
+        # and would need an address the repo does not hold (Semrush flagged it, Oct 23 2026).
+        "alumniOf": [{"@type": "CollegeOrUniversity" if e.get("college") else "MedicalOrganization", "name": e["name"]} for e in d["education"]],
         "hasCredential": [{"@type": "EducationalOccupationalCredential", "credentialCategory": "Board certification",
                            "name": c, "recognizedBy": {"@type": "Organization", "name": "American Board of Internal Medicine", "url": "https://www.abim.org/"}}
                           for c in d["board_certs"]],
