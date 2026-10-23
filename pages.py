@@ -144,7 +144,7 @@ def home(B):
     <div class="headline-row"><div><p class="eyebrow">Membership</p><h2 id="inc-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
     <ul class="included">%s</ul>
     <div class="agreement" style="margin-top:2rem">%s<p>%s</p></div>
-    <p style="margin-top:2rem"><a class="text-link" href="/concierge-medicine">How concierge medicine works here %s</a></p>
+    <p style="margin-top:2rem"><a class="text-link" href="/concierge-medicine">How concierge primary care works here %s</a></p>
   </div>
 </section>""" % (B.hx(H["included_h"]), H["included_lede"], included, B.ICONS["shield"], H["agreement"], icon("arrow"))
 
@@ -326,7 +326,7 @@ def doctor(B):
     esc, icon = B.esc, B.icon
     slug = "dr-yana-shtern"
     trail = [("Home", ""), ("Dr. Yana Shtern, MD", slug)]
-    hero = B.page_hero(trail, "Internal Medicine · Nephrology", "Dr. Yana Shtern, MD", D["hero_lede"],
+    hero = B.page_hero(trail, D["hero_eyebrow"], "Dr. Yana Shtern, MD", D["hero_lede"],
                        media=B.photo(D["photo"], "Portrait of Dr. Yana Shtern, MD", sizes="(max-width: 880px) 90vw, 40vw", eager=True, max_w=1200))
     facts = "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v) for k, v in D["facts"])
     bio = "".join("<p>%s</p>" % p for p in D["bio"])
