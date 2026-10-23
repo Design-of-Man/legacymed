@@ -37,6 +37,12 @@ GA4_ID = os.environ.get("GA4_ID", "").strip()
 VERCEL_ANALYTICS = os.environ.get("VERCEL_ANALYTICS", "") == "1"
 LIVE_REVIEWS = bool(os.environ.get("GOOGLE_PLACES_API_KEY", "").strip())
 
+# Google Search Console HTML-tag verification. Paste ONLY the content="..." value from
+# Search Console > Settings > Ownership verification > HTML tag, using the owner's token.
+# Empty emits no tag at all. The domain is already verified by a DNS TXT record at the
+# root (see CLAUDE.md, DNS), so this is a second, belt-and-braces method, not a requirement.
+GSC_VERIFICATION = ""
+
 # --------------------------------------------------------------------------
 # Facts. One place. Copy, schema, footer, llms.txt all read from here.
 # --------------------------------------------------------------------------
@@ -553,6 +559,8 @@ def document(slug, title, desc, body, *, schema=None, og_image=None, over_hero=F
     script_tags = "".join('<script defer src="%s"></script>' % a(s) for s in scripts)
     robots = '<meta name="robots" content="noindex, follow">' if noindex else '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">'
     canon = '<link rel="canonical" href="%s">' % page_url if canonical else ""
+    if GSC_VERIFICATION:
+        canon += '\n<meta name="google-site-verification" content="%s">' % esc(GSC_VERIFICATION)
     body_cls = "over-hero" if over_hero else ""
     return """<!doctype html>
 <html lang="en-US">
