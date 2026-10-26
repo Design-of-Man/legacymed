@@ -144,7 +144,7 @@ def home(B):
     <div class="headline-row"><div><p class="eyebrow">Membership</p><h2 id="inc-h" style="margin-top:1.25rem">%s</h2></div><p class="lede">%s</p></div>
     <ul class="included">%s</ul>
     <div class="agreement" style="margin-top:2rem">%s<p>%s</p></div>
-    <p style="margin-top:2rem"><a class="text-link" href="/concierge-medicine">How concierge primary care works here %s</a></p>
+    <p style="margin-top:2rem"><a class="text-link" href="/concierge-medicine">How concierge medicine works in Palm Beach Gardens %s</a></p>
   </div>
 </section>""" % (B.hx(H["included_h"]), H["included_lede"], included, B.ICONS["shield"], H["agreement"], icon("arrow"))
 
@@ -346,7 +346,7 @@ def doctor(B):
     body += B.cta_band("Meet Dr. Shtern before you join.")
     schema = B.graph(B.physician_node(full=True), B.clinic_node(),
                      {"@type": "ProfilePage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": D["page_title"],
-                      "mainEntity": {"@id": B.DOC_ID}, "isPartOf": {"@id": B.SITE_ID}, "dateModified": B.SITE_UPDATED},
+                      "mainEntity": {"@id": B.DOC_ID}, "isPartOf": {"@id": B.SITE_ID}, "dateModified": B.SITE_UPDATED_DT},
                      B.breadcrumb_node(trail))
     B.write_page(slug, D["page_title"], D["page_desc"], body, schema=schema, og_image="/assets/img/og/dr-yana-shtern-oct-2026.jpg")
 
@@ -421,7 +421,7 @@ def prose_section(B, i, h, body_html, slug=None):
 def medical_webpage(B, slug, title, desc, about, specialty=None):
     node = {"@type": "MedicalWebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": title, "description": B.clamp_desc(desc),
             "isPartOf": {"@id": B.SITE_ID}, "publisher": {"@id": B.ORG_ID}, "inLanguage": "en-US",
-            "dateModified": B.SITE_UPDATED, "audience": {"@type": "Patient"},
+            "dateModified": B.SITE_UPDATED_DT, "audience": {"@type": "Patient"},
             "about": [{"@type": "MedicalCondition", "name": a} if isinstance(a, str) else a for a in about] or {"@id": B.ORG_ID},
             "mentions": {"@id": B.DOC_ID}}
     if specialty:
