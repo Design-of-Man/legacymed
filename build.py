@@ -850,8 +850,9 @@ def build_vercel():
     rules = R.vercel_rules({**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}, R.MAIN_PATTERNS)
     # cmedjupiter.com (and www) is attached to this project: every old URL 301s to its new page. First, so the
     # host-free rules above never see a cmedjupiter.com request; its last rule is a catch-all to the homepage.
+    # A true 301 (not Vercel's 308): Search Console's Change of Address check asks for "301-redirect from homepage".
     cmed = R.vercel_rules({**R.CMED, **R.post_map("cmedjupiter.com")}, R.CMED_PATTERNS, absolute=True,
-                          host="(www\\.)?cmedjupiter\\.com")
+                          host="(www\\.)?cmedjupiter\\.com", status=301)
     # www -> apex. Two rules because "/:path*" does not match the bare root on Vercel.
     www = [{"source": "/", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/", "permanent": True},
            {"source": "/:path*", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/:path*", "permanent": True}]
@@ -893,7 +894,7 @@ def build_vercel():
     cm = {**R.CMED, **R.post_map("cmedjupiter.com")}
     d = os.path.join(ROOT, "_dev", "redirects")
     os.makedirs(d, exist_ok=True)
-    vr = R.vercel_rules(cm, R.CMED_PATTERNS, absolute=True)
+    vr = R.vercel_rules(cm, R.CMED_PATTERNS, absolute=True, status=301)
     json.dump({"redirects": vr}, open(os.path.join(d, "cmedjupiter.vercel.json"), "w"), indent=2)
     ht = ["# cmedjupiter.com -> legacymedicalpalmbeach.com (301).", "# Place at the top of the site root .htaccess, ABOVE the \"# BEGIN WordPress\" block.", "# NE keeps \"#reviews\" from being escaped to %23.", "RewriteEngine On"]
     for src, dst in sorted(cm.items(), key=lambda kv: -len(kv[0])):
