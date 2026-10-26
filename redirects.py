@@ -69,10 +69,15 @@ def post_map(host):
     return out
 
 
-def vercel_rules(exact, patterns, absolute=False, host=None):
+def vercel_rules(exact, patterns, absolute=False, host=None, status=None):
+    """status=None gives Vercel's permanent 308; pass 301 where a tool insists on it."""
     rules = []
     def add(src, dst):
-        r = {"source": src, "destination": (NEW + dst) if absolute else dst, "permanent": True}
+        r = {"source": src, "destination": (NEW + dst) if absolute else dst}
+        if status:
+            r["statusCode"] = status
+        else:
+            r["permanent"] = True
         if host:
             r["has"] = [{"type": "host", "value": host}]
         rules.append(r)
