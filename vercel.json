@@ -1271,6 +1271,11 @@
       "permanent": true
     },
     {
+      "source": "/review",
+      "destination": "https://search.google.com/local/writereview?placeid=ChIJ9-heFHwr34gRt2Rs2caAsOY",
+      "permanent": false
+    },
+    {
       "source": "/yana-shtern",
       "destination": "/dr-yana-shtern",
       "permanent": true

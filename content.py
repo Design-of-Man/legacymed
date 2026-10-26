@@ -264,6 +264,8 @@ TESTIMONIALS = [
 GOOGLE = {
     "place_id": "ChIJ9-heFHwr34gRt2Rs2caAsOY",
     "url": "https://www.google.com/maps/place/?q=place_id:ChIJ9-heFHwr34gRt2Rs2caAsOY",
+    # Google's write-a-review form. /review redirects here; the printed QR (tools/build_review_card.py) points at /review.
+    "review_url": "https://search.google.com/local/writereview?placeid=ChIJ9-heFHwr34gRt2Rs2caAsOY",
     "rating": "5.0", "count": 45, "as_of": "October 2026",
 }
 # Verbatim Google reviews, names as the reviewers published them on Google. Each one was read from
