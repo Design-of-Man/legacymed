@@ -1,11 +1,19 @@
 /* Consent-gated Google Analytics 4. Only included by build.py when GA4_ID is
    set, and never on a page that carries a form. Nothing loads from Google
-   until the visitor accepts; declining is remembered and nothing loads. */
+   until the visitor accepts; declining is remembered and nothing loads.
+   The gtag stub and Consent Mode defaults live here rather than inline in
+   <head>, so the CSP needs no hash for them. */
 (() => {
   "use strict";
   const me = document.currentScript;
   const id = me && me.dataset.ga;
   if (!id) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  // Consent Mode v2: everything denied until the visitor accepts.
+  window.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied" });
+  window.gtag("set", "ads_data_redaction", true);
+  window.gtag("set", "url_passthrough", false);
   const KEY = "lm-consent";
   let choice = null;
   try { choice = localStorage.getItem(KEY); } catch (_) {}

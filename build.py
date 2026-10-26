@@ -509,9 +509,6 @@ SEEN_TITLES = {}
 
 
 JS_FLAG = "document.documentElement.classList.add('js')"
-GA_INLINE = ("window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
-             "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});"
-             "gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',false);")
 INLINE_SCRIPTS_INIT = [JS_FLAG]
 
 
@@ -520,9 +517,10 @@ def analytics_tags(allow):
         return ""
     out = []
     if GA4_ID:
-        # Consent Mode v2: everything denied until the visitor accepts.
-        INLINE_SCRIPTS.add(GA_INLINE)
-        out.append('<script>%s</script>\n<script defer src="%s" data-ga="%s"></script>' % (GA_INLINE, a("assets/js/consent.js"), esc(GA4_ID)))
+        # Consent Mode v2 defaults and the gtag stub live in consent.js, not
+        # inline: vercel.json (and its CSP hashes) is committed from a local
+        # build without GA4_ID, so an inline GA script was blocked live.
+        out.append('<script defer src="%s" data-ga="%s"></script>' % (a("assets/js/consent.js"), esc(GA4_ID)))
     if VERCEL_ANALYTICS:
         out.append('<script defer src="/_vercel/insights/script.js"></script>')
         out.append('<script defer src="/_vercel/speed-insights/script.js"></script>')
