@@ -32,6 +32,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 PUB = os.path.join(ROOT, "public")  # Vercel serves only this directory
 BASE = "https://legacymedicalpalmbeach.com"
 SITE_UPDATED = "2026-10-10"
+SITE_UPDATED_DT = SITE_UPDATED + "T00:00:00-04:00"  # schema dateModified wants a full datetime (Search Console, ProfilePage)
 
 GA4_ID = os.environ.get("GA4_ID", "").strip()
 VERCEL_ANALYTICS = os.environ.get("VERCEL_ANALYTICS", "") == "1"
