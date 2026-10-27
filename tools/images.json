@@ -69,6 +69,13 @@
   "source": "legacymedicalpalmbeach.com (wewewewewewe.jpg, 934x740)",
   "q": 84
  },
+ "front-desk-scrubs-oct-2026": {
+  "file": "front-desk-scrubs-oct-2026.jpg",
+  "focal": "60% 30%",
+  "alt": "Dr. Yana Shtern in scrubs at the Legacy Medical front desk",
+  "source": "supplied by the client, Oct 27 2026 (IMG_6090, 1290x1605), cropped to the framing of the old 934x740 front-desk-scrubs, which it replaces",
+  "q": 84
+ },
  "reception-wall": {
   "file": "reception-wall.jpg",
   "focal": "50% 40%",
@@ -429,7 +436,7 @@
  "j-breast-cancer-screening-mammogram-age-40": {
   "file": "journal/breast-cancer-screening-mammogram-age-40.jpg",
   "alt": "A pink awareness ribbon lying on a pale teal painted wooden surface",
-  "credit": "Miguel Á. Padriñán",
+  "credit": "Miguel \u00c1. Padri\u00f1\u00e1n",
   "source": "https://www.pexels.com/photo/breast-cancer-awareness-on-teal-wooden-surface-579474/",
   "q": 76,
   "widths": [
@@ -957,7 +964,7 @@
  "j-mediterranean-diet-heart-health": {
   "file": "journal/mediterranean-diet-heart-health.jpg",
   "alt": "A wooden board with olives, feta, sliced tomato, toasted bread and a small pitcher of olive oil",
-  "credit": "Rahime Gül",
+  "credit": "Rahime G\u00fcl",
   "source": "https://www.pexels.com/photo/cutting-board-with-appetizers-and-olive-oil-25745489/",
   "q": 76,
   "widths": [
@@ -1069,7 +1076,7 @@
  "j-pandemic-fatigue-tips": {
   "file": "journal/pandemic-fatigue-tips.jpg",
   "alt": "A person resting a glass of tea on a book in their lap beside dried grasses in sunlight",
-  "credit": "Letícia Alvares",
+  "credit": "Let\u00edcia Alvares",
   "source": "https://www.pexels.com/photo/relaxing-moment-with-tea-and-books-30539342/",
   "q": 76,
   "widths": [
@@ -1923,7 +1930,7 @@
  "j-depression-in-older-adults": {
   "file": "journal/depression-in-older-adults.jpg",
   "alt": "An empty upholstered armchair by a curtained window, with two lit table lamps on either side",
-  "credit": "Katrīne Skrebele",
+  "credit": "Katr\u012bne Skrebele",
   "source": "https://www.pexels.com/photo/a-chair-by-the-window-11433090/",
   "q": 76,
   "widths": [
@@ -2083,7 +2090,7 @@
  "j-heartburn-and-gerd": {
   "file": "journal/heartburn-and-gerd.jpg",
   "alt": "A cup of tea with a lemon slice and small apples on a wooden tray",
-  "credit": "Sóc Năng Động",
+  "credit": "S\u00f3c N\u0103ng \u0110\u1ed9ng",
   "source": "https://www.pexels.com/photo/tea-with-lemon-and-fresh-apples-on-wooden-table-33934671/",
   "q": 76,
   "widths": [
@@ -2307,7 +2314,7 @@
  "j-resistant-hypertension": {
   "file": "journal/resistant-hypertension.jpg",
   "alt": "A curving paved walkway lined with tall palm trees and green lawn in a park",
-  "credit": "Thể Phạm",
+  "credit": "Th\u1ec3 Ph\u1ea1m",
   "source": "https://www.pexels.com/photo/palm-trees-in-park-17282415/",
   "q": 76,
   "widths": [
