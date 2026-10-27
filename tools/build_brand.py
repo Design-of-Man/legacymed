@@ -137,13 +137,13 @@ CARDS = [
     ("home", "Concierge medicine with a doctor who knows you.", "Concierge internal medicine", None, (0.5, 0.3), True),
     ("default-oct-2026", "Concierge internal medicine in Palm Beach Gardens.", "Legacy Medical", "front-desk-scrubs.jpg", (0.6, 0.3), False),
     ("dr-yana-shtern-oct-2026", "Dr. Yana Shtern, MD", "Internal medicine · Nephrology", "dr-shtern-suit-oct-2026.jpg", (0.5, 0.24), False),
-    ("concierge-medicine", "Primary care with fewer patients and more time.", "Concierge medicine", "dr-shtern-desk.jpg", (0.62, 0.3), False),
+    ("concierge-medicine", "Primary care with fewer patients and more time.", "Concierge medicine", "dr-shtern-desk-oct-2026.jpg", (0.5, 0.28), False),
     ("membership", "Meet us first. Then decide.", "How to join", "reception-wall.jpg", (0.55, 0.4), False),
     ("kidney-care", "Kidney care from your own internist.", "Nephrology", "dr-shtern-full.jpg", (0.5, 0.2), False),
-    ("hypertension", "When blood pressure will not come down.", "Hypertension", "dr-shtern-desk.jpg", (0.62, 0.3), False),
+    ("hypertension", "When blood pressure will not come down.", "Hypertension", "dr-shtern-desk-oct-2026.jpg", (0.5, 0.28), False),
     ("geriatric-memory-care", "Care for older adults, and the people who help them.", "Geriatric medicine", "dr-shtern-portrait.jpg", (0.5, 0.2), False),
     ("preventive-care", "A physical with the time to mean something.", "Preventive care", "dr-shtern-full.jpg", (0.5, 0.2), False),
-    ("telehealth", "See your doctor without the drive.", "Telehealth", "dr-shtern-desk.jpg", (0.62, 0.3), False),
+    ("telehealth", "See your doctor without the drive.", "Telehealth", "dr-shtern-desk-oct-2026.jpg", (0.5, 0.28), False),
     ("journal", "Notes on health from a concierge practice.", "Journal", None, (0.5, 0.3), True),
 ]
 

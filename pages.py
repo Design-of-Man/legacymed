@@ -612,7 +612,7 @@ def meet_and_greet(B):
     slug = "meet-and-greet"
     trail = B.trail_for(slug, "Meet and greet")
     hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], cta=False,
-                       media=B.photo("dr-shtern-desk", "Dr. Yana Shtern at her desk at Legacy Medical", sizes="(max-width: 880px) 90vw, 45vw", max_w=1200))
+                       media=B.photo("dr-shtern-desk-oct-2026", "Dr. Yana Shtern at her desk at Legacy Medical", sizes="(max-width: 880px) 90vw, 45vw", max_w=1200))
     steps = "".join('<li><h3>%s</h3><p>%s</p></li>' % (esc(t), d) for t, d in S["steps"])
     body = hero + """<section class="section flush-top" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="sr-only">How it works</h2><ol class="steps">%s</ol>
 <p style="margin-top:2rem"><a class="btn" href="#request" data-loc="meet-steps">Book a meet and greet %s</a></p></div></section>""" % (steps, icon("arrow"))

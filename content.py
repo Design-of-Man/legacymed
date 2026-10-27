@@ -206,7 +206,7 @@ HOME = {
     # One-on-one care: every line traces to a confirmed fact in DOCTOR, HOME or SERVICES_INCLUDED.
     "personal_h": "Your doctor, <em>personally</em>",
     "personal_lede": "Concierge care here is one on one. The same physician, every time, with the time and the access to treat you as a person rather than an appointment slot.",
-    "personal_photo": ("dr-shtern-desk", "Dr. Yana Shtern at her desk at Legacy Medical"),
+    "personal_photo": ("dr-shtern-desk-oct-2026", "Dr. Yana Shtern at her desk at Legacy Medical"),
     "personal": [
         ("The same doctor at every visit", "You see Dr. Shtern each time you come in, so the doctor in the room already knows your history."),
         ("One patient at a time", "She does not double-book. The time on your appointment is yours, long enough to cover everything on your list."),
@@ -293,7 +293,7 @@ REEL = [
     {"stem": "front-desk-scrubs", "alt": "At the Legacy Medical front desk"},
     {"stem": "front-desk-dog-oct-2026", "alt": "A small white dog sitting on the front desk"},
     {"stem": "dr-shtern-full", "alt": "Dr. Shtern at the front desk"},
-    {"stem": "dr-shtern-desk", "alt": "Dr. Yana Shtern at her desk"},
+    {"stem": "dr-shtern-desk-oct-2026", "alt": "Dr. Yana Shtern at her desk"},
 ]
 
 # ---------------------------------------------------------------- concierge medicine
@@ -396,7 +396,7 @@ SERVICE_PAGES = {
         "about": ["Hypertension", "Resistant hypertension", "White coat hypertension", "Secondary hypertension"],
         "related": ["kidney-care", "preventive-care", "telehealth"],
         "cta_h": "Bring your blood pressure log. We will read it with you.",
-        "photo": "dr-shtern-desk", "photo_alt": "Dr. Yana Shtern at her desk in Palm Beach Gardens",
+        "photo": "dr-shtern-desk-oct-2026", "photo_alt": "Dr. Yana Shtern at her desk in Palm Beach Gardens",
     },
     "geriatric-memory-care": {
         "title": "Geriatric Care Doctor in Palm Beach Gardens | Legacy Medical",
@@ -483,7 +483,7 @@ SERVICE_PAGES = {
         ],
         "about": [{"@type": "Thing", "name": "Telemedicine"}],
         "related": ["concierge-medicine", "hypertension", "preventive-care"],
-        "photo": "dr-shtern-desk", "photo_alt": "Dr. Yana Shtern at her desk",
+        "photo": "dr-shtern-desk-oct-2026", "photo_alt": "Dr. Yana Shtern at her desk",
     },
 }
 
@@ -1193,7 +1193,7 @@ GUIDES_BASE = {
         "crumb": "Seasonal residents", "eyebrow": "Seasonal residents",
         "h1": "One doctor here who keeps up with you between seasons.",
         "lede": "Many people split the year between Palm Beach County and somewhere else. Concierge care suits that well: one physician who knows your history in Florida, stays in touch with your doctors elsewhere, and is easy to reach when you are back.",
-        "photo": "dr-shtern-desk", "photo_alt": "Dr. Yana Shtern at her desk at Legacy Medical in Palm Beach Gardens",
+        "photo": "dr-shtern-desk-oct-2026", "photo_alt": "Dr. Yana Shtern at her desk at Legacy Medical in Palm Beach Gardens",
         "sections": [
             ("When you arrive for the season", "<p>A doctor who has your records before you land makes the first weeks easier. With your permission, the office requests records from your physicians up north, so recent labs, imaging and medication changes are already in your chart.</p><p>Members are seen the same or next business day, so a cough that started on the drive down, or a prescription that needs adjusting, does not have to wait.</p>"),
             ("While you are here", "<p>Labs are drawn in the office, and ECGs and rapid flu, COVID-19 and strep tests are done there too. If you need a specialist, Dr. Shtern chooses one, makes the call and follows up on what they find. She is affiliated with Jupiter Medical Center and Palm Beach Gardens Medical Center.</p>"),
