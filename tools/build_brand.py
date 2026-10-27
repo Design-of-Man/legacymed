@@ -135,7 +135,7 @@ def card(slug, title, kicker, photo=None, focal=(0.5, 0.3), bg_video=False):
 
 CARDS = [
     ("home", "Concierge medicine with a doctor who knows you.", "Concierge internal medicine", None, (0.5, 0.3), True),
-    ("default-oct-2026", "Concierge internal medicine in Palm Beach Gardens.", "Legacy Medical", "front-desk-scrubs.jpg", (0.6, 0.3), False),
+    ("default-oct-2026", "Concierge internal medicine in Palm Beach Gardens.", "Legacy Medical", "front-desk-scrubs-oct-2026.jpg", (0.6, 0.3), False),
     ("dr-yana-shtern-oct-2026", "Dr. Yana Shtern, MD", "Internal medicine · Nephrology", "dr-shtern-suit-oct-2026.jpg", (0.5, 0.24), False),
     ("concierge-medicine", "Primary care with fewer patients and more time.", "Concierge medicine", "dr-shtern-desk-oct-2026.jpg", (0.5, 0.28), False),
     ("membership", "Meet us first. Then decide.", "How to join", "reception-wall.jpg", (0.55, 0.4), False),

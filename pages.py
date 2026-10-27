@@ -542,7 +542,7 @@ def patients(B):
     slug = "patients"
     trail = B.trail_for(slug, "For patients")
     hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], cta=False,
-                       media=B.photo("front-desk-scrubs", "A member of the Legacy Medical team at the front desk", sizes="(max-width: 880px) 90vw, 45vw", max_w=1200))
+                       media=B.photo("front-desk-scrubs-oct-2026", "A member of the Legacy Medical team at the front desk", sizes="(max-width: 880px) 90vw, 45vw", max_w=1200))
     rows = "".join('<li data-reveal><span class="pn" aria-hidden="true">%02d</span><div><h3>%s</h3><p>%s</p><a class="text-link" href="/%s">%s %s</a></div></li>'
                    % (i + 1, esc(t), esc(d), esc(href), esc(lbl), icon("arrow")) for i, (t, d, href, lbl) in enumerate(S["guide"]))
     guide = """<section class="section flush-top" aria-labelledby="pg-h"><div class="wrap split"><div class="sticky-head"><p class="eyebrow">The practical guide</p>

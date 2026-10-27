@@ -202,7 +202,7 @@ HOME = {
         ("18 min → 1 hr", "per appointment", "The average primary care visit lasts 18 minutes. A Legacy appointment runs about an hour, and longer when you need it.", "Before: Medical Care, 2021"),
         ("24/7", "phone access", "Members reach the practice at any hour, including weekends and holidays."),
     ],
-    "manifesto_photos": [("reception-desk", "The front desk at Legacy Medical"), ("front-desk-scrubs", "At the Legacy Medical front desk")],
+    "manifesto_photos": [("reception-desk", "The front desk at Legacy Medical"), ("front-desk-scrubs-oct-2026", "At the Legacy Medical front desk")],
     # One-on-one care: every line traces to a confirmed fact in DOCTOR, HOME or SERVICES_INCLUDED.
     "personal_h": "Your doctor, <em>personally</em>",
     "personal_lede": "Concierge care here is one on one. The same physician, every time, with the time and the access to treat you as a person rather than an appointment slot.",
@@ -290,7 +290,7 @@ REEL = [
     {"stem": "dr-shtern-laptop-oct-2026", "alt": "Dr. Yana Shtern at her desk with a laptop"},
     {"stem": "yan-konevsky-rn-oct-2026", "alt": "Yan Konevsky, RN, office manager"},
     {"stem": "dr-shtern-exam-room-oct-2026", "alt": "Dr. Yana Shtern working in an exam room"},
-    {"stem": "front-desk-scrubs", "alt": "At the Legacy Medical front desk"},
+    {"stem": "front-desk-scrubs-oct-2026", "alt": "At the Legacy Medical front desk"},
     {"stem": "front-desk-dog-oct-2026", "alt": "A small white dog sitting on the front desk"},
     {"stem": "dr-shtern-full", "alt": "Dr. Shtern at the front desk"},
     {"stem": "dr-shtern-desk-oct-2026", "alt": "Dr. Yana Shtern at her desk"},
@@ -1214,7 +1214,7 @@ GUIDES_BASE = {
         "crumb": "For families", "eyebrow": "For families",
         "h1": "Care for a parent, with room for the family in it.",
         "lede": "Often the person arranging care is an adult child, sometimes living in another state. Dr. Shtern works with families: one physician who knows your parent well, keeps the specialists in step, and keeps you informed when your parent wants you to be.",
-        "photo": "front-desk-scrubs", "photo_alt": "Dr. Yana Shtern at the Legacy Medical front desk",
+        "photo": "front-desk-scrubs-oct-2026", "photo_alt": "Dr. Yana Shtern at the Legacy Medical front desk",
         "sections": [
             ("Come to the meet and greet together", "<p>Families are welcome at the first visit. It is a good time to ask how the practice handles calls from family, and what happens when something changes on a weekend. <a href=\"/meet-and-greet\">About the meet and greet</a>.</p>"),
             ("Keeping you informed", "<p>With the patient's permission, Dr. Shtern can update family members, talk with home health agencies and other doctors, and help everyone plan ahead. Members, and the family helping them, can reach the practice by phone at any hour.</p>"),
@@ -1360,7 +1360,7 @@ SECTION_IMAGES = {
     "for-families": {"Come to the meet and greet together": "p-family-talk", "If your parent is in the hospital": "p-family-hands"},
     "concierge-vs-traditional-primary-care": {"Why the numbers matter": "p-compare-calendar"},
     "concierge-medicine": {"Why the panel is small": "p-concierge-phone", "Who it suits": "reception-desk"},
-    "meet-and-greet": {"What the meet and greet is": "p-meet-coffee", "Coming with a parent or partner": "front-desk-scrubs"},
+    "meet-and-greet": {"What the meet and greet is": "p-meet-coffee", "Coming with a parent or partner": "front-desk-scrubs-oct-2026"},
     "membership": {"What to bring to the meet and greet": "dr-shtern-white-coat-oct-2026"},  # client, Oct 20 2026: the old still was fuzzy
     "insurance-and-fees": {"The concierge fee": "p-insurance-papers"},
 }
