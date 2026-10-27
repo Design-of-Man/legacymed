@@ -12,6 +12,24 @@
    934
   ]
  },
+ "dr-shtern-desk-oct-2026": {
+  "alt": "Dr. Yana Shtern seated at her desk at Legacy Medical",
+  "credit": "",
+  "focal": "50% 28%",
+  "formats": [
+   "jpg",
+   "webp",
+   "avif"
+  ],
+  "h": 1040,
+  "source": "supplied by the client, Oct 27 2026 (IMG_6087, 1290x1651), cropped 4:5 to match the earlier desk photo; replaces the soft 934x740 dr-shtern-desk",
+  "w": 832,
+  "widths": [
+   480,
+   768,
+   832
+  ]
+ },
  "dr-shtern-exam-room-oct-2026": {
   "alt": "Dr. Yana Shtern working in an exam room at Legacy Medical",
   "credit": "",
