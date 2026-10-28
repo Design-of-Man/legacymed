@@ -292,7 +292,7 @@ REEL = [
     {"stem": "dr-shtern-exam-room-oct-2026", "alt": "Dr. Yana Shtern working in an exam room"},
     {"stem": "front-desk-scrubs-oct-2026", "alt": "At the Legacy Medical front desk"},
     {"stem": "front-desk-dog-oct-2026", "alt": "A small white dog sitting on the front desk"},
-    {"stem": "dr-shtern-full", "alt": "Dr. Shtern at the front desk"},
+    {"stem": "dr-shtern-full-oct-2026", "alt": "Dr. Shtern at the front desk"},
     {"stem": "dr-shtern-desk-oct-2026", "alt": "Dr. Yana Shtern at her desk"},
 ]
 
@@ -366,7 +366,7 @@ SERVICE_PAGES = {
         "about": ["Chronic kidney disease", "Acute kidney injury", "Proteinuria", "Kidney stones", "Electrolyte imbalance", "End-stage renal disease"],
         "related": ["hypertension", "preventive-care", "concierge-medicine"],
         "cta_h": "Questions about your kidney numbers?",
-        "photo": "dr-shtern-full", "photo_alt": "Dr. Yana Shtern, board-certified Nephrologist, at Legacy Medical",
+        "photo": "dr-shtern-full-oct-2026", "photo_alt": "Dr. Yana Shtern, board-certified Nephrologist, at Legacy Medical",
     },
     "hypertension": {
         "title": "Hypertension Specialist in Palm Beach Gardens | Legacy Medical",
@@ -426,7 +426,7 @@ SERVICE_PAGES = {
         "about": ["Dementia", "Mild cognitive impairment", "Polypharmacy", "Falls"],
         "related": ["preventive-care", "kidney-care", "concierge-medicine"],
         "cta_h": "Bring your parent, or your questions, to a meet and greet.",
-        "photo": "dr-shtern-full", "photo_alt": "Dr. Yana Shtern at the Legacy Medical front desk",
+        "photo": "dr-shtern-full-oct-2026", "photo_alt": "Dr. Yana Shtern at the Legacy Medical front desk",
     },
     "preventive-care": {
         "title": "Executive Physicals in Palm Beach Gardens | Annual Physical",
