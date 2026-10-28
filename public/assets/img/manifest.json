@@ -61,6 +61,24 @@
    592
   ]
  },
+ "dr-shtern-full-oct-2026": {
+  "alt": "Dr. Yana Shtern standing at the Legacy Medical front desk",
+  "credit": "",
+  "focal": "50% 20%",
+  "formats": [
+   "jpg",
+   "webp",
+   "avif"
+  ],
+  "h": 1043,
+  "source": "supplied by the client, Oct 28 2026 (1290x1682), cropped to the framing of the old 592x705 dr-shtern-full, which it replaces",
+  "w": 876,
+  "widths": [
+   480,
+   768,
+   876
+  ]
+ },
  "dr-shtern-laptop-oct-2026": {
   "alt": "Dr. Yana Shtern at her desk with a laptop",
   "credit": "",
