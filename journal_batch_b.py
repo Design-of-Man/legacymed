@@ -728,12 +728,11 @@ POSTS = [
 
  {'slug': 'shingles-vaccine-after-50',
   'title': 'The shingles vaccine after 50',
-  'seo_title': 'The Shingles Vaccine After 50 | Legacy Medical',
+  'seo_title': 'Shingles Vaccine Over 50: Is Shingrix Worth It? | Legacy Medical',
   'date': '2026-10-15T10:20:00',
   'modified': '2026-10-15T10:20:00',
   'category': 'Infections and vaccines',
-  'excerpt': 'About 1 in 3 people get shingles. Who the CDC recommends Shingrix for, how well it works, what the '
-             'side effects feel like, and how Medicare covers it.',
+  'excerpt': 'Two doses of Shingrix are 97 percent effective in healthy adults 50 to 69. Who the CDC recommends it for, what the side effects feel like, and Medicare coverage.',
   'blocks': [
    {'type': 'p',
     'text': 'Anyone who has had chickenpox carries the virus that causes it for life. Years later, often after 50, '
@@ -809,12 +808,11 @@ POSTS = [
 
  {'slug': 'pneumococcal-vaccine-adults',
   'title': 'Pneumococcal (pneumonia) vaccines for adults: current recommendations',
-  'seo_title': 'Pneumococcal Vaccines for Adults: 2026 Guide | Legacy Medical',
+  'seo_title': 'Pneumococcal Pneumonia Vaccine: 2026 Adult Guide | Legacy Medical',
   'date': '2026-10-15T10:30:00',
   'modified': '2026-10-15T10:30:00',
   'category': 'Infections and vaccines',
-  'excerpt': 'Since late 2024, the CDC recommends a pneumococcal vaccine for all adults 50 and older. Which '
-             'vaccines are used, who needs one sooner, and what to do if you had one before.',
+  'excerpt': 'The CDC now recommends a pneumonia (pneumococcal) vaccine for all adults 50 and older. Which shot, who needs one sooner, and what to do if you had one before.',
   'blocks': [
    {'type': 'p',
     'text': 'The "pneumonia shot" has changed a lot in the last few years. There are new vaccines, simpler '
