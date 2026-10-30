@@ -36,7 +36,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://www.googletagmanager.com https://*.userway.org; style-src 'self' 'unsafe-inline' https://*.userway.org; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com https://*.userway.org; font-src 'self' https://*.userway.org; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.userway.org; frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com https://*.userway.org; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' 'sha256-ElShUWg/R0NC6WIMZp3N2FKE5siI90ZKCnHMHJYcUhk=' https://www.googletagmanager.com https://*.userway.org; style-src 'self' 'unsafe-inline' https://*.userway.org; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com https://*.userway.org; font-src 'self' https://*.userway.org; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.userway.org; frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com https://*.userway.org; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
         }
       ]
     },
