@@ -14,6 +14,11 @@
 // is unset and can never fail the request. Added 2026-10-30 so Legacy's leads
 // show in the portal like the other client sites.
 //
+// When the visitor gave an email and Resend is configured, they also get a
+// short confirmation (from CONFIRM_FROM, else TOUR_FROM_EMAIL). Fixed text
+// plus their first name: nothing they typed is repeated. Best effort; it can
+// never fail the request. Added Oct 30, 2026 at Nick's request.
+//
 // HIPAA posture: the form asks for contact details and a preferred time only,
 // the page tells visitors not to send medical information, the message is
 // capped at 600 characters, and request bodies are never written to logs.
@@ -49,6 +54,38 @@ async function countLead(page) {
     if (!r.ok) console.error("tour: lead count failed with status", r.status);
   } catch (_) {
     console.error("tour: lead count threw");
+  }
+}
+
+// The visitor's "we got it" email. Same promise the page makes, no more.
+async function confirmToVisitor(key, from, replyTo, data) {
+  if (!data.email) return;
+  const first = /https?:|www\.|[<>]/i.test(data.name) ? "there" : data.name.split(/\s+/)[0];
+  try {
+    const r = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + key, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from: process.env.CONFIRM_FROM || from,
+        to: [data.email],
+        reply_to: replyTo || undefined,
+        subject: "We received your request: Legacy Medical",
+        text: [
+          "Hi " + first + ",",
+          "",
+          "Thank you for reaching out to Legacy Medical. Your request is with our office, and we will call or email you back.",
+          "",
+          "If it is urgent, call us at (561) 834-9280.",
+          "",
+          "Legacy Medical",
+          "https://legacymedicalpalmbeach.com",
+        ].join("\n"),
+      }),
+      signal: AbortSignal.timeout(5000),
+    });
+    if (!r.ok) console.error("tour: confirmation failed with status", r.status);
+  } catch (_) {
+    console.error("tour: confirmation threw");
   }
 }
 
@@ -118,6 +155,7 @@ module.exports = async (req, res) => {
         console.error("tour: resend delivery failed with status", r.status); // status only, never the body
         return failed();
       }
+      await confirmToVisitor(key, from, to[0], data);
       await countLead(data.page);
       return res.status(200).json({ ok: true });
     }
