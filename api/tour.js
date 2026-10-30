@@ -7,6 +7,13 @@
 // is delivered and the page tells the visitor to call. With no TOUR_TO_EMAIL
 // it answers 503 "not_configured". Nothing is stored or logged.
 //
+// After a delivered email it tells the agency portal that one enquiry arrived
+// (POST PORTAL_URL/api/beacon/lead, keyed by LEAD_BEACON_SECRET). The beacon
+// carries the site, a random id, the time and which page it came from: no
+// name, no contact details, nothing typed. It is skipped when either variable
+// is unset and can never fail the request. Added 2026-10-30 so Legacy's leads
+// show in the portal like the other client sites.
+//
 // HIPAA posture: the form asks for contact details and a preferred time only,
 // the page tells visitors not to send medical information, the message is
 // capped at 600 characters, and request bodies are never written to logs.
@@ -17,6 +24,33 @@ const ALLOWED_HOSTS = [/^legacymedicalpalmbeach\.com$/, /^www\.legacymedicalpalm
 
 const clean = (v, max) => String(v == null ? "" : v).replace(/[\u0000-\u001f\u007f]/g, " ").trim().slice(0, max);
 const escapeHtml = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+// Count one delivered enquiry in the portal. Best effort: a slow or failed
+// portal must never turn a delivered request into an error for the visitor.
+async function countLead(page) {
+  const portal = process.env.PORTAL_URL;
+  const secret = process.env.LEAD_BEACON_SECRET;
+  if (!portal || !secret) return;
+  const slug = String(page || "").replace(/^\/+|\/+$/g, "").split("/")[0].toLowerCase();
+  const source = /^[a-z][a-z0-9-]{0,39}$/.test(slug) ? slug : "website";
+  try {
+    const r = await fetch(portal.replace(/\/+$/, "") + "/api/beacon/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-beacon-key": secret, Origin: "https://legacymedicalpalmbeach.com" },
+      body: JSON.stringify({
+        site: "legacymedicalpalmbeach.com",
+        submissionId: require("crypto").randomUUID(),
+        occurredAt: new Date().toISOString(),
+        source,
+        page: page || null,
+      }),
+      signal: AbortSignal.timeout(3000),
+    });
+    if (!r.ok) console.error("tour: lead count failed with status", r.status);
+  } catch (_) {
+    console.error("tour: lead count threw");
+  }
+}
 
 module.exports = async (req, res) => {
   res.setHeader("Cache-Control", "no-store");
@@ -84,6 +118,7 @@ module.exports = async (req, res) => {
         console.error("tour: resend delivery failed with status", r.status); // status only, never the body
         return failed();
       }
+      await countLead(data.page);
       return res.status(200).json({ ok: true });
     }
 
@@ -107,6 +142,7 @@ module.exports = async (req, res) => {
       console.error("tour: formsubmit delivery failed with status", r.status, out && String(out.success) === "false" ? "(not activated or rejected)" : "");
       return failed();
     }
+    await countLead(data.page);
     return res.status(200).json({ ok: true });
   } catch (_) {
     console.error("tour: delivery threw");
