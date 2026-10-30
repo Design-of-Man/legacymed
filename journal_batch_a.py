@@ -365,7 +365,7 @@ POSTS = [
     {
         "slug": "potassium-high-and-low-levels",
         "title": "Potassium: when it is too high or too low",
-        "seo_title": "Potassium Too High or Too Low | Legacy Medical",
+        "seo_title": 'High vs. Low Potassium: Symptoms and Causes | Legacy Medical',
         "date": "2026-10-14T13:00:00",
         "modified": "2026-10-14T13:00:00",
         "category": "Kidney health",

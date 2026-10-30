@@ -8,7 +8,7 @@ REDIRECTS: (old full URL, new path) for every old post URL."""
 
 POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
   'title': 'Vitamins that can be taken in the morning',
-  'seo_title': 'Which vitamins to take in the morning | Legacy Medical',
+  'seo_title': 'What Vitamins Should You Take in the Morning? | Legacy Medical',
   'date': '2024-10-07T17:47:13',
   'modified': '2024-10-07T17:58:20',
   'category': 'Nutrition',

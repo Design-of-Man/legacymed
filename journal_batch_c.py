@@ -284,12 +284,11 @@ POSTS = [
     {
         "slug": "hepatitis-c-and-hepatitis-b-screening",
         "title": "Hepatitis C and hepatitis B screening for adults",
-        "seo_title": "Hepatitis C and B Screening for Adults | Legacy Medical",
+        "seo_title": 'Hepatitis B and C Screening: Who Needs the Test | Legacy Medical',
         "date": "2026-10-16T09:30:00",
         "modified": "2026-10-16T09:30:00",
         "category": "Prevention and screening",
-        "excerpt": "The CDC now advises every adult to be tested for hepatitis C and hepatitis B at least once. Why, "
-                   "which blood tests are used, and what a positive result means today.",
+        "excerpt": 'The CDC now advises every adult to get tested for hepatitis B and hepatitis C at least once. Why, which blood tests are used, and what a positive result means.',
         "blocks": [
             {"type": "p", "text": "Hepatitis B and hepatitis C are viral infections of the liver. Both can sit quietly "
              "for years, slowly causing scarring, and both are found with a simple blood test. Over the past few "

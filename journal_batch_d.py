@@ -412,12 +412,11 @@ POSTS = [
 
  {'slug': 'seasonal-allergies-south-florida',
   'title': 'Seasonal allergies in South Florida',
-  'seo_title': 'Seasonal Allergies in South Florida | Legacy Medical',
+  'seo_title': 'When Is Allergy Season in South Florida? | Legacy Medical',
   'date': '2026-10-17T09:40:00',
   'modified': '2026-10-17T09:40:00',
   'category': 'Everyday health',
-  'excerpt': "Florida's pollen seasons run longer and overlap more than up north. What triggers allergies here, "
-             "how to tell them from a cold, and which treatments work best.",
+  'excerpt': 'In South Florida, tree pollen peaks from February to May, grasses run spring to fall, and mold lasts all year. What triggers allergies here and what treats them.',
   'blocks': [
    {'type': 'p',
     'text': "Many people who move to South Florida expect to leave allergy season behind with the snow. Instead "
