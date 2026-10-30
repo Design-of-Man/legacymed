@@ -856,6 +856,8 @@ def build_vercel():
     # www -> apex. Two rules because "/:path*" does not match the bare root on Vercel.
     www = [{"source": "/", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/", "permanent": True},
            {"source": "/:path*", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/:path*", "permanent": True}]
+    # /review is what the printed QR code points at. Temporary, so browsers never cache Google's URL for it.
+    review = [{"source": "/review", "destination": C.GOOGLE["review_url"], "permanent": False}]
     sec = [
         {"key": "X-Content-Type-Options", "value": "nosniff"},
         {"key": "X-Frame-Options", "value": "SAMEORIGIN"},
@@ -885,7 +887,7 @@ def build_vercel():
             {"source": "/(.*)", "has": [{"type": "host", "value": ".*\\.vercel\\.app"}],
              "headers": [{"key": "X-Robots-Tag", "value": "noindex"}]},
         ],
-        "redirects": cmed + www + rules,
+        "redirects": cmed + www + review + rules,
     }
     with open(os.path.join(ROOT, "vercel.json"), "w", encoding="utf-8") as f:
         json.dump(cfg, f, indent=2)
