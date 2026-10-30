@@ -11,8 +11,11 @@ in content.py; journal posts in journal_content.py. Edit those, rebuild, commit.
 Environment (all optional, read at build time on Vercel):
     GA4_ID                  e.g. G-XXXXXXX. Adds consent-gated GA4 to pages
                             that carry no form. Off when unset.
-    VERCEL_ANALYTICS=1      Adds Vercel Web Analytics + Speed Insights.
-                            Only set it once both are enabled in the project.
+    VERCEL_ANALYTICS=1      Adds Vercel Web Analytics (pageviews plus the lead
+                            events in main.js / assist.js). Only set it once
+                            Web Analytics is enabled in the project.
+    VERCEL_SPEED_INSIGHTS=1 Adds Vercel Speed Insights. Separate on purpose:
+                            it is usage-billed, and off unless asked for.
     GOOGLE_PLACES_API_KEY   Present at build time => the homepage asks
                             /api/reviews for the live Google rating.
 """
@@ -36,6 +39,7 @@ SITE_UPDATED_DT = SITE_UPDATED + "T00:00:00-04:00"  # schema dateModified wants 
 
 GA4_ID = os.environ.get("GA4_ID", "").strip()
 VERCEL_ANALYTICS = os.environ.get("VERCEL_ANALYTICS", "") == "1"
+VERCEL_SPEED_INSIGHTS = os.environ.get("VERCEL_SPEED_INSIGHTS", "") == "1"
 LIVE_REVIEWS = bool(os.environ.get("GOOGLE_PLACES_API_KEY", "").strip())
 
 # Google Search Console HTML-tag verification. Paste ONLY the content="..." value from
@@ -511,6 +515,9 @@ SEEN_TITLES = {}
 
 JS_FLAG = "document.documentElement.classList.add('js')"
 INLINE_SCRIPTS_INIT = [JS_FLAG]
+# Queues window.va() calls made before /_vercel/insights/script.js has run, so an
+# early event is sent once it loads instead of being dropped.
+VA_STUB = "window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };"
 
 
 def analytics_tags(allow):
@@ -523,7 +530,9 @@ def analytics_tags(allow):
         # build without GA4_ID, so an inline GA script was blocked live.
         out.append('<script defer src="%s" data-ga="%s"></script>' % (a("assets/js/consent.js"), esc(GA4_ID)))
     if VERCEL_ANALYTICS:
+        out.append('<script>%s</script>' % VA_STUB)
         out.append('<script defer src="/_vercel/insights/script.js"></script>')
+    if VERCEL_SPEED_INSIGHTS:
         out.append('<script defer src="/_vercel/speed-insights/script.js"></script>')
     return "\n".join(out)
 
@@ -821,7 +830,11 @@ def check_copy():
     return problems
 
 
-INLINE_SCRIPTS = {JS_FLAG}  # every inline <script> body, hashed into the CSP
+# Every inline <script> body, hashed into the CSP. VA_STUB is listed whether or not
+# VERCEL_ANALYTICS is set: vercel.json is committed from a local build without it,
+# and Vercel serves the committed file, so a hash added only under the env var
+# would never reach the live CSP and the stub would be blocked.
+INLINE_SCRIPTS = {JS_FLAG, VA_STUB}
 USERWAY_ACCOUNT = "QQECAXmKWE"  # the practice's UserWay accessibility widget (client, Oct 20 2026; same account as the old site)
 USERWAY = "https://*.userway.org"
 

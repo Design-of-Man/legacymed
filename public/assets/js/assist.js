@@ -310,6 +310,8 @@
     if (res && res.ok && out.ok) {
       say("Thank you. Your request is with the office, and they will call you back. If it's urgent, call " + telLink() + ".");
       if (typeof window.gtag === "function") window.gtag("event", "generate_lead", { form: "assistant" });
+      // main.js turns this into Vercel's form_submit {form: "assistant"}. Confirmed sends only.
+      document.dispatchEvent(new CustomEvent("legacy:assistant-lead"));
       draft = {};
     } else if (res && res.status === 503) {
       say("Online requests are not switched on yet. Please call " + telLink() + " and the office will set up your visit.");

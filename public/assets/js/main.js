@@ -8,17 +8,41 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const desktopNav = window.matchMedia("(min-width: 1101px)"); // keep in sync with site.css
 
-  /* ---------- analytics shim: no-op unless GA4 was loaded with consent ---------- */
-  const track = (name, params) => {
+  /* ---------- analytics shim ----------
+     GA4 only exists after consent (consent.js); Vercel Web Analytics only when
+     build.py emitted its tag (VERCEL_ANALYTICS=1). /contact and /meet-and-greet
+     carry neither, so every call below is a no-op there. Payloads are placement
+     and path only: never a field value, a typed message or a reason. */
+  const ga = (name, params) => {
     if (typeof window.gtag === "function") window.gtag("event", name, params || {});
   };
+  const va = (name, data) => {
+    if (typeof window.va === "function") window.va("event", { name, data: data || {} });
+  };
+  const track = (name, params) => { ga(name, params); va(name, params); };
+  const MAPS = /google\.[a-z.]+\/maps|maps\.google\.|goo\.gl\/maps|maps\.app\.goo\.gl|maps\.apple\.com|waze\.com/i;
+  const isBooking = (a) => a.host === location.host && a.pathname.replace(/(\.html|\/)$/, "") === "/meet-and-greet";
+  let chatOpened = false;
+  // Capture phase: a tel: or maps tap that navigates away is still recorded,
+  // and links added later (the assistant's replies) are covered with no wiring.
   document.addEventListener("click", (e) => {
-    const a = e.target.closest("a[href^='tel:'], a[href^='mailto:'], [data-track]");
+    if (!chatOpened && e.target.closest(".as-launch")) {
+      chatOpened = true; // the visitor opened the assistant; once per page view
+      track("chat_open", { link_location: "assistant", path: location.pathname });
+      return;
+    }
+    const a = e.target.closest("a[href], [data-track]");
     if (!a) return;
-    if (a.matches("a[href^='tel:']")) track("call_click", { link_location: a.dataset.loc || "page" });
-    else if (a.matches("a[href^='mailto:']")) track("email_click", { link_location: a.dataset.loc || "page" });
-    else track(a.dataset.track, { link_location: a.dataset.loc || "page" });
-  });
+    const p = { link_location: a.dataset.loc || (a.closest(".as-panel") ? "assistant" : "page"), path: location.pathname };
+    const href = a.getAttribute("href") || "";
+    if (/^tel:/i.test(href)) track("call_click", p);
+    else if (/^mailto:/i.test(href)) track("email_click", p);
+    else if (MAPS.test(href)) track("directions_click", p);
+    else if (a.matches("a[href]") && isBooking(a)) track("appointment_cta", p);
+    else if (a.dataset.track) track(a.dataset.track, p);
+  }, true);
+  // Confirmed assistant request (assist.js, after /api/tour answered ok).
+  document.addEventListener("legacy:assistant-lead", () => va("form_submit", { form: "assistant", path: location.pathname }));
 
   /* ---------- header: a solid banner as soon as the page scrolls, always in view ---------- */
   const header = document.querySelector(".site-header");
@@ -167,7 +191,7 @@
     video.addEventListener("playing", () => { video.classList.add("playing"); setToggle(true); });
     video.addEventListener("pause", () => setToggle(false));
     vToggle.addEventListener("click", () => {
-      if (video.paused) { play(); track("hero_video_play"); }
+      if (video.paused) { play(); ga("hero_video_play"); }
       else { wantPlay = false; video.pause(); }
     });
     const autoOK = !reduceMotion.matches && !saveData;
