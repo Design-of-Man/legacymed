@@ -2333,5 +2333,21 @@
    "avif"
   ],
   "og": true
+ },
+ "j-blood-in-urine-hematuria": {
+  "file": "journal/blood-in-urine-hematuria.jpg",
+  "alt": "An overhead view of a gold notebook with a pen, a cup of tea on a white saucer and sprigs of red berries on a sunlit wooden table",
+  "credit": "Arina Krasnikova",
+  "source": "https://www.pexels.com/photo/close-up-shot-of-a-cup-of-tea-beside-a-fruit-6653890/",
+  "q": 76,
+  "widths": [
+   800,
+   1600
+  ],
+  "formats": [
+   "webp",
+   "avif"
+  ],
+  "og": true
  }
 }

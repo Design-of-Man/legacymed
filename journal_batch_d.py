@@ -108,19 +108,33 @@ POSTS = [
   'reviewed_by': None},
 
  {'slug': 'cbc-and-metabolic-panel-explained',
-  'title': 'Reading your blood work: the CBC and metabolic panel in plain English',
-  'seo_title': 'CBC and Metabolic Panel in Plain English | Legacy Medical',
+  'title': 'CBC vs CMP vs BMP: what each blood test shows, in plain English',
+  'seo_title': 'CBC vs CMP vs BMP: What Each Blood Test Shows | Legacy Medical',
   'date': '2026-10-17T09:10:00',
-  'modified': '2026-10-17T09:10:00',
+  'modified': '2026-10-30T09:10:00',
   'category': 'Everyday health',
-  'excerpt': 'What each line on a complete blood count and a metabolic panel measures, and why a '
-             'single flagged number is rarely the whole story.',
+  'excerpt': 'A CBC counts your blood cells. A CMP checks blood sugar, electrolytes, kidneys and liver. A BMP '
+             'is the CMP without the liver tests. Here is what each line means.',
   'blocks': [
    {'type': 'p',
     'text': "Two blood tests show up at nearly every physical: the complete blood count (CBC) and the "
             "metabolic panel, which appears on lab reports as the CMP. Together they cover your blood cells, blood sugar, "
             "electrolytes, kidneys and liver. When the results land in your patient portal, they can look like "
             "a wall of abbreviations with a few numbers flagged in red."},
+   {'type': 'h2', 'text': 'CBC vs CMP vs BMP: the short answer'},
+   {'type': 'ul',
+    'items': ['**CBC (complete blood count)** looks at the cells in your blood: red cells, white cells and '
+              'platelets. It answers questions like "am I anemic?" and "is there a sign of infection?"',
+              '**CMP (chem 14)** looks at the chemistry of the liquid part of your blood: sugar, electrolytes, '
+              'calcium, kidney waste products, proteins and liver enzymes. 14 tests from one tube.',
+              '**BMP (chem 7)** is a shorter version of the CMP: 8 tests covering sugar, calcium, electrolytes and '
+              'kidney function, without the liver tests and proteins.']},
+   {'type': 'p',
+    'text': "So a CBC and a CMP are not alternatives; they answer different questions, and MedlinePlus describes "
+            "both as common parts of a routine checkup, which is why they are so often drawn together. A CBC "
+            "usually needs no preparation. MedlinePlus says you may need to fast for eight hours before a "
+            "[BMP](https://medlineplus.gov/lab-tests/basic-metabolic-panel-bmp/), and for several hours before a "
+            "CMP."},
    {'type': 'p',
     'text': "This guide explains what each part measures, based on the NIH's MedlinePlus pages, and how to think "
             "about a result that falls outside the range."},
