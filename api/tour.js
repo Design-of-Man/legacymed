@@ -24,11 +24,13 @@
 // capped at 600 characters, and request bodies are never written to logs.
 "use strict";
 
+const { officeEmail, confirmEmail } = require("./_email.js");
+const BRAND = { name: "Legacy Medical", color: "#16140F", accent: "#C9A35B", accentInk: "#16140F", kicker: "#C9A35B" };
+
 const MAX_MESSAGE = 600;
 const ALLOWED_HOSTS = [/^legacymedicalpalmbeach\.com$/, /^www\.legacymedicalpalmbeach\.com$/, /^legacymedical[a-z0-9-]*\.vercel\.app$/, /^localhost(:\d+)?$/, /^127\.0\.0\.1(:\d+)?$/];
 
 const clean = (v, max) => String(v == null ? "" : v).replace(/[\u0000-\u001f\u007f]/g, " ").trim().slice(0, max);
-const escapeHtml = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 // Count one delivered enquiry in the portal. Best effort: a slow or failed
 // portal must never turn a delivered request into an error for the visitor.
@@ -70,6 +72,10 @@ async function confirmToVisitor(key, from, replyTo, data) {
         to: [data.email],
         reply_to: replyTo || undefined,
         subject: "We received your request: Legacy Medical",
+        html: confirmEmail({
+          brand: BRAND, first, ref: "", phone: "(561) 834-9280", site: "legacymedicalpalmbeach.com",
+          promise: "Your request is with our office, and we will call or email you back.",
+        }),
         text: [
           "Hi " + first + ",",
           "",
@@ -145,7 +151,14 @@ module.exports = async (req, res) => {
   try {
     if (key) {
       const text = rows.map(([k, v]) => k + ": " + v).join("\n");
-      const html = "<table>" + rows.map(([k, v]) => "<tr><th align=left style=\"padding:4px 12px 4px 0\">" + k + "</th><td>" + escapeHtml(v) + "</td></tr>").join("") + "</table>";
+      const html = officeEmail({
+        brand: BRAND,
+        title: data.reason ? "New request: " + data.reason : "New tour request",
+        fields: [["name", data.name], ["phone", data.phone], ["email", data.email],
+          ["Interested in", data.reason], ["Prefers", data.contact_pref],
+          ["Best time", data.best_time], ["message", data.message], ["page", data.page]],
+        meta: { site: "legacymedicalpalmbeach.com", source: (data.page || "/").replace(/^\//, "") || "home page" },
+      });
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: "Bearer " + key, "Content-Type": "application/json" },
