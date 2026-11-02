@@ -499,7 +499,7 @@ CATEGORY_OWNERS = {  # journal category -> the page that owns the topic
 
 # ---------------------------------------------------------------- membership
 MEMBERSHIP = {
-    "title": "Concierge Medicine Membership in Palm Beach Gardens",
+    "title": "How to Join: Membership in Palm Beach Gardens | Legacy Medical",
     "desc": "How to join Legacy Medical, a concierge medicine membership with Dr. Yana Shtern in Palm Beach Gardens. Start with a complimentary meet and greet, then decide.",
     "eyebrow": "Concierge membership",
     "h1": "Meet us first. Then decide.",
@@ -705,7 +705,7 @@ GEO_DATA = {
 _LOC_COPY = {
     "jupiter": {
         "name": "Jupiter",
-        "title": "Concierge Doctor for Jupiter, FL | Legacy Medical",
+        "title": "Concierge Medicine & Doctor in Jupiter, FL | Legacy Medical",
         "desc": "A concierge doctor about 15 minutes from Jupiter. Dr. Yana Shtern, internist, is affiliated with Jupiter Medical Center and sees members the same or next business day.",
         "h1": "A concierge doctor for Jupiter, affiliated with Jupiter Medical Center.",
         "lede": "From Jupiter the office is about 15 minutes south, down Alternate A1A or US-1. Dr. Shtern is affiliated with Jupiter Medical Center, likely the closest hospital to home.",
@@ -722,7 +722,7 @@ _LOC_COPY = {
     },
     "north-palm-beach": {
         "name": "North Palm Beach",
-        "title": "Concierge Doctor for North Palm Beach | Legacy Medical",
+        "title": "Concierge Medicine & Doctor in North Palm Beach | Legacy Medical",
         "desc": "A concierge doctor about six minutes from North Palm Beach. Same or next-day visits, labs in the office, and 24/7 phone access with Dr. Yana Shtern, internist.",
         "h1": "A concierge doctor six minutes from North Palm Beach.",
         "lede": "The office is just up Prosperity Farms Road from the village, close enough that a same-day sick visit is a short trip rather than an afternoon.",
@@ -736,7 +736,7 @@ _LOC_COPY = {
     },
     "juno-beach": {
         "name": "Juno Beach",
-        "title": "Concierge Doctor for Juno Beach, FL | Legacy Medical",
+        "title": "Concierge Medicine & Doctor in Juno Beach, FL | Legacy Medical",
         "desc": "A concierge doctor about seven minutes from Juno Beach, between Jupiter Medical Center and Palm Beach Gardens Medical Center, the two hospitals Dr. Shtern is affiliated with.",
         "h1": "A concierge doctor seven minutes from Juno Beach, with two hospitals close by.",
         "lede": "Juno Beach sits almost exactly between the two hospitals Dr. Shtern is affiliated with, and the office is a short drive down US-1 and across PGA Boulevard.",
@@ -750,7 +750,7 @@ _LOC_COPY = {
     },
     "tequesta": {
         "name": "Tequesta",
-        "title": "Concierge Doctor and Private Physician for Tequesta, FL",
+        "title": "Concierge Medicine & Doctor in Tequesta, FL | Legacy Medical",
         "desc": "A concierge doctor and private physician for Tequesta, about 17 minutes south in Palm Beach Gardens. Dr. Yana Shtern is affiliated with nearby Jupiter Medical Center.",
         "h1": "A concierge doctor and private physician for Tequesta, a short drive down US-1.",
         "lede": "From Tequesta the office is about 17 minutes south on US-1. Jupiter Medical Center, which Dr. Shtern is affiliated with, is closer still.",
@@ -764,7 +764,7 @@ _LOC_COPY = {
     },
     "palm-beach": {
         "name": "Palm Beach",
-        "title": "Concierge Doctor for Palm Beach, FL | Legacy Medical",
+        "title": "Concierge Medicine & Doctor in Palm Beach, FL | Legacy Medical",
         "desc": "A concierge doctor for Palm Beach island residents: Dr. Yana Shtern, board-certified in Internal Medicine and Nephrology, about 25 minutes north in Palm Beach Gardens.",
         "h1": "Concierge medicine for Palm Beach, without the island waitlist.",
         "lede": "Palm Beach has plenty of concierge practices, and many are full. Legacy Medical is about 25 minutes north, and its physician is double board-certified in Internal Medicine and Nephrology.",
@@ -778,7 +778,7 @@ _LOC_COPY = {
     },
     "west-palm-beach": {
         "name": "West Palm Beach",
-        "title": "Concierge Medicine for West Palm Beach | Legacy Medical",
+        "title": "Concierge Medicine & Doctor in West Palm Beach | Legacy Medical",
         "desc": "Concierge medicine for West Palm Beach residents from a doctor who is also a Nephrologist, about 20 minutes up I-95 in Palm Beach Gardens. Same or next-day visits.",
         "h1": "A concierge doctor twenty minutes up I-95 from West Palm Beach.",
         "lede": "For West Palm Beach residents, the office is a straight run up I-95 to PGA Boulevard. Members are seen the same or next business day.",
@@ -793,7 +793,7 @@ _LOC_COPY = {
     # Added Oct 17, 2026: the practice has patients from both towns (client). Distances and routes are GEO_DATA's.
     "hobe-sound": {
         "name": "Hobe Sound",
-        "title": "Concierge Doctor for Hobe Sound, FL | Legacy Medical",
+        "title": "Concierge Medicine & Doctor in Hobe Sound, FL | Legacy Medical",
         "desc": "A concierge doctor for Hobe Sound, about 30 minutes south on US-1 in Palm Beach Gardens. Dr. Yana Shtern, internist, sees members the same or next business day.",
         "h1": "A concierge doctor for Hobe Sound, about half an hour down US-1.",
         "lede": "Legacy Medical already cares for patients from Hobe Sound. The office is about 30 minutes south on US-1, and many follow-ups happen by video, so not every visit means the drive.",
@@ -807,7 +807,7 @@ _LOC_COPY = {
     },
     "stuart": {
         "name": "Stuart",
-        "title": "Concierge Doctor for Stuart, FL | Legacy Medical",
+        "title": "Concierge Medicine & Doctor in Stuart, FL | Legacy Medical",
         "desc": "Concierge medicine for Stuart residents, about 40 minutes down I-95 in Palm Beach Gardens, from a doctor board-certified in Internal Medicine and Nephrology.",
         "h1": "Concierge medicine for Stuart, a straight run down I-95.",
         "lede": "Legacy Medical already cares for patients from Stuart. The office is about 40 minutes south by I-95, and video visits and around-the-clock phone access mean much of your care does not need the drive.",
