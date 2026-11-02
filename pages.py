@@ -61,7 +61,7 @@ def home(B):
       <h1 id="hero-h"><span class="hero-kicker">%(kicker)s</span><span class="hero-title">%(title)s</span><span class="hero-sub">%(sub)s</span></h1>
       <p class="hero-lede">%(lede)s</p>
       <div class="btn-row">
-        <a class="btn" href="/meet-and-greet" data-loc="hero">Book a meet and greet %(arrow)s</a>
+        <a class="btn" href="/meet-and-greet#request" data-loc="hero">Book a meet and greet %(arrow)s</a>
         <a class="btn ghost" href="tel:%(tel)s" data-loc="hero">%(phoneico)s Call<span class="hide-sm"> %(phone)s</span></a>
       </div>
       <dl class="hero-facts">
@@ -104,7 +104,7 @@ def home(B):
       <div class="stack" style="margin-top:1.5rem;max-width:36rem">%(body)s</div>
       <dl class="creds">%(creds)s</dl>
       <blockquote class="doc-quote"><p>%(quote)s</p><footer>%(who)s, %(src)s</footer></blockquote>
-      <div class="btn-row" style="margin-top:2rem"><a class="btn" href="/meet-and-greet" data-loc="doctor">Book a meet and greet %(arrow)s</a><a class="btn ghost" href="/dr-yana-shtern" data-loc="doctor">Her background</a></div>
+      <div class="btn-row" style="margin-top:2rem"><a class="btn" href="/meet-and-greet#request" data-loc="doctor">Book a meet and greet %(arrow)s</a><a class="btn ghost" href="/dr-yana-shtern" data-loc="doctor">Her background</a></div>
     </div>
   </div>
 </section>""" % {"photo": photo(D["home_photo"], "Dr. Yana Shtern, MD, at Legacy Medical in Palm Beach Gardens", sizes="(max-width: 880px) 90vw, 42vw", max_w=1200),
@@ -162,7 +162,7 @@ def home(B):
       <h2 id="pers-h" style="margin-top:1.25rem">%s</h2>
       <p class="lede" style="margin-top:1.25rem">%s</p>
       <ol class="pers-list">%s</ol>
-      <div class="btn-row" style="margin-top:2.5rem"><a class="btn" href="/meet-and-greet" data-loc="personal">Book a meet and greet %s</a><a class="text-link" href="/dr-yana-shtern">About Dr. Shtern %s</a></div>
+      <div class="btn-row" style="margin-top:2.5rem"><a class="btn" href="/meet-and-greet#request" data-loc="personal">Book a meet and greet %s</a><a class="text-link" href="/dr-yana-shtern">About Dr. Shtern %s</a></div>
     </div>
   </div>
 </section>""" % (photo(pp, pa, sizes="(max-width: 880px) 90vw, 40vw", max_w=1200), B.hx(H["personal_h"]), H["personal_lede"], rows, icon("arrow"), icon("arrow"))
@@ -528,7 +528,7 @@ def membership(B):
     body += "".join(prose_section(B, i + 1, h, b, slug) for i, (h, b) in enumerate(S["sections"]))
     body += """<section class="section sunk" id="tour" aria-labelledby="tour-h"><div class="wrap split" style="align-items:center">
 <div><p class="eyebrow">First step</p><h2 id="tour-h" style="margin-top:1.25rem">Start with a meet and greet.</h2><p class="lede" style="margin-top:1.25rem">A complimentary conversation with Dr. Shtern at the office. Ask anything, then decide in your own time.</p></div>
-<div class="btn-row"><a class="btn" href="/meet-and-greet" data-loc="membership">Book a meet and greet %s</a><a class="btn ghost" href="tel:%s" data-loc="membership">Call %s</a></div></div></section>""" % (icon("arrow"), B.PRACTICE["tel"], B.PRACTICE["phone"])
+<div class="btn-row"><a class="btn" href="/meet-and-greet#request" data-loc="membership">Book a meet and greet %s</a><a class="btn ghost" href="tel:%s" data-loc="membership">Call %s</a></div></div></section>""" % (icon("arrow"), B.PRACTICE["tel"], B.PRACTICE["phone"])
     body += '<section class="section" aria-labelledby="mfaq-h"><div class="wrap split"><div><p class="eyebrow">FAQ</p><h2 id="mfaq-h" style="margin-top:1.25rem">About joining</h2></div>%s</div></section>' % B.faq_html(S["faqs"])
     schema = B.graph({"@type": "WebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": S["title"], "isPartOf": {"@id": B.SITE_ID},
                       "about": {"@id": B.ORG_ID}, "potentialAction": {"@type": "ReserveAction", "name": "Book a meet and greet", "target": B.url("meet-and-greet") + "#request"}},
@@ -585,7 +585,7 @@ def videos(B):
 <figure class="film">%(vid)s<figcaption class="ph-cap">%(t)s<span>From the practice</span></figcaption></figure>
 <div><p class="eyebrow">From the practice</p><h2 id="film-%(id)s" style="margin-top:1.25rem">Meet <em>Dr. Shtern</em></h2>
 <p class="lede" style="margin-top:1.25rem">%(s)s</p>
-<div class="btn-row" style="margin-top:2rem"><a class="btn" href="/meet-and-greet" data-loc="videos">Book a meet and greet %(a)s</a><a class="text-link" href="/dr-yana-shtern">About Dr. Shtern %(a)s</a></div></div>
+<div class="btn-row" style="margin-top:2rem"><a class="btn" href="/meet-and-greet#request" data-loc="videos">Book a meet and greet %(a)s</a><a class="text-link" href="/dr-yana-shtern">About Dr. Shtern %(a)s</a></div></div>
 </div></section>""" % {"id": esc(v["id"]), "vid": video_facade(B, v, "(max-width: 880px) 92vw, 58vw", eager=True),
                        "t": esc(v["title"]), "s": esc(v["summary"]), "a": icon("arrow")}
     lib = ""
@@ -614,14 +614,17 @@ def meet_and_greet(B):
     hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"], cta=False,
                        media=B.photo("dr-shtern-desk-oct-2026", "Dr. Yana Shtern at her desk at Legacy Medical", sizes="(max-width: 880px) 90vw, 45vw", max_w=1200))
     steps = "".join('<li><h3>%s</h3><p>%s</p></li>' % (esc(t), d) for t, d in S["steps"])
-    body = hero + """<section class="section flush-top" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="sr-only">How it works</h2><ol class="steps">%s</ol>
+    # The form comes straight after the hero: every booking CTA on the site lands on #request,
+    # and on a phone the form used to sit nearly 5,000px down the page.
+    body = hero + """<section class="section sunk" id="request" aria-labelledby="request-h"><div class="wrap request-grid">
+<div class="req-head"><p class="eyebrow">Book</p><h2 id="request-h" style="margin-top:1.25rem">%s</h2><p class="lede" style="margin-top:1.25rem">%s</p></div>
+<div class="panel">%s</div>
+<dl class="facts req-facts" style="grid-template-columns:1fr"><div><dt>Phone</dt><dd><a href="tel:%s" data-loc="meet">%s</a></dd></div><div><dt>Office</dt><dd>%s<br>%s, FL %s</dd></div><div><dt>Office hours</dt><dd>Mon to Thu 9 AM to 5 PM, Fri 9 AM to 2 PM</dd></div></dl>
+</div></section>""" % (esc(S["form_h"]), S["form_lede"], tour_form(B, "meet-and-greet", "request-h"), B.PRACTICE["tel"], B.PRACTICE["phone"], B.PRACTICE["street_short"], B.PRACTICE["city"], B.PRACTICE["postal"])
+    body += """<section class="section" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="sr-only">How it works</h2><ol class="steps">%s</ol>
 <p style="margin-top:2rem"><a class="btn" href="#request" data-loc="meet-steps">Book a meet and greet %s</a></p></div></section>""" % (steps, icon("arrow"))
     body += "".join(prose_section(B, i + 1, h, b, slug) for i, (h, b) in enumerate(S["sections"]))
-    body += """<section class="section sunk" id="request" aria-labelledby="request-h"><div class="wrap split">
-<div><p class="eyebrow">Book</p><h2 id="request-h" style="margin-top:1.25rem">%s</h2><p class="lede" style="margin-top:1.25rem">%s</p>
-<dl class="facts" style="margin-top:2rem;grid-template-columns:1fr"><div><dt>Phone</dt><dd><a href="tel:%s" data-loc="meet">%s</a></dd></div><div><dt>Office</dt><dd>%s<br>%s, FL %s</dd></div><div><dt>Office hours</dt><dd>Mon to Thu 9 AM to 5 PM, Fri 9 AM to 2 PM</dd></div></dl></div>
-<div class="panel">%s</div></div></section>""" % (esc(S["form_h"]), S["form_lede"], B.PRACTICE["tel"], B.PRACTICE["phone"], B.PRACTICE["street_short"], B.PRACTICE["city"], B.PRACTICE["postal"], tour_form(B, "meet-and-greet", "request-h"))
-    body += '<section class="section" aria-labelledby="mgfaq-h"><div class="wrap split"><div><p class="eyebrow">FAQ</p><h2 id="mgfaq-h" style="margin-top:1.25rem">About the meet and greet</h2></div>%s</div></section>' % B.faq_html(S["faqs"])
+    body += '<section class="section sunk" aria-labelledby="mgfaq-h"><div class="wrap split"><div><p class="eyebrow">FAQ</p><h2 id="mgfaq-h" style="margin-top:1.25rem">About the meet and greet</h2></div>%s</div></section>' % B.faq_html(S["faqs"])
     schema = B.graph({"@type": "WebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": S["title"], "isPartOf": {"@id": B.SITE_ID},
                       "about": {"@id": B.ORG_ID}, "mentions": {"@id": B.DOC_ID},
                       "potentialAction": {"@type": "ReserveAction", "name": "Book a meet and greet", "target": B.url(slug) + "#request"}},
@@ -826,7 +829,7 @@ def post(B, p, all_posts):
     heads = [m.start() for m in re.finditer(r"<h2 ", body_html)]
     invite = ('<aside class="inline-cta" aria-label="Meet Dr. Shtern"><p class="eyebrow">Legacy Medical</p><p class="ic-h">Questions like this are easier in person.</p>'
               '<p>Your first visit is a complimentary meet and greet with Dr. Shtern in Palm Beach Gardens.</p>'
-              '<a class="btn small" href="/meet-and-greet" data-loc="article-inline">Book a meet and greet %s</a></aside>' % icon("arrow"))
+              '<a class="btn small" href="/meet-and-greet#request" data-loc="article-inline">Book a meet and greet %s</a></aside>' % icon("arrow"))
     if len(heads) >= 3:
         body_html = body_html[:heads[2]] + invite + body_html[heads[2]:]
     toc = "".join('<li><a href="#%s">%s</a></li>' % (m.group(1), m.group(2)) for m in re.finditer(r'<h2 id="([^"]+)">(.*?)</h2>', body_html))

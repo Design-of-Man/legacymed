@@ -396,6 +396,11 @@ body.nav-open .menu-toggle span::after{transform:translateY(-.36rem) rotate(-45d
 .split.even{grid-template-columns:1fr 1fr}
 .split.reverse>:first-child{order:2}
 @media (max-width:880px){.split,.split.even{grid-template-columns:1fr}.split.reverse>:first-child{order:0}}
+/* /meet-and-greet form: heading and facts in the left column, form on the right; on a phone the facts drop below the form. */
+.request-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:auto 1fr;gap:2rem clamp(2rem,1rem + 5vw,7rem);align-items:start}
+.request-grid .panel{grid-column:2;grid-row:1/span 2}
+.req-facts{grid-column:1}
+@media (max-width:880px){.request-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:none}.request-grid .panel,.req-facts{grid-column:auto;grid-row:auto}}
 .problem-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .problem-list li{display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.4rem 0;border-bottom:1px solid var(--line)}
 .problem-list .n{font:300 var(--step-2)/1 var(--serif);color:var(--gold-text)}
