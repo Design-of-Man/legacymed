@@ -790,9 +790,40 @@ def journal(B):
                       "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": B.url("blog/" + p["slug"]), "datePublished": p["date"]} for p in J.POSTS]},
                      B.breadcrumb_node(trail))
     B.write_page(slug, "Blog: Health Notes from Legacy Medical, Palm Beach Gardens", C.JOURNAL_DESC, body, schema=schema)
-    for i, p in enumerate(J.POSTS):
-        post(B, p, J.POSTS)
+    related = related_map(J.POSTS)
+    for p in J.POSTS:
+        post(B, p, related[p["slug"]])
     feed(B)
+
+
+def related_map(posts):
+    """slug -> the three posts its 'Keep reading' row links to.
+
+    Each category is a ring and a post links to the next three around it, so every
+    post gets three inbound links; taking the three newest left older posts with
+    none. A category too small for a ring joins the largest one. Fails the build
+    if any post ends up with fewer than three inbound links."""
+    groups = {}
+    for p in posts:
+        groups.setdefault(p["category"], []).append(p)
+    rings = sorted((g for g in groups.values() if len(g) >= 4), key=len, reverse=True)
+    small = [p for g in groups.values() if len(g) < 4 for p in g]
+    if small:
+        if rings:
+            rings[0] = rings[0] + small
+        else:
+            rings = [small]
+    out, inbound = {}, {p["slug"]: 0 for p in posts}
+    for ring in rings:
+        n = len(ring)
+        for i, p in enumerate(ring):
+            out[p["slug"]] = [ring[(i + k) % n] for k in range(1, 4) if ring[(i + k) % n] is not p]
+            for x in out[p["slug"]]:
+                inbound[x["slug"]] += 1
+    short = sorted(s for s, c in inbound.items() if c < 3)
+    if short:
+        raise SystemExit("blog: fewer than 3 inbound related links on: %s" % ", ".join(short))
+    return out
 
 
 def render_blocks(B, blocks):
@@ -835,7 +866,7 @@ def inline(B, text):
     return s
 
 
-def post(B, p, all_posts):
+def post(B, p, related):
     esc, icon = B.esc, B.icon
     slug = "blog/" + p["slug"]
     trail = [("Home", ""), ("Blog", "blog"), (p["title"], slug)]
@@ -852,9 +883,6 @@ def post(B, p, all_posts):
     if len(heads) >= 3:
         body_html = body_html[:heads[2]] + invite + body_html[heads[2]:]
     toc = "".join('<li><a href="#%s">%s</a></li>' % (m.group(1), m.group(2)) for m in re.finditer(r'<h2 id="([^"]+)">(.*?)</h2>', body_html))
-    related = [x for x in all_posts if x["category"] == p["category"] and x["slug"] != p["slug"]][:3]
-    if len(related) < 3:
-        related += [x for x in all_posts if x["slug"] != p["slug"] and x not in related][:3 - len(related)]
     owner = C.CATEGORY_OWNERS.get(p["category"])
     owner_label = C.OWNER_ANCHORS.get(p["slug"], owner[1]) if owner else ""
     owner_html = ('<p class="toc-care"><span class="eyebrow">Related care</span><a class="text-link" href="/%s">%s %s</a></p>' % (owner[0], esc(owner_label), icon("arrow"))) if owner else ""
