@@ -399,7 +399,7 @@ def concierge(B):
     slug = "concierge-medicine"
     trail = B.trail_for(slug, "Concierge medicine")
     hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"])
-    sections = "".join(prose_section(B, i, h, b, slug) for i, (h, b) in enumerate(S["sections"]))
+    sections = "".join(prose_section(B, i, h, b, slug, num=i + 1) for i, (h, b) in enumerate(S["sections"]))
     included = "".join('<li>%s<h3>%s</h3><p>%s</p></li>' % (B.svc_icon(s["icon"]), esc(s["name"]), s["text"]) for s in C.SERVICES_INCLUDED)
     rows = "".join('<tr><th scope="row">%s</th><td>%s</td><td>%s</td></tr>' % (esc(a), esc(b), esc(c)) for a, b, c in S["compare"])
     body = hero + """<section class="section flush-top" aria-labelledby="inc-h"><div class="wrap">
@@ -417,14 +417,14 @@ def concierge(B):
     B.write_page(slug, S["title"], S["desc"], body, schema=schema, og_image="/assets/img/og/concierge-medicine.jpg")
 
 
-def prose_section(B, i, h, body_html, slug=None):
+def prose_section(B, i, h, body_html, slug=None, num=None):
     """One titled section. Sections are numbered like chapters, and a section
     with a photo in C.SECTION_IMAGES becomes a split with the image on
-    alternating sides."""
+    alternating sides. `num` is the printed number, for callers that count from 0."""
     cls = " sunk" if i % 2 else ""
     sid = "s-%s" % re.sub(r"[^a-z0-9]+", "-", h.lower()).strip("-")[:40]
     stem = C.SECTION_IMAGES.get(slug, {}).get(h) if slug else None
-    n = '<p class="sec-n" aria-hidden="true">%02d</p>' % max(i, 1)
+    n = '<p class="sec-n" aria-hidden="true">%02d</p>' % (num or i)
     if stem and stem in B.IMG:
         side = " flip" if i % 2 == 0 else ""
         img = B.photo(stem, B.IMG[stem].get("alt", ""), sizes="(max-width: 880px) 92vw, 46vw", max_w=1600)
@@ -656,7 +656,7 @@ def insurance(B):
     slug = "insurance-and-fees"
     trail = B.trail_for(slug, "Insurance and fees")
     hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"])
-    body = hero + "".join(prose_section(B, i, h, b, slug) for i, (h, b) in enumerate(S["sections"]))
+    body = hero + "".join(prose_section(B, i, h, b, slug, num=i + 1) for i, (h, b) in enumerate(S["sections"]))
     body += review_strip(B, (5, 0))
     body += '<section class="section sunk" aria-labelledby="ifaq-h"><div class="wrap split"><div><p class="eyebrow">FAQ</p><h2 id="ifaq-h" style="margin-top:1.25rem">Insurance and fee questions</h2></div>%s</div></section>' % B.faq_html(S["faqs"])
     body += B.cta_band("Ask us about the fee in person.", S["cta_lede"])

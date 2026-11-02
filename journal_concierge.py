@@ -2392,8 +2392,8 @@ NEW_POSTS = [{'slug': 'strength-training-after-50',
                       'then they already have a primary care doctor, a cardiologist and perhaps an endocrinologist, '
                       'each looking at one part of the picture.'},
              {'type': 'p',
-              'text': 'Dr. Yana Shtern is board certified by the American Board of Internal Medicine in both internal '
-                      'medicine and Nephrology. That combination matters more than it might sound in a primary care '
+              'text': 'Dr. Yana Shtern is board certified by the American Board of Internal Medicine in both Internal '
+                      'Medicine and Nephrology. That combination matters more than it might sound in a primary care '
                       'practice, because the kidneys sit at the center of several conditions that are common after '
                       '50.'},
              {'type': 'h2', 'text': 'Kidney disease is common and usually silent'},
