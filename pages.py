@@ -285,14 +285,29 @@ def clock_section(B):
 </section>""" % {"h": B.esc(H["clock_h"]), "lede": H["clock_lede"], "oh": office_hours, "rows": rows, "parts": "".join(parts)}
 
 
+def review_figures(B, reviews):
+    esc = B.esc
+    return "".join('<figure class="quote" data-reveal style="--d:%d"><blockquote><p>%s</p></blockquote><figcaption><b>%s</b> \u00b7 Google review \u00b7 %s</figcaption></figure>' % (
+        i % 2, esc(t["quote"]), esc(t["who"]), esc(t["when"])) for i, t in enumerate(reviews))
+
+
+def review_strip(B, picks):
+    """Verbatim quotes from GOOGLE_REVIEWS, by index, for a page other than home. Static on
+    purpose: no /api/reviews call, so it is safe on the form page, and no review schema."""
+    return """<section class="section surface" aria-labelledby="rev-h"><div class="wrap">
+<p class="eyebrow">Patients</p><h2 id="rev-h" style="margin:1.25rem 0 2rem;font-size:var(--step-3)">From our Google reviews</h2>
+<div class="quotes">%s</div>
+<p style="margin-top:1.5rem"><a class="inline-link" href="%s" rel="noopener" target="_blank">All reviews on Google<span class="sr-only"> (opens in a new tab)</span></a></p>
+</div></section>""" % (review_figures(B, [C.GOOGLE_REVIEWS[i] for i in picks]), B.esc(C.GOOGLE["url"]))
+
+
 def reviews_section(B):
     """Google reviews. The rating badge and the four quotes are a dated snapshot from the public
     listing (content.GOOGLE / GOOGLE_REVIEWS); main.js swaps in live Google data when /api/reviews
     is configured. No AggregateRating schema (preflight blocks self-serving stars)."""
     esc = B.esc
     G = C.GOOGLE
-    quotes = "".join('<figure class="quote" data-reveal style="--d:%d"><blockquote><p>%s</p></blockquote><figcaption><b>%s</b> \u00b7 Google review \u00b7 %s</figcaption></figure>' % (
-        i % 2, esc(t["quote"]), esc(t["who"]), esc(t["when"])) for i, t in enumerate(C.GOOGLE_REVIEWS[:4]))
+    quotes = review_figures(B, C.GOOGLE_REVIEWS[:4])
     ratings = "".join('<li><a class="inline-link" href="%s" rel="noopener" target="_blank">%s<span class="sr-only"> (opens in a new tab)</span></a></li>' % (esc(r["url"]), esc(r["label"])) for r in C.RATING_LINKS)
     stars = '<span class="stars" aria-hidden="true">%s</span>' % (B.ICONS["star"] * 5)
     badge = ('<a class="rating-badge" href="%s" rel="noopener" target="_blank" data-live-badge><b>%s</b><span>%s<span class="sr-only">%s out of 5 stars, </span>'
@@ -393,6 +408,7 @@ def concierge(B):
 <section class="section sunk" aria-labelledby="cmp-h"><div class="wrap"><div class="headline-row"><div><p class="eyebrow">Side by side</p><h2 id="cmp-h" style="margin-top:1.25rem">Concierge care and a typical practice</h2></div><p class="lede">%s</p></div>
 <div class="table-scroll"><table class="compare"><caption class="sr-only">Comparison of concierge care at Legacy Medical and a typical high-volume practice</caption><thead><tr><th scope="col">Topic</th><th scope="col">Typical high-volume practice</th><th scope="col">Legacy Medical</th></tr></thead><tbody>%s</tbody></table></div></div></section>
 %s""" % (S["included_lede"], included, S["compare_lede"], rows, sections)
+    body += review_strip(B, (0, 3))
     body += '<section class="section sunk" aria-labelledby="cfaq-h"><div class="wrap split"><div><p class="eyebrow">FAQ</p><h2 id="cfaq-h" style="margin-top:1.25rem">About concierge medicine</h2></div>%s</div></section>' % B.faq_html(S["faqs"])
     body += '<section class="section" aria-labelledby="rel-h"><div class="wrap"><h2 id="rel-h" style="font-size:var(--step-3);margin-bottom:2rem">Keep reading</h2>%s</div></section>' % B.related_cards(S["related"])
     body += B.cta_band()
@@ -526,6 +542,7 @@ def membership(B):
     body = hero + """<section class="section flush-top" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="sr-only">Steps to join</h2><ol class="steps">%s</ol>
 <div class="agreement">%s<p>%s</p></div></div></section>""" % (steps, B.ICONS["shield"], S["agreement"])
     body += "".join(prose_section(B, i + 1, h, b, slug) for i, (h, b) in enumerate(S["sections"]))
+    body += review_strip(B, (1, 4))
     body += """<section class="section sunk" id="tour" aria-labelledby="tour-h"><div class="wrap split" style="align-items:center">
 <div><p class="eyebrow">First step</p><h2 id="tour-h" style="margin-top:1.25rem">Start with a meet and greet.</h2><p class="lede" style="margin-top:1.25rem">A complimentary conversation with Dr. Shtern at the office. Ask anything, then decide in your own time.</p></div>
 <div class="btn-row"><a class="btn" href="/meet-and-greet#request" data-loc="membership">Book a meet and greet %s</a><a class="btn ghost" href="tel:%s" data-loc="membership">Call %s</a></div></div></section>""" % (icon("arrow"), B.PRACTICE["tel"], B.PRACTICE["phone"])
@@ -621,6 +638,7 @@ def meet_and_greet(B):
 <div class="panel">%s</div>
 <dl class="facts req-facts" style="grid-template-columns:1fr"><div><dt>Phone</dt><dd><a href="tel:%s" data-loc="meet">%s</a></dd></div><div><dt>Office</dt><dd>%s<br>%s, FL %s</dd></div><div><dt>Office hours</dt><dd>Mon to Thu 9 AM to 5 PM, Fri 9 AM to 2 PM</dd></div></dl>
 </div></section>""" % (esc(S["form_h"]), S["form_lede"], tour_form(B, "meet-and-greet", "request-h"), B.PRACTICE["tel"], B.PRACTICE["phone"], B.PRACTICE["street_short"], B.PRACTICE["city"], B.PRACTICE["postal"])
+    body += review_strip(B, (2, 4))
     body += """<section class="section" aria-labelledby="steps-h"><div class="wrap"><h2 id="steps-h" class="sr-only">How it works</h2><ol class="steps">%s</ol>
 <p style="margin-top:2rem"><a class="btn" href="#request" data-loc="meet-steps">Book a meet and greet %s</a></p></div></section>""" % (steps, icon("arrow"))
     body += "".join(prose_section(B, i + 1, h, b, slug) for i, (h, b) in enumerate(S["sections"]))
@@ -639,6 +657,7 @@ def insurance(B):
     trail = B.trail_for(slug, "Insurance and fees")
     hero = B.page_hero(trail, S["eyebrow"], S["h1"], S["lede"])
     body = hero + "".join(prose_section(B, i, h, b, slug) for i, (h, b) in enumerate(S["sections"]))
+    body += review_strip(B, (5, 0))
     body += '<section class="section sunk" aria-labelledby="ifaq-h"><div class="wrap split"><div><p class="eyebrow">FAQ</p><h2 id="ifaq-h" style="margin-top:1.25rem">Insurance and fee questions</h2></div>%s</div></section>' % B.faq_html(S["faqs"])
     body += B.cta_band("Ask us about the fee in person.", S["cta_lede"])
     schema = B.graph({"@type": "WebPage", "@id": B.url(slug) + "#webpage", "url": B.url(slug), "name": S["title"], "isPartOf": {"@id": B.SITE_ID}, "about": {"@id": B.ORG_ID}},
