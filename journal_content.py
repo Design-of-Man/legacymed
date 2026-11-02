@@ -604,7 +604,7 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
              {'type': 'p', 'text': 'Vaccination remains the best way to protect yourself and those you love.'},
              {'type': 'h2', 'text': 'Additional resources'},
              {'type': 'ul',
-              'items': ['[CDC COVID data tracker](https://covid.cdc.gov/covid-data-tracker/#datatracker-home)',
+              'items': ['[CDC COVID-19 information](https://www.cdc.gov/covid/index.html)',
                         '[Finding vaccines (vaccines.gov)](https://www.vaccines.gov/search/)']},
              {'type': 'p', 'text': 'Content source: Centers for Disease Control and Prevention.'}],
   'sources': ['https://cmedjupiter.com/2021/11/01/cdc-booster-update/'],
@@ -1507,7 +1507,7 @@ POSTS = [{'slug': 'vitamins-to-take-in-the-morning',
              'and when hand sanitizer with 60% alcohol will do.',
   'blocks': [{'type': 'p',
               'text': 'It seems trivial, but with the COVID-19 pandemic claiming over [213,000 '
-                      'deaths](https://covid.cdc.gov/covid-data-tracker/#cases_casesinlast7days), proper hand washing '
+                      'deaths](https://www.cdc.gov/covid/index.html), proper hand washing '
                       'is more important than ever. With proper hand-washing habits and techniques, you could help '
                       'prevent the further spread of the COVID-19 virus and save lives.'},
              {'type': 'h2', 'text': 'How to wash'},
