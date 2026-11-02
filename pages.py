@@ -837,7 +837,8 @@ def post(B, p, all_posts):
     if len(related) < 3:
         related += [x for x in all_posts if x["slug"] != p["slug"] and x not in related][:3 - len(related)]
     owner = C.CATEGORY_OWNERS.get(p["category"])
-    owner_html = ('<p class="toc-care"><span class="eyebrow">Related care</span><a class="text-link" href="/%s">%s %s</a></p>' % (owner[0], esc(owner[1]), icon("arrow"))) if owner else ""
+    owner_label = C.OWNER_ANCHORS.get(p["slug"], owner[1]) if owner else ""
+    owner_html = ('<p class="toc-care"><span class="eyebrow">Related care</span><a class="text-link" href="/%s">%s %s</a></p>' % (owner[0], esc(owner_label), icon("arrow"))) if owner else ""
     reviewed = ""
     if p.get("reviewed_by"):
         reviewed = '<span>Medically reviewed by <a class="inline-link" href="/dr-yana-shtern">%s</a></span>' % esc(p["reviewed_by"])

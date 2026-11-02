@@ -488,13 +488,50 @@ SERVICE_PAGES = {
 }
 
 CATEGORY_OWNERS = {  # journal category -> the page that owns the topic
-    "Concierge medicine": ("concierge-medicine", "How concierge medicine works here"),
+    "Concierge medicine": ("concierge-medicine", "Concierge medicine in Palm Beach Gardens"),
     "Prevention and screening": ("preventive-care", "Preventive care and the annual executive physical"),
     "Heart and blood pressure": ("hypertension", "Help for high blood pressure"),
     "Nutrition": ("preventive-care", "Preventive care and the annual executive physical"),
     "Medications": ("geriatric-memory-care", "Medication reviews"),
     "Infections and vaccines": ("faq", "Same-day sick visits and testing"),
-    "Everyday health": ("concierge-medicine", "How concierge medicine works here"),
+    "Everyday health": ("concierge-medicine", "Concierge medicine in Palm Beach Gardens"),
+}
+# Per-post link text for the "Related care" link, so the posts that point at /concierge-medicine
+# do not all use one anchor. Town and topic wording only: every line must be true of that page.
+OWNER_ANCHORS = {
+    "seasonal-allergies-south-florida": "Concierge care in Palm Beach Gardens",
+    "er-urgent-care-or-call-your-doctor": "A doctor members can reach by phone, 24/7",
+    "cbc-and-metabolic-panel-explained": "Concierge care with labs in the office",
+    "iron-deficiency-anemia-adults": "Concierge care with time for your questions",
+    "heartburn-and-gerd": "Longer visits with your own doctor",
+    "type-2-diabetes-numbers-that-matter": "Concierge care for diabetes and long-term conditions",
+    "underactive-thyroid-tsh-test": "Concierge Internal Medicine in Palm Beach Gardens",
+    "gout-and-uric-acid": "Concierge care when you manage several conditions",
+    "alcohol-after-50": "Unhurried visits with a concierge doctor",
+    "magnesium-low-and-high-levels": "Blood work done in the office, for members",
+    "how-often-should-you-urinate": "One doctor who keeps track of everything",
+    "health-benefits-of-exercise": "Concierge care near Jupiter and Juno Beach",
+    "constipation-and-squatty-potty": "Time to ask your doctor anything",
+    "pulse-oximeter-how-to-use": "Calling your own doctor after hours",
+    "how-much-sleep-do-adults-need": "Concierge care for North Palm Beach",
+    "hyperhidrosis-excessive-sweating": "Concierge primary care in Palm Beach Gardens",
+    "hair-loss-in-men-and-women": "Concierge primary care near Tequesta",
+    "arthritis-tips-for-managing-pain": "Concierge care near Palm Beach and West Palm Beach",
+    "tips-to-reduce-stress": "Why a small practice has more time for you",
+    "how-to-prepare-for-a-doctors-visit": "What a concierge practice does differently",
+    "hsa-fsa-concierge-medicine-fees": "What the concierge fee does not cover",
+    "does-medicare-cover-concierge-medicine": "Concierge medicine alongside your insurance",
+    "concierge-vs-direct-primary-care": "Concierge primary care at Legacy Medical",
+    "concierge-medicine-vs-mdvip": "How the concierge model works at Legacy Medical",
+    "concierge-medicine-cost": "What a concierge membership includes here",
+    "questions-to-ask-a-concierge-doctor": "Concierge medicine at Legacy Medical",
+    "how-to-choose-a-concierge-doctor": "Concierge care from Stuart to West Palm Beach",
+    "concierge-doctor-telehealth": "Direct access to your doctor as a member",
+    "concierge-medicine-pros-and-cons": "Who concierge care suits",
+    "what-is-concierge-medicine": "Concierge medicine, side by side with a typical practice",
+    "concierge-doctor-hospital-stay": "How Dr. Shtern works with specialists",
+    "executive-physical-exam-what-to-expect": "What every concierge membership includes",
+    "is-a-concierge-doctor-right-for-me": "Who concierge care suits, and who it may not",
 }
 
 # ---------------------------------------------------------------- membership
@@ -530,7 +567,7 @@ INSURANCE = {
     "h1": "What concierge medicine costs: a concierge fee, plus your insurance.",
     "lede": "Legacy Medical is a concierge practice that still works with insurance. The concierge fee pays for access and time. Your insurance pays for visits and tests, as it does now.",
     "sections": [
-        ("The concierge fee", "<p>Members pay an annual fee directly to the practice. It covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, extended visits, 24/7 phone access and Dr. Shtern's time coordinating your care.</p><p>The fee is not published online yet. Call <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your tour and the office will go through it with you.</p>"),
+        ("The concierge fee", "<p>Members pay an annual fee directly to the practice. It covers what insurance does not pay for: a limited patient panel, same or next-business-day appointments, extended visits, 24/7 phone access and Dr. Shtern's time coordinating your care.</p><p>The fee is not published online yet. Call <a href=\"tel:+15618349280\">(561) 834-9280</a> or ask at your tour and the office will go through it with you. <a href=\"/blog/concierge-medicine-cost\">What shapes a concierge medicine fee</a>.</p>"),
         ("What insurance still pays for", "<p>Office visits, lab work, ECGs and other covered services are billed to your health insurance. Plans the practice works with include Medicare, Aetna, Cigna and BlueCross BlueShield. Coverage, copays and deductibles depend on your plan, so check with the office before your first visit.</p><p>Keep your insurance. The membership does not cover hospital care, specialists, imaging, emergency care or prescriptions.</p>"),
         ("Medicare", "<p>Medicare does not pay concierge fees. If you have Medicare, the fee is separate, and covered services at your visits are billed to Medicare under its usual rules. Ask the office how this works for your plan, including any Medicare Advantage or supplemental coverage.</p>"),
     ],
@@ -561,7 +598,7 @@ FAQ_GROUPS = [
         ("Why choose concierge medicine?", "<p>Concierge medicine is a membership model: you pay an annual fee, the practice keeps its patient list small, and in return you get around-the-clock phone access, same or next-business-day appointments, and visits long enough to cover everything on your mind. It restores the relationship between physician and patient that a high-volume practice has no room for. <a href=\"/concierge-medicine\">How it works here</a>.</p>"),
         ("How is concierge care different from a regular primary care practice?", "<p>Mostly in how many patients one doctor looks after. Here, that means appointments the same or next business day instead of weeks, Dr. Shtern at every visit instead of whoever is available, visits as long as they need to be, phone access to the practice around the clock, and labs and ECGs done in the office. Your insurance is still billed for visits and tests. <a href=\"/concierge-vs-traditional-primary-care\">Concierge and traditional care side by side</a>.</p>"),
         ("Is concierge medicine the same as direct primary care?", "<p>No. Direct primary care practices usually do not bill insurance and charge a monthly fee for most primary care. Concierge practices like Legacy Medical bill insurance for visits and tests and charge a separate concierge fee. <a href=\"/blog/concierge-vs-direct-primary-care\">More on the difference</a>.</p>"),
-        ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a meet and greet and ask Dr. Shtern directly; she will be straight with you. <a href=\"/concierge-medicine\">How concierge medicine works here</a>.</p>"),
+        ("Is concierge medicine worth it?", "<p>It depends on how you use your doctor. People who manage several conditions, see multiple specialists, travel, or simply want to reach their own doctor quickly tend to find it worthwhile. Come to a meet and greet and ask Dr. Shtern directly; she will be straight with you. <a href=\"/concierge-medicine\">How concierge medicine works at Legacy Medical</a>.</p>"),
         ("Who is the practice a good fit for?", "<p>Adults who want one physician to know their whole history; people managing blood pressure, kidney disease, diabetes or several specialists; retirees and seasonal residents who want continuity between Florida and up north; busy professionals who cannot wait weeks for an appointment; and adult children arranging care for a parent. If your care is simple and your current doctor is easy to reach, you may not need a concierge practice, and Dr. Shtern will tell you so.</p>"),
         ("Is there a limit to how many people can join?", "<p>Yes. Legacy Medical takes no more than 300 members, so that every patient gets as much time as they need. Ask the office whether new members are being accepted right now.</p>"),
         ("How many patients does Dr. Shtern see in a day?", "<p>No more than eight, one at a time. She never books two patients into the same slot.</p>"),
@@ -1005,7 +1042,7 @@ GUIDES_PATIENTS = {
         "photo": "reception-desk", "photo_alt": "The front desk at Legacy Medical in Palm Beach Gardens",
         "sections": [
             ("How it works", "<p>Call the office and say what is going on. Members are seen that day or the next business day, rather than waiting weeks for an opening. Routine visits are booked at a time that suits you.</p><p>Office hours are Monday to Thursday 9 AM to 5 PM and Friday 9 AM to 2 PM. Outside those hours, members can still reach the practice by phone, 24 hours a day, including weekends and holidays.</p>"),
-            ("Why the schedule has room", "<p>Dr. Shtern keeps a small practice on purpose and sees one patient at a time. Visits are not booked in 15-minute slots, so there is space in the day for the person who calls in the morning with a fever, a new pain, or a blood pressure reading that will not come down.</p><p><a href=\"/concierge-medicine\">How concierge medicine works here</a>.</p>"),
+            ("Why the schedule has room", "<p>Dr. Shtern keeps a small practice on purpose and sees one patient at a time. Visits are not booked in 15-minute slots, so there is space in the day for the person who calls in the morning with a fever, a new pain, or a blood pressure reading that will not come down.</p><p><a href=\"/concierge-medicine\">Why a small practice has room in the day</a>.</p>"),
             ("An answer before you leave", "<p>Many sick visits end with a result, not a referral to somewhere else. Blood is drawn in the office, ECGs are done during the visit, and rapid tests for flu A and B, COVID-19 and strep are run here. <a href=\"/labs-and-tests\">Labs and tests in the office</a>.</p><p>If coming in is not practical, many follow-ups and results reviews can happen by <a href=\"/telehealth\">video visit</a>.</p>"),
         ],
         "faqs": [
