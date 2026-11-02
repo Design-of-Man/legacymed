@@ -18,6 +18,12 @@ Static site for Legacy Medical, Dr. Yana Shtern's concierge internal medicine pr
 - Images: originals in `_dev/source-images`, spec in tools/images.json; `python3 tools/build_images.py` writes AVIF/WebP/JPEG + manifest. `python3 tools/build_brand.py` makes favicons, the logo mark and OG cards. Both need Pillow; build.py does not.
 - Hero video: public/assets/video, provenance and exact ffmpeg commands in `_dev/video/PROVENANCE.md`. Since Oct 19, 2026 it is again the owner's Singer Island coastline drone clip (`coast4k-*`), now encoded from the drone's 3840x2160 original (`DJI_20261013234059_0426_D.MP4` in Dropbox /Design of Man Team Folder/Drone): 2160/1440/1080 sets plus a 1080x1916 portrait cut, shown as shot, last second dissolved into the first so the loop has no jump. The client asked for it back over the Juno Beach Pier clip (Oct 17-19, `juno-*`, removed; files and commands in git history and PROVENANCE.md). The Jupiter Inlet sunset and the RevitalIV lighthouse clip are retired.
 
+## Social posting (Nov 2026)
+- Instagram @legacymedicalconcierge is in Post Bridge (account id 110299). Every Instagram post ALWAYS also goes to the story (client's standing rule): schedule a `placement: "story"` post a minute after each reel. Stories cap at 60 seconds, so split longer clips at a sentence break into story part 1 and part 2.
+- Google Business Profile posts go through Windsor (`google_my_business`, location `locations/18201946498798462014`), not Post Bridge. No video there: text plus a LEARN_MORE button to the matching blog post.
+- Cadence: Mondays and Wednesdays, 9:15 am Eastern. The doctor's name is always Dr. Yana Shtern (transcripts mishear it).
+- Dropbox key for uploads: `/root/.config/dropbox/credentials.json` (refresh token; the Dropbox connector cannot upload binaries). Client video lives in `/Nicholas Kashuba/Legacy/`.
+
 ## Rules that are easy to break
 - Never invent facts, reviews, staff, stats or prices. Unconfirmed items live in `_dev/OPEN-ITEMS.md`, not on the site.
 - Approval emails for new content (blog posts, page copy) go to Yan at nydialysis@yahoo.com AND info@legacymedicalpalmbeach.com, from hello@designofman.com (Nick, Oct 30, 2026). Nick may publish without waiting for a reply; `reviewed_by` stays empty unless Dr. Shtern says she reviewed the piece.
