@@ -19,6 +19,12 @@
 // plus their first name: nothing they typed is repeated. Best effort; it can
 // never fail the request. Added Oct 30, 2026 at Nick's request.
 //
+// Turnstile (added 2026-11-03): GET returns {"siteKey": "..."} for the
+// browser, empty while TURNSTILE_SITE_KEY / TURNSTILE_SECRET_KEY are unset
+// (then nothing changes). An "unverified" request is still emailed, but only
+// to unverifiedRecipients() with "[Unverified] " on the subject, with no
+// visitor confirmation and no portal beacon (it must not count as a lead).
+//
 // HIPAA posture: the form asks for contact details and a preferred time only,
 // the page tells visitors not to send medical information, the message is
 // capped at 600 characters, and request bodies are never written to logs.
@@ -29,6 +35,70 @@ const BRAND = { name: "Legacy Medical", color: "#16140F", accent: "#C9A35B", acc
 
 const MAX_MESSAGE = 600;
 const ALLOWED_HOSTS = [/^legacymedicalpalmbeach\.com$/, /^www\.legacymedicalpalmbeach\.com$/, /^legacymedical[a-z0-9-]*\.vercel\.app$/, /^localhost(:\d+)?$/, /^127\.0\.0\.1(:\d+)?$/];
+
+// Cloudflare Turnstile, shared by every Design of Man client site (keep this
+// block identical across abacoapodiatry, elite, regenortho, firstrehabnpb and
+// legacymed; adapt only the require/export style to the file it lives in).
+//
+// ON only when BOTH TURNSTILE_SITE_KEY and TURNSTILE_SECRET_KEY are set, so a
+// half-configured environment can never mark every real lead unverified.
+// The browser sends the token as `_turnstile` (leading underscore: a control
+// field, never printed in an email).
+//
+// Verification outcome is three-way:
+//   "off"        keys unset: behave exactly as before Turnstile existed
+//   "verified"   Cloudflare said success, OR Cloudflare could not be reached
+//                (fail open: their outage must not demote real patients)
+//   "unverified" token missing or rejected. The lead is still KEPT wherever this
+//                site stores leads, and still emailed, but only to the
+//                monitoring inbox (TURNSTILE_UNVERIFIED_TO, else LEAD_CC), with
+//                "[Unverified] " on the subject, and the visitor gets NO
+//                confirmation email. That confirmation to scraped addresses is
+//                what drew spam complaints on the shared Resend account.
+//                If neither monitoring variable is set, it goes to the normal
+//                recipients with the prefix: a lead is never silently lost.
+
+const TURNSTILE_VERIFY = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+
+function turnstileOn() {
+  return Boolean(process.env.TURNSTILE_SITE_KEY && process.env.TURNSTILE_SECRET_KEY);
+}
+
+// What GET on the lead endpoint returns, so the browser can find the site key.
+function turnstileConfig() {
+  return { siteKey: turnstileOn() ? process.env.TURNSTILE_SITE_KEY : "" };
+}
+
+async function turnstileCheck(req, body) {
+  if (!turnstileOn()) return "off";
+  const token = body && typeof body._turnstile === "string" ? body._turnstile.trim() : "";
+  if (!token || token.length > 2048) return "unverified";
+  const params = new URLSearchParams({ secret: process.env.TURNSTILE_SECRET_KEY, response: token });
+  const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim();
+  if (ip) params.set("remoteip", ip);
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 5000);
+  try {
+    const r = await fetch(TURNSTILE_VERIFY, { method: "POST", body: params, signal: ctrl.signal });
+    const j = await r.json();
+    if (j && j.success === true) return "verified";
+    console.warn("turnstile: rejected", (j && j["error-codes"] || []).join(","));
+    return "unverified";
+  } catch (e) {
+    console.warn("turnstile: siteverify unreachable, failing open:", e.message);
+    return "verified";
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+// Recipients for an unverified lead: the monitoring inbox, or null meaning
+// "use the normal recipients" (subject still gets the prefix).
+function unverifiedRecipients() {
+  const raw = process.env.TURNSTILE_UNVERIFIED_TO || process.env.LEAD_CC || "";
+  const list = raw.split(",").map((s) => s.trim()).filter(Boolean);
+  return list.length ? list : null;
+}
 
 const clean = (v, max) => String(v == null ? "" : v).replace(/[\u0000-\u001f\u007f]/g, " ").trim().slice(0, max);
 
@@ -98,8 +168,12 @@ async function confirmToVisitor(key, from, replyTo, data) {
 module.exports = async (req, res) => {
   res.setHeader("Cache-Control", "no-store");
   res.setHeader("X-Robots-Tag", "noindex");
+  if (req.method === "GET") {
+    res.setHeader("Cache-Control", "public, max-age=300");
+    return res.status(200).json(turnstileConfig());
+  }
   if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
+    res.setHeader("Allow", "GET, POST");
     return res.status(405).json({ ok: false, error: "Use POST." });
   }
 
@@ -136,16 +210,22 @@ module.exports = async (req, res) => {
   if (String(body.no_medical) !== "yes") return res.status(400).json({ ok: false, error: "Please confirm the note has no medical details." });
 
   const key = process.env.RESEND_API_KEY;
-  const to = String(process.env.TOUR_TO_EMAIL || "").split(",").map((t) => t.trim()).filter(Boolean);
+  const officeTo = String(process.env.TOUR_TO_EMAIL || "").split(",").map((t) => t.trim()).filter(Boolean);
   const from = process.env.TOUR_FROM_EMAIL || "Legacy Medical website <onboarding@resend.dev>";
-  if (!to.length) return res.status(503).json({ ok: false, error: "not_configured" });
+  if (!officeTo.length) return res.status(503).json({ ok: false, error: "not_configured" });
+
+  // Bot check on top of the traps above. Unverified: still emailed, but to the
+  // monitoring inbox, prefixed, with no confirmation and no portal count.
+  const unverified = (await turnstileCheck(req, body)) === "unverified";
+  if (unverified) console.warn("tour: unverified turnstile");
+  const to = unverified ? (unverifiedRecipients() || officeTo) : officeTo;
 
   const rows = [
     ["Name", data.name], ["Phone", data.phone], ["Email", data.email],
     ["Interested in", data.reason], ["Prefers", data.contact_pref], ["Best time", data.best_time],
     ["Note", data.message], ["Sent from", data.page],
   ].filter(([, v]) => v);
-  const subject = "Website request: " + (data.reason || "tour") + " from " + data.name;
+  const subject = (unverified ? "[Unverified] " : "") + "Website request: " + (data.reason || "tour") + " from " + data.name;
   const failed = () => res.status(502).json({ ok: false, error: "We could not send that just now." });
 
   try {
@@ -168,8 +248,10 @@ module.exports = async (req, res) => {
         console.error("tour: resend delivery failed with status", r.status); // status only, never the body
         return failed();
       }
-      await confirmToVisitor(key, from, to[0], data);
-      await countLead(data.page);
+      if (!unverified) {
+        await confirmToVisitor(key, from, officeTo[0], data);
+        await countLead(data.page);
+      }
       return res.status(200).json({ ok: true });
     }
 
@@ -193,7 +275,7 @@ module.exports = async (req, res) => {
       console.error("tour: formsubmit delivery failed with status", r.status, out && String(out.success) === "false" ? "(not activated or rejected)" : "");
       return failed();
     }
-    await countLead(data.page);
+    if (!unverified) await countLead(data.page);
     return res.status(200).json({ ok: true });
   } catch (_) {
     console.error("tour: delivery threw");
