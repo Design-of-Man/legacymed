@@ -5,7 +5,6 @@
   "installCommand": "",
   "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
@@ -1106,7 +1105,29 @@
       ]
     },
     {
+      "source": "/journal/feed.xml/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
       "source": "/journal/:slug",
+      "destination": "https://legacymedicalpalmbeach.com/blog/:slug",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/journal/:slug/",
       "destination": "https://legacymedicalpalmbeach.com/blog/:slug",
       "statusCode": 301,
       "has": [
@@ -1128,7 +1149,29 @@
       ]
     },
     {
+      "source": "/wws_portfolio/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
       "source": "/wws_portfolio_category/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/wws_portfolio_category/:path*/",
       "destination": "https://legacymedicalpalmbeach.com/",
       "statusCode": 301,
       "has": [
@@ -1150,7 +1193,29 @@
       ]
     },
     {
+      "source": "/author/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
       "source": "/category/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/category/:path*/",
       "destination": "https://legacymedicalpalmbeach.com/blog",
       "statusCode": 301,
       "has": [
@@ -1172,7 +1237,29 @@
       ]
     },
     {
+      "source": "/tag/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
       "source": "/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/feed/",
       "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
       "statusCode": 301,
       "has": [
@@ -1194,7 +1281,29 @@
       ]
     },
     {
+      "source": "/comments/feed/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed/",
       "destination": "https://legacymedicalpalmbeach.com/blog",
       "statusCode": 301,
       "has": [
@@ -1216,7 +1325,29 @@
       ]
     },
     {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
       "source": "/:y(\\d{4})/:m(\\d{2})",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/",
       "destination": "https://legacymedicalpalmbeach.com/blog",
       "statusCode": 301,
       "has": [
@@ -1238,6 +1369,17 @@
       ]
     },
     {
+      "source": "/:y(\\d{4})/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
       "source": "/:path*",
       "destination": "https://legacymedicalpalmbeach.com/",
       "statusCode": 301,
@@ -1245,6 +1387,688 @@
         {
           "type": "host",
           "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?cmedjupiter\\.com"
+        }
+      ]
+    },
+    {
+      "source": "/yana-shtern",
+      "destination": "https://legacymedicalpalmbeach.com/dr-yana-shtern",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/yana-shtern/",
+      "destination": "https://legacymedicalpalmbeach.com/dr-yana-shtern",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/meet-the-team",
+      "destination": "https://legacymedicalpalmbeach.com/our-team",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/meet-the-team/",
+      "destination": "https://legacymedicalpalmbeach.com/our-team",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/legacy-membership",
+      "destination": "https://legacymedicalpalmbeach.com/membership",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/legacy-membership/",
+      "destination": "https://legacymedicalpalmbeach.com/membership",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/contact-us",
+      "destination": "https://legacymedicalpalmbeach.com/contact",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "https://legacymedicalpalmbeach.com/contact",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/legacy-blog",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/legacy-blog/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/testimonials",
+      "destination": "https://legacymedicalpalmbeach.com/#reviews",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/testimonials/",
+      "destination": "https://legacymedicalpalmbeach.com/#reviews",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/testimonials-lg",
+      "destination": "https://legacymedicalpalmbeach.com/#reviews",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/testimonials-lg/",
+      "destination": "https://legacymedicalpalmbeach.com/#reviews",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "https://legacymedicalpalmbeach.com/notice-of-privacy-practices",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "https://legacymedicalpalmbeach.com/notice-of-privacy-practices",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility-statement",
+      "destination": "https://legacymedicalpalmbeach.com/accessibility",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility-statement/",
+      "destination": "https://legacymedicalpalmbeach.com/accessibility",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/home",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/home/",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/journal",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/journal/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2",
+      "destination": "https://legacymedicalpalmbeach.com/blog/magnesium-low-and-high-levels",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/magnesium-low-and-high-levels",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus",
+      "destination": "https://legacymedicalpalmbeach.com/blog/nsaids-risks-and-side-effects",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/nsaids-risks-and-side-effects",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/safety-of-over-the-counter-meds",
+      "destination": "https://legacymedicalpalmbeach.com/blog/over-the-counter-pain-medication-safety",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/05/01/safety-of-over-the-counter-meds/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/over-the-counter-pain-medication-safety",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/10/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3",
+      "destination": "https://legacymedicalpalmbeach.com/blog/breast-cancer-screening-mammogram-age-40",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/10/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/breast-cancer-screening-mammogram-age-40",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/10/07/vitamins-that-can-be-taken-in-the-morning",
+      "destination": "https://legacymedicalpalmbeach.com/blog/vitamins-to-take-in-the-morning",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/10/07/vitamins-that-can-be-taken-in-the-morning/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/vitamins-to-take-in-the-morning",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/12/11/bananas-are-an-amazing-source-of-nutrition",
+      "destination": "https://legacymedicalpalmbeach.com/blog/banana-nutrition-benefits",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/2024/12/11/bananas-are-an-amazing-source-of-nutrition/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/banana-nutrition-benefits",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/journal/feed.xml",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/journal/feed.xml/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/journal/:slug",
+      "destination": "https://legacymedicalpalmbeach.com/blog/:slug",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/journal/:slug/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/:slug",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/wws_portfolio/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/wws_portfolio/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/wws_portfolio_category/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/wws_portfolio_category/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/author/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/category/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/tag/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/feed/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/:y(\\d{4})/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
+        }
+      ]
+    },
+    {
+      "source": "/:path+/",
+      "destination": "https://legacymedicalpalmbeach.com/:path+",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.legacymedicalpalmbeach.com"
         }
       ]
     },
@@ -1257,7 +2081,7 @@
         }
       ],
       "destination": "https://legacymedicalpalmbeach.com/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/:path*",
@@ -1268,242 +2092,312 @@
         }
       ],
       "destination": "https://legacymedicalpalmbeach.com/:path*",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/yana-shtern",
       "destination": "/dr-yana-shtern",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/yana-shtern/",
       "destination": "/dr-yana-shtern",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/meet-the-team",
       "destination": "/our-team",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/meet-the-team/",
       "destination": "/our-team",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/legacy-membership",
       "destination": "/membership",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/legacy-membership/",
       "destination": "/membership",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/contact-us",
       "destination": "/contact",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/contact-us/",
       "destination": "/contact",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/legacy-blog",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/legacy-blog/",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/testimonials",
       "destination": "/#reviews",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/testimonials/",
       "destination": "/#reviews",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/testimonials-lg",
       "destination": "/#reviews",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/testimonials-lg/",
       "destination": "/#reviews",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/privacy-policy",
       "destination": "/notice-of-privacy-practices",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/privacy-policy/",
       "destination": "/notice-of-privacy-practices",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/accessibility-statement",
       "destination": "/accessibility",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/accessibility-statement/",
       "destination": "/accessibility",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/home",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/home/",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/journal",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/journal/",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2",
       "destination": "/blog/magnesium-low-and-high-levels",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-2/",
       "destination": "/blog/magnesium-low-and-high-levels",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus",
       "destination": "/blog/nsaids-risks-and-side-effects",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/05/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus/",
       "destination": "/blog/nsaids-risks-and-side-effects",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/05/01/safety-of-over-the-counter-meds",
       "destination": "/blog/over-the-counter-pain-medication-safety",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/05/01/safety-of-over-the-counter-meds/",
       "destination": "/blog/over-the-counter-pain-medication-safety",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/10/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3",
       "destination": "/blog/breast-cancer-screening-mammogram-age-40",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/10/01/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-faucibus-3/",
       "destination": "/blog/breast-cancer-screening-mammogram-age-40",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/10/07/vitamins-that-can-be-taken-in-the-morning",
       "destination": "/blog/vitamins-to-take-in-the-morning",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/10/07/vitamins-that-can-be-taken-in-the-morning/",
       "destination": "/blog/vitamins-to-take-in-the-morning",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/12/11/bananas-are-an-amazing-source-of-nutrition",
       "destination": "/blog/banana-nutrition-benefits",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/2024/12/11/bananas-are-an-amazing-source-of-nutrition/",
       "destination": "/blog/banana-nutrition-benefits",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/journal/feed.xml",
       "destination": "/blog/feed.xml",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/journal/feed.xml/",
+      "destination": "/blog/feed.xml",
+      "statusCode": 301
     },
     {
       "source": "/journal/:slug",
       "destination": "/blog/:slug",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/journal/:slug/",
+      "destination": "/blog/:slug",
+      "statusCode": 301
     },
     {
       "source": "/wws_portfolio/:path*",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/wws_portfolio/:path*/",
+      "destination": "/",
+      "statusCode": 301
     },
     {
       "source": "/wws_portfolio_category/:path*",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/wws_portfolio_category/:path*/",
+      "destination": "/",
+      "statusCode": 301
     },
     {
       "source": "/author/:path*",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/author/:path*/",
+      "destination": "/blog",
+      "statusCode": 301
     },
     {
       "source": "/category/:path*",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/category/:path*/",
+      "destination": "/blog",
+      "statusCode": 301
     },
     {
       "source": "/tag/:path*",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/:path*/",
+      "destination": "/blog",
+      "statusCode": 301
     },
     {
       "source": "/feed",
       "destination": "/blog/feed.xml",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/feed/",
+      "destination": "/blog/feed.xml",
+      "statusCode": 301
     },
     {
       "source": "/comments/feed",
       "destination": "/blog/feed.xml",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/blog/feed.xml",
+      "statusCode": 301
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed/",
+      "destination": "/blog",
+      "statusCode": 301
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/",
+      "destination": "/blog",
+      "statusCode": 301
     },
     {
       "source": "/:y(\\d{4})/:m(\\d{2})",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/",
+      "destination": "/blog",
+      "statusCode": 301
     },
     {
       "source": "/:y(\\d{4})",
       "destination": "/blog",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/:y(\\d{4})/",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "statusCode": 301
     }
   ]
 }

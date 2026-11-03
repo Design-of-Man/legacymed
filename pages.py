@@ -326,7 +326,7 @@ def doctor(B):
     esc, icon = B.esc, B.icon
     slug = "dr-yana-shtern"
     trail = [("Home", ""), ("Dr. Yana Shtern, MD", slug)]
-    hero = B.page_hero(trail, D["hero_eyebrow"], "Dr. Yana Shtern, MD", D["hero_lede"],
+    hero = B.page_hero(trail, D["hero_eyebrow"], D["h1"], D["hero_lede"],
                        media=B.photo(D["photo"], "Portrait of Dr. Yana Shtern, MD", sizes="(max-width: 880px) 90vw, 40vw", eager=True, max_w=1200))
     facts = "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v) for k, v in D["facts"])
     bio = "".join("<p>%s</p>" % p for p in D["bio"])

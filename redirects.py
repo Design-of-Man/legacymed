@@ -69,8 +69,12 @@ def post_map(host):
     return out
 
 
-def vercel_rules(exact, patterns, absolute=False, host=None, status=None):
-    """status=None gives Vercel's permanent 308; pass 301 where a tool insists on it."""
+def vercel_rules(exact, patterns, absolute=False, host=None, status=None, strip_slash=False):
+    """status=None gives Vercel's permanent 308; pass 301 where a tool insists on it.
+
+    Every source also gets its trailing-slash form, so /old-page/ reaches its new page in one hop.
+    vercel.json therefore has no "trailingSlash" setting: Vercel applies that strip before these rules,
+    which made every slashed old URL two hops. strip_slash=True adds the strip back as the last rule."""
     rules = []
     def add(src, dst):
         r = {"source": src, "destination": (NEW + dst) if absolute else dst}
@@ -87,4 +91,7 @@ def vercel_rules(exact, patterns, absolute=False, host=None, status=None):
             add(src + "/", dst)
     for src, dst in patterns:
         add(src, dst)
+        add(src + "/", dst)
+    if strip_slash:
+        add("/:path+/", "/:path+")
     return rules

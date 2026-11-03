@@ -12,6 +12,10 @@ Nothing below was guessed on the site. Each item is either left out of the copy 
 - **New photography.** Every current photo of Dr. Shtern is 934×740 or smaller. They look acceptable at the sizes used but soft on large retina screens. A half-day shoot (Dr. Shtern portrait at 3000px+, the office, exam room, the team) would lift the whole site.
 - **Healthgrades/US News/Zocdoc listings** still show old Jupiter or Brooklyn addresses (see audit). Claim and correct.
 
+## For /areas/jupiter (Nov 3, 2026)
+- **"Concierge Medicine of Jupiter".** The repo only knows that cmedjupiter.com was an older copy of the site and that a 2020 shoot under that name shows an earlier location. Before the Jupiter page tells that history, confirm: was the practice once called Concierge Medicine of Jupiter, did it have an office in Jupiter (address and years), and when did it move to Prosperity Farms Road.
+- **Anything else Jupiter-specific** the practice will stand behind: roughly how many members live in Jupiter, Abacoa or Jupiter Farms, house calls or visits at Jupiter Medical Center, languages spoken.
+
 ## From the Oct 17, 2026 client round
 - **Third hospital affiliation.** Dr. Shtern (Oct 17) is awaiting courtesy privileges at another facility and wants to add it once granted. The label is now "Hospital affiliations"; add the facility to `DOCTOR["home_creds"]`, `DOCTOR["facts"]` and the llms.txt line in content.py when she confirms the name. Copy elsewhere still says she "has privileges at" Jupiter Medical Center and Palm Beach Gardens Medical Center.
 
