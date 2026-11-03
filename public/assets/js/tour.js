@@ -32,6 +32,11 @@
     if (err) { err.textContent = msg; err.hidden = !msg; }
     return !msg;
   };
+  // Turnstile (dmTurnstile lives in assist.js, loaded first on every page).
+  // Never blocks a send: a missing script or any failure gives "".
+  const ts = window.dmTurnstile;
+  const endpoint = form.getAttribute("action") || "/api/tour";
+  form.addEventListener("focusin", () => { if (ts) ts.warm(endpoint); }, { once: true });
   fields.forEach((f) => f.addEventListener("blur", () => { if (f.value || f.getAttribute("aria-invalid") === "true") validate(f); }));
 
   form.addEventListener("submit", async (e) => {
@@ -44,6 +49,7 @@
     submit.disabled = true;
     submit.setAttribute("aria-busy", "true");
     try {
+      data._turnstile = ts ? await ts.token(endpoint) : "";
       const res = await fetch(form.action, {
         method: "POST",
         headers: { "content-type": "application/json", accept: "application/json" },

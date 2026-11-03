@@ -837,19 +837,20 @@ def check_copy():
 INLINE_SCRIPTS = {JS_FLAG, VA_STUB}
 USERWAY_ACCOUNT = "QQECAXmKWE"  # the practice's UserWay accessibility widget (client, Oct 20 2026; same account as the old site)
 USERWAY = "https://*.userway.org"
+TURNSTILE = "https://challenges.cloudflare.com"  # Cloudflare Turnstile bot check on /api/tour sends (Nov 3 2026); loads only when a visitor starts a request
 
 
 def csp():
     hashes = " ".join("'sha256-%s'" % __import__("base64").b64encode(hashlib.sha256(s.encode()).digest()).decode() for s in sorted(INLINE_SCRIPTS))
     return "; ".join([
         "default-src 'self'",
-        "script-src 'self' %s https://www.googletagmanager.com %s" % (hashes, USERWAY),
+        "script-src 'self' %s https://www.googletagmanager.com %s %s" % (hashes, USERWAY, TURNSTILE),
         "style-src 'self' 'unsafe-inline' %s" % USERWAY,
         "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com %s" % USERWAY,
         "font-src 'self' %s" % USERWAY,
         "media-src 'self'",
-        "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com %s" % USERWAY,
-        "frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com %s" % USERWAY,
+        "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com %s %s" % (USERWAY, TURNSTILE),
+        "frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com %s %s" % (USERWAY, TURNSTILE),
         "object-src 'none'",
         "base-uri 'self'",
         "form-action 'self'",

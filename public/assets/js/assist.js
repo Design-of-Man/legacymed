@@ -1,10 +1,114 @@
+/* Cloudflare Turnstile bot check, shared by every Design of Man client site
+   (keep this block identical across abacoapodiatry, elite, regenortho,
+   firstrehabnpb and legacymed).
+
+   OFF until TURNSTILE_SITE_KEY and TURNSTILE_SECRET_KEY are both set in the
+   site's Vercel environment. The site key reaches the browser through a GET on
+   the site's own lead endpoint ({"siteKey": "..."}, empty when off), so turning
+   it on or off is an env change, never a code change.
+
+   It NEVER blocks a send. Any failure (key unset, script blocked by an ad
+   blocker, Cloudflare down, challenge timeout) resolves token() to "", the
+   form still posts, and the server routes that lead as "unverified" (kept and
+   sent to the monitoring inbox, no patient confirmation) instead of dropping it.
+
+   Nothing loads from Cloudflare until a visitor starts a form or opens the chat
+   (warm) or sends (token), so pages without a lead form never contact it.
+
+   Usage:
+     dmTurnstile.warm('/api/lead/');               // on first focus / chat open
+     dmTurnstile.token('/api/lead/').then(function (t) { body._turnstile = t; ... });
+*/
+(function () {
+  if (window.dmTurnstile) return;
+  var SCRIPT = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+  var cfg = {}, lib = null, widget = null, waiting = [];
+
+  function config(endpoint) {
+    if (!cfg[endpoint]) {
+      cfg[endpoint] = fetch(endpoint, { method: 'GET', headers: { Accept: 'application/json' }, credentials: 'same-origin' })
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .then(function (j) { return j && typeof j.siteKey === 'string' ? j.siteKey : ''; })
+        .catch(function () { return ''; });
+    }
+    return cfg[endpoint];
+  }
+
+  function load() {
+    if (!lib) {
+      lib = new Promise(function (resolve, reject) {
+        if (window.turnstile) return resolve(window.turnstile);
+        var s = document.createElement('script');
+        s.src = SCRIPT;
+        s.async = true;
+        s.onload = function () { window.turnstile ? resolve(window.turnstile) : reject(new Error('no turnstile')); };
+        s.onerror = function () { lib = null; reject(new Error('turnstile blocked')); };
+        document.head.appendChild(s);
+      });
+    }
+    return lib;
+  }
+
+  function settle(tok) {
+    var w = waiting;
+    waiting = [];
+    for (var i = 0; i < w.length; i++) w[i](tok || '');
+  }
+
+  function ensure(ts, key) {
+    if (widget !== null) return;
+    // interaction-only: invisible unless Cloudflare needs the visitor to click,
+    // in which case it appears pinned bottom-centre above everything else.
+    var box = document.createElement('div');
+    box.className = 'dm-turnstile';
+    box.style.cssText = 'position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:2147483000;';
+    document.body.appendChild(box);
+    widget = ts.render(box, {
+      sitekey: key,
+      execution: 'execute',
+      appearance: 'interaction-only',
+      'refresh-expired': 'manual',
+      callback: function (t) { settle(t); },
+      'error-callback': function () { settle(''); return true; },
+      'timeout-callback': function () { settle(''); }
+    });
+  }
+
+  function token(endpoint, ms) {
+    return config(endpoint).then(function (key) {
+      if (!key) return '';
+      return load().then(function (ts) {
+        return new Promise(function (resolve) {
+          var done = false;
+          function finish(t) { if (!done) { done = true; resolve(t || ''); } }
+          waiting.push(finish);
+          setTimeout(function () { finish(''); }, ms || 20000);
+          try {
+            ensure(ts, key);
+            ts.reset(widget);   // tokens are single-use: a fresh one per send
+            ts.execute(widget);
+          } catch (e) { finish(''); }
+        });
+      });
+    }).catch(function () { return ''; });
+  }
+
+  function warm(endpoint) {
+    config(endpoint).then(function (key) { if (key) load().catch(function () {}); });
+  }
+
+  window.dmTurnstile = { token: token, warm: warm };
+})();
+
 /* Legacy Medical site assistant.
    Set answers only: no AI and no outside service. Every reply comes from
    /assets/assist.json, which build.py writes from the FAQ in content.py, so
    the assistant and the FAQ page can never disagree. Anything it cannot match
    goes to the office phone.
    Tour requests go to /api/tour, the same function and checks as the tour
-   form (honeypot, time on page, no-medical-details confirmation). Nothing the
+   form (honeypot, time on page, no-medical-details confirmation, and the
+   Turnstile token from the shared block above, which this file carries for
+   every page because it is the one lead script loaded everywhere). Nothing the
    visitor types is stored on the device or sent to analytics; if delivery
    fails, the visitor is told to call. */
 (() => {
@@ -135,6 +239,7 @@
 
   async function open() {
     lastFocus = document.activeElement;
+    window.dmTurnstile.warm("/api/tour");
     panel.hidden = false;
     launcher.setAttribute("aria-expanded", "true");
     launcher.hidden = true;
@@ -293,6 +398,7 @@
     const wait = say("Sending...");
     let res = null, out = {};
     try {
+      const ts = await window.dmTurnstile.token("/api/tour"); // "" on any failure; never blocks the send
       res = await fetch("/api/tour", {
         method: "POST",
         headers: { "content-type": "application/json", accept: "application/json" },
@@ -302,6 +408,7 @@
           elapsed: Date.now() - started,
           no_medical: "yes",
           company_website: "",
+          _turnstile: ts,
         })),
       });
       out = await res.json().catch(() => ({}));
