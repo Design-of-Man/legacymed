@@ -860,15 +860,20 @@ def csp():
 
 def build_vercel():
     import redirects as R
-    rules = R.vercel_rules({**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}, R.MAIN_PATTERNS)
+    main = {**R.MAIN, **R.post_map("legacymedicalpalmbeach.com")}
+    # One 301 hop for every old URL, slashed or not (redirects.vercel_rules explains why there is no trailingSlash).
+    rules = R.vercel_rules(main, R.MAIN_PATTERNS, status=301, strip_slash=True)
     # cmedjupiter.com (and www) is attached to this project: every old URL 301s to its new page. First, so the
     # host-free rules above never see a cmedjupiter.com request; its last rule is a catch-all to the homepage.
     # A true 301 (not Vercel's 308): Search Console's Change of Address check asks for "301-redirect from homepage".
     cmed = R.vercel_rules({**R.CMED, **R.post_map("cmedjupiter.com")}, R.CMED_PATTERNS, absolute=True,
                           host="(www\\.)?cmedjupiter\\.com", status=301)
-    # www -> apex. Two rules because "/:path*" does not match the bare root on Vercel.
-    www = [{"source": "/", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/", "permanent": True},
-           {"source": "/:path*", "has": [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}], "destination": BASE + "/:path*", "permanent": True}]
+    # www -> apex. The old-URL map first, with absolute targets, so an old www URL is also one hop; then two
+    # catch-alls because "/:path*" does not match the bare root on Vercel.
+    www_host = [{"type": "host", "value": "www.legacymedicalpalmbeach.com"}]
+    www = R.vercel_rules(main, R.MAIN_PATTERNS, absolute=True, host="www.legacymedicalpalmbeach.com", status=301, strip_slash=True)
+    www += [{"source": "/", "has": www_host, "destination": BASE + "/", "statusCode": 301},
+            {"source": "/:path*", "has": www_host, "destination": BASE + "/:path*", "statusCode": 301}]
     sec = [
         {"key": "X-Content-Type-Options", "value": "nosniff"},
         {"key": "X-Frame-Options", "value": "SAMEORIGIN"},
@@ -885,7 +890,6 @@ def build_vercel():
         "installCommand": "",
         "framework": None,
         "cleanUrls": True,
-        "trailingSlash": False,
         "headers": [
             {"source": "/(.*)", "headers": sec},
             {"source": "/assets/(css|js)/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]},

@@ -58,7 +58,8 @@ DOCTOR = {
     "page_title": "Internist & Internal Medicine Doctor, Palm Beach Gardens | Dr. Shtern",
     "page_desc": ("Dr. Yana Shtern is an internist and Internal Medicine doctor in Palm Beach Gardens, FL, double board-certified "
                   "in Internal Medicine and Nephrology."),
-    "hero_eyebrow": "Internist in Palm Beach Gardens",
+    "hero_eyebrow": "Internal Medicine and Nephrology",
+    "h1": "Dr. Yana Shtern, MD, internist in Palm Beach Gardens",
     "hero_lede": ("Dr. Shtern is an internist in Palm Beach Gardens, board-certified in Internal Medicine and in Nephrology. As an "
                   "Internal Medicine doctor she has practiced for close to twenty years, first in New York City and now on Prosperity "
                   "Farms Road, where she runs Legacy Medical as a small concierge practice. Her second specialty is why members with "
@@ -512,7 +513,7 @@ MEMBERSHIP = {
     "agreement": "<strong>Meet first, decide later.</strong> The meet and greet is complimentary, and joining is your decision to make afterward.",
     "sections": [
         ("What to bring to the meet and greet", "<p>Nothing. The meet and greet is simply a chance to see the office, meet Dr. Shtern, and decide whether the practice feels like the right fit. There is no paperwork and nothing to prepare. If you have questions, bring them along, and bring a family member if you like.</p>"),
-        ("Who the practice is a good fit for", "<p>Adults who want one physician to know their whole history, people managing blood pressure, kidney disease, diabetes or several specialists, seasonal residents who want continuity, and families arranging care for a parent. Dr. Shtern is an internist: a physician trained in the care of adults.</p>"),
+        ("Who the practice is a good fit for", "<p>Adults who want one physician to know their whole history, people managing blood pressure, kidney disease, diabetes or several specialists, seasonal residents who want continuity, and families arranging care for a parent. Dr. Shtern is an <a href=\"/dr-yana-shtern\">internist</a>: a physician trained in the care of adults.</p>"),
     ],
     "form_h": "Book a meet and greet",
     "form_lede": "Leave your details and the office will call or email you to set up a time. Prefer the phone? Call us during office hours.",
@@ -635,7 +636,7 @@ FAQ_GROUPS = [
         ("Can I send in my home blood pressure readings?", "<p>Yes. Bring or send your log so the numbers can be reviewed together. <a href=\"/blog/home-blood-pressure-monitoring\">How to take an accurate home reading</a>.</p>"),
         ("Can Dr. Shtern review all of my medications?", "<p>Yes. One doctor keeps an eye on every prescription, dose and interaction. A full review often finds a medicine that can be stopped, a dose that can be lowered, or two prescriptions that should not be taken together.</p>"),
         ("Does Dr. Shtern see patients with memory concerns?", "<p>Yes. She starts with a cognitive screen and a careful history, checks for treatable causes, and arranges specialists and imaging when needed. <a href=\"/geriatric-memory-care\">Geriatric and memory care</a>.</p>"),
-        ("Do you see children?", "<p>No. Dr. Shtern is an internist: a physician trained in the care of adults.</p>"),
+        ("Do you see children?", "<p>No. Dr. Shtern is an <a href=\"/dr-yana-shtern\">internist</a>: a physician trained in the care of adults.</p>"),
     ]},
     {"name": "Specialists and hospitals", "pairs": [
         ("What happens if I need a specialist?", "<p>Dr. Shtern coordinates your care the way a quarterback runs a team. She chooses the specialist, contacts them, works with the specialists you already see, and follows up on what they find, so your care stays in one place.</p>"),
@@ -656,7 +657,7 @@ FAQ_GROUPS = [
         ("Where are you located?", "<p>11380 Prosperity Farms Road, Suite 114, Palm Beach Gardens, FL 33410, on the first floor. See <a href=\"/contact\">directions</a>.</p>"),
         ("How do I get to the office?", "<p>From I-95, take the PGA Boulevard exit east, then turn north on Prosperity Farms Road. From US-1, head west on PGA Boulevard and turn north.</p>"),
         ("Is the office wheelchair accessible?", "<p>Yes. Suite 114 is a first-floor suite with accessible entry.</p>"),
-        ("Is the office easy to get to from where I live?", "<p>The office is in the heart of Palm Beach Gardens, and members come from Jupiter, Juno Beach, Tequesta, Hobe Sound, Stuart, North Palm Beach, Palm Beach and West Palm Beach. <a href=\"/areas-we-serve\">Drive times from each town</a>.</p>"),
+        ("Is the office easy to get to from where I live?", "<p>The office is in the heart of Palm Beach Gardens, and members come from <a href=\"/areas/jupiter\">Jupiter</a>, Juno Beach, Tequesta, Hobe Sound, Stuart, North Palm Beach, Palm Beach and West Palm Beach. <a href=\"/areas-we-serve\">Drive times from each town</a>.</p>"),
         ("How do I contact the office?", "<p>Call (561) 834-9280 or email info@legacymedicalpalmbeach.com. The fax is (561) 834-9279. Please keep medical details out of email and web forms and call instead.</p>"),
         ("How do I get prescription refills?", "<p>Refills for established patients are issued during regular office hours. Request them through the patient portal or by calling (561) 834-9280, and ask a few days before you run out so there is no gap in your medication.</p>"),
         ("Is there a patient portal?", "<p>Yes. Ask the office for access when you join.</p>"),
@@ -712,7 +713,7 @@ _LOC_COPY = {
         "from_label": "central Jupiter",
         "sections": [
             ("Why Jupiter members drive south", "<p>Jupiter has good hospitals and plenty of physicians, but a same-week appointment with your own primary care doctor can still be hard to get. From Jupiter, Abacoa or Jupiter Farms, the drive down Alt A1A is about a quarter of an hour.</p><p>Many visits do not need the drive at all. Results reviews and many follow-ups happen by <a href=\"/telehealth\">video</a>.</p>"),
-            ("Jupiter Medical Center", "<p>Dr. Shtern is affiliated with Jupiter Medical Center on Old Dixie Highway and sits on its Continuing Medical Education Committee.</p>"),
+            ("Jupiter Medical Center", "<p>Dr. Shtern is affiliated with Jupiter Medical Center on Old Dixie Highway and sits on its Continuing Medical Education Committee. She is listed in the <a href=\"https://www.jupitermed.com/find-a-physician/yana-shtern-md/\" rel=\"noopener\" target=\"_blank\">Jupiter Medical Center physician directory<span class=\"sr-only\"> (opens in a new tab)</span></a>.</p><p>She does not admit patients herself. While you are in the hospital, hospitalists direct your care, and Dr. Shtern stays involved throughout your stay and keeps in touch with the doctors treating you. After discharge she sees you for a follow-up visit at the office.</p>"),
         ],
         "directions": "From central Jupiter, take Alternate A1A south to PGA Boulevard, head east, then turn north on Prosperity Farms Road. The office is on the left, Suite 114, first floor.",
         "faqs": [
@@ -784,7 +785,7 @@ _LOC_COPY = {
         "lede": "For West Palm Beach residents, the office is a straight run up I-95 to PGA Boulevard. Members are seen the same or next business day.",
         "from_label": "downtown West Palm Beach",
         "sections": [
-            ("Internist and Nephrologist", "<p>Dr. Shtern is board-certified in Internal Medicine and Nephrology. If you are managing kidney disease, hard-to-control blood pressure or electrolyte problems, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
+            ("Internist and Nephrologist", "<p>Dr. Shtern is <a href=\"/dr-yana-shtern\">board-certified in Internal Medicine</a> and Nephrology. If you are managing kidney disease, hard-to-control blood pressure or electrolyte problems, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
             ("When you cannot come in", "<p>Many follow-ups, lab reviews and medication checks happen by <a href=\"/telehealth\">video visit</a>, and members can reach the practice by phone at any hour.</p>"),
         ],
         "directions": "Take I-95 north to the PGA Boulevard exit, head east, then turn north on Prosperity Farms Road to Suite 114.",
@@ -813,7 +814,7 @@ _LOC_COPY = {
         "lede": "Legacy Medical already cares for patients from Stuart. The office is about 40 minutes south by I-95, and video visits and around-the-clock phone access mean much of your care does not need the drive.",
         "from_label": "Stuart",
         "sections": [
-            ("Internist and Nephrologist", "<p>Dr. Shtern is board-certified in Internal Medicine and Nephrology, so if you are managing kidney disease, hard-to-control blood pressure or a long medication list, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
+            ("Internist and Nephrologist", "<p>Dr. Shtern is <a href=\"/dr-yana-shtern\">board-certified in Internal Medicine</a> and Nephrology, so if you are managing kidney disease, hard-to-control blood pressure or a long medication list, you get both kinds of care from one doctor. See <a href=\"/kidney-care\">kidney care</a> and <a href=\"/hypertension\">hypertension</a>.</p>"),
             ("Making the distance work", "<p>Many follow-ups, lab reviews and medication checks happen by <a href=\"/telehealth\">video visit</a>. When you come in, labs are drawn in the office, so there is no separate trip to a lab.</p>"),
         ],
         "directions": "From Stuart, take Kanner Highway to I-95 south, exit at PGA Boulevard and head east, then turn north on Prosperity Farms Road to Suite 114.",
@@ -1024,7 +1025,7 @@ GUIDES_PATIENTS = {
         "lede": "Blood pressure, diabetes, cholesterol, kidney and thyroid conditions do best with one doctor watching the whole picture. At Legacy Medical, that doctor is Dr. Shtern, every time.",
         "photo": "p-geri-meds", "photo_alt": "A weekly pill organizer on a linen tablecloth",
         "sections": [
-            ("One doctor for the whole picture", "<p>Chronic conditions rarely come one at a time. High blood pressure, diabetes, cholesterol and kidney function affect each other, and so do the medicines used to treat them. Dr. Shtern is board-certified in Internal Medicine and in Nephrology, so the kidney side of that picture is part of the same visit rather than a separate referral.</p><p>See <a href=\"/hypertension\">hypertension</a> and <a href=\"/kidney-care\">kidney care</a>.</p>"),
+            ("One doctor for the whole picture", "<p>Chronic conditions rarely come one at a time. High blood pressure, diabetes, cholesterol and kidney function affect each other, and so do the medicines used to treat them. Dr. Shtern is <a href=\"/dr-yana-shtern\">board-certified in Internal Medicine</a> and in Nephrology, so the kidney side of that picture is part of the same visit rather than a separate referral.</p><p>See <a href=\"/hypertension\">hypertension</a> and <a href=\"/kidney-care\">kidney care</a>.</p>"),
             ("Medication management", "<p>One doctor keeps an eye on every prescription, dose and interaction. That matters most when several specialists are involved, when a kidney or liver condition changes how a medicine is cleared, or when a new prescription quietly duplicates an old one. <a href=\"/blog/medication-review-older-adults\">Why a full medication review matters</a>.</p>"),
             ("Between visits", "<p>Labs are drawn in the office and reviewed with you, home blood pressure readings can be sent in and discussed, and many check-ins can happen by video. When something changes, members are seen the same or next business day.</p>"),
         ],

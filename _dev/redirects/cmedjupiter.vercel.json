@@ -451,7 +451,17 @@
       "statusCode": 301
     },
     {
+      "source": "/journal/feed.xml/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301
+    },
+    {
       "source": "/journal/:slug",
+      "destination": "https://legacymedicalpalmbeach.com/blog/:slug",
+      "statusCode": 301
+    },
+    {
+      "source": "/journal/:slug/",
       "destination": "https://legacymedicalpalmbeach.com/blog/:slug",
       "statusCode": 301
     },
@@ -461,7 +471,17 @@
       "statusCode": 301
     },
     {
+      "source": "/wws_portfolio/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301
+    },
+    {
       "source": "/wws_portfolio_category/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/wws_portfolio_category/:path*/",
       "destination": "https://legacymedicalpalmbeach.com/",
       "statusCode": 301
     },
@@ -471,7 +491,17 @@
       "statusCode": 301
     },
     {
+      "source": "/author/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301
+    },
+    {
       "source": "/category/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/:path*/",
       "destination": "https://legacymedicalpalmbeach.com/blog",
       "statusCode": 301
     },
@@ -481,7 +511,17 @@
       "statusCode": 301
     },
     {
+      "source": "/tag/:path*/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301
+    },
+    {
       "source": "/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/feed/",
       "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
       "statusCode": 301
     },
@@ -491,7 +531,17 @@
       "statusCode": 301
     },
     {
+      "source": "/comments/feed/",
+      "destination": "https://legacymedicalpalmbeach.com/blog/feed.xml",
+      "statusCode": 301
+    },
+    {
       "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/feed/",
       "destination": "https://legacymedicalpalmbeach.com/blog",
       "statusCode": 301
     },
@@ -501,7 +551,17 @@
       "statusCode": 301
     },
     {
+      "source": "/:y(\\d{4})/:m(\\d{2})/:d(\\d{2})/:slug/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301
+    },
+    {
       "source": "/:y(\\d{4})/:m(\\d{2})",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/:y(\\d{4})/:m(\\d{2})/",
       "destination": "https://legacymedicalpalmbeach.com/blog",
       "statusCode": 301
     },
@@ -511,7 +571,17 @@
       "statusCode": 301
     },
     {
+      "source": "/:y(\\d{4})/",
+      "destination": "https://legacymedicalpalmbeach.com/blog",
+      "statusCode": 301
+    },
+    {
       "source": "/:path*",
+      "destination": "https://legacymedicalpalmbeach.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*/",
       "destination": "https://legacymedicalpalmbeach.com/",
       "statusCode": 301
     }
